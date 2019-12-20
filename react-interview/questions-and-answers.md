@@ -14,9 +14,9 @@ layout: default
 | --- | --------- |
 |   | **Core React** |
 |1  | [React là gì?](#what-is-react) |
-|2  | [What are the major features of React?](#what-are-the-major-features-of-react) |
-|3  | [What is JSX?](#what-is-jsx) |
-|4  | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component) |
+|2  | [Những đặc trưng cơ bản của React?](#what-are-the-major-features-of-react) |
+|3  | [JSX là gì?](#what-is-jsx) |
+|4  | [Phân biệt các thành phần Components, Elements và Instances?](#what-is-the-difference-between-components-elements-and-instances) |
 |5  | [How to create components in React?](#how-to-create-components-in-react) |
 |6  | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component) |
 |7  | [What are Pure Components?](#what-are-pure-components) |
@@ -351,28 +351,28 @@ layout: default
     
 1. ### React là gì? {#what-is-react}
 
-    React is an **open-source frontend JavaScript library** which is used for building user interfaces especially for single page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
+    React là một **thư viện JavaScript mã nguồn mở về front-end** sử dụng để xây dựng giao diện người dùng đặc biệt là dành cho các ứng dụng đơn trang (SPA Single-page Application). React giúp xây dựng tầng Views của các ứng dụng web cũng như mobile. Được tạo ra bởi Jordan Walke, một kỹ sư phần mềm làm việc tại Facebook. React được sử dụng lần đầu tiên trên Facebook năm 2011 và trên Instagram năm 2012.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-2. ### What are the major features of React?
+2. ### Những đặc trưng cơ bản của React? {#what-are-the-major-features-of-react}
 
-    The major features of React are:
+    Những đặc trưng cơ bản của React là:
 
-    * It uses **VirtualDOM** instead RealDOM considering that RealDOM manipulations are expensive.
-    * Supports **server-side rendering**.
-    * Follows **Unidirectional** data flow or data binding.
-    * Uses **reusable/composable** UI components to develop the view.
+    * Sử dụng **VirtualDOM** thay cho RealDOM giúp tăng hiệu năng của ứng dụng.
+    * Hỗ trợ **server-side rendering**.
+    * Sử dụng **One way data binding**.
+    * Sử dụng các UI components có thể **tái sử dụng/tổ hợp**.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-3. ### What is JSX?
+3. ### JSX là gì? {#what-is-JSX}
 
-    *JSX* is a XML-like syntax extension to ECMAScript (the acronym stands for *JavaScript XML*). Basically it just provides syntactic sugar for the `React.createElement()` function, giving us expressiveness of JavaScript along with HTML like template syntax.
+    *JSX* là một cú pháp mở rộng cho JavaScript (ECMAScript), có dạng gần giống như XML (JSX = JavaScript + XML). Cơ bản thì JSX cung cấp cú pháp thân thiện cho hàm `React.createElement()`, giúp chúng ta code ReactJS bằng cú pháp của XML (thay vì JavaScript), Các thành phần của XML sẽ được chuyển đổi thành các tham số truyền vào hàm `React.createElement()`.
 
-    In the example below text inside `<h1>` tag return as JavaScript function to the render function.
+    Ví dụ dưới đây sẽ cho thấy tại sao nên dùng JSX
 
-    ```jsx harmony
+    ```jsx
     class App extends React.Component {
       render() {
         return(
@@ -384,15 +384,24 @@ layout: default
     }
     ```
 
+    ```js
+    React.createElement(App, null,
+      React.createElement("div", null, 
+        React.createElement("h1", null, 'Welcome to React world!')
+      )
+    );
+    ```
+
     **[⬆ Mục lục](#table-of-contents)**
     
-4. ### What is the difference between Element and Component?
+4. ### Phân biệt các thành phần Components, Elements và Instances? {#what-is-the-difference-between-components-elements-and-instances}
 
-    An *Element* is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. *Elements* can contain other *Elements* in their props. Creating a React element is cheap. Once an element is created, it is never mutated.
+    
+    *Element* là  is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. *Elements* can contain other *Elements* in their props. Creating a React element is cheap. Once an element is created, it is never mutated.
 
     The object representation of React Element would be as follows:
 
-    ```javascript
+    ```js
     const element = React.createElement(
       'div',
       {id: 'login-btn'},
