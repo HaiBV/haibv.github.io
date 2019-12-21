@@ -17,12 +17,12 @@ layout: default
 |2  | [Những đặc trưng cơ bản của React?](#what-are-the-major-features-of-react) |
 |3  | [JSX là gì?](#what-is-jsx) |
 |4  | [Phân biệt các thành phần Components, Elements và Instances?](#what-is-the-difference-between-components-elements-and-instances) |
-|5  | [How to create components in React?](#how-to-create-components-in-react) |
-|6  | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component) |
-|7  | [What are Pure Components?](#what-are-pure-components) |
-|8  | [What is state in React?](#what-is-state-in-react) |
-|9  | [What are props in React?](#what-are-props-in-react) |
-|10 | [What is the difference between state and props?](#what-is-the-difference-between-state-and-props) |
+|5  | [Có bao nhiêu cách tạo ra component React?](#how-to-create-components-in-react) |
+|6  | [Khi nào nên sử dụng Class components thay cho Function Components?](#when-to-use-a-class-component-over-a-function-component) |
+|7  | [Pure components là gì?](#what-are-pure-components) |
+|8  | [State trong React là gì?](#what-is-state-in-react) |
+|9  | [Props trong React là gì?](#what-are-props-in-react) |
+|10 | [State và Props khác nhau như thế nào?](#what-is-the-difference-between-state-and-props) |
 |11 | [Why should we not update the state directly?](#why-should-we-not-update-the-state-directly) |
 |12 | [What is the purpose of callback function as an argument of setState()?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
 |13 | [What is the difference between HTML and React event handling?](#what-is-the-difference-between-html-and-react-event-handling) |
@@ -396,10 +396,11 @@ layout: default
     
 4. ### Phân biệt các thành phần Components, Elements và Instances? {#what-is-the-difference-between-components-elements-and-instances}
 
-    
-    *Element* là  is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. *Elements* can contain other *Elements* in their props. Creating a React element is cheap. Once an element is created, it is never mutated.
+    Một *Element* là một object mô tả, đại diện cho những gì bạn muốn thấy trên màn hình, có thể là một DOM node hoặc những components khác. *Elements* có thể chứa các *Elements* khác trong props của mình. Một khi element được tạo ra, nó sẽ không bao giờ bị thay đổi (mutated).
 
-    The object representation of React Element would be as follows:
+    Chú ý ở đây chỉ dùng từ đại diện, element không phải là instance của component, nó ko thực sự là những gì bạn sẽ nhìn thấy trên màn hình, nó đơn giản là một object đại diện cho component instance được tạo ra. Một object với các thuộc tính như *key*, *props*, *ref* và *type*
+
+    Ví dụ về object đại diện của React Element như sau:
 
     ```js
     const element = React.createElement(
@@ -409,7 +410,7 @@ layout: default
     )
     ```
 
-    The above `React.createElement()` function returns an object:
+    Hàm `React.createElement()` bên trên sẽ trả về một object như sau:
 
     ```
     {
@@ -421,47 +422,52 @@ layout: default
     }
     ```
 
-    And finally it renders to the DOM using `ReactDOM.render()`:
+    Và cuối cùng sẽ trả về một DOM node bằng việc sử dụng `ReactDOM.render()`:
 
     ```html
     <div id='login-btn'>Login</div>
     ```
 
-    Whereas a **component** can be declared in several different ways. It can be a class with a `render()` method. Alternatively, in simple cases, it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output:
+    Trong khi đó, **Components** là các khối xây dựng lên React. Nó có thể là một class với phương thức `render()`. Hoặc, đơn giản hơn, có thể định nghĩa dưới dạng function. Trong cả hai trường hợp, nó tiếp nhận các giá trị đầu vào làm próp, và trả về React element hay JSX tree:
 
-    ```javascript
+    ```js
     const Button = ({ onLogin }) =>
       <div id={'login-btn'} onClick={onLogin}>Login</div>
     ```
 
-    Then JSX gets transpiled to a `React.createElement()` function tree:
+    JSX biên dịch thành hàm `React.createElement()`:
 
-    ```javascript
+    ```js
     const Button = ({ onLogin }) => React.createElement(
       'div',
       { id: 'login-btn', onClick: onLogin },
       'Login'
     )
     ```
+    Tham khảo thêm tại:
+
+    [React Components, Elements, and Instances](https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html).
+
+    [React Elements vs React Components](https://tylermcginnis.com/react-elements-vs-react-components).
 
     **[⬆ Mục lục](#table-of-contents)**
     
-5. ### How to create components in React?
+5. ### Có bao nhiêu cách tạo ra component React? {#how-to-create-components-in-react}
 
-    There are two possible ways to create a component.
+    Có 2 cách để tạo nên một component
 
-    1. **Function Components:** This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as first parameter and return React elements:
+    1. **Function Components:** Đây là cách đơn giản nhất. Thuần túy sử dụng hàm trong JavaScript với props là tham số đầu tiên và trả về React elements:
 
-        ```jsx harmony
+        ```jsx
         function Greeting({ message }) {
           return <h1>{`Hello, ${message}`}</h1>
 
         }
         ```
 
-    2. **Class Components:** You can also use ES6 class to define a component. The above function component can be written as:
+    2. **Class Components:** Bạn có thể sử dụng class trong ES6 để định nghĩa một component. Component ở trên có thể sử dụng class để khai báo như sau:
 
-        ```jsx harmony
+        ```jsx
         class Greeting extends React.Component {
           render() {
             return <h1>{`Hello, ${this.props.message}`}</h1>
@@ -471,25 +477,30 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-6. ### When to use a Class Component over a Function Component?
+6. ### Khi nào nên sử dụng Class components thay cho Function Components? {#when-to-use-a-class-component-over-a-function-component}
 
-    If the component needs *state or lifecycle methods* then use class component otherwise use function component.
-    *However, from React 16.8 with the addition of Hooks, you could use state , lifecycle  methods and other features that were only available in class component right in your function component.*
+    Sử dụng Class components trong trường hợp component cần có *state hoặc các phương thức lifecycle*, nếu không hãy sử dụng Function components.
 
-    **[⬆ Mục lục](#table-of-contents)**
-    
-7. ### What are Pure Components?
-
-    *`React.PureComponent`* is exactly the same as *`React.Component`* except that it handles the `shouldComponentUpdate()` method for you. When props or state changes, *PureComponent* will do a shallow comparison on both props and state. *Component* on the other hand won't compare current props and state to next out of the box. Thus, the component will re-render by default whenever `shouldComponentUpdate` is called.
+    *Tuy nhiên, từ phiên bản React 16.8, với sự bổ sung của Hooks, chúng ta đã có thể sử dụng state, các phương thức lifecycle cũng như các tính năng chỉ có ở Class components trong Function components.*
 
     **[⬆ Mục lục](#table-of-contents)**
     
-8. ### What is state in React?
+7. ### Pure components là gì? {#what-are-pure-components}
 
-    *State* of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components. Let's create an user component with message state,
+    *`React.PureComponent`* hoàn toàn giống với *`React.Component`* ngoại từ việc nó tự xử lý phương thức `shouldComponentUpdate()`. Khi props hoặc state thay đổi, *PureComponent* sẽ thực hiện một phép so sánh nông (shallow comparison) đối với cả props và state. Mặt khác *Component* sẽ không so sánh props và state của trước và sau thay đổi, mà sẽ mặc định render lại bất cứ khi nào `shouldComponentUpdate` được gọi.
 
+    Tiền đề của *`React.PureComponent`* là một phiên bản có hiệu suất cao hơn Component. Tại sao?
+    Trước hết hãy tìm hiểu So sánh nông (Shallow Comparion) là gì? Nó là phép so sánh giữa state và nextState, cũng như props và nextProps, tuy nhiên chỉ so sánh value của các key của 2 input, ko tiếp tục so sánh đến các nhánh dưới nếu value là object, array.
 
-    ```jsx harmony
+    Trong một dự án bình thường, cây component có thể rất phức tạp, Shallow comparion lại là một hoạt động vô cùng rẻ tiền, rẻ hơn so với chi phí deep comparion và rẻ hơn rất nhiều so với chi phí render lại từng component con trong tree. Nhờ đó perfomance UI được cải thiện.
+
+    **[⬆ Mục lục](#table-of-contents)**
+    
+8. ### State trong React là gì? {#what-is-state-in-react}
+
+    *State* của một component là một object chứa một số thông tin có thể thay đổi trong suốt vòng đời (lifecycle) của component. Chúng ta luôn phải giữ cho state đơn giản nhất có thể và giữ ở mức tối thiếu các component phụ thuộc vào state (stateful components). Ví dụ
+
+    ```jsx
     class User extends React.Component {
       constructor(props) {
         super(props)
@@ -511,27 +522,27 @@ layout: default
 
     ![state](images/state.jpg)
 
-    State is similar to props, but it is private and fully controlled by the component. i.e, It is not accessible to any component other than the one that owns and sets it.
+    State tương tụ như props, nhưng nó là riêng tư và được component toàn quyền kiếm soát. Tức là, state không thể truy cập bởi bất cứ component nào khác ngoài component sở hữu nó.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-9. ### What are props in React?
+9. ### Props trong React là gì? {#what-are-props-in-react}
 
-    *Props* are inputs to components. They are single values or objects containing a set of values that are passed to components on creation using a naming convention similar to HTML-tag attributes. They are data passed down from a parent component to a child component.
+    *Props* là những giá trị đầu vào của components. Chúng là những giá trị đơn lẻ hoặc những object chứa những giá trị truyền vào trong components bằng cách sử dụng cách đặt tên tương tự các thuộc tình của HTML. Chúng là những dữ liệu được truyền từ component cha sang component con.
 
-    The primary purpose of props in React is to provide following component functionality:
+    Mục đích chính của props trong React là cung cấp chức năng của component như sau:
 
-    1. Pass custom data to your component.
-    2. Trigger state changes.
-    3. Use via `this.props.reactProp` inside component's `render()` method.
+    1. Truyền dữ liệu cho component.
+    2. Kích hoạt thay đổi state.
+    3. Có thể sử dụng `this.props.reactProp` bên trong phương thức `render()` của component.
 
-    For example, let us create an element with `reactProp` property:
+    Ví dụ, hãy tạo một element với thuộc tính `reactProp`:
 
-    ```jsx harmony
+    ```jsx
     <Element reactProp={'1'} />
     ```
 
-    This `reactProp` (or whatever you came up with) name then becomes a property attached to React's native props object which originally already exists on all components created using React library.
+    Thuộc tính `reactProp` này (hoặc bất cứ cái tên nào) sẽ trở thành một thuộc tính gắn với props của component.
 
     ```
     props.reactProp
@@ -539,9 +550,9 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-10. ### What is the difference between state and props?
+10. ### State và Props khác nhau như thế nào? {#what-is-the-difference-between-state-and-props}
 
-    Both *props* and *state* are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
+    *props* and *state* đều là JavaScript objects. Mặc dù cả 2 đều chứa thông tin ảnh hưởng đến đầu ra của hàm render, nhưng chúng khác nhau về chức năng đối với component. Props truyền vào component tương tự như tham số của một hàm trong khi state được quản lý trong component tương tự như các biến được khai báo bên trong hàm.
 
     **[⬆ Mục lục](#table-of-contents)**
     
