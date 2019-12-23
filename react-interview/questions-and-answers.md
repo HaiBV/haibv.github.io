@@ -23,11 +23,11 @@ layout: default
 |8  | [State trong React là gì?](#what-is-state-in-react) |
 |9  | [Props trong React là gì?](#what-are-props-in-react) |
 |10 | [State và Props khác nhau như thế nào?](#what-is-the-difference-between-state-and-props) |
-|11 | [Why should we not update the state directly?](#why-should-we-not-update-the-state-directly) |
-|12 | [What is the purpose of callback function as an argument of setState()?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
+|11 | [Tại sao chúng ta không được trực tiếp thay đổi state?](#why-should-we-not-update-the-state-directly) |
+|12 | [Mục đích của hàm callback trong tham số của setState()?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setState)
 |13 | [What is the difference between HTML and React event handling?](#what-is-the-difference-between-html-and-react-event-handling) |
-|14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
-|15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
+|14 | [Làm thế nào để truyền phương thức hoặc xử lý sự kiện vào trong JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
+|15 | [Có những cách nào để truyền tham số vào hàm xử lý sự kiện hoặc callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
 |16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
 |17 | [What is inline conditional expressions?](#what-is-inline-conditional-expressions) |
 |18 | [What are "key" props and what is the benefit of using them in arrays of elements?](#what-are-key-props-and-what-is-the-benefit-of-using-them-in-arrays-of-elements) |
@@ -556,132 +556,134 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-11. ### Why should we not update the state directly?
+11. ### Tại sao chúng ta không được trực tiếp thay đổi state? {#why-should-we-not-update-the-state-directly}
 
-    If you try to update state directly then it won't re-render the component.
+    Nếu chúng ta trực tiếp thay đổi state thì component sẽ không được render lại.
 
-    ```javascript
-    //Wrong
-    this.state.message = 'Hello world'
+    ```js
+    // Sai
+    this.state.message = 'Hello world';
     ```
 
-    Instead use `setState()` method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
+    Thay vào đó phải sử dụng phương thức `setState()`. Nó sẽ cập nhật state của component. Khi state thay đổi, component sẽ được render lại.
 
-    ```javascript
-    //Correct
-    this.setState({ message: 'Hello World' })
+    ```js
+    // Đúng 
+    this.setState({ message: 'Hello World' });
     ```
 
-    **Note:** You can directly assign to the state object either in *constructor* or using latest javascript's class field declaration syntax.
+    **Ghi chú:** Có thể trực tiếp gán giá trị cho state trong *constructor* (hàm khởi tạo) hoặc sử dụng cú pháp khai báo mới nhất trong class của JavaScript.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-12. ### What is the purpose of callback function as an argument of `setState()`?
+12. ### Mục đích của hàm callback trong tham số của setState()? {#what-is-the-purpose-of-callback-function-as-an-argument-of-setState}
 
-    The callback function is invoked when setState finished and the component gets rendered. Since `setState()` is **asynchronous** the callback function is used for any post action.
+    Hàm callback trong tham số sẽ chạy sau khi setState kết thúc và component đã được render lại. Trong trường hợp `setState()` là **asynchronous** (bất đồng bộ) hàm callback sẽ dùng cho những hành động sau đó.
 
-    **Note:** It is recommended to use lifecycle method rather than this callback function.
+    **Ghi chú:** Nên sử dụng các phương thức lifecycle thay vì dùng callback.
 
-    ```javascript
-    setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))
+    ```js
+    setState(
+      { name: 'John' }, 
+      () => console.log('The name has updated and component re-rendered')
+    );
     ```
 
     **[⬆ Mục lục](#table-of-contents)**
     
-13. ### What is the difference between HTML and React event handling?
+13. ### Cho biết điểm khác biệt giữa việc xử lý sự kiện trong HTML và React {#what-is-the-difference-between-html-and-react-event-handling}
 
-    1. In HTML, the event name should be in *lowercase*:
+    1. Với HTML, tên sự kiện phải viết *thường* (*lowercase*):
 
-    ```html
-    <button onclick='activateLasers()'>
-    ```
+        ```html
+        <button onclick='activateLasers()'>
+        ```
 
-    Whereas in React it follows *camelCase* convention:
+        Trong khi với React có thể sử dụng *camelCase*:
 
-    ```jsx harmony
-    <button onClick={activateLasers}>
-    ```
+        ```html
+        <button onClick={activateLasers}>
+        ```
 
-    2. In HTML, you can return `false` to prevent default behavior:
+    2. Với HTML, có trên trả về `false` để bỏ qua hành động mặc định:
+        ```html
+        <a href='#' onclick='console.log("The link was clicked."); return false;' />
+        ```
 
-    ```html
-    <a href='#' onclick='console.log("The link was clicked."); return false;' />
-    ```
+        Trong khi với React buộc phải sử dụng `preventDefault()`:
 
-    Whereas in React you must call `preventDefault()` explicitly:
+        ```js
+        function handleClick(event) {
+          event.preventDefault()
+          console.log('The link was clicked.')
+        }
+        ```
 
-    ```javascript
-    function handleClick(event) {
-      event.preventDefault()
-      console.log('The link was clicked.')
-    }
-    ```
-
-    3. In HTML, you need to invoke the function by appending `()`
-    Whereas in react you should not append `()` with the function name. (refer "activateLasers" function in the first point for example)
-
-    **[⬆ Mục lục](#table-of-contents)**
-    
-4. ### How to bind methods or event handlers in JSX callbacks?
-
-    There are 3 possible ways to achieve this:
-
-    1.	**Binding in Constructor:** In JavaScript classes, the methods are not bound by default. The same thing applies for React event handlers defined as class methods. Normally we bind them in constructor.
-
-    ```javascript
-    class Component extends React.Componenet {
-      constructor(props) {
-        super(props)
-        this.handleClick = this.handleClick.bind(this)
-      }
-
-      handleClick() {
-        // ...
-      }
-    }
-    ```
-
-    2. **Public class fields syntax:** If you don't like to use bind approach then *public class fields syntax* can be used to correctly bind callbacks.
-
-    ```jsx harmony
-    handleClick = () => {
-      console.log('this is:', this)
-    }
-    ```
-
-    ```jsx harmony
-    <button onClick={this.handleClick}>
-      {'Click me'}
-    </button>
-    ```
-
-    3. **Arrow functions in callbacks:** You can use *arrow functions* directly in the callbacks.
-
-    ```jsx harmony
-    <button onClick={(event) => this.handleClick(event)}>
-      {'Click me'}
-    </button>
-    ```
-
-    **Note:** If the callback is passed as prop to child components, those components might do an extra re-rendering. In those cases, it is preferred to go with `.bind()` or *public class fields syntax* approach considering performance.
+    3. Với HTML, cần gọi hàm bằng cách nối thêm `()`
+      Trong khi với React không được thêm `()` vào tên hàm. (tham khảo hàm activateLasers ở ví dụ 1)
 
     **[⬆ Mục lục](#table-of-contents)**
     
-15. ### How to pass a parameter to an event handler or callback?
+14. ### Làm thế nào để gán phương thức hoặc xử lý sự kiện vào trong JSX callbacks? {#how-to-bind-methods-or-event-handlers-in-JSX-callbacks}
 
-    You can use an *arrow function* to wrap around an *event handler* and pass parameters:
+    Có 3 cách như sau:
 
-    ```jsx harmony
+    1. **Gán trong in Constructor:** Với các class trong JavaScript, các phương thức không được gán mặc định. Tương tự đối với các hàm xử lý sự kiện. Và thường là chúng sẽ được gán trong hàm constructor.
+
+        ```jsx
+        class Component extends React.Componenet {
+          constructor(props) {
+            super(props)
+            this.handleClick = this.handleClick.bind(this)
+          }
+
+          handleClick() {
+            // ...
+          }
+        }
+        ```
+
+    2. **Public class fields syntax:** Nếu bạn không thích sử dụng `bind`, có thể thay bằng *public class fields syntax*.
+
+        ```jsx
+        handleClick = () => {
+          console.log('this is:', this)
+        }
+        ```
+
+        ```jsx
+        <button onClick={this.handleClick}>
+          {'Click me'}
+        </button>
+        ```
+
+    3. **Arrow functions in callbacks:** Có thể trực tiếp sử dụng  *arrow functions*.
+
+        ```jsx
+        <button onClick={(event) => this.handleClick(event)}>
+          {'Click me'}
+        </button>
+        ```
+
+    **Note:** Nếu callback truyền vào qua props từ component cha đến componentcon, components con có thể thực hiện nhiều lần render. Trong trường hợp nsy, để tránh ảnh hướng tới performance, nên sử dụng `.bind()` hoặc *public class fields syntax*.
+
+    **[⬆ Mục lục](#table-of-contents)**
+    
+15. ### Có những cách nào để truyền tham số vào hàm xử lý sự kiện hoặc callback? {#how-to-pass-a-parameter-to-an-event-handler-or-callback}
+
+    Có thể sử dụng *arrow function* đối với *event handler* và truyền tham số vào:
+
+    ```jsx
     <button onClick={() => this.handleClick(id)} />
     ```
 
-    This is an equivalent to calling `.bind`:
+    Tương đương với việc sử dụng `.bind`:
 
-    ```jsx harmony
+    ```jsx
     <button onClick={this.handleClick.bind(this, id)} />
     ```
-    Apart from these two approaches, you can also pass arguments to a function which is defined as array function
-    ```jsx harmony
+    Ngoài 2 cách này, có thể  truyền tham số  qua hàm được định nghĩa là một array function
+    ```jsx
     <button onClick={this.handleClick(id)} />
     handleClick = (id) => () => {
         console.log("Hello, your ticket number is", id)
@@ -2261,14 +2263,14 @@ layout: default
 
     If you try to render a `<label>` element bound to a text input using the standard `for` attribute, then it produces HTML missing that attribute and prints a warning to the console.
 
-    ```jsx harmony
+    ```jsx
     <label for={'user'}>{'User'}</label>
     <input type={'text'} id={'user'} />
     ```
 
     Since `for` is a reserved keyword in JavaScript, use `htmlFor` instead.
 
-    ```jsx harmony
+    ```jsx
     <label htmlFor={'user'}>{'User'}</label>
     <input type={'text'} id={'user'} />
     ```
@@ -2279,15 +2281,13 @@ layout: default
 
     You can use *spread operator* in regular React:
 
-    ```
-    jsx harmony
+    ```jsx 
     <button style={{...styles.panel.button, ...styles.panel.submitButton}}>{'Submit'}</button>
     ```
 
     If you're using React Native then you can use the array notation:
 
-    ```
-    jsx harmony
+    ```jsx
     <button style={[styles.panel.button, styles.panel.submitButton]}>{'Submit'}</button>
     ```
 
@@ -2297,7 +2297,7 @@ layout: default
 
     You can listen to the `resize` event in `componentDidMount()` and then update the dimensions (`width` and `height`). You should remove the listener in `componentWillUnmount()` method.
 
-    ```javascript
+    ```jsx
         class WindowDimensions extends React.Component {
             constructor(props){
                 super(props);
