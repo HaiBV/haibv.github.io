@@ -28,8 +28,8 @@ layout: default
 |13 | [What is the difference between HTML and React event handling?](#what-is-the-difference-between-html-and-react-event-handling) |
 |14 | [Làm thế nào để truyền phương thức hoặc xử lý sự kiện vào trong JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
 |15 | [Có những cách nào để truyền tham số vào hàm xử lý sự kiện hoặc callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
-|16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
-|17 | [What is inline conditional expressions?](#what-is-inline-conditional-expressions) |
+|16 | [Synthetic events trong ReactJS là gì?](#what-are-synthetic-events-in-react) |
+|17 | [Biểu thức điều kiện nội tuyến (inline) là gì?](#what-is-inline-conditional-expressions) |
 |18 | [What are "key" props and what is the benefit of using them in arrays of elements?](#what-are-key-props-and-what-is-the-benefit-of-using-them-in-arrays-of-elements) |
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
 |20 | [How to create refs?](#how-to-create-refs)
@@ -624,7 +624,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-14. ### Làm thế nào để gán phương thức hoặc xử lý sự kiện vào trong JSX callbacks? {#how-to-bind-methods-or-event-handlers-in-JSX-callbacks}
+14. ### Làm thế nào để gán phương thức hoặc xử lý sự kiện vào trong JSX callbacks? {#how-to-bind-methods-or-event-handlers-in-jsx-callbacks}
 
     Có 3 cách như sau:
 
@@ -692,17 +692,49 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-16. ### What are synthetic events in React?
+16. ### Synthetic events trong ReactJS là gì? {#what-are-synthetic-events-in-react}
 
-    `SyntheticEvent` is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, including `stopPropagation()` and `preventDefault()`, except the events work identically across all browsers.
+    `SyntheticEvent` là object mở rộng hơn của các sự kiện ban đầu của trình duyệt. Bao gồm toàn bộ API của các sự kiện ban đầu của trình duyệt cùng với `stopPropagation()` và `preventDefault()`, ngoại trừ các sự kiện giống nhau trên tất cả các trình duyệt.
+
+    ```js
+    function ActionLink() {
+      function handleClick(e) {
+        e.preventDefault();
+        console.log('The link was clicked.');
+      }
+
+      return (
+        <a href="#" onClick={handleClick}>
+          Click me
+        </a>
+      );
+    }
+    ```
+    Trong ví dụ trên, *e* là một SyntheticEvent. Mọi SyntheticEvent đều bao gồm những thuộc tính sau:
+    ```js
+    boolean bubbles
+    boolean cancelable
+    DOMEventTarget currentTarget
+    boolean defaultPrevented
+    number eventPhase
+    boolean isTrusted
+    DOMEvent nativeEvent
+    void preventDefault()
+    boolean isDefaultPrevented()
+    void stopPropagation()
+    boolean isPropagationStopped()
+    DOMEventTarget target
+    number timeStamp
+    string type
+    ```
 
     **[⬆ Mục lục](#table-of-contents)**
     
-17. ### What is inline conditional expressions?
+17. ### Biểu thức điều kiện nội tuyến (inline) là gì? {#what-is-inline-conditional-expressions}
 
-    You can use either *if statements* or *ternary expressions* which are available from JS to conditionally render expressions. Apart from these approaches, you can also embed any expressions in JSX by wrapping them in curly braces and then followed by JS logical operator `&&`.
+    Cả *câu điều kiện if* và *toán tử điều kiện* (toán tử ?) đều có thể sử dụng để làm điều kiện trong hàm render. Ngoài ra, bạn có thể nhúng bất kỳ biểu thức nào vào JSX bằng cách đặt chúng trong dấu ngoặc nhọn và kèm theo sau là toán từ logic `&&`.
 
-    ```jsx harmony
+    ```jsx
     <h1>Hello!</h1>
     {
         messages.length > 0 && !isLogin?
