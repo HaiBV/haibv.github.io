@@ -30,9 +30,9 @@ layout: default
 |15 | [Có những cách nào để truyền tham số vào hàm xử lý sự kiện hoặc callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
 |16 | [Synthetic events trong ReactJS là gì?](#what-are-synthetic-events-in-react) |
 |17 | [Biểu thức điều kiện nội tuyến (inline) là gì?](#what-is-inline-conditional-expressions) |
-|18 | [What are "key" props and what is the benefit of using them in arrays of elements?](#what-are-key-props-and-what-is-the-benefit-of-using-them-in-arrays-of-elements) |
-|19 | [What is the use of refs?](#what-is-the-use-of-refs) |
-|20 | [How to create refs?](#how-to-create-refs)
+|18 | [Từ khóa "key" trong props là gì? và lợi ích của việc sử dụng nó trong mảng?](#what-are-key-props-and-what-is-the-benefit-of-using-them-in-arrays-of-elements) |
+|19 | [Cho biết tác dụng của refs?](#what-is-the-use-of-refs) |
+|20 | [Có những cách nào để tạo ra refs?](#how-to-create-refs)
 |21 | [What are forward refs?](#what-are-forward-refs) |
 |22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
 |23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
@@ -750,13 +750,13 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-18. ### What are "key" props and what is the benefit of using them in arrays of elements?
+18. ### Từ khóa "key" trong props là gì? và lợi ích của việc sử dụng nó trong mảng?  {#what-are-key-props-and-what-is-the-benefit-of-using-them-in-arrays-of-elements}
 
-    A `key` is a special string attribute you **should** include when creating arrays of elements. *Keys* help React identify which items have changed, are added, or are removed.
+    `key` là một thuộc tính dạng string đặc biệt chúng ta **nên** thêm vào khi tạo một mảng. *Key* giúp React xác định phần tử nào được thay đổi, được thêm vào hay bị loại bỏ.
 
-    Most often we use IDs from our data as *keys*:
+    Chúng ta thưởng sử dụng IDs từ tập dữ liệu để làm *keys*:
 
-    ```jsx harmony
+    ```jsx
     const todoItems = todos.map((todo) =>
       <li key={todo.id}>
         {todo.text}
@@ -764,9 +764,9 @@ layout: default
     )
     ```
 
-    When you don't have stable IDs for rendered items, you may use the item *index* as a *key* as a last resort:
+    Nếu không có IDs, chúng ta có thể sử dụng *index* của các phẩn từ trong mảng để làm *key*:
 
-    ```jsx harmony
+    ```jsx
     const todoItems = todos.map((todo, index) =>
       <li key={index}>
         {todo.text}
@@ -774,63 +774,69 @@ layout: default
     )
     ```
 
-    **Note:**
+    **Ghi chú:**
 
-    1. Using *indexes* for *keys* is **not recommended** if the order of items may change. This can negatively impact performance and may cause issues with component state.
-    2. If you extract list item as separate component then apply *keys* on list component instead of `li` tag.
-    3. There will be a warning message in the console if the `key` prop is not present on list items.
-
-    **[⬆ Mục lục](#table-of-contents)**
-    
-19. ### What is the use of refs?
-
-    The *ref* is used to return a reference to the element. They *should be avoided* in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
+    1. **Không khuyến khích** sử dụng *indexes* làm *keys* nếu thứ tự của các phần tử có thể thay đổi. Điều này sẽ ảnh hướng xấu tới hiệu suất và một số vấn đề với state của component.
+    2. Nếu bạn dựng nên một danh sách các component thì hãy dùng *keys* cho danh sách đó thay vì thẻ `li`.
+    3. Sẽ có cảnh báo (warning) ở console nếu `key` trong prop không xuất hiện trong danh sách các phần tử.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-20. ### How to create refs?
+19. ### Cho biết tác dụng của refs? {#what-is-the-use-of-refs}
 
-    There are two approaches
-    1. This is a recently added approach. *Refs* are created using `React.createRef()` method and attached to React elements via the `ref` attribute. In order to use *refs* throughout the component, just assign the *ref* to the instance property within constructor.
+    Sử dụng *ref* sẽ trả về một tham chiếu đến một phần từ, có thể là một phần tử DOM hoặc component React. Chúng ta *nên tránh sử dụng* trong hầu hết các trường hợp, tuy nhiên, chúng có thể hữu dụng khi bạn cần truy cập trực tiếp đến phần tử DOM hoặc instance của component.
 
-    ```jsx harmony
-    class MyComponent extends React.Component {
-      constructor(props) {
-        super(props)
-        this.myRef = React.createRef()
-      }
-      render() {
-        return <div ref={this.myRef} />
-      }
-    }
-    ```
-    2. You can also use ref callbacks approach regardless of React version. For example, the search bar component's input element accessed as follows,
-    ```jsx harmony
-    class SearchBar extends Component {
-       constructor(props) {
-          super(props);
-          this.txtSearch = null;
-          this.state = { term: '' };
-          this.setInputSearchRef = e => {
-             this.txtSearch = e;
+    **[⬆ Mục lục](#table-of-contents)**
+    
+20. ### Có những cách nào để tạo ra refs? {#how-to-create-refs}
+
+    Có 2 cách như sau:
+    1. Đây là cách mới được thêm gần đây. *Refs* được tạo ra khi sử dụng phương thức `React.createRef()` và được gắn vào component qua thuộc tính `ref`. Để sử dụng *refs* bên trong component, chỉ cần gán *ref* cho một thuộc tính của component trong constructor.
+
+        ```jsx 
+        class MyComponent extends React.Component {
+          constructor(props) {
+            super(props)
+            this.myRef = React.createRef()
           }
-       }
-       onInputChange(event) {
-          this.setState({ term: this.txtSearch.value });
-       }
-       render() {
-          return (
-             <input
-                value={this.state.term}
-                onChange={this.onInputChange.bind(this)}
-                ref={this.setInputSearchRef} />
-          );
-       }
-    }
-    ```
+          render() {
+            return <div ref={this.myRef} />
+          }
+        }
+        ```
+    2. Bạn có thể sử dụng ref callback với mọi phiên bản React. Ví dụ như:
+        ```jsx 
+        class SearchBar extends Component {
+          constructor(props) {
+              super(props);
+              this.txtSearch = null;
+              this.state = { term: '' };
+              this.setInputSearchRef = e => {
+                this.txtSearch = e;
+              }
+          }
+          onInputChange(event) {
+              this.setState({ term: this.txtSearch.value });
+          }
+          render() {
+              return (
+                <input
+                    value={this.state.term}
+                    onChange={this.onInputChange.bind(this)}
+                    ref={this.setInputSearchRef} />
+              );
+          }
+        }
+        ```
 
-    You can also use *refs* in function components using **closures**.
-    **Note**: You can also use inline ref callbacks even though it is not a recommended approach
+    Bạn có thể sự dụng *refs* trong hàm của components sử dụng **closures**.
+    **Ghi chú:**: Bạn có thể sử dụng ref nội tuyến mặc dù không được khuyên dùng
+
+    **Tham khảo:**
+    [Refs in React : All you need to know!](https://hackernoon.com/refs-in-react-all-you-need-to-know-fb9c9e2aeb81).
+
+    [Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html).
+
     **[⬆ Mục lục](#table-of-contents)**
     
 21. ### What are forward refs?
