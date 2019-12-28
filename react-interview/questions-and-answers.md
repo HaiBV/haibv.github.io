@@ -38,7 +38,7 @@ layout: default
 |23 | [Tại sao string Refs không còn được sử dụng?](#why-are-string-refs-legacy) |
 |24 | [Virtual DOM là gì?](#what-is-virtual-dom) |
 |25 | [Virtual DOM hoạt động như thế nào?](#how-virtual-dom-works) |
-|26 | [What is the difference between Shadow DOM and Virtual DOM?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
+|26 | [Sự khác biệt giữa Shadow DOM và Virtual DOM là gì?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
 |27 | [What is React Fiber?](#what-is-react-fiber) |
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
 |29 | [What are controlled components?](#what-are-controlled-components) |
@@ -922,28 +922,28 @@ layout: default
     
 24. ### Virtual DOM là gì? {#what-is-virtual-dom}
 
-    The *Virtual DOM* (VDOM) is an in-memory representation of *Real DOM*. The representation of a UI is kept in memory and synced with the "real" DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called *reconciliation*.
+    *Virtual DOM* (VDOM) một đại diện của *Real DOM*, được lưu trong bộ nhớ và được đồng bộ với "real" DOM. Bước đồng bộ được thực hiện sau khi hàm render thực thi trước khi hiện thị các phần tử hiện thị trên màn hình. Tất cả tiến trình này được gọi là *reconciliation*.
 
     **[⬆ Mục lục](#table-of-contents)**
     
 25. ### Virtual DOM hoạt động như thế nào? {#how-virtual-dom-works}
 
-    The *Virtual DOM* works in three simple steps.
+    *Virtual DOM* hoạt động với ba bước đơn giản:
 
-    1. Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+    1. Bất cứ khi nào có sự thay đổi dữ liệu, toàn bộ UI được render lại với Virtual DOM.
         ![vdom](images/vdom1.png)
 
-    2. Then the difference between the previous DOM representation and the new one is calculated.
+    2. Sau đó sự khác biệt giữa 2 phiên bản của Virtual DOM - trước và sau dữ liệu thay đổi - được xác định.
         ![vdom2](images/vdom2.png)
 
-    3. Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+    3. Khi đã xác định xong sự khác biệt, real DOM sẽ chỉ cập nhật những phần thực sự thay đổi.
         ![vdom3](images/vdom3.png)
 
     **[⬆ Mục lục](#table-of-contents)**
     
-26. ### What is the difference between Shadow DOM and Virtual DOM?
+26. ### Sự khác biệt giữa Shadow DOM và Virtual DOM là gì?  {#what-is-the-difference-between-shadow-dom-and-virtual-dom}
 
-    The *Shadow DOM* is a browser technology designed primarily for scoping variables and CSS in *web components*. The *Virtual DOM* is a concept implemented by libraries in JavaScript on top of browser APIs.
+    *Shadow DOM* là một công nghệ của trình duyệt chủ yếu dành cho các biến và CSS trong *web components*.  *Virtual DOM* là một khái niệm triển khai bởi các thư viện JavaScript dựa trên các APIs của trình duyệt.
 
     **[⬆ Mục lục](#table-of-contents)**
     
