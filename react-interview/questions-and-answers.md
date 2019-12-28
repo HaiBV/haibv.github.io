@@ -33,11 +33,11 @@ layout: default
 |18 | [Từ khóa "key" trong props là gì? và lợi ích của việc sử dụng nó trong mảng?](#what-are-key-props-and-what-is-the-benefit-of-using-them-in-arrays-of-elements) |
 |19 | [Cho biết tác dụng của refs?](#what-is-the-use-of-refs) |
 |20 | [Có những cách nào để tạo ra refs?](#how-to-create-refs)
-|21 | [What are forward refs?](#what-are-forward-refs) |
-|22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
-|23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
-|24 | [What is Virtual DOM?](#what-is-virtual-dom) |
-|25 | [How Virtual DOM works?](#how-virtual-dom-works) |
+|21 | [Refs fordwarding là gì?](#what-are-forward-refs) |
+|22 | [Nên dùng callback refs hay finDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
+|23 | [Tại sao string Refs không còn được sử dụng?](#why-are-string-refs-legacy) |
+|24 | [Virtual DOM là gì?](#what-is-virtual-dom) |
+|25 | [Virtual DOM hoạt động như thế nào?](#how-virtual-dom-works) |
 |26 | [What is the difference between Shadow DOM and Virtual DOM?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
 |27 | [What is React Fiber?](#what-is-react-fiber) |
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
@@ -793,7 +793,7 @@ layout: default
     Có 2 cách như sau:
     1. Đây là cách mới được thêm gần đây. *Refs* được tạo ra khi sử dụng phương thức `React.createRef()` và được gắn vào component qua thuộc tính `ref`. Để sử dụng *refs* bên trong component, chỉ cần gán *ref* cho một thuộc tính của component trong constructor.
 
-        ```jsx 
+        ```jsx
         class MyComponent extends React.Component {
           constructor(props) {
             super(props)
@@ -805,7 +805,7 @@ layout: default
         }
         ```
     2. Bạn có thể sử dụng ref callback với mọi phiên bản React. Ví dụ như:
-        ```jsx 
+        ```jsx
         class SearchBar extends Component {
           constructor(props) {
               super(props);
@@ -839,11 +839,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-21. ### What are forward refs?
+21. ### Refs forwarding là gì? {#what-are-forward-refs}
 
-    *Ref forwarding* is a feature that lets some components take a *ref* they receive, and pass it further down to a child.
+    *Ref forwarding* (chuyển tiếp) là một tính năng cho phép một số component sử dụng *ref* mà chúng nhận được, và truyền xuống cho component con.
 
-    ```jsx harmony
+    ```jsx
     const ButtonElement = React.forwardRef((props, ref) => (
       <button ref={ref} className="CustomButton">
         {props.children}
@@ -857,13 +857,13 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-22. ### Which is preferred option with in callback refs and findDOMNode()?
+22. ### Nên dùng callback refs hay finDOMNode()?  {#which-is-preferred-option-with-in-callback-refs-and-findDOMNode}
 
-    It is preferred to use *callback refs* over `findDOMNode()` API. Because `findDOMNode()` prevents certain improvements in React in the future.
+    Nên sử dụng *callback refs* thay vì `findDOMNode()` API. Vì `findDOMNode()` sẽ ngăn sự cải tiến nhất định của React trong tương lai.
 
-    The **legacy** approach of using `findDOMNode`:
+    Cách tiếp cận cũ sử dụng `findDOMNode`:
 
-    ```javascript
+    ```js
     class MyComponent extends Component {
       componentDidMount() {
         findDOMNode(this).scrollIntoView()
@@ -875,9 +875,9 @@ layout: default
     }
     ```
 
-    The recommended approach is:
+    Cách tiếp cận được đề xuất:
 
-    ```javascript
+    ```js
     class MyComponent extends Component {
       constructor(props){
         super(props);
@@ -895,21 +895,21 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-23. ### Why are String Refs legacy?
+23. ### Tại sao coi string Refs là đồ cổ? {#why-are-string-refs-legacy}
 
-    If you worked with React before, you might be familiar with an older API where the `ref` attribute is a string, like `ref={'textInput'}`, and the DOM node is accessed as `this.refs.textInput`. We advise against it because *string refs have below issues*, and are considered legacy. String refs were **removed in React v16**.
+    Nếu bạn đã từng sử dụng React ở các phiên bản trước, bạn có thể biết trước đây thuộc tính `ref` đã được sử dụng với dạng string, như sau `ref={'textInput'}`, và DOM node được truy cập như sau `this.refs.textInput`. Chúng tôi khuyên bạn không nên sử dụng nó vì *string refs tồn tại những vấn đề dưới đây*. String refs đã bị **loại bỏ ở React v16**.
 
-    1. They *force React to keep track of currently executing component*. This is problematic because it makes react module stateful, and thus causes weird errors when react module is duplicated in the bundle.
-    2. They are *not composable* — if a library puts a ref on the passed child, the user can't put another ref on it. Callback refs are perfectly composable.
-    3. They *don't work with static analysis* like Flow. Flow can't guess the magic that framework does to make the string ref appear on `this.refs`, as well as its type (which could be different). Callback refs are friendlier to static analysis.
-    4. It doesn't work as most people would expect with the "render callback" pattern (e.g. <DataGrid renderRow={this.renderRow} />)
-       ```jsx harmony
+    1. Chúng *buộc React phải liên tục theo dõi component đang thực thi*. Đây là một vấn đề vì nó khiến react module trở thành stateful, do đó gây ra các mỗi lạ mỗi khi react module được sử dụng trùng lặp.
+    2. Chúng *không thể ghép lại* — nếu một thư viện truyền một ref cho một component con, người dùng không thể thêm ref vào component đó nữa. Callback refs hoàn toàn có thể ghép lại.
+    3. Chúng *không làm việc với phân tích tĩnh* như Flow. Flow không thể tìm được string nào xuất hiện trong `this.refs`, cũng như loại của nó. Về mặt này callback refs cũng tốt hơn.
+    4. Không làm việc với hấu hều mọi người sử dụng mẫu "render callback" (ví dụ <DataGrid renderRow={this.renderRow} />)
+       ```jsx
        class MyComponent extends Component {
          renderRow = (index) => {
-           // This won't work. Ref will get attached to DataTable rather than MyComponent:
+           // Cách này không hoạt động. Ref sẽ được gắn vào DataTable thay vì MyComponent:
            return <input ref={'input-' + index} />;
 
-           // This would work though! Callback refs are awesome.
+           // Cách này hoạt động!.
            return <input ref={input => this['input-' + index] = input} />;
          }
 
@@ -920,13 +920,13 @@ layout: default
        ```
     **[⬆ Mục lục](#table-of-contents)**
     
-24. ### What is Virtual DOM?
+24. ### Virtual DOM là gì? {#what-is-virtual-dom}
 
     The *Virtual DOM* (VDOM) is an in-memory representation of *Real DOM*. The representation of a UI is kept in memory and synced with the "real" DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called *reconciliation*.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-25. ### How Virtual DOM works?
+25. ### Virtual DOM hoạt động như thế nào? {#how-virtual-dom-works}
 
     The *Virtual DOM* works in three simple steps.
 
