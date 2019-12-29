@@ -39,7 +39,7 @@ layout: default
 |24 | [Virtual DOM là gì?](#what-is-virtual-dom) |
 |25 | [Virtual DOM hoạt động như thế nào?](#how-virtual-dom-works) |
 |26 | [Sự khác biệt giữa Shadow DOM và Virtual DOM là gì?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
-|27 | [What is React Fiber?](#what-is-react-fiber) |
+|27 | [React Fiber là gì?](#what-is-react-fiber) |
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
 |29 | [What are controlled components?](#what-are-controlled-components) |
 |30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
@@ -947,15 +947,15 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-27. ### What is React Fiber?
+27. ### React Fiber là gì? {#what-is-react-fiber}
 
-    Fiber is the new *reconciliation* engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives.
+    Fiber là một phương pháp *reconciliation* mới hay thuật toán lõi được viết lại của React v16. Với mục tiêu là tăng tính phù hợp cho các lĩnh vực animation, layout, gestures, khả năng tạm dừng, hủy bỏ, or sử dụng lại và ưu tiên cho các loại cập nhật khác nhau; and new concurrency primitives.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-28. ### What is the main goal of React Fiber?
+28. ### Mục tiêu chính của của React Fiber là gì? {#what-is-the-main-goal-of-react-fiber}
 
-    The goal of *React Fiber* is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is **incremental rendering**: the ability to split rendering work into chunks and spread it out over multiple frames.
+    Mục tiêu chính của *React Fiber* là tăng tính phù hợp với animation, layout, và gestures. Tính năng tiêu biểu của nó là **nâng cao khả năng rendering**: khả năng phân chia công việc thành nhiều phần và thành nhiều khung hình.
 
     **[⬆ Mục lục](#table-of-contents)**
     
