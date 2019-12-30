@@ -40,9 +40,9 @@ layout: default
 |25 | [Virtual DOM hoạt động như thế nào?](#how-virtual-dom-works) |
 |26 | [Sự khác biệt giữa Shadow DOM và Virtual DOM là gì?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
 |27 | [React Fiber là gì?](#what-is-react-fiber) |
-|28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
-|29 | [What are controlled components?](#what-are-controlled-components) |
-|30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
+|28 | [Mục tiêu chính của của React Fiber là gì?](#what-is-the-main-goal-of-react-fiber) |
+|29 | [Controlled component là gì?](#what-are-controlled-components) |
+|30 | [Uncontrolled components là gì?](#what-are-uncontrolled-components) |
 |31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
 |32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
 |33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
@@ -959,44 +959,77 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-29. ### What are controlled components?
+29. ### Controlled component là gì? {#what-are-controlled-components}
 
-    A component that controls the input elements within the forms on subsequent user input is called **Controlled Component**, i.e, every state mutation will have an associated handler function.
+    **Controlled component** là component ấy giá trị hiện tại thông qua **props** và thông báo sự thay đổi qua phương thức như là **onChange**. Nó cập nhật và lấy dữ liệu 1 cách liên tục chứ không phải chỉ lấy duy nhất 1 lần.
 
-    For example, to write all the names in uppercase letters, we use handleChange as below,
-
-    ```javascript
-    handleChange(event) {
-      this.setState({value: event.target.value.toUpperCase()})
-    }
-    ```
-
-    **[⬆ Mục lục](#table-of-contents)**
-    
-30. ### What are uncontrolled components?
-
-    The **Uncontrolled Components** are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
-
-    In the below UserProfile component, the `name` input is accessed using ref.
-
-    ```jsx harmony
-    class UserProfile extends React.Component {
+    Ví dụ:
+    ```jsx
+    class NameForm extends React.Component {
       constructor(props) {
-        super(props)
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.input = React.createRef()
+        super(props);
+        this.state = {value: ''};
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+      handleChange(event) {
+        this.setState({value: event.target.value});
       }
 
       handleSubmit(event) {
-        alert('A name was submitted: ' + this.input.current.value)
-        event.preventDefault()
+        alert('A name was submitted: ' + this.state.value);
+        event.preventDefault();
       }
 
       render() {
         return (
           <form onSubmit={this.handleSubmit}>
             <label>
-              {'Name:'}
+              Name:
+              <input type="text" value={this.state.value} onChange={this.handleChange} />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+        );
+      }
+    }
+    ```
+
+    Giá trị của thẻ input sẽ luôn là *this.state.value*. Phương thức *handleChange* sẽ cập nhật giá trị state mỗi khi form được gửi.
+
+    Việc sử dụng Controlled Component thì mỗi biến state sẽ cần 1 hàm để xử lý cũng như cập nhật thay đổi. Điều này giúp cho việc thực hiện sửa đổi hay xác thực đầu vào 1 cách dễ dàng hơn. Ngoài ra thì các giá trị đầu vào đều có sẵn trong toàn bộ các component của React nên bạn không cần gọi sự kiện kích hoạt hoặc truy cập DOM để lấy giá trị.
+
+    Tìm hiểu thêm:
+    [Controlled Component và Uncontrolled Component trong React](https://viblo.asia/p/controlled-component-va-uncontrolled-component-trong-react-L4x5xpnm5BM).
+
+    **[⬆ Mục lục](#table-of-contents)**
+    
+30. ### Uncontrolled components là gì? {#what-are-uncontrolled-components}
+
+    **Uncontrolled Components** là những component có các giá trị đầu vào được nạp bằng các truy cập DOM hoặc từ một đối tượng sự kiện. Khá giống với HTML truyền thống.
+
+    Ví dụ dưới đây sử dụng ref để truy cập tới giá trị input *name*:
+
+    ```jsx 
+    class NameForm extends React.Component {
+      constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.input = React.createRef();
+      }
+
+      handleSubmit(event) {
+        alert('A name was submitted: ' + this.input.current.value);
+        event.preventDefault();
+      }
+
+      render() {
+        return (
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Name:
               <input type="text" ref={this.input} />
             </label>
             <input type="submit" value="Submit" />
@@ -1006,7 +1039,7 @@ layout: default
     }
     ```
 
-    In most cases, it's recommend to use controlled components to implement forms.
+    Trong phần lớn các trường hợp, khuyến khích sử dụng controlled component trong form.
 
     **[⬆ Mục lục](#table-of-contents)**
     
