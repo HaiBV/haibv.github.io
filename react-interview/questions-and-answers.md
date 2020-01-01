@@ -43,10 +43,10 @@ layout: default
 |28 | [Mục tiêu chính của của React Fiber là gì?](#what-is-the-main-goal-of-react-fiber) |
 |29 | [Controlled component là gì?](#what-are-controlled-components) |
 |30 | [Uncontrolled components là gì?](#what-are-uncontrolled-components) |
-|31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
-|32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
-|33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
-|34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
+|31 | [createElement và cloneElement khác nhau như thế nào?](#what-is-the-difference-between-createelement-and-cloneelement) |
+|32 | [Lifting State Up in React là gì?](#what-is-lifting-state-up-in-react) |
+|33 | [Các giai đoạn của component lifecycle khác nhau thế nào?](#what-are-the-different-phases-of-component-lifecycle) |
+|34 | [Các phương thức lifecycle trong React là gì?](#what-are-the-lifecycle-methods-of-react) |
 |35 | [What are Higher-Order components?](#what-are-higher-order-components) |
 |36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
 |37 | [What is context?](#what-is-context) |
@@ -1043,54 +1043,53 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-31. ### What is the difference between createElement and cloneElement?
+31. ### createElement và cloneElement khác nhau như thế nào? {#what-is-the-difference-between-createelement-and-cloneelement}
 
-    JSX elements will be transpiled to `React.createElement()` functions to create React elements which are going to be used for the object representation of UI. Whereas `cloneElement` is used to clone an element and pass it new props.
-
-    **[⬆ Mục lục](#table-of-contents)**
-    
-32. ### What is Lifting State Up in React?
-
-    When several components need to share the same changing data then it is recommended to *lift the shared state up* to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
+    Các phần tử JSX sẽ được biên dịch thành hàm `React.createElement()` để tạo ra các phần tử React sẽ được sử dụng để thể hiện các đối tượng UI. Trong khi `cloneElement` được sử dụng để nhân bản một phần tử và truyền vào props mới.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-33. ### What are the different phases of component lifecycle?
+32. ### Lifting State Up in React là gì? {#what-is-lifting-state-up-in-react}
 
-    The component lifecycle has three distinct lifecycle phases:
+    Khi có nhiều component cần chia sẻ sự thay đổi của cùng một dữ liệu thì nên *nâng state cần chia sẻ lên* tới component cha gần nhất. Nghĩa là nếu 2 component con chia sẻ cùng một dữ liệu từ cha của chúng, thì nên đưa state lên component cha thay vì đặt ở 2 component con.
 
-    1. **Mounting:** The component is ready to mount in the browser DOM. This phase covers initialization from `constructor()`, `getDerivedStateFromProps()`, `render()`, and `componentDidMount()` lifecycle methods.
+    **[⬆ Mục lục](#table-of-contents)**
+    
+33. ### Các giai đoạn của component lifecycle khác nhau thế nào? {#what-are-the-different-phases-of-component-lifecycle}
 
-    2. **Updating:** In this phase, the component get updated in two ways, sending the new props and updating the state either from `setState()` or `forceUpdate()`. This phase covers `getDerivedStateFromProps()`, `shouldComponentUpdate()`, `render()`, `getSnapshotBeforeUpdate()` and `componentDidUpdate()` lifecycle methods.
+    Component lifecycle có 3 giai đoạn riêng biệt như sau:
 
-    3. **Unmounting:** In this last phase, the component is not needed and get unmounted from the browser DOM. This phase includes `componentWillUnmount()` lifecycle method.
+    1. **Mounting:** Component sẵn sàng để gắn (mount) vào DOM của trình duyệt. Giai đoạn này bao gồm những phương thức: `constructor()`, `getDerivedStateFromProps()`, `render()`, và `componentDidMount()`.
 
-    It's worth mentioning that React internally has a concept of phases when applying changes to the DOM. They are separated as follows
+    2. **Updating:** Trong giai đoạn này, component được cập nhật bằng 2 cách, nhận được props mới hoặc cập nhật state từ `setState()` hoặc `forceUpdate()`. Giai đoạn này bao gồm các phương thức: `getDerivedStateFromProps()`, `shouldComponentUpdate()`, `render()`, `getSnapshotBeforeUpdate()` và `componentDidUpdate()`.
 
-    1. **Render** The component will render without any side-effects. This applies for Pure components and in this phase, React can pause, abort, or restart the render.
+    3. **Unmounting:** Đây là giai đoạn cuối cùng, component không còn cần thiết và bị gỡ khỏi DOM của trình duyệt. Giai đoạn này gồm các phương thức `componentWillUnmount()`.
 
-    2. **Pre-commit** Before the component actually applies the changes to the DOM, there is a moment that allows React to read from the DOM through the `getSnapshotBeforeUpdate()`.
+    Ngoài ra còn có thể phân chia các giai đoạn theo sự thay đổi DOM. Chúng được phân tách như sau:
 
-    3. **Commit** React works with the DOM and executes the final lifecycles respectively `componentDidMount()` for mounting, `componentDidUpdate()` for updating, and `componentWillUnmount()` for unmounting.
+    1. **Render** Component sẽ render mà không kèm theo hiệu ứng phụ nào. Áp dụng cho các Pure Component và trong giai đoạn này, React có thể tạm dừng, hủy bỏ hoặc khởi động lại việc render.
 
-    React 16.3+ Phases (or an [interactive version](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
+    2. **Pre-commit** Trước khi component thực sự áp dụng sự thay đổi vói DOM, có một khoảng thời gian cho phép React có thể đọc từ DOM thông qua phương thức `getSnapshotBeforeUpdate()`.
+
+    3. **Commit** React làm việc với DOM và thực hiện các phương thức lifecycle tương ứng `componentDidMount()` cho gắn (mount), `componentDidUpdate()` cho cập nhật, and `componentWillUnmount()` cho gỡ bỏ (unmount).
+
+    Cách chia giai đoạn từ React 16.3+ ([Phiên bản có tương tác](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
 
     ![phases 16.3+](images/phases16.3.jpg)
 
-    Before React 16.3
+    Cách chia giai đoạn trước React 16.3
 
     ![phases 16.2](images/phases.png)
 
-
     **[⬆ Mục lục](#table-of-contents)**
     
-34. ### What are the lifecycle methods of React?
+34. ### Các phương thức lifecycle trong React là gì? {#what-are-the-lifecycle-methods-of-react}
 
     React 16.3+
 
-    - **getDerivedStateFromProps:** Invoked right before calling `render()` and is invoked on *every* render. This exists for rare use cases where you need derived state. Worth reading [if you need derived state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html).
-    - **componentDidMount:** Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.
-    - **shouldComponentUpdate:** Determines if the component will be updated or not. By default it returns `true`. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.
+    - **getDerivedStateFromProps:** Được gọi ngay trước khi gọi `render()` và được gọi với *mọi* render. Phương thức này dành cho các trường hợp hiếm gặp, khi bạn cần trích dẫn state. Tham khảo nếu bạn cần [trích dẫn state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html).
+    - **componentDidMount:** Được thực hiện sau khi render lần đầu tiên và tất cả AJAX requests, DOM hoặc cập nhật state, và and thiết lập event listeners được định nghĩa.
+    - **shouldComponentUpdate:** Xác định xem component sẽ được cập nhật hay không. Mặc định trả về `true`. Nếu bạn chắc chắn component không cần render sau khi state hoặc props được cập nhật, bạn có thể trả về giá trị false. Đây là cách rất hiệu quả để cải thiện hiệu suất vì nó cho phép bạn ngăn việc render lại khi component nhận được props mới.
     - **getSnapshotBeforeUpdate:** Executed right before rendered output is committed to the DOM. Any value returned by this will be passed into `componentDidUpdate()`. This is useful to capture information from the DOM i.e. scroll position.
     - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes. This will not fire if `shouldComponentUpdate()` returns `false`.
     - **componentWillUnmount** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
