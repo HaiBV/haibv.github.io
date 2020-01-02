@@ -47,7 +47,7 @@ layout: default
 |32 | [Lifting State Up in React là gì?](#what-is-lifting-state-up-in-react) |
 |33 | [Các giai đoạn của component lifecycle khác nhau thế nào?](#what-are-the-different-phases-of-component-lifecycle) |
 |34 | [Các phương thức lifecycle trong React là gì?](#what-are-the-lifecycle-methods-of-react) |
-|35 | [What are Higher-Order components?](#what-are-higher-order-components) |
+|35 | [Higher-Order components là gì?](#what-are-higher-order-components) |
 |36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
 |37 | [What is context?](#what-is-context) |
 |38 | [What is children prop?](#what-is-children-prop) |
@@ -1088,40 +1088,40 @@ layout: default
     React 16.3+
 
     - **getDerivedStateFromProps:** Được gọi ngay trước khi gọi `render()` và được gọi với *mọi* render. Phương thức này dành cho các trường hợp hiếm gặp, khi bạn cần trích dẫn state. Tham khảo nếu bạn cần [trích dẫn state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html).
-    - **componentDidMount:** Được thực hiện sau khi render lần đầu tiên và tất cả AJAX requests, DOM hoặc cập nhật state, và and thiết lập event listeners được định nghĩa.
+    - **componentDidMount:** Được thực hiện sau khi render lần đầu tiên và tất cả AJAX requests, DOM hoặc cập nhật state, và thiết lập các sự kiện.
     - **shouldComponentUpdate:** Xác định xem component sẽ được cập nhật hay không. Mặc định trả về `true`. Nếu bạn chắc chắn component không cần render sau khi state hoặc props được cập nhật, bạn có thể trả về giá trị false. Đây là cách rất hiệu quả để cải thiện hiệu suất vì nó cho phép bạn ngăn việc render lại khi component nhận được props mới.
-    - **getSnapshotBeforeUpdate:** Executed right before rendered output is committed to the DOM. Any value returned by this will be passed into `componentDidUpdate()`. This is useful to capture information from the DOM i.e. scroll position.
-    - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes. This will not fire if `shouldComponentUpdate()` returns `false`.
-    - **componentWillUnmount** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
+    - **getSnapshotBeforeUpdate:** Chạy ngay trước khi đầu ra của hàm render được gắn vào DOM. Mọi giá trị trả về từ hàm này đều được truyền vào `componentDidUpdate()`. Nó rất hữu dụng để nắm bắt thông tin từ DOM, ví dụ như vị trí của scroll.
+    - **componentDidUpdate:** Chủ yếu sử dụng để cập nhật DOM trong khi props hoặc state thay đổi. Không chạy khi `shouldComponentUpdate()` trả về `false`.
+    - **componentWillUnmount** Sử dụng để hủy mọi requests, hoặc loại bỏ mọi sự kiện liên kết với component.
 
     Before 16.3
 
-    - **componentWillMount:** Executed before rendering and is used for App level configuration in your root component.
-    - **componentDidMount:** Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.
-    - **componentWillReceiveProps:** Executed when particular prop updates to trigger state transitions.
-    - **shouldComponentUpdate:** Determines if the component will be updated or not. By default it returns `true`. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.
-    - **componentWillUpdate:** Executed before re-rendering the component when there are props & state changes confirmed by `shouldComponentUpdate()` which returns true.
-    - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes.
-    - **componentWillUnmount:** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
+    - **componentWillMount:** Chạy trước khi render và sử dụng để cấu hình ở mức toàn ứng dụng, trong component gốc.
+    - **componentDidMount:** Được thực hiện sau khi render lần đầu tiên và tất cả AJAX requests, DOM hoặc cập nhật state, và thiết lập các sự kiện.
+    - **componentWillReceiveProps:** Chạy khi cập nhật prop để kích hoạt thay đổi state.
+    - **shouldComponentUpdate:** Xác định xem component sẽ được cập nhật hay không. Mặc định trả về `true`. Nếu bạn chắc chắn component không cần render sau khi state hoặc props được cập nhật, bạn có thể trả về giá trị false. Đây là cách rất hiệu quả để cải thiện hiệu suất vì nó cho phép bạn ngăn việc render lại khi component nhận được props mới.
+    - **componentWillUpdate:** Chạy trước khi render lại component khi props và state thay đổi được xác nhận bởi `shouldComponentUpdate()` trả về.
+    - **componentDidUpdate:** Chủ yếu sử dụng để cập nhật DOM trong khi props hoặc state thay đổi.
+    - **componentWillUnmount:** Sử dụng để hủy mọi requests, hoặc loại bỏ mọi sự kiện liên kết với component.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-35. ### What are Higher-Order Components?
+35. ### Higher-Order components là gì? {#what-are-higher-order-components}
 
-    A *higher-order component* (*HOC*) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
+    *higher-order component* (*HOC*) là một hàm nhận tham số là một component và trả về một component mới. Về cơ bản, nó là một mô hình có bản chất từ các thành phần của React.
 
-    We call them **pure components** because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.
+    Chúng còn gọi là **pure components** bởi vì chungs cho thể chấp nhận bất kỳ component con nào được cung cấp động nhưng chúng sẽ không thể thay đổi hay sao chép bất kỳ hành vi nào từ component làm tham số.
 
-    ```javascript
+    ```js
     const EnhancedComponent = higherOrderComponent(WrappedComponent)
     ```
 
-    HOC can be used for many use cases:
+    HOC có thể sử dụng trong rất nhiều trường họp:
 
-    1. Code reuse, logic and bootstrap abstraction.
+    1. Tái sử dụng code, logic và khởi tạo trừu tượng.
     2. Render hijacking.
-    3. State abstraction and manipulation.
-    4. Props manipulation.
+    3. Trừu tượng hóa và điều khiển state.
+    4. Điều khiển props.
 
     **[⬆ Mục lục](#table-of-contents)**
     
