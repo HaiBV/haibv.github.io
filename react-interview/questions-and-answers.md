@@ -48,8 +48,8 @@ layout: default
 |33 | [Các giai đoạn của component lifecycle khác nhau thế nào?](#what-are-the-different-phases-of-component-lifecycle) |
 |34 | [Các phương thức lifecycle trong React là gì?](#what-are-the-lifecycle-methods-of-react) |
 |35 | [Higher-Order components là gì?](#what-are-higher-order-components) |
-|36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
-|37 | [What is context?](#what-is-context) |
+|36 | [Làm thế nào để tạo ra props proxy cho HOC component?](#how-to-create-props-proxy-for-hoc-component) |
+|37 | [Context là gì?](#what-is-context) |
 |38 | [What is children prop?](#what-is-children-prop) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
@@ -1125,11 +1125,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-36. ### How to create props proxy for HOC component?
+36. ### Làm thế nào để tạo ra props proxy cho HOC component? {#how-to-create-props-proxy-for-hoc-component}
 
-    You can add/edit props passed to the component using *props proxy* pattern like this:
+    Chúng ta có thể thêm, sửa props truyền vào component sử dụng mẫu *props proxy* như sau:
 
-    ```jsx harmony
+    ```jsx
     function HOC(WrappedComponent) {
       return class Test extends Component {
         render() {
@@ -1148,11 +1148,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-37. ### What is context?
+37. ### Context là gì? {#what-is-context}
 
-    *Context* provides a way to pass data through the component tree without having to pass props down manually at every level. For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
+    *Context* cung cấp một cách để truyền dữ liệu qua cây component mà không phải truyền props xuống tất cả các code của cây. Lấy ví dụ về việc xác thực người dùng, ưu tiên địa phương, UI theme cần được truy cập trong ứng dụng bởi nhiều components.
 
-    ```javascript
+    ```js
     const {Provider, Consumer} = React.createContext(defaultValue)
     ```
 
