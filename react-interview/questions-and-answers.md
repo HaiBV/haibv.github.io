@@ -47,10 +47,10 @@ layout: default
 |32 | [Lifting State Up in React là gì?](#what-is-lifting-state-up-in-react) |
 |33 | [Các giai đoạn của component lifecycle khác nhau thế nào?](#what-are-the-different-phases-of-component-lifecycle) |
 |34 | [Các phương thức lifecycle trong React là gì?](#what-are-the-lifecycle-methods-of-react) |
-|35 | [Higher-Order components là gì?](#what-are-higher-order-components) |
+|**35** | [Higher-Order components là gì?](#what-are-higher-order-components) |
 |36 | [Làm thế nào để tạo ra props proxy cho HOC component?](#how-to-create-props-proxy-for-hoc-component) |
-|37 | [Context là gì?](#what-is-context) |
-|38 | [What is children prop?](#what-is-children-prop) |
+|**37** | [Context là gì?](#what-is-context) |
+|38 | [Children prop là gì?](#what-is-children-prop) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
 |41 | [What is reconciliation?](#what-is-reconciliation) |
@@ -1158,14 +1158,14 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-38. ### What is children prop?
+38. ### Children prop là gì? {#what-is-children-prop}
 
-    *Children* is a prop (`this.prop.children`) that allow you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as `children` prop.
+    *Children* là prop (`this.prop.children`) cho phép chúng ta truyền component dưới dạng dữ liệu cho những component khác, tương tự như props khác. Cây component đặt giữa thẻ mở và đóng của component sẽ được truyền vào component dưới dạng `children` prop.
 
-    There are a number of methods available in the React API to work with this prop. These include `React.Children.map`, `React.Children.forEach`, `React.Children.count`, `React.Children.only`, `React.Children.toArray`.
-    A simple usage of children prop looks as below,
+    Có nhiều phương thức trong React API có thể sử dụng với kiểu prop này. Đó là `React.Children.map`, `React.Children.forEach`, `React.Children.count`, `React.Children.only`, `React.Children.toArray`.
+    Dưới đây là một ví dụ đơn giản của children prop,
 
-    ```jsx harmony
+    ```jsx
     const MyDiv = React.createClass({
       render: function() {
         return <div>{this.props.children}</div>
@@ -1183,22 +1183,22 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-39. ### How to write comments in React?
+39. ### Viết comments cho React như thế nào? {#how-to-write-comments-in-react}
 
-    The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.
+    Comments trong React/JSX tương tự như trong JavaScript comments nhiều dòng nhưng được đặt trong dấu ngoặc nhọn.
 
-    **Single-line comments:**
+    **Comments một dòng:**
 
-    ```jsx harmony
+    ```jsx
     <div>
-      {/* Single-line comments(In vanilla JavaScript, the single-line comments are represented by double slash(//)) */}
+      {/* Comments một dòng (trong JavaScript thuần, comments một dòng are được đặt sau 2 dấu chéo(//)) */}
       {`Welcome ${user}, let's play React`}
     </div>
     ```
 
-    **Multi-line comments:**
+    **Comments nhiều dòng:**
 
-    ```jsx harmony
+    ```jsx
     <div>
       {/* Multi-line comments for more than
        one line */}
