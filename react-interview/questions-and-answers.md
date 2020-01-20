@@ -52,9 +52,9 @@ layout: default
 |**37** | [Context là gì?](#what-is-context) |
 |38 | [Children prop là gì?](#what-is-children-prop) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
-|40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
-|41 | [What is reconciliation?](#what-is-reconciliation) |
-|42 | [How to set state with a dynamic key name?](#how-to-set-state-with-a-dynamic-key-name) |
+|40 | [Mục đích của việc dùng hàm khởi tạo super với tham số props là gì?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
+|41 | [Reconciliation là gì?](#what-is-reconciliation) |
+|42 | [Làm thế nào để gán giá trị cho state với key động?](#how-to-set-state-with-a-dynamic-key-name) |
 |43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
 |44 | [Is lazy function supports named exports??](#is-lazy-function-supports-named-exports) |
 |45 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute) |
@@ -1208,57 +1208,57 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
     
-40. ### What is the purpose of using super constructor with props argument?
+40. ### Mục đích của việc dùng hàm khởi tạo super với tham số props là gì? {#what-is-the-purpose-of-using-super-constructor-with-props-argument}
 
-    A child class constructor cannot make use of `this` reference until `super()` method has been called. The same applies for ES6 sub-classes as well. The main reason of passing props parameter to `super()` call is to access `this.props` in your child constructors.
+    Một constructor của class con không thể sử dụng biến `this` nếu phương thức `super()` chưa được gọi. Tương tự đối với các lớp con của ES6. Lý do chính của việc truyền props làm tham số của `super()` là có thể gọi được `this.props` bên trong constructor của component con.
 
-    **Passing props:**
+    **Truyền props:**
 
-    ```javascript
+    ```js
     class MyComponent extends React.Component {
       constructor(props) {
         super(props)
 
-        console.log(this.props) // prints { name: 'John', age: 42 }
+        console.log(this.props) // { name: 'John', age: 42 }
       }
     }
     ```
 
-    **Not passing props:**
+    **Không truyền props:**
 
-    ```javascript
+    ```js
     class MyComponent extends React.Component {
       constructor(props) {
         super()
 
-        console.log(this.props) // prints undefined
+        console.log(this.props) // undefined
 
-        // but props parameter is still available
-        console.log(props) // prints { name: 'John', age: 42 }
+        // nhưng tham số props vẫn có thể sử dụng
+        console.log(props) // { name: 'John', age: 42 }
       }
 
       render() {
-        // no difference outside constructor
-        console.log(this.props) // prints { name: 'John', age: 42 }
+        // không có khác biệt ở bên ngoài constructor
+        console.log(this.props) // { name: 'John', age: 42 }
       }
     }
     ```
 
-    The above code snippets reveals that `this.props` is different only within the constructor. It would be the same outside the constructor.
+    Đoạn code trên cho thấy `this.props` chỉ là khác biệt bên trong hàm constructor. Còn bên ngoài hàm constructor sẽ như nhau.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-41. ### What is reconciliation?
+41. ### Reconciliation là gì? {#what-is-reconciliation}
 
-    When a component's props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. When they are not equal, React will update the DOM. This process is called *reconciliation*.
+    Khi props hoặc state của một component thay đổi, React quyết định việc có cần thiết phải cập nhật DOM hay không bằng việc so sánh phần tử trả về với phần tử render trước đó. Khi chúng không bằng nhau (có sự thay đổi), React sẽ cập nhật lại DOM. Quá trình so sánh và cập nhật này được gọi là *reconciliation*.
 
     **[⬆ Mục lục](#table-of-contents)**
     
-42. ### How to set state with a dynamic key name?
+42. ### Làm thế nào để gán giá trị cho state với key động? {#how-to-set-state-with-a-dynamic-key-name}
 
-    If you are using ES6 or the Babel transpiler to transform your JSX code then you can accomplish this with *computed property names*.
+    Nếu chúng ta sử dụng ES6 hoặc trình biên dịch Babel để  chuyển đổi JSX code thì có thể thực hiện việc này với *tên thuộc tính định tính*.
 
-    ```javascript
+    ```js
     handleInputChange(event) {
       this.setState({ [event.target.id]: event.target.value })
     }
