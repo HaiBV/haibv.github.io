@@ -5,6 +5,7 @@ layout: default
 Text can be **bold**, _italic_, or ~~strikethrough~~.fdfdfdfdfdf
 
 [Link to another page](./another-page.html).
+
 [Link to PHP the right way page](./phprightway).
 
 There should be whitespace between paragraphs.
