@@ -63,9 +63,9 @@ layout: default
 | 48  | [Portals trong React là gì?](#what-are-portals-in-react)                                                                                                                                 |
 | 49  | [Stateless components là gì?](#what-are-stateless-components)                                                                                                                         |
 | 50  | [Stateful components là gì?](#what-are-stateful-components)                                                                                                                           |
-| 51  | [How to apply validation on props in React?](#how-to-apply-validation-on-props-in-react)                                                                                                 |
-| 52  | [What are the advantages of React?](#what-are-the-advantages-of-react)                                                                                                                   |
-| 53  | [What are the limitations of React?](#what-are-the-limitations-of-react)                                                                                                                 |
+| 51  | [Làm cách nào để áp dụng xác nhận đầu vào cho props?](#how-to-apply-validation-on-props-in-react)                                                                                                 |
+| 52  | [React có những lợi thế nào?](#what-are-the-advantages-of-react)                                                                                                                   |
+| 53  | [React có những hạn chế nào?](#what-are-the-limitations-of-react)                                                                                                                 |
 | 54  | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16)                                                                                                        |
 | 55  | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15)                                                                                                 |
 | 56  | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking)                                                                       |
@@ -1407,11 +1407,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-51. ### How to apply validation on props in React?
+51. ### Làm cách nào để áp dụng xác nhận đầu vào cho props? {#how-to-apply-validation-on-props-in-react}
 
-    When the application is running in _development mode_, React will automatically check all props that we set on components to make sure they have _correct type_. If the type is incorrect, React will generate warning messages in the console. It's disabled in _production mode_ due performance impact. The mandatory props are defined with `isRequired`.
+    Khi ứng dụng đang trong giai đoạn phát triển (_development mode_), React sẽ tự động kiểm tra tất cả props chúng ta đưa vào trong components để chắc chắn rằng chúng được truyền vào _đúng kiểu biến_. Nếu kiểu biến không đúng, React sẽ có tạo ra một cảnh bảo (warning) ở console. Việc này bị loại bỏ khi ứng dụng được đưa vào sử dụng (_production mode_) vì ảnh hưởng đến hiệu suất. Những props bắt buộc được định nghĩa với `isRequired`.
 
-    The set of predefined prop types:
+    Tập các kiểu props xác định trước:
 
     1. `PropTypes.number`
     2. `PropTypes.string`
@@ -1424,7 +1424,7 @@ layout: default
     9. `PropTypes.symbol`
     10. `PropTypes.any`
 
-    We can define `propTypes` for `User` component as below:
+    Ví dụ dưới định nghĩa `propTypes` cho `User` component:
 
     ```jsx
     import React from 'react';
@@ -1447,27 +1447,27 @@ layout: default
     }
     ```
 
-    **Note:** In React v15.5 _PropTypes_ were moved from `React.PropTypes` to `prop-types` library.
+    **Ghi chú:** Từ React v15.5 _PropTypes_ được chuyển từ `React.PropTypes` sang `prop-types`.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-52. ### What are the advantages of React?
+52. ### React có những lợi thế nào? {#what-are-the-advantages-of-react}
 
-    1. Increases the application's performance with _Virtual DOM_.
-    2. JSX makes code easy to read and write.
-    3. It renders both on client and server side (_SSR_).
-    4. Easy to integrate with frameworks (Angular, Backbone) since it is only a view library.
-    5. Easy to write unit and integration tests with tools such as Jest.
+    1. Tăng hiệu năng ứng dụng với việc sử dụng _Virtual DOM_.
+    2. Code dễ đọc và viết hơn với JSX.
+    3. Có thể renders ở cả client và server (_SSR_).
+    4. Dễ dang tích hợp với các framework khác (Angular, Backbone) khi chỉ là một thư viện.
+    5. Dễ dàng viết unit và integration tests với nhiều tool như Jest.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-53. ### What are the limitations of React?
+53. ### React có những hạn chế nào? {#what-are-the-limitations-of-react}
 
-    1. React is just a view library, not a full framework.
-    2. There is a learning curve for beginners who are new to web development.
-    3. Integrating React into a traditional MVC framework requires some additional configuration.
-    4. The code complexity increases with inline templating and JSX.
-    5. Too many smaller components leading to over engineering or boilerplate.
+    1. React chỉ là một thư viện tầng view, không phải một framework đầy đủ.
+    2. Cần một quá trình học hỏi cho những người mới bắt đầu với phát triển web.
+    3. Tích hợp React vào một framework MVC truyền thống cần đòi hỏi thêm một số cấu hình khác.
+    4. Tăng độ phức tạp của code với khuôn mẫu nội tuyến (inline templating) và JSX.
+    5. Quá nhiều component nhỏ có thể làm phức tạp hóa vấn đề không cần thiết (over engineering).
 
     **[⬆ Mục lục](#table-of-contents)**
 
