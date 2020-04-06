@@ -1471,13 +1471,13 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-54. ### What are error boundaries in React v16?
+54. ### Error boundaries trong React v16 là gì? {#what-are-error-boundaries-in-react-v16}
 
-    _Error boundaries_ are components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
+    _Error boundaries_ là component trong React giúp bắt các lỗi JavaScript trong các component con của nó, ghi lại những lỗi đó, và hiển thị UI dự phòng, ứng dụng vẫn hoạt động bình thường, không bị dừng vì lỗi.
 
-    A class component becomes an error boundary if it defines a new lifecycle method called `componentDidCatch(error, info)` or `static getDerivedStateFromError()`:
+    Một class component trở thành một error boundary nếu chúng định nghĩa một phương thức lifecycle mới gọi là `componentDidCatch(error, info)` hoặc `static getDerivedStateFromError()`:
 
-    ```jsx harmony
+    ```jsx
     class ErrorBoundary extends React.Component {
       constructor(props) {
         super(props);
@@ -1504,9 +1504,9 @@ layout: default
     }
     ```
 
-    After that use it as a regular component:
+    Sau đó sử dụng chúng như một component bình thường:
 
-    ```jsx harmony
+    ```jsx 
     <ErrorBoundary>
       <MyWidget />
     </ErrorBoundary>
@@ -1514,15 +1514,15 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-55. ### How error boundaries handled in React v15?
+55. ### Error boundaries ở React v15 hoạt động như thế nào? {#how-error-boundaries-handled-in-react-v15}
 
-    React v15 provided very basic support for _error boundaries_ using `unstable_handleError` method. It has been renamed to `componentDidCatch` in React v16.
+    React v15 hỗ trợ rất cơ bản cho _error boundaries_ khi sử dụng phương thức `unstable_handleError`. Phương thức này đã được đổi tên thành `componentDidCatch` trong React v16.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-56. ### What are the recommended ways for static type checking?
+56. ### Cách nào được khuyên dùng đề kiểm tra kiểu dữ liệu tĩnh? {#what-are-the-recommended-ways-for-static-type-checking}
 
-    Normally we use _PropTypes library_ (`React.PropTypes` moved to a `prop-types` package since React v15.5) for _type checking_ in the React applications. For large code bases, it is recommended to use _static type checkers_ such as Flow or TypeScript, that perform type checking at compile time and provide auto-completion features.
+    Thông thường chúng ta sử dụng thư viện _PropTypes_ (`React.PropTypes` được chuyển thành `prop-types` từ React v15.5) cho việc _kiểm tra kiểu dữ liệu_ trong ứng dụng React. Với một tập mã nguồn lớn, nên sử dụng _kiểm tra kiểu dữ liệu tĩnh_ như Flow hoặc TypeScript, việc kiểm tra sẽ được thực hiện tại thời điểm biên dịch và cung cấp các tính năng auto-completion.
 
     **[⬆ Mục lục](#table-of-contents)**
 
