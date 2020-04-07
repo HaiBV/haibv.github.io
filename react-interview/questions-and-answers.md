@@ -66,13 +66,13 @@ layout: default
 | 51  | [Làm cách nào để áp dụng xác nhận đầu vào cho props?](#how-to-apply-validation-on-props-in-react)                                                                                                 |
 | 52  | [React có những lợi thế nào?](#what-are-the-advantages-of-react)                                                                                                                   |
 | 53  | [React có những hạn chế nào?](#what-are-the-limitations-of-react)                                                                                                                 |
-| 54  | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16)                                                                                                        |
-| 55  | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15)                                                                                                 |
-| 56  | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking)                                                                       |
-| 57  | [What is the use of react-dom package?](#what-is-the-use-of-react-dom-package)                                                                                                           |
-| 58  | [What is the purpose of render method of react-dom?](#what-is-the-purpose-of-render-method-of-react-dom)                                                                                 |
-| 59  | [What is ReactDOMServer?](#what-is-reactdomserver)                                                                                                                                       |
-| 60  | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react)                                                                                                                         |
+| 54  | [Error boundaries trong React v16 là gì?](#what-are-error-boundaries-in-react-v16)                                                                                                        |
+| 55  | [Error boundaries ở React v15 hoạt động như thế nào?](#how-error-boundaries-handled-in-react-v15)                                                                                                 |
+| 56  | [Cách nào được khuyên dùng đề kiểm tra kiểu dữ liệu tĩnh?](#what-are-the-recommended-ways-for-static-type-checking)                                                                       |
+| 57  | [Thư viện `react-dom` cung cấp những phương thức nào?](#what-is-the-use-of-react-dom-package)                                                                                                           |
+| 58  | [Mục đích của phương thức render trong `react-dom` là gì?](#what-is-the-purpose-of-render-method-of-react-dom)                                                                                 |
+| 59  | [ReactDOMServer là gì?](#what-is-reactdomserver)                                                                                                                                       |
+| 60  | [Sử dụng innerHTML trong React như thế nào?](#how-to-use-innerhtml-in-react)                                                                                                                         |
 | 61  | [How to use styles in React?](#how-to-use-styles-in-react)                                                                                                                               |
 | 62  | [How events are different in React?](#how-events-are-different-in-react)                                                                                                                 |
 | 63  | [What will happen if you use setState in constructor?](#what-will-happen-if-you-use-setstate-in-constructor)                                                                             |
@@ -1526,9 +1526,9 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-57. ### What is the use of `react-dom` package?
+57. ### Thư viện `react-dom` cung cấp những phương thức nào? {#what-is-the-use-of-react-dom-package}
 
-    The `react-dom` package provides _DOM-specific methods_ that can be used at the top level of your app. Most of the components are not required to use this module. Some of the methods of this package are:
+    Thư viện `react-dom` chung cấp những _phương thức riêng cho DOM_ được sử dụng ở cấp cao nhất trong ứng dụng của bạn. Hầu hết các component không yêu cầu sử dụng module này. Một vài phương thức của thư viện này là:
 
     1. `render()`
     2. `hydrate()`
@@ -1538,26 +1538,26 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-58. ### What is the purpose of render method of `react-dom`?
+58. ### Mục đích của phương thức render trong `react-dom` là gì? {#what-is-the-purpose-of-render-method-of-react-dom} 
 
-    This method is used to render a React element into the DOM in the supplied container and return a reference to the component. If the React element was previously rendered into container, it will perform an update on it and only mutate the DOM as necessary to reflect the latest changes.
+    Phương thức này dùng để render một phần tử React vào trong DOM trong contaner được cung cấp và trả về một tham chiếu tới component đó. Nếu phần tử React đó đã được render trước đó trong container, nó sẽ thực hiện cập nhật và chỉ thay đổi DOM khi cần cập nhật những thay đổi mới nhất.
 
     ```
     ReactDOM.render(element, container[, callback])
     ```
 
-    If the optional callback is provided, it will be executed after the component is rendered or updated.
+    Nếu cung cấp callback, hàm này sẽ được thực thi sau khi component được render hoặc cập nhật.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-59. ### What is ReactDOMServer?
+59. ### ReactDOMServer là gì? {#what-is-reactdomserver}
 
-    The `ReactDOMServer` object enables you to render components to static markup (typically used on node server). This object is mainly used for _server-side rendering_ (SSR). The following methods can be used in both the server and browser environments:
+    `ReactDOMServer` là một object cho phép bạn render component thành dạng văn bản tĩnh (thường được sử dụng trên node server). Object này chủ yếu được sử dụng trong _server-side rendering_ (SSR). Những phương thức duwois có thể sử dụng ở cả môi trường server và trình duyệt:
 
     1. `renderToString()`
     2. `renderToStaticMarkup()`
 
-    For example, you generally run a Node-based web server like Express, Hapi, or Koa, and you call `renderToString` to render your root component to a string, which you then send as response.
+    Lấy ví dụ, bạn tạo một ứng dụng web server với NodeJS như Express, Hapi, hoặc Koa, và bạn gọi phương thức `renderToString` để render ứng dụng của bạn thành dạng chuỗi, sau đó sẽ được trả về cho trình duyệt.
 
     ```javascript
     // using Express
@@ -1575,13 +1575,13 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-60. ### How to use innerHTML in React?
+60. ### Sử dụng innerHTML trong React như thế nào? {#how-to-use-innerhtml-in-react}
 
-    The `dangerouslySetInnerHTML` attribute is React's replacement for using `innerHTML` in the browser DOM. Just like `innerHTML`, it is risky to use this attribute considering cross-site scripting (XSS) attacks. You just need to pass a `__html` object as key and HTML text as value.
+    Thuộc tính `dangerouslySetInnerHTML` trong React là sự thay thế cho việc sử dụng `innerHTML` trong DOM của trình duyệt. Cũng giống như `innerHTML`, nhưng sử dụng thuộc tính này khá rủi ro vì có thể gặp phải tấn công XSS (considering cross-site). Bạn chỉ nên truyền vào một object với `__html` là key và văn bản HTML là giá trị.
 
-    In this example MyComponent uses `dangerouslySetInnerHTML` attribute for setting HTML markup:
+    Trong ví dụ này, component MyComponent sử dụng thuộc tính `dangerouslySetInnerHTML` để truyền văn bản HTML vào:
 
-    ```jsx harmony
+    ```jsx
     function createMarkup() {
       return { __html: 'First &middot; Second' };
     }
