@@ -73,7 +73,7 @@ layout: default
 | 58  | [Mục đích của phương thức render trong `react-dom` là gì?](#what-is-the-purpose-of-render-method-of-react-dom)                                                                                 |
 | 59  | [ReactDOMServer là gì?](#what-is-reactdomserver)                                                                                                                                       |
 | 60  | [Sử dụng innerHTML trong React như thế nào?](#how-to-use-innerhtml-in-react)                                                                                                                         |
-| 61  | [How to use styles in React?](#how-to-use-styles-in-react)                                                                                                                               |
+| 61  | [Đưa styles vào trong React như thế nào?](#how-to-use-styles-in-react)                                                                                                                               |
 | 62  | [How events are different in React?](#how-events-are-different-in-react)                                                                                                                 |
 | 63  | [What will happen if you use setState in constructor?](#what-will-happen-if-you-use-setstate-in-constructor)                                                                             |
 | 64  | [What is the impact of indexes as keys?](#what-is-the-impact-of-indexes-as-keys)                                                                                                         |
@@ -1593,11 +1593,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-61. ### How to use styles in React?
+61. ### Đưa styles vào trong React như thế nào? {#how-to-use-styles-in-react}
 
-    The `style` attribute accepts a JavaScript object with camelCased properties rather than a CSS string. This is consistent with the DOM style JavaScript property, is more efficient, and prevents XSS security holes.
+    Thuộc tính `style` chấp nhận một object JavaScript với tính chất camelCased thay vì một chuỗi CSS. Việc này phù hợp với thuộc tính Javascript kiểu DOM, hiệu quả hơn, và ngăn chặn lỗ hổng bảo mật XSS.
 
-    ```jsx harmony
+    ```jsx
     const divStyle = {
       color: 'blue',
       backgroundImage: 'url(' + imgUrl + ')'
@@ -1608,7 +1608,7 @@ layout: default
     }
     ```
 
-    Style keys are camelCased in order to be consistent with accessing the properties on DOM nodes in JavaScript (e.g. `node.style.backgroundImage`).
+    Key của object Style có dạng camelCased để phù hợp với việc truy cập các thuộc tính trong DOM của JavaScript (Ví dụ. `node.style.backgroundImage`).
 
     **[⬆ Mục lục](#table-of-contents)**
 
