@@ -74,10 +74,10 @@ layout: default
 | 59  | [ReactDOMServer là gì?](#what-is-reactdomserver)                                                                                                                                       |
 | 60  | [Sử dụng innerHTML trong React như thế nào?](#how-to-use-innerhtml-in-react)                                                                                                                         |
 | 61  | [Đưa styles vào trong React như thế nào?](#how-to-use-styles-in-react)                                                                                                                               |
-| 62  | [How events are different in React?](#how-events-are-different-in-react)                                                                                                                 |
-| 63  | [What will happen if you use setState in constructor?](#what-will-happen-if-you-use-setstate-in-constructor)                                                                             |
-| 64  | [What is the impact of indexes as keys?](#what-is-the-impact-of-indexes-as-keys)                                                                                                         |
-| 65  | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method)                                                                 |
+| 62  | [Xử lý sự kiện trong React có sự khác biệt nào?](#how-events-are-different-in-react)                                                                                                                 |
+| 63  | [Điều gì xảy ra khi dùng `setState()` bên trong constructor?](#what-will-happen-if-you-use-setstate-in-constructor)                                                                             |
+| 64  | [Tác dụng của số thứ tự (keys) là gì?](#what-is-the-impact-of-indexes-as-keys)                                                                                                         |
+| 65  | [Có thể sử dụng `setState()` trong `componentWillMount()` được không?](#is-it-good-to-use-setstate-in-componentwillmount-method)                                                                 |
 | 66  | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state)                                                                               |
 | 67  | [How do you conditionally render components?](#how-do-you-conditionally-render-components)                                                                                               |
 | 68  | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements)                                                      |
@@ -1612,36 +1612,36 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-62. ### How events are different in React?
+62. ### Xử lý sự kiện trong React có sự khác biệt nào? {#how-events-are-different-in-react}
 
-    Handling events in React elements has some syntactic differences:
+    Xử lý những sự kiện với các phẩn tử trong React có một số khác biệt về  cú pháp:
 
-    1. React event handlers are named using camelCase, rather than lowercase.
-    2. With JSX you pass a function as the event handler, rather than a string.
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-63. ### What will happen if you use `setState()` in constructor?
-
-    When you use `setState()`, then apart from assigning to the object state React also re-renders the component and all its children. You would get error like this: _Can only update a mounted or mounting component._ So we need to use `this.state` to initialize variables inside constructor.
+    1. Hàm xử lý sự kiện trong React được đặt tên theo camelCase, thay vì lowercase. 
+    2. Với JSX truyền vào một hàm như xử lý sự kiện, thay vì một chuỗi.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-64. ### What is the impact of indexes as keys?
+63. ### Điều gì xảy ra khi dùng `setState()` bên trong constructor? {#what-will-happen-if-you-use-setstate-in-constructor}
 
-    Keys should be stable, predictable, and unique so that React can keep track of elements.
+    Khi sử dụng `setState()`, ngoài việc gán state cho component, React còn render lại component đó và toàn bộ component con. Do đó sẽ gặp phải lỗi: _Can only update a mounted or mounting component_. Do đó chúng ta chỉ nên sử dụng `this.state` để khởi tạo các giá trị state bên trong constructor.
 
-    In the below code snippet each element's key will be based on ordering, rather than tied to the data that is being represented. This limits the optimizations that React can do.
+    **[⬆ Mục lục](#table-of-contents)**
 
-    ```jsx harmony
+64. ### Tác dụng của số thứ tự (keys) là gì? {#what-is-the-impact-of-indexes-as-keys}
+
+    Keys cần phải ổn định, dự đoán được và duy nhất để React có thể  theo dõi được các thành phần.
+
+    Trong đoạn mã dưới đây, key của mỗi phần từ dựa trên số thứ tự của mảng, thay vì gắn với dữ liệu được trình bày. Điều này giới hạn việc tối ưu hóa mà React có thể làm.
+
+    ```jsx
     {
       todos.map((todo, index) => <Todo {...todo} key={index} />);
     }
     ```
 
-    If you use element data for unique key, assuming todo.id is unique to this list and stable, React would be able to reorder elements without needing to reevaluate them as much.
+    Nếu sử dụng thuộc tính của dữ liệu làm key duy nhất, ví dụ như todo.id là duy nhất trong mảng và có tính ổn định, React có thể sắp xếp lại các thành phần mà không cần phải đánh giá lại chúng quá nhiều.
 
-    ```jsx harmony
+    ```jsx
     {
       todos.map(todo => <Todo {...todo} key={todo.id} />);
     }
@@ -1649,11 +1649,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-65. ### Is it good to use `setState()` in `componentWillMount()` method?
+65. ### Có thể sử dụng `setState()` trong `componentWillMount()` được không? {#is-it-good-to-use-setstate-in-componentwillmount-method}
 
-    It is recommended to avoid async initialization in `componentWillMount()` lifecycle method. `componentWillMount()` is invoked immediately before mounting occurs. It is called before `render()`, therefore setting state in this method will not trigger a re-render. Avoid introducing any side-effects or subscriptions in this method. We need to make sure async calls for component initialization happened in `componentDidMount()` instead of `componentWillMount()`.
+    Nên tránh khởi tạo phương thức async trong phương thức  lifecycle `componentWillMount()`. `componentWillMount()` sẽ được gọi ngay trước khi mount xảy ra. Nó được gọi trước khi `render()`, do đó việc thiết lập state trong phương thức này sẽ không kích hoạt re-render. Tránh đưa vào bất kỳ hiệu ứng phụ hoặc bất đồng bộ nào trong phương thức này. Cần chắc chắn rằng mọi hàm async được gọi trong component đều nằm trong `componentDidMount()` thay vì `componentWillMount()`.
 
-    ```jsx harmony
+    ```jsx
     componentDidMount() {
       axios.get(`api/todos`)
         .then((result) => {
@@ -1672,7 +1672,7 @@ layout: default
 
     The below component won't display the updated input value:
 
-    ```jsx harmony
+    ```jsx
     class MyComponent extends React.Component {
       constructor(props) {
         super(props);
@@ -1691,7 +1691,7 @@ layout: default
 
     Using props inside render method will update the value:
 
-    ```jsx harmony
+    ```jsx
     class MyComponent extends React.Component {
       constructor(props) {
         super(props);
