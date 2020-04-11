@@ -78,7 +78,7 @@ layout: default
 | 63  | [Điều gì xảy ra khi dùng `setState()` bên trong constructor?](#what-will-happen-if-you-use-setstate-in-constructor)                                                                             |
 | 64  | [Tác dụng của số thứ tự (keys) là gì?](#what-is-the-impact-of-indexes-as-keys)                                                                                                         |
 | 65  | [Có thể sử dụng `setState()` trong `componentWillMount()` được không?](#is-it-good-to-use-setstate-in-componentwillmount-method)                                                                 |
-| 66  | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state)                                                                               |
+| 66  | [Nếu sử dụng props khi khởi tạo state thì chuyện gì sẽ xảy ra? ](#what-will-happen-if-you-use-props-in-initial-state)                                                                               |
 | 67  | [How do you conditionally render components?](#how-do-you-conditionally-render-components)                                                                                               |
 | 68  | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements)                                                      |
 | 69  | [How you use decorators in React?](#how-you-use-decorators-in-react)                                                                                                                     |
@@ -1666,11 +1666,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-66. ### What will happen if you use props in initial state?
+66. ### Nếu sử dụng props khi khởi tạo state thì chuyện gì sẽ xảy ra? {#what-will-happen-if-you-use-props-in-initial-state}
 
-    If the props on the component are changed without the component being refreshed, the new prop value will never be displayed because the constructor function will never update the current state of the component. The initialization of state from props only runs when the component is first created.
+    Nếu props của component được thay đổi mà component không được render lại, thì giá trị prop mới của prop sẽ không được hiển thị vì hàm constructor sẽ không cập nhật state hiện tại của component. Giá trị khởi tạo của state từ props chỉ chạy khi component được tạo lần đầu tiên.
 
-    The below component won't display the updated input value:
+    Component dưới đây sẽ không hiển thị giá trị prop được cập nhật:
 
     ```jsx
     class MyComponent extends React.Component {
@@ -1689,7 +1689,7 @@ layout: default
     }
     ```
 
-    Using props inside render method will update the value:
+    Sử dụng props bên trong phương thức render để cập nhật được giá trị:
 
     ```jsx
     class MyComponent extends React.Component {
