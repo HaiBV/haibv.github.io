@@ -79,10 +79,10 @@ layout: default
 | 64  | [Tác dụng của số thứ tự (keys) là gì?](#what-is-the-impact-of-indexes-as-keys)                                                                                                         |
 | 65  | [Có thể sử dụng `setState()` trong `componentWillMount()` được không?](#is-it-good-to-use-setstate-in-componentwillmount-method)                                                                 |
 | 66  | [Nếu sử dụng props khi khởi tạo state thì chuyện gì sẽ xảy ra? ](#what-will-happen-if-you-use-props-in-initial-state)                                                                               |
-| 67  | [How do you conditionally render components?](#how-do-you-conditionally-render-components)                                                                                               |
-| 68  | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements)                                                      |
-| 69  | [How you use decorators in React?](#how-you-use-decorators-in-react)                                                                                                                     |
-| 70  | [How do you memoize a component?](#how-do-you-memoize-a-component)                                                                                                                       |
+| 67  | [Làm thế nào để render có điều kiện component?](#how-do-you-conditionally-render-components)                                                                                               |
+| 68  | [Tại sao chúng ta phải cẩn thận khi sử dụng spreading với props trong DOM?](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements)                                                      |
+| 69  | [Làm thế nào decorators trong React?](#how-you-use-decorators-in-react)                                                                                                                     |
+| 70  | [Làm thế nào để ghi nhớ một component?](#how-do-you-memoize-a-component)                                                                                                                       |
 | 71  | [How you implement Server-Side Rendering or SSR?](#how-you-implement-server-side-rendering-or-ssr)                                                                                       |
 | 72  | [How to enable production mode in React?](#how-to-enable-production-mode-in-react)                                                                                                       |
 | 73  | [What is CRA and its benefits?](#what-is-cra-and-its-benefits)                                                                                                                           |
@@ -1709,11 +1709,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-67. ### How do you conditionally render components?
+67. ### Làm thế nào để render có điều kiện component? {#how-do-you-conditionally-render-components}
 
-    In some cases you want to render different components depending on some state. JSX does not render `false` or `undefined`, so you can use conditional _short-circuiting_ to render a given part of your component only if a certain condition is true.
+    Trong một số trường hợp bạn muốn render component tùy theo giá trị của state. JSX không render giá trị `false` hoặc `undefined`, nên bạn có thể sử dụng phép toán _điều kiện rút gọn_ để render một phần nhất định của component khi điều kiện đúng.
 
-    ```jsx harmony
+    ```jsx 
     const MyComponent = ({ name, address }) => (
       <div>
         <h2>{name}</h2>
@@ -1722,9 +1722,9 @@ layout: default
     );
     ```
 
-    If you need an `if-else` condition then use _ternary operator_.
+    Nếu cần sử dụng điều kiện `if-else` có thể dùng _phép toán ba ngôi_.
 
-    ```jsx harmony
+    ```jsx
     const MyComponent = ({ name, address }) => (
       <div>
         <h2>{name}</h2>
@@ -1735,11 +1735,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-68. ### Why we need to be careful when spreading props on DOM elements?
+68. ### Tại sao chúng ta phải cẩn thận khi sử dụng spreading với props trong DOM???  {#why-we-need-to-be-careful-when-spreading-props-on-dom-elements}
 
-    When we _spread props_ we run into the risk of adding unknown HTML attributes, which is a bad practice. Instead we can use prop destructuring with `...rest` operator, so it will add only required props. For example,
+    Khi dùng spread operator với props chúng ta sẽ gặp rủi ro khi thêm vào những thuộc tính HTML không xác định, một cách làm không tốt. Thay vào đó, chúng ta nên sử dụng tính năng phá hủy prop với toán tử `...rest`, nó sẽ chỉ thêm các props cần thiết. Ví dụ,
 
-    ```jsx harmony
+    ```jsx
     const ComponentA = () => <ComponentB isDisplay={true} className={'componentStyle'} />;
 
     const ComponentB = ({ isDisplay, ...domProps }) => <div {...domProps}>{'ComponentB'}</div>;
@@ -1747,20 +1747,20 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-69. ### How you use decorators in React?
+69. ### Làm thế nào decorators trong React? {#how-you-use-decorators-in-react}
 
-    You can _decorate_ your _class_ components, which is the same as passing the component into a function. **Decorators** are flexible and readable way of modifying component functionality.
+    Bạn có thể _decorate_ được _class_ components, tương tự như việc truyền component vào trong hàm. **Decorators** là một cách linh hoạt và dễ đọc để sửa đổi chức năng một component.
 
-    ```jsx harmony
+    ```jsx
     @setTitle('Profile')
     class Profile extends React.Component {
       //....
     }
 
     /*
-      title is a string that will be set as a document title
-      WrappedComponent is what our decorator will receive when
-      put directly above a component class as seen in the example above
+      title là một chuỗi sẽ được đặt làm tiêu đề tài liệu
+      WrappedComponent là những decorator sẽ nhận được khi đặt trực tiếp component trên
+      vào ví dự dưới đây 
     */
     const setTitle = title => WrappedComponent => {
       return class extends React.Component {
@@ -1775,17 +1775,17 @@ layout: default
     };
     ```
 
-    **Note:** Decorators are a feature that didn't make it into ES7, but are currently a _stage 2 proposal_.
+    **Ghi chú:** Decorators không có trong ES7, nhưng đang được _đề xuất giai đoạn 2_.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-70. ### How do you memoize a component?
+70. ### Làm thế nào để ghi nhớ một component? {#how-do-you-memoize-a-component}
 
-    There are memoize libraries available which can be used on function components. For example `moize` library can memoize the component in another component.
+    Có một số thư viện có sẵn có thể sử dụng với components dạng hàm. Ví dụ như thư viện `moize` có thể  ghi nhớ một component trong một component khác.
 
-    ```jsx harmony
+    ```jsx
     import moize from 'moize';
-    import Component from './components/Component'; // this module exports a non-memoized component
+    import Component from './components/Component'; // module này trích xuất một component không-ghi nhớ
 
     const MemoizedFoo = moize.react(Component);
 
@@ -1803,7 +1803,7 @@ layout: default
 
     React is already equipped to handle rendering on Node servers. A special version of the DOM renderer is available, which follows the same pattern as on the client side.
 
-    ```jsx harmony
+    ```jsx
     import ReactDOMServer from 'react-dom/server';
     import App from './App';
 
@@ -1962,7 +1962,7 @@ layout: default
 
     For example, a switching component to display different pages based on `page` prop:
 
-    ```jsx harmony
+    ```jsx
     import HomePage from './HomePage';
     import AboutPage from './AboutPage';
     import ServicesPage from './ServicesPage';
@@ -2018,7 +2018,7 @@ layout: default
 
     `React.StrictMode` is an useful component for highlighting potential problems in an application. Just like `<Fragment>`, `<StrictMode>` does not render any extra DOM elements. It activates additional checks and warnings for its descendants. These checks apply for _development mode_ only.
 
-    ```jsx harmony
+    ```jsx
     import React from 'react';
 
     function ExampleApplication() {
@@ -2099,7 +2099,7 @@ layout: default
 
     If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
 
-    ```jsx harmony
+    ```jsx
     class SomeComponent extends Component {
       // Code goes here
     }
@@ -2107,7 +2107,7 @@ layout: default
 
     You can define component class which name starts with lowercase letter, but when it's imported it should have capital letter. Here lowercase is fine:
 
-    ```jsx harmony
+    ```jsx
     class myComponent extends Component {
       render() {
         return <div />;
@@ -2119,7 +2119,7 @@ layout: default
 
     While when imported in another file it should start with capital letter:
 
-    ```jsx harmony
+    ```jsx
     import MyComponent from './MyComponent';
     ```
 
@@ -2129,7 +2129,7 @@ layout: default
 
     Yes. In the past, React used to ignore unknown DOM attributes. If you wrote JSX with an attribute that React doesn't recognize, React would just skip it. For example, this:
 
-    ```jsx harmony
+    ```jsx
     <div mycustomattribute={'something'} />
     ```
 
@@ -2228,7 +2228,7 @@ layout: default
 
     You can simply use `Array.prototype.map` with ES6 _arrow function_ syntax. For example, the `items` array of objects is mapped into an array of components:
 
-    ```jsx harmony
+    ```jsx
     <tbody>
       {items.map(item => (
         <SomeComponent key={item.id} name={item.name} />
@@ -2238,7 +2238,7 @@ layout: default
 
     You can't iterate using `for` loop:
 
-    ```jsx harmony
+    ```jsx
     <tbody>
       for (let i = 0; i < items.length; i++) {
         <SomeComponent key={items[i].id} name={items[i].name} />
@@ -2254,19 +2254,19 @@ layout: default
 
     React (or JSX) doesn't support variable interpolation inside an attribute value. The below representation won't work:
 
-    ```jsx harmony
+    ```jsx
     <img className='image' src='images/{this.props.image}' />
     ```
 
     But you can put any JS expression inside curly braces as the entire attribute value. So the below expression works:
 
-    ```jsx harmony
+    ```jsx
     <img className='image' src={'images/' + this.props.image} />
     ```
 
     Using _template strings_ will also work:
 
-    ```jsx harmony
+    ```jsx
     <img className='image' src={`images/${this.props.image}`} />
     ```
 
@@ -2293,19 +2293,19 @@ layout: default
 
     You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
 
-    ```jsx harmony
+    ```jsx
     <div className="btn-panel {this.props.visible ? 'show' : 'hidden'}">
     ```
 
     Instead you need to move curly braces outside (don't forget to include spaces between class names):
 
-    ```jsx harmony
+    ```jsx
     <div className={'btn-panel ' + (this.props.visible ? 'show' : 'hidden')}>
     ```
 
     _Template strings_ will also work:
 
-    ```jsx harmony
+    ```jsx
     <div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}>
     ```
 
@@ -2433,31 +2433,31 @@ layout: default
 
      It is possible with latest version (>=16.2). Below are the possible options:
 
-     ```jsx harmony
+     ```jsx
      render() {
        return false
      }
      ```
 
-     ```jsx harmony
+     ```jsx
      render() {
        return null
      }
      ```
 
-     ```jsx harmony
+     ```jsx
      render() {
        return []
      }
      ```
 
-     ```jsx harmony
+     ```jsx
      render() {
        return <React.Fragment></React.Fragment>
      }
      ```
 
-     ```jsx harmony
+     ```jsx
      render() {
        return <></>
      }
@@ -2472,7 +2472,7 @@ layout: default
 
      We can use `<pre>` tag so that the formatting of the `JSON.stringify()` is retained:
 
-     ```jsx harmony
+     ```jsx
      const data = { name: 'John', age: 42 };
 
      class User extends React.Component {
@@ -2498,7 +2498,7 @@ layout: default
 
      You can do it by creating _ref_ for `input` element and using it in `componentDidMount()`:
 
-     ```jsx harmony
+     ```jsx
      class App extends React.Component {
        componentDidMount() {
          this.nameInput.focus();
@@ -2581,7 +2581,7 @@ layout: default
 
      You can use `React.version` to get the version.
 
-     ```jsx harmony
+     ```jsx
      const REACT_VERSION = React.version;
 
      ReactDOM.render(<div>{`React version: ${REACT_VERSION}`}</div>, document.getElementById('app'));
@@ -2678,7 +2678,7 @@ layout: default
 
      React _does not_ apply _vendor prefixes_ automatically. You need to add vendor prefixes manually.
 
-     ```jsx harmony
+     ```jsx
      <div
        style={{
          transform: 'rotate(90deg)',
@@ -2695,7 +2695,7 @@ layout: default
 
      You should use default for exporting the components
 
-     ```jsx harmony
+     ```jsx
      import React from 'react';
      import User from 'user';
 
@@ -2754,7 +2754,7 @@ layout: default
 
      1. Create ref in render method:
 
-        ```jsx harmony
+        ```jsx
         <input ref={input => (this.inputElement = input)} />
         ```
 
@@ -2873,7 +2873,7 @@ layout: default
 
      For example, the employees list fetched from API and set local state:
 
-     ```jsx harmony
+     ```jsx
      class MyComponent extends React.Component {
        constructor(props) {
          super(props);
@@ -2924,7 +2924,7 @@ layout: default
 
      **Render Props** is a simple technique for sharing code between components using a prop whose value is a function. The below component uses render prop which returns a React element.
 
-     ```jsx harmony
+     ```jsx
      <DataProvider render={data => <h1>{`Hello ${data.target}`}</h1>} />
      ```
 
@@ -2981,7 +2981,7 @@ layout: default
 
         The `withRouter()` higher-order function will inject the history object as a prop of the component. This object provides `push()` and `replace()` methods to avoid the usage of context.
 
-        ```jsx harmony
+        ```jsx
         import { withRouter } from 'react-router-dom'; // this also works with 'react-router-native'
 
         const Button = withRouter(({ history }) => (
@@ -3000,7 +3000,7 @@ layout: default
 
         The `<Route>` component passes the same props as `withRouter()`, so you will be able to access the history methods through the history prop.
 
-        ```jsx harmony
+        ```jsx
         import { Route } from 'react-router-dom';
 
         const Button = () => (
@@ -3023,7 +3023,7 @@ layout: default
 
         This option is not recommended and treated as unstable API.
 
-        ```jsx harmony
+        ```jsx
         const Button = (props, context) => (
           <button
             type='button'
@@ -3078,7 +3078,7 @@ layout: default
 
      Then define the routes within `<Switch>` block:
 
-     ```jsx harmony
+     ```jsx
      <Router>
        <Switch>
          <Route {/* ... */} />
@@ -3111,7 +3111,7 @@ layout: default
 
      A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
 
-     ```jsx harmony
+     ```jsx
      <Switch>
        <Route exact path='/' component={Home} />
        <Route path='/user' component={User} />
@@ -3138,7 +3138,7 @@ layout: default
 
      2. You should use the `<Router>` component instead of built-in routers. Imported the above `history.js` inside `index.js` file:
 
-        ```jsx harmony
+        ```jsx
         import { Router } from 'react-router-dom';
         import history from './history';
         import App from './App';
@@ -3210,7 +3210,7 @@ layout: default
 
      The library provides two ways to format strings, numbers, and dates: react components or an API.
 
-     ```jsx harmony
+     ```jsx
      <FormattedMessage id={'account'} defaultMessage={'The amount is less than minimum balance.'} />
      ```
 
@@ -3232,7 +3232,7 @@ layout: default
 
      The `<Formatted... />` components from `react-intl` return elements, not plain text, so they can't be used for placeholders, alt text, etc. In that case, you should use lower level API `formatMessage()`. You can inject the `intl` object into your component using `injectIntl()` higher-order component and then format the message using `formatMessage()` available on that object.
 
-     ```jsx harmony
+     ```jsx
      import React from 'react';
      import { injectIntl, intlShape } from 'react-intl';
 
@@ -3255,7 +3255,7 @@ layout: default
 
      You can get the current locale in any component of your application using `injectIntl()`:
 
-     ```jsx harmony
+     ```jsx
      import { injectIntl, intlShape } from 'react-intl';
 
      const MyComponent = ({ intl }) => <div>{`The current locale is ${intl.locale}`}</div>;
@@ -3274,7 +3274,7 @@ layout: default
 
      The `injectIntl()` higher-order component will give you access to the `formatDate()` method via the props in your component. The method is used internally by instances of `FormattedDate` and it returns the string representation of the formatted date.
 
-     ```jsx harmony
+     ```jsx
      import { injectIntl, intlShape } from 'react-intl';
 
      const stringDate = this.props.intl.formatDate(date, {
@@ -3315,7 +3315,7 @@ layout: default
 
      Then you can assert as follows:
 
-     ```jsx harmony
+     ```jsx
      import ShallowRenderer from 'react-test-renderer/shallow';
 
      // in your test
@@ -3338,7 +3338,7 @@ layout: default
 
      This package provides a renderer that can be used to render components to pure JavaScript objects, without depending on the DOM or a native mobile environment. This package makes it easy to grab a snapshot of the platform view hierarchy (similar to a DOM tree) rendered by a ReactDOM or React Native without using a browser or `jsdom`.
 
-     ```jsx harmony
+     ```jsx
      import TestRenderer from 'react-test-renderer';
 
      const Link = ({ page, children }) => <a href={page}>{children}</a>;
@@ -3575,7 +3575,7 @@ layout: default
      1. **Use `mapStateToProps()`:** It maps the state variables from your store to the props that you specify.
      2. **Connect the above props to your container:** The object returned by the `mapStateToProps` function is connected to the container. You can import `connect()` from `react-redux`.
 
-        ```jsx harmony
+        ```jsx
         import React from 'react';
         import { connect } from 'react-redux';
 
@@ -3874,7 +3874,7 @@ layout: default
 
      If the `ownProps` parameter is specified, React Redux will pass the props that were passed to the component into your _connect_ functions. So, if you use a connected component:
 
-     ```jsx harmony
+     ```jsx
      import ConnectedComponent from './containers/ConnectedComponent';
 
      <ConnectedComponent user={'john'} />;
@@ -4170,7 +4170,7 @@ layout: default
 
      1. Create a Polymer element:
 
-        ```jsx harmony
+        ```jsx
         <link rel='import' href='../../bower_components/polymer/polymer.html' />;
         Polymer({
           is: 'calender-element',
@@ -4266,7 +4266,7 @@ layout: default
 
      These two variables, `Title` and `Wrapper`, are now components that you can render just like any other react component.
 
-     ```jsx harmony
+     ```jsx
      <Wrapper>
        <Title>{'Lets start first styled component!'}</Title>
      </Wrapper>
@@ -4470,7 +4470,7 @@ layout: default
 
      You can import SVG directly as component instead of loading it as a file. This feature is available with `react-scripts@2.0.0` and higher.
 
-     ```jsx harmony
+     ```jsx
      import { ReactComponent as Logo } from './logo.svg';
 
      const App = () => (
