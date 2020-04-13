@@ -83,8 +83,8 @@ layout: default
 | 68  | [Tại sao chúng ta phải cẩn thận khi sử dụng spreading với props trong DOM?](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements)                                                      |
 | 69  | [Làm thế nào decorators trong React?](#how-you-use-decorators-in-react)                                                                                                                     |
 | 70  | [Làm thế nào để ghi nhớ một component?](#how-do-you-memoize-a-component)                                                                                                                       |
-| 71  | [How you implement Server-Side Rendering or SSR?](#how-you-implement-server-side-rendering-or-ssr)                                                                                       |
-| 72  | [How to enable production mode in React?](#how-to-enable-production-mode-in-react)                                                                                                       |
+| 71  | [Triển khai SSR như thế nào?](#how-you-implement-server-side-rendering-or-ssr)                                                                                       |
+| 72  | [Chuyển sang chế độ sản phẩm như thế nào?](#how-to-enable-production-mode-in-react)                                                                                                       |
 | 73  | [What is CRA and its benefits?](#what-is-cra-and-its-benefits)                                                                                                                           |
 | 74  | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting)                                                                                     |
 | 75  | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16)                                               |
@@ -1799,9 +1799,9 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-71. ### How you implement Server Side Rendering or SSR?
+71. ### Triển khai SSR như thế nào? {#how-you-implement-server-side-rendering-or-ssr}
 
-    React is already equipped to handle rendering on Node servers. A special version of the DOM renderer is available, which follows the same pattern as on the client side.
+    React đã được trang bị để xử lý render trên một máy chủ Node. Tạo ra một phiên bản kết xuất sẵn DOM, theo mô hình tương tự như ở trên máy khách.
 
     ```jsx
     import ReactDOMServer from 'react-dom/server';
@@ -1810,13 +1810,13 @@ layout: default
     ReactDOMServer.renderToString(<App />);
     ```
 
-    This method will output the regular HTML as a string, which can be then placed inside a page body as part of the server response. On the client side, React detects the pre-rendered content and seamlessly picks up where it left off.
+    Phương thức này sẽ tạo ra một chuỗi HTML thông thường, sau đó đặt bên trong thân trang như một phản hồi của máy chủ. Về phía client, React nhận biết nội dung được kết xuất và tiếp tục thực hiện.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-72. ### How to enable production mode in React?
+72. ### Chuyển sang chế độ sản phẩm như thế nào? {#how-to-enable-production-mode-in-react}
 
-    You should use Webpack's `DefinePlugin` method to set `NODE_ENV` to `production`, by which it strip out things like propType validation and extra warnings. Apart from this, if you minify the code, for example, Uglify's dead-code elimination to strip out development only code and comments, it will drastically reduce the size of your bundle.
+    Sử dụng phương thức `DefinePlugin` của Webpack và gán giá trị `production` cho `NODE_ENV`, bằng cách này sẽ loại bỏ xác thực propType, cảnh báo và một số thứ khác. Ngoài ra, nếu bạn tối giản code, ví dụ, loại bỏ mã chết của Uglify để loại bỏ comment và mã đang phát triển, sẽ làm giảm đáng kể kích thước dự án của bạn.
 
     **[⬆ Mục lục](#table-of-contents)**
 
