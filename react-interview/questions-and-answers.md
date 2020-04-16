@@ -58,37 +58,37 @@ layout: default
 | 43  | [Sai lầm thường gặp nào khiến hàm được thực thi mỗi khi component được render?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders)             |
 | 44  | [Hàm lazy có hỗ trợ named exports hay không?](#is-lazy-function-supports-named-exports)                                                                                                  |
 | 45  | [Vì sao React sử dụng className thay cho thuộc tính class?](#why-react-uses-classname-over-class-attribute)                                                                              |
-| 46  | [Fragments là gì?](#what-are-fragments)                                                                                                                                               |
-| 47  | [Tại sao Fragments tốt hơn divs?](#why-fragments-are-better-than-container-divs)                                                                                           |
+| 46  | [Fragments là gì?](#what-are-fragments)                                                                                                                                                  |
+| 47  | [Tại sao Fragments tốt hơn divs?](#why-fragments-are-better-than-container-divs)                                                                                                         |
 | 48  | [Portals trong React là gì?](#what-are-portals-in-react)                                                                                                                                 |
-| 49  | [Stateless components là gì?](#what-are-stateless-components)                                                                                                                         |
-| 50  | [Stateful components là gì?](#what-are-stateful-components)                                                                                                                           |
-| 51  | [Làm cách nào để áp dụng xác nhận đầu vào cho props?](#how-to-apply-validation-on-props-in-react)                                                                                                 |
-| 52  | [React có những lợi thế nào?](#what-are-the-advantages-of-react)                                                                                                                   |
-| 53  | [React có những hạn chế nào?](#what-are-the-limitations-of-react)                                                                                                                 |
-| 54  | [Error boundaries trong React v16 là gì?](#what-are-error-boundaries-in-react-v16)                                                                                                        |
-| 55  | [Error boundaries ở React v15 hoạt động như thế nào?](#how-error-boundaries-handled-in-react-v15)                                                                                                 |
-| 56  | [Cách nào được khuyên dùng đề kiểm tra kiểu dữ liệu tĩnh?](#what-are-the-recommended-ways-for-static-type-checking)                                                                       |
-| 57  | [Thư viện `react-dom` cung cấp những phương thức nào?](#what-is-the-use-of-react-dom-package)                                                                                                           |
-| 58  | [Mục đích của phương thức render trong `react-dom` là gì?](#what-is-the-purpose-of-render-method-of-react-dom)                                                                                 |
-| 59  | [ReactDOMServer là gì?](#what-is-reactdomserver)                                                                                                                                       |
-| 60  | [Sử dụng innerHTML trong React như thế nào?](#how-to-use-innerhtml-in-react)                                                                                                                         |
-| 61  | [Đưa styles vào trong React như thế nào?](#how-to-use-styles-in-react)                                                                                                                               |
-| 62  | [Xử lý sự kiện trong React có sự khác biệt nào?](#how-events-are-different-in-react)                                                                                                                 |
-| 63  | [Điều gì xảy ra khi dùng `setState()` bên trong constructor?](#what-will-happen-if-you-use-setstate-in-constructor)                                                                             |
-| 64  | [Tác dụng của số thứ tự (keys) là gì?](#what-is-the-impact-of-indexes-as-keys)                                                                                                         |
-| 65  | [Có thể sử dụng `setState()` trong `componentWillMount()` được không?](#is-it-good-to-use-setstate-in-componentwillmount-method)                                                                 |
-| 66  | [Nếu sử dụng props khi khởi tạo state thì chuyện gì sẽ xảy ra? ](#what-will-happen-if-you-use-props-in-initial-state)                                                                               |
-| 67  | [Làm thế nào để render có điều kiện component?](#how-do-you-conditionally-render-components)                                                                                               |
-| 68  | [Tại sao chúng ta phải cẩn thận khi sử dụng spreading với props trong DOM?](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements)                                                      |
-| 69  | [Làm thế nào decorators trong React?](#how-you-use-decorators-in-react)                                                                                                                     |
-| 70  | [Làm thế nào để ghi nhớ một component?](#how-do-you-memoize-a-component)                                                                                                                       |
-| 71  | [Triển khai SSR như thế nào?](#how-you-implement-server-side-rendering-or-ssr)                                                                                       |
-| 72  | [Chuyển sang chế độ sản phẩm như thế nào?](#how-to-enable-production-mode-in-react)                                                                                                       |
-| 73  | [What is CRA and its benefits?](#what-is-cra-and-its-benefits)                                                                                                                           |
-| 74  | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting)                                                                                     |
-| 75  | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16)                                               |
-| 76  | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method)                                                 |
+| 49  | [Stateless components là gì?](#what-are-stateless-components)                                                                                                                            |
+| 50  | [Stateful components là gì?](#what-are-stateful-components)                                                                                                                              |
+| 51  | [Làm cách nào để áp dụng xác nhận đầu vào cho props?](#how-to-apply-validation-on-props-in-react)                                                                                        |
+| 52  | [React có những lợi thế nào?](#what-are-the-advantages-of-react)                                                                                                                         |
+| 53  | [React có những hạn chế nào?](#what-are-the-limitations-of-react)                                                                                                                        |
+| 54  | [Error boundaries trong React v16 là gì?](#what-are-error-boundaries-in-react-v16)                                                                                                       |
+| 55  | [Error boundaries ở React v15 hoạt động như thế nào?](#how-error-boundaries-handled-in-react-v15)                                                                                        |
+| 56  | [Cách nào được khuyên dùng đề kiểm tra kiểu dữ liệu tĩnh?](#what-are-the-recommended-ways-for-static-type-checking)                                                                      |
+| 57  | [Thư viện `react-dom` cung cấp những phương thức nào?](#what-is-the-use-of-react-dom-package)                                                                                            |
+| 58  | [Mục đích của phương thức render trong `react-dom` là gì?](#what-is-the-purpose-of-render-method-of-react-dom)                                                                           |
+| 59  | [ReactDOMServer là gì?](#what-is-reactdomserver)                                                                                                                                         |
+| 60  | [Sử dụng innerHTML trong React như thế nào?](#how-to-use-innerhtml-in-react)                                                                                                             |
+| 61  | [Đưa styles vào trong React như thế nào?](#how-to-use-styles-in-react)                                                                                                                   |
+| 62  | [Xử lý sự kiện trong React có sự khác biệt nào?](#how-events-are-different-in-react)                                                                                                     |
+| 63  | [Điều gì xảy ra khi dùng `setState()` bên trong constructor?](#what-will-happen-if-you-use-setstate-in-constructor)                                                                      |
+| 64  | [Tác dụng của số thứ tự (keys) là gì?](#what-is-the-impact-of-indexes-as-keys)                                                                                                           |
+| 65  | [Có thể sử dụng `setState()` trong `componentWillMount()` được không?](#is-it-good-to-use-setstate-in-componentwillmount-method)                                                         |
+| 66  | [Nếu sử dụng props khi khởi tạo state thì chuyện gì sẽ xảy ra? ](#what-will-happen-if-you-use-props-in-initial-state)                                                                    |
+| 67  | [Làm thế nào để render có điều kiện component?](#how-do-you-conditionally-render-components)                                                                                             |
+| 68  | [Tại sao chúng ta phải cẩn thận khi sử dụng spreading với props trong DOM?](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements)                                             |
+| 69  | [Làm thế nào decorators trong React?](#how-you-use-decorators-in-react)                                                                                                                  |
+| 70  | [Làm thế nào để ghi nhớ một component?](#how-do-you-memoize-a-component)                                                                                                                 |
+| 71  | [Triển khai SSR như thế nào?](#how-you-implement-server-side-rendering-or-ssr)                                                                                                           |
+| 72  | [Chuyển sang chế độ sản phẩm như thế nào?](#how-to-enable-production-mode-in-react)                                                                                                      |
+| 73  | [CRA là gì và nó có những lợi ích nào?](#what-is-cra-and-its-benefits)                                                                                                                           |
+| 74  | [Thứ tự của các _phương thức vòng đời_ của React ở gian đoạn mouting là gì?](#what-is-the-lifecycle-methods-order-in-mounting)                                                                                     |
+| 75  | [Phương thức vòng đời nào sẽ bị loại bỏ ở React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16)                                               |
+| 76  | [Mục đích của phương thức vòng đời `getDerivedStateFromProps()` là gì?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method)                                                 |
 | 77  | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method)                                                   |
 | 78  | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components)                                                                 |
 | 79  | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components)                                                                                 |
@@ -499,7 +499,7 @@ layout: default
        super(props);
 
        this.state = {
-         message: 'Welcome to React world'
+         message: 'Welcome to React world',
        };
      }
 
@@ -649,7 +649,7 @@ layout: default
     3. **Arrow functions in callbacks:** Có thể trực tiếp sử dụng _arrow functions_.
 
        ```jsx
-       <button onClick={event => this.handleClick(event)}>{'Click me'}</button>
+       <button onClick={(event) => this.handleClick(event)}>{'Click me'}</button>
        ```
 
     **Note:** Nếu callback truyền vào qua props từ component cha đến componentcon, components con có thể thực hiện nhiều lần render. Trong trường hợp nsy, để tránh ảnh hướng tới performance, nên sử dụng `.bind()` hoặc _public class fields syntax_.
@@ -674,7 +674,7 @@ layout: default
 
     ```jsx
     <button onClick={this.handleClick(id)} />;
-    handleClick = id => () => {
+    handleClick = (id) => () => {
       console.log('Hello, your ticket number is', id);
     };
     ```
@@ -745,7 +745,7 @@ layout: default
     Chúng ta thưởng sử dụng IDs từ tập dữ liệu để làm _keys_:
 
     ```jsx
-    const todoItems = todos.map(todo => <li key={todo.id}>{todo.text}</li>);
+    const todoItems = todos.map((todo) => <li key={todo.id}>{todo.text}</li>);
     ```
 
     Nếu không có IDs, chúng ta có thể sử dụng _index_ của các phẩn từ trong mảng để làm _key_:
@@ -793,7 +793,7 @@ layout: default
            super(props);
            this.txtSearch = null;
            this.state = { term: '' };
-           this.setInputSearchRef = e => {
+           this.setInputSearchRef = (e) => {
              this.txtSearch = e;
            };
          }
@@ -889,12 +889,12 @@ layout: default
 
        ```jsx
        class MyComponent extends Component {
-         renderRow = index => {
+         renderRow = (index) => {
            // Cách này không hoạt động. Ref sẽ được gắn vào DataTable thay vì MyComponent:
            return <input ref={'input-' + index} />;
 
            // Cách này hoạt động!.
-           return <input ref={input => (this['input-' + index] = input)} />;
+           return <input ref={(input) => (this['input-' + index] = input)} />;
          };
 
          render() {
@@ -1123,7 +1123,7 @@ layout: default
             title: 'New Header',
             footer: false,
             showFeatureX: false,
-            showFeatureY: true
+            showFeatureY: true,
           };
 
           return <WrappedComponent {...this.props} {...newProps} />;
@@ -1153,9 +1153,9 @@ layout: default
 
     ```jsx
     const MyDiv = React.createClass({
-      render: function() {
+      render: function () {
         return <div>{this.props.children}</div>;
-      }
+      },
     });
 
     ReactDOM.render(
@@ -1433,7 +1433,7 @@ layout: default
     class User extends React.Component {
       static propTypes = {
         name: PropTypes.string.isRequired,
-        age: PropTypes.number.isRequired
+        age: PropTypes.number.isRequired,
       };
 
       render() {
@@ -1506,7 +1506,7 @@ layout: default
 
     Sau đó sử dụng chúng như một component bình thường:
 
-    ```jsx 
+    ```jsx
     <ErrorBoundary>
       <MyWidget />
     </ErrorBoundary>
@@ -1538,7 +1538,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-58. ### Mục đích của phương thức render trong `react-dom` là gì? {#what-is-the-purpose-of-render-method-of-react-dom} 
+58. ### Mục đích của phương thức render trong `react-dom` là gì? {#what-is-the-purpose-of-render-method-of-react-dom}
 
     Phương thức này dùng để render một phần tử React vào trong DOM trong contaner được cung cấp và trả về một tham chiếu tới component đó. Nếu phần tử React đó đã được render trước đó trong container, nó sẽ thực hiện cập nhật và chỉ thay đổi DOM khi cần cập nhật những thay đổi mới nhất.
 
@@ -1600,7 +1600,7 @@ layout: default
     ```jsx
     const divStyle = {
       color: 'blue',
-      backgroundImage: 'url(' + imgUrl + ')'
+      backgroundImage: 'url(' + imgUrl + ')',
     };
 
     function HelloWorldComponent() {
@@ -1614,9 +1614,9 @@ layout: default
 
 62. ### Xử lý sự kiện trong React có sự khác biệt nào? {#how-events-are-different-in-react}
 
-    Xử lý những sự kiện với các phẩn tử trong React có một số khác biệt về  cú pháp:
+    Xử lý những sự kiện với các phẩn tử trong React có một số khác biệt về cú pháp:
 
-    1. Hàm xử lý sự kiện trong React được đặt tên theo camelCase, thay vì lowercase. 
+    1. Hàm xử lý sự kiện trong React được đặt tên theo camelCase, thay vì lowercase.
     2. Với JSX truyền vào một hàm như xử lý sự kiện, thay vì một chuỗi.
 
     **[⬆ Mục lục](#table-of-contents)**
@@ -1629,7 +1629,7 @@ layout: default
 
 64. ### Tác dụng của số thứ tự (keys) là gì? {#what-is-the-impact-of-indexes-as-keys}
 
-    Keys cần phải ổn định, dự đoán được và duy nhất để React có thể  theo dõi được các thành phần.
+    Keys cần phải ổn định, dự đoán được và duy nhất để React có thể theo dõi được các thành phần.
 
     Trong đoạn mã dưới đây, key của mỗi phần từ dựa trên số thứ tự của mảng, thay vì gắn với dữ liệu được trình bày. Điều này giới hạn việc tối ưu hóa mà React có thể làm.
 
@@ -1643,7 +1643,7 @@ layout: default
 
     ```jsx
     {
-      todos.map(todo => <Todo {...todo} key={todo.id} />);
+      todos.map((todo) => <Todo {...todo} key={todo.id} />);
     }
     ```
 
@@ -1651,7 +1651,7 @@ layout: default
 
 65. ### Có thể sử dụng `setState()` trong `componentWillMount()` được không? {#is-it-good-to-use-setstate-in-componentwillmount-method}
 
-    Nên tránh khởi tạo phương thức async trong phương thức  lifecycle `componentWillMount()`. `componentWillMount()` sẽ được gọi ngay trước khi mount xảy ra. Nó được gọi trước khi `render()`, do đó việc thiết lập state trong phương thức này sẽ không kích hoạt re-render. Tránh đưa vào bất kỳ hiệu ứng phụ hoặc bất đồng bộ nào trong phương thức này. Cần chắc chắn rằng mọi hàm async được gọi trong component đều nằm trong `componentDidMount()` thay vì `componentWillMount()`.
+    Nên tránh khởi tạo phương thức async trong phương thức lifecycle `componentWillMount()`. `componentWillMount()` sẽ được gọi ngay trước khi mount xảy ra. Nó được gọi trước khi `render()`, do đó việc thiết lập state trong phương thức này sẽ không kích hoạt re-render. Tránh đưa vào bất kỳ hiệu ứng phụ hoặc bất đồng bộ nào trong phương thức này. Cần chắc chắn rằng mọi hàm async được gọi trong component đều nằm trong `componentDidMount()` thay vì `componentWillMount()`.
 
     ```jsx
     componentDidMount() {
@@ -1679,7 +1679,7 @@ layout: default
 
         this.state = {
           records: [],
-          inputValue: this.props.inputValue
+          inputValue: this.props.inputValue,
         };
       }
 
@@ -1697,7 +1697,7 @@ layout: default
         super(props);
 
         this.state = {
-          record: []
+          record: [],
         };
       }
 
@@ -1713,7 +1713,7 @@ layout: default
 
     Trong một số trường hợp bạn muốn render component tùy theo giá trị của state. JSX không render giá trị `false` hoặc `undefined`, nên bạn có thể sử dụng phép toán _điều kiện rút gọn_ để render một phần nhất định của component khi điều kiện đúng.
 
-    ```jsx 
+    ```jsx
     const MyComponent = ({ name, address }) => (
       <div>
         <h2>{name}</h2>
@@ -1735,7 +1735,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-68. ### Tại sao chúng ta phải cẩn thận khi sử dụng spreading với props trong DOM???  {#why-we-need-to-be-careful-when-spreading-props-on-dom-elements}
+68. ### Tại sao chúng ta phải cẩn thận khi sử dụng spreading với props trong DOM??? {#why-we-need-to-be-careful-when-spreading-props-on-dom-elements}
 
     Khi dùng spread operator với props chúng ta sẽ gặp rủi ro khi thêm vào những thuộc tính HTML không xác định, một cách làm không tốt. Thay vào đó, chúng ta nên sử dụng tính năng phá hủy prop với toán tử `...rest`, nó sẽ chỉ thêm các props cần thiết. Ví dụ,
 
@@ -1762,7 +1762,7 @@ layout: default
       WrappedComponent là những decorator sẽ nhận được khi đặt trực tiếp component trên
       vào ví dự dưới đây 
     */
-    const setTitle = title => WrappedComponent => {
+    const setTitle = (title) => (WrappedComponent) => {
       return class extends React.Component {
         componentDidMount() {
           document.title = title;
@@ -1781,7 +1781,7 @@ layout: default
 
 70. ### Làm thế nào để ghi nhớ một component? {#how-do-you-memoize-a-component}
 
-    Có một số thư viện có sẵn có thể sử dụng với components dạng hàm. Ví dụ như thư viện `moize` có thể  ghi nhớ một component trong một component khác.
+    Có một số thư viện có sẵn có thể sử dụng với components dạng hàm. Ví dụ như thư viện `moize` có thể ghi nhớ một component trong một component khác.
 
     ```jsx
     import moize from 'moize';
@@ -1820,40 +1820,40 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-73. ### What is CRA and its benefits?
+73. ### CRA là gì và nó có những lợi ích nào? {#what-is-cra-and-its-benefits}
 
-    The `create-react-app` CLI tool allows you to quickly create & run React applications with no configuration step.
+    CRA `create-react-app` là công cụ thao tác dòng lện (CLI) cho phép bạn nhanh chóng tạo và chạy một ứng dụng React mà không cần phải cấu hình quá nhiều bước.
 
-    Let's create Todo App using _CRA_:
+    Các bước tạo dựng một ứng dụng đơn giản bằng _CRA_ rất đơn giản:
 
     ```console
-    # Installation
+    # Cài đặt
     $ npm install -g create-react-app
 
-    # Create new project
+    # Tạo dự án mới
     $ create-react-app todo-app
     $ cd todo-app
 
-    # Build, test and run
+    # Dựng, test và chạy
     $ npm run build
     $ npm run test
     $ npm start
     ```
 
-    It includes everything we need to build a React app:
+    Nó bao gồm mọi thứ chúng ta cần để xây dựng một ứng dụng React:
 
-    1. React, JSX, ES6, and Flow syntax support.
-    2. Language extras beyond ES6 like the object spread operator.
-    3. Autoprefixed CSS, so you don’t need -webkit- or other prefixes.
-    4. A fast interactive unit test runner with built-in support for coverage reporting.
-    5. A live development server that warns about common mistakes.
-    6. A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
+    1. Hỗ trợ cú pháp React, JSX, ES6, và Flow.
+    2. Ngôn ngữ bổ sung ngoài ES6 như toán tử spread.
+    3. Tự động bổ sung tiền tố cho CSS, bạn không cần thêm -webkit- hoặc một số tiền tố khác.
+    4. Chạy unit test nhanh cùng với báo cáo độ phủ test được dựng sẵn.
+    5. Môi trường phát triển tiện lợi, cảnh báo nhiều lỗi phổ biến.
+    6. Tập lệnh dựng sẵn để đóng gói JS, CSS, và hình ảnh cho sản phẩm, cùng với các giá trị băm (hashs) và sourcemaps.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-74. ### What is the lifecycle methods order in mounting?
+74. ### Thứ tự của các _phương thức vòng đời_ của React ở gian đoạn mouting là gì?  {#what-is-the-lifecycle-methods-order-in-mounting}
 
-    The lifecycle methods are called in the following order when an instance of a component is being created and inserted into the DOM.
+    Trong quá trình mounting, một component được tạo ra và chèn vào trong DOM, các phương thức vòng đời trong giai đoạn này được gọi theo thứ tự sau:
 
     1. `constructor()`
     2. `static getDerivedStateFromProps()`
@@ -1862,21 +1862,21 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-75. ### What are the lifecycle methods going to be deprecated in React v16?
+75. ### Phương thức vòng đời nào sẽ bị loại bỏ ở React v16? {#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16}
 
-    The following lifecycle methods going to be unsafe coding practices and will be more problematic with async rendering.
+    Các phương thức dòng đời dưới đây thực hiện những đoạn mã không an toàn và sẽ gặp nhiều vấn đề với kết xuất không đồng bộ (async rendering).
 
     1. `componentWillMount()`
     2. `componentWillReceiveProps()`
     3. `componentWillUpdate()`
 
-    Starting with React v16.3 these methods are aliased with `UNSAFE_` prefix, and the unprefixed version will be removed in React v17.
+    Bắt đầu từ React v16.3, những phương thức này được đánh dấu với tiền tố `UNSAFE_`, và sẽ bị loại bỏ ở React v17.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-76. ### What is the purpose of `getDerivedStateFromProps()` lifecycle method?
+76. ### Mục đích của phương thức vòng đời `getDerivedStateFromProps()` là gì? {#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method}
 
-    The new static `getDerivedStateFromProps()` lifecycle method is invoked after a component is instantiated as well as before it is re-rendered. It can return an object to update state, or `null` to indicate that the new props do not require any state updates.
+    Phương thức vòng đời mới `getDerivedStateFromProps()` là một phương thức tĩnh được gọi sau khi một component được khởi tạo cũng như trước khi component được kết xuất lại. Nó sẽ trả về một đối tượng để cập nhật state, hoặc giá trị `null` nếu props mới không có cập nhật nào.
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1886,7 +1886,7 @@ layout: default
     }
     ```
 
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillReceiveProps()`.
+    Phương thức này cùng với `componentDidUpdate()` sẽ thay thế cho `componentWillReceiveProps()`.
 
     **[⬆ Mục lục](#table-of-contents)**
 
@@ -1920,7 +1920,7 @@ layout: default
 
     ```javascript
     export default React.createClass({
-      displayName: 'TodoApp'
+      displayName: 'TodoApp',
       // ...
     });
     ```
@@ -1972,10 +1972,10 @@ layout: default
       home: HomePage,
       about: AboutPage,
       services: ServicesPage,
-      contact: ContactPage
+      contact: ContactPage,
     };
 
-    const Page = props => {
+    const Page = (props) => {
       const Handler = PAGES[props.page] || ContactPage;
 
       return <Handler {...props} />;
@@ -1983,7 +1983,7 @@ layout: default
 
     // The keys of the PAGES object can be used in the prop types to catch dev-time errors.
     Page.propTypes = {
-      page: PropTypes.oneOf(Object.keys(PAGES)).isRequired
+      page: PropTypes.oneOf(Object.keys(PAGES)).isRequired,
     };
     ```
 
@@ -2007,7 +2007,7 @@ layout: default
 
     ```javascript
     this.setState((prevState, props) => ({
-      count: prevState.count + props.increment
+      count: prevState.count + props.increment,
     }));
     // this.state.count === 3 as expected
     ```
@@ -2051,7 +2051,7 @@ layout: default
     const PureRenderMixin = require('react-addons-pure-render-mixin');
 
     const Button = React.createClass({
-      mixins: [PureRenderMixin]
+      mixins: [PureRenderMixin],
       // ...
     });
     ```
@@ -2174,7 +2174,7 @@ layout: default
         return {
           /* initial state */
         };
-      }
+      },
     });
     ```
 
@@ -2230,7 +2230,7 @@ layout: default
 
     ```jsx
     <tbody>
-      {items.map(item => (
+      {items.map((item) => (
         <SomeComponent key={item.id} name={item.name} />
       ))}
     </tbody>
@@ -2281,9 +2281,9 @@ layout: default
       arrayWithShape: React.PropTypes.arrayOf(
         React.PropTypes.shape({
           color: React.PropTypes.string.isRequired,
-          fontSize: React.PropTypes.number.isRequired
+          fontSize: React.PropTypes.number.isRequired,
         })
-      ).isRequired
+      ).isRequired,
     };
     ```
 
@@ -2357,7 +2357,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-100.  ### How to re-render the view when the browser is resized?
+100. ### How to re-render the view when the browser is resized?
 
 
     You can listen to the `resize` event in `componentDidMount()` and then update the dimensions (`width` and `height`). You should remove the listener in `componentWillUnmount()` method.
@@ -2508,7 +2508,7 @@ layout: default
          return (
            <div>
              <input defaultValue={"Won't focus"} />
-             <input ref={input => (this.nameInput = input)} defaultValue={'Will focus'} />
+             <input ref={(input) => (this.nameInput = input)} defaultValue={'Will focus'} />
            </div>
          );
        }
@@ -2541,11 +2541,11 @@ layout: default
      2. **Calling `setState()` with a function:**
 
         ```javascript
-        this.setState(prevState => ({
+        this.setState((prevState) => ({
           user: {
             ...prevState.user,
-            age: 42
-          }
+            age: 42,
+          },
         }));
         ```
 
@@ -2561,7 +2561,7 @@ layout: default
      ```javascript
      // Wrong
      this.setState({
-       counter: this.state.counter + this.props.increment
+       counter: this.state.counter + this.props.increment,
      });
      ```
 
@@ -2570,7 +2570,7 @@ layout: default
      ```javascript
      // Correct
      this.setState((prevState, props) => ({
-       counter: prevState.counter + props.increment
+       counter: prevState.counter + props.increment,
      }));
      ```
 
@@ -2648,7 +2648,7 @@ layout: default
      Add a listener on the `history` object to record each page view:
 
      ```javascript
-     history.listen(function(location) {
+     history.listen(function (location) {
        window.ga('set', 'page', location.pathname + location.search);
        window.ga('send', 'pageview', location.pathname + location.search);
      });
@@ -2683,7 +2683,7 @@ layout: default
        style={{
          transform: 'rotate(90deg)',
          WebkitTransform: 'rotate(90deg)', // note the capital 'W' here
-         msTransform: 'rotate(90deg)' // 'ms' is the only lowercase vendor prefix
+         msTransform: 'rotate(90deg)', // 'ms' is the only lowercase vendor prefix
        }}
      />
      ```
@@ -2755,7 +2755,7 @@ layout: default
      1. Create ref in render method:
 
         ```jsx
-        <input ref={input => (this.inputElement = input)} />
+        <input ref={(input) => (this.inputElement = input)} />
         ```
 
      2. Apply click event in your event handler:
@@ -2845,7 +2845,7 @@ layout: default
      export const colors = {
        white,
        black,
-       blue
+       blue,
      };
 
      export const space = [0, 8, 16, 32, 64];
@@ -2879,20 +2879,20 @@ layout: default
          super(props);
          this.state = {
            employees: [],
-           error: null
+           error: null,
          };
        }
 
        componentDidMount() {
          fetch('https://api.example.com/items')
-           .then(res => res.json())
+           .then((res) => res.json())
            .then(
-             result => {
+             (result) => {
                this.setState({
-                 employees: result.employees
+                 employees: result.employees,
                });
              },
-             error => {
+             (error) => {
                this.setState({ error });
              }
            );
@@ -2905,7 +2905,7 @@ layout: default
          } else {
            return (
              <ul>
-               {employees.map(item => (
+               {employees.map((item) => (
                  <li key={employee.name}>
                    {employee.name}-{employees.experience}
                  </li>
@@ -2925,7 +2925,7 @@ layout: default
      **Render Props** is a simple technique for sharing code between components using a prop whose value is a function. The below component uses render prop which returns a React element.
 
      ```jsx
-     <DataProvider render={data => <h1>{`Hello ${data.target}`}</h1>} />
+     <DataProvider render={(data) => <h1>{`Hello ${data.target}`}</h1>} />
      ```
 
      Libraries such as React Router and DownShift are using this pattern.
@@ -3037,8 +3037,8 @@ layout: default
 
         Button.contextTypes = {
           history: React.PropTypes.shape({
-            push: React.PropTypes.func.isRequired
-          })
+            push: React.PropTypes.func.isRequired,
+          }),
         };
         ```
 
@@ -3098,7 +3098,7 @@ layout: default
      this.props.history.push({
        pathname: '/template',
        search: '?name=sudheer',
-       state: { detail: response.data }
+       state: { detail: response.data },
      });
      ```
 
@@ -3218,8 +3218,8 @@ layout: default
      const messages = defineMessages({
        accountMessage: {
          id: 'account',
-         defaultMessage: 'The amount is less than minimum balance.'
-       }
+         defaultMessage: 'The amount is less than minimum balance.',
+       },
      });
 
      formatMessage(messages.accountMessage);
@@ -3242,7 +3242,7 @@ layout: default
      };
 
      MyComponent.propTypes = {
-       intl: intlShape.isRequired
+       intl: intlShape.isRequired,
      };
 
      export default injectIntl(MyComponent);
@@ -3261,7 +3261,7 @@ layout: default
      const MyComponent = ({ intl }) => <div>{`The current locale is ${intl.locale}`}</div>;
 
      MyComponent.propTypes = {
-       intl: intlShape.isRequired
+       intl: intlShape.isRequired,
      };
 
      export default injectIntl(MyComponent);
@@ -3280,13 +3280,13 @@ layout: default
      const stringDate = this.props.intl.formatDate(date, {
        year: 'numeric',
        month: 'numeric',
-       day: 'numeric'
+       day: 'numeric',
      });
 
      const MyComponent = ({ intl }) => <div>{`The formatted date is ${stringDate}`}</div>;
 
      MyComponent.propTypes = {
-       intl: intlShape.isRequired
+       intl: intlShape.isRequired,
      };
 
      export default injectIntl(MyComponent);
@@ -3327,7 +3327,7 @@ layout: default
      expect(result.type).toBe('div');
      expect(result.props.children).toEqual([
        <span className={'heading'}>{'Title'}</span>,
-       <span className={'description'}>{'Description'}</span>
+       <span className={'description'}>{'Description'}</span>,
      ]);
      ```
 
@@ -3470,9 +3470,9 @@ layout: default
      `mapStateToProps()` is a utility which helps your component get updated state (which is updated by some other components):
 
      ```javascript
-     const mapStateToProps = state => {
+     const mapStateToProps = (state) => {
        return {
-         todos: getVisibleTodos(state.todos, state.visibilityFilter)
+         todos: getVisibleTodos(state.todos, state.visibilityFilter),
        };
      };
      ```
@@ -3480,11 +3480,11 @@ layout: default
      `mapDispatchToProps()` is a utility which will help your component to fire an action event (dispatching action which may cause change of application state):
 
      ```javascript
-     const mapDispatchToProps = dispatch => {
+     const mapDispatchToProps = (dispatch) => {
        return {
-         onTodoClick: id => {
+         onTodoClick: (id) => {
            dispatch(toggleTodo(id));
-         }
+         },
        };
      };
      ```
@@ -3495,7 +3495,7 @@ layout: default
 
      ```javascript
      const mapDispatchToProps = {
-       onTodoClick
+       onTodoClick,
      };
      ```
 
@@ -3556,8 +3556,8 @@ layout: default
        }
      }
 
-     const mapStateToProps = state => ({
-       isLoaded: state.isLoaded
+     const mapStateToProps = (state) => ({
+       isLoaded: state.isLoaded,
      });
 
      const mapDispatchToProps = { fetchData };
@@ -3624,7 +3624,7 @@ layout: default
 
      const rootReducer = (state, action) => {
        if (action.type === 'USER_LOGOUT') {
-         Object.keys(state).forEach(key => {
+         Object.keys(state).forEach((key) => {
            storage.removeItem(`persist:${key}`);
          });
 
@@ -3716,9 +3716,9 @@ layout: default
 
      ```javascript
      export function fetchAccount(id) {
-       return dispatch => {
+       return (dispatch) => {
          dispatch(setLoadingAccountState()); // Show a loading spinner
-         fetch(`/account/${id}`, response => {
+         fetch(`/account/${id}`, (response) => {
            dispatch(doneFetchingAccount()); // Hide loading spinner
            if (response.status === 200) {
              dispatch(setAccount(response.json)); // Use a normal function to set the received state
@@ -3756,11 +3756,11 @@ layout: default
      import Link from '../components/Link';
 
      const mapStateToProps = (state, ownProps) => ({
-       active: ownProps.filter === state.visibilityFilter
+       active: ownProps.filter === state.visibilityFilter,
      });
 
      const mapDispatchToProps = (dispatch, ownProps) => ({
-       onClick: () => dispatch(setVisibilityFilter(ownProps.filter))
+       onClick: () => dispatch(setVisibilityFilter(ownProps.filter)),
      });
 
      const FilterLink = connect(mapStateToProps, mapDispatchToProps)(Link);
@@ -3833,8 +3833,8 @@ layout: default
                 ...state,
                 {
                   text: action.text,
-                  completed: false
-                }
+                  completed: false,
+                },
               ];
             default:
               return state;
@@ -3850,14 +3850,14 @@ layout: default
      There are a few ways of binding _action creators_ to `dispatch()` in `mapDispatchToProps()`. Below are the possible options:
 
      ```javascript
-     const mapDispatchToProps = dispatch => ({
-       action: () => dispatch(action())
+     const mapDispatchToProps = (dispatch) => ({
+       action: () => dispatch(action()),
      });
      ```
 
      ```javascript
-     const mapDispatchToProps = dispatch => ({
-       action: bindActionCreators(action, dispatch)
+     const mapDispatchToProps = (dispatch) => ({
+       action: bindActionCreators(action, dispatch),
      });
      ```
 
@@ -3943,7 +3943,7 @@ layout: default
        // Instructing middleware to dispatch corresponding action.
        yield put({
          type: 'FETCH_USER_SUCCESS',
-         userData
+         userData,
        });
      }
      ```
@@ -3990,7 +3990,7 @@ layout: default
      For example, to get user details from the state:
 
      ```javascript
-     const getUserData = state => state.user.data;
+     const getUserData = (state) => state.user.data;
      ```
 
 
@@ -4033,11 +4033,11 @@ layout: default
      ```javascript
      const rootReducer = combineReducers({
        todos: todos,
-       visibilityFilter: visibilityFilter
+       visibilityFilter: visibilityFilter,
      });
 
      const initialState = {
-       todos: [{ id: 123, name: 'example', completed: false }]
+       todos: [{ id: 123, name: 'example', completed: false }],
      };
 
      const store = createStore(rootReducer, initialState);
@@ -4174,9 +4174,9 @@ layout: default
         <link rel='import' href='../../bower_components/polymer/polymer.html' />;
         Polymer({
           is: 'calender-element',
-          ready: function() {
+          ready: function () {
             this.textContent = 'I am a calender';
-          }
+          },
         });
         ```
 
@@ -4330,10 +4330,10 @@ layout: default
      ```javascript
      import { createSelector } from 'reselect';
 
-     const shopItemsSelector = state => state.shop.items;
-     const taxPercentSelector = state => state.shop.taxPercent;
+     const shopItemsSelector = (state) => state.shop.items;
+     const taxPercentSelector = (state) => state.shop.taxPercent;
 
-     const subtotalSelector = createSelector(shopItemsSelector, items =>
+     const subtotalSelector = createSelector(shopItemsSelector, (items) =>
        items.reduce((acc, item) => acc + item.value, 0)
      );
 
@@ -4344,7 +4344,7 @@ layout: default
      );
 
      export const totalSelector = createSelector(subtotalSelector, taxSelector, (subtotal, tax) => ({
-       total: subtotal + tax
+       total: subtotal + tax,
      }));
 
      let exampleState = {
@@ -4352,9 +4352,9 @@ layout: default
          taxPercent: 8,
          items: [
            { name: 'apple', value: 1.2 },
-           { name: 'orange', value: 0.95 }
-         ]
-       }
+           { name: 'orange', value: 0.95 },
+         ],
+       },
      };
 
      console.log(subtotalSelector(exampleState)); // 2.15
@@ -4388,10 +4388,10 @@ layout: default
      ```javascript
      someComponent = React.createClass({
        statics: {
-         someMethod: function() {
+         someMethod: function () {
            // ..
-         }
-       }
+         },
+       },
      });
      ```
 
@@ -4442,7 +4442,7 @@ layout: default
      ```javascript
      const InitializeFromStateForm = reduxForm({
        form: 'initializeFromState',
-       enableReinitialize: true
+       enableReinitialize: true,
      })(UserEdit);
      ```
 
@@ -4459,7 +4459,7 @@ layout: default
 
      ```javascript
      Component.PropTypes = {
-       size: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+       size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
      };
      ```
 
@@ -4657,9 +4657,9 @@ layout: default
      You can compare current value of the state with an existing state value and decide whether to rerender the page or not. If the values are same then you need to return **null** to stop rerendering otherwise return the latest state value. For example, the user profile information is conditionally rendered as follows,
 
      ```jsx
-     getUserProfile = user => {
+     getUserProfile = (user) => {
        const latestAddress = user.address;
-       this.setState(state => {
+       this.setState((state) => {
          if (state.address === latestAddress) {
            return null;
          } else {
@@ -4719,14 +4719,14 @@ layout: default
        state = { value: 0 };
 
        handleIncrement = () => {
-         this.setState(prevState => ({
-           value: prevState.value + 1
+         this.setState((prevState) => ({
+           value: prevState.value + 1,
          }));
        };
 
        handleDecrement = () => {
-         this.setState(prevState => ({
-           value: prevState.value - 1
+         this.setState((prevState) => ({
+           value: prevState.value - 1,
          }));
        };
 
@@ -4975,7 +4975,7 @@ layout: default
      }
 
      MyButton.defaultProps = {
-       color: 'red'
+       color: 'red',
      };
      ```
 
@@ -5108,7 +5108,7 @@ layout: default
            .then(({ moduleA }) => {
              // Use moduleA
            })
-           .catch(err => {
+           .catch((err) => {
              // Handle failure
            });
        };
@@ -5146,7 +5146,7 @@ layout: default
      function Glossary(props) {
        return (
          <dl>
-           {props.items.map(item => (
+           {props.items.map((item) => (
              // Without the `key`, React will fire a key warning
              <React.Fragment key={item.id}>
                <dt>{item.term}</dt>
@@ -5195,7 +5195,7 @@ layout: default
 
         ```javascript
         // Define a static method
-        WrappedComponent.staticMethod = function() {
+        WrappedComponent.staticMethod = function () {
           /*...*/
         };
         // Now apply a HOC
@@ -5469,12 +5469,12 @@ layout: default
      function Book(props) {
        const index = (
          <ul>
-           {props.pages.map(page => (
+           {props.pages.map((page) => (
              <li key={page.id}>{page.title}</li>
            ))}
          </ul>
        );
-       const content = props.pages.map(page => (
+       const content = props.pages.map((page) => (
          <div key={page.id}>
            <h3>{page.title}</h3>
            <p>{page.content}</p>
@@ -5555,7 +5555,7 @@ layout: default
      2. **Dynamic Import**
 
      ```javascript
-     import('./math').then(math => {
+     import('./math').then((math) => {
        console.log(math.add(10, 20));
      });
      ```
@@ -5756,7 +5756,7 @@ layout: default
        constructor(props) {
          super(props);
          this.state = {
-           value: { something: 'something' }
+           value: { something: 'something' },
          };
        }
 
@@ -5840,20 +5840,20 @@ layout: default
 
      ```javascript
      var Greeting = createReactClass({
-       getDefaultProps: function() {
+       getDefaultProps: function () {
          return {
-           name: 'Jhohn'
+           name: 'Jhohn',
          };
        },
-       getInitialState: function() {
+       getInitialState: function () {
          return { message: this.props.message };
        },
-       handleClick: function() {
+       handleClick: function () {
          console.log(this.state.message);
        },
-       render: function() {
+       render: function () {
          return <h1>Hello, {this.props.name}</h1>;
-       }
+       },
      });
      ```
 
@@ -5967,7 +5967,7 @@ layout: default
 
      ```javascript
      <Mouse
-       children={mouse => (
+       children={(mouse) => (
          <p>
            The mouse position is {mouse.x}, {mouse.y}
          </p>
@@ -5979,7 +5979,7 @@ layout: default
 
      ```javascript
      <Mouse>
-       {mouse => (
+       {(mouse) => (
          <p>
            The mouse position is {mouse.x}, {mouse.y}
          </p>
@@ -5991,7 +5991,7 @@ layout: default
 
      ```javascript
      Mouse.propTypes = {
-       children: PropTypes.func.isRequired
+       children: PropTypes.func.isRequired,
      };
      ```
 
@@ -6010,7 +6010,7 @@ layout: default
      function withMouse(Component) {
        return class extends React.Component {
          render() {
-           return <Mouse render={mouse => <Component {...this.props} mouse={mouse} />} />;
+           return <Mouse render={(mouse) => <Component {...this.props} mouse={mouse} />} />;
          }
        };
      }
@@ -6146,7 +6146,7 @@ layout: default
 
        return (
          <ul>
-           {data.hits.map(item => (
+           {data.hits.map((item) => (
              <li key={item.objectID}>
                <a href={item.url}>{item.title}</a>
              </li>
@@ -6312,11 +6312,11 @@ layout: default
 
      ```javascript
      // es 5
-     var users = usersList.map(function(user) {
+     var users = usersList.map(function (user) {
        return <li>{user.name}</li>;
      });
      // es 6
-     const users = usersList.map(user => <li>{user.name}</li>);
+     const users = usersList.map((user) => <li>{user.name}</li>);
      ```
 
      **[⬆ Mục lục](#table-of-contents)**
@@ -6348,7 +6348,7 @@ layout: default
 
      ```javascript
      const companyProfile = {
-       website: "javascript: alert('Your website is hacked')"
+       website: "javascript: alert('Your website is hacked')",
      };
      // It will log a warning
      <a href={companyProfile.website}>More details</a>;
