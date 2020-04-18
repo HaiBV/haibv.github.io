@@ -89,7 +89,7 @@ layout: default
 | 74  | [Thứ tự của các _phương thức vòng đời_ của React ở gian đoạn mouting là gì?](#what-is-the-lifecycle-methods-order-in-mounting)                                                                                     |
 | 75  | [Phương thức vòng đời nào sẽ bị loại bỏ ở React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16)                                               |
 | 76  | [Mục đích của phương thức vòng đời `getDerivedStateFromProps()` là gì?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method)                                                 |
-| 77  | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method)                                                   |
+| 77  | [Mục đích của phương thức vòng đời `getSnapshotBeforeUpdate()` là gì?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method)                                                   |
 | 78  | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components)                                                                 |
 | 79  | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components)                                                                                 |
 | 80  | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class)                                                       |
@@ -1890,9 +1890,9 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-77. ### What is the purpose of `getSnapshotBeforeUpdate()` lifecycle method?
+77. ### Mục đích của phương thức vòng đời `getSnapshotBeforeUpdate()` là gì? {#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method}
 
-    The new `getSnapshotBeforeUpdate()` lifecycle method is called right before DOM updates. The return value from this method will be passed as the third parameter to `componentDidUpdate()`.
+    `getSnapshotBeforeUpdate()` là phương thức vòng đời mới được gọi ngay trước khi DOM được cập nhật. Giá trị trả về của phương thức này sẽ được truyền vào tham số thứ 3 của phương thức `componentDidUpdate()`.
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1902,7 +1902,7 @@ layout: default
     }
     ```
 
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillUpdate()`.
+    Phương thức này cùng với `componentDidUpdate()` sẽ thay thế cho `componentWillUpdate()`.
 
     **[⬆ Mục lục](#table-of-contents)**
 
