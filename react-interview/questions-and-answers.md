@@ -90,9 +90,9 @@ layout: default
 | 75  | [Phương thức vòng đời nào sẽ bị loại bỏ ở React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16)                                               |
 | 76  | [Mục đích của phương thức vòng đời `getDerivedStateFromProps()` là gì?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method)                                                 |
 | 77  | [Mục đích của phương thức vòng đời `getSnapshotBeforeUpdate()` là gì?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method)                                                   |
-| 78  | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components)                                                                 |
-| 79  | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components)                                                                                 |
-| 80  | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class)                                                       |
+| 78  | [Hooks sẽ thay thế cho kết xuất props hay Higher-Order Components?](#do-hooks-replace-render-props-and-higher-order-components)                                                                 |
+| 79  | [Nên đặt tên cho các component như thế nào?](#what-is-the-recommended-way-for-naming-components)                                                                                 |
+| 80  | [Thứ tự các phương thức trong một component nên sắp xếp như thế nào?](#what-is-the-recommended-ordering-of-methods-in-component-class)                                                       |
 | 81  | [What is a switching component?](#what-is-a-switching-component)                                                                                                                         |
 | 82  | [Why we need to pass a function to setState()?](#why-we-need-to-pass-a-function-to-setstate)                                                                                             |
 | 83  | [What is strict mode in React?](#what-is-strict-mode-in-react)                                                                                                                           |
@@ -1906,17 +1906,17 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-78. ### Do Hooks replace render props and higher order components?
+78. ### Hooks sẽ thay thế cho kết xuất props hay Higher-Order Components?  {#do-hooks-replace-render-props-and-higher-order-components}
 
-    Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.
+    Kết xuất props và higher-order components chỉ kết xuất duy nhật một component con nhưng trong phần lớn các trường hợp, Hooks là một cách đơn giản hơn cho việc kết xuất nhờ vào việc đơn giản hóa cây DOM.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-79. ### What is the recommended way for naming components?
+79. ### Nên đặt tên cho các component như thế nào? {#what-is-the-recommended-way-for-naming-components}
 
-    It is recommended to name the component by reference instead of using `displayName`.
+    Nên đặt tên cho component theo tham chiếu thay vì sử dụng thuộc tính `displayName`.
 
-    Using `displayName` for naming component:
+    Sử dụng `displayName` để đặt tên cho component:
 
     ```javascript
     export default React.createClass({
@@ -1925,7 +1925,7 @@ layout: default
     });
     ```
 
-    The **recommended** approach:
+    Nên sử dụng cách sau:
 
     ```javascript
     export default class TodoApp extends React.Component {
@@ -1935,11 +1935,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-80. ### What is the recommended ordering of methods in component class?
+80. ### Thứ tự các phương thức trong một component nên sắp xếp như thế nào? {#what-is-the-recommended-ordering-of-methods-in-component-class}
 
-    _Recommended_ ordering of methods from _mounting_ to _render stage_:
+    _Khuyến nghị_ sắp xếp các phương thức theo thứ tự từ giai đoạn _mounting_ đến giai đoạn _kết xuất_:
 
-    1. `static` methods
+    1. các phương thức `static`
     2. `constructor()`
     3. `getChildContext()`
     4. `componentWillMount()`
@@ -1949,9 +1949,9 @@ layout: default
     8. `componentWillUpdate()`
     9. `componentDidUpdate()`
     10. `componentWillUnmount()`
-    11. click handlers or event handlers like `onClickSubmit()` or `onChangeDescription()`
-    12. getter methods for render like `getSelectReason()` or `getFooterContent()`
-    13. optional render methods like `renderNavigation()` or `renderProfilePicture()`
+    11. các phương thức xử lý sự kiện `onClick()`, `onClickSubmit()` hoặc `onChangeDescription()`
+    12. các phương thức getter cho kết xuất như `getSelectReason()` hoặc `getFooterContent()`
+    13. các phương thức kết xuất không bắt buộc như `renderNavigation()` hoặc `renderProfilePicture()`
     14. `render()`
 
     **[⬆ Mục lục](#table-of-contents)**
