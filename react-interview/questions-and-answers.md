@@ -93,8 +93,8 @@ layout: default
 | 78  | [Hooks sẽ thay thế cho kết xuất props hay Higher-Order Components?](#do-hooks-replace-render-props-and-higher-order-components)                                                                 |
 | 79  | [Nên đặt tên cho các component như thế nào?](#what-is-the-recommended-way-for-naming-components)                                                                                 |
 | 80  | [Thứ tự các phương thức trong một component nên sắp xếp như thế nào?](#what-is-the-recommended-ordering-of-methods-in-component-class)                                                       |
-| 81  | [What is a switching component?](#what-is-a-switching-component)                                                                                                                         |
-| 82  | [Why we need to pass a function to setState()?](#why-we-need-to-pass-a-function-to-setstate)                                                                                             |
+| 81  | [Component chuyển đổi là gì?](#what-is-a-switching-component)                                                                                                                         |
+| 82  | [Tại sao lại cần truyền hàm vào trong hàm setState()?](#why-we-need-to-pass-a-function-to-setstate)                                                                                             |
 | 83  | [What is strict mode in React?](#what-is-strict-mode-in-react)                                                                                                                           |
 | 84  | [What are React Mixins?](#what-are-react-mixins)                                                                                                                                         |
 | 85  | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution)                                                 |
@@ -1956,11 +1956,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-81. ### What is a switching component?
+81. ### Component chuyển đổi là gì? {#what-is-a-switching-component}
 
-    A _switching component_ is a component that renders one of many components. We need to use object to map prop values to components.
+    Một _component chuyển đổi_ là một component kết xuất một trong nhiều component tùy điều kiện. Chúng ta cần sử dụng đối tượng để xác định component được kết xuất.
 
-    For example, a switching component to display different pages based on `page` prop:
+    Ví dụ, một component chuyển đổi dùng để hiển thị những trang khác nhau dựa theo giá trị `page` trong prop:
 
     ```jsx
     import HomePage from './HomePage';
@@ -1981,7 +1981,7 @@ layout: default
       return <Handler {...props} />;
     };
 
-    // The keys of the PAGES object can be used in the prop types to catch dev-time errors.
+    // Các keys của đối tượng PAGES có thể sử dụng trong prop types để bắt lỗi trong lúc phát triển.
     Page.propTypes = {
       page: PropTypes.oneOf(Object.keys(PAGES)).isRequired,
     };
@@ -1989,34 +1989,34 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-82. ### Why we need to pass a function to setState()?
+82. ### Tại sao lại cần truyền hàm vào trong hàm setState()? {#why-we-need-to-pass-a-function-to-setstate}
 
-    The reason behind for this is that `setState()` is an asynchronous operation. React batches state changes for performance reasons, so the state may not change immediately after `setState()` is called. That means you should not rely on the current state when calling `setState()` since you can't be sure what that state will be. The solution is to pass a function to `setState()`, with the previous state as an argument. By doing this you can avoid issues with the user getting the old state value on access due to the asynchronous nature of `setState()`.
+    Lý do là vì `setState()` hoạt động theo cơ chế bất đồng bộ. React thay đổi state hàng loạt vì lý do hiệu suất, vậy nên giá trị trong state có thể không thay đổi ngay sau khi `setState()` được gọi. Điều đó có nghĩa rằng bạn không nên dựa vào giá trị hiện tại của state khi thực hiện gọi `setState()` vì bạn không thể chắc chắn giá trị tại thời điểm đó là gì. Giải pháp đưa ra là truyền vào `setState()` một hàm, với một tham số là giá trị cũ của state. Bằng cách này, bạn có thể tránh được các vấn đề với người dùng khi nhận được giá trị cũ của state do tính bất đồng bộ của `setState()`.
 
-    Let's say the initial count value is zero. After three consecutive increment operations, the value is going to be incremented only by one.
+    Giả sử giá trị `count` ban đầu là 0. Sau 3 thao tác tăng liên tiếp, nhưng giá trị chỉ tăng lên 1.
 
     ```javascript
-    // assuming this.state.count === 0
+    // giả định this.state.count === 0
     this.setState({ count: this.state.count + 1 });
     this.setState({ count: this.state.count + 1 });
     this.setState({ count: this.state.count + 1 });
-    // this.state.count === 1, not 3
+    // nhưng this.state.count === 1, không phải 3
     ```
 
-    If we pass a function to `setState()`, the count gets incremented correctly.
+    Nếu chúng ta truyền một hàm vào `setState()`, giá trị count được tính toán chính xác.
 
     ```javascript
     this.setState((prevState, props) => ({
       count: prevState.count + props.increment,
     }));
-    // this.state.count === 3 as expected
+    // this.state.count === 3 như mong đợi
     ```
 
     **[⬆ Mục lục](#table-of-contents)**
 
-83. ### What is strict mode in React?
+83. ### `strict mode` trong React là gì? {#what-is-strict-mode-in-react}
 
-    `React.StrictMode` is an useful component for highlighting potential problems in an application. Just like `<Fragment>`, `<StrictMode>` does not render any extra DOM elements. It activates additional checks and warnings for its descendants. These checks apply for _development mode_ only.
+    `React.StrictMode` là một component hữu ích for highlighting potential problems in an application. Just like `<Fragment>`, `<StrictMode>` does not render any extra DOM elements. It activates additional checks and warnings for its descendants. These checks apply for _development mode_ only.
 
     ```jsx
     import React from 'react';
