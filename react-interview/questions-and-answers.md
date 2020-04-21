@@ -94,7 +94,7 @@ layout: default
 | 79  | [Nên đặt tên cho các component như thế nào?](#what-is-the-recommended-way-for-naming-components)                                                                                 |
 | 80  | [Thứ tự các phương thức trong một component nên sắp xếp như thế nào?](#what-is-the-recommended-ordering-of-methods-in-component-class)                                                       |
 | 81  | [Component chuyển đổi là gì?](#what-is-a-switching-component)                                                                                                                         |
-| 82  | [Tại sao lại cần truyền hàm vào trong hàm setState()?](#why-we-need-to-pass-a-function-to-setstate)                                                                                             |
+| 82  | [Tại sao lại cần truyền hàm vào trong hàm `setState()`?](#why-we-need-to-pass-a-function-to-setstate)                                                                                             |
 | 83  | [What is strict mode in React?](#what-is-strict-mode-in-react)                                                                                                                           |
 | 84  | [What are React Mixins?](#what-are-react-mixins)                                                                                                                                         |
 | 85  | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution)                                                 |
@@ -1989,7 +1989,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-82. ### Tại sao lại cần truyền hàm vào trong hàm setState()? {#why-we-need-to-pass-a-function-to-setstate}
+82. ### Tại sao lại cần truyền hàm vào trong hàm `setState()`? {#why-we-need-to-pass-a-function-to-setstate}
 
     Lý do là vì `setState()` hoạt động theo cơ chế bất đồng bộ. React thay đổi state hàng loạt vì lý do hiệu suất, vậy nên giá trị trong state có thể không thay đổi ngay sau khi `setState()` được gọi. Điều đó có nghĩa rằng bạn không nên dựa vào giá trị hiện tại của state khi thực hiện gọi `setState()` vì bạn không thể chắc chắn giá trị tại thời điểm đó là gì. Giải pháp đưa ra là truyền vào `setState()` một hàm, với một tham số là giá trị cũ của state. Bằng cách này, bạn có thể tránh được các vấn đề với người dùng khi nhận được giá trị cũ của state do tính bất đồng bộ của `setState()`.
 
@@ -2016,7 +2016,7 @@ layout: default
 
 83. ### `strict mode` trong React là gì? {#what-is-strict-mode-in-react}
 
-    `React.StrictMode` là một component hữu ích for highlighting potential problems in an application. Just like `<Fragment>`, `<StrictMode>` does not render any extra DOM elements. It activates additional checks and warnings for its descendants. These checks apply for _development mode_ only.
+    `React.StrictMode` là một component hữu ích để làm nổi bật các vấn đề tiềm ẩn của một ứng dụng. Giống như `<Fragment>`, `<StrictMode>` không kết xuất thêm phần tử DOM bổ sung nào. Nó sẽ kích hoạt kiểm trả bổ sung và cảnh báo cho những phần tử con. Các kiểm tra này chỉ áp dụng khi ở _chế độ phát triển_.
 
     ```jsx
     import React from 'react';
@@ -2037,15 +2037,15 @@ layout: default
     }
     ```
 
-    In the example above, the _strict mode_ checks apply to `<ComponentOne>` and `<ComponentTwo>` components only.
+    Ở ví dụ trên, _strict mode_ chỉ áp dụng cho `<ComponentOne>` và `<ComponentTwo>` components.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-84. ### What are React Mixins?
+84. ### React mixins là gì? {#what-are-react-mixins}
 
-    _Mixins_ are a way to totally separate components to have a common functionality. Mixins **should not be used** and can be replaced with _higher-order components_ or _decorators_.
+    _Mixins_ là một cách để tách biệt hoàn toàn các components có một chức năng chung. **Không nên được sử dụng** mixins và có thể thay thế bởi _higher-order components_ hoặc _decorators_.
 
-    One of the most commonly used mixins is `PureRenderMixin`. You might be using it in some components to prevent unnecessary re-renders when the props and state are shallowly equal to the previous props and state:
+    Một trong những mixins phổ biến nhất là `PureRenderMixin`. Bạn có thể sử dụng chúng trong một số component để ngăn việc tái kết xuất không cần thiết khi props và state không đổi so với props và state trước đó (so sánh nông):
 
     ```javascript
     const PureRenderMixin = require('react-addons-pure-render-mixin');
@@ -2056,11 +2056,11 @@ layout: default
     });
     ```
 
-    <!-- TODO: mixins are deprecated -->
+    <!-- TODO: mixins đã bị loại bỏ -->
 
     **[⬆ Mục lục](#table-of-contents)**
 
-85. ### Why is `isMounted()` an anti-pattern and what is the proper solution?
+85. ### Tại sao `isMounted()` {#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution}
 
     The primary use case for `isMounted()` is to avoid calling `setState()` after a component has been unmounted, because it will emit a warning.
 
@@ -3960,7 +3960,7 @@ layout: default
 
 179. ### What are the differences between `redux-saga` and `redux-thunk`?
 
-     Both _Redux Thunk_ and _Redux Saga_ take care of dealing with side effects. In most of the scenarios, Thunk uses _Promises_ to deal with them, whereas Saga uses _Generators_. Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. But both middleware can coexist, so you can start with Thunks and introduce Sagas when/if you need them.
+     Both _Redux Thunk_ and _Redux Saga_ take care of dealing with side effects. In most of the scenarios, Thunk uses _Promises_ to deal with them, whereas Saga uses   _Generators_. Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. But both middleware can coexist, so you can start with Thunks and introduce Sagas when/if you need them.
 
 
     **[⬆ Mục lục](#table-of-contents)**
