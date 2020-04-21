@@ -2060,7 +2060,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-85. ### Tại sao `isMounted()` {#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution}
+85. ### Tại sao `isMounted()` là một cách tiếp cận tồi và giải pháp thích hợp là gì? {#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution}
 
     The primary use case for `isMounted()` is to avoid calling `setState()` after a component has been unmounted, because it will emit a warning.
 
