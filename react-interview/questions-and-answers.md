@@ -2062,7 +2062,7 @@ layout: default
 
 85. ### Tại sao `isMounted()` là một cách tiếp cận tồi và giải pháp thích hợp là gì? {#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution}
 
-    The primary use case for `isMounted()` is to avoid calling `setState()` after a component has been unmounted, because it will emit a warning.
+    Mục đích chính khi sử dụng `isMounted()` là tránh gọi `setState()` sau khi một component bị loại (việc này sẽ xuất hiện một cảnh báo).
 
     ```javascript
     if (this.isMounted()) {
@@ -2070,9 +2070,9 @@ layout: default
     }
     ```
 
-    Checking `isMounted()` before calling `setState()` does eliminate the warning, but it also defeats the purpose of the warning. Using `isMounted()` is a code smell because the only reason you would check is because you think you might be holding a reference after the component has unmounted.
+    Kiểm tra `isMounted()` trước khi gọi `setState()` không loại bỏ cảnh báo, nhưng nó cũng làm mất đi mục đích của việc cảnh báo. Sử dụng `isMounted()` khiến code có mùi vì lý do duy nhất để kiểm tra là vì chúng ta nghĩ rằng chúng ta có thể đang tiếp tục sử dụng một component khi đã được loại khỏi DOM.
 
-    An optimal solution would be to find places where `setState()` might be called after a component has unmounted, and fix them. Such situations most commonly occur due to callbacks, when a component is waiting for some data and gets unmounted before the data arrives. Ideally, any callbacks should be canceled in `componentWillUnmount()`, prior to unmounting.
+    Một giải pháp tối ưu hơn là tìm những nơi `setState()` có thể được gọi sau khi component bị loại, và sửa chúng. Những tình huống này xảy ra chủ yếu do việc callback, khi một component đang đợi một số dữ liệu và bị loại trước khi nhận được data. Cách lý tưởng nhất là tất cả các callback đều bị hủy trong  phương thức `componentWillUnmount()`, trước khi bị loại.
 
     **[⬆ Mục lục](#table-of-contents)**
 
