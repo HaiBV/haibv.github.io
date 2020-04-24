@@ -95,9 +95,9 @@ layout: default
 | 80  | [Thứ tự các phương thức trong một component nên sắp xếp như thế nào?](#what-is-the-recommended-ordering-of-methods-in-component-class)                                                       |
 | 81  | [Component chuyển đổi là gì?](#what-is-a-switching-component)                                                                                                                         |
 | 82  | [Tại sao lại cần truyền hàm vào trong hàm `setState()`?](#why-we-need-to-pass-a-function-to-setstate)                                                                                             |
-| 83  | [What is strict mode in React?](#what-is-strict-mode-in-react)                                                                                                                           |
-| 84  | [What are React Mixins?](#what-are-react-mixins)                                                                                                                                         |
-| 85  | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution)                                                 |
+| 83  | [`strict mode` trong React là gì?](#what-is-strict-mode-in-react)                                                                                                                           |
+| 84  | [React mixins là gì?](#what-are-react-mixins)                                                                                                                                         |
+| 85  | [Tại sao `isMounted()` là một cách tiếp cận tồi và giải pháp thích hợp là gì?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution)                                                 |
 | 86  | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react)                                                                                       |
 | 87  | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter)                                                                           |
 | 88  | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16)                                                                                   |
@@ -2076,11 +2076,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-86. ### What are the Pointer Events supported in React?
+86. ### Pointer Events hỗ trợ trong React là gì? {#what-are-the-pointer-events-supported-in-react}
 
-    _Pointer Events_ provide a unified way of handling all input events. In the old days we had a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the _Pointer Events_ specification.
+    _Pointer Events_ cung cấp một cách thống nhất để xử lý sự kiện đầu vào. Trước kia, chúng ta chỉ có những sự kiện của con trỏ chuột nhưng giờ đây có rất nhiều sự kiện của thiết bị khác không liên quan đến con chuột, ví dụ như smart phone với touch hoặc pen. Chúng ta cần lưu ý rằng những sự kiện này sẽ chỉ hoạt động trong các trình duyệt hỗ trợ đặc tả _Pointer Events_.
 
-    The following event types are now available in _React DOM_:
+    Những sự kiện dưới đây đang có sẵn trong _React DOM_:
 
     1. `onPointerDown`
     2. `onPointerMove`
