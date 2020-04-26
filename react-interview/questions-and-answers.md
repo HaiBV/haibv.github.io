@@ -2095,9 +2095,9 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-87. ### Why should component names start with capital letter?
+87. ### Tại sao tên của component nên bắt đầu bằng chữ cái in hoa? {#why-should-component-names-start-with-capital-letter}
 
-    If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
+    Nếu bạn kết xuất component với JSX, tên của component phải bắt đầu bằng chữ in hoa nếu không React sẽ thông báo một lỗi không công nhận tên tag. Vì theo quy ước chỉ có các thẻ thuộc tính trong HTML và thẻ SVG có thể bắt đầu với chữ cái thường.
 
     ```jsx
     class SomeComponent extends Component {
@@ -2105,7 +2105,7 @@ layout: default
     }
     ```
 
-    You can define component class which name starts with lowercase letter, but when it's imported it should have capital letter. Here lowercase is fine:
+    Bạn có thể định nghĩa component dạng class với tên bắt đầu bằng chữ cái thường, nhưng khi import thì phải dùng chữ cái in hoa. Xem xét ví dụ dưới đây:
 
     ```jsx
     class myComponent extends Component {
@@ -2117,7 +2117,7 @@ layout: default
     export default myComponent;
     ```
 
-    While when imported in another file it should start with capital letter:
+    Khi được import vào một component khác, chúng cần phải được bắt đầu bằng chữ in hoa:
 
     ```jsx
     import MyComponent from './MyComponent';
@@ -2125,72 +2125,72 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-88. ### Are custom DOM attributes supported in React v16?
+88. ### Các thuộc tính tùy biến trong DOM có được hỗ trợ ở React v16 không? {#are-custom-dom-attributes-supported-in-react-v16}
 
-    Yes. In the past, React used to ignore unknown DOM attributes. If you wrote JSX with an attribute that React doesn't recognize, React would just skip it. For example, this:
+    Có. Trước đây, React đã từng bỏ qua những thuộc tính DOM không được định nghĩa. Nếu bạn viết một thuộc tính trong JSX mà React không nhận ra, React sẽ bỏ qua. Xét ví dụ dưới đây:
 
     ```jsx
     <div mycustomattribute={'something'} />
     ```
 
-    Would render an empty div to the DOM with React v15:
+    Sẽ hiển thị một thẻ div trống trong DOM với React v15:
 
     ```html
     <div />
     ```
 
-    In React v16 any unknown attributes will end up in the DOM:
+    Với React v16 mọi thuộc tính không xác định đều được hiển thị trong DOM:
 
     ```html
     <div mycustomattribute="something" />
     ```
 
-    This is useful for supplying browser-specific non-standard attributes, trying new DOM APIs, and integrating with opinionated third-party libraries.
+    Điều này rất hữu ích để cung cấp các thuộc tính không chuẩn dành riêng cho trình duyệt, thử nghiệm DOM APIs mới, và tích hợp với các thư viện của bên thứ 3.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-89. ### What is the difference between constructor and getInitialState?
+89. ### Nêu những điểm khác nhau giữa constructor và getInitialState?  {#what-is-the-difference-between-constructor-and-getinitialstate}
 
-    You should initialize state in the constructor when using ES6 classes, and `getInitialState()` method when using `React.createClass()`.
+    Bạn có thể khởi tạo giá trị của state trong constructor khi sử sụng class trong ES6, và phương thức `getInitialState()` khi sử dụng `React.createClass()`.
 
-    Using ES6 classes:
+    Đối với class trong ES6:
 
     ```javascript
     class MyComponent extends React.Component {
       constructor(props) {
         super(props);
         this.state = {
-          /* initial state */
+          /* giá trị khởi tạo của state */
         };
       }
     }
     ```
 
-    Using `React.createClass()`:
+    Sử dụng `React.createClass()`:
 
     ```javascript
     const MyComponent = React.createClass({
       getInitialState() {
         return {
-          /* initial state */
+          /* giá trị khởi tạo của state */
         };
       },
     });
     ```
 
-    **Note:** `React.createClass()` is deprecated and removed in React v16. Use plain JavaScript classes instead.
+    **Ghi chú:** `React.createClass()` không còn được sử dụng và đã được loại bỏ ở React v16. Được thay thế bởi class trong ES6.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-90. ### Can you force a component to re-render without calling setState?
+90. ### Có thể tái kết xuất một component mà không cần gọi hàm setState? {#can-you-force-a-component-to-re-render-without-calling-setstate}
 
-    By default, when your component's state or props change, your component will re-render. If your `render()` method depends on some other data, you can tell React that the component needs re-rendering by calling `forceUpdate()`.
+    Bình thường, khi state hoặc props của component phát sinh thay đổi, component đó sẽ thực hiện tái kết xuất. Nếu phương thức `render()` của component phụ thuộc vào một sỗ dữ liệu khác, chúng ta có thể yêu cầu React tái kết xuất component bằng cách gọi phương thức `forceUpdate()`.
 
     ```javascript
     component.forceUpdate(callback);
     ```
 
-    It is recommended to avoid all uses of `forceUpdate()` and only read from `this.props` and `this.state` in `render()`.
+    Khuyến cáo nên tránh sử dụng `forceUpdate()` và chỉ đọc dữ liệu từ `this.props` và `this.state` trong phương thức `render()`.
 
     **[⬆ Mục lục](#table-of-contents)**
 
