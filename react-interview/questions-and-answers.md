@@ -2194,11 +2194,11 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-91. ### What is the difference between `super()` and `super(props)` in React using ES6 classes?
+91. ### Khi sử dụng class trong ES6, việc khai báo `super()` và `super(props)` có gì khác nhau? {#what-is-the-difference-between-super-and-super-props-in-react-using-es6-classes}
 
-    When you want to access `this.props` in `constructor()` then you should pass props to `super()` method.
+    Khi muốn sử dụng `this.props` trong `constructor()`, chúng ta cần truyền props vào phương thức `super()`.
 
-    Using `super(props)`:
+    Sử dụng `super(props)`:
 
     ```javascript
     class MyComponent extends React.Component {
@@ -2209,7 +2209,7 @@ layout: default
     }
     ```
 
-    Using `super()`:
+    Sử dụng `super()`:
 
     ```javascript
     class MyComponent extends React.Component {
@@ -2220,13 +2220,13 @@ layout: default
     }
     ```
 
-    Outside `constructor()` both will display same value for `this.props`.
+    Bên ngoài `constructor()`, cả 2 sẽ hiển thị `this.props` như nhau.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-92. ### How to loop inside JSX?
+92. ### Thực hiện lặp trong JSX như thế nào? {how-to-loop-inside-jsx}
 
-    You can simply use `Array.prototype.map` with ES6 _arrow function_ syntax. For example, the `items` array of objects is mapped into an array of components:
+    Bạn có thể sử dụng `Array.prototype.map` với cú pháp _hàm arrow_ trong ES6. Ví dụ, một mảng `items`chứa các đối tượng được `map` thành một mảng các component:
 
     ```jsx
     <tbody>
@@ -2236,7 +2236,7 @@ layout: default
     </tbody>
     ```
 
-    You can't iterate using `for` loop:
+    Bạn không thể sử dụng vòng lặp `for`:
 
     ```jsx
     <tbody>
@@ -2246,7 +2246,7 @@ layout: default
     </tbody>
     ```
 
-    This is because JSX tags are transpiled into _function calls_, and you can't use statements inside expressions. This may change thanks to `do` expressions which are _stage 1 proposal_.
+    Bởi vì các thẻ JSX được biên dịch thành dạng _function_, và bạn không thể sử dụng các câu lệnh bên trong các biểu thức. Điều này có thể thay đổi nhờ các biểu thức `do` là _stage 1 proposal_.
 
     **[⬆ Mục lục](#table-of-contents)**
 
