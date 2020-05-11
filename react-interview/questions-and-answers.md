@@ -85,19 +85,19 @@ layout: default
 | 70  | [Làm thế nào để ghi nhớ một component?](#how-do-you-memoize-a-component)                                                                                                                 |
 | 71  | [Triển khai SSR như thế nào?](#how-you-implement-server-side-rendering-or-ssr)                                                                                                           |
 | 72  | [Chuyển sang chế độ sản phẩm như thế nào?](#how-to-enable-production-mode-in-react)                                                                                                      |
-| 73  | [CRA là gì và nó có những lợi ích nào?](#what-is-cra-and-its-benefits)                                                                                                                           |
-| 74  | [Thứ tự của các _phương thức vòng đời_ của React ở gian đoạn mouting là gì?](#what-is-the-lifecycle-methods-order-in-mounting)                                                                                     |
-| 75  | [Phương thức vòng đời nào sẽ bị loại bỏ ở React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16)                                               |
-| 76  | [Mục đích của phương thức vòng đời `getDerivedStateFromProps()` là gì?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method)                                                 |
-| 77  | [Mục đích của phương thức vòng đời `getSnapshotBeforeUpdate()` là gì?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method)                                                   |
-| 78  | [Hooks sẽ thay thế cho kết xuất props hay Higher-Order Components?](#do-hooks-replace-render-props-and-higher-order-components)                                                                 |
-| 79  | [Nên đặt tên cho các component như thế nào?](#what-is-the-recommended-way-for-naming-components)                                                                                 |
-| 80  | [Thứ tự các phương thức trong một component nên sắp xếp như thế nào?](#what-is-the-recommended-ordering-of-methods-in-component-class)                                                       |
-| 81  | [Component chuyển đổi là gì?](#what-is-a-switching-component)                                                                                                                         |
-| 82  | [Tại sao lại cần truyền hàm vào trong hàm `setState()`?](#why-we-need-to-pass-a-function-to-setstate)                                                                                             |
-| 83  | [`strict mode` trong React là gì?](#what-is-strict-mode-in-react)                                                                                                                           |
-| 84  | [React mixins là gì?](#what-are-react-mixins)                                                                                                                                         |
-| 85  | [Tại sao `isMounted()` là một cách tiếp cận tồi và giải pháp thích hợp là gì?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution)                                                 |
+| 73  | [CRA là gì và nó có những lợi ích nào?](#what-is-cra-and-its-benefits)                                                                                                                   |
+| 74  | [Thứ tự của các _phương thức vòng đời_ của React ở gian đoạn mouting là gì?](#what-is-the-lifecycle-methods-order-in-mounting)                                                           |
+| 75  | [Phương thức vòng đời nào sẽ bị loại bỏ ở React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16)                                                               |
+| 76  | [Mục đích của phương thức vòng đời `getDerivedStateFromProps()` là gì?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method)                                               |
+| 77  | [Mục đích của phương thức vòng đời `getSnapshotBeforeUpdate()` là gì?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method)                                                 |
+| 78  | [Hooks sẽ thay thế cho kết xuất props hay Higher-Order Components?](#do-hooks-replace-render-props-and-higher-order-components)                                                          |
+| 79  | [Nên đặt tên cho các component như thế nào?](#what-is-the-recommended-way-for-naming-components)                                                                                         |
+| 80  | [Thứ tự các phương thức trong một component nên sắp xếp như thế nào?](#what-is-the-recommended-ordering-of-methods-in-component-class)                                                   |
+| 81  | [Component chuyển đổi là gì?](#what-is-a-switching-component)                                                                                                                            |
+| 82  | [Tại sao lại cần truyền hàm vào trong hàm `setState()`?](#why-we-need-to-pass-a-function-to-setstate)                                                                                    |
+| 83  | [`strict mode` trong React là gì?](#what-is-strict-mode-in-react)                                                                                                                        |
+| 84  | [React mixins là gì?](#what-are-react-mixins)                                                                                                                                            |
+| 85  | [Tại sao `isMounted()` là một cách tiếp cận tồi và giải pháp thích hợp là gì?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution)                                        |
 | 86  | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react)                                                                                       |
 | 87  | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter)                                                                           |
 | 88  | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16)                                                                                   |
@@ -383,11 +383,7 @@ layout: default
    ```
 
    ```js
-   React.createElement(
-     App,
-     null,
-     React.createElement('div', null, React.createElement('h1', null, 'Welcome to React world!'))
-   );
+   React.createElement(App, null, React.createElement('div', null, React.createElement('h1', null, 'Welcome to React world!')));
    ```
 
    **[⬆ Mục lục](#table-of-contents)**
@@ -801,13 +797,7 @@ layout: default
            this.setState({ term: this.txtSearch.value });
          }
          render() {
-           return (
-             <input
-               value={this.state.term}
-               onChange={this.onInputChange.bind(this)}
-               ref={this.setInputSearchRef}
-             />
-           );
+           return <input value={this.state.term} onChange={this.onInputChange.bind(this)} ref={this.setInputSearchRef} />;
          }
        }
        ```
@@ -1851,7 +1841,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-74. ### Thứ tự của các _phương thức vòng đời_ của React ở gian đoạn mouting là gì?  {#what-is-the-lifecycle-methods-order-in-mounting}
+74. ### Thứ tự của các _phương thức vòng đời_ của React ở gian đoạn mouting là gì? {#what-is-the-lifecycle-methods-order-in-mounting}
 
     Trong quá trình mounting, một component được tạo ra và chèn vào trong DOM, các phương thức vòng đời trong giai đoạn này được gọi theo thứ tự sau:
 
@@ -1906,7 +1896,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-78. ### Hooks sẽ thay thế cho kết xuất props hay Higher-Order Components?  {#do-hooks-replace-render-props-and-higher-order-components}
+78. ### Hooks sẽ thay thế cho kết xuất props hay Higher-Order Components? {#do-hooks-replace-render-props-and-higher-order-components}
 
     Kết xuất props và higher-order components chỉ kết xuất duy nhật một component con nhưng trong phần lớn các trường hợp, Hooks là một cách đơn giản hơn cho việc kết xuất nhờ vào việc đơn giản hóa cây DOM.
 
@@ -2072,7 +2062,7 @@ layout: default
 
     Kiểm tra `isMounted()` trước khi gọi `setState()` không loại bỏ cảnh báo, nhưng nó cũng làm mất đi mục đích của việc cảnh báo. Sử dụng `isMounted()` khiến code có mùi vì lý do duy nhất để kiểm tra là vì chúng ta nghĩ rằng chúng ta có thể đang tiếp tục sử dụng một component khi đã được loại khỏi DOM.
 
-    Một giải pháp tối ưu hơn là tìm những nơi `setState()` có thể được gọi sau khi component bị loại, và sửa chúng. Những tình huống này xảy ra chủ yếu do việc callback, khi một component đang đợi một số dữ liệu và bị loại trước khi nhận được data. Cách lý tưởng nhất là tất cả các callback đều bị hủy trong  phương thức `componentWillUnmount()`, trước khi bị loại.
+    Một giải pháp tối ưu hơn là tìm những nơi `setState()` có thể được gọi sau khi component bị loại, và sửa chúng. Những tình huống này xảy ra chủ yếu do việc callback, khi một component đang đợi một số dữ liệu và bị loại trước khi nhận được data. Cách lý tưởng nhất là tất cả các callback đều bị hủy trong phương thức `componentWillUnmount()`, trước khi bị loại.
 
     **[⬆ Mục lục](#table-of-contents)**
 
@@ -2149,7 +2139,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-89. ### Nêu những điểm khác nhau giữa constructor và getInitialState?  {#what-is-the-difference-between-constructor-and-getinitialstate}
+89. ### Nêu những điểm khác nhau giữa constructor và getInitialState? {#what-is-the-difference-between-constructor-and-getinitialstate}
 
     Bạn có thể khởi tạo giá trị của state trong constructor khi sử sụng class trong ES6, và phương thức `getInitialState()` khi sử dụng `React.createClass()`.
 
@@ -2224,7 +2214,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-92. ### Thực hiện lặp trong JSX như thế nào? {how-to-loop-inside-jsx}
+92. ### Thực hiện lặp trong JSX như thế nào? {#how-to-loop-inside-jsx}
 
     Bạn có thể sử dụng `Array.prototype.map` với cú pháp _hàm arrow_ trong ES6. Ví dụ, một mảng `items`chứa các đối tượng được `map` thành một mảng các component:
 
@@ -2250,21 +2240,21 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-93. ### How do you access props in attribute quotes?
+93. ### Đưa giá trị props vào giá trị của thuộc tính html như thế nào? {#how-do-you-access-props-in-attribute-quotes}
 
-    React (or JSX) doesn't support variable interpolation inside an attribute value. The below representation won't work:
+    React (hoặc JSX) không hỗ trợ đưa giá trị trong props vào giá trị của thuộc tính theo cách dưới:
 
     ```jsx
     <img className='image' src='images/{this.props.image}' />
     ```
 
-    But you can put any JS expression inside curly braces as the entire attribute value. So the below expression works:
+    Nhưng bạn có thể đặt bất kỳ biểu thức nào bên trong dấu ngoặc nhọn để làm giá trị thuộc tính. Ví dụ như biểu thức dưới đây:
 
     ```jsx
     <img className='image' src={'images/' + this.props.image} />
     ```
 
-    Using _template strings_ will also work:
+    Một cách khác là sử dụng _template strings_:
 
     ```jsx
     <img className='image' src={`images/${this.props.image}`} />
@@ -3960,7 +3950,7 @@ layout: default
 
 179. ### What are the differences between `redux-saga` and `redux-thunk`?
 
-     Both _Redux Thunk_ and _Redux Saga_ take care of dealing with side effects. In most of the scenarios, Thunk uses _Promises_ to deal with them, whereas Saga uses   _Generators_. Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. But both middleware can coexist, so you can start with Thunks and introduce Sagas when/if you need them.
+     Both _Redux Thunk_ and _Redux Saga_ take care of dealing with side effects. In most of the scenarios, Thunk uses _Promises_ to deal with them, whereas Saga uses _Generators_. Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. But both middleware can coexist, so you can start with Thunks and introduce Sagas when/if you need them.
 
 
     **[⬆ Mục lục](#table-of-contents)**
@@ -4333,9 +4323,7 @@ layout: default
      const shopItemsSelector = (state) => state.shop.items;
      const taxPercentSelector = (state) => state.shop.taxPercent;
 
-     const subtotalSelector = createSelector(shopItemsSelector, (items) =>
-       items.reduce((acc, item) => acc + item.value, 0)
-     );
+     const subtotalSelector = createSelector(shopItemsSelector, (items) => items.reduce((acc, item) => acc + item.value, 0));
 
      const taxSelector = createSelector(
        subtotalSelector,
@@ -5883,10 +5871,7 @@ layout: default
        }
      }
 
-     ReactDOM.render(
-       React.createElement(Greeting, { message: 'World' }, null),
-       document.getElementById('root')
-     );
+     ReactDOM.render(React.createElement(Greeting, { message: 'World' }, null), document.getElementById('root'));
      ```
 
      **[⬆ Mục lục](#table-of-contents)**
