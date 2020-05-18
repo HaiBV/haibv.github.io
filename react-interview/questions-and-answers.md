@@ -2262,9 +2262,9 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-94. ### What is React proptype array with shape?
+94. ### Sử dụng proptype như thế nào với props là mảng có cấu trúc? {#what-is-React-proptype-array-with-shape}
 
-    If you want to pass an array of objects to a component with a particular shape then use `React.PropTypes.shape()` as an argument to `React.PropTypes.arrayOf()`.
+    Để truyền một mảng các cấu trúc xác định vào một component, `React.PropTypes.shape()` sẽ thực hiện việc này khi đặt trong `React.PropTypes.arrayOf()`. Xét ví dụ sau:
 
     ```javascript
     ReactComponent.propTypes = {
