@@ -2279,21 +2279,21 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-95. ### How to conditionally apply class attributes?
+95. ### Sử dụng điều kiện trong thuộc tính class như thế nào? {#how-to-conditionally-apply-class-attributes}
 
-    You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
+    Bạn không thể sử dụng dấu ngoặc nhọn hoặc dấu ngoặc kép vì sẽ được hiểu là một chuỗi.
 
     ```jsx
     <div className="btn-panel {this.props.visible ? 'show' : 'hidden'}">
     ```
 
-    Instead you need to move curly braces outside (don't forget to include spaces between class names):
+    Thay vào đó, bạn nên đưa dấu ngoặc nhọn ra ngoài (đừng quên khoảng cách giữa các class):
 
     ```jsx
     <div className={'btn-panel ' + (this.props.visible ? 'show' : 'hidden')}>
     ```
 
-    _Template strings_ will also work:
+    Tuy nhiên, khuyến khích sử dụng _Template strings_:
 
     ```jsx
     <div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}>
