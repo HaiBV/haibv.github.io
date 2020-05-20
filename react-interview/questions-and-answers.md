@@ -98,21 +98,21 @@ layout: default
 | 83  | [`strict mode` trong React là gì?](#what-is-strict-mode-in-react)                                                                                                                        |
 | 84  | [React mixins là gì?](#what-are-react-mixins)                                                                                                                                            |
 | 85  | [Tại sao `isMounted()` là một cách tiếp cận tồi và giải pháp thích hợp là gì?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution)                                        |
-| 86  | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react)                                                                                       |
-| 87  | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter)                                                                           |
-| 88  | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16)                                                                                   |
-| 89  | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate)                                                       |
-| 90  | [Can you force a component to re-render without calling setState?](#can-you-force-a-component-to-re-render-without-calling-setstate)                                                     |
+| 86  | [Pointer Events hỗ trợ gì trong React?](#what-are-the-pointer-events-supported-in-react)                                                                                       |
+| 87  | [Tại sao tên của component nên bắt đầu bằng chữ cái in hoa?](#why-should-component-names-start-with-capital-letter)                                                                           |
+| 88  | [Các thuộc tính tùy biến trong DOM có được hỗ trợ ở React v16 không?](#are-custom-dom-attributes-supported-in-react-v16)                                                                                   |
+| 89  | [Nêu những điểm khác nhau giữa constructor và getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate)                                                       |
+| 90  | [Khi sử dụng class trong ES6, việc khai báo `super()` và `super(props)` có gì khác nhau?](#can-you-force-a-component-to-re-render-without-calling-setstate)                                                     |
 | 91  | [What is the difference between super() and super(props) in React using ES6 classes?](#what-is-the-difference-between-super-and-superprops-in-react-using-es6-classes)                   |
-| 92  | [How to loop inside JSX?](#how-to-loop-inside-jsx)                                                                                                                                       |
-| 93  | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes)                                                                                             |
-| 94  | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape)                                                                                                     |
-| 95  | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes)                                                                                             |
-| 96  | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom)                                                                                 |
-| 97  | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react)                                                                                                           |
-| 98  | [How to use React label element?](#how-to-use-react-label-element)                                                                                                                       |
-| 99  | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects)                                                                                           |
-| 100 | [How to re-render the view when the browser is resized?](#how-to-re-render-the-view-when-the-browser-is-resized)                                                                         |
+| 92  | [Thực hiện lặp trong JSX như thế nào?](#how-to-loop-inside-jsx)                                                                                                                                       |
+| 93  | [Đưa giá trị props vào giá trị của thuộc tính html như thế nào?](#how-do-you-access-props-in-attribute-quotes)                                                                                             |
+| 94  | [Sử dụng proptype như thế nào với props là mảng có cấu trúc?](#what-is-react-proptype-array-with-shape)                                                                                                     |
+| 95  | [Sử dụng điều kiện trong thuộc tính class như thế nào?](#how-to-conditionally-apply-class-attributes)                                                                                             |
+| 96  | [React và ReactDom khác nhau ở những điểm nào?](#what-is-the-difference-between-react-and-reactdom)                                                                                 |
+| 97  | [Tại sao ReactDOM lại nằm độc lập với React?](#why-reactdom-is-separated-from-react)                                                                                                           |
+| 98  | [Sử dụng thẻ label trong React như thế nào?](#how-to-use-react-label-element)                                                                                                                       |
+| 99  | [Làm thế nào để kết hợp được nhiều objects style inline?](#how-to-combine-multiple-inline-style-objects)                                                                                           |
+| 100 | [Làm thể nào để tái kết xuất khi trình duyệt thay đổi kích thước?](#how-to-re-render-the-view-when-the-browser-is-resized)                                                                         |
 | 101 | [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods)                                                   |
 | 102 | [How to listen to state changes?](#how-to-listen-to-state-changes)                                                                                                                       |
 | 103 | [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state)                           |
@@ -2066,7 +2066,7 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-86. ### Pointer Events hỗ trợ trong React là gì? {#what-are-the-pointer-events-supported-in-react}
+86. ### Pointer Events hỗ trợ gì trong React? {#what-are-the-pointer-events-supported-in-react}
 
     _Pointer Events_ cung cấp một cách thống nhất để xử lý sự kiện đầu vào. Trước kia, chúng ta chỉ có những sự kiện của con trỏ chuột nhưng giờ đây có rất nhiều sự kiện của thiết bị khác không liên quan đến con chuột, ví dụ như smart phone với touch hoặc pen. Chúng ta cần lưu ý rằng những sự kiện này sẽ chỉ hoạt động trong các trình duyệt hỗ trợ đặc tả _Pointer Events_.
 
@@ -2301,28 +2301,28 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-96. ### What is the difference between React and ReactDOM?
+96. ### React và ReactDom khác nhau ở những điểm nào? {#what-is-the-difference-between-react-and-reactdom}
 
-    The `react` package contains `React.createElement()`, `React.Component`, `React.Children`, and other helpers related to elements and component classes. You can think of these as the isomorphic or universal helpers that you need to build components. The `react-dom` package contains `ReactDOM.render()`, and in `react-dom/server` we have _server-side rendering_ support with `ReactDOMServer.renderToString()` and `ReactDOMServer.renderToStaticMarkup()`.
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-97. ### Why ReactDOM is separated from React?
-
-    The React team worked on extracting all DOM-related features into a separate library called _ReactDOM_. React v0.14 is the first release in which the libraries are split. By looking at some of the packages, `react-native`, `react-art`, `react-canvas`, and `react-three`, it has become clear that the beauty and essence of React has nothing to do with browsers or the DOM. To build more environments that React can render to, React team planned to split the main React package into two: `react` and `react-dom`. This paves the way to writing components that can be shared between the web version of React and React Native.
+    Gói thư viện `react` bao gồm `React.createElement()`, `React.Component`, `React.Children`, và một số phương thức hỗ trợ liên quan đến các thuộc tính và component. Có thể coi chúng như là các phương thức hỗ trợ cần thiết để xây dựng nên component. Gói thư viện `react-dom` bao gồm `ReactDOM.render()`, và trong `react-dom/server` chúng ta có _kết xuất server-side_ hỗ trợ bởi `ReactDOMServer.renderToString()` và `ReactDOMServer.renderToStaticMarkup()`.
 
     **[⬆ Mục lục](#table-of-contents)**
 
-98. ### How to use React label element?
+97. ### Tại sao ReactDOM lại nằm độc lập với React? {#why-reactdom-is-separated-from-react}
 
-    If you try to render a `<label>` element bound to a text input using the standard `for` attribute, then it produces HTML missing that attribute and prints a warning to the console.
+    Đội phát triển React đã tách tất cả những chức năng liên quan đến DOM ra thành 1 thư viện riêng biệt với tên gọi _ReactDOM_. React v0.14 là phiên bản đầu tiên 2 thư viện này nằm độc lập. Với sự xuất hiện của các gói thư viện như, `react-native`, `react-art`, `react-canvas`, và `react-three`, có thể thấy rõ ràng rằng bản chất React không nên có liên quan tới DOM. Để xây dựng thêm nhiều môi trường mà React có thể kết xuất được, đội phát triển React đã tách gói React chính ra thành 2 phần: `react` và `react-dom`. Điều này tạo điều kiện cho việc viết các component có thể chia sẻ giữa React và React Native.
+
+    **[⬆ Mục lục](#table-of-contents)**
+
+98. ### Sử dụng thẻ label trong React như thế nào? {#how-to-use-react-label-element}
+
+    Nếu bạn sử dụng thẻ `<label>` với liên kết với một thẻ input dạng text qua việc dùng thuộc tính `for`, thì React kết xuất ra HTML và xuất hiện cảnh bảo trong console.
 
     ```jsx
     <label for={'user'}>{'User'}</label>
     <input type={'text'} id={'user'} />
     ```
 
-    Since `for` is a reserved keyword in JavaScript, use `htmlFor` instead.
+    Vì `for` là một từ khóa kín  trong JavaScript, thay vào đó hãy sử dụng `htmlFor`.
 
     ```jsx
     <label htmlFor={'user'}>{'User'}</label>
@@ -2331,15 +2331,15 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-99. ### How to combine multiple inline style objects?
+99. ### Làm thế nào để kết hợp được nhiều objects style inline? {#how-to-combine-multiple-inline-style-objects}
 
-    You can use _spread operator_ in regular React:
+    Có thử sử dụng _spread operator_:
 
     ```jsx
     <button style={{ ...styles.panel.button, ...styles.panel.submitButton }}>{'Submit'}</button>
     ```
 
-    If you're using React Native then you can use the array notation:
+    Trong React Native bạn có thể sử dụng mảng notation:
 
     ```jsx
     <button style={[styles.panel.button, styles.panel.submitButton]}>{'Submit'}</button>
@@ -2347,45 +2347,44 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-100. ### How to re-render the view when the browser is resized?
-
-
-    You can listen to the `resize` event in `componentDidMount()` and then update the dimensions (`width` and `height`). You should remove the listener in `componentWillUnmount()` method.
-
-    ```jsx
-        class WindowDimensions extends React.Component {
-            constructor(props){
-                super(props);
-                this.updateDimensions = this.updateDimensions.bind(this);
-            }
-
-            componentWillMount() {
-                this.updateDimensions()
-            }
-
-            componentDidMount() {
-                window.addEventListener('resize', this.updateDimensions)
-            }
-
-            componentWillUnmount() {
-                window.removeEventListener('resize', this.updateDimensions)
-            }
-
-            updateDimensions() {
-                this.setState({width: window.innerWidth, height: window.innerHeight})
-            }
-
-            render() {
-                return <span>{this.state.width} x {this.state.height}</span>
-            }
+100. ### Làm thể nào để tái kết xuất khi trình duyệt thay đổi kích thước? {#how-to-re-render-the-view-when-the-browser-is-resized}
+    
+    Bạn có thể `lắng nghe` sự kiện `resize` trong `componentDidMount()` sau đó cập nhật kích thước `rộng` và `dài`. Bạn nên loại bỏ phương thức xử lý sự kiện bên trong phương thức `componentWillUnmount()`.    
+    
+  ```jsx
+    class WindowDimensions extends React.Component {
+        constructor(props){
+            super(props);
+            this.updateDimensions = this.updateDimensions.bind(this);
         }
-    ```
 
-    **[⬆ Mục lục](#table-of-contents)**
+        componentWillMount() {
+            this.updateDimensions()
+        }
+
+        componentDidMount() {
+            window.addEventListener('resize', this.updateDimensions)
+        }
+
+        componentWillUnmount() {
+            window.removeEventListener('resize', this.updateDimensions)
+        }
+
+        updateDimensions() {
+            this.setState({width: window.innerWidth, height: window.innerHeight})
+        }
+
+        render() {
+            return <span>{this.state.width} x {this.state.height}</span>
+        }
+    }
+  ```
+
+**[⬆ Mục lục](#table-of-contents)**
 
 101. ### What is the difference between `setState()` and `replaceState()` methods?
 
-     When you use `setState()` the current and previous states are merged. `replaceState()` throws out the current state, and replaces it with only what you provide. Usually `setState()` is used unless you really need to remove all previous keys for some reason. You can also set state to `false`/`null` in `setState()` instead of using `replaceState()`.
+    When you use `setState()` the current and previous states are merged. `replaceState()` throws out the current state, and replaces it with only what you provide. Usually `setState()` is used unless you really need to remove all previous keys for some reason. You can also set state to `false`/`null` in `setState()` instead of using `replaceState()`.
 
 
     **[⬆ Mục lục](#table-of-contents)**
