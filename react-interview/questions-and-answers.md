@@ -2347,59 +2347,59 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-100. ### Làm thể nào để tái kết xuất khi trình duyệt thay đổi kích thước? {#how-to-re-render-the-view-when-the-browser-is-resized}
+100.  ### Làm thể nào để tái kết xuất khi trình duyệt thay đổi kích thước? {#how-to-re-render-the-view-when-the-browser-is-resized}
     
-    Bạn có thể `lắng nghe` sự kiện `resize` trong `componentDidMount()` sau đó cập nhật kích thước `rộng` và `dài`. Bạn nên loại bỏ phương thức xử lý sự kiện bên trong phương thức `componentWillUnmount()`.    
-    
-  ```jsx
-    class WindowDimensions extends React.Component {
-        constructor(props){
-            super(props);
-            this.updateDimensions = this.updateDimensions.bind(this);
-        }
+      Bạn có thể `lắng nghe` sự kiện `resize` trong `componentDidMount()` sau đó cập nhật kích thước `rộng` và `dài`. Bạn nên loại bỏ phương thức xử lý sự kiện bên trong phương thức `componentWillUnmount()`.  
+        
+      ```jsx
+      class WindowDimensions extends React.Component {
+          constructor(props){
+              super(props);
+              this.updateDimensions = this.updateDimensions.bind(this);
+          }
 
-        componentWillMount() {
-            this.updateDimensions()
-        }
+          componentWillMount() {
+              this.updateDimensions()
+          }
 
-        componentDidMount() {
-            window.addEventListener('resize', this.updateDimensions)
-        }
+          componentDidMount() {
+              window.addEventListener('resize', this.updateDimensions)
+          }
 
-        componentWillUnmount() {
-            window.removeEventListener('resize', this.updateDimensions)
-        }
+          componentWillUnmount() {
+              window.removeEventListener('resize', this.updateDimensions)
+          }
 
-        updateDimensions() {
-            this.setState({width: window.innerWidth, height: window.innerHeight})
-        }
+          updateDimensions() {
+              this.setState({width: window.innerWidth, height: window.innerHeight})
+          }
 
-        render() {
-            return <span>{this.state.width} x {this.state.height}</span>
-        }
-    }
-  ```
+          render() {
+              return <span>{this.state.width} x {this.state.height}</span>
+          }
+      }
+      ```
 
-**[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-101. ### What is the difference between `setState()` and `replaceState()` methods?
+101. ### Phương thức `setState()` và `replaceState()` khác nhau thế nào? {#what-is-the-difference-between-setstate-and-replacestate-methods}
 
-    When you use `setState()` the current and previous states are merged. `replaceState()` throws out the current state, and replaces it with only what you provide. Usually `setState()` is used unless you really need to remove all previous keys for some reason. You can also set state to `false`/`null` in `setState()` instead of using `replaceState()`.
+      Khi sử dụng `setState()`, các giá trị state hiện tại và mới sẽ sát nhập lại. Còn `replaceState()` loại bỏ state hiện tại, và thay thế bằng những gì được cung cấp. `setState()` được sử dụng thường xuyên hơn trừ khi bạn thực sự cần loại bỏ tất cả những giá trị hiện tại vì lý do nào đó. Bạn cũng có thể dùng `false`/`null` với `setState()` để thay cho `replaceState()`.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 102. ### How to listen to state changes?
 
-     The following lifecycle methods will be called when state changes. You can compare provided state and props values with current state and props to determine if something meaningful changed.
+    The following lifecycle methods will be called when state changes. You can compare provided state and props values with current state and props to determine if something meaningful changed.
 
-     ```
-     componentWillUpdate(object nextProps, object nextState)
-     componentDidUpdate(object prevProps, object prevState)
-     ```
+    ```
+    componentWillUpdate(object nextProps, object nextState)
+    componentDidUpdate(object prevProps, object prevState)
+    ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 103. ### What is the recommended approach of removing an array element in React state?
 
