@@ -2389,14 +2389,14 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-102. ### How to listen to state changes?
+102. ### Làm thế nào để biết state thay đổi {#how-to-listen-to-state-changes}
 
-    The following lifecycle methods will be called when state changes. You can compare provided state and props values with current state and props to determine if something meaningful changed.
+      Những phương thức vòng đời dưới đây sẽ được gọi khi state có thay đổi. Bạn có thể so sánh state và props giữa mới và cũ để xác định những thay đổi.
 
-    ```
-    componentWillUpdate(object nextProps, object nextState)
-    componentDidUpdate(object prevProps, object prevState)
-    ```
+      ```
+      componentWillUpdate(object nextProps, object nextState)
+      componentDidUpdate(object prevProps, object prevState)
+      ```
 
 
       **[⬆ Mục lục](#table-of-contents)**
