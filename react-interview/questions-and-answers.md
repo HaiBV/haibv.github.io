@@ -2401,61 +2401,61 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-103. ### What is the recommended approach of removing an array element in React state?
+103. ### Nên dùng cách gì để loại bỏ một phần từ của mảng nằm trong state? {#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state}
 
-     The better approach is to use `Array.prototype.filter()` method.
+      Các tốt nhất là sử dụng phương thức `Array.prototype.filter()`.
 
-     For example, let's create a `removeItem()` method for updating the state.
+      Ví dụ, có thể tạo một phương thức `removeItem()` để cập nhật lại state.
 
-     ```javascript
-     removeItem(index) {
-       this.setState({
-         data: this.state.data.filter((item, i) => i !== index)
-       })
-     }
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-104. ### Is it possible to use React without rendering HTML?
-
-     It is possible with latest version (>=16.2). Below are the possible options:
-
-     ```jsx
-     render() {
-       return false
-     }
-     ```
-
-     ```jsx
-     render() {
-       return null
-     }
-     ```
-
-     ```jsx
-     render() {
-       return []
-     }
-     ```
-
-     ```jsx
-     render() {
-       return <React.Fragment></React.Fragment>
-     }
-     ```
-
-     ```jsx
-     render() {
-       return <></>
-     }
-     ```
-
-     Returning `undefined` won't work.
+      ```javascript
+      removeItem(index) {
+        this.setState({
+          data: this.state.data.filter((item, i) => i !== index)
+        })
+      }
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+104. ### Có thể sử dụng React mà không cần phải kết xuất HTML không? {#is-it-possible-to-use-react-without-rendering-html}
+
+      Với phiên bản mới nhất (>=16.2) điều này là có thể. Dưới đây là một số ví dụ:
+
+      ```jsx
+      render() {
+        return false
+      }
+      ```
+
+      ```jsx
+      render() {
+        return null
+      }
+      ```
+
+      ```jsx
+      render() {
+        return []
+      }
+      ```
+
+      ```jsx
+      render() {
+        return <React.Fragment></React.Fragment>
+      }
+      ```
+
+      ```jsx
+      render() {
+        return <></>
+      }
+      ```
+
+      Chỉ có `undefined` là không hợp lệ.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 105. ### How to pretty print JSON with React?
 
