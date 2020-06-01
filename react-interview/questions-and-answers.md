@@ -113,12 +113,12 @@ layout: default
 | 98  | [Sử dụng thẻ label trong React như thế nào?](#how-to-use-react-label-element)                                                                                                                       |
 | 99  | [Làm thế nào để kết hợp được nhiều objects style inline?](#how-to-combine-multiple-inline-style-objects)                                                                                           |
 | 100 | [Làm thể nào để tái kết xuất khi trình duyệt thay đổi kích thước?](#how-to-re-render-the-view-when-the-browser-is-resized)                                                                         |
-| 101 | [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods)                                                   |
-| 102 | [How to listen to state changes?](#how-to-listen-to-state-changes)                                                                                                                       |
-| 103 | [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state)                           |
-| 104 | [Is it possible to use React without rendering HTML?](#is-it-possible-to-use-react-without-rendering-html)                                                                               |
-| 105 | [How to pretty print JSON with React?](#how-to-pretty-print-json-with-react)                                                                                                             |
-| 106 | [Why you can't update props in React?](#why-you-cant-update-props-in-react)                                                                                                              |
+| 101 | [Phương thức `setState()` và `replaceState()` khác nhau thế nào?](#what-is-the-difference-between-setstate-and-replacestate-methods)                                                   |
+| 102 | [Làm thế nào để biết state thay đổi?](#how-to-listen-to-state-changes)                                                                                                                       |
+| 103 | [Nên dùng cách gì để loại bỏ một phần từ của mảng nằm trong state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state)                           |
+| 104 | [Có thể sử dụng React mà không cần phải kết xuất HTML không?](#is-it-possible-to-use-react-without-rendering-html)                                                                               |
+| 105 | [Trích xuất ra chuỗi json theo định dạng với React như thế nào?](#how-to-pretty-print-json-with-react)                                                                                                             |
+| 106 | [Tại sao không thể cập nhật props trong React?](#why-you-cant-update-props-in-react)                                                                                                              |
 | 107 | [How to focus an input element on page load?](#how-to-focus-an-input-element-on-page-load)                                                                                               |
 | 108 | [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state)                                                                     |
 | 109 | [Why function is preferred over object for setState?](#why-function-is-preferred-over-object-for-setstate)                                                                               |
@@ -2457,31 +2457,31 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-105. ### How to pretty print JSON with React?
+105. ### Trích xuất ra chuỗi json theo định dạng với React như thế nào? {#how-to-pretty-print-json-with-react}
 
-     We can use `<pre>` tag so that the formatting of the `JSON.stringify()` is retained:
+      Sử dụng thẻ `<pre>` để định dạng của `JSON.stringify()` được giữ lại:
 
-     ```jsx
-     const data = { name: 'John', age: 42 };
+      ```jsx
+      const data = { name: 'John', age: 42 };
 
-     class User extends React.Component {
-       render() {
-         return <pre>{JSON.stringify(data, null, 2)}</pre>;
-       }
-     }
+      class User extends React.Component {
+        render() {
+          return <pre>{JSON.stringify(data, null, 2)}</pre>;
+        }
+      }
 
-     React.render(<User />, document.getElementById('container'));
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-106. ### Why you can't update props in React?
-
-     The React philosophy is that props should be _immutable_ and _top-down_. This means that a parent can send any prop values to a child, but the child can't modify received props.
+      React.render(<User />, document.getElementById('container'));
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+106. ### Tại sao không thể cập nhật props trong React? {#why-you-cant-update-props-in-react}
+
+      Theo tư tưởng của React, props phải có _tính bất biến_ (_immutable_) và _được truyền từ trên xuống_ (_top-down_). Có nghĩa là compoent cha có thể truyền bất kỳ giá trị nào cho component con nhưng component con không thể thay đổi giá trị trong props nhận được.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 107. ### How to focus an input element on page load?
 
