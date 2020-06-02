@@ -2483,51 +2483,51 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-107. ### How to focus an input element on page load?
+107. ### Làm thế nào để focus vào thẻ input khi loading trang? {#how-to-focus-an-input-element-on-page-load}
 
-     You can do it by creating _ref_ for `input` element and using it in `componentDidMount()`:
+      Tạo _ref_ với thẻ `input` và sử dụng trong phương thức `componentDidMount()`:
 
-     ```jsx
-     class App extends React.Component {
-       componentDidMount() {
-         this.nameInput.focus();
-       }
+      ```jsx
+      class App extends React.Component {
+        componentDidMount() {
+          this.nameInput.focus();
+        }
 
-       render() {
-         return (
-           <div>
-             <input defaultValue={"Won't focus"} />
-             <input ref={(input) => (this.nameInput = input)} defaultValue={'Will focus'} />
-           </div>
-         );
-       }
-     }
+        render() {
+          return (
+            <div>
+              <input defaultValue={"Won't focus"} />
+              <input ref={(input) => (this.nameInput = input)} defaultValue={'Will focus'} />
+            </div>
+          );
+        }
+      }
 
-     ReactDOM.render(<App />, document.getElementById('app'));
-     ```
+      ReactDOM.render(<App />, document.getElementById('app'));
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-108. ### What are the possible ways of updating objects in state?
+108. ### Có những cách nào để cập nhật giá trị một objects trong state? {#what-are-the-possible-ways-of-updating-objects-in-state}
 
-     1. **Calling `setState()` with an object to merge with state:**
+      1. **Gọi phương thức `setState()` với một object sẽ được hợp vào trong state:**
 
-        - Using `Object.assign()` to create a copy of the object:
+        - Sử dụng `Object.assign()` để tạo ra một bản sao của object:
 
           ```javascript
           const user = Object.assign({}, this.state.user, { age: 42 });
           this.setState({ user });
           ```
 
-        - Using _spread operator_:
+        - Sử dụng _spread operator_:
 
           ```javascript
           const user = { ...this.state.user, age: 42 };
           this.setState({ user });
           ```
 
-     2. **Calling `setState()` with a function:**
+      2. **Gọi phương thức `setState()` với một hàm:**
 
         ```javascript
         this.setState((prevState) => ({
@@ -2539,7 +2539,7 @@ layout: default
         ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 109. ### Why function is preferred over object for `setState()`?
 
