@@ -2541,43 +2541,43 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-109. ### Why function is preferred over object for `setState()`?
+109. ### Tại sao nên sử dụng hàm thay vì object khi `setState()`? {#why-function-is-preferred-over-object-for-setstate}
 
-     React may batch multiple `setState()` calls into a single update for performance. Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
+      React có thể gọi nhiều lần hàm `setState()` trong một lần cập nhật để đảm bảo hiệu năng. Vì `this.props` và `this.state` có thể được cập nhật không đồng bộ, bạn không nên dựa vào giá trị của chúng và tính toán cho state tiếp theo.
 
-     This counter example will fail to update as expected:
+      Ví dụ về phép tính dưới đây cho ra kết quả sai:
 
-     ```javascript
-     // Wrong
-     this.setState({
-       counter: this.state.counter + this.props.increment,
-     });
-     ```
+      ```javascript
+      // Wrong
+      this.setState({
+        counter: this.state.counter + this.props.increment,
+      });
+      ```
 
-     The preferred approach is to call `setState()` with function rather than object. That function will receive the previous state as the first argument, and the props at the time the update is applied as the second argument.
+      Cách tiếp cận tốt hơn khi gọi `setState()` là sử dụng hàm thay vì object. Hàm này sẽ nhận state cũ làm tham số đầu tiên và props tại thời điểm cập nhật làm tham số thứ 2.
 
-     ```javascript
-     // Correct
-     this.setState((prevState, props) => ({
-       counter: prevState.counter + props.increment,
-     }));
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-110. ### How can we find the version of React at runtime in the browser?
-
-     You can use `React.version` to get the version.
-
-     ```jsx
-     const REACT_VERSION = React.version;
-
-     ReactDOM.render(<div>{`React version: ${REACT_VERSION}`}</div>, document.getElementById('app'));
-     ```
+      ```javascript
+      // Correct
+      this.setState((prevState, props) => ({
+        counter: prevState.counter + props.increment,
+      }));
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+110. ### Xem phiên bản của React khi chạy trên trình duyệt bằng cách nào? {#how-can-we-find-the-version-of-react-at-runtime-in-the-browser}
+
+      Có thể sử dụng `React.version` để lấy thông tin phiên bản.
+
+      ```jsx
+      const REACT_VERSION = React.version;
+
+      ReactDOM.render(<div>{`React version: ${REACT_VERSION}`}</div>, document.getElementById('app'));
+      ```
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 111. ### What are the approaches to include polyfills in your `create-react-app`?
 
