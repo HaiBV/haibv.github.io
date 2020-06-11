@@ -2579,11 +2579,11 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-111. ### What are the approaches to include polyfills in your `create-react-app`?
+111. ### Làm thế nào để sử dụng `create-react-app` cùng với polifills? {#what-are-the-approaches-to-include-polyfills-in-your-create-react-app}
 
-     1. **Manual import from `core-js`:**
+      1. **Import trực tiếp từ `core-js`:**
 
-        Create a file called (something like) `polyfills.js` and import it into root `index.js` file. Run `npm install core-js` or `yarn add core-js` and import your specific required features.
+        Tạo một file với có tên (không bắt buộc) là `polyfills.js` và import vào file gốc `index.js`. Chạy lệnh `npm install core-js` hoặc `yarn add core-js` và import chức năng nào cần thiết.
 
         ```javascript
         import 'core-js/fn/array/find';
@@ -2591,18 +2591,18 @@ layout: default
         import 'core-js/fn/number/is-nan';
         ```
 
-     2. **Using Polyfill service:**
+      2. **Sử dụng service của Polyfill:**
 
-        Use the polyfill.io CDN to retrieve custom, browser-specific polyfills by adding this line to `index.html`:
+        Sử dụng CDN của polyfill.io để truy xuất các tùy chỉnh, thêm những polyfills cần thiết bằng việc thêm dòng này vào `index.html`:
 
         ```html
         <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script>
         ```
 
-        In the above script we had to explicitly request the `Array.prototype.includes` feature as it is not included in the default feature set.
+        Trong đoạn script trên, chúng ta yêu cầu rõ ràng tính năng `Array.prototype.includes` vì nó không nằm trong bộ tính năng mặc định.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 112. ### How to use https instead of http in create-react-app?
 
