@@ -2604,33 +2604,33 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-112. ### How to use https instead of http in create-react-app?
+112. ### Sử dụng https thay cho http với `create-react-app` như thế nào? {#how-to-use-https-instead-of-http-in-create-react-app}
 
-     You just need to use `HTTPS=true` configuration. You can edit your `package.json` scripts section:
+      Bạn phải sử dụng cấu hình `HTTPS=true`. Bạn có thể sửa trong `package.json` như sau:
 
-     ```json
-     "scripts": {
-       "start": "set HTTPS=true && react-scripts start"
-     }
-     ```
+      ```json
+      "scripts": {
+        "start": "set HTTPS=true && react-scripts start"
+      }
+      ```
 
-     or just run `set HTTPS=true && npm start`
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-113. ### How to avoid using relative path imports in create-react-app?
-
-     Create a file called `.env` in the project root and write the import path:
-
-     ```
-     NODE_PATH=src/app
-     ```
-
-     After that restart the development server. Now you should be able to import anything inside `src/app` without relative paths.
+      hoặc chạy trực tiếp `set HTTPS=true && npm start`   
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+113. ### Làm thế nào để tránh sử dụng đường dẫn liên quan khi import với `create-react-app`? {#how-to-avoid-using-relative-path-imports-in-create-react-app}
+
+      Tạo một file có tên là `.env` trong thư mục gốc của dự án và cấu hình đường dẫn import:
+
+      ```
+      NODE_PATH=src/app
+      ```
+
+      Sau khi khởi động lại, có thể import tất cả mọi thứ bên trong thư mục `src/app` bằng đường dẫn tuyệt đối.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 114. ### How to add Google Analytics for React Router?
 
