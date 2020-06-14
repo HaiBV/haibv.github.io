@@ -119,15 +119,15 @@ layout: default
 | 104 | [Có thể sử dụng React mà không cần phải kết xuất HTML không?](#is-it-possible-to-use-react-without-rendering-html)                                                                               |
 | 105 | [Trích xuất ra chuỗi json theo định dạng với React như thế nào?](#how-to-pretty-print-json-with-react)                                                                                                             |
 | 106 | [Tại sao không thể cập nhật props trong React?](#why-you-cant-update-props-in-react)                                                                                                              |
-| 107 | [How to focus an input element on page load?](#how-to-focus-an-input-element-on-page-load)                                                                                               |
-| 108 | [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state)                                                                     |
-| 109 | [Why function is preferred over object for setState?](#why-function-is-preferred-over-object-for-setstate)                                                                               |
-| 110 | [How can we find the version of React at runtime in the browser?](#how-can-we-find-the-version-of-react-at-runtime-in-the-browser)                                                       |
-| 111 | [What are the approaches to include polyfills in your create-react-app?](#what-are-the-approaches-to-include-polyfills-in-your-create-react-app)                                         |
-| 112 | [How to use https instead of http in create-react-app?](#how-to-use-https-instead-of-http-in-create-react-app)                                                                           |
-| 113 | [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app)                                                           |
-| 114 | [How to add Google Analytics for react-router?](#how-to-add-google-analytics-for-react-router)                                                                                           |
-| 115 | [How to update a component every second?](#how-to-update-a-component-every-second)                                                                                                       |
+| 107 | [Làm thế nào để focus vào thẻ input khi loading trang?](#how-to-focus-an-input-element-on-page-load)                                                                                               |
+| 108 | [Có những cách nào để cập nhật giá trị một objects trong state?](#what-are-the-possible-ways-of-updating-objects-in-state)                                                                     |
+| 109 | [Tại sao nên sử dụng hàm thay vì object khi `setState()`?](#why-function-is-preferred-over-object-for-setstate)                                                                               |
+| 110 | [Xem phiên bản của React khi chạy trên trình duyệt bằng cách nào?](#how-can-we-find-the-version-of-react-at-runtime-in-the-browser)                                                       |
+| 111 | [Làm thế nào để sử dụng `create-react-app` cùng với polifills?](#what-are-the-approaches-to-include-polyfills-in-your-create-react-app)                                         |
+| 112 | [Sử dụng https thay cho http với `create-react-app` như thế nào?](#how-to-use-https-instead-of-http-in-create-react-app)                                                                           |
+| 113 | [Làm thế nào để tránh sử dụng đường dẫn liên quan khi import với `create-react-app`?](#how-to-avoid-using-relative-path-imports-in-create-react-app)                                                           |
+| 114 | [Sử dụng Google Analytics trong React Router như thế nào?](#how-to-add-google-analytics-for-react-router)                                                                                           |
+| 115 | [Làm thế nào để cập nhật component mỗi giây?](#how-to-update-a-component-every-second)                                                                                                       |
 | 116 | [How do you apply vendor prefixes to inline styles in React?](#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react)                                                               |
 | 117 | [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6)                                                                     |
 | 118 | [Why React component names must begin with a capital letter?](#why-react-component-names-must-begin-with-a-capital-letter)                                                               |
@@ -2632,36 +2632,36 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-114. ### How to add Google Analytics for React Router?
+114. ### Sử dụng Google Analytics trong React Router như thế nào? {#how-to-add-google-analytics-for-react-router}
 
-     Add a listener on the `history` object to record each page view:
+      Thêm một listener trong đối tượng `history` để ghi lại những trang được xem:
 
-     ```javascript
-     history.listen(function (location) {
-       window.ga('set', 'page', location.pathname + location.search);
-       window.ga('send', 'pageview', location.pathname + location.search);
-     });
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-115. ### How to update a component every second?
-
-     You need to use `setInterval()` to trigger the change, but you also need to clear the timer when the component unmounts to prevent errors and memory leaks.
-
-     ```javascript
-     componentDidMount() {
-       this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000)
-     }
-
-     componentWillUnmount() {
-       clearInterval(this.interval)
-     }
-     ```
+      ```javascript
+      history.listen(function (location) {
+        window.ga('set', 'page', location.pathname + location.search);
+        window.ga('send', 'pageview', location.pathname + location.search);
+      });
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+115. ### Làm thế nào để cập nhật component mỗi giây? {#how-to-update-a-component-every-second}
+
+      Sử dụng `setInterval()` để kích hoạt sự thay đổi, nhưng cần sử dụng `clearInterval()`để xóa bộ hẹn giờ khi component bị ngắt để tránh lỗi và ảnh hưởng bộ nhớ.
+
+      ```javascript
+      componentDidMount() {
+        this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000)
+      }
+
+      componentWillUnmount() {
+        clearInterval(this.interval)
+      }
+      ```
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 116. ### How do you apply vendor prefixes to inline styles in React?
 
