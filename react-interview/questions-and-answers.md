@@ -2663,22 +2663,20 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-116. ### How do you apply vendor prefixes to inline styles in React?
+116. ### Sử dụng tiền tố vendor với style inline trong React như thế nào? {#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react}
 
-     React _does not_ apply _vendor prefixes_ automatically. You need to add vendor prefixes manually.
+      React _không_ tự động áp dụng _vendor prefixes_. Bạn cần phải thêm thủ công.
 
-     ```jsx
-     <div
-       style={{
-         transform: 'rotate(90deg)',
-         WebkitTransform: 'rotate(90deg)', // note the capital 'W' here
-         msTransform: 'rotate(90deg)', // 'ms' is the only lowercase vendor prefix
-       }}
-     />
-     ```
+      ```jsx
+      <div style={
+          transform: 'rotate(90deg)',
+          WebkitTransform: 'rotate(90deg)', // note the capital 'W' here
+          msTransform: 'rotate(90deg)', // 'ms' is the only lowercase vendor prefix
+        }/>
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 117. ### How to import and export components using React and ES6?
 
