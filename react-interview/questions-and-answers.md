@@ -2678,62 +2678,62 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-117. ### How to import and export components using React and ES6?
+117. ### Import và export component với ES6 trong React như thế nào? {#how-to-import-and-export-components-using-react-and-es6}
 
-     You should use default for exporting the components
+      Sử dụng từ khóa `default` để export components
 
-     ```jsx
-     import React from 'react';
-     import User from 'user';
+      ```jsx
+      import React from 'react';
+      import User from 'user';
 
-     export default class MyProfile extends React.Component {
-       render() {
-         return <User type='customer'>//...</User>;
-       }
-     }
-     ```
+      export default class MyProfile extends React.Component {
+        render() {
+          return <User type='customer'>//...</User>;
+        }
+      }
+      ```
 
-     With the export specifier, the MyProfile is going to be the member and exported to this module and the same can be imported without mentioning the name in other components.
+      Với cách trên, component MyProfile trở thành một thành viên, trích xuất vào module này và có thể import ở component khác mà không cần đề cập tới tên của component.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-118. ### What are the exceptions on React component naming?
+118. ### Đâu là ngoại lệ trong việc đặt tên React component? {#what-are-the-exceptions-on-react-component-naming}
 
-     The component names should start with a uppercase letter but there are few exceptions on this convention. The lowercase tag names with a dot (property accessors) are still considered as valid component names.
-     For example the below tag can be compiled to a valid component,
+      Tên của component nên được bắt đầu bằng chữ cái viết hoa nhưng có một vài ngoại lệ với quy ước này. Tên viết thường có dấu chấm (truy cập thuộc tính) vẫn được coi là tên component hợp lệ.
+      Trong ví dụ dưới đây, tên component có thể được biên dịch thành một thành phần hợp lệ,
 
-     ```javascript
-     render(){
+      ```javascript
+      render(){
         return (
             <obj.component /> // `React.createElement(obj.component)`
-           )
-     }
-     ```
+            )
+      } 
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-119. ### Why is a component constructor called only once?
+119. ### Tại sao hàm khởi tạo (constructor) component chỉ được gọi 1 lần? {#why-is-a-component-constructor-called-only-once}
 
-     React's _reconciliation_ algorithm assumes that without any information to the contrary, if a custom component appears in the same place on subsequent renders, it's the same component as before, so reuses the previous instance rather than creating a new one.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-120. ### How to define constants in React?
-
-     You can use ES7 `static` field to define constant.
-
-     ```javascript
-     class MyComponent extends React.Component {
-       static DEFAULT_PAGINATION = 10;
-     }
-     ```
-
-     _Static fields_ are part of the _Class Fields_ stage 3 proposal.
+      Thuật toàn trong React's _reconciliation_ giả định rằng khi không có bất kỳ thông tin nào truyền ngược lại, nếu một component tùy chỉnh xuất hiện ở cùng 1 vị trí trong lần kết xuất tiếp theo, thì component đó sẽ được coi là component trước đó, ví thế hãy sử dụng lại phiên bản cũ trước đó thay vì tạo ra một component mới.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+120. ### Định nghĩa hằng số trong React như thế nào? {#how-to-define-constants-in-react}
+
+      Có thể sử dụng từ khóa `static` trong ES5 để định nghĩa hằng số.
+
+      ```javascript
+      class MyComponent extends React.Component {
+        static DEFAULT_PAGINATION = 10;
+      }
+      ```
+
+      _Static fields_ là một phần của _Class Fields_ đang ở giai đoạn để xuất số 3.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 121. ### How to programmatically trigger click event in React?
 
