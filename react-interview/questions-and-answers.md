@@ -2735,31 +2735,32 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-121. ### How to programmatically trigger click event in React?
+121. ### Làm thế nào để lập trình kích hoạt sự kiện click trong React? {#how-to-programmatically-trigger-click-event-in-react}
 
-     You could use the ref prop to acquire a reference to the underlying `HTMLInputElement` object through a callback, store the reference as a class property, then use that reference to later trigger a click from your event handlers using the `HTMLElement.click` method. This can be done in two steps:
+      Bạn có thể sử dụng thuộc tính ref để có được một liên kết tới đối tượng `HTMLInputElement` thông qua callback, liên kết này được đặt trong component như một thuộc tính class, có thể sử dụng liên kết này để kích hoạt sự liện click khi sử dụng phương thức `HTMLElement.click`. 
+      Việc này được thực hiện qua 2 bước:
 
-     1. Create ref in render method:
+      1. Tạo ref trong phương thức kết xuất:
 
         ```jsx
         <input ref={(input) => (this.inputElement = input)} />
         ```
 
-     2. Apply click event in your event handler:
+      2. Áp dụng sự kiện nhấp chuột trong:
 
         ```javascript
         this.inputElement.click();
         ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-122. ### Is it possible to use async/await in plain React?
+122. ### Có thể sử dụng async/await trong React được không? {is-it-possible-to-use-async-await-in-plain-react}
 
-     If you want to use `async`/`await` in React, you will need _Babel_ and [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) plugin. React Native ships with Babel and a set of transforms.
+      Nếu bạn muốn sử dụng `async`/`await` trong React, bạn cần sử dụng _Babel_ và plugin [chuyển-từ-async-sang-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator). React Native được sử dụng cùng Babel và những plugin trên.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 123. ### What are the common folder structures for React?
 
