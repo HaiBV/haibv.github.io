@@ -2735,7 +2735,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-121. ### Làm thế nào để lập trình kích hoạt sự kiện click trong React? {#how-to-programmatically-trigger-click-event-in-react}
+121. ### Làm thế nào để kích hoạt sự kiện click trong React? {#how-to-programmatically-trigger-click-event-in-react}
 
       Bạn có thể sử dụng thuộc tính ref để có được một liên kết tới đối tượng `HTMLInputElement` thông qua callback, liên kết này được đặt trong component như một thuộc tính class, có thể sử dụng liên kết này để kích hoạt sự liện click khi sử dụng phương thức `HTMLElement.click`. 
       Việc này được thực hiện qua 2 bước:
@@ -2762,13 +2762,13 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-123. ### What are the common folder structures for React?
+123. ### Cấu trúc thư mục thông dụng của React như thế nào? {#what-are-the-common-folder-structures-for-react}
 
-     There are two common practices for React project file structure.
+      Có 2 loại cấu trúc thư mục thường được dùng trong React.
 
-     1. **Grouping by features or routes:**
+      1. **Nhóm bởi chức năng hoặc đường dẫn:**
 
-        One common way to structure projects is locate CSS, JS, and tests together, grouped by feature or route.
+        Các thông dụng đầu tiên là đưa tất cả CSS, JS và test vừa một chức năng hoặc router vào trong 1 thư mục.
 
         ```
         common/
@@ -2791,9 +2791,9 @@ layout: default
         └─ ProfileAPI.js
         ```
 
-     2. **Grouping by file type:**
+      2. **Nhóm theo từng loại:**
 
-        Another popular way to structure projects is to group similar files together.
+        Một các thông dụng khác là nhóm thư mục theo loại tập tin.
 
         ```
         api/
@@ -2814,14 +2814,14 @@ layout: default
         ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-124. ### What are the popular packages for animation?
+124. ### Thư viện nào cho animation được dùng phổ biến {#what-are-the-popular-packages-for-animation}
 
-     _React Transition Group_ and _React Motion_ are popular animation packages in React ecosystem.
+      _React Transition Group_ và _React Motion_ và những thư viện animation phổ biến được dùng trong React.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 125. ### What is the benefit of styles modules?
 
