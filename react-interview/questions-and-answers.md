@@ -2823,30 +2823,30 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-125. ### What is the benefit of styles modules?
+125. ### Việc style theo module có lợi ích gì? {#what-is-the-benefit-of-styles-modules}
 
-     It is recommended to avoid hard coding style values in components. Any values that are likely to be used across different UI components should be extracted into their own modules.
+      Nên tránh đặt các giá trị style hard code trong component. Bất cứ giá trị nào có khả năng được sử dụng trên các thành phần UI khác nhau sẽ được trích xuất vào các module của riêng chúng.
 
-     For example, these styles could be extracted into a separate component:
+      Ví dụ, những styles dưới đây có thể trích xuất trong những component khác nhau:
 
-     ```javascript
-     export const colors = {
-       white,
-       black,
-       blue,
-     };
+      ```javascript
+      export const colors = {
+        white,
+        black,
+        blue,
+      };
 
-     export const space = [0, 8, 16, 32, 64];
-     ```
+      export const space = [0, 8, 16, 32, 64];
+      ```
 
-     And then imported individually in other components:
+      Và sau đó nhâp riêng lẻ ở những component khác:
 
-     ```javascript
-     import { space, colors } from './styles';
-     ```
+      ```javascript
+      import { space, colors } from './styles';
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 126. ### What are the popular React-specific linters?
 
