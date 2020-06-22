@@ -2848,12 +2848,12 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-126. ### What are the popular React-specific linters?
+126. ### Công cụ linter (format code) nào phổ biến với React? {#what-are-the-popular-react-specific-linters}
 
-     ESLint is a popular JavaScript linter. There are plugins available that analyse specific code styles. One of the most common for React is an npm package called `eslint-plugin-react`. By default, it will check a number of best practices, with rules checking things from keys in iterators to a complete set of prop types. Another popular plugin is `eslint-plugin-jsx-a11y`, which will help fix common issues with accessibility. As JSX offers slightly different syntax to regular HTML, issues with `alt` text and `tabindex`, for example, will not be picked up by regular plugins.
+      ESLint là một linter phổ biến với JavaScript. Có các plugins có sẵn để phân tích các kiểu mã cụ thể. Một trong các plugin phổ biến nhất cho React là `eslint-plugin-react`. Theo mặc định, plugin này sẽ check một số best practices, cùng với những quy tắc kiểm tra từ khóa trong vòng lặp đến bộ hoàn chỉnh các kiểu biến trong props. Một plugin phổ biến nữa là `eslint-plugin-jsx-a11y`, nó sẽ giúp sửa những sự cố phổ biến với khả năng truy cập tốt. Vì JSX cung cấp cú pháp hơi khác so với HTML thông thường, ví dụ như vấn đề với `alt` và `tabindex`, sẽ không được các plugin thông thường khắc phục.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 127. ### How to make AJAX call and in which component lifecycle methods should I make an AJAX call?
 
