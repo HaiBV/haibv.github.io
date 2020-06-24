@@ -2855,58 +2855,58 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-127. ### How to make AJAX call and in which component lifecycle methods should I make an AJAX call?
+127. ### Gọi AJAX như thế nào và nên sử dụng trong phương thức vòng đời nào? {#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call}
 
-     You can use AJAX libraries such as Axios, jQuery AJAX, and the browser built-in `fetch`. You should fetch data in the `componentDidMount()` lifecycle method. This is so you can use `setState()` to update your component when the data is retrieved.
+      Bạn có thể sử dụng thư viện của AJAX như Axios, jQuery AJAX, và `fetch`. Bạn nên lấy dữ liệu trong phương thức vòng đời `componentDidMount()`. Trong phương thức này bạn có thể sử dụng `setState()` để cập nhật component sau khi nhận được dữ liệu trả về.
 
-     For example, the employees list fetched from API and set local state:
+      Ví dụ, danh sách nhân viên (employees) được lấy từ API và đặt vào state:
 
-     ```jsx
-     class MyComponent extends React.Component {
-       constructor(props) {
-         super(props);
-         this.state = {
-           employees: [],
-           error: null,
-         };
-       }
+      ```jsx
+      class MyComponent extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            employees: [],
+            error: null,
+          };
+        }
 
-       componentDidMount() {
-         fetch('https://api.example.com/items')
-           .then((res) => res.json())
-           .then(
-             (result) => {
-               this.setState({
-                 employees: result.employees,
-               });
-             },
-             (error) => {
-               this.setState({ error });
-             }
-           );
-       }
+        componentDidMount() {
+          fetch('https://api.example.com/items')
+            .then((res) => res.json())
+            .then(
+              (result) => {
+                this.setState({
+                  employees: result.employees,
+                });
+              },
+              (error) => {
+                this.setState({ error });
+              }
+            );
+        }
 
-       render() {
-         const { error, employees } = this.state;
-         if (error) {
-           return <div>Error: {error.message}</div>;
-         } else {
-           return (
-             <ul>
-               {employees.map((item) => (
-                 <li key={employee.name}>
-                   {employee.name}-{employees.experience}
-                 </li>
-               ))}
-             </ul>
-           );
-         }
-       }
-     }
-     ```
+        render() {
+          const { error, employees } = this.state;
+          if (error) {
+            return <div>Error: {error.message}</div>;
+          } else {
+            return (
+              <ul>
+                {employees.map((item) => (
+                  <li key={employee.name}>
+                    {employee.name}-{employees.experience}
+                  </li>
+                ))}
+              </ul>
+            );
+          }
+        }
+      }
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 128. ### What are render props?
 
