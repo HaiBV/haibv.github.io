@@ -2908,33 +2908,32 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-128. ### What are render props?
+128. ### Thế nào là render props? {#what-are-render-props}
 
-     **Render Props** is a simple technique for sharing code between components using a prop whose value is a function. The below component uses render prop which returns a React element.
+      **Render Props** là một kỹ thuật đơn giản để chia sẻ code giữa các component với nhau bằng cách sử dụng prop có giá trị là một hàm. Component dưới đây sử dụng render prop và trả về một phần tử React.
 
-     ```jsx
-     <DataProvider render={(data) => <h1>{`Hello ${data.target}`}</h1>} />
-     ```
+      ```jsx
+      <DataProvider render={(data) => <h1>{`Hello ${data.target}`}</h1>} />
+      ```
 
-     Libraries such as React Router and DownShift are using this pattern.
-
-## React Router
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-129. ### What is React Router?
-
-     React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
+      Một số thư viện như React Router và DownShift đang sử dụng phương pháp này.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-130. ### How React Router is different from history library?
+129. ### React Router là gì? {#what-is-react-router}
 
-     React Router is a wrapper around the `history` library which handles interaction with the browser's `window.history` with its browser and hash histories. It also provides memory history which is useful for environments that don't have global history, such as mobile app development (React Native) and unit testing with Node.
+      React Router là một thư viện routing mạnh mẽ sử dụng trong React, giúp ứng dụng React chuyển đổi giữa các màn hình một cách nhanh chóng, đồng thời giữ URL đồng bộ với ứng dụng đang hiển thị.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+130. ### React Router khác với những thư viện về history ra sao? {#how-react-router-is-different-from-history-library}
+
+      React Router bao gồm các thư viện về `history`, sẽ xử lý tương tác với `window.history` của trình duyệt. Nó cũng cung cấp lịch sử bộ nhớ hữu ích cho các môi trường không có lịch sử toàn cục (global), như các ứng dụng mobile (React Native) và unit test với Node.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 131. ### What are the `<Router>` components of React Router v4?
 
