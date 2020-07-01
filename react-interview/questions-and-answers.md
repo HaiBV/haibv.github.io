@@ -2935,30 +2935,30 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-131. ### What are the `<Router>` components of React Router v4?
+131. ### Có những component `<Router>` nào trong React Router v4?  {#what-are-the-router-components-of-react-router-v4}
 
-     React Router v4 provides below 3 `<Router>` components:
+      React Router v4 cung cấp 3 `<Router>` components dưới đây:
 
-     1. `<BrowserRouter>`
-     2. `<HashRouter>`
-     3. `<MemoryRouter>`
+      1. `<BrowserRouter>`
+      2. `<HashRouter>`
+      3. `<MemoryRouter>`
 
-     The above components will create _browser_, _hash_, and _memory_ history instances. React Router v4 makes the properties and methods of the `history` instance associated with your router available through the context in the `router` object.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-132. ### What is the purpose of `push()` and `replace()` methods of `history`?
-
-     A history instance has two methods for navigation purpose.
-
-     1. `push()`
-     2. `replace()`
-
-     If you think of the history as an array of visited locations, `push()` will add a new location to the array and `replace()` will replace the current location in the array with the new one.
+      Những components trên sẽ tạo lần lượt những ví dụ về _browser_, _hash_, và _memory_. React Router v4 tạo những thuộc tính và phương thức dành cho ví dụ `history` được liên hết với bộ định tuyến có sẵn thông qua ngữ cảnh của đổi tượng `router`.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+132. ### Mục đích của phương thức `push()` và `replace()` trong `history` là gì?{#what-is-the-purpose-of-push-and-replace-methods-of-history}
+
+      Trong history có 2 phương thức có mục đích điều hướng là:
+
+      1. `push()`
+      2. `replace()`
+
+      Nếu coi history là một mảng của những địa chỉ đã duyệt, `push()` sẽ thêm mới một địa chỉ và `replace()` sẽ thay đổi địa chỉ hiện tại bằng một địa chỉ mới.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 133. ### How do you programmatically navigate using React Router v4?
 
