@@ -2960,16 +2960,16 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-133. ### How do you programmatically navigate using React Router v4?
+133. ### Sử dụng React Router v4 để điều hướng như thế nào? {#how-do-you-programmatically-navigate-using-react-router-v4}
 
-     There are three different ways to achieve programmatic routing/navigation within components.
+      Có 3 cách khác nhau để điều hướng với components.
 
-     1. **Using the `withRouter()` higher-order function:**
+      1. **Sử dụng hàm higher-order `withRouter()`:**
 
-        The `withRouter()` higher-order function will inject the history object as a prop of the component. This object provides `push()` and `replace()` methods to avoid the usage of context.
+        Hàm higher-order `withRouter()` sẽ đưa đối tượng history vào component như một prop. Đối tượng này cung cấp phương thức `push()` và `replace()` để tránh sử dụng bối cảnh.
 
         ```jsx
-        import { withRouter } from 'react-router-dom'; // this also works with 'react-router-native'
+        import { withRouter } from 'react-router-dom'; // cũng làm việc với 'react-router-native'
 
         const Button = withRouter(({ history }) => (
           <button
@@ -2983,9 +2983,9 @@ layout: default
         ));
         ```
 
-     2. **Using `<Route>` component and render props pattern:**
+      2. **Sử dụng component `<Route>` và mẫu trích xuất props:**
 
-        The `<Route>` component passes the same props as `withRouter()`, so you will be able to access the history methods through the history prop.
+        Component `<Route>` truyền cùng một props như `withRouter()`, nên bạn có thể truy cập tới phương thức history qua history trong prop.
 
         ```jsx
         import { Route } from 'react-router-dom';
@@ -3006,9 +3006,9 @@ layout: default
         );
         ```
 
-     3. **Using context:**
+      3. **Sử dụng context:**
 
-        This option is not recommended and treated as unstable API.
+        Cách này không được khuyên dung và được coi là API không ổn định.
 
         ```jsx
         const Button = (props, context) => (
@@ -3030,28 +3030,28 @@ layout: default
         ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-134. ### How to get query parameters in React Router v4?
+134. ### Làm thế nào để lấy được tham số đầu vào trong query với React Router v4? {#how-to-get-query-parameters-in-react-router-v4}
 
-     The ability to parse query strings was taken out of React Router v4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
+      Khả năng phân tích chuỗi truy vấn đã bị loại bỏ khỏi React Router v4 vì đã có nhiều yêu cầu của người dùng trong nhiều năm qua để hỗ trợ những cách tiếp cận khác nhau. Vì vậy, quyết định được đưa ra là cho người dùng chủ động chọn các tiếp cận mà họ muốn. Các tiếp cận được để xuất là sử dụng thư viện chuỗi truy vấn.
 
-     ```javascript
-     const queryString = require('query-string');
-     const parsed = queryString.parse(props.location.search);
-     ```
+      ```javascript
+      const queryString = require('query-string');
+      const parsed = queryString.parse(props.location.search);
+      ```
 
-     You can also use `URLSearchParams` if you want something native:
+      Bạn có thể sử dụng `URLSearchParams` nếu bạn muốn sử dụng gì đó tự nhiên:
 
-     ```javascript
-     const params = new URLSearchParams(props.location.search);
-     const foo = params.get('name');
-     ```
+      ```javascript
+      const params = new URLSearchParams(props.location.search);
+      const foo = params.get('name');
+      ```
 
-     You should use a _polyfill_ for IE11.
+      Nên sử dụng _polyfill_ cho IE11.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 135. ### Why you get "Router may have only one child element" warning?
 
