@@ -3053,46 +3053,46 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-135. ### Why you get "Router may have only one child element" warning?
+135. ### Bạn gặp phải cảnh báo "Router may have only one child element" khi nào? {#why-you-get-router-may-have-only-one-child-element-warning}
 
-     You have to wrap your Route's in a `<Switch>` block because `<Switch>` is unique in that it renders a route exclusively.
+      Bạn cần phải đặt toàn bộ Route's vào trong một component `<Switch>` duy nhất và sẽ được trích xuất ra một bộ định tuyến duy nhất.
 
-     At first you need to add `Switch` to your imports:
+      Đầu tiên, bạn cần import `Switch`:
 
-     ```javascript
-     import { Switch, Router, Route } from 'react-router';
-     ```
+      ```javascript
+      import { Switch, Router, Route } from 'react-router';
+      ``` 
 
-     Then define the routes within `<Switch>` block:
+      Sau đó định nghĩa các định tuyến trong `<Switch>`:
 
-     ```jsx
-     <Router>
-       <Switch>
-         <Route {/* ... */} />
-         <Route {/* ... */} />
-       </Switch>
-     </Router>
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-136. ### How to pass params to `history.push` method in React Router v4?
-
-     While navigating you can pass props to the `history` object:
-
-     ```javascript
-     this.props.history.push({
-       pathname: '/template',
-       search: '?name=sudheer',
-       state: { detail: response.data },
-     });
-     ```
-
-     The `search` property is used to pass query params in `push()` method.
+      ```jsx
+      <Router>
+        <Switch>
+          <Route {/* ... */} />
+          <Route {/* ... */} />
+        </Switch>
+      </Router>
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+136. ### Đưa tham số vào `history.push` trong React Router v4 như thế nào? {#how-to-pass-params-to-history-push-method-in-react-router-v4}
+
+      Trong khi điều hướng, bạn có thể truyền prop vào đối tượng `history`:
+
+      ```javascript
+      this.props.history.push({
+        pathname: '/template',
+        search: '?name=sudheer',
+        state: { detail: response.data },
+      });
+      ```
+
+      Thuộc tính `search` được sử dụng để truyền tham số query vào phương thức `push()`.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 137. ### How to implement _default_ or _NotFound_ page?
 
