@@ -3094,36 +3094,36 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-137. ### How to implement _default_ or _NotFound_ page?
+137. ### Triển khai trang _mặc định_ hoặc _NotFound_ như thế nào? {#how-to-implement-default-or-notfound-page}
 
-     A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
+      Component `<Switch>` sẽ kết xuất component `<Route>` đầu tiên có path khớp. Một component `<Route>` không có path luôn luôn khớp. Cho nên chỉ cần bỏ thuộc tính path như dưới đây
 
-     ```jsx
-     <Switch>
-       <Route exact path='/' component={Home} />
-       <Route path='/user' component={User} />
-       <Route component={NotFound} />
-     </Switch>
-     ```
+      ```jsx
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/user' component={User} />
+        <Route component={NotFound} />
+      </Switch>
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-138. ### How to get history on React Router v4?
+138. ### Lấy history trong React Router v4 như thế nào? {#how-to-get-history-on-react-router-v4}
 
-     1. Create a module that exports a `history` object and import this module across the project.
+      1. Tạo module export đối tượng `history` và import module này vào dự án.
 
-        For example, create `history.js` file:
+        Ví dụ, tạo tập tin `history.js`:
 
         ```javascript
         import { createBrowserHistory } from 'history';
 
         export default createBrowserHistory({
-          /* pass a configuration object here if needed */
+          /* Đưa cấu hình vào đây */
         });
         ```
 
-     2. You should use the `<Router>` component instead of built-in routers. Imported the above `history.js` inside `index.js` file:
+      2. Bạn nên dùng component `<Router>` thay vì routers dựng sẵn. Imported `history.js` bên trong `index.js`:
 
         ```jsx
         import { Router } from 'react-router-dom';
@@ -3138,7 +3138,7 @@ layout: default
         );
         ```
 
-     3. You can also use push method of `history` object similar to built-in history object:
+      3. Bạn có thể sử dụng phương thức push của đối tượng `history` tương tự như đối với đối tượng history dựng sẵn:
 
         ```javascript
         // some-other-file.js
@@ -3148,7 +3148,7 @@ layout: default
         ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 139. ### How to perform automatic redirect after login?
 
