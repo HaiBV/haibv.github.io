@@ -2920,6 +2920,7 @@ layout: default
 
 
       **[⬆ Mục lục](#table-of-contents)**
+### React Router
 
 129. ### React Router là gì? {#what-is-react-router}
 
@@ -3150,35 +3151,35 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-139. ### How to perform automatic redirect after login?
+139. ### Thực hiện tự động chuyển trang sau khi đăng nhập như thế nào? {#how-to-perform-automatic-redirect-after-login}
 
-     The `react-router` package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
+      Thư viện `react-router` cung cấp component `<Redirect>` trong React Router. Kết xuất một component `<Redirect>` sẽ điều hướng tới một địa chỉ mới. Giống như điều hướng từ phía server, địa chỉ mới sẽ ghi đè lên điạ chỉ hiện tại trong hàng đợi history.
 
-     ```javascript
-     import React, { Component } from 'react';
-     import { Redirect } from 'react-router';
+      ```javascript
+      import React, { Component } from 'react';
+      import { Redirect } from 'react-router';
 
-     export default class LoginComponent extends Component {
-       render() {
-         if (this.state.isLoggedIn === true) {
-           return <Redirect to='/your/redirect/page' />;
-         } else {
-           return <div>{'Login Please'}</div>;
-         }
-       }
-     }
-     ```
-
-## React Internationalization
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-140. ### What is React Intl?
-
-     The _React Intl_ library makes internalization in React straightforward, with off-the-shelf components and an API that can handle everything from formatting strings, dates, and numbers, to pluralization. React Intl is part of _FormatJS_ which provides bindings to React via its components and API.
+      export default class LoginComponent extends Component {
+        render() {
+          if (this.state.isLoggedIn === true) {
+            return <Redirect to='/your/redirect/page' />;
+          } else {
+            return <div>{'Login Please'}</div>;
+          }
+        }
+      }
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+### React Internationalization
+
+140. ### React Intl là gì? {#what-is-react-intl}
+
+      Thư viện _React Intl_ làm việc biên dịch trong React trở nên đơn giản, với các component có sẵn và API có thể xử lý mọi thứ, từ định dạng chuỗi, ngày và số, cho đến số nhiều. React Intl là một phần của _FormatJS_ cung cấp các ràng buộc cho React thông qua các thành phần và API của nó.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 141. ### What are the main features of React Intl?
 
