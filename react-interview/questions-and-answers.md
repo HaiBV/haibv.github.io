@@ -3181,18 +3181,18 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-141. ### What are the main features of React Intl?
+141. ### Các chức năng chính của React Intl là gì? {#what-are-the-main-features-of-react-intl}
 
-     1. Display numbers with separators.
-     2. Display dates and times correctly.
-     3. Display dates relative to "now".
-     4. Pluralize labels in strings.
-     5. Support for 150+ languages.
-     6. Runs in the browser and Node.
-     7. Built on standards.
+      1. Hiển thị số có dấu phân cách.
+      2. Hiển thị ngày tháng và giờ chính xác.
+      3. Hiển thị ngày liên quan đến "hiện tại".
+      4. Gắn số nhiều cho một chuỗi.
+      5. Hỗ trợ trên 150 ngôn ngữ.
+      6. Chạy trên mọi trình duyệt và Node.
+      7. Dựng sẵn tiêu chuẩn.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 142. ### What are the two ways of formatting in React Intl?
 
