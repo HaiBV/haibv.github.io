@@ -3194,27 +3194,27 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-142. ### What are the two ways of formatting in React Intl?
+142. ### Hai cách để định dạng trong React Intl là gì? {#what-are-the-two-ways-of-formatting-in-react-intl}
 
-     The library provides two ways to format strings, numbers, and dates: react components or an API.
+      Thư viện cung cấp 2 cách để định dạng các chuỗi, số và ngày tháng: component hoặc API.
 
-     ```jsx
-     <FormattedMessage id={'account'} defaultMessage={'The amount is less than minimum balance.'} />
-     ```
+      ```jsx
+      <FormattedMessage id={'account'} defaultMessage={'The amount is less than minimum balance.'} />
+      ```
 
-     ```javascript
-     const messages = defineMessages({
-       accountMessage: {
-         id: 'account',
-         defaultMessage: 'The amount is less than minimum balance.',
-       },
-     });
+      ```javascript
+      const messages = defineMessages({
+        accountMessage: {
+          id: 'account',
+          defaultMessage: 'The amount is less than minimum balance.',
+        },
+      });
 
-     formatMessage(messages.accountMessage);
-     ```
+      formatMessage(messages.accountMessage);
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 143. ### How to use `<FormattedMessage>` as placeholder using React Intl?
 
