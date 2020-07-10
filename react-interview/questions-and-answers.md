@@ -3216,47 +3216,47 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-143. ### How to use `<FormattedMessage>` as placeholder using React Intl?
+143. ### Sử dụng <FormattedMessage> để làm placeholders trong React Intl như thế nào? {#how-to-use-formattedmessage-as-placeholder-using-react-intl}
 
-     The `<Formatted... />` components from `react-intl` return elements, not plain text, so they can't be used for placeholders, alt text, etc. In that case, you should use lower level API `formatMessage()`. You can inject the `intl` object into your component using `injectIntl()` higher-order component and then format the message using `formatMessage()` available on that object.
+      Component `<Formatted... />` của `react-intl` trả về  những phẩn tử, không phải văn bản thô, nên không thể sử dụng để làm placeholders, văn bản, etc. Trong trường hợp này, bạn nên sử dụng dạng thấp hơn là API `formatMessage()`. Bạn có thể truyền đối tượng `intl` vào trong component sử dụng higher-order component `injectIntl()` và sau đó định dạng thông điệp sử dụng `formatMessage()` có sẵn trong đối tượng đó.
+          
+      ```jsx
+      import React from 'react';
+      import { injectIntl, intlShape } from 'react-intl';
 
-     ```jsx
-     import React from 'react';
-     import { injectIntl, intlShape } from 'react-intl';
+      const MyComponent = ({ intl }) => {
+        const placeholder = intl.formatMessage({ id: 'messageId' });
+        return <input placeholder={placeholder} />;
+      };
 
-     const MyComponent = ({ intl }) => {
-       const placeholder = intl.formatMessage({ id: 'messageId' });
-       return <input placeholder={placeholder} />;
-     };
+      MyComponent.propTypes = {
+        intl: intlShape.isRequired,
+      };
 
-     MyComponent.propTypes = {
-       intl: intlShape.isRequired,
-     };
-
-     export default injectIntl(MyComponent);
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-144. ### How to access current locale with React Intl?
-
-     You can get the current locale in any component of your application using `injectIntl()`:
-
-     ```jsx
-     import { injectIntl, intlShape } from 'react-intl';
-
-     const MyComponent = ({ intl }) => <div>{`The current locale is ${intl.locale}`}</div>;
-
-     MyComponent.propTypes = {
-       intl: intlShape.isRequired,
-     };
-
-     export default injectIntl(MyComponent);
-     ```
+      export default injectIntl(MyComponent);
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+144. ### Làm thế nào để định vị vị trí hiện tại với React Intl? {#how-to-access-current-locale-with-react-intl}
+
+      Bạn có thể định vị được vị trí hiện tại trong bất kỳ component nào bằng việc sử dụng `injectIntl()`:
+
+      ```jsx
+      import { injectIntl, intlShape } from 'react-intl';
+
+      const MyComponent = ({ intl }) => <div>{`The current locale is ${intl.locale}`}</div>;
+
+      MyComponent.propTypes = {
+        intl: intlShape.isRequired,
+      };
+
+      export default injectIntl(MyComponent);
+      ```
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 145. ### How to format date using React Intl?
 
