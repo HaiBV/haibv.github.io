@@ -3258,31 +3258,31 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-145. ### How to format date using React Intl?
+145. ### Định dang ngày tháng với React Intl như thế nào? {#how-to-format-date-using-react-intl}
 
-     The `injectIntl()` higher-order component will give you access to the `formatDate()` method via the props in your component. The method is used internally by instances of `FormattedDate` and it returns the string representation of the formatted date.
+      Higher-order component `injectIntl()` sẽ cung cấp cho bạn phương thức `formatDate()` bên trong props của component. Phương thức này sử dụng các thực thể của `FormattedDate` và trả về chuỗi ngày tháng được định dạng.
 
-     ```jsx
-     import { injectIntl, intlShape } from 'react-intl';
+      ```jsx
+      import { injectIntl, intlShape } from 'react-intl';
 
-     const stringDate = this.props.intl.formatDate(date, {
-       year: 'numeric',
-       month: 'numeric',
-       day: 'numeric',
-     });
+      const stringDate = this.props.intl.formatDate(date, {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+      });
 
-     const MyComponent = ({ intl }) => <div>{`The formatted date is ${stringDate}`}</div>;
+      const MyComponent = ({ intl }) => <div>{`The formatted date is ${stringDate}`}</div>;
 
-     MyComponent.propTypes = {
-       intl: intlShape.isRequired,
-     };
+      MyComponent.propTypes = {
+        intl: intlShape.isRequired,
+      };
 
-     export default injectIntl(MyComponent);
-     ```
+      export default injectIntl(MyComponent);
+      ```
 
-## React Testing
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+### React Testing
 
 146. ### What is Shallow Renderer in React testing?
 
