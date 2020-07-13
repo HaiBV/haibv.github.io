@@ -3322,34 +3322,34 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-147. ### What is `TestRenderer` package in React?
+147. ### Thư viện TestRenderer trong React là gì? {#what-is-testrenderer-package-in-react}
 
-     This package provides a renderer that can be used to render components to pure JavaScript objects, without depending on the DOM or a native mobile environment. This package makes it easy to grab a snapshot of the platform view hierarchy (similar to a DOM tree) rendered by a ReactDOM or React Native without using a browser or `jsdom`.
+      Thư viện này cung cấp một trình kết xuất có thể sử dụng để kết xuất các component thành các đối tượng JavaScript thuần túy, không phụ thuộc vào DOM cũng như môi trường mobile. Thư viện này dễ dàng lấy một spanshot của hệ thống phân cấp (tương tự như cây phân cấp DOM) được kết xuất bởi ReactDOM hoặc React Native mà không cần sử dụng trình duyệt hoặc `jsdom`.
 
-     ```jsx
-     import TestRenderer from 'react-test-renderer';
+      ```jsx
+      import TestRenderer from 'react-test-renderer';
 
-     const Link = ({ page, children }) => <a href={page}>{children}</a>;
+      const Link = ({ page, children }) => <a href={page}>{children}</a>;
 
-     const testRenderer = TestRenderer.create(<Link page={'https://www.facebook.com/'}>{'Facebook'}</Link>);
+      const testRenderer = TestRenderer.create(<Link page={'https://www.facebook.com/'}>{'Facebook'}</Link>);
 
-     console.log(testRenderer.toJSON());
-     // {
-     //   type: 'a',
-     //   props: { href: 'https://www.facebook.com/' },
-     //   children: [ 'Facebook' ]
-     // }
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-148. ### What is the purpose of ReactTestUtils package?
-
-     _ReactTestUtils_ are provided in the `with-addons` package and allow you to perform actions against a simulated DOM for the purpose of unit testing.
+      console.log(testRenderer.toJSON());
+      // {
+      //   type: 'a',
+      //   props: { href: 'https://www.facebook.com/' },
+      //   children: [ 'Facebook' ]
+      // }
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+148. ### Mục đích của thư viện ReactTestUtils là gì? {#what-is-the-purpose-of-ReactTestUtils-package}
+
+      _ReactTestUtils_ được cung cấp trong thư viện `with-addons` và cho phép bạn thực hiện hành động chống lại việc mô phỏng DOM cho mục đích unit testing.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 149. ### What is Jest?
 
