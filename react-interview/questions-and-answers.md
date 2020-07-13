@@ -3284,43 +3284,43 @@ layout: default
       **[⬆ Mục lục](#table-of-contents)**
 ### React Testing
 
-146. ### What is Shallow Renderer in React testing?
+146. ### Kết xuất nông (Shallow Renderer) trong React Testing là gì?  {#what-is-shallow-renderer-in-react-testing}
 
-     _Shallow rendering_ is useful for writing unit test cases in React. It lets you render a component _one level deep_ and assert facts about what its render method returns, without worrying about the behavior of child components, which are not instantiated or rendered.
+      _Kết xuất nông_ (_Shallow rendering_) rất hữu ích khi viết unit test trong React. Nó cho phép kết xuất một component với chỉ _1 cấp độ sâu_ và kiểm tra những gì phương thức kết xuất trả về, mà không cần lo lắng về hành vì của những component con, khi chúng không được khởi tạo hoặc kết xuất.
 
-     For example, if you have the following component:
+      Ví dụ về component dưới đây:
 
-     ```javascript
-     function MyComponent() {
-       return (
-         <div>
-           <span className={'heading'}>{'Title'}</span>
-           <span className={'description'}>{'Description'}</span>
-         </div>
-       );
-     }
-     ```
+      ```javascript
+      function MyComponent() {
+        return (
+          <div>
+            <span className={'heading'}>{'Title'}</span>
+            <span className={'description'}>{'Description'}</span>
+          </div>
+        );
+      }
+      ```
 
-     Then you can assert as follows:
+      Bạn có thể kiểm thử như sau:
 
-     ```jsx
-     import ShallowRenderer from 'react-test-renderer/shallow';
+      ```jsx
+      import ShallowRenderer from 'react-test-renderer/shallow';
 
-     // in your test
-     const renderer = new ShallowRenderer();
-     renderer.render(<MyComponent />);
+      // in your test
+      const renderer = new ShallowRenderer();
+      renderer.render(<MyComponent />);
 
-     const result = renderer.getRenderOutput();
+      const result = renderer.getRenderOutput();
 
-     expect(result.type).toBe('div');
-     expect(result.props.children).toEqual([
-       <span className={'heading'}>{'Title'}</span>,
-       <span className={'description'}>{'Description'}</span>,
-     ]);
-     ```
+      expect(result.type).toBe('div');
+      expect(result.props.children).toEqual([
+        <span className={'heading'}>{'Title'}</span>,
+        <span className={'description'}>{'Description'}</span>,
+      ]);
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 147. ### What is `TestRenderer` package in React?
 
