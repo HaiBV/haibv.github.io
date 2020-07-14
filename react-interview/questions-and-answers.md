@@ -3351,25 +3351,25 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-149. ### What is Jest?
+149. ### Jest là gì? {#what-is-jest}
 
-     _Jest_ is a JavaScript unit testing framework created by Facebook based on Jasmine and provides automated mock creation and a `jsdom` environment. It's often used for testing components.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-150. ### What are the advantages of Jest over Jasmine?
-
-     There are couple of advantages compared to Jasmine:
-
-     - Automatically finds tests to execute in your source code.
-     - Automatically mocks dependencies when running your tests.
-     - Allows you to test asynchronous code synchronously.
-     - Runs your tests with a fake DOM implementation (via `jsdom`) so that your tests can be run on the command line.
-     - Runs tests in parallel processes so that they finish sooner.
+      _Jest_ là một framework JavaScript unit test tạo bởi Facebook dựa trên Jasmine và cung cấp phương thức tạo component ảo tự động và một môi trường `jsdom`. Thường được sử dụng để kiểm thử components.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+150. ### Lợi thế của Jest so với Jasmine là gì? {#what-are-the-advantages-of-jest-over-jasmine}
+
+      So với Jasmine, Jest có một vài lợi thế như sau:
+
+      - Tự động tìm kiếm test để thực thi mã nguồn.
+      - Tự động tạo thư viện ảo khi chạy kiểm thử.
+      - Cho phép chạy kiểm thử mã nguồn không đồng bộ.
+      - Chạy kiểm thử với DOM giả (như `jsdom`) nên kiểm thử có thể chạy bằng dòng lệnh.
+      - Chạy kiểm thử theo tiến trình song song để hoàn thành sớm hơn.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 151. ### Give a simple example of Jest test case
 
