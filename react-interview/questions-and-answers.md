@@ -128,45 +128,45 @@ layout: default
 | 113 | [Làm thế nào để tránh sử dụng đường dẫn liên quan khi import với `create-react-app`?](#how-to-avoid-using-relative-path-imports-in-create-react-app)                                                           |
 | 114 | [Sử dụng Google Analytics trong React Router như thế nào?](#how-to-add-google-analytics-for-react-router)                                                                                           |
 | 115 | [Làm thế nào để cập nhật component mỗi giây?](#how-to-update-a-component-every-second)                                                                                                       |
-| 116 | [How do you apply vendor prefixes to inline styles in React?](#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react)                                                               |
-| 117 | [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6)                                                                     |
-| 118 | [Why React component names must begin with a capital letter?](#why-react-component-names-must-begin-with-a-capital-letter)                                                               |
-| 119 | [Why is a component constructor called only once?](#why-is-a-component-constructor-called-only-once)                                                                                     |
-| 120 | [How to define constants in React?](#how-to-define-constants-in-react)                                                                                                                   |
-| 121 | [How to programmatically trigger click event in React?](#how-to-programmatically-trigger-click-event-in-react)                                                                           |
-| 122 | [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react)                                                                                    |
-| 123 | [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react)                                                                                     |
-| 124 | [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation)                                                                                             |
-| 125 | [What is the benefit of styles modules?](#what-is-the-benefit-of-styles-modules)                                                                                                         |
-| 126 | [What are the popular React-specific linters?](#what-are-the-popular-react-specific-linters)                                                                                             |
-| 127 | [How to make AJAX call and In which component lifecycle methods should I make an AJAX call?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call) |
-| 128 | [What are render props?](#what-are-render-props)                                                                                                                                         |
+| 116 | [Sử dụng tiền tố vendor với style inline trong React như thế nào?](#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react)                                                               |
+| 117 | [Import và export component với ES6 trong React như thế nào?](#how-to-import-and-export-components-using-react-and-es6)                                                                     |
+| 118 | [Đâu là ngoại lệ trong việc đặt tên React component?](#why-react-component-names-must-begin-with-a-capital-letter)                                                               |
+| 119 | [Tại sao hàm khởi tạo (constructor) component chỉ được gọi 1 lần?](#why-is-a-component-constructor-called-only-once)                                                                                     |
+| 120 | [Định nghĩa hằng số trong React như thế nào?](#how-to-define-constants-in-react)                                                                                                                   |
+| 121 | [Làm thế nào để kích hoạt sự kiện click trong React?](#how-to-programmatically-trigger-click-event-in-react)                                                                           |
+| 122 | [Có thể sử dụng async/await trong React được không? ](#is-it-possible-to-use-async-await-in-plain-react)                                                                                    |
+| 123 | [Cấu trúc thư mục thông dụng của React như thế nào?](#what-are-the-common-folder-structures-for-react)                                                                                     |
+| 124 | [Thư viện nào cho animation được dùng phổ biến?](#what-are-the-popular-packages-for-animation)                                                                                             |
+| 125 | [Việc style theo module có lợi ích gì?](#what-is-the-benefit-of-styles-modules)                                                                                                         |
+| 126 | [Công cụ linter (format code) nào phổ biến với React?](#what-are-the-popular-react-specific-linters)                                                                                             |
+| 127 | [Gọi AJAX như thế nào và nên sử dụng trong phương thức vòng đời nào?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call) |
+| 128 | [Thế nào là render props?](#what-are-render-props)                                                                                                                                         |
 |     | **React Router**                                                                                                                                                                         |
-| 129 | [What is React Router?](#what-is-react-router)                                                                                                                                           |
-| 130 | [How React Router is different from history library?](#how-react-router-is-different-from-history-library)                                                                               |
-| 131 | [What are the \<Router> components of React Router v4?](#what-are-the-router-components-of-react-router-v4)                                                                              |
-| 132 | [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history)                                                               |
-| 133 | [How do you programmatically navigate using React router v4?](#how-do-you-programmatically-navigate-using-react-router-v4)                                                               |
-| 134 | [How to get query parameters in React Router v4](#how-to-get-query-parameters-in-react-router-v4)                                                                                        |
-| 135 | [Why you get "Router may have only one child element" warning?](#why-you-get-router-may-have-only-one-child-element-warning)                                                             |
-| 136 | [How to pass params to history.push method in React Router v4?](#how-to-pass-params-to-historypush-method-in-react-router-v4)                                                            |
-| 137 | [How to implement default or NotFound page?](#how-to-implement-default-or-notfound-page)                                                                                                 |
-| 138 | [How to get history on React Router v4?](#how-to-get-history-on-react-router-v4)                                                                                                         |
-| 139 | [How to perform automatic redirect after login?](#how-to-perform-automatic-redirect-after-login)                                                                                         |
+| 129 | [React Router là gì?](#what-is-react-router)                                                                                                                                           |
+| 130 | [React Router khác với những thư viện về history ra sao?](#how-react-router-is-different-from-history-library)                                                                               |
+| 131 | [Có những component `<Router>` nào trong React Router v4?](#what-are-the-router-components-of-react-router-v4)                                                                              |
+| 132 | [Mục đích của phương thức `push()` và `replace()` trong `history` là gì?](#what-is-the-purpose-of-push-and-replace-methods-of-history)                                                               |
+| 133 | [Sử dụng React Router v4 để điều hướng như thế nào?](#how-do-you-programmatically-navigate-using-react-router-v4)                                                               |
+| 134 | [Làm thế nào để lấy được tham số đầu vào trong query với React Router v4?](#how-to-get-query-parameters-in-react-router-v4)                                                                                        |
+| 135 | [Bạn gặp phải cảnh báo “Router may have only one child element” khi nào?](#why-you-get-router-may-have-only-one-child-element-warning)                                                             |
+| 136 | [Đưa tham số vào `history.push` trong React Router v4 như thế nào?](#how-to-pass-params-to-historypush-method-in-react-router-v4)                                                            |
+| 137 | [Triển khai trang mặc định hoặc NotFound như thế nào?](#how-to-implement-default-or-notfound-page)                                                                                                 |
+| 138 | [Lấy history trong React Router v4 như thế nào?](#how-to-get-history-on-react-router-v4)                                                                                                         |
+| 139 | [Thực hiện tự động chuyển trang sau khi đăng nhập như thế nào?](#how-to-perform-automatic-redirect-after-login)                                                                                         |
 |     | **React Internationalization**                                                                                                                                                           |
-| 140 | [What is React-Intl?](#what-is-react-intl)                                                                                                                                               |
-| 141 | [What are the main features of React Intl?](#what-are-the-main-features-of-react-intl)                                                                                                   |
-| 142 | [What are the two ways of formatting in React Intl?](#what-are-the-two-ways-of-formatting-in-react-intl)                                                                                 |
-| 143 | [How to use FormattedMessage as placeholder using React Intl?](#how-to-use-formattedmessage-as-placeholder-using-react-intl)                                                             |
-| 144 | [How to access current locale with React Intl](#how-to-access-current-locale-with-react-intl)                                                                                            |
-| 145 | [How to format date using React Intl?](#how-to-format-date-using-react-intl)                                                                                                             |
+| 140 | [React Intl là gì?](#what-is-react-intl)                                                                                                                                               |
+| 141 | [Các chức năng chính của React Intl là gì?](#what-are-the-main-features-of-react-intl)                                                                                                   |
+| 142 | [Hai cách để định dạng trong React Intl là gì?](#what-are-the-two-ways-of-formatting-in-react-intl)                                                                                 |
+| 143 | [Sử dụng để làm placeholders trong React Intl như thế nào?](#how-to-use-formattedmessage-as-placeholder-using-react-intl)                                                             |
+| 144 | [Làm thế nào để định vị vị trí hiện tại với React Intl?](#how-to-access-current-locale-with-react-intl)                                                                                            |
+| 145 | [Định dang ngày tháng với React Intl như thế nào?](#how-to-format-date-using-react-intl)                                                                                                             |
 |     | **React Testing**                                                                                                                                                                        |
-| 146 | [What is Shallow Renderer in React testing?](#what-is-shallow-renderer-in-react-testing)                                                                                                 |
-| 147 | [What is TestRenderer package in React?](#what-is-testrenderer-package-in-react)                                                                                                         |
-| 148 | [What is the purpose of ReactTestUtils package?](#what-is-the-purpose-of-reacttestutils-package)                                                                                         |
-| 149 | [What is Jest?](#what-is-jest)                                                                                                                                                           |
-| 150 | [What are the advantages of Jest over Jasmine?](#what-are-the-advantages-of-jest-over-jasmine)                                                                                           |
-| 151 | [Give a simple example of Jest test case](#give-a-simple-example-of-jest-test-case)                                                                                                      |
+| 146 | [Kết xuất nông (Shallow Renderer) trong React Testing là gì?](#what-is-shallow-renderer-in-react-testing)                                                                                                 |
+| 147 | [Thư viện TestRenderer trong React là gì?](#what-is-testrenderer-package-in-react)                                                                                                         |
+| 148 | [Mục đích của thư viện ReactTestUtils là gì?](#what-is-the-purpose-of-reacttestutils-package)                                                                                         |
+| 149 | [Jest là gì?](#what-is-jest)                                                                                                                                                           |
+| 150 | [Lợi thế của Jest so với Jasmine là gì?](#what-are-the-advantages-of-jest-over-jasmine)                                                                                           |
+| 151 | [Lấy ví dụ về kiểm thử với Jest?](#give-a-simple-example-of-jest-test-case)                                                                                                      |
 |     | **React Redux**                                                                                                                                                                          |
 | 152 | [What is Flux?](#what-is-flux)                                                                                                                                                           |
 | 153 | [What is Redux?](#what-is-redux)                                                                                                                                                         |
@@ -2755,7 +2755,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-122. ### Có thể sử dụng async/await trong React được không? {is-it-possible-to-use-async-await-in-plain-react}
+122. ### Có thể sử dụng async/await trong React được không? {#is-it-possible-to-use-async-await-in-plain-react}
 
       Nếu bạn muốn sử dụng `async`/`await` trong React, bạn cần sử dụng _Babel_ và plugin [chuyển-từ-async-sang-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator). React Native được sử dụng cùng Babel và những plugin trên.
 
@@ -2949,7 +2949,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-132. ### Mục đích của phương thức `push()` và `replace()` trong `history` là gì?{#what-is-the-purpose-of-push-and-replace-methods-of-history}
+132. ### Mục đích của phương thức `push()` và `replace()` trong `history` là gì? {#what-is-the-purpose-of-push-and-replace-methods-of-history}
 
       Trong history có 2 phương thức có mục đích điều hướng là:
 
@@ -3410,26 +3410,26 @@ layout: default
       ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 ### React Redux
 
 152. ### What is flux?
 
-     _Flux_ is an _application design paradigm_ used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook uses this pattern internally when working with React.
+      _Flux_ is an _application design paradigm_ used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook uses this pattern internally when working with React.
 
-     The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
+      The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
 
-     ![flux](images/flux.png)
+      ![flux](images/flux.png)
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 153. ### What is Redux?
 
-     _Redux_ is a predictable state container for JavaScript apps based on the _Flux design pattern_. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.
+      _Redux_ is a predictable state container for JavaScript apps based on the _Flux design pattern_. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 154. ### What are the core principles of Redux?
 
