@@ -3371,47 +3371,47 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-151. ### Give a simple example of Jest test case
+151. ### Lấy ví dụ về kiểm thử với Jest? {#give-a-simple-example-of-jest-test-case}
 
-     Let's write a test for a function that adds two numbers in `sum.js` file:
+      Lấy ví dụ về trường hợp kiểm thử cho hàm cộng 2 số trong tập tin `sum.js`:
 
-     ```javascript
-     const sum = (a, b) => a + b;
+      ```javascript
+      const sum = (a, b) => a + b;
 
-     export default sum;
-     ```
+      export default sum;
+      ```
 
-     Create a file named `sum.test.js` which contains actual test:
+      Tạo file với tên `sum.test.js` chứa trường hợp kiểm thử:
 
-     ```javascript
-     import sum from './sum';
+      ```javascript
+      import sum from './sum';
 
-     test('adds 1 + 2 to equal 3', () => {
-       expect(sum(1, 2)).toBe(3);
-     });
-     ```
+      test('adds 1 + 2 to equal 3', () => {
+        expect(sum(1, 2)).toBe(3);
+      });
+      ```
 
-     And then add the following section to your `package.json`:
+      Sau đó thêm dòng lệnh dưới đây vào trong `package.json`:
 
-     ```json
-     {
-       "scripts": {
-         "test": "jest"
-       }
-     }
-     ```
+      ```json
+      {
+        "scripts": {
+          "test": "jest"
+        }
+      }
+      ```
 
-     Finally, run `yarn test` or `npm test` and Jest will print a result:
+      Cuối cùng, chạy lệnh `yarn test` hoặc `npm test` và Jest sẽ in ra kết quả:
 
-     ```console
-     $ yarn test
-     PASS ./sum.test.js
-     ✓ adds 1 + 2 to equal 3 (2ms)
-     ```
+      ```console
+      $ yarn test
+      PASS ./sum.test.js
+      ✓ adds 1 + 2 to equal 3 (2ms)
+      ```
 
-## React Redux
 
     **[⬆ Mục lục](#table-of-contents)**
+### React Redux
 
 152. ### What is flux?
 
