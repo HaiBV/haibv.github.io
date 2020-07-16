@@ -3413,20 +3413,20 @@ layout: default
       **[⬆ Mục lục](#table-of-contents)**
 ### React Redux
 
-152. ### What is flux?
+152. ### Flux là gì? {#what-is-flux}
 
-      _Flux_ is an _application design paradigm_ used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook uses this pattern internally when working with React.
+      _Flux_ là một _mô hình thiết kế ứng dụng_ (_application design paradigm_) sử dụng để thay thế cho mô hình MVC truyền thống. Nó không phải một framework hay thư viện mà là một kiểu kiến trúc mới bổ sung cho React và đưa ra khái niệm về luồng dữ liệu đơn hướng (Unidirectional Data Flow). Facebook sử dụng khuôn mẫu này để làm việc với React trong nội bộ.
 
-      The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
+      Quy trình làm việc giữa dispatcher, stores và các component views với các đầu vào đầu ra riêng biệt như sau:
 
       ![flux](images/flux.png)
 
 
       **[⬆ Mục lục](#table-of-contents)**
 
-153. ### What is Redux?
+153. ### Redux là gì? {#what-is-redux}
 
-      _Redux_ is a predictable state container for JavaScript apps based on the _Flux design pattern_. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.
+      _Redux_ là một container chứa state dự đoán được (predictable state) dành cho ứng dụng JavaScript dựa trên _khuôn mẫu thiết kế Flux_ (_Flux design pattern_). Redux có thể sử dụng cùng với React hoặc bất kỳ các thư viện frontend khác. Nó rất nhẹ (chỉ khoảng 2kB) và không có thành phần phụ thuộc.
 
 
       **[⬆ Mục lục](#table-of-contents)**
