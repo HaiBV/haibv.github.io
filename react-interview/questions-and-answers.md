@@ -3431,16 +3431,16 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-154. ### What are the core principles of Redux?
+154. ### Các nguyên tắc căn bản của Redux là gì? {#what-are-the-core-principles-of-redux}
 
-     Redux follows three fundamental principles:
+      Redux tuân theo 3 nguyên tắc cơ bản:
 
-     1. **Single source of truth:** The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
-     2. **State is read-only:** The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.
-     3. **Changes are made with pure functions:** To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
+      1. **Tin tưởng vào một nguồn duy nhất (Single source of truth):** State của toàn bộ ứng dụng được đặt trong một cây đối tượng trong một store duy nhất. Cây state duy nhất thuận tiện hơn trong việc theo dõi những thay đổi theo thời gian và gỡ lỗi (debug) hoặc kiểm tra ứng dụng.
+      2. **State chỉ có thể đọc:** Cách duy nhất để thay đổi state là thực hiện một action, một đối tượng mô tả những gì xảy ra. Điều này đảm bảo tầng views và tầng networks không thể trực tiếp thay đổi state.
+      3. **Thay đổi được thực hiện bởi các hàm pure:** Để chỉ định cách cây trạng thái thay đổi bởi actions, bạn sẽ viết những reduce. Reducers là các hàm pure nhận trạng thái trước đó và một action làm tham số và trả về trạng thái tiếp theo.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 155. ### What are the downsides of Redux compared to Flux?
 
