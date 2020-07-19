@@ -168,9 +168,9 @@ layout: default
 | 150 | [Lợi thế của Jest so với Jasmine là gì?](#what-are-the-advantages-of-jest-over-jasmine)                                                                                           |
 | 151 | [Lấy ví dụ về kiểm thử với Jest?](#give-a-simple-example-of-jest-test-case)                                                                                                      |
 |     | **React Redux**                                                                                                                                                                          |
-| 152 | [What is Flux?](#what-is-flux)                                                                                                                                                           |
-| 153 | [What is Redux?](#what-is-redux)                                                                                                                                                         |
-| 154 | [What are the core principles of Redux?](#what-are-the-core-principles-of-redux)                                                                                                         |
+| 152 | [Flux là gì?](#what-is-flux)                                                                                                                                                           |
+| 153 | [Redux là gì?](#what-is-redux)                                                                                                                                                         |
+| 154 | [Các nguyên tắc căn bản của Redux là gì?](#what-are-the-core-principles-of-redux)                                                                                                         |
 | 155 | [What are the downsides of Redux compared to Flux?](#what-are-the-downsides-of-redux-compared-to-flux)                                                                                   |
 | 156 | [What is the difference between mapStateToProps() and mapDispatchToProps()?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops)                                     |
 | 157 | [Can I dispatch an action in reducer?](#can-i-dispatch-an-action-in-reducer)                                                                                                             |
