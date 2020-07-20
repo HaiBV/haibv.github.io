@@ -3442,53 +3442,53 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-155. ### What are the downsides of Redux compared to Flux?
+155. ### Nhược điểm của Redux có với Flux là gì? {#what-are-the-downsides-of-redux-compared-to-flux}
 
-     Instead of saying downsides we can say that there are few compromises of using Redux over Flux. Those are as follows:
+      Thay vì nhược điểm, chúng ta có thể nói Redux có một vài điểm thỏa hiệp với Flux như sau:
 
-     1. **You will need to learn to avoid mutations:** Flux is un-opinionated about mutating data, but Redux doesn't like mutations and many packages complementary to Redux assume you never mutate the state. You can enforce this with dev-only packages like `redux-immutable-state-invariant`, Immutable.js, or instructing your team to write non-mutating code.
-     2. **You're going to have to carefully pick your packages:** While Flux explicitly doesn't try to solve problems such as undo/redo, persistence, or forms, Redux has extension points such as middleware and store enhancers, and it has spawned a rich ecosystem.
-     3. **There is no nice Flow integration yet:** Flux currently lets you do very impressive static type checks which Redux doesn't support yet.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-156. ### What is the difference between `mapStateToProps()` and `mapDispatchToProps()`?
-
-     `mapStateToProps()` is a utility which helps your component get updated state (which is updated by some other components):
-
-     ```javascript
-     const mapStateToProps = (state) => {
-       return {
-         todos: getVisibleTodos(state.todos, state.visibilityFilter),
-       };
-     };
-     ```
-
-     `mapDispatchToProps()` is a utility which will help your component to fire an action event (dispatching action which may cause change of application state):
-
-     ```javascript
-     const mapDispatchToProps = (dispatch) => {
-       return {
-         onTodoClick: (id) => {
-           dispatch(toggleTodo(id));
-         },
-       };
-     };
-     ```
-
-     Recommend always using the “object shorthand” form for the `mapDispatchToProps`
-
-     Redux wrap it in another function that looks like (…args) => dispatch(onTodoClick(…args)), and pass that wrapper function as a prop to your component.
-
-     ```javascript
-     const mapDispatchToProps = {
-       onTodoClick,
-     };
-     ```
+      1. **Bạn cần  học cách tránh đột biến:** Flux không quan tâm đến việc đột biến dữ liệu, nhưng Redux không thích sự đột biến và và nhiều gói bổ sung cho Redux giả định rằng bạn không bao giờ thay đổi đột biến state. Bạn có thể thực thi điều này với các gói chỉ dành cho việc phát triển như `redux-immutable-state-invariant`, Immutable.js, hoặc hướng dẫn team của bạn viết code không gây đột biến state.
+      2. **Bạn sẽ cẩn thận hơn trong việc chọn gói hỗ trợ:** Trong khi Flux rõ ràng không cố gắng giải quyết các vấn đề như undo/redo, persistence, hay forms, thì Redux có các điểm mở rộng hơn như middleware và store ưu việt, điều đó tạo nên một hệ sinh thái phong phú.
+      3. **Không có phương thức tích hợp:** Flux hiện tại cho phép bạn thực hiện kiểm tra kiểu tĩnh khá tốt nhưng Redux thì chưa hỗ trợ.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+156. ### Điểm khác biệt cơ bản giữa `mapStateToProps()` và `mapDispatchToProps()` là gì? {what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops}
+
+      `mapStateToProps()` là một tiện ích giúp component của bạn có được cập nhật của state (khi được cập nhật bởi những component khác):
+
+      ```javascript
+      const mapStateToProps = (state) => {
+        return {
+          todos: getVisibleTodos(state.todos, state.visibilityFilter),
+        };
+      };
+      ```
+
+      `mapDispatchToProps()` là một tiện ích giúp component của bạn có thể thực thi một sự kiện action (hành động có thể gây thay đổi state của ứng dụng):
+
+      ```javascript
+      const mapDispatchToProps = (dispatch) => {
+        return {
+          onTodoClick: (id) => {
+            dispatch(toggleTodo(id));
+          },
+        };
+      };
+      ```
+
+      Khuyến nghị luôn sử dụng dạng viết tắt cho `mapDispatchToProps`
+
+      Redux bọc nó trong một hàm khác tương tự như (…args) => dispatch(onTodoClick(…args)), và truyền hàm được bọc đó vào prop của component.
+
+      ```javascript
+      const mapDispatchToProps = {
+        onTodoClick,
+      };
+      ```
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 157. ### Can I dispatch an action in reducer?
 
