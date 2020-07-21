@@ -3490,12 +3490,12 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-157. ### Can I dispatch an action in reducer?
+157. ### Có thể thực thi một action trong reducer được không? {#can-i-dispatch-an-action-in-reducer}
 
-     Dispatching an action within a reducer is an **anti-pattern**. Your reducer should be _without side effects_, simply digesting the action payload and returning a new state object. Adding listeners and dispatching actions within the reducer can lead to chained actions and other side effects.
+      Thực thi một action trong một reducer là một phản mô hình (**anti-pattern**). Reducer phải được thực thi mà không có hiệu ứng phụ, chỉ cần xử lý tham số truyền vào của action và trả về một đối tượng state mới. Thêm listeners và thực thi action bên trong reducer có thể dẫn đến thực thi hành động dây chuyền và những hiệu ứng phụ khác.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 158. ### How to access Redux store outside a component?
 
