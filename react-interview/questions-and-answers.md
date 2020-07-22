@@ -3497,18 +3497,18 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-158. ### How to access Redux store outside a component?
+158. ### Truy cập vào store của Redux bên ngoài component như thế nào? {#how-to-access-redux-store-outside-a-component}
 
-     You just need to export the store from the module where it created with `createStore()`. Also, it shouldn't pollute the global window object.
+      You just need to export the store from the module where it created with `createStore()`. Also, it shouldn't pollute the global window object.
 
-     ```javascript
-     store = createStore(myReducer);
+      ```javascript
+      store = createStore(myReducer);
 
-     export default store;
-     ```
+      export default store;
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 159. ### What are the drawbacks of MVW pattern?
 
