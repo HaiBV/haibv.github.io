@@ -3499,7 +3499,7 @@ layout: default
 
 158. ### Truy cập vào store của Redux bên ngoài component như thế nào? {#how-to-access-redux-store-outside-a-component}
 
-      You just need to export the store from the module where it created with `createStore()`. Also, it shouldn't pollute the global window object.
+      Bạn chỉ cần export store tại nơi nó được khởi tạo bằng `createStore()`. Ngoài ra, nó không nên làm ảnh hướng đến biến toàn cục window.
 
       ```javascript
       store = createStore(myReducer);
@@ -3510,24 +3510,24 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-159. ### What are the drawbacks of MVW pattern?
+159. ### Nhược điểm của mô hình MVW là gì? {#what-are-the-drawbacks-of-mvw-pattern}
 
-     1. DOM manipulation is very expensive which causes applications to behave slow and inefficient.
-     2. Due to circular dependencies, a complicated model was created around models and views.
-     3. Lot of data changes happens for collaborative applications(like Google Docs).
-     4. No way to do undo (travel back in time) easily without adding so much extra code.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-160. ### Are there any similarities between Redux and RxJS?
-
-     These libraries are very different for very different purposes, but there are some vague similarities.
-
-     Redux is a tool for managing state throughout the application. It is usually used as an architecture for UIs. Think of it as an alternative to (half of) Angular. RxJS is a reactive programming library. It is usually used as a tool to accomplish asynchronous tasks in JavaScript. Think of it as an alternative to Promises. Redux uses the Reactive paradigm because the Store is reactive. The Store observes actions from a distance, and changes itself. RxJS also uses the Reactive paradigm, but instead of being an architecture, it gives you basic building blocks, Observables, to accomplish this pattern.
+      1. Thao tác với DOM rất tốn kém khiến ứng dụng hoạt động chậm và không hiệu quả.
+      2. Do phụ thuộc lẫn nhau, làm phức tạp hơn xung quanh models và views.
+      3. Rất nhiều dữ liệu thay đổi xảy ra cho các ứng dụng hợp tác (như Google Docs).
+      4. Không thể hoàn tác dễ dàng mà không cần thêm nhiều mã code.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+160. ### Những điểm tương đồng của Redux và RxJS là gì? {#are-there-any-similarities-between-redux-and-rxjs}
+
+      Những thư viện này rất khác nhau do có mục đích khác nhau, nhưng có một vài điểm tương đồng mơ hồ.
+
+      Redux là một công cụ quản lý state trong suốt một ứng dụng. Nó thường được sử dụng như một kiến trúc cho UI. Hãy nghĩ rằng nó dùng để thay thế cho (một nửa) Angular. RxJS là một thư viện lập trình phản ứng. Nó thường được sử dụng như một công cụ để thực hiện tác vụ không đồng bộ trong JavaScript. Hãy nghĩ rằng nó được dùng để thay thế cho Promises. Redux sử dụng mô hình Phản ứng vì Store là phản ứng. Store quan sát các hoạt động và tự thay đổi. RxJS cũng sử dụng mô hình Phản ứng, nhưng thay vì xây dựng một kiến trúc, nó cung cấp những khối cơ bản để quan sát và thực hiện mô hình này.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 161. ### How to dispatch an action on load?
 
