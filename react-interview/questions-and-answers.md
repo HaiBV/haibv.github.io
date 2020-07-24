@@ -3529,59 +3529,59 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-161. ### How to dispatch an action on load?
+161. ### Thực thi một action khi tải trang như thế nào? {#how-to-dispatch-an-action-on-load}
 
-     You can dispatch an action in `componentDidMount()` method and in `render()` method you can verify the data.
+      Bạn có thể thực thi một action trong phương thức `componentDidMount()` và trong phương thức `render()` bạn có thể xác thực được dữ liệu đó.
 
-     ```javascript
-     class App extends Component {
-       componentDidMount() {
-         this.props.fetchData();
-       }
-
-       render() {
-         return this.props.isLoaded ? <div>{'Loaded'}</div> : <div>{'Not Loaded'}</div>;
-       }
-     }
-
-     const mapStateToProps = (state) => ({
-       isLoaded: state.isLoaded,
-     });
-
-     const mapDispatchToProps = { fetchData };
-
-     export default connect(mapStateToProps, mapDispatchToProps)(App);
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-162. ### How to use `connect()` from React Redux?
-
-     You need to follow two steps to use your store in your container:
-
-     1. **Use `mapStateToProps()`:** It maps the state variables from your store to the props that you specify.
-     2. **Connect the above props to your container:** The object returned by the `mapStateToProps` function is connected to the container. You can import `connect()` from `react-redux`.
-
-        ```jsx
-        import React from 'react';
-        import { connect } from 'react-redux';
-
-        class App extends React.Component {
-          render() {
-            return <div>{this.props.containerData}</div>;
-          }
+      ```javascript
+      class App extends Component {
+        componentDidMount() {
+          this.props.fetchData();
         }
 
-        function mapStateToProps(state) {
-          return { containerData: state.data };
+        render() {
+          return this.props.isLoaded ? <div>{'Loaded'}</div> : <div>{'Not Loaded'}</div>;
         }
+      }
 
-        export default connect(mapStateToProps)(App);
-        ```
+      const mapStateToProps = (state) => ({
+        isLoaded: state.isLoaded,
+      });
+
+      const mapDispatchToProps = { fetchData };
+
+      export default connect(mapStateToProps, mapDispatchToProps)(App);
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+162. ### Sử dụng `connect()` trong React Redux như thế nào? {#how-to-use-connect-from-react-redux}
+
+      Bạn cần làm theo 2 bước để sử dụng store trong container:
+
+      1. **Sử dụng `mapStateToProps()`:** Nó sẽ đưa những giá trị được bạn chỉ định trong store vào trong props.
+      2. **Kết nối props ở trên với container:** Hàm `mapStateToProps` trả về một đối tượng được kết nối với container. Bạn có thể import `connect()` từ `react-redux`.
+
+      ```jsx
+      import React from 'react';
+      import { connect } from 'react-redux';
+
+      class App extends React.Component {
+        render() {
+          return <div>{this.props.containerData}</div>;
+        }
+      }
+
+      function mapStateToProps(state) {
+        return { containerData: state.data };
+      }
+
+      export default connect(mapStateToProps)(App);
+      ```
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 163. ### How to reset state in Redux?
 
