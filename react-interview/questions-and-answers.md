@@ -3626,75 +3626,75 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-164. ### Whats the purpose of `at` symbol in the Redux connect decorator?
+164. ### Tác dụng của ký tự `at` trong Redux connect decorato là gì? {#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator}
 
-     The **@** symbol is in fact a JavaScript expression used to signify decorators. _Decorators_ make it possible to annotate and modify classes and properties at design time.
+      Ký hiệu **@** trong thực tế được JavaScript sử dụng để biểu thị các decorators. _Decorators_ giúp chú thích và sửa đổi các lớp và thuộc tính tại thời điểm ban đầu.
 
-     Let's take an example setting up Redux without and with a decorator.
+      Hãy lấy một ví dụ sử dụng Redux không có decorator.
 
-     - **Without decorator:**
+      - **Không có decorator:**
 
-       ```javascript
-       import React from 'react';
-       import * as actionCreators from './actionCreators';
-       import { bindActionCreators } from 'redux';
-       import { connect } from 'react-redux';
+        ```javascript
+        import React from 'react';
+        import * as actionCreators from './actionCreators';
+        import { bindActionCreators } from 'redux';
+        import { connect } from 'react-redux';
 
-       function mapStateToProps(state) {
-         return { todos: state.todos };
-       }
+        function mapStateToProps(state) {
+          return { todos: state.todos };
+        }
 
-       function mapDispatchToProps(dispatch) {
-         return { actions: bindActionCreators(actionCreators, dispatch) };
-       }
+        function mapDispatchToProps(dispatch) {
+          return { actions: bindActionCreators(actionCreators, dispatch) };
+        }
 
-       class MyApp extends React.Component {
-         // ...define your main app here
-       }
+        class MyApp extends React.Component {
+          // ...define your main app here
+        }
 
-       export default connect(mapStateToProps, mapDispatchToProps)(MyApp);
-       ```
+        export default connect(mapStateToProps, mapDispatchToProps)(MyApp);
+        ```
 
-     - **With decorator:**
+      - **Với decorator:**
 
-       ```javascript
-       import React from 'react';
-       import * as actionCreators from './actionCreators';
-       import { bindActionCreators } from 'redux';
-       import { connect } from 'react-redux';
+        ```javascript
+        import React from 'react';
+        import * as actionCreators from './actionCreators';
+        import { bindActionCreators } from 'redux';
+        import { connect } from 'react-redux';
 
-       function mapStateToProps(state) {
-         return { todos: state.todos };
-       }
+        function mapStateToProps(state) {
+          return { todos: state.todos };
+        }
 
-       function mapDispatchToProps(dispatch) {
-         return { actions: bindActionCreators(actionCreators, dispatch) };
-       }
+        function mapDispatchToProps(dispatch) {
+          return { actions: bindActionCreators(actionCreators, dispatch) };
+        }
 
-       @connect(mapStateToProps, mapDispatchToProps)
-       export default class MyApp extends React.Component {
-         // ...define your main app here
-       }
-       ```
+        @connect(mapStateToProps, mapDispatchToProps)
+        export default class MyApp extends React.Component {
+          // ...define your main app here
+        }
+        ```
 
-     The above examples are almost similar except the usage of decorator. The decorator syntax isn't built into any JavaScript runtimes yet, and is still experimental and subject to change. You can use babel for the decorators support.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-165. ### What is the difference between React context and React Redux?
-
-     You can use **Context** in your application directly and is going to be great for passing down data to deeply nested components which what it was designed for. Whereas **Redux** is much more powerful and provides a large number of features that the Context API doesn't provide. Also, React Redux uses context internally but it doesn't expose this fact in the public API.
+      Các ví dụ ở trên gần như tương tự ngoại trừ việc sử dụng decorator. Cú pháp của decorator chưa được tích hợp vào trong JavaScript, vẫn có đang trong thời gian thử nghiệm, và có thể thay đổi. Bạn có thể sử dụng babel để hỗ trợ decorators.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-166. ### Why are Redux state functions called reducers?
+165. ### React Context và React Redux khác nhau như thế nào? {#what-is-the-difference-between-react-context-and-react-redux}
 
-     Reducers always return the accumulation of the state (based on all previous and current actions). Therefore, they act as a reducer of state. Each time a Redux reducer is called, the state and action are passed as parameters. This state is then reduced (or accumulated) based on the action, and then the next state is returned. You could _reduce_ a collection of actions and an initial state (of the store) on which to perform these actions to get the resulting final state.
+      Bạn có thể sử dụng **Context** trực tiếp trong ứng dụng của mình, được thiết kế để sử dụng khi quả khi truyền dữ liệu đến các thành phần lồng sâu. Trong khi đó **Redux** mạnh hơn nhiều và cung cấp rất nhiều tính năng mà Context API không có. Ngoài ra, bên trong React Redux có sử dụng context nhưng không công khai ngoài API.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+166. ### Tại sao hàm thay đổi state trong Redux được gọi là Reducers? {#why-are-Redux-state-functions-called-reducers}
+
+      Reducers luôn trả về các giá trị State mới (dựa trên tất cả những State trước đó và những action hiện tại). Do đó, nó hoạt động giống như một công cụ giảm (reducer) state. Mỗi lần Redux reducer được gọi, state và action được truyền vào như các tham số. State sau đó được cắt giảm (hoặc thêm) dựa trên action, và sau đó state mới được trả về. Bạn có thể _reduce_ một tập hợp các hành động và trạng thái ban đầu (của store) để thực hiện các hành động này để có được state cuối cùng.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 167. ### How to make AJAX request in Redux?
 
