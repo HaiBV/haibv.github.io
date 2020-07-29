@@ -3626,7 +3626,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-164. ### Tác dụng của ký tự `at` trong Redux connect decorato là gì? {#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator}
+164. ### Tác dụng của ký tự `@` trong Redux connect decorator là gì? {#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator}
 
       Ký hiệu **@** trong thực tế được JavaScript sử dụng để biểu thị các decorators. _Decorators_ giúp chú thích và sửa đổi các lớp và thuộc tính tại thời điểm ban đầu.
 
@@ -3696,87 +3696,87 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-167. ### How to make AJAX request in Redux?
+167. ### Thực hiện AJAX request trong Redux như thế nào? {#how-to-make-ajax-request-in-redux}
 
-     You can use `redux-thunk` middleware which allows you to define async actions.
+      Có thể sử dụng `redux-thunk` cho phép bạn thực hiện các action bất đồng bộ.
 
-     Let's take an example of fetching specific account as an AJAX call using _fetch API_:
+      Lấy ví dụ về việc lấy dữ liệu của một tài khoản cụ thể bằng việc gọi một AJAX request sử dụng _fetch API_:
 
-     ```javascript
-     export function fetchAccount(id) {
-       return (dispatch) => {
-         dispatch(setLoadingAccountState()); // Show a loading spinner
-         fetch(`/account/${id}`, (response) => {
-           dispatch(doneFetchingAccount()); // Hide loading spinner
-           if (response.status === 200) {
-             dispatch(setAccount(response.json)); // Use a normal function to set the received state
-           } else {
-             dispatch(someError);
-           }
-         });
-       };
-     }
+      ```javascript
+      export function fetchAccount(id) {
+        return (dispatch) => {
+          dispatch(setLoadingAccountState()); // Hiển thị trạng thái đang tải
+          fetch(`/account/${id}`, (response) => {
+            dispatch(doneFetchingAccount()); // Ẩn trạng thái đang tải
+            if (response.status === 200) {
+              dispatch(setAccount(response.json)); // Sử dụng chức năng bình thường để đặt lại state
+            } else {
+              dispatch(someError);
+            }
+          });
+        };
+      }
 
-     function setAccount(data) {
-       return { type: 'SET_Account', data: data };
-     }
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-168. ### Should I keep all component's state in Redux store?
-
-     Keep your data in the Redux store, and the UI related state internally in the component.
+      function setAccount(data) {
+        return { type: 'SET_Account', data: data };
+      }
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-169. ### What is the proper way to access Redux store?
+168. ### Tôi có nên giữ tất cả state của component trong Redux store? {#should-i-keep-all-components-state-in-redux-store}
 
-     The best way to access your store in a component is to use the `connect()` function, that creates a new component that wraps around your existing one. This pattern is called _Higher-Order Components_, and is generally the preferred way of extending a component's functionality in React. This allows you to map state and action creators to your component, and have them passed in automatically as your store updates.
-
-     Let's take an example of `<FilterLink>` component using connect:
-
-     ```javascript
-     import { connect } from 'react-redux';
-     import { setVisibilityFilter } from '../actions';
-     import Link from '../components/Link';
-
-     const mapStateToProps = (state, ownProps) => ({
-       active: ownProps.filter === state.visibilityFilter,
-     });
-
-     const mapDispatchToProps = (dispatch, ownProps) => ({
-       onClick: () => dispatch(setVisibilityFilter(ownProps.filter)),
-     });
-
-     const FilterLink = connect(mapStateToProps, mapDispatchToProps)(Link);
-
-     export default FilterLink;
-     ```
-
-     Due to it having quite a few performance optimizations and generally being less likely to cause bugs, the Redux developers almost always recommend using `connect()` over accessing the store directly (using context API).
-
-     ```javascript
-     class MyComponent {
-       someMethod() {
-         doSomethingWith(this.context.store);
-       }
-     }
-     ```
+      Lưu dữ liệu của bạn trong Redux store, và state liên quan đến UI bên trong component.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-170. ### What is the difference between component and container in React Redux?
+169. ### Cách thích hợp để truy cập vào store trong Redux là gì? {#what-is-the-proper-way-to-access-redux-store}
 
-     **Component** is a class or function component that describes the presentational part of your application.
+      Cách tốt nhất để truy cập store trong một component là sử dụng hàm `connect()`, hàm này sẽ tạo một component mới bao bọc lấy component của bạn. Mô hình này được gọi là _Higher-Order Components_, và đây là cách ức thích để mở rộng chức năng của một component trong React. Điều này cho phép bạn liên kết state và actions tới component của bạn, để chúng tự cập tự hoạt động khi store của bạn cập nhật.
 
-     **Container** is an informal term for a component that is connected to a Redux store. Containers _subscribe_ to Redux state updates and _dispatch_ actions, and they usually don't render DOM elements; they delegate rendering to presentational child components.
+      Lấy một ví dụ về component `<FilterLink>` sử dụng connnect:
+
+      ```javascript
+      import { connect } from 'react-redux';
+      import { setVisibilityFilter } from '../actions';
+      import Link from '../components/Link';
+
+      const mapStateToProps = (state, ownProps) => ({
+        active: ownProps.filter === state.visibilityFilter,
+      });
+
+      const mapDispatchToProps = (dispatch, ownProps) => ({
+        onClick: () => dispatch(setVisibilityFilter(ownProps.filter)),
+      });
+
+      const FilterLink = connect(mapStateToProps, mapDispatchToProps)(Link);
+
+      export default FilterLink;
+      ```
+
+      Do có khá nhiều tối ưu về hiệu suất và ít xảy ra lỗi nên các developer của Redux luôn khuyên bạn sử dụng `connect()` thay vì truy cập trực tiếp vào store (sử dụng context API).
+
+      ```javascript
+      class MyComponent {
+        someMethod() {
+          doSomethingWith(this.context.store);
+        }
+      }
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+170. ### Trong React Redux, component và container khác nhau thế nào? {#what-is-the-difference-between-component-and-container-in-react-redux}
+
+      **Component** là một lớp hoặc hàm mô tả phần giao diện ứng dụng của bạn.
+
+      **Container** là một thuật ngữ không chính thức cho một component có sự kết nối với Redux store. Containers _đăng ký nhận_ các cập nhật của Redux state updates và _thực thi_ các actions, và chúng thường không hiển thị các phần tử DOM, chúng ủy thác kết xuất cho các component con.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 171. ### What is the purpose of the constants in Redux?
 
