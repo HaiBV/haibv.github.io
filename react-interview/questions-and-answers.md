@@ -3778,60 +3778,60 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-171. ### What is the purpose of the constants in Redux?
+171. ### Mục đích của hằng số trong Redux là gì? {#what-is-the-purpose-of-the-constants-in-redux}
 
-     Constants allows you to easily find all usages of that specific functionality across the project when you use an IDE. It also prevents you from introducing silly bugs caused by typos – in which case, you will get a `ReferenceError` immediately.
+      Hằng số cho phép bạn dễ dàng tìm thấy tất cả các cách dùng chức năng cụ thể đó trong toàn dự án khi bạn sử dụng IDE. Nó cũng ngăn bạn tạo ra các lỗi ngớ ngẩn do lỗi chính tả - trong trường họp đó bạn sẽ nhận được một `ReferenceError` ngay lập tức.
 
-     Normally we will save them in a single file (`constants.js` or `actionTypes.js`).
+      Thông thường, các hằng số sẽ được lưu vào trong một file duy nhất (`constants.js` hoặc `actionTypes.js`).
 
-     ```javascript
-     export const ADD_TODO = 'ADD_TODO';
-     export const DELETE_TODO = 'DELETE_TODO';
-     export const EDIT_TODO = 'EDIT_TODO';
-     export const COMPLETE_TODO = 'COMPLETE_TODO';
-     export const COMPLETE_ALL = 'COMPLETE_ALL';
-     export const CLEAR_COMPLETED = 'CLEAR_COMPLETED';
-     ```
+      ```javascript
+      export const ADD_TODO = 'ADD_TODO';
+      export const DELETE_TODO = 'DELETE_TODO';
+      export const EDIT_TODO = 'EDIT_TODO';
+      export const COMPLETE_TODO = 'COMPLETE_TODO';
+      export const COMPLETE_ALL = 'COMPLETE_ALL';
+      export const CLEAR_COMPLETED = 'CLEAR_COMPLETED';
+      ```
 
-     In Redux you use them in two places:
+      Trong Redux, chúng ta sử dụng chúng ở 2 nơi:
 
-     1. **During action creation:**
+      1. **Trong quá trình tạo action:**
 
-        Let's take `actions.js`:
+          Lấy `actions.js` làm ví dụ:
 
-        ```javascript
-        import { ADD_TODO } from './actionTypes';
+          ```javascript
+          import { ADD_TODO } from './actionTypes';
 
-        export function addTodo(text) {
-          return { type: ADD_TODO, text };
-        }
-        ```
-
-     2. **In reducers:**
-
-        Let's create `reducer.js`:
-
-        ```javascript
-        import { ADD_TODO } from './actionTypes';
-
-        export default (state = [], action) => {
-          switch (action.type) {
-            case ADD_TODO:
-              return [
-                ...state,
-                {
-                  text: action.text,
-                  completed: false,
-                },
-              ];
-            default:
-              return state;
+          export function addTodo(text) {
+            return { type: ADD_TODO, text };
           }
-        };
-        ```
+          ```
+
+      2. **Và trong reducers:**
+
+          Ví dụ về `reducer.js`:
+
+          ```javascript
+          import { ADD_TODO } from './actionTypes';
+
+          export default (state = [], action) => {
+            switch (action.type) {
+              case ADD_TODO:
+                return [
+                  ...state,
+                  {
+                    text: action.text,
+                    completed: false,
+                  },
+                ];
+              default:
+                return state;
+            }
+          };
+          ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 172. ### What are the different ways to write `mapDispatchToProps()`?
 
