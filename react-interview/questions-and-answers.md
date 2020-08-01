@@ -3833,53 +3833,53 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-172. ### What are the different ways to write `mapDispatchToProps()`?
+172. ### Có những cách nào để viết hàm `mapDispatchToProps()`? {#what-are-the-different-ways-to-write-mapdispatchtoprops}
 
-     There are a few ways of binding _action creators_ to `dispatch()` in `mapDispatchToProps()`. Below are the possible options:
+      Có vài cách để đưa _action_ và trong `dispatch()` của `mapDispatchToProps()`. Dưới đây là một vài lựa chọn:
 
-     ```javascript
-     const mapDispatchToProps = (dispatch) => ({
-       action: () => dispatch(action()),
-     });
-     ```
+      ```javascript
+      const mapDispatchToProps = (dispatch) => ({
+        action: () => dispatch(action()),
+      });
+      ```
 
-     ```javascript
-     const mapDispatchToProps = (dispatch) => ({
-       action: bindActionCreators(action, dispatch),
-     });
-     ```
+      ```javascript
+      const mapDispatchToProps = (dispatch) => ({
+        action: bindActionCreators(action, dispatch),
+      });
+      ```
 
-     ```javascript
-     const mapDispatchToProps = { action };
-     ```
+      ```javascript
+      const mapDispatchToProps = { action };
+      ```
 
-     The third option is just a shorthand for the first one.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-173. ### What is the use of the `ownProps` parameter in `mapStateToProps()` and `mapDispatchToProps()`?
-
-     If the `ownProps` parameter is specified, React Redux will pass the props that were passed to the component into your _connect_ functions. So, if you use a connected component:
-
-     ```jsx
-     import ConnectedComponent from './containers/ConnectedComponent';
-
-     <ConnectedComponent user={'john'} />;
-     ```
-
-     The `ownProps` inside your `mapStateToProps()` and `mapDispatchToProps()` functions will be an object:
-
-     ```javascript
-     {
-       user: 'john';
-     }
-     ```
-
-     You can use this object to decide what to return from those functions.
+      The third option is just a shorthand for the first one.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+173. ### Cách dùng của tham số ownProps trong `mapStateToProps()` và `mapDispatchToProps()`? {#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops}
+
+      If the `ownProps` parameter is specified, React Redux will pass the props that were passed to the component into your _connect_ functions. So, if you use a connected component:
+
+      ```jsx
+      import ConnectedComponent from './containers/ConnectedComponent';
+
+      <ConnectedComponent user={'john'} />;
+      ```
+
+      The `ownProps` inside your `mapStateToProps()` and `mapDispatchToProps()` functions will be an object:
+
+      ```javascript
+      {
+        user: 'john';
+      }
+      ```
+
+      You can use this object to decide what to return from those functions.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 174. ### How to structure Redux top level directories?
 
