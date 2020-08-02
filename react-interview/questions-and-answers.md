@@ -3860,7 +3860,7 @@ layout: default
 
 173. ### Cách dùng của tham số ownProps trong `mapStateToProps()` và `mapDispatchToProps()`? {#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops}
 
-      If the `ownProps` parameter is specified, React Redux will pass the props that were passed to the component into your _connect_ functions. So, if you use a connected component:
+      Nếu tham số `ownProps` được xác định, React Redux sẽ truyền props của component và trong hàm  _connect_. Nên, khi bạn sử dụng component liên kết với store:
 
       ```jsx
       import ConnectedComponent from './containers/ConnectedComponent';
@@ -3868,7 +3868,7 @@ layout: default
       <ConnectedComponent user={'john'} />;
       ```
 
-      The `ownProps` inside your `mapStateToProps()` and `mapDispatchToProps()` functions will be an object:
+      Tham số `ownProps` bên trong hàm `mapStateToProps()` và `mapDispatchToProps()` sẽ là một đối tượng:
 
       ```javascript
       {
@@ -3876,25 +3876,25 @@ layout: default
       }
       ```
 
-      You can use this object to decide what to return from those functions.
+      Bạn có thể sử dụng đối tượng này để quyết định sẽ trả về những gì với hai hàm trên.
 
 
       **[⬆ Mục lục](#table-of-contents)**
 
-174. ### How to structure Redux top level directories?
+174. ### Cấu trúc thư mục cấp cao cho một dự án Redux như thế nào? {#how-to-structure-redux-top-level-directories}
 
-     Most of the applications has several top-level directories as below:
+      Hầu hết các ứng dụng đều có một số thư mục cấp cao như dưới đây:
 
-     1. **Components**: Used for _dumb_ components unaware of Redux.
-     2. **Containers**: Used for _smart_ components connected to Redux.
-     3. **Actions**: Used for all action creators, where file names correspond to part of the app.
-     4. **Reducers**: Used for all reducers, where files name correspond to state key.
-     5. **Store**: Used for store initialization.
+      1. **Components**: Chứa các _dumb_ components không liên quan đến Redux.
+      2. **Containers**: Chức các _smart_ components liên kết với Redux.
+      3. **Actions**: Chức tất cả các action, trong đó tên tệp tương ứng với một phần của ứng dụng.
+      4. **Reducers**: Chứa tất cả các reducers, trong đó tên tệp ứng mỗi từ khóa trong state.
+      5. **Store**: Nơi khởi tạo store.
 
-     This structure works well for small and medium size apps.
+      Cấu trúc này hoạt động tốt với những ứng dụng vừa và nhỏ.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 175. ### What is redux-saga?
 
