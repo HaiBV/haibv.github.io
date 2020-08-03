@@ -3896,18 +3896,18 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-175. ### What is redux-saga?
+175. ### redux-saga là gì? {#what-is-redux-saga}
 
-     `redux-saga` is a library that aims to make side effects (asynchronous things like data fetching and impure things like accessing the browser cache) in React/Redux applications easier and better.
+      `redux-saga` là một thư viện với mục đích tạo ra các hiệu ứng phụ (side effects) (các tác vụ bất đồng bộ như lấy dữ liệu từ API hoặc truy cập vào cache của trình duyệt) trong ứng dụng React/Redux dễ dàng và hiệu quả hơn.
 
-     It is available in NPM:
+      Có sẵn trong NPM:
 
-     ```console
-     $ npm install --save redux-saga
-     ```
+      ```console
+      $ npm install --save redux-saga
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 176. ### What is the mental model of redux-saga?
 
