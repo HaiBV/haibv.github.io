@@ -171,27 +171,27 @@ layout: default
 | 152 | [Flux là gì?](#what-is-flux)                                                                                                                                                           |
 | 153 | [Redux là gì?](#what-is-redux)                                                                                                                                                         |
 | 154 | [Các nguyên tắc căn bản của Redux là gì?](#what-are-the-core-principles-of-redux)                                                                                                         |
-| 155 | [What are the downsides of Redux compared to Flux?](#what-are-the-downsides-of-redux-compared-to-flux)                                                                                   |
-| 156 | [What is the difference between mapStateToProps() and mapDispatchToProps()?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops)                                     |
-| 157 | [Can I dispatch an action in reducer?](#can-i-dispatch-an-action-in-reducer)                                                                                                             |
-| 158 | [How to access Redux store outside a component?](#how-to-access-redux-store-outside-a-component)                                                                                         |
-| 159 | [What are the drawbacks of MVW pattern](#what-are-the-drawbacks-of-mvw-pattern)                                                                                                          |
-| 160 | [Are there any similarities between Redux and RxJS?](#are-there-any-similarities-between-redux-and-rxjs)                                                                                 |
-| 161 | [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load)                                                                                                                 |
-| 162 | [How to use connect from React Redux?](#how-to-use-connect-from-react-redux)                                                                                                             |
-| 163 | [How to reset state in Redux?](#how-to-reset-state-in-redux)                                                                                                                             |
-| 164 | [Whats the purpose of at symbol in the redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator)                                                         |
-| 165 | [What is the difference between React context and React Redux?](#what-is-the-difference-between-react-context-and-react-redux)                                                           |
-| 166 | [Why are Redux state functions called reducers?](#why-are-redux-state-functions-called-reducers)                                                                                         |
-| 167 | [How to make AJAX request in Redux?](#how-to-make-ajax-request-in-redux)                                                                                                                 |
-| 168 | [Should I keep all component's state in Redux store?](#should-i-keep-all-components-state-in-redux-store)                                                                                |
-| 169 | [What is the proper way to access Redux store?](#what-is-the-proper-way-to-access-redux-store)                                                                                           |
-| 170 | [What is the difference between component and container in React Redux?](#what-is-the-difference-between-component-and-container-in-react-redux)                                         |
-| 171 | [What is the purpose of the constants in Redux? ](#what-is-the-purpose-of-the-constants-in-redux)                                                                                        |
-| 172 | [What are the different ways to write mapDispatchToProps()?](#what-are-the-different-ways-to-write-mapdispatchtoprops)                                                                   |
-| 173 | [What is the use of the ownProps parameter in mapStateToProps() and mapDispatchToProps()?](#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops)         |
-| 174 | [How to structure Redux top level directories?](#how-to-structure-redux-top-level-directories)                                                                                           |
-| 175 | [What is redux-saga?](#what-is-redux-saga)                                                                                                                                               |
+| 155 | [Nhược điểm của Redux so với Flux là gì?](#what-are-the-downsides-of-redux-compared-to-flux)                                                                                   |
+| 156 | [Điểm khác biệt cơ bản giữa `mapStateToProps()` và `mapDispatchToProps()` là gì?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops)                                     |
+| 157 | [Có thể thực thi một action trong reducer được không?](#can-i-dispatch-an-action-in-reducer)                                                                                                             |
+| 158 | [Truy cập vào store của Redux bên ngoài component như thế nào?](#how-to-access-redux-store-outside-a-component)                                                                                         |
+| 159 | [Nhược điểm của mô hình MVW là gì?](#what-are-the-drawbacks-of-mvw-pattern)                                                                                                          |
+| 160 | [Những điểm tương đồng của Redux và RxJS là gì?](#are-there-any-similarities-between-redux-and-rxjs)                                                                                 |
+| 161 | [Thực thi một action khi tải trang như thế nào?](#how-to-dispatch-an-action-on-load)                                                                                                                 |
+| 162 | [Sử dụng `connect()` trong React Redux như thế nào?](#how-to-use-connect-from-react-redux)                                                                                                             |
+| 163 | [Đặt lại state với Redux như thế nào?](#how-to-reset-state-in-redux)                                                                                                                             |
+| 164 | [Tác dụng của ký tự `@` trong Redux connect decorator là gì?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator)                                                         |
+| 165 | [React Context và React Redux khác nhau như thế nào?](#what-is-the-difference-between-react-context-and-react-redux)                                                           |
+| 166 | [Tại sao hàm thay đổi state trong Redux được gọi là Reducers?](#why-are-redux-state-functions-called-reducers)                                                                                         |
+| 167 | [Thực hiện AJAX request trong Redux như thế nào?](#how-to-make-ajax-request-in-redux)                                                                                                                 |
+| 168 | [Tôi có nên giữ tất cả state của component trong Redux store?](#should-i-keep-all-components-state-in-redux-store)                                                                                |
+| 169 | [Cách thích hợp để truy cập vào store trong Redux là gì?](#what-is-the-proper-way-to-access-redux-store)                                                                                           |
+| 170 | [Trong React Redux, component và container khác nhau thế nào?](#what-is-the-difference-between-component-and-container-in-react-redux)                                         |
+| 171 | [Mục đích của hằng số trong Redux là gì?](#what-is-the-purpose-of-the-constants-in-redux)                                                                                        |
+| 172 | [Có những cách nào để viết hàm `mapDispatchToProps()`?](#what-are-the-different-ways-to-write-mapdispatchtoprops)                                                                   |
+| 173 | [Cách dùng của tham số ownProps trong `mapStateToProps()` và `mapDispatchToProps()`?](#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops)         |
+| 174 | [Cấu trúc thư mục cấp cao cho một dự án Redux như thế nào?](#how-to-structure-redux-top-level-directories)                                                                                           |
+| 175 | [redux-saga là gì?](#what-is-redux-saga)                                                                                                                                               |
 | 176 | [What is the mental model of redux-saga?](#what-is-the-mental-model-of-redux-saga)                                                                                                       |
 | 177 | [What are the differences between call and put in redux-saga](#what-are-the-differences-between-call-and-put-in-redux-saga)                                                              |
 | 178 | [What is Redux Thunk?](#what-is-redux-thunk)                                                                                                                                             |
@@ -3442,7 +3442,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-155. ### Nhược điểm của Redux có với Flux là gì? {#what-are-the-downsides-of-redux-compared-to-flux}
+155. ### Nhược điểm của Redux so với Flux là gì? {#what-are-the-downsides-of-redux-compared-to-flux}
 
       Thay vì nhược điểm, chúng ta có thể nói Redux có một vài điểm thỏa hiệp với Flux như sau:
 
@@ -3453,7 +3453,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-156. ### Điểm khác biệt cơ bản giữa `mapStateToProps()` và `mapDispatchToProps()` là gì? {what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops}
+156. ### Điểm khác biệt cơ bản giữa `mapStateToProps()` và `mapDispatchToProps()` là gì? {#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops}
 
       `mapStateToProps()` là một tiện ích giúp component của bạn có được cập nhật của state (khi được cập nhật bởi những component khác):
 
