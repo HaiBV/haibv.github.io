@@ -3909,35 +3909,35 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-176. ### What is the mental model of redux-saga?
+176. ### Metal model trong Redux Saga là gì? {#what-is-the-mental-model-of-redux-saga}
 
-     _Saga_ is like a separate thread in your application, that's solely responsible for side effects. `redux-saga` is a redux _middleware_, which means this thread can be started, paused and cancelled from the main application with normal Redux actions, it has access to the full Redux application state and it can dispatch Redux actions as well.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-177. ### What are the differences between `call()` and `put()` in redux-saga?
-
-     Both `call()` and `put()` are effect creator functions. `call()` function is used to create effect description, which instructs middleware to call the promise. `put()` function creates an effect, which instructs middleware to dispatch an action to the store.
-
-     Let's take example of how these effects work for fetching particular user data.
-
-     ```javascript
-     function* fetchUserSaga(action) {
-       // `call` function accepts rest arguments, which will be passed to `api.fetchUser` function.
-       // Instructing middleware to call promise, it resolved value will be assigned to `userData` variable
-       const userData = yield call(api.fetchUser, action.userId);
-
-       // Instructing middleware to dispatch corresponding action.
-       yield put({
-         type: 'FETCH_USER_SUCCESS',
-         userData,
-       });
-     }
-     ```
+      _Saga_ giống như một luồng riêng biệt trong ứng dụng của bạn, chỉ chịu trách nhiệm với các hiệu ứng phụ. `redux-saga` là một chương trình trung gian của (_middleware_), luồng này có thể được khởi động, tạm dừng và hủy trong ứng dụng với các action của Redux thông thường, nó có quyền truy cập đẩy đủ tới store trong ứng dụng Redux và cũng có thể thực thi action của Redux.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+177. ### `call()` và `put()` trong redux-saga khác nhau ra sao? {#what-are-the-differences-between-call-and-put-in-redux-saga}
+
+      Cả `call()` và `put()` đều là những hàm tạo ra hiệu ứng. Hàm `call()`được sử dụng để tạo ra mô tả cho hiệu ứng, hướng dẫn chương trình trung gian gọi promise. Hàm `put()` sử dụng để tạo ra hiệu ứng, hướng dẫn chường trình trung gian thực thi action với store.
+
+      Hãy lấy một ví dụ về cách các hiệu ứng này hoạt động để tải về dữ liệu người dùng.
+
+      ```javascript
+      function* fetchUserSaga(action) {
+        // `call` function accepts rest arguments, which will be passed to `api.fetchUser` function.
+        // Instructing middleware to call promise, it resolved value will be assigned to `userData` variable
+        const userData = yield call(api.fetchUser, action.userId);
+
+        // Instructing middleware to dispatch corresponding action.
+        yield put({
+          type: 'FETCH_USER_SUCCESS',
+          userData,
+        });
+      }
+      ```
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 178. ### What is Redux Thunk?
 
