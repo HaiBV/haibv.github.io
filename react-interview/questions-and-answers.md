@@ -3939,26 +3939,26 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-178. ### What is Redux Thunk?
+178. ### Redux Thunk là gì? {#what-is-redux-thunk}
 
-     _Redux Thunk_ middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods `dispatch()` and `getState()` as parameters.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-179. ### What are the differences between `redux-saga` and `redux-thunk`?
-
-     Both _Redux Thunk_ and _Redux Saga_ take care of dealing with side effects. In most of the scenarios, Thunk uses _Promises_ to deal with them, whereas Saga uses _Generators_. Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. But both middleware can coexist, so you can start with Thunks and introduce Sagas when/if you need them.
+      _Redux Thunk_ là một chương tình trung gian cho phép bạn viết action creators trả về một hàm thay vì trả về action. Thunk có thể sử dụng để trì hoãn hành vi thực hiện action, hoặc thực hiện khi đạt được điều kiện nhất định. Hàm bên trọng nhận các phương thức liên quan đến store như `dispatch()` và `getState()` làm tham số.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-180. ### What is Redux DevTools?
+179. ### redux-saga và redux-thunk khác nhau như thế nào? {#what-are-the-differences-between-redux-saga-and-redux-thunk}
 
-     _Redux DevTools_ is a live-editing time travel environment for Redux with hot reloading, action replay, and customizable UI. If you don't want to bother with installing Redux DevTools and integrating it into your project, consider using Redux DevTools Extension for Chrome and Firefox.
+      _Redux Thunk_ và _Redux Saga_ đều sinh ra để xử lý các tác vụ phụ. Trong hầu hết mọi trường hợp, Thunk sử dụng _Promises_ để thực hiện các tác vụ phụ, trong khi Saga sử dụng _Generators_. Thunk rất dễ sử dụng và Promises rất quen thuộc với nhiều lập trình viên, Sagas/Generators là công cụ mạnh mẽ hơn nhưng bạn sẽ phải học thêm một chút về chúng. Nhưng cả hai đều có thể cùng tồn tại, vậy nên bạn có thể bắt đầu với Thunks và tìm hiểu về Sagas khi/nếu bạn cần đến.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+180. ### Redux DevTools là gì? {#what-is-redux-devtools}
+
+      _Redux DevTools_ là công cụ chỉnh sửa trực tiếp theo thời gian thật cho Redux với các tính năng cập nhật liên tục, tái hiện hành động, và tùy chính giao diện. Nếu bạn không muốn bận tâm đến việc cài đặt Redux DevTools và muốn tích hợp nó vào dự án của bạn, hãy xem xét việc sử dụng Redux DevTools Extension cho trình duyệt Chrome và Firefox.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 181. ### What are the features of Redux DevTools?
 
