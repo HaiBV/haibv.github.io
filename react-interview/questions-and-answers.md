@@ -3971,34 +3971,34 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-182. ### What are Redux selectors and why to use them?
+182. ### Redux selectors là gì và sử dụng khi nào? {#what-are-redux-selectors-and-why-to-use-them}
 
-     _Selectors_ are functions that take Redux state as an argument and return some data to pass to the component.
+      _Selectors_ là những hàm nhận Redux state làm tham số và trả về dữ liệu trong state để truyền vào trong component.
 
-     For example, to get user details from the state:
+      Ví dụ, để lấy chi tiết người dùng trong state:
 
-     ```javascript
-     const getUserData = (state) => state.user.data;
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-183. ### What is Redux Form?
-
-     _Redux Form_ works with React and Redux to enable a form in React to use Redux to store all of its state. Redux Form can be used with raw HTML5 inputs, but it also works very well with common UI frameworks like Material UI, React Widgets and React Bootstrap.
+      ```javascript
+      const getUserData = (state) => state.user.data;
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-184. ### What are the main features of Redux Form?
+183. ### Redux Form là gì? {#what-is-Redux-Form}
 
-     1. Field values persistence via Redux store.
-     2. Validation (sync/async) and submission.
-     3. Formatting, parsing and normalization of field values.
+      _Redux Form_ làm việc với React và Redux để sử dụng một form trong React sử dụng Redux để chứa toàn bộ dữ liệu trong state. Redux Form có thể sử dụng với input HTML5 thô, nhưng cũng làm việc rất tốt với những frameworks thông dụng về UI như Material UI, React Widgets và React Bootstrap.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+184. ### Các chức năng chính của Redux Form là gì? {#what-are-the-main-features-of-redux-form}
+
+      1. Giá trị của các trường nằm trong Redux store.
+      2. Validation (sync/async) và submission.
+      3. Định dạng, phân tích và chuẩn hóa giá trị của các trường.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 185. ### How to add multiple middlewares to Redux?
 
