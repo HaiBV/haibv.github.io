@@ -4000,47 +4000,47 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-185. ### How to add multiple middlewares to Redux?
+185. ### Làm thế nào để thêm các chương trình trung gian vào Redux? {#how-to-add-multiple-middlewares-to-redux}
 
-     You can use `applyMiddleware()`.
+      Bạn có thể sử dụng `applyMiddleware()`.
 
-     For example, you can add `redux-thunk` and `logger` passing them as arguments to `applyMiddleware()`:
+      Lấy ví dụ, bạn có thể sử dụng`redux-thunk` và `logger` như những tham số để truyền vào hàm `applyMiddleware()`:
 
-     ```javascript
-     import { createStore, applyMiddleware } from 'redux';
-     const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore);
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-186. ### How to set initial state in Redux?
-
-     You need to pass initial state as second argument to createStore:
-
-     ```javascript
-     const rootReducer = combineReducers({
-       todos: todos,
-       visibilityFilter: visibilityFilter,
-     });
-
-     const initialState = {
-       todos: [{ id: 123, name: 'example', completed: false }],
-     };
-
-     const store = createStore(rootReducer, initialState);
-     ```
+      ```javascript
+      import { createStore, applyMiddleware } from 'redux';
+      const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore);
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-187. ### How Relay is different from Redux?
+186. ### Cài đặt giá trị khởi tạo cho state trong Redux như thế nào? {#how-to-set-initial-state-in-redux}
 
-     Relay is similar to Redux in that they both use a single store. The main difference is that relay only manages state originated from the server, and all access to the state is used via _GraphQL_ queries (for reading data) and mutations (for changing data). Relay caches the data for you and optimizes data fetching for you, by fetching only changed data and nothing more.
+      Bạn phải truyền giá trị khởi tạo của state vào tham số thứ 2 của hàm createStore:
 
-## React Native
+      ```javascript
+      const rootReducer = combineReducers({
+        todos: todos,
+        visibilityFilter: visibilityFilter,
+      });
 
-    **[⬆ Mục lục](#table-of-contents)**
+      const initialState = {
+        todos: [{ id: 123, name: 'example', completed: false }],
+      };
+
+      const store = createStore(rootReducer, initialState);
+      ```
+
+
+      **[⬆ Mục lục](#table-of-contents)**
+
+187. ### Relay khác với Redux như thế nào? {#how-relay-is-different-from-redux}
+
+      Relay và Redux có điểm giống nhau là đều sử dụng duy nhất một store. Sự khác biệt chính là Relay chỉ quản lý state bắt nguồn từ server, và tất cả quyền truy cập vào state đều thông qua truy vấn _GraphQL_ (để đọc dữ liệu) và mutations (để thay đổi dữ liệu). Relay caches dữ liệu cho bạn và tối ưu hóa việc lấy dữ liệu cho bạn, bằng cách chỉ lấy dữ liệu đã thay đổi và không làm gì khác.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
+  ### React Native
 
 188. ### What is the difference between React Native and React?
 
