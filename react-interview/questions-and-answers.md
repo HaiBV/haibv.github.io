@@ -4044,54 +4044,54 @@ layout: default
 
 188. ### What is the difference between React Native and React?
 
-     **React** is a JavaScript library, supporting both front end web and being run on the server, for building user interfaces and web applications.
+      **React** is a JavaScript library, supporting both front end web and being run on the server, for building user interfaces and web applications.
 
-     **React Native** is a mobile framework that compiles to native app components, allowing you to build native mobile applications (iOS, Android, and Windows) in JavaScript that allows you to use React to build your components, and implements React under the hood.
+      **React Native** is a mobile framework that compiles to native app components, allowing you to build native mobile applications (iOS, Android, and Windows) in JavaScript that allows you to use React to build your components, and implements React under the hood.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 189. ### How to test React Native apps?
 
-     React Native can be tested only in mobile simulators like iOS and Android. You can run the app in your mobile using expo app (https://expo.io) Where it syncs using QR code, your mobile and computer should be in same wireless network.
+      React Native can be tested only in mobile simulators like iOS and Android. You can run the app in your mobile using expo app (https://expo.io) Where it syncs using QR code, your mobile and computer should be in same wireless network.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 190. ### How to do logging in React Native?
 
-     You can use `console.log`, `console.warn`, etc. As of React Native v0.29 you can simply run the following to see logs in the console:
+      You can use `console.log`, `console.warn`, etc. As of React Native v0.29 you can simply run the following to see logs in the console:
 
-     ```
-     $ react-native log-ios
-     $ react-native log-android
-     ```
+      ```
+      $ react-native log-ios
+      $ react-native log-android
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 191. ### How to debug your React Native?
 
-     Follow the below steps to debug React Native app:
+      Follow the below steps to debug React Native app:
 
-     1. Run your application in the iOS simulator.
-     2. Press `Command + D` and a webpage should open up at `http://localhost:8081/debugger-ui`.
-     3. Enable _Pause On Caught Exceptions_ for a better debugging experience.
-     4. Press `Command + Option + I` to open the Chrome Developer tools, or open it via `View` -> `Developer` -> `Developer Tools`.
-     5. You should now be able to debug as you normally would.
-
-## React supported libraries & Integration
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-192. ### What is reselect and how it works?
-
-     _Reselect_ is a **selector library** (for Redux) which uses _memoization_ concept. It was originally written to compute derived data from Redux-like applications state, but it can't be tied to any architecture or library.
-
-     Reselect keeps a copy of the last inputs/outputs of the last call, and recomputes the result only if one of the inputs changes. If the the same inputs are provided twice in a row, Reselect returns the cached output. It's memoization and cache are fully customizable.
+      1. Run your application in the iOS simulator.
+      2. Press `Command + D` and a webpage should open up at `http://localhost:8081/debugger-ui`.
+      3. Enable _Pause On Caught Exceptions_ for a better debugging experience.
+      4. Press `Command + Option + I` to open the Chrome Developer tools, or open it via `View` -> `Developer` -> `Developer Tools`.
+      5. You should now be able to debug as you normally would.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+  ### Thư viện hỗ trợ React và tích hợp
+
+192. ### reselect là gì và nó hoạt động thế nào? {#what-is-reselect-and-how-it-works}
+
+      _Reselect_ là một **thư viện chọn loc** (**selector library**) (cho Redux) which uses _memoization_ concept. It was originally written to compute derived data from Redux-like applications state, but it can't be tied to any architecture or library.
+
+      Reselect keeps a copy of the last inputs/outputs of the last call, and recomputes the result only if one of the inputs changes. If the the same inputs are provided twice in a row, Reselect returns the cached output. It's memoization and cache are fully customizable.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 193. ### What is Flow?
 
