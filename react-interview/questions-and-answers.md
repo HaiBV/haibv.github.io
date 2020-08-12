@@ -4086,19 +4086,19 @@ layout: default
 
 192. ### reselect là gì và nó hoạt động thế nào? {#what-is-reselect-and-how-it-works}
 
-      _Reselect_ là một **thư viện chọn loc** (**selector library**) (cho Redux) which uses _memoization_ concept. It was originally written to compute derived data from Redux-like applications state, but it can't be tied to any architecture or library.
+      _Reselect_ là một **thư viện chọn loc** (**selector library**) (cho Redux) sử dụng ý tưởng từ _memoization_. Ban đầu, nó được sinh ra để tính toán dữ liệu xuất phát từ state của các ứng dụng giống Redux, nhưng nó không bị ràng buộc bởi bất kỳ kiến trúc hoặc thư viện nào.
 
-      Reselect keeps a copy of the last inputs/outputs of the last call, and recomputes the result only if one of the inputs changes. If the the same inputs are provided twice in a row, Reselect returns the cached output. It's memoization and cache are fully customizable.
+      Reselect giữ lại một bản sao của kết quả đầu vào / đầu ra của lần gọi cuối cùng, và tính toán lại kết quả chỉ khi một trong các giá trị đó thay đổi. Nếu các đầu vào giống nhau được cung cấp 2 lần liên tiếp, Reselect sẽ trả về giá trị được cached lại. Memoization và Cache có thể tùy chỉnh toàn bộ.
 
 
       **[⬆ Mục lục](#table-of-contents)**
 
-193. ### What is Flow?
+193. ### Flow là gì? {#what-is-flow}
 
-     _Flow_ is a _static type checker_ designed to find type errors in JavaScript. Flow types can express much more fine-grained distinctions than traditional type systems. For example, Flow helps you catch errors involving `null`, unlike most type systems.
+      _Flow_ là một _trình kiểm tra kiểu tĩnh_ (_static type checker_) được thiết kế để tìm kiểu lỗi trong JavaScript. Các kiểu của Flow thể hiện sự khác biệt rõ rệt với hệ thống kiểu truyền thống. Ví dụ, Flow giúp bạn các lỗi liên quan đến `null`, không giống hầu hết các hệ thống khác.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 194. ### What is the difference between Flow and PropTypes?
 
