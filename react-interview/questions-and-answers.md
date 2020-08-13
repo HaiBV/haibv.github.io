@@ -4100,12 +4100,12 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-194. ### What is the difference between Flow and PropTypes?
+194. ### Flow và PropTypes có gì khác nhau? {#what-is-the-difference-between-flow-and-proptypes}
 
-     Flow is a _static analysis tool_ (static checker) which uses a superset of the language, allowing you to add type annotations to all of your code and catch an entire class of bugs at compile time. PropTypes is a _basic type checker_ (runtime checker) which has been patched onto React. It can't check anything other than the types of the props being passed to a given component. If you want more flexible typechecking for your entire project Flow/TypeScript are appropriate choices.
+      Flow là một _trình kiểm tra kiểu tĩnh_ (_static analysis tool_) (kiểm tra tĩnh) sử dụng tập lớn các ngôn ngữ, cho phép bạn thêm chú thích kiểu vào tất cả code của bạn và bắt được tất cả các lỗi tại thời điểm biên dịch. PropTypes là một _trình kiểm tra kiểu cơ bản_ (_basic type checker_) (kiểm tra khi chạy) đi kèm với React. Nó không thể kiểm tra thứ gì khác ngoài kiểu của props được truyền cho component. Nếu bạn muốn toàn bộ dự án kiểm tra kiểu linh hoạt hơn thì Flow hoặc TypeScript là những lựa chọn hợp lý.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 195. ### How to use Font Awesome icons in React?
 
