@@ -4107,32 +4107,32 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-195. ### How to use Font Awesome icons in React?
+195. ### Sử dụng icon của Font Awesome trong React như thế nào? {#how-to-use-font-awesome-icons-in-react}
 
-     The below steps followed to include Font Awesome in React:
+      Thực hiện các bước dưới đây để sử dụng Font Awesome trong React:
 
-     1. Install `font-awesome`:
+      1. Cài đặt `font-awesome`:
 
-     ```console
-     $ npm install --save font-awesome
-     ```
+      ```console
+      $ npm install --save font-awesome
+      ```
 
-     2. Import `font-awesome` in your `index.js` file:
+      2. Import `font-awesome` vào `index.js`:
 
-     ```javascript
-     import 'font-awesome/css/font-awesome.min.css';
-     ```
+      ```javascript
+      import 'font-awesome/css/font-awesome.min.css';
+      ```
 
-     3. Add Font Awesome classes in `className`:
+      3. Sử dụng các class của Font Awesome trong `className`:
 
-     ```javascript
-     render() {
-       return <div><i className={'fa fa-spinner'} /></div>
-     }
-     ```
+      ```javascript
+      render() {
+        return <div><i className={'fa fa-spinner'} /></div>
+      }
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 196. ### What is React Dev Tools?
 
