@@ -4134,20 +4134,20 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-196. ### What is React Dev Tools?
+196. ### React Dev Tools là gì? {#what-is-react-dev-tools}
 
-     _React Developer Tools_ let you inspect the component hierarchy, including component props and state. It exists both as a browser extension (for Chrome and Firefox), and as a standalone app (works with other environments including Safari, IE, and React Native).
+      _React Developer Tools_ cho phép bạn xem xét cây component trong ứng dụng, bao gồm prop và state của component. Nó tồn tại dưới dạng tiện ích mở rộng của trình duyệt (với Chrome và Firefox), và một như một ứng dụng độc lập (với môi trường Safari, IE, và React Native).
 
-     The official extensions available for different browsers or environments.
+      Các tiện ích mở rộng chính thức có sẵn cho các trình duyệt hoặc môi trường khác nhau.
 
-     1. **Chrome extension**
-     2. **Firefox extension**
-     3. **Standalone app** (Safari, React Native, etc)
+      1. **Chrome**
+      2. **Firefox**
+      3. **Ứng dụng độc lập** (Safari, React Native, etc)
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-197. ### Why is DevTools not loading in Chrome for local files?
+197. ### Tại sao DevTools {#why-is-devtools-not-loading-in-chrome-for-local-files}
 
      If you opened a local HTML file in your browser (`file://...`) then you must first open _Chrome Extensions_ and check `Allow access to file URLs`.
 
