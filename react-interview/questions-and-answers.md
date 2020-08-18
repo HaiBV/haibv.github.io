@@ -4147,16 +4147,16 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-197. ### Tại sao DevTools {#why-is-devtools-not-loading-in-chrome-for-local-files}
+197. ### Tại sao DevTools không dùng được với tập tin local? {#why-is-devtools-not-loading-in-chrome-for-local-files}
 
-     If you opened a local HTML file in your browser (`file://...`) then you must first open _Chrome Extensions_ and check `Allow access to file URLs`.
+      Nếu bạn mở một tập tin HTML local trên trình duyệt (`file://...`) thì trước tiên cần phải mở _Chrome Extensions_ và check `Allow access to file URLs`.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-198. ### How to use Polymer in React?
+198. ### Sử dụng Polymer trong React như thế nào? {#how-to-use-polymer-in-react}
 
-     1. Create a Polymer element:
+      1. Tạo một phần tử Polymer:
 
         ```jsx
         <link rel='import' href='../../bower_components/polymer/polymer.html' />;
@@ -4168,13 +4168,13 @@ layout: default
         });
         ```
 
-     2. Create the Polymer component HTML tag by importing it in a HTML document, e.g. import it in the `index.html` of your React application:
+      2. Tạo thẻ HTML với component Polymer bằng cách nhập nó vào một HTML document, ví dụ: nhập nó vào `index.html` trong ứng dụng React của bạn:
 
         ```html
         <link rel="import" href="./src/polymer-components/calender-element.html" />
         ```
 
-        3. Use that element in the JSX file:
+      3. Sử dụng thành phần đó trong JSX:
 
         ```javascript
         import React from 'react';
@@ -4189,19 +4189,19 @@ layout: default
         ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-199. ### What are the advantages of React over Vue.js?
+199. ### React có những điểm mạnh nào so với Vue.js? {#what-are-the-advantages-of-react-over-vue-js}
 
-     React has the following advantages over Vue.js:
+      So với Vue.js, React có những điểm mạnh như dưới đây:
 
-     1. Gives more flexibility in large apps developing.
-     2. Easier to test.
-     3. Suitable for mobile apps creating.
-     4. More information and solutions available.
+      1. Mang lại sự linh hoạt trong phát triển ứng dụng lớn.
+      2. Dễ dàng kiểm thử.
+      3. Thích hợp cho việc tạo ứng dụng di động.
+      4. Có nhiều thông tin và giải pháp hơn.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 200. ### What is the difference between React and Angular?
 
