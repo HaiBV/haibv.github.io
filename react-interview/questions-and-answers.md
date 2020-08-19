@@ -4203,18 +4203,18 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-200. ### What is the difference between React and Angular?
+200. ### Những điểm khác biệt giữa React và Angular? {#what-is-the-difference-between-react-and-angular}
 
-     | React                                                                                       | Angular                                                                                                                            |
-     | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-     | React is a library and has only the View layer                                              | Angular is a framework and has complete MVC functionality                                                                          |
-     | React handles rendering on the server side                                                  | AngularJS renders only on the client side but Angular 2 and above renders on the server side                                       |
-     | React uses JSX that looks like HTML in JS which can be confusing                            | Angular follows the template approach for HTML, which makes code shorter and easy to understand                                    |
-     | React Native, which is a React type to build mobile applications are faster and more stable | Ionic, Angular's mobile native app is relatively less stable and slower                                                            |
-     | In React, data flows only in one way and hence debugging is easy                            | In Angular, data flows both way i.e it has two-way data binding between children and parent and hence debugging is often difficult |
+      | React | Angular |
+      | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+      | React là một thư viện và chỉ có chức năng cho tầng View | Angular là một framework và có đẩy đủ chức năng cho mô hình MVC |
+      | React có thể thực hiện kết xuất phía server | AngularJS chỉ kết xuất ở dưới client nhưng từ Angular 2 kết xuất ở phía server |
+      | React sử dụng JSX, trong giống như HTML trong JS, điều này dễ gây hiểu lầm | Angular sử dụng template thân thiện với HTML, điều này làm code ngắn hơn và dễ hiểu hơn |
+      | React Native, tương tự như React nhưng dùng để xây dựng ứng dụng mobile, nhanh hơn và ổn định hơn | Ionic, ứng dụng dựa trên Angular cho nền tảng mobile, chậm và kém ổn định hơn |
+      | Với React, các luồng dữ liệu chỉ theo một hướng duy nhất, do đó dễ dàng debug hơn | Với Angular, các luồng dữ liệu đi theo 2 hướng giữa phần tử cha và con, điều này khiến việc debug trở nên khó hơn |
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 201. ### Why React tab is not showing up in DevTools?
 
