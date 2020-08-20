@@ -4216,12 +4216,12 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-201. ### Why React tab is not showing up in DevTools?
+201. ### Tại sao tab React không hiển thị trong DevTools? {#why-react-tab-is-not-showing-up-in-devtools}
 
-     When the page loads, _React DevTools_ sets a global named `__REACT_DEVTOOLS_GLOBAL_HOOK__`, then React communicates with that hook during initialization. If the website is not using React or if React fails to communicate with DevTools then it won't show up the tab.
+      Khi đang tải trang, _React DevTools_ đặt một biến toàn cục với tên `__REACT_DEVTOOLS_GLOBAL_HOOK__`, sau đó React giao tiếp với liên kết này trong quá trình khởi tạo. Nếu trang web không sử dụng React hoặc React không giao tiếp với DevTools thì nó sẽ không hiển thị tab này.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 202. ### What are Styled Components?
 
