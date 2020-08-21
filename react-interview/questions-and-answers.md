@@ -4223,12 +4223,12 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-202. ### What are Styled Components?
+202. ### Styled Components là gì? {#what-are-styled-components}
 
-     `styled-components` is a JavaScript library for styling React applications. It removes the mapping between styles and components, and lets you write actual CSS augmented with JavaScript.
+      `styled-components` là một thư viện JavaScript thực hiện style trong ứng dụng React. Nó loại bỏ việc liên kết giữa style và component, cho phép bạn trực tiếp sử dụng CSS trong JavaScript.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 203. ### Give an example of Styled Components?
 
