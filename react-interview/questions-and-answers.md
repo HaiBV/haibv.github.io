@@ -4230,38 +4230,38 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-203. ### Give an example of Styled Components?
+203. ### Lấy ví dụ về Styled Components? {#give-an-example-of-styled-components}
 
-     Lets create `<Title>` and `<Wrapper>` components with specific styles for each.
+      Tạo 2 component `<Title>` và `<Wrapper>` với những style khác nhau.
 
-     ```javascript
-     import React from 'react';
-     import styled from 'styled-components';
+      ```javascript  
+      import React from 'react';
+      import styled from 'styled-components';
 
-     // Create a <Title> component that renders an <h1> which is centered, red and sized at 1.5em
-     const Title = styled.h1`
-       font-size: 1.5em;
-       text-align: center;
-       color: palevioletred;
-     `;
+      // Tạo một <Title> component kết xuất thẻ <h1> được căn giữa, màu đỏ và cỡ font 1.5em
+      const Title = styled.h1`
+        font-size: 1.5em;
+        text-align: center;
+        color: palevioletred;
+      `;
 
-     // Create a <Wrapper> component that renders a <section> with some padding and a papayawhip background
-     const Wrapper = styled.section`
-       padding: 4em;
-       background: papayawhip;
-     `;
-     ```
+      // Tạo một <Wrapper> component kết xuất thẻ <section> với padding và nền papayawhip
+      const Wrapper = styled.section`
+        padding: 4em;
+        background: papayawhip;
+      `;
+      ```
 
-     These two variables, `Title` and `Wrapper`, are now components that you can render just like any other react component.
+      Ở đây có 2 giá trị, `Title` và `Wrapper`, là những component như những component React khác.
 
-     ```jsx
-     <Wrapper>
-       <Title>{'Lets start first styled component!'}</Title>
-     </Wrapper>
-     ```
+      ```jsx
+      <Wrapper>
+        <Title>{'Lets start first styled component!'}</Title>
+      </Wrapper>
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 204. ### What is Relay?
 
