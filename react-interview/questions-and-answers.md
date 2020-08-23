@@ -4263,12 +4263,12 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-204. ### What is Relay?
+204. ### Relay là gì? {#what-is-relay}
 
-     Relay is a JavaScript framework for providing a data layer and client-server communication to web applications using the React view layer.
+      Relay là một framework bằng JavaScript cung cấp dữ liệu và kết nối giữa client với server dành cho các ứng dụng web bằng cách sử dụng các lớp view React.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 205. ### How to use TypeScript in `create-react-app` application?
 
