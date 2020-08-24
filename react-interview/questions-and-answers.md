@@ -4270,40 +4270,40 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-205. ### How to use TypeScript in `create-react-app` application?
+205. ### Sử dụng TypeScript với `create-react-app` như thế nào? {#how-to-use-typescript-in-create-react-app-application}
 
-     Starting from react-scripts@2.1.0 or higher, there is a built-in support for typescript. You can just pass `--typescript` option as below
+      TypeScript được hỗ trợ sẵn với create-react-app bắt đầu từ react-scripts@2.1.0 trở đi. Chỉ cần thêm tùy chọn `--typescript` như dưới đây
 
-     ```bash
-     npx create-react-app my-app --typescript
+      ```bash
+      npx create-react-app my-app --typescript
 
-     # or
+      # or
 
-     yarn create react-app my-app --typescript
-     ```
+      yarn create react-app my-app --typescript
+      ```
 
-     But for lower versions of react scripts, just supply `--scripts-version` option as `react-scripts-ts` while you create a new project. `react-scripts-ts` is a set of adjustments to take the standard `create-react-app` project pipeline and bring TypeScript into the mix.
+      Với những phiên bản thấp hơn của react scripts, sử dụng tùy chọn `--scripts-version` như là `react-scripts-ts` khi tạo dự án mới. `react-scripts-ts` là một tập hợp các điều chỉnh để giúp các dự án `create-react-app` tiêu chuẩn có thể hỗ trợ TypeScript.
 
-     Now the project layout should look like the following:
+      Khi đó, bố cục dự án sẽ như sau:
 
-     ```
-     my-app/
-     ├─ .gitignore
-     ├─ images.d.ts
-     ├─ node_modules/
-     ├─ public/
-     ├─ src/
-     │  └─ ...
-     ├─ package.json
-     ├─ tsconfig.json
-     ├─ tsconfig.prod.json
-     ├─ tsconfig.test.json
-     └─ tslint.json
-     ```
+      ```
+      my-app/
+      ├─ .gitignore
+      ├─ images.d.ts
+      ├─ node_modules/
+      ├─ public/
+      ├─ src/
+      │  └─ ...
+      ├─ package.json
+      ├─ tsconfig.json
+      ├─ tsconfig.prod.json
+      ├─ tsconfig.test.json
+      └─ tslint.json
+      ```
 
-## Miscellaneous
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+### Miscellaneous
 
 206. ### What are the main features of Reselect library?
 
