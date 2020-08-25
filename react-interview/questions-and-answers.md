@@ -4305,11 +4305,11 @@ layout: default
       **[⬆ Mục lục](#table-of-contents)**
 ### Miscellaneous
 
-206. ### What are the main features of Reselect library?
+206. ### Chức năng chính của thư viện Reselect là gì? {#what-are-the-main-features-of-reselect-library}
 
-     1. Selectors can compute derived data, allowing Redux to store the minimal possible state.
-     2. Selectors are efficient. A selector is not recomputed unless one of its arguments changes.
-     3. Selectors are composable. They can be used as input to other selectors.
+      1. Selectors có thể tính toán dữ liệu gốc, cho phép Redux lưu trữ state tối thiểu có thể.
+      2. Selectors rất hiệu quả. Một selector sẽ không cần tính toán lại trừ khi một trong các tham số của nó thay đổi.
+      3. Selectors có thể kết hợp được. Có thể sử dụng làm đầu vào cho các selectors khác.
 
 207. #### Give an example of Reselect usage?
 
