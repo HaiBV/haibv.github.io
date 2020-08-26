@@ -4311,45 +4311,45 @@ layout: default
       2. Selectors rất hiệu quả. Một selector sẽ không cần tính toán lại trừ khi một trong các tham số của nó thay đổi.
       3. Selectors có thể kết hợp được. Có thể sử dụng làm đầu vào cho các selectors khác.
 
-207. #### Give an example of Reselect usage?
+207. #### Lấy một ví dụ về cách sử dụng Reselect? {#give-an-example-of-reselect-usage}
 
-     Let's take calculations and different amounts of a shipment order with the simplified usage of Reselect:
+      Lấy ví dụ về việc tính toán số lượng khác nhau của một đơn đặt hàng với việc sử dụng Reselect:
 
-     ```javascript
-     import { createSelector } from 'reselect';
+      ```javascript
+      import { createSelector } from 'reselect';
 
-     const shopItemsSelector = (state) => state.shop.items;
-     const taxPercentSelector = (state) => state.shop.taxPercent;
+      const shopItemsSelector = (state) => state.shop.items;
+      const taxPercentSelector = (state) => state.shop.taxPercent;
 
-     const subtotalSelector = createSelector(shopItemsSelector, (items) => items.reduce((acc, item) => acc + item.value, 0));
+      const subtotalSelector = createSelector(shopItemsSelector, (items) => items.reduce((acc, item) => acc + item.value, 0));
 
-     const taxSelector = createSelector(
-       subtotalSelector,
-       taxPercentSelector,
-       (subtotal, taxPercent) => subtotal * (taxPercent / 100)
-     );
+      const taxSelector = createSelector(
+        subtotalSelector,
+        taxPercentSelector,
+        (subtotal, taxPercent) => subtotal * (taxPercent / 100)
+      );
 
-     export const totalSelector = createSelector(subtotalSelector, taxSelector, (subtotal, tax) => ({
-       total: subtotal + tax,
-     }));
+      export const totalSelector = createSelector(subtotalSelector, taxSelector, (subtotal, tax) => ({
+        total: subtotal + tax,
+      }));
 
-     let exampleState = {
-       shop: {
-         taxPercent: 8,
-         items: [
-           { name: 'apple', value: 1.2 },
-           { name: 'orange', value: 0.95 },
-         ],
-       },
-     };
+      let exampleState = {
+        shop: {
+          taxPercent: 8,
+          items: [
+            { name: 'apple', value: 1.2 },
+            { name: 'orange', value: 0.95 },
+          ],
+        },
+      };
 
-     console.log(subtotalSelector(exampleState)); // 2.15
-     console.log(taxSelector(exampleState)); // 0.172
-     console.log(totalSelector(exampleState)); // { total: 2.322 }
-     ```
+      console.log(subtotalSelector(exampleState)); // 2.15
+      console.log(taxSelector(exampleState)); // 0.172
+      console.log(totalSelector(exampleState)); // { total: 2.322 }
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 208. ### What is an action in Redux?
 
