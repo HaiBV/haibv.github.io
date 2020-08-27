@@ -4351,21 +4351,21 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-208. ### What is an action in Redux?
+208. ### Action trong Redux là gì? {#what-is-an-action-in-redux}
 
-     _Actions_ are plain JavaScript objects or payloads of information that send data from your application to your store. They are the only source of information for the store. Actions must have a type property that indicates the type of action being performed.
+      _Actions_ là các đối tượng JavaScript đơn giản hoặc những gói thông tin sẽ gửi thông tin từ ứng dụng của bạn đến store. Chúng là nguồn thông tin duy nhất của store. Actions phải có thuộc tính xác định kiểu cho biết action đang được thực hiện là hành động gì.
 
-     For example an example action which represents adding a new todo item:
+      Lấy ví dụ về một action sẽ thêm mục vào trong danh sách todo:
 
-     ```
-     {
-       type: ADD_TODO,
-       text: 'Add todo item'
-     }
-     ```
+      ```
+      {
+        type: ADD_TODO,
+        text: 'Add todo item'
+      }
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 209. ### Does the statics object work with ES6 classes in React?
 
