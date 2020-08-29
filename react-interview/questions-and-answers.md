@@ -4367,52 +4367,52 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-209. ### Does the statics object work with ES6 classes in React?
+209. ### Các đối tượng tĩnh (static object) có hoạt động với các lớp (classes) của ES6 trong React không? {#does-the-statics-object-work-with-es6-classes-in-react}
 
-     No, `statics` only works with `React.createClass()`:
+      Không, các đối tượng tĩnh (`statics`) chỉ hoạt động với `React.createClass()`:
 
-     ```javascript
-     someComponent = React.createClass({
-       statics: {
-         someMethod: function () {
-           // ..
-         },
-       },
-     });
-     ```
+      ```javascript
+      someComponent = React.createClass({
+        statics: {
+          someMethod: function () {
+            // ..
+          },
+        },
+      });
+      ```
 
-     But you can write statics inside ES6+ classes or writing them outside class as below,
+      Nhưng vẫn có thể sử dụng biến tĩnh bên trong các lớp ES6+ hoặc viết chúng bên ngoài class như dưới đây,
 
-     ```javascript
-     class Component extends React.Component {
-       static propTypes = {
-         // ...
-       };
+      ```javascript
+      class Component extends React.Component {
+        static propTypes = {
+          // ...
+        };
 
-       static someMethod() {
-         // ...
-       }
-     }
-     ```
+        static someMethod() {
+          // ...
+        }
+      }
+      ```
 
-     ```javascript
-     class Component extends React.Component {
-        ....
-     }
+      ```javascript
+      class Component extends React.Component {
+          ....
+      }
 
-     Component.propTypes = {...}
-     Component.someMethod = function(){....}
-     ```
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-210. ### Can Redux only be used with React?
-
-     Redux can be used as a data store for any UI layer. The most common usage is with React and React Native, but there are bindings available for Angular, Angular 2, Vue, Mithril, and more. Redux simply provides a subscription mechanism which can be used by any other code.
+      Component.propTypes = {...}
+      Component.someMethod = function(){....}
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+210. ### Redux chỉ hoạt động được với React đúng ko? {#can-redux-only-be-used-with-react}
+
+      Redux có thể sử dụng như một công cụ lưu trữ dữ liệu với bất kỳ thư viện/framework UI nào. React và React Native là 2 thư viện sử dụng Redux phổ biến nhất, những hoàn toàn có thể sử dụng được với Angular, Angular 2, Vue, Mithril, và nhiều hơn nữa. Redux đơn giản cung cấp một cơ chế đăng ký có thể sử dụng với nhiều thư viện/framework khác nhau.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 211. ### Do you need to have a particular build tool to use Redux?
 
