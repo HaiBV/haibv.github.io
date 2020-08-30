@@ -192,46 +192,46 @@ layout: default
 | 173 | [Cách dùng của tham số ownProps trong `mapStateToProps()` và `mapDispatchToProps()`?](#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops)         |
 | 174 | [Cấu trúc thư mục cấp cao cho một dự án Redux như thế nào?](#how-to-structure-redux-top-level-directories)                                                                                           |
 | 175 | [redux-saga là gì?](#what-is-redux-saga)                                                                                                                                               |
-| 176 | [What is the mental model of redux-saga?](#what-is-the-mental-model-of-redux-saga)                                                                                                       |
-| 177 | [What are the differences between call and put in redux-saga](#what-are-the-differences-between-call-and-put-in-redux-saga)                                                              |
-| 178 | [What is Redux Thunk?](#what-is-redux-thunk)                                                                                                                                             |
-| 179 | [What are the differences between redux-saga and redux-thunk](#what-are-the-differences-between-redux-saga-and-redux-thunk)                                                              |
-| 180 | [What is Redux DevTools?](#what-is-redux-devtools)                                                                                                                                       |
-| 181 | [What are the features of Redux DevTools?](#what-are-the-features-of-redux-devtools)                                                                                                     |
-| 182 | [What are Redux selectors and Why to use them?](#what-are-redux-selectors-and-why-to-use-them)                                                                                           |
-| 183 | [What is Redux Form?](#what-is-redux-form)                                                                                                                                               |
-| 184 | [What are the main features of Redux Form?](#what-are-the-main-features-of-redux-form)                                                                                                   |
-| 185 | [How to add multiple middlewares to Redux?](#how-to-add-multiple-middlewares-to-redux)                                                                                                   |
-| 186 | [How to set initial state in Redux?](#how-to-set-initial-state-in-redux)                                                                                                                 |
-| 187 | [How Relay is different from Redux?](#how-relay-is-different-from-redux)                                                                                                                 |
+| 176 | [Metal model trong Redux Saga là gì?](#what-is-the-mental-model-of-redux-saga)                                                                                                       |
+| 177 | [`call()` và `put()` trong redux-saga khác nhau ra sao?](#what-are-the-differences-between-call-and-put-in-redux-saga)                                                              |
+| 178 | [Redux Thunk là gì?](#what-is-redux-thunk)                                                                                                                                             |
+| 179 | [redux-saga và redux-thunk khác nhau như thế nào?](#what-are-the-differences-between-redux-saga-and-redux-thunk)                                                              |
+| 180 | [Redux DevTools là gì?](#what-is-redux-devtools)                                                                                                                                       |
+| 181 | [Redux DevTools có những chức năng nào?](#what-are-the-features-of-redux-devtools)                                                                                                     |
+| 182 | [Redux selectors là gì và sử dụng khi nào?](#what-are-redux-selectors-and-why-to-use-them)                                                                                           |
+| 183 | [Redux Form là gì?](#what-is-redux-form)                                                                                                                                               |
+| 184 | [Các chức năng chính của Redux Form là gì?](#what-are-the-main-features-of-redux-form)                                                                                                   |
+| 185 | [Làm thế nào để thêm các chương trình trung gian vào Redux?](#how-to-add-multiple-middlewares-to-redux)                                                                                                   |
+| 186 | [Cài đặt giá trị khởi tạo cho state trong Redux như thế nào?](#how-to-set-initial-state-in-redux)                                                                                                                 |
+| 187 | [Relay khác với Redux như thế nào?](#how-relay-is-different-from-redux)                                                                                                                 |
 |     | **React Native**                                                                                                                                                                         |
 | 188 | [What is the difference between React Native and React?](#what-is-the-difference-between-react-native-and-react)                                                                         |
 | 189 | [How to test React Native apps?](#how-to-test-react-native-apps)                                                                                                                         |
 | 190 | [How to do logging in React Native?](#how-to-do-logging-in-react-native)                                                                                                                 |
 | 191 | [How to debug your React Native?](#how-to-debug-your-react-native)                                                                                                                       |
 |     | **React supported libraries and Integration**                                                                                                                                            |
-| 192 | [What is reselect and how it works?](#what-is-reselect-and-how-it-works)                                                                                                                 |
-| 193 | [What is Flow?](#what-is-flow)                                                                                                                                                           |
-| 194 | [What is the difference between Flow and PropTypes?](#what-is-the-difference-between-flow-and-proptypes)                                                                                 |
-| 195 | [How to use font-awesome icons in React?](#how-to-use-font-awesome-icons-in-react)                                                                                                       |
-| 196 | [What is React Dev Tools?](#what-is-react-dev-tools)                                                                                                                                     |
-| 197 | [Why is DevTools not loading in Chrome for local files?](#why-is-devtools-not-loading-in-chrome-for-local-files)                                                                         |
-| 198 | [How to use Polymer in React?](#how-to-use-polymer-in-react)                                                                                                                             |
-| 199 | [What are the advantages of React over Vue.js?](#what-are-the-advantages-of-react-over-vuejs)                                                                                            |
-| 200 | [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular)                                                                                   |
-| 201 | [Why React tab is not showing up in DevTools?](#why-react-tab-is-not-showing-up-in-devtools)                                                                                             |
-| 202 | [What are styled components?](#what-are-styled-components)                                                                                                                               |
-| 203 | [Give an example of Styled Components?](#give-an-example-of-styled-components)                                                                                                           |
-| 204 | [What is Relay?](#what-is-relay)                                                                                                                                                         |
-| 205 | [How to use TypeScript in create-react-app application?](#how-to-use-typescript-in-create-react-app-application)                                                                         |
+| 192 | [reselect là gì và nó hoạt động thế nào?](#what-is-reselect-and-how-it-works)                                                                                                                 |
+| 193 | [Flow là gì?](#what-is-flow)                                                                                                                                                           |
+| 194 | [Flow và PropTypes có gì khác nhau?](#what-is-the-difference-between-flow-and-proptypes)                                                                                 |
+| 195 | [Sử dụng icon của Font Awesome trong React như thế nào?](#how-to-use-font-awesome-icons-in-react)                                                                                                       |
+| 196 | [React Dev Tools là gì?](#what-is-react-dev-tools)                                                                                                                                     |
+| 197 | [Tại sao DevTools không dùng được với tập tin local?](#why-is-devtools-not-loading-in-chrome-for-local-files)                                                                         |
+| 198 | [Sử dụng Polymer trong React như thế nào?](#how-to-use-polymer-in-react)                                                                                                                             |
+| 199 | [React có những điểm mạnh nào so với Vue.js?](#what-are-the-advantages-of-react-over-vuejs)                                                                                            |
+| 200 | [Những điểm khác biệt giữa React và Angular?](#what-is-the-difference-between-react-and-angular)                                                                                   |
+| 201 | [Tại sao tab React không hiển thị trong DevTools?](#why-react-tab-is-not-showing-up-in-devtools)                                                                                             |
+| 202 | [Styled Components là gì?](#what-are-styled-components)                                                                                                                               |
+| 203 | [Lấy ví dụ về Styled Components?](#give-an-example-of-styled-components)                                                                                                           |
+| 204 | [Relay là gì?](#what-is-relay)                                                                                                                                                         |
+| 205 | [Sử dụng TypeScript với `create-react-app` như thế nào?](#how-to-use-typescript-in-create-react-app-application)                                                                         |
 |     | **Miscellaneous**                                                                                                                                                                        |
-| 206 | [What are the main features of reselect library?](#what-are-the-main-features-of-reselect-library)                                                                                       |
-| 207 | [Give an example of reselect usage?](#give-an-example-of-reselect-usage)                                                                                                                 |
-| 208 | [What is an action in Redux?](#what-is-an-action-in-redux)                                                                                                                               |
-| 209 | [Does the statics object work with ES6 classes in React?](#does-the-statics-object-work-with-es6-classes-in-react)                                                                       |
-| 210 | [Can Redux only be used with React?](#can-redux-only-be-used-with-react)                                                                                                                 |
-| 211 | [Do you need to have a particular build tool to use Redux?](#do-you-need-to-have-a-particular-build-tool-to-use-redux)                                                                   |
-| 212 | [How Redux Form initialValues get updated from state?](#how-redux-form-initialvalues-get-updated-from-state)                                                                             |
+| 206 | [Chức năng chính của thư viện Reselect là gì?](#what-are-the-main-features-of-reselect-library)                                                                                       |
+| 207 | [Lấy một ví dụ về cách sử dụng Reselect?](#give-an-example-of-reselect-usage)                                                                                                                 |
+| 208 | [Action trong Redux là gì?](#what-is-an-action-in-redux)                                                                                                                               |
+| 209 | [Các đối tượng tĩnh (static object) có hoạt động với các lớp (classes) của ES6 trong React không?](#does-the-statics-object-work-with-es6-classes-in-react)                                                                       |
+| 210 | [Redux chỉ hoạt động được với React đúng ko?](#can-redux-only-be-used-with-react)                                                                                                                 |
+| 211 | [Có cần phải có một công cụ biên dịch cụ thể để sử dụng Redux ko?](#do-you-need-to-have-a-particular-build-tool-to-use-redux)                                                                   |
+| 212 | [Giá trị khởi tạo (initialvalues) của Redux Form được cập nhật từ state như thế nào?](#how-redux-form-initialvalues-get-updated-from-state)                                                                             |
 | 213 | [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop)                                                                        |
 | 214 | [Can I import an SVG file as react component?](#can-i-import-an-svg-file-as-react-component)                                                                                             |
 | 215 | [Why are inline ref callbacks or functions not recommended?](#why-are-inline-ref-callbacks-or-functions-not-recommended)                                                                 |
@@ -4040,7 +4040,7 @@ layout: default
 
 
       **[⬆ Mục lục](#table-of-contents)**
-  ### React Native
+### React Native
 
 188. ### What is the difference between React Native and React?
 
@@ -4082,7 +4082,7 @@ layout: default
 
 
       **[⬆ Mục lục](#table-of-contents)**
-  ### Thư viện hỗ trợ React và tích hợp
+### Thư viện hỗ trợ React và tích hợp
 
 192. ### reselect là gì và nó hoạt động thế nào? {#what-is-reselect-and-how-it-works}
 
