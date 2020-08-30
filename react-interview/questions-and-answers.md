@@ -4414,28 +4414,28 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-211. ### Do you need to have a particular build tool to use Redux?
+211. ### Có cần phải có một công cụ biên dịch cụ thể để sử dụng Redux ko? {#do-you-need-to-have-a-particular-build-tool-to-use-redux}
 
-     Redux is originally written in ES6 and transpiled for production into ES5 with Webpack and Babel. You should be able to use it regardless of your JavaScript build process. Redux also offers a UMD build that can be used directly without any build process at all.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-212. ### How Redux Form `initialValues` get updated from state?
-
-     You need to add `enableReinitialize : true` setting.
-
-     ```javascript
-     const InitializeFromStateForm = reduxForm({
-       form: 'initializeFromState',
-       enableReinitialize: true,
-     })(UserEdit);
-     ```
-
-     If your `initialValues` prop gets updated, your form will update too.
+      Redux ban đầu được viết bằng ES6 và được biên dịch thành ES5 trên môi trường production thông qua Webpack và Babel. Bạn có thể sử dụng Redux với bất kỳ trình xây dựng JavaScript nào. Redux cũng cung cấp một bản UMD có thể sử dụng trực tiếp mà không cần quá trình xây dựng.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
+
+212. ### Giá trị khởi tạo (`initialvalues`) của Redux Form được cập nhật từ state như thế nào?  {#how-redux-form-initialvalues-get-updated-from-state}
+
+      Bạn phải sử dụng cài đặt `enableReinitialize : true` cho Redux Form.
+
+      ```javascript
+      const InitializeFromStateForm = reduxForm({
+        form: 'initializeFromState',
+        enableReinitialize: true,
+      })(UserEdit);
+      ```
+
+      Nếu `initialValues` từ prop được cập nhật, các giá trị trong form cũng đc cập nhật.
+
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 213. ### How React PropTypes allow different types for one prop?
 
