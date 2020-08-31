@@ -4437,20 +4437,20 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-213. ### How React PropTypes allow different types for one prop?
+213. ### Làm thế nào PropTypes cho phép nhiều hơn 1 loại kiểu biến? {#how-react-proptypes-allow-different-types-for-one-prop}
 
-     You can use `oneOfType()` method of `PropTypes`.
+      Sử dụng phương thức `oneOfType()` của `PropTypes` để cho phép nhiều kiểu biến.
 
-     For example, the height property can be defined with either `string` or `number` type as below:
+      Lấy ví dụ, thuộc tính height có thể nhận kiểu `string` hoặc `number` như dưới đây:
 
-     ```javascript
-     Component.PropTypes = {
-       size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-     };
-     ```
+      ```javascript
+      Component.PropTypes = {
+        size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      };
+      ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 214. ### Can I import an SVG file as react component?
 
