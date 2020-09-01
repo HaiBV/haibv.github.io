@@ -4452,84 +4452,83 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-214. ### Can I import an SVG file as react component?
+214. ### Có thể import một file SVG vào React component được ko? {#can-i-import-an-svg-file-as-react-component}
 
-     You can import SVG directly as component instead of loading it as a file. This feature is available with `react-scripts@2.0.0` and higher.
+      Có thể import trực tiếp file SVG thay vì tải như một file. Chức năng này có từ phiên bản `react-scripts@2.0.0` trở đi.
 
-     ```jsx
-     import { ReactComponent as Logo } from './logo.svg';
+      ```jsx
+      import { ReactComponent as Logo } from './logo.svg';
 
-     const App = () => (
-       <div>
-         {/* Logo is an actual react component */}
-         <Logo />
-       </div>
-     );
-     ```
+      const App = () => (
+        <div>
+          {/* Logo is an actual react component */}
+          <Logo />
+        </div>
+      );
+      ```
 
-     **Note**: Don't forget about the curly braces in the import.
-
-
-    **[⬆ Mục lục](#table-of-contents)**
-
-215. ### Why are inline ref callbacks or functions not recommended?
-
-     If the ref callback is defined as an inline function, it will get called twice during updates, first with null and then again with the DOM element. This is because a new instance of the function is created with each render, so React needs to clear the old ref and set up the new one.
-
-     ```jsx
-     class UserForm extends Component {
-       handleSubmit = () => {
-         console.log("Input Value is: ", this.input.value)
-       }
-     ```
+      **Note**: Đừng quên dấu ngoặc nhọn khi import.
 
 
-       render () {
-        return (
-          <form onSubmit={this.handleSubmit}>
-            <input
-              type='text'
-              ref={(input) => this.input = input} /> // Access DOM input in handle submit
-            <button type='submit'>Submit</button>
-          </form>
-        )
+      **[⬆ Mục lục](#table-of-contents)**
+
+215. ### Tại sao ref không khuyến khích truyền vào hàm hoặc callbacks? {#why-are-inline-ref-callbacks-or-functions-not-recommended}
+
+      Nếu callback của ref là một hàm nội tuyến, nó có thể bị gọi 2 lần khi có cập nhật, lần đầu tiên với null và sau đó với DOM. Vì mỗi lần kết xuất, một phiên bản mới của hàm lại được tạo ra, vì vậy React cần phải xóa những ref cũ và thiết lập những ref mới.
+
+      ```jsx
+      class UserForm extends Component {
+        handleSubmit = () => {
+          console.log("Input Value is: ", this.input.value)
+        }
+
+
+        render () {
+          return (
+            <form onSubmit={this.handleSubmit}>
+              <input
+                type='text'
+                ref={(input) => this.input = input} /> // Access DOM input in handle submit
+              <button type='submit'>Submit</button>
+            </form>
+          )
+        }
       }
-     }
-     ```
+      ```
 
-     But our expectation is for the ref callback to get called once, when the component mounts. One quick fix is to use the ES7 class property syntax to define the function
+      Nhưng chúng ta kỳ vọng callback của ref chỉ được gọi 1 lần, khi component kết xuất lần đầu. Một các khắc phục nhanh là sử dụng cú pháp class với ES7
 
-     ```jsx
-     class UserForm extends Component {
-      handleSubmit = () => {
-        console.log("Input Value is: ", this.input.value)
+      ```jsx
+      class UserForm extends Component {
+        handleSubmit = () => {
+          console.log("Input Value is: ", this.input.value)
+        }
+
+        setSearchInput = (input) => {
+          this.input = input
+        }
+
+        render () {
+          return (
+            <form onSubmit={this.handleSubmit}>
+              <input
+                type='text'
+                ref={this.setSearchInput} /> // Access DOM input in handle submit
+              <button type='submit'>Submit</button>
+            </form>
+          )
+        }
       }
+      ```
 
-      setSearchInput = (input) => {
-        this.input = input
-      }
+      **[⬆ Mục lục](#table-of-contents)**
 
-      render () {
-        return (
-          <form onSubmit={this.handleSubmit}>
-            <input
-              type='text'
-              ref={this.setSearchInput} /> // Access DOM input in handle submit
-            <button type='submit'>Submit</button>
-          </form>
-        )
-      }
-     }
-     ```
+216. ### Kết xuất hijacking trong React là gì? {#what-is-render-hijacking-in-react}
 
-    **[⬆ Mục lục](#table-of-contents)**
-
-216. ### What is render hijacking in react?
-
-     The concept of render hijacking is the ability to control what a component will output from another component. It actually means that you decorate your component by wrapping it into a Higher-Order component. By wrapping you can inject additional props or make other changes, which can cause changing logic of rendering. It does not actually enables hijacking, but by using HOC you make your component behave in different way.
+      Khái niệm render hijacking là khả năng kiếm soát component nào sẽ là đầu ra của một component khác. Thực sự có nghĩa là bạn sẽ gói một component vào trong một Higher-Order component. Bằng cách này, bạn có thể thêm các props bổ sung hoặc các thay đổi khác, gây ảnh hưởng đến quá trình kết xuất. Nó không thực sự cho phép chiếm quyền, nhưng bằng cách sử dụng HOC bạn làm component của mình hoạt động theo cách khác.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 217. ### What are HOC factory implementations?
 
