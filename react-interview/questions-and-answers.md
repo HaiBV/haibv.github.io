@@ -4530,39 +4530,39 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-217. ### What are HOC factory implementations?
+217. ### HOC factory là gì? {#what-are-hoc-factory-implementations}
 
-     There are two main ways of implementing HOCs in React. 1. Props Proxy (PP) and 2. Inheritance Inversion (II). They follow different approaches for manipulating the _WrappedComponent_.
+      Có 2 cách chính để làm việc với HOCs trong React. 1. Props Proxy (PP) và 2. Inheritance Inversion (II). Chúng tuân theo các cách tiếp cận khác nhau để kết xuất _WrappedComponent_.
 
-     **Props Proxy**
+      **Props Proxy**
 
-     In this approach, the render method of the HOC returns a React Element of the type of the WrappedComponent. We also pass through the props that the HOC receives, hence the name **Props Proxy**.
+      Với cách này, phương thức kết xuất của HOC sẽ trả về một thành phần React thuộc loại WrappedComponent. Chúng ta truyền vào props mà HOC nhận được, do đó có tên là **Props Proxy**.
 
-     ```jsx
-     function ppHOC(WrappedComponent) {
-       return class PP extends React.Component {
-         render() {
-           return <WrappedComponent {...this.props} />;
-         }
-       };
-     }
-     ```
+      ```jsx
+      function ppHOC(WrappedComponent) {
+        return class PP extends React.Component {
+          render() {
+            return <WrappedComponent {...this.props} />;
+          }
+        };
+      }
+      ```
 
-     **Inheritance Inversion**
+      **Inheritance Inversion**
 
-     In this approach, the returned HOC class (Enhancer) extends the WrappedComponent. It is called Inheritance Inversion because instead of the WrappedComponent extending some Enhancer class, it is passively extended by the Enhancer. In this way the relationship between them seems **inverse**.
+      Với cách này, lớp HOC trả về (Enhancer) là kết thừa của WrappedComponent. Lý do nó được gọi là Inheritance Inversion do thay vì WrappedComponent mở rộng một số lớp Enhancer, nó mở rộng bị động bởi Enhancer. Theo cách này, mối quan hệ giữa chúng có vẻ **nghịch đảo**.
 
-     ```jsx
-     function iiHOC(WrappedComponent) {
-       return class Enhancer extends WrappedComponent {
-         render() {
-           return super.render();
-         }
-       };
-     }
-     ```
+      ```jsx
+      function iiHOC(WrappedComponent) {
+        return class Enhancer extends WrappedComponent {
+          render() {
+            return super.render();
+          }
+        };
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 218. ### How to pass numbers to React component?
 
