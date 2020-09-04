@@ -4564,15 +4564,15 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-218. ### How to pass numbers to React component?
+218. ### Truyền số vào trong React component như thế nào? {#how-to-pass-numbers-to-react-component}
 
-     You should be passing the numbers via curly braces({}) where as strings inn quotes
+      Sử dụng dấu ngoặc nhọn để truyền số vào prop của component, nếu là chuỗi, cần thêm dấu nháy đơn
 
-     ```jsx
-     React.render(<User age={30} department={'IT'} />, document.getElementById('container'));
-     ```
+      ```jsx
+      React.render(<User age={30} department={'IT'} />, document.getElementById('container'));
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 219. ### Do I need to keep all my state into Redux? Should I ever use react internal state?
 
