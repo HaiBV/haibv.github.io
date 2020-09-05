@@ -4574,20 +4574,20 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-219. ### Do I need to keep all my state into Redux? Should I ever use react internal state?
+219. ### Có cần lưu tất cả state trong Redux? Có nên sử dựng state thông thường? {#do-i-need-to-keep-all-my-state-into-redux?-should-i-ever-use-react-internal-state}
 
-     It is up to developer decision. i.e, It is developer job to determine what kinds of state make up your application, and where each piece of state should live. Some users prefer to keep every single piece of data in Redux, to maintain a fully serializable and controlled version of their application at all times. Others prefer to keep non-critical or UI state, such as “is this dropdown currently open”, inside a component's internal state.
+      Điều này tùy thuộc vào quyết định của developer. Việc của developer là xác định nhưng state nào sẽ tạo nên ứng dụng của bạn và nơi mỗi state sẽ được sử dụng. Một số muốn giữ tất cả dữ liệu state trong Redux, để duy trì ứng dụng của họ được tuần tự và kiểm soát hoàn toàn. Một số khác thích giữ những trạng thái không quan trọng hoặc state về UI, chẳng hạn như “menu dropdown đang được thả xuống”, bên trong state nội tuyển component.
 
-     Below are the thumb rules to determine what kind of data should be put into Redux
+      Dưới đây là các quy tắc xác định các dạng dữ liệu nào được đưa vào trong Redux
 
-     1. Do other parts of the application care about this data?
-     2. Do you need to be able to create further derived data based on this original data?
-     3. Is the same data being used to drive multiple components?
-     4. Is there value to you in being able to restore this state to a given point in time (ie, time travel debugging)?
-     5. Do you want to cache the data (ie, use what's in state if it's already there instead of re-requesting it)?
+      1. Các phần khác của ứng dụng có quan tâm đến dữ liệu này hay không?
+      2. Bạn có cần tạo thêm dữ liệu liên quan đến những dữ liệu gốc này không?
+      3. Có phải cùng một dữ liệu được sử dụng với nhiều component hay không?
+      4. Có giá trị nào đối với bạn có thể phục hồi lại state này tại một thời điểm nào đó không?
+      5. Bạn có muốn lưu dũ liệu này vào bộ nhớ tạm (tức là sử dụng các giá trị trong state thay vì request lại dữ liệu)?
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 220. ### What is the purpose of registerServiceWorker in React?
 
