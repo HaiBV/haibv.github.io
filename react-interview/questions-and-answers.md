@@ -4589,21 +4589,21 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-220. ### What is the purpose of registerServiceWorker in React?
+220. ### Mục đích của registerServiceWorker trong React là gì? {#what-is-the-purpose-of-registerserviceworker-in-react}
 
-     React creates a service worker for you without any configuration by default. The service worker is a web API that helps you cache your assets and other files so that when the user is offline or on slow network, he/she can still see results on the screen, as such, it helps you build a better user experience, that's what you should know about service worker's for now. It's all about adding offline capabilities to your site.
+      React mặc định tạo ra một service worker mà không cần bạn phải cấu hình gì. Service worker là một web API giúp bạn lưu vào bộ nhớ cache nội dung và các file khác để khi người dùng ngoại tuyến hoặc trên mạng chậm, họ vẫn có thể xem kết quả trên màn hình, do đó giúp bạn xây dựng trải nghiệm người dùng tốt hơn, đó là những gì bạn cần biết về service worker. Tất cả để tăng thêm khả năng trải nghiệm ngoại tuyến cho trang web của bạn.
 
-     ```jsx
-     import React from 'react';
-     import ReactDOM from 'react-dom';
-     import App from './App';
-     import registerServiceWorker from './registerServiceWorker';
+      ```jsx
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+      import App from './App';
+      import registerServiceWorker from './registerServiceWorker';
 
-     ReactDOM.render(<App />, document.getElementById('root'));
-     registerServiceWorker();
-     ```
+      ReactDOM.render(<App />, document.getElementById('root'));
+      registerServiceWorker();
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 221. ### What is React memo function?
 
