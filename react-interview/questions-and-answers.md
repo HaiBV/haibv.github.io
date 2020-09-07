@@ -4605,17 +4605,17 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-221. ### What is React memo function?
+221. ### Hàm memo trong React là gì? {#what-is-react-memo-function}
 
-     Class components can be restricted from rendering when their input props are the same using **PureComponent or shouldComponentUpdate**. Now you can do the same with function components by wrapping them in **React.memo**.
+      Class components có thể bị hạn chế hiển thị khi tái kết xuất trong trường hợp props đầu vào không đổi (do sử dụng **PureComponent hoặc shouldComponentUpdate**). Để tăng hiệu năng, có thể đưa sử dụng tương tự với function components trong **React.memo**.
 
-     ```jsx
-     const MyComponent = React.memo(function MyComponent(props) {
-       /* only rerenders if props change */
-     });
-     ```
+      ```jsx
+      const MyComponent = React.memo(function MyComponent(props) {
+        /* only rerenders if props change */
+      });
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 222. ### What is React lazy function?
 
