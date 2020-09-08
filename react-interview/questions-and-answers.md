@@ -4617,25 +4617,25 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-222. ### What is React lazy function?
+222. ### Hàm lazy trong React là gì? {#what-is-react-lazy-function}
 
-     The React.lazy function lets you render an dynamic import as a regular component. It will automatically load the bundle containing the OtherComponent when the component gets rendered. This must return a Promise which resolves to a module with a default export containing a React component.
+      Hàm React.lazy cho phép bạn kết xuất một import động như một component bình thường. Nó sẽ tự động tải gói chứa OtherComponent khi component được kết xuất. Sau đó trả về một Promise trả về một module sẽ render component React.
 
-     ```jsx
-     const OtherComponent = React.lazy(() => import('./OtherComponent'));
+      ```jsx
+      const OtherComponent = React.lazy(() => import('./OtherComponent'));
 
-     function MyComponent() {
-       return (
-         <div>
-           <OtherComponent />
-         </div>
-       );
-     }
-     ```
+      function MyComponent() {
+        return (
+          <div>
+            <OtherComponent />
+          </div>
+        );
+      }
+      ```
 
-     **Note:**
-     React.lazy and Suspense is not yet available for server-side rendering. If you want to do code-splitting in a server rendered app, we still recommend React Loadable.
-     **[⬆ Mục lục](#table-of-contents)**
+      **Note:**
+      React.lazy và Suspense không hiện tại không sử dụng được với kết xuất từ server. Nếu bạn muốn tách biệt giữa với kết xuất server, có thể sử dụng React Loadable.
+      **[⬆ Mục lục](#table-of-contents)**
 
 223. ### How to prevent unnecessary updates using setState?
 
