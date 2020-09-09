@@ -4637,24 +4637,24 @@ layout: default
       React.lazy và Suspense không hiện tại không sử dụng được với kết xuất từ server. Nếu bạn muốn tách biệt giữa với kết xuất server, có thể sử dụng React Loadable.
       **[⬆ Mục lục](#table-of-contents)**
 
-223. ### How to prevent unnecessary updates using setState?
+223. ### Tránh cập nhật không cần thiết với setState như thế nào? {#how-to-prevent-unnecessary-updates-using-setstate}
 
-     You can compare current value of the state with an existing state value and decide whether to rerender the page or not. If the values are same then you need to return **null** to stop rerendering otherwise return the latest state value. For example, the user profile information is conditionally rendered as follows,
+      Bạn có thể so sánh giá trị hiện tại của state với giá trị cập nhật và quyết định xem có kết xuất lại page hay không. Nếu các giá trị không thay đổi, hãy trả về  **null** để ngăn việc hết xuất lại thay vì trả về giá trị cuối cùng của state. Lấy ví dụ, thông tin hồ sơ người dùng được hiển thị có điều kiện như sau,
 
-     ```jsx
-     getUserProfile = (user) => {
-       const latestAddress = user.address;
-       this.setState((state) => {
-         if (state.address === latestAddress) {
-           return null;
-         } else {
-           return { title: latestAddress };
-         }
-       });
-     };
-     ```
+      ```jsx
+      getUserProfile = (user) => {
+        const latestAddress = user.address;
+        this.setState((state) => {
+          if (state.address === latestAddress) {
+            return null;
+          } else {
+            return { title: latestAddress };
+          }
+        });
+      };
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 224. ### How do you render Array, Strings and Numbers in React 16 Version?
 
