@@ -4656,44 +4656,44 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-224. ### How do you render Array, Strings and Numbers in React 16 Version?
+224. ### Kết xuất mảng, chuỗi và số với React 16 như thế nào? {#how-do-you-render-array,-strings-and-numbers-in-react-16-version}
 
-     **Arrays**: Unlike older releases, you don't need to make sure **render** method return a single element in React16. You are able to return multiple sibling elements without a wrapping element by returning an array. For example, let us take the below list of developers,
+      **Mảng**: Không giống như những phiên bản trước đó, phương thức **render** không cần phải trả về một phần tử duy nhất với React16. Bạn cũng có thể trả về nhiều phần tử đồng cấp mà không cần phải đưa phần tử vào hàm return. Hãy lấy một ví dụ về danh sách các developer,
 
-     ```jsx
-     const ReactJSDevs = () => {
-       return [<li key='1'>John</li>, <li key='2'>Jackie</li>, <li key='3'>Jordan</li>];
-     };
-     ```
+      ```jsx
+      const ReactJSDevs = () => {
+        return [<li key='1'>John</li>, <li key='2'>Jackie</li>, <li key='3'>Jordan</li>];
+      };
+      ```
 
-     You can also merge this array of items in another array component
+      Bạn có thể hợp nhất component trên vào trong một mảng khác
 
-     ```jsx
-     const JSDevs = () => {
-       return (
-         <ul>
-           <li>Brad</li>
-           <li>Brodge</li>
-           <ReactJSDevs />
-           <li>Brandon</li>
-         </ul>
-       );
-     };
-     ```
+      ```jsx
+      const JSDevs = () => {
+        return (
+          <ul>
+            <li>Brad</li>
+            <li>Brodge</li>
+            <ReactJSDevs />
+            <li>Brandon</li>
+          </ul>
+        );
+      };
+      ```
 
-     **Strings and Numbers:** You can also return string and number type from the render method
+      **Chuỗi và Số:** Bạn có thể trả về kiểu chuỗi và số trong phương thức render
 
-     ```jsx
-     render() {
-      return 'Welcome to ReactJS questions';
-     }
-     // Number
-     render() {
-      return 2018;
-     }
-     ```
+      ```jsx
+      render() {
+        return 'Welcome to ReactJS questions';
+      }
+      // Number
+      render() {
+        return 2018;
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 225. ### How to use class field declarations syntax in React classes?
 
