@@ -4695,40 +4695,40 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-225. ### How to use class field declarations syntax in React classes?
+225. ### {#how-to-use-class-field-declarations-syntax-in-react-classes}
 
-     React Class Components can be made much more concise using the class field declarations. You can initialize local state without using the constructor and declare class methods by using arrow functions without the extra need to bind them. Let's take a counter example to demonstrate class field declarations for state without using constructor and methods without binding,
+      React Class Components được khai báo ngắn gọn hơn nhiều vì sử dụng các khai báo lớp. Bạn có thể khởi tạo giá trị ban đầu của state mà không cần sử dụng hàm constructor và khai báo các phương thức bằng hàm arrow mà không cần sử dụng bind. Lấy một ví dự về khai báo component với chức năng đếm mà không sử dụng hàm constructor và phương thức không cần binding,
 
-     ```jsx
-     class Counter extends Component {
-       state = { value: 0 };
+      ```jsx
+      class Counter extends Component {
+        state = { value: 0 };
 
-       handleIncrement = () => {
-         this.setState((prevState) => ({
-           value: prevState.value + 1,
-         }));
-       };
+        handleIncrement = () => {
+          this.setState((prevState) => ({
+            value: prevState.value + 1,
+          }));
+        };
 
-       handleDecrement = () => {
-         this.setState((prevState) => ({
-           value: prevState.value - 1,
-         }));
-       };
+        handleDecrement = () => {
+          this.setState((prevState) => ({
+            value: prevState.value - 1,
+          }));
+        };
 
-       render() {
-         return (
-           <div>
-             {this.state.value}
+        render() {
+          return (
+            <div>
+              {this.state.value}
 
-             <button onClick={this.handleIncrement}>+</button>
-             <button onClick={this.handleDecrement}>-</button>
-           </div>
-         );
-       }
-     }
-     ```
+              <button onClick={this.handleIncrement}>+</button>
+              <button onClick={this.handleDecrement}>-</button>
+            </div>
+          );
+        }
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 226. ### What are hooks?
 
