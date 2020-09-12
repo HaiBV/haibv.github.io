@@ -4730,27 +4730,27 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-226. ### What are hooks?
+226. ### Hooks là gì? {#what-are-hooks}
 
-     Hooks is a new feature that lets you use state and other React features without writing a class. Let's see an example of useState hook example,
+      Hooks là một chức năng mới cho phép bạn sử dụng state và các chức năng khác của React mà khong cần sử dụng class. Dưới đây là một ví dụ về hook useState,
 
-     ```jsx
-     import { useState } from 'react';
+      ```jsx
+      import { useState } from 'react';
 
-     function Example() {
-       // Declare a new state variable, which we'll call "count"
-       const [count, setCount] = useState(0);
+      function Example() {
+        // Khai báo một giá trị state mới là "count"
+        const [count, setCount] = useState(0);
 
-       return (
-         <div>
-           <p>You clicked {count} times</p>
-           <button onClick={() => setCount(count + 1)}>Click me</button>
-         </div>
-       );
-     }
-     ```
+        return (
+          <div>
+            <p>You clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>Click me</button>
+          </div>
+        );
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 227. ### What are the rules needs to follow for hooks?
 
