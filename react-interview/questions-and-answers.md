@@ -4752,15 +4752,15 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-227. ### What are the rules needs to follow for hooks?
+227. ### Có các quy tắc nào cần tuân theo khi sử dụng hooks? {#what-are-the-rules-needs-to-follow-for-hooks}
 
-     You need to follow two rules inorder to use hooks
+      Có 2 quy tắc cần tuân theo khi sử dụng hooks
 
-     1. Call Hooks only at the top level of your react functions. i.e, You shouldn’t call Hooks inside loops, conditions, or nested functions. This will ensure that Hooks are called in the same order each time a component renders and it preserves the state of Hooks between multiple useState and useEffect calls.
-     2. Call Hooks from React Functions only. i.e, You shouldn’t call Hooks from regular JavaScript functions.
+      1. Chỉ gọi Hooks khi bắt đầu mỗi hàm. Tức là, bạn không được gọi Hooks bên trong vòng lặp, câu điều kiện hoặc các hàm lồng nhau. Điều này sẽ đảm bảo các Hooks được gọi theo cùng một thứ tự mỗi khi một component kết xuất và duy trì state của Hooks mỗi khi useState và useEffect chạy nhiều lần.
+      2. Chỉ gọi Hooks trong Hàm React Functions. Tức là, Bạn không nên gọi Hooks từ hàm JavaScript thông thường.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 228. ### How to ensure hooks followed the rules in your project?
      React team released an ESLint plugin called **eslint-plugin-react-hooks** that enforces these two rules. You can add this plugin to your project using the below command,
