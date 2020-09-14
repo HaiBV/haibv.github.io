@@ -4762,29 +4762,29 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-228. ### How to ensure hooks followed the rules in your project?
-     React team released an ESLint plugin called **eslint-plugin-react-hooks** that enforces these two rules. You can add this plugin to your project using the below command,
-     ```javascript
-     npm install eslint-plugin-react-hooks@next
-     ```
-     And apply the below config in your ESLint config file,
-     ```javascript
-     // Your ESLint configuration
-     {
-       "plugins": [
-         // ...
-         "react-hooks"
-       ],
-       "rules": {
-         // ...
-         "react-hooks/rules-of-hooks": "error"
-       }
-     }
-     ```
-     **Note:** This plugin is intended to use in Create React App by default.
+228. ### Làm cách nào để chắc chắn hook tuân theo những nguyên tắc trong dự án? {#how-to-ensure-hooks-followed-the-rules-in-your-project}
+      React team đưa ra một thư viện ESLint là **eslint-plugin-react-hooks** thực thi 2 quy tắc của hooks. Bạn có thể thêm thư viện này vào dự án như sau,
+      ```javascript
+      npm install eslint-plugin-react-hooks@next
+      ```
+      Sau đó thêm vào cài đặt của ESLint,
+      ```javascript
+      // Your ESLint configuration
+      {
+        "plugins": [
+          // ...
+          "react-hooks"
+        ],
+        "rules": {
+          // ...
+          "react-hooks/rules-of-hooks": "error"
+        }
+      }
+      ```
+      **Note:** Thư viện này có sẵn khi sử dụng Create React App.
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 229. ### What are the differences between Flux and Redux?
 
