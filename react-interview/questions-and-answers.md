@@ -4786,20 +4786,20 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-229. ### What are the differences between Flux and Redux?
+229. ### So sánh Flux và Redux? {#what-are-the-differences-between-flux-and-redux}
 
-     Below are the major differences between Flux and Redux
+      Dưới đây là những điểm khác biệt chính của Flux và Redux
 
-     | Flux                                           | Redux                                      |
-     | ---------------------------------------------- | ------------------------------------------ |
-     | State is mutable                               | State is immutable                         |
-     | The Store contains both state and change logic | The Store and change logic are separate    |
-     | There are multiple stores exist                | There is only one store exist              |
-     | All the stores are disconnected and flat       | Single store with hierarchical reducers    |
-     | It has a singleton dispatcher                  | There is no concept of dispatcher          |
-     | React components subscribe to the store        | Container components uses connect function |
+      | Flux                                           | Redux                                      |
+      | ---------------------------------------------- | ------------------------------------------ |
+      | State của Flux mutable                         | State của Redux immutable                  |
+      | Store của Flux chứa cả state và chức năng thay đổi state | Store của Redux và thay đổi state tách biệt |
+      | Có thể có nhiều stores cùng tồn tại            | Chỉ có 1 store duy nhất                    |
+      | Tất cả store không liên kết với nhau và phẳn   | Một store với cấu trúc phân tầng           |
+      | Có một dispatcher                              | Không có dispatcher                        |
+      | React components đăng ký (subscribe) với store | Container components sử dụng hàm kết nối   |
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 230. ### What are the benefits of React Router V4?
 
