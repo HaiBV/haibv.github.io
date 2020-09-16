@@ -4801,14 +4801,15 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-230. ### What are the benefits of React Router V4?
+230. ### Nêu những lợi ích của React Route V4? {#what-are-the-benefits-of-react-router-v4}
 
-     Below are the main benefits of React Router V4 module,
+      Dưới đây là những lợi ích chính của React Router V4,
 
-     1. In React Router v4(version 4), the API is completely about components. A router can be visualized as a single component(<BrowserRouter>) which wraps specific child router components(<Route>).
-     2. You don't need to manually set history. The router module will take care history by wrapping routes with <BrowserRouter> component.
-     3. The application size is reduced by adding only the specific router module(Web, core, or native)
-        **[⬆ Mục lục](#table-of-contents)**
+      1. Với React Router v4, toàn bộ API đều ở dạng component. Một router được biểu diễn dưới dạng một component (<BrowserRouter>) chứa những router component con (<Route>).
+      2. Bạn không cần phải tự gán history. Router sẽ quan tâm tới history bằng cách bọc những routes vào trong <BrowserRouter> component.
+      3. Kích thước của ứng dụng được giảm đi vì chỉ sử dụng những module router cụ thể (Web, core, or native)
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 231. ### Can you describe about componentDidCatch lifecycle method signature?
 
