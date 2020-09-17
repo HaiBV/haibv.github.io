@@ -4811,20 +4811,20 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-231. ### Can you describe about componentDidCatch lifecycle method signature?
+231. ### Mô tả phương thức componentDidCatch? {#can-you-describe-about-componentdidcatch-lifecycle-method-signature}
 
-     The **componentDidCatch** lifecycle method is invoked after an error has been thrown by a descendant component. The method receives two parameters,
+      Phương thức **componentDidCatch** được gọi sau khi một lỗi xuất hiện ở một component con. Phương thức nhận 2 tham số,
 
-     1. error: - The error object which was thrown
-     2. info: - An object with a componentStack key contains the information about which component threw the error.
+      1. error: - Đối tượng error xuất hiện
+      2. info: - Đối tượng chưa thông tin lỗi.
 
-     The method structure would be as follows
+      Dưới đây là ví dụ
 
-     ```javascript
-     componentDidCatch(error, info);
-     ```
+      ```javascript
+      componentDidCatch(error, info);
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 232. ### In which scenarios error boundaries do not catch errors?
 
