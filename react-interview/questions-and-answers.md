@@ -4826,15 +4826,16 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-232. ### In which scenarios error boundaries do not catch errors?
+232. ### Trong trường hợp nào error boundaries không bắt được lỗi? {#in-which-scenarios-error-boundaries-do-not-catch-errors}
 
-     Below are the cases in which error boundaries doesn't work
+      Dưới đây là những trường hợp error boundaries sẽ không hoạt động
 
-     1. Inside Event handlers
-     2. Asynchronous code using **setTimeout or requestAnimationFrame** callbacks
-     3. During Server side rendering
-     4. When errors thrown in the error boundary code itself
-        **[⬆ Mục lục](#table-of-contents)**
+      1. Bên trong hàm xử lý sự kiện
+      2. Mã bất đồng bộ sử dụng **setTimeout hoặc requestAnimationFrame** callbacks
+      3. Trong thời gian kết xuất từ Server
+      4. Không bắt được lỗi từ error boundary
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 233. ### Why do not you need error boundaries for event handlers?
 
