@@ -4837,37 +4837,38 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-233. ### Why do not you need error boundaries for event handlers?
+233. ### Tại sao bạn cần Error Boundarites cho xử lý sự kiện? {#why-do-not-you-need-error-boundaries-for-event-handlers}
 
-     Error boundaries do not catch errors inside event handlers. Event handlers don't happened or invoked during rendering time unlike render method or lifecycle methods. So React knows how to recover these kind of errors in event handlers.
-     If still you need to catch an error inside event handler, use the regular JavaScript try / catch statement as below
+      Error boundaries sẽ không bắt được lỗi bên trong xử lý event. Trình xử lý sự kiện không được gọi hoặc làm việc trong thời gian kết xuất như phương thức kết xuất hoặc phương thức vòng đời. Vì vậy React biết cách khôi phục những kiểu lỗi này trong trình xử lý sự kiện.
+      Nếu bạn vẫn muốn bắt được lỗi trong trình xử lý sự kiện, sử dụng phương thức try / catch thông thường của JavaScript
 
-     ```javascript
-     class MyComponent extends React.Component {
-       constructor(props) {
-         super(props);
-         this.state = { error: null };
-       }
+      ```javascript
+      class MyComponent extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { error: null };
+        }
 
-       handleClick = () => {
-         try {
-           // Do something that could throw
-         } catch (error) {
-           this.setState({ error });
-         }
-       };
+        handleClick = () => {
+          try {
+            // Do something that could throw
+          } catch (error) {
+            this.setState({ error });
+          }
+        };
 
-       render() {
-         if (this.state.error) {
-           return <h1>Caught an error.</h1>;
-         }
-         return <div onClick={this.handleClick}>Click Me</div>;
-       }
-     }
-     ```
+        render() {
+          if (this.state.error) {
+            return <h1>Caught an error.</h1>;
+          }
+          return <div onClick={this.handleClick}>Click Me</div>;
+        }
+      }
+      ```
 
-     The above code is catching the error using vanilla javascript try/catch block instead of error boundaries.
-     **[⬆ Mục lục](#table-of-contents)**
+      Đoạn code trên bắt lỗi sử dụng javascript try/catch thay cho error boundaries.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 234. ### What is the difference between try catch block and error boundaries?
      Try catch block works with imperative code whereas error boundaries are meant for declarative code to render on the screen.
