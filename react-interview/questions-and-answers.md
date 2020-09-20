@@ -4870,26 +4870,25 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-234. ### What is the difference between try catch block and error boundaries?
-     Try catch block works with imperative code whereas error boundaries are meant for declarative code to render on the screen.
-     For example, the try catch block used for below imperative code
-     ```javascript
-     try {
-       showButton();
-     } catch (error) {
-       // ...
-     }
-     ```
-     Whereas error boundaries wrap declarative code as below,
-     ```javascript
-     <ErrorBoundary>
-       <MyComponent />
-     </ErrorBoundary>
-     ```
-     So if an error occurs in a **componentDidUpdate** method caused by a **setState** somewhere deep in the tree, it will still correctly propagate to the closest error boundary.
+234. ### Try catch và error boundaries khác nhau thế nào? {#what-is-the-difference-between-try-catch-block-and-error-boundaries}
+      Try catch block làm việc với đoạn mã mệnh lệnh trong khi error boundaries muốn hiện thị lỗi lên giao diện.
+      Dưới đây là ví dụ về try catch hoạt động với mã code mệnh lệnh
+      ```javascript
+      try {
+        showButton();
+      } catch (error) {
+        // ...
+      }
+      ```
+      Trong khi error boundaries được khai báo như bên dưới,
+      ```javascript
+      <ErrorBoundary>
+        <MyComponent />
+      </ErrorBoundary>
+      ```
+      Vì thế nếu có lỗi xảy ra ở phương thức **componentDidUpdate** vì một **setState** đâu đó trong cấu trúc cây state, nó sẽ vẫn đưa đến error boundary gần nhất.
 
-
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 235. ### What is the behavior of uncaught errors in react 16?
 
