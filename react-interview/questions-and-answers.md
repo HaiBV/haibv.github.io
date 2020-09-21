@@ -4890,10 +4890,11 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-235. ### What is the behavior of uncaught errors in react 16?
+235. ### Hành vi không tính là lỗi ở React 16 là gì? {#what-is-the-behavior-of-uncaught-errors-in-react-16}
 
-     In React 16, errors that were not caught by any error boundary will result in unmounting of the whole React component tree. The reason behind this decision is that it is worse to leave corrupted UI in place than to completely remove it. For example, it is worse for a payments app to display a wrong amount than to render nothing.
-     **[⬆ Mục lục](#table-of-contents)**
+      Với React 16, những lỗi không bắt được bởi error boundary sẽ bị loại khỏi cây component trong React. Lý do là vì việc để cho giao diện người dùng (UI) bị lỗi tại chỗ tệ hơn việc xóa hoàn toàn lỗi đó. Ví dụ, việc ứng dụng thanh toán hiện thị sai số tiền tệ hơn rất nhiều việc không hiển thị gì.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 236. ### What is the proper placement for error boundaries?
 
