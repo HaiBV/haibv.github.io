@@ -4896,13 +4896,14 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-236. ### What is the proper placement for error boundaries?
+236. ### Vị trí thích hợp để đặt error boundaries? {#what-is-the-proper-placement-for-error-boundaries}
 
-     The granularity of error boundaries usage is up to the developer based on project needs. You can follow either of these approaches,
+      Mức độ chi tiết của việc sử dụng error boundaries tùy thuộc vào developer và nhu cầu dự án. Bạn có thể làm theo một trong các cách tiếp cận dưới đây,
 
-     1. You can wrap top-level route components to display a generic error message for the entire application.
-     2. You can also wrap individual components in an error boundary to protect them from crashing the rest of the application.
-        **[⬆ Mục lục](#table-of-contents)**
+      1. Bạn có thể bọc route component cấp cao nhất để hiển thị thông báo lỗi chung cho toàn bộ ứng dụng.
+      2. Bạn cũng có thể bọc các component riêng lẻ trong một error boundary để tránh chúng làm hỏng phần còn lại của hệ thống.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 237. ### What is the benefit of component stack trace from error boundary?
 
