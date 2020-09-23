@@ -4902,17 +4902,16 @@ layout: default
 
       1. Bạn có thể bọc route component cấp cao nhất để hiển thị thông báo lỗi chung cho toàn bộ ứng dụng.
       2. Bạn cũng có thể bọc các component riêng lẻ trong một error boundary để tránh chúng làm hỏng phần còn lại của hệ thống.
-      
+
       **[⬆ Mục lục](#table-of-contents)**
 
-237. ### What is the benefit of component stack trace from error boundary?
+237. ### Lợi ích của component stack trace từ error boundary là gì? {#what-is-the-benefit-of-component-stack-trace-from-error-boundary}
 
-     Apart from error messages and javascript stack, React16 will display the component stack trace with file names and line numbers using error boundary concept. For example, BuggyCounter component displays the component stack trace as below,
+      Ngoài việc báo lỗi và stack javascript, React16 sẽ hiển thị component truy dấu lỗi theo tên file và số dòng code sử dụng error boundary. Ví dụ, BuggyCounter component hiện thị truy dấu lỗi như dưới đây
 
-     ![stacktrace](images/error_boundary.png)
+      ![stacktrace](images/error_boundary.png)
 
-
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 238. ### What is the required method to be defined for a class component?
 
