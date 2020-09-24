@@ -4913,21 +4913,22 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-238. ### What is the required method to be defined for a class component?
+238. ### Phương thức bắt buộc để định nghĩa một class component là gì? {#what-is-the-required-method-to-be-defined-for-a-class-component}
 
-     The render() method is the only required method in a class component. i.e, All methods other than render method are optional for a class component.
-     **[⬆ Mục lục](#table-of-contents)**
+      Phương thức render() là phương thức bắt buộc duy nhất của một class component. từc là, Tất cả các phương thức khác không phải phương thức render là đều không bắt buộc.
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
-239. ### What are the possible return types of render method?
-     Below are the list of following types used and return from render method,
-     1. **React elements:** Elements that instruct React to render a DOM node. It includes html elements such as `<div/>` and user defined elements.
-     2. **Arrays and fragments:** Return multiple elements to render as Arrays and Fragments to wrap multiple elements
-     3. **Portals:** Render children into a different DOM subtree.
-     4. **String and numbers:** Render both Strings and Numbers as text nodes in the DOM
-     5. **Booleans or null:** Doesn't render anything but these types are used to conditionally render content.
+239. ### Phương thức render có thể trả về những kiểu nào? {#what-are-the-possible-return-types-of-render-method}
+      
+      Dưới đây là danh sách những kiểu trả về của phương thức render,
+      1. **Phần tử React:** Các phần tử mà từ đó React kết xuất thành DOM. Bao gồm nhưng phần từ html như `<div/>` và các phần tử người dùng định nghĩa.
+      2. **Arrays và fragments:** Trả về nhiều phần tử được kết xuất dưới dạng Arrays và Fragments để bọc nhiều phần tử.
+      3. **Portals:** Kết xuất phần tử con vào trong một cây DOM khác.
+      4. **String và numbers:** Kết xuất Strings và Numbers như những đoạn văn bản trong DOM
+      5. **Booleans hoặc null:** Không kết xuất gì nhưng để hiện thị nội dung có điều kiện.
 
-
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 240. ### What is the main purpose of constructor?
 
