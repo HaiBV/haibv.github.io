@@ -4930,29 +4930,31 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-240. ### What is the main purpose of constructor?
+240. ### Mục đích chính của hàm constructor là gì? {#what-is-the-main-purpose-of-constructor}
 
-     The constructor is mainly used for two purposes,
+      Hàm constructor có 2 mục đích chính,
 
-     1. To initialize local state by assigning object to this.state
-     2. For binding event handler methods to the instance
-        For example, the below code covers both the above cases,
+      1. Khởi tạo giá trị state nội bộ component và gán cho biến this.state
+      2. Gán phương thức xử lý sự kiện cho phần tử
+      
+      Ví dụ, đoạn code dưới đây bao hàm cả 2 mục đích trên,
 
-     ```javascript
-     constructor(props) {
-       super(props);
-       // Don't call this.setState() here!
-       this.state = { counter: 0 };
-       this.handleClick = this.handleClick.bind(this);
-     }
-     ```
+      ```javascript
+      constructor(props) {
+        super(props);
+        // Không được sử dụng this.setState() ở đây!
+        this.state = { counter: 0 };
+        this.handleClick = this.handleClick.bind(this);
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
-241. ### Is it mandatory to define constructor for React component?
+241. ### Có bắt buộc phải định nghĩa hàm constructor trong React component? {#is-it-mandatory-to-define-constructor-for-react-component}
 
-     No, it is not mandatory. i.e, If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
-     **[⬆ Mục lục](#table-of-contents)**
+      Không, điều này không bắt buộc. tức là, nếu bạn không cần khởi tạo giá trị state nội bộ, và không cần gán phương thức xử lý hành động, bạn không cần phải viết hàm constructor bên trong React component.
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
 242. ### What are default props?
 
