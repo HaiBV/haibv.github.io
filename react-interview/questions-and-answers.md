@@ -4956,30 +4956,31 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-242. ### What are default props?
+242. ### Giá trị mặc định của props là gì? {#what-are-default-props}
 
-     The defaultProps are defined as a property on the component class to set the default props for the class. This is used for undefined props, but not for null props. For example, let us create color default prop for the button component,
+      Đối tượng defaultProps được định nghĩa như một thành phần của component chứa những giá trị mặc định của props. Sử dụng cho những props không được định nghĩa (undefined), nhưng không dành cho giá trị null. Ví dụ, tạo một component với nút bấm có màu mặc định,
 
-     ```javascript
-     class MyButton extends React.Component {
-       // ...
-     }
-
-     MyButton.defaultProps = {
-       color: 'red',
-     };
-     ```
-
-     If props.color is not provided then it will set the default value to 'red'. i.e, Whenever you try to access the color prop it uses default value
-
-     ```javascript
-     render() {
-        return <MyButton /> ; // props.color will be set to red
+      ```javascript
+      class MyButton extends React.Component {
+        // ...
       }
-     ```
 
-     **Note:** If you provide null value then it remains null value.
-     **[⬆ Mục lục](#table-of-contents)**
+      MyButton.defaultProps = {
+        color: 'red',
+      };
+      ```
+
+      Nếu props.color không được cung cấp thì sẽ nhận giá trị mặc định là 'red'. 
+
+      ```javascript
+      render() {
+          return <MyButton /> ; // props.color được đặt là red
+        }
+      ```
+
+      **Note:** Nếu bạn cung cấp giá trị null, props sẽ nhận giá trị null.
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 243. ### Why should not call setState in componentWillUnmount?
 
