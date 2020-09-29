@@ -4982,10 +4982,11 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-243. ### Why should not call setState in componentWillUnmount?
+243. ### Có nên gọi setState() trong componentWillUnmount() không? {#why-should-not-call-setstate-in-componentwillunmount}
 
-     You should not call setState() in componentWillUnmount() because Once a component instance is unmounted, it will never be mounted again.
-     **[⬆ Mục lục](#table-of-contents)**
+      Không nên gọi setState() trong componentWillUnmount() vì một khi component unmounted, nó sẽ không bao giờ có thể mounted lại.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 244. ### What is the purpose of getDerivedStateFromError?
 
