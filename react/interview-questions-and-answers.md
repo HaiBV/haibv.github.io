@@ -4988,40 +4988,40 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-244. ### What is the purpose of getDerivedStateFromError?
+244. ### Mục đích của getDerivedStateFromError() là gì? {#what-is-the-purpose-of-getderivedstatefromerror}
 
-     This lifecycle method is invoked after an error has been thrown by a descendant component. It receives the error that was thrown as a parameter and should return a value to update state. The signature of the lifecycle method is as follows,
+      Phương thức vòng đời này được gọi sau khi một component đưa ra một lỗi. Nó nhận được lỗi đưa ra dưới dạn một tham số và sẽ trả về một giá trị để cập nhật state. Phương thức này được sử dụng như sau,
 
-     ```javascript
-     static getDerivedStateFromError(error)
-     ```
+      ```javascript
+      static getDerivedStateFromError(error)
+      ```
 
-     Let us take error boundary use case with the above lifecycle method for demonistration purpose,
+      Trong TH sử dụng error boundary cùng với phương thức trên để làm rõ hơn mục đích,
 
-     ```javascript
-     class ErrorBoundary extends React.Component {
-       constructor(props) {
-         super(props);
-         this.state = { hasError: false };
-       }
+      ```javascript
+      class ErrorBoundary extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { hasError: false };
+        }
 
-       static getDerivedStateFromError(error) {
-         // Update state so the next render will show the fallback UI.
-         return { hasError: true };
-       }
+        static getDerivedStateFromError(error) {
+          // Cập nhật state để khi kết xuất lại UI sẽ hiển thị lỗi.
+          return { hasError: true };
+        }
 
-       render() {
-         if (this.state.hasError) {
-           // You can render any custom fallback UI
-           return <h1>Something went wrong.</h1>;
-         }
+        render() {
+          if (this.state.hasError) {
+            // Có thể kết xuất bất kỳ UI nào
+            return <h1>Something went wrong.</h1>;
+          }
 
-         return this.props.children;
-       }
-     }
-     ```
+          return this.props.children;
+        }
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 245. ### What is the methods order when component re-rendered?
      An update can be caused by changes to props or state. The below methods are called in the following order when a component is being re-rendered.
