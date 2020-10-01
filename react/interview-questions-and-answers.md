@@ -5023,16 +5023,16 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-245. ### What is the methods order when component re-rendered?
-     An update can be caused by changes to props or state. The below methods are called in the following order when a component is being re-rendered.
-     1. static getDerivedStateFromProps()
-     2. shouldComponentUpdate()
-     3. render()
-     4. getSnapshotBeforeUpdate()
-     5. componentDidUpdate()
+245. ### Thứ tự phương thức khi component tái kết xuất? {#what-is-the-methods-order-when-component-re-rendered}
+      Cập nhật được thực hiện khi props hoặc state thay đổi. Những phương thức sẽ được gọi theo thứ tự dưới đây khi component được tái kết xuất.
+      
+      1. static getDerivedStateFromProps()
+      2. shouldComponentUpdate()
+      3. render()
+      4. getSnapshotBeforeUpdate()
+      5. componentDidUpdate()
 
-
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 246. ### What are the methods invoked during error handling?
 
