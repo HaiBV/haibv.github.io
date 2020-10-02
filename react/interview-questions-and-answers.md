@@ -5034,13 +5034,14 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-246. ### What are the methods invoked during error handling?
+246. ### Những phương thức nào được sử dụng trong quá trình xử lý lỗi? {#what-are-the-methods-invoked-during-error-handling}
 
-     Below methods are called when there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+      Dưới đây là những phương thức sẽ được sử dụng khi một lỗi phát sinh trong quá trình kết xuất, trong phương thức vòng đời, hoặc trong constructor của bất kỳ component con nào.
 
-     1. static getDerivedStateFromError()
-     2. componentDidCatch()
-        **[⬆ Mục lục](#table-of-contents)**
+      1. static getDerivedStateFromError()
+      2. componentDidCatch()
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 247. ### What is the purpose of displayName class property?
 
