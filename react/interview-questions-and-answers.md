@@ -5043,25 +5043,26 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-247. ### What is the purpose of displayName class property?
+247. ### Mục đích của thuộc tính displayName là gì? {#what-is-the-purpose-of-displayname-class-property}
 
-     The displayName string is used in debugging messages. Usually, you don’t need to set it explicitly because it’s inferred from the name of the function or class that defines the component. You might want to set it explicitly if you want to display a different name for debugging purposes or when you create a higher-order component.
-     For example, To ease debugging, choose a display name that communicates that it’s the result of a withSubscription HOC.
+      Thuộc tính displayName được sử dụng làm thông tin debug. Thông thường, bạn không cần phải đặt một giá trị rõ ràng vì nó được suy ra từ tên của hàm hoặc lớp định nghĩa component. Bạn có thể muốn đặt nó rõ ràng neneus bạn muốn hiển thị một tên khác cho mục đích debug hoặc khi tạo ra một higher-order component.
+      
+      Ví dụ, để dễ dàng debug, chọn một tên hiển thị thông báo kết quả của HOC withSubscription.
 
-     ```javascript
-     function withSubscription(WrappedComponent) {
-       class WithSubscription extends React.Component {
-         /* ... */
-       }
-       WithSubscription.displayName = `WithSubscription(${getDisplayName(WrappedComponent)})`;
-       return WithSubscription;
-     }
-     function getDisplayName(WrappedComponent) {
-       return WrappedComponent.displayName || WrappedComponent.name || 'Component';
-     }
-     ```
+        ```javascript
+        function withSubscription(WrappedComponent) {
+          class WithSubscription extends React.Component {
+            /* ... */
+          }
+        WithSubscription.displayName = `WithSubscription(${getDisplayName(WrappedComponent)})`;
+        return WithSubscription;
+      }
+      function getDisplayName(WrappedComponent) {
+        return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 248. ### What is the browser support for react applications?
 
