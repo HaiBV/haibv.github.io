@@ -5064,10 +5064,11 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-248. ### What is the browser support for react applications?
+248. ### Những trình duyệt nào hỗ trợ ứng dụng React? {#what-is-the-browser-support-for-react-applications}
 
-     React supports all popular browsers, including Internet Explorer 9 and above, although some polyfills are required for older browsers such as IE 9 and IE 10. If you use **es5-shim and es5-sham** polyfill then it even support old browsers that doesn't support ES5 methods.
-     **[⬆ Mục lục](#table-of-contents)**
+      React hỗ trợ tất cả các trình duyệt phổ biến, bao gồm cả IE 9 trở lên, mặc dù một số polyfills dùng được với trình duyệt cũ hơn như IE 9 và IE 10. Nếu bạn sử dụng polyfill **es5-shim và es5-sham**, có thể hỗ trợ được những trình duyệt cũ không hỗ trợ chuẩn ES5.
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
 249. ### What is the purpose of unmountComponentAtNode method?
 
