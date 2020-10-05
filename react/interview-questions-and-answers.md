@@ -5070,16 +5070,17 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-249. ### What is the purpose of unmountComponentAtNode method?
+249. ### Mục đích của phương thức unmountComponentAtNode là gì? {#what-is-the-purpose-of-unmountcomponentatnode-method}
 
-     This method is available from react-dom package and it removes a mounted React component from the DOM and clean up its event handlers and state. If no component was mounted in the container, calling this function does nothing. Returns true if a component was unmounted and false if there was no component to unmount.
-     The method signature would be as follows,
+      Phương thức này có sẵn trong gói react-dom, nó loại bỏ một React component khỏi DOM và dọn dẹp các trình xử lý sự kiện và state. Nếu không có component nào, hàm này sẽ không làm gì khi được gọi. Trả về true nếu một component được loại bỏ và false nếu không có component nào bị loại bỏ.
+      
+      Phương thức này được gọi như sau,
 
-     ```javascript
-     ReactDOM.unmountComponentAtNode(container);
-     ```
+      ```javascript
+      ReactDOM.unmountComponentAtNode(container);
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 250. ### What is code-splitting?
 
