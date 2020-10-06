@@ -5082,47 +5082,47 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-250. ### What is code-splitting?
+250. ### Code-splitting là gì? {#what-is-code-splitting}
 
-     Code-Splitting is a feature supported by bundlers like Webpack and Browserify which can create multiple bundles that can be dynamically loaded at runtime. The react project supports code splitting via dynamic import() feature.
-     For example, in the below code snippets, it will make moduleA.js and all its unique dependencies as a separate chunk that only loads after the user clicks the 'Load' button.
-     **moduleA.js**
+      Code-Splitting là một chức năng được có trong Webpack hoặc Browserify, hỗ trợ tạo các gói được tải động vào thời điểm chạy. Dự án react hỗ trợ code splitting thông qua tính năng import() động.
+      
+      Ví dụ, trong đoạn code dưới đây, sẽ tạo ra moduleA.js và tất cả các phụ phuộc duy nhất của nó thành một đoạn riêng biệt chỉ tải sau khi người dùng bấm vào nút 'Load'.
+      
+      **moduleA.js**
+      ```javascript
+      const moduleA = 'Hello';
 
-     ```javascript
-     const moduleA = 'Hello';
+      export { moduleA };
+      ```
 
-     export { moduleA };
-     ```
+      **App.js**
+      ```javascript
+      import React, { Component } from 'react';
 
-     **App.js**
+      class App extends Component {
+        handleClick = () => {
+          import('./moduleA')
+            .then(({ moduleA }) => {
+              // Use moduleA
+            })
+            .catch((err) => {
+              // Handle failure
+            });
+        };
 
-     ```javascript
-     import React, { Component } from 'react';
+        render() {
+          return (
+            <div>
+              <button onClick={this.handleClick}>Load</button>
+            </div>
+          );
+        }
+      }
 
-     class App extends Component {
-       handleClick = () => {
-         import('./moduleA')
-           .then(({ moduleA }) => {
-             // Use moduleA
-           })
-           .catch((err) => {
-             // Handle failure
-           });
-       };
+      export default App;
+      ```
 
-       render() {
-         return (
-           <div>
-             <button onClick={this.handleClick}>Load</button>
-           </div>
-         );
-       }
-     }
-
-     export default App;
-     ```
-
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 251. ### What is the benefit of strict mode?
 
