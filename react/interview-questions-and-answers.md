@@ -5124,16 +5124,17 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-251. ### What is the benefit of strict mode?
+251. ### Lợi ích của strict mode là gì? {#what-is-the-benefit-of-strict-mode}
 
-     The <StrictMode> will be helpful in the below cases
+      <StrictMode> có lợi ích trong những trường hợp dưới đây
 
-     1. Identifying components with **unsafe lifecycle methods**.
-     2. Warning about **legacy string ref** API usage.
-     3. Detecting unexpected **side effects**.
-     4. Detecting **legacy context** API.
-     5. Warning about deprecated findDOMNode usage
-        **[⬆ Mục lục](#table-of-contents)**
+      1. Xác định các components với các **phương thức vòng đời không an toàn**.
+      2. Cảnh báo về việc sử dụng API **legacy string ref**.
+      3. Phát hiện các **hiệu ứng phụ** không mong muốn.
+      4. Phát hiện **legacy context** API.
+      5. Cảnh báo về việc sử dụng findDOMNode
+        
+      **[⬆ Mục lục](#table-of-contents)**
 
 252. ### What are Keyed Fragments?
 
