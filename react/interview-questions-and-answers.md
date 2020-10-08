@@ -5136,28 +5136,29 @@ layout: default
         
       **[⬆ Mục lục](#table-of-contents)**
 
-252. ### What are Keyed Fragments?
+252. ### Tác dụng của thuộc tính key với Fragments? {#what-are-keyed-fragments}
 
-     The Fragments declared with the explicit <React.Fragment> syntax may have keys. The general usecase is mapping a collection to an array of fragments as below,
+      Component Fragments được khai báo với cú pháp <React.Fragment> có thể có thuộc tính key. Thường sử dụng trong trường hợp ánh xạ một tập hợp thành một mảng các frament như dưới đây,
 
-     ```javascript
-     function Glossary(props) {
-       return (
-         <dl>
-           {props.items.map((item) => (
-             // Without the `key`, React will fire a key warning
-             <React.Fragment key={item.id}>
-               <dt>{item.term}</dt>
-               <dd>{item.description}</dd>
-             </React.Fragment>
-           ))}
-         </dl>
-       );
-     }
-     ```
+      ```javascript
+      function Glossary(props) {
+        return (
+          <dl>
+            {props.items.map((item) => (
+              // nếu không có `key`, React sẽ xuất hiện cảnh báo
+              <React.Fragment key={item.id}>
+                <dt>{item.term}</dt>
+                <dd>{item.description}</dd>
+              </React.Fragment>
+            ))}
+          </dl>
+        );
+      }
+      ```
 
-     **Note:** key is the only attribute that can be passed to Fragment. In the future, there might be a support for additional attributes, such as event handlers.
-     **[⬆ Mục lục](#table-of-contents)**
+      **Ghi chú:** key là thuộc tính duy nhất có thể sử dụng với Fragment. Trong tương lai, có thể hỗ trợ những thuộc tính khác, như xử lý lỗi.
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
 253. ### Does React support all HTML attributes?
 
