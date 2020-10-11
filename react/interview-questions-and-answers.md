@@ -5160,18 +5160,19 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-253. ### Does React support all HTML attributes?
+253. ### React có hỗ trợ tất cả các thuộc tính trong HTML không? {does-React-support-all-HTML-attributes}
 
-     As of React 16, both standard or custom DOM attributes are fully supported. Since React components often take both custom and DOM-related props, React uses the camelCase convention just like the DOM APIs. Let us take few props with respect to standard HTML attributes,
+      Với React 16, tất cả các thuộc tính HTML cơ bản và tùy biến đều được hỗ trợ. Vì React components thường nhận biến tùy chỉnh và liên quan đến DOM làm props, React sử dụng quy ước camelCase tương tự như DOM APIs. Dưới đây là một số ví dụ liên quan đến thuộc tính HTML cơ bản,
 
-     ```javascript
-     <div tabIndex="-1" />      // Just like node.tabIndex DOM API
-     <div className="Button" /> // Just like node.className DOM API
-     <input readOnly={true} />  // Just like node.readOnly DOM API
-     ```
+      ```javascript
+      <div tabIndex="-1" />      // Giống như node.tabIndex DOM API
+      <div className="Button" /> // Giống như node.className DOM API
+      <input readOnly={true} />  // Giống như node.readOnly DOM API
+      ```
 
-     These props work similarly to the corresponding HTML attributes, with the exception of the special cases. It also support all SVG attributes.
-     **[⬆ Mục lục](#table-of-contents)**
+      Những props này hoạt động tương tự như những thuộc tính HTML tương ứng, vẫn có một số trường hợp ngoại lệ. Hỗ trợ tất cả thuộc tính của thẻ SVG.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 254. ### What are the limitations with HOCs?
 
