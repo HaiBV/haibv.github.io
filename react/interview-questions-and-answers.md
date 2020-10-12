@@ -5174,53 +5174,50 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-254. ### What are the limitations with HOCs?
+254. ### HOC có những giới hạn nào? {#what-are-the-limitations-with-hocs}
 
-     Higher-order components come with a few caveats apart from its benefits. Below are the few listed in an order
+      Higher-order components đi kèm với một số lưu ý ngoài những lợi ích của nó. Dưới đây là một số các lưu ý đó
 
-     1. **Don’t Use HOCs Inside the render Method:**
-        It is not recommended to apply a HOC to a component within the render method of a component.
+      1. **Không dùng HOCs bên trong phương thức kết xuất:**
+        Không nên áp dụng HOC cho một component bên trong phương thức kết xuất của một component khác.
         ```javascript
-        render() {
-          // A new version of EnhancedComponent is created on every render
-          // EnhancedComponent1 !== EnhancedComponent2
-          const EnhancedComponent = enhance(MyComponent);
-          // That causes the entire subtree to unmount/remount each time!
-          return <EnhancedComponent />;
-        }
-        ```
-        The above code impact performance by remounting a component that causes the state of that component and all of its children to be lost. Instead, apply HOCs outside the component definition so that the resulting component is created only once
-     2. **Static Methods Must Be Copied Over:**
-        When you apply a HOC to a component the new component does not have any of the static methods of the original component
-
-        ```javascript
-        // Define a static method
-        WrappedComponent.staticMethod = function () {
-          /*...*/
-        };
-        // Now apply a HOC
-        const EnhancedComponent = enhance(WrappedComponent);
-
-        // The enhanced component has no static method
-        typeof EnhancedComponent.staticMethod === 'undefined'; // true
-        ```
-
-        You can overcome this by copying the methods onto the container before returning it
-
-        ```javascript
-        function enhance(WrappedComponent) {
-          class Enhance extends React.Component {
-            /*...*/
+          render() {
+            // Một phiên bản mới của EnhancedComponent sẽ được tạo ra mỗi lần kết xuất 
+            // EnhancedComponent1 !== EnhancedComponent2
+            const EnhancedComponent = enhance(MyComponent);
+            // Vì toàn bộ cây con sẽ được unmount/remount mỗi lần kết xuất!
+            return <EnhancedComponent />;
           }
-          // Must know exactly which method(s) to copy :(
-          Enhance.staticMethod = WrappedComponent.staticMethod;
-          return Enhance;
-        }
         ```
+        Đoạn code ở trên ảnh hướng đến hiệu năng khi remounting một component và state của component đó và tất cả các component con sẽ bị mất. Thay vào đó, sử dụng HOCs bên ngoài phần định nghĩa component để nó chỉ có thể tạo ra 1 lần duy nhất
+      2. **Phương thức tĩnh phải được sao chép lại:**
+        Khi bạn sử dụng một HOC cho một component, component mới sẽ không có bất kỳ một phương thức tĩnh nào của component ban đầu
+        ```javascript
+          // Định nghĩa một phương thức tĩnh
+          WrappedComponent.staticMethod = function () {
+            /*...*/
+          };
+          // Sử dụng HOC
+          const EnhancedComponent = enhance(WrappedComponent);
 
-     3. **Refs Aren’t Passed Through:**
-        For HOCs you need to pass through all props to the wrapped component but this does not work for refs. This is because ref is not really a prop similar to key. In this case you need to use the React.forwardRef API
-        **[⬆ Mục lục](#table-of-contents)**
+          // Component mới tạo ra không có phương thức tĩnh
+          typeof EnhancedComponent.staticMethod === 'undefined'; // true
+        ```
+        Bạn có thể khắc phục bằng cách sao chép những phương thức tĩnh vào container trước khi trả về 
+        ```javascript
+          function enhance(WrappedComponent) {
+            class Enhance extends React.Component {
+              /*...*/
+            }
+            // Cần phải biết chắc chắn phương thức sẽ sao chép
+            Enhance.staticMethod = WrappedComponent.staticMethod;
+            return Enhance;
+          }
+        ```
+      3. **Refs sẽ không được đưa sang:**
+        Đối với HOCs, bạn cần truyền tất cả props đến component wrapped nhưng nó không hoạt động với refs. Bởi vì ref không thực sự là một prop tương tự như key. Trong trường hợp này bạn cần sử dụng React.forwardRef API
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 255. ### How to debug forwardRefs in DevTools?
 
