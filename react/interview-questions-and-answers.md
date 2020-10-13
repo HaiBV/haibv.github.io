@@ -5219,46 +5219,46 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-255. ### How to debug forwardRefs in DevTools?
+255. ### Làm sao để debug forwardRefs trong DevTools? {#how-to-debug-forwardrefs-in-devtools}
 
-     **React.forwardRef** accepts a render function as parameter and DevTools uses this function to determine what to display for the ref forwarding component. For example, If you don't name the render function or not using displayName property then it will appear as ”ForwardRef” in the DevTools,
+      **React.forwardRef** chấp nhận một hàm kết xuất làm tham số và DevTools dùng hàm này để xác định những gì sẽ hiển thị cho ref chuyển tiếp của component. Ví dụ, Nếu bạn không đặt tên cho hàm kết xuất hoặc không sử dụng thuộc tính displayName thì nó sẽ xuất hiện dưới dạn ”ForwardRef” trong DevTools,
 
-     ```javascript
-     const WrappedComponent = React.forwardRef((props, ref) => {
-       return <LogProps {...props} forwardedRef={ref} />;
-     });
-     ```
+      ```javascript
+      const WrappedComponent = React.forwardRef((props, ref) => {
+        return <LogProps {...props} forwardedRef={ref} />;
+      });
+      ```
 
-     But If you name the render function then it will appear as **”ForwardRef(myFunction)”**
+      Nhưng nếu bạn đặt tên cho hàm kết xuất thì nó sẽ xuất hiện dưới dạng **”ForwardRef(myFunction)”**
 
-     ```javascript
-     const WrappedComponent = React.forwardRef(function myFunction(props, ref) {
-       return <LogProps {...props} forwardedRef={ref} />;
-     });
-     ```
+      ```javascript
+      const WrappedComponent = React.forwardRef(function myFunction(props, ref) {
+        return <LogProps {...props} forwardedRef={ref} />;
+      });
+      ```
 
-     As an alternative, You can also set displayName property for forwardRef function,
+      Thay vào đó bạn có thể sử dụng thuộc tính displayName cho hàm forwardRef,
 
-     ```javascript
-     function logProps(Component) {
-       class LogProps extends React.Component {
-         // ...
-       }
+      ```javascript
+      function logProps(Component) {
+        class LogProps extends React.Component {
+          // ...
+        }
 
-       function forwardRef(props, ref) {
-         return <LogProps {...props} forwardedRef={ref} />;
-       }
+        function forwardRef(props, ref) {
+          return <LogProps {...props} forwardedRef={ref} />;
+        }
 
-       // Give this component a more helpful display name in DevTools.
-       // e.g. "ForwardRef(logProps(MyComponent))"
-       const name = Component.displayName || Component.name;
-       forwardRef.displayName = `logProps(${name})`;
+        // Give this component a more helpful display name in DevTools.
+        // e.g. "ForwardRef(logProps(MyComponent))"
+        const name = Component.displayName || Component.name;
+        forwardRef.displayName = `logProps(${name})`;
 
-       return React.forwardRef(forwardRef);
-     }
-     ```
+        return React.forwardRef(forwardRef);
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 256. ### When component props defaults to true?
 
