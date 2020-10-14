@@ -5260,18 +5260,19 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-256. ### When component props defaults to true?
+256. ### Trong trường hợp nào giá trị của prop mặc định là true? {#when-component-props-defaults-to-true}
 
-     If you pass no value for a prop, it defaults to true. This behavior is available so that it matches the behavior of HTML. For example, below expressions are equivalent,
+      Nếu bạn không truyền giá trị vào prop, nó sẽ mặc định nhận giá trị true. Hành vi này để phù hợp với HTML. Ví dụ, các biểu thức dưới đây tương đương
 
-     ```javascript
-     <MyInput autocomplete />
+      ```javascript
+      <MyInput autocomplete />
 
-     <MyInput autocomplete={true} />
-     ```
+      <MyInput autocomplete={true} />
+      ```
 
-     **Note:** It is not recommend using this approach because it can be confused with the ES6 object shorthand (example, {name} which is short for {name: name})
-     **[⬆ Mục lục](#table-of-contents)**
+      **Note:** Không khuyến khích sử dụng cách này vì có thể bị nhầm lẫn với cách viết tắt đối tượng ở ES6 (ví dụ, {name} là viết tắt của {name: name})
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 257. ### What is NextJS and major features of it?
 
