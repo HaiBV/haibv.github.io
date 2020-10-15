@@ -4793,7 +4793,7 @@ layout: default
       | Flux                                           | Redux                                      |
       | ---------------------------------------------- | ------------------------------------------ |
       | State của Flux mutable                         | State của Redux immutable                  |
-      | Store của Flux chứa cả state và chức năng thay đổi state | Store của Redux và thay đổi state tách biệt |
+      | Store của Flux chứa cả state và ch���c năng thay đổi state | Store của Redux và thay đổi state tách biệt |
       | Có thể có nhiều stores cùng tồn tại            | Chỉ có 1 store duy nhất                    |
       | Tất cả store không liên kết với nhau và phẳn   | Một store với cấu trúc phân tầng           |
       | Có một dispatcher                              | Không có dispatcher                        |
@@ -5274,17 +5274,18 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-257. ### What is NextJS and major features of it?
+257. ### NextJS là gì và các chức năng chính của nó? {#what-is-NextJS-and-major-features-of-it}
 
-     Next.js is a popular and lightweight framework for static and server‑rendered applications built with React. It also provides styling and routing solutions. Below are the major features provided by NextJS,
+      Next.js là một framework nhẹ và phổ biến cho các ứng dụng tĩnh và kết xuất từ server xây dựng bằng React. Nó cũng cung cấp các giải pháp styling và định tuyến. Dưới đây là các tính năng chính NextJS cung cấp
 
-     1. Server-rendered by default
-     2. Automatic code splitting for faster page loads
-     3. Simple client-side routing (page based)
-     4. Webpack-based dev environment which supports (HMR)
-     5. Able to implement with Express or any other Node.js HTTP server
-     6. Customizable with your own Babel and Webpack configurations
-        **[⬆ Mục lục](#table-of-contents)**
+      1. Mặc định kết xuất từ Server
+      2. Tự động tách mã để tải trang nhanh hơn
+      3. Bộ định tuyến đơn giản (dựa trên page)
+      4. Môi trường phát triển dựa trên Webpack (HMR)
+      5. Có thể triển khai với Express hoặc bất kỳ máy chủ Node.js HTTP nào khác
+      6. Tùy chỉnh cấu hình Babel và Webpack
+      
+      **[⬆ Mục lục](#table-of-contents)** 
 
 258. ### How do you pass an event handler to a component?
 
