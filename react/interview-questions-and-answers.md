@@ -5287,15 +5287,15 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)** 
 
-258. ### How do you pass an event handler to a component?
+258. ### Làm thế nào để truyền một hàm xử lý sự kiện vào một component?   {#how-do-you-pass-an-event-handler-to-a-component}
 
-     You can pass event handlers and other functions as props to child components. It can be used in child component as below,
+      Bạn có thể truyền hàm xử lý sự kiện hay các hàm khác vào prop của component con. Nó có thể sử dụng trong component con như dưới đây,
 
-     ```
-     <button onClick={this.handleClick}>
-     ```
+      ```
+      <button onClick={this.handleClick}>
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 259. ### Is it good to use arrow functions in render methods?
 
