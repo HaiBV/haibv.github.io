@@ -5297,23 +5297,24 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-259. ### Is it good to use arrow functions in render methods?
+259. ### Sử dụng hàm arrow trong phương thức kết xuất có tốt không? {#is-it-good-to-use-arrow-functions-in-render-methods}
 
-     Yes, You can use. It is often the easiest way to pass parameters to callback functions. But you need to optimize the performance while using it.
+      Có, bạn có thể dùng. Là một cách dễ dàng và thông dụng khi muốn truyền tham số vào hàm callback. Nhưng bạn cần phải tối ưu được hiệu năng khi sử dụng chúng.
 
-     ```javascript
-     class Foo extends Component {
-       handleClick() {
-         console.log('Click happened');
-       }
-       render() {
-         return <button onClick={() => this.handleClick()}>Click Me</button>;
-       }
-     }
-     ```
+      ```javascript
+      class Foo extends Component {
+        handleClick() {
+          console.log('Click happened');
+        }
+        render() {
+          return <button onClick={() => this.handleClick()}>Click Me</button>;
+        }
+      }
+      ```
 
-     **Note:** Using an arrow function in render method creates a new function each time the component renders, which may have performance implications
-     **[⬆ Mục lục](#table-of-contents)**
+      **Note:** Sử dụng hàm arrow trong phương thức kết xuất sẽ tạo một hàm mới mỗi khi component kết xuất, điều này sẽ ảnh hưởng đến hiệu năng của ứng dụng
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
 260. ### How to prevent a function from being called multiple times?
 
