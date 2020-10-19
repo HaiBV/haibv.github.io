@@ -5316,14 +5316,15 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-260. ### How to prevent a function from being called multiple times?
+260. ### Làm thế nào để ngăn việc gọi một hàm nhiều lần? {#how-to-prevent-a-function-from-being-called-multiple-times}
 
-     If you use an event handler such as **onClick or onScroll** and want to prevent the callback from being fired too quickly, then you can limit the rate at which callback is executed. This can be achieved in the below possible ways,
+      Nếu bạn sử dụng một hàm xử lý sự kiện như **onClick hoặc onScroll** và muốn ngăn sự kiện callback khi hàm được gọi nhiều lần, thì bạn nên ngăn chặn số lần gọi callback được thực hiện. Điều này có thể thực hiện bằng những cách dưới đây,
 
-     1. **Throttling:** Changes based on a time based frequency. For example, it can be used using \_.throttle lodash function
-     2. **Debouncing:** Publish changes after a period of inactivity. For example, it can be used using \_.debounce lodash function
-     3. **RequestAnimationFrame throttling:** Changes based on requestAnimationFrame. For example, it can be used using raf-schd lodash function
-        **[⬆ Mục lục](#table-of-contents)**
+      1. **Throttling:** Thay đổi tần suất dựa trên thời gian. Ví dụ, có thể sử dụng hàm throttle của lodash
+      2. **Debouncing:** Thay đổi sau đó một khoảng thời gian dừng. Ví dụ, có thể sử dụng hàm debounce của  lodash
+      3. **RequestAnimationFrame throttling:** Thay đổi dựa trên requestAnimationFrame. Ví dụ, có thể sử dụng hàm raf-schd của lodash
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 261. ### How JSX prevents Injection Attacks?
 
