@@ -5326,17 +5326,18 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-261. ### How JSX prevents Injection Attacks?
+261. ### JSX ngăn chặn tấn công injection bằng cách nào? {#how-jsx-prevents-injection-attacks}
 
-     React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. For example, you can embed user input as below,
+      React DOM xử lý mọi giá trị được nhúng vào JSX trước khi kết xuất. Do đó, đảm bảo rằng bạn không bao giờ có thể đưa bất kỳ thứ gì không rõ ràng vào ứng dụng của mình. Mọi thứ đều đước chuyể đổi thành chuỗi trước khi được kết xuất. Như ví dụ dưới đây,
 
-     ```javascript
-     const name = response.potentiallyMaliciousInput;
-     const element = <h1>{name}</h1>;
-     ```
+      ```javascript
+      const name = response.potentiallyMaliciousInput;
+      const element = <h1>{name}</h1>;
+      ```
 
-     This way you can prevent XSS(Cross-site-scripting) attacks in the application.
-     **[⬆ Mục lục](#table-of-contents)**
+      Bằng cách này bạn có thể ngăn chặn tấn công XSS(Cross-site-scripting) trong ứng dụng.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 262. ### How do you update rendered elements?
 
