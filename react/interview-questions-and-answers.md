@@ -5339,25 +5339,25 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-262. ### How do you update rendered elements?
+262. ### Cập nhật những phần tử đã kết xuất như thế nào? {#how-do-you-update-rendered-elements}
 
-     You can update UI(represented by rendered element) by passing the newly created element to ReactDOM's render method. For example, lets take a ticking clock example, where it updates the time by calling render method multiple times,
+      Bạn có thể cập nhật UI (đại diện bởi phần tử đã kết xuất) bằng cách truyền một phần tử mới vào phương thức kết xuất của ReactDOM. Lấy ví dụ về ứng dụng đồng hồ chạy giây, mỗi khi cập nhật thời gian bằng cách gọi phương thức kết xuất nhiều lần,
 
-     ```javascript
-     function tick() {
-       const element = (
-         <div>
-           <h1>Hello, world!</h1>
-           <h2>It is {new Date().toLocaleTimeString()}.</h2>
-         </div>
-       );
-       ReactDOM.render(element, document.getElementById('root'));
-     }
+      ```javascript
+      function tick() {
+        const element = (
+          <div>
+            <h1>Hello, world!</h1>
+            <h2>It is {new Date().toLocaleTimeString()}.</h2>
+          </div>
+        );
+        ReactDOM.render(element, document.getElementById('root'));
+      }
 
-     setInterval(tick, 1000);
-     ```
+      setInterval(tick, 1000);
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 263. ### How do you say that props are read only?
 
