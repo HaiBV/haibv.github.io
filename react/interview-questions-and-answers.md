@@ -5359,18 +5359,19 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-263. ### How do you say that props are read only?
+263. ### Tại sao props của component không thể cập được cập nhật? {#how-do-you-say-that-props-are-read-only}
 
-     When you declare a component as a function or a class, it must never modify its own props. Let us take a below capital function,
+      Khi bạn khai báo một component với một hàm hoặc một lớp, không bao giờ được thay đổi props của chính nó. Ví dụ như một hàm tính tổng dưới đây,
 
-     ```javascript
-     function capital(amount, interest) {
-       return amount + interest;
-     }
-     ```
+      ```javascript
+      function capital(amount, interest) {
+        return amount + interest;
+      }
+      ```
 
-     The above function is called “pure” because it does not attempt to change their inputs, and always return the same result for the same inputs. Hence, React has a single rule saying "All React components must act like pure functions with respect to their props."
-     **[⬆ Mục lục](#table-of-contents)**
+      Hàm trên được gọi là “pure” vì nó không cố gắng thay đổi giá trị đầu vào và luôn trả về cùng một kết quả cho cùng những giá trị đầu vào. Do đó, React có một quy tắc duy nhất : "Mọi React components phải hoạt động giống như những hàm pure functions với props của chúng."
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
 264. ### How do you say that state updates are merged?
 
