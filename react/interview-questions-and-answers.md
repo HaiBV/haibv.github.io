@@ -5359,7 +5359,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-263. ### Tại sao props của component không thể cập được cập nhật? {#how-do-you-say-that-props-are-read-only}
+263. ### Giải thích việc props của component không thể cập được cập nhật? {#how-do-you-say-that-props-are-read-only}
 
       Khi bạn khai báo một component với một hàm hoặc một lớp, không bao giờ được thay đổi props của chính nó. Ví dụ như một hàm tính tổng dưới đây,
 
@@ -5373,40 +5373,41 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-264. ### How do you say that state updates are merged?
+264. ### Giải thích việc cập nhật state được gọi là hợp nhất? {#how-do-you-say-that-state-updates-are-merged}
 
-     When you call setState() in the component, React merges the object you provide into the current state. For example, let us take a facebook user with posts and comments details as state variables,
+      Khi gọi setState() bên trong component, React sẽ hợp nhất đối tượng bang cung cấp với state hiện tại. Lấy ví dụ về state với thông tin người dùng facebook và những bài đăng, bình luận,
 
-     ```javascript
-       constructor(props) {
-         super(props);
-         this.state = {
-           posts: [],
-           comments: []
-         };
-       }
-     ```
+      ```javascript
+        constructor(props) {
+          super(props);
+          this.state = {
+            posts: [],
+            comments: []
+          };
+        }
+      ```
 
-     Now you can update them independently with separate setState() calls as below,
+      Bạn có thể cập nhật chúng riêng biệt với các lệnh gọi setState() như dưới đây,
 
-     ```javascript
-      componentDidMount() {
-         fetchPosts().then(response => {
-           this.setState({
-             posts: response.posts
-           });
-         });
+      ```javascript
+        componentDidMount() {
+          fetchPosts().then(response => {
+            this.setState({
+              posts: response.posts
+            });
+          });
 
-         fetchComments().then(response => {
-           this.setState({
-             comments: response.comments
-           });
-         });
-       }
-     ```
+          fetchComments().then(response => {
+            this.setState({
+              comments: response.comments
+            });
+          });
+        }
+      ```
 
-     As mentioned in the above code snippets, this.setState({comments}) updates only comments variable without modifying or replacing posts variable.
-     **[⬆ Mục lục](#table-of-contents)**
+      Như đã đề cập ở trên, this.setState({comments}) sẽ chỉ cập nhật biến comments mà không sửa hay thay đổi biến posts.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 265. ### How do you pass arguments to an event handler?
 
