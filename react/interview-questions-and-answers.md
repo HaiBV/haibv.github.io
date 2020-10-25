@@ -5409,17 +5409,18 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-265. ### How do you pass arguments to an event handler?
+265. ### Truyền tham số vào hàm xử lý sự kiện như thế nào? {#how-do-you-pass-arguments-to-an-event-handler}
 
-     During iterations or loops, it is common to pass an extra parameter to an event handler. This can be achieved through arrow functions or bind method. Let us take an example of user details updated in a grid,
+      Trong các vòng lặp, thông thường 1 tham số sẽ được truyền thêm cho trình xử lý sự kiện. Việc truyền thêm có thể sử dụng hàm arrow hoặc phương thức bind. Xem ví dụ dưới đây,
 
-     ```javascript
-     <button onClick={(e) => this.updateUser(userId, e)}>Update User details</button>
-     <button onClick={this.updateUser.bind(this, userId)}>Update User details</button>
-     ```
+      ```javascript
+      <button onClick={(e) => this.updateUser(userId, e)}>Update User details</button>
+      <button onClick={this.updateUser.bind(this, userId)}>Update User details</button>
+      ```
 
-     In both the approaches, the synthetic argument e is passed as a second argument. You need to pass it explicitly for arrow functions and it forwarded automatically for bind method.
-     **[⬆ Mục lục](#table-of-contents)**
+      Trong cả 2 cách tiếp cận, đều có tham số thứ 2 là đối số tổng hợp e. Bạn cần truyền nó rõ ràng cho các hàm arrow và nó được chuyển tiếp tự động cho phương thức ràng buộc.
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
 266. ### How to prevent component from rendering?
 
