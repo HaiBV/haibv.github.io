@@ -5422,40 +5422,41 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-266. ### How to prevent component from rendering?
+266. ### Làm cách nào để ngăn component kết xuất? {#how-to-prevent-component-from-rendering}
 
-     You can prevent component from rendering by returning null based on specific condition. This way it can conditionally render component.
+      Bạn có thể ngăn component kết xuất bằng cách trả về null theo điều kiện nhất định. You can prevent component from rendering by returning null based on specific condition. Cách này dùng để kết xuất component có điều kiện.
 
-     ```javascript
-     function Greeting(props) {
-       if (!props.loggedIn) {
-         return null;
-       }
+      ```javascript
+      function Greeting(props) {
+        if (!props.loggedIn) {
+          return null;
+        }
 
-       return <div className='greeting'>welcome, {props.name}</div>;
-     }
-     ```
+        return <div className='greeting'>welcome, {props.name}</div>;
+      }
+      ```
 
-     ```javascript
-     class User extends React.Component {
-       constructor(props) {
-         super(props);
-         this.state = {loggedIn: false, name: 'John'};
-       }
+      ```javascript
+      class User extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {loggedIn: false, name: 'John'};
+        }
 
-       render() {
-        return (
-            <div>
-              //Prevent component render if it is not loggedIn
-              <Greeting loggedIn={this.state.loggedIn} />
-              <UserDetails name={this.state.name}>
-            </div>
-        );
-       }
-     ```
+        render() {
+          return (
+              <div>
+                // Ngăn component kết xuất nếu chưa đăng nhập
+                <Greeting loggedIn={this.state.loggedIn} />
+                <UserDetails name={this.state.name}>
+              </div>
+          );
+        }
+      ```
 
-     In the above example, the greeting component skips its rendering section by applying condition and returning null value.
-     **[⬆ Mục lục](#table-of-contents)**
+      Trong ví dụ ở trên, component greeting bỏ qua việc kết xuất theo điều kiện và trả về giá trị null.
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
 267. ### What are the conditions to safely use the index as a key?
      There are three conditions to make sure, it is safe use the index as a key.
