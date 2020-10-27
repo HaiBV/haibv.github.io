@@ -5458,14 +5458,13 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-267. ### What are the conditions to safely use the index as a key?
-     There are three conditions to make sure, it is safe use the index as a key.
-     1. The list and items are static– they are not computed and do not change
-     2. The items in the list have no ids
-     3. The list is never reordered or filtered.
+267. ### Điều kiện an toàn của index làm key là gì? {what-are-the-conditions-to-safely-use-the-index-as-a-key}
+      Có 3 điều kiện đảm bảo cho việc sử dụng index làm key.
+      1. Danh sách dạng tĩnh - Không dựa trên tính toán và không thay đổi
+      2. Các item trong danh sách không có id
+      3. Danh sách không bao giờ được sắp xếp hoặc lọc.
 
-
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 268. ### Is it keys should be globally unique?
 
