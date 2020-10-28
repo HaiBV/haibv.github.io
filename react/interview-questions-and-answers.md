@@ -5466,37 +5466,37 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-268. ### Is it keys should be globally unique?
+268. ### Các key cos cần duy nhất trên toàn cục không? {#is-it-keys-should-be-globally-unique}
 
-     Keys used within arrays should be unique among their siblings but they don’t need to be globally unique. i.e, You can use the same keys withtwo different arrays. For example, the below book component uses two arrays with different arrays,
+      Keys trong một mảng phải là duy nhất đối với các thành phần đồng cấp nhưng không cần duy nhất trên toàn cục. Bạn có thể sử dụng cùng một tập key với 2 mảng khác nhau. Ví dụ, component dưới đây sử dụng 2 mảng với khác nhau,
 
-     ```javascript
-     function Book(props) {
-       const index = (
-         <ul>
-           {props.pages.map((page) => (
-             <li key={page.id}>{page.title}</li>
-           ))}
-         </ul>
-       );
-       const content = props.pages.map((page) => (
-         <div key={page.id}>
-           <h3>{page.title}</h3>
-           <p>{page.content}</p>
-           <p>{page.pageNumber}</p>
-         </div>
-       ));
-       return (
-         <div>
-           {index}
-           <hr />
-           {content}
-         </div>
-       );
-     }
-     ```
+      ```javascript
+      function Book(props) {
+        const index = (
+          <ul>
+            {props.pages.map((page) => (
+              <li key={page.id}>{page.title}</li>
+            ))}
+          </ul>
+        );
+        const content = props.pages.map((page) => (
+          <div key={page.id}>
+            <h3>{page.title}</h3>
+            <p>{page.content}</p>
+            <p>{page.pageNumber}</p>
+          </div>
+        ));
+        return (
+          <div>
+            {index}
+            <hr />
+            {content}
+          </div>
+        );
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 269. ### What is the popular choice for form handling?
 
