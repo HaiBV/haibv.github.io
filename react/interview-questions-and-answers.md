@@ -5498,16 +5498,17 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-269. ### What is the popular choice for form handling?
+269. ### Lựa chọn nào phổ biến cho xử lý form? {#what-is-the-popular-choice-for-form-handling}
 
-     Formik is a form library for react which provides solutions such as validation, keeping track of the visited fields, and handling form submission. In detail, You can categorize them as follows,
+      Formik là một thư viện xử lý form của React cung cấp một số giải pháp cho việc chuẩn hóa dữ liệu, thao dõi xử lý trường, và xử lý việc gửi đi của form. Cụ thể, bạn có thể tham khảo danh sách dưới đây,
 
-     1. Getting values in and out of form state
-     2. Validation and error messages
-     3. Handling form submission
+      1. Lấy dữ liệu ra và vào từ state
+      2. Chuẩn hóa và hiển thị lỗi
+      3. Xử lý submit form
 
-     It is used to create a scalable, performant, form helper with a minimal API to solve annoying stuff.
-     **[⬆ Mục lục](#table-of-contents)**
+      Giúp form dễ mở rộng, hiệu suất cao với API tối thiếu giải quyết những vấn đề khó chịu.
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
 270. ### What are the advantages of formik over redux form library?
      Below are the main reasons to recommend formik over redux form library
