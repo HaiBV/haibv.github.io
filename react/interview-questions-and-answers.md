@@ -5510,14 +5510,13 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-270. ### What are the advantages of formik over redux form library?
-     Below are the main reasons to recommend formik over redux form library
-     1. The form state is inherently short-term and local, so tracking it in Redux (or any kind of Flux library) is unnecessary.
-     2. Redux-Form calls your entire top-level Redux reducer multiple times ON EVERY SINGLE KEYSTROKE. This way it increases input latency for large apps.
-     3. Redux-Form is 22.5 kB minified gzipped whereas Formik is 12.7 kB
+270. ### Những ưu điểm của formil so với thư viện form redux? {#what-are-the-advantages-of-formik-over-redux-form-library}
+      Dưới đây là những lý do khiến formik tốt hơn thư viện form redux
+      1. State trong form là ngắn hạn và cục bộ, vì vậy việc theo dõi state trong Redux (hoặc Flux) là không cần thiết.
+      2. Redux-Form gọi reducer nhiều lần mỗi khi có bất kỳ thay đổi dữ liệu trong form. Việc này làm tăng độ trễ đầu vào rất lớn.
+      3. Redux-Form nặng 22.5 kB trong khi Formik chỉ có 12.7 kB
 
-
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 271. ### Why do you not required to use inheritance?
 
