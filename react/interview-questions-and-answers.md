@@ -5518,11 +5518,13 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-271. ### Why do you not required to use inheritance?
+271. ### Tại sao bạn không cần bắt buộc sử dụng kế thừa? {#why-do-you-not-required-to-use-inheritance}
 
-     In React, it is recommend using composition instead of inheritance to reuse code between components. Both Props and composition give you all the flexibility you need to customize a component’s look and behavior in an explicit and safe way.
-     Whereas, If you want to reuse non-UI functionality between components, it is suggested to extracting it into a separate JavaScript module. Later components import it and use that function, object, or a class, without extending it.
-     **[⬆ Mục lục](#table-of-contents)**
+      Trong React, để sử dụng lại code giữa các component, bạn nên sử dụng kết hợp component (composition) thay vì kế thừa. Cả Props và composition cung cấp cho bạn tất cả sự linh hoạt cần thiết để tùy chính giao diện và hành vi của component theo cách rõ ràng và an toàn nhất.
+      
+      Trong khi, Nếu bạn muốn sử dụng lại chức năng không có giao diện giữa các component, bạn nên đưa vào một module JavaScript riêng. Các component sau này sẽ import và sử dụng hàm, đối tượng hoặc lớp đó mà không cần mở rộng.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 272. ### Can I use web components in react application?
 
