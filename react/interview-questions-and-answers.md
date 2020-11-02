@@ -5548,26 +5548,26 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-273. ### What is dynamic import?
+273. ### Dynamic import là gì? {#what-is-dynamic-import}
 
-     The dynamic import() syntax is a ECMAScript proposal not currently part of the language standard. It is expected to be accepted in the near future. You can achieve code-splitting into your app using dynamic import(). Let's take an example of addition,
+      Cú pháp dynamic import() là một đề xuất của ECMAScript, hiện không phải là một phần tiêu chuẩn. Dữ kiến sẽ được chấp nhận trong tương lai gần. Bạn có thể tách mã vào ứng dụng bằng cách sử dụng dynamic import(). Lấy ví dụ về phép cộng,
 
-     1. **Normal Import**
+      1. **Import thông thường**
 
-     ```javascript
-     import { add } from './math';
-     console.log(add(10, 20));
-     ```
+      ```javascript
+      import { add } from './math';
+      console.log(add(10, 20));
+      ```
 
-     2. **Dynamic Import**
+      2. **Dynamic Import**
 
-     ```javascript
-     import('./math').then((math) => {
-       console.log(math.add(10, 20));
-     });
-     ```
+      ```javascript
+      import('./math').then((math) => {
+        console.log(math.add(10, 20));
+      });
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 274. ### What are loadable components?
 
