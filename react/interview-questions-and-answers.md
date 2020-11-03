@@ -5569,26 +5569,27 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-274. ### What are loadable components?
+274. ### Loadable component là gì? {#what-are-loadable-components}
 
-     If you want to do code-splitting in a server rendered app, it is recommend to use Loadable Components because React.lazy and Suspense is not yet available for server-side rendering. Loadable lets you render a dynamic import as a regular component. Lets take an example,
+      Nếu bạn muốn phân tách code cho một ứng dụng kết xuất từ server, bạn nên sử dụng Loadable Components vì React.lazy và Suspense chưa có sẵn khi kết xuất từ server. Loadable cho phép bạn kết xuất import động như một component thông thường. Ví dụ,
 
-     ```javascript
-     import loadable from '@loadable/component';
+      ```javascript
+      import loadable from '@loadable/component';
 
-     const OtherComponent = loadable(() => import('./OtherComponent'));
+      const OtherComponent = loadable(() => import('./OtherComponent'));
 
-     function MyComponent() {
-       return (
-         <div>
-           <OtherComponent />
-         </div>
-       );
-     }
-     ```
+      function MyComponent() {
+        return (
+          <div>
+            <OtherComponent />
+          </div>
+        );
+      }
+      ```
 
-     Now OtherComponent will be loaded in a separated bundle
-     **[⬆ Mục lục](#table-of-contents)**
+      OtherComponent sẽ được tải trong một bundle khác
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 275. ### What is suspense component?
 
