@@ -5613,31 +5613,32 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-276. ### What is route based code splitting?
+276. ### Chia code dựa theo định tuyến là gì? {#what-is-route-based-code-splitting}
 
-     One of the best place to do code splitting is with routes. The entire page is going to re-render at once so users are unlikely to interact with other elements in the page at the same time. Due to this, the user experience won't be disturbed. Let us take an example of route based website using libraries like React Router with React.lazy,
+      Một trong những nơi tốt nhất để thực hiện tách code là bộ định tuyến. Toàn bộ trang sẽ tái kết xuất cùng một lúc nên người dùng không có khả năng tương tác với các thành phần khác trong trang cùng một lúc. Dó đó, trải nghiệm người dùng sẽ không bị xáo trộn. Lấy một ví dụ về React Router và React.lazy,
 
-     ```javascript
-     import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-     import React, { Suspense, lazy } from 'react';
+      ```javascript
+      import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+      import React, { Suspense, lazy } from 'react';
 
-     const Home = lazy(() => import('./routes/Home'));
-     const About = lazy(() => import('./routes/About'));
+      const Home = lazy(() => import('./routes/Home'));
+      const About = lazy(() => import('./routes/About'));
 
-     const App = () => (
-       <Router>
-         <Suspense fallback={<div>Loading...</div>}>
-           <Switch>
-             <Route exact path='/' component={Home} />
-             <Route path='/about' component={About} />
-           </Switch>
-         </Suspense>
-       </Router>
-     );
-     ```
+      const App = () => (
+        <Router>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/about' component={About} />
+            </Switch>
+          </Suspense>
+        </Router>
+      );
+      ```
 
-     In the above code, the code splitting will happen at each route level.
-     **[⬆ Mục lục](#table-of-contents)**
+      Trong đoạn code bên trên, code được chia được thực hiện với mỗi cấp độ định tuyến.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 277. ### Give an example on How to use context?
 
