@@ -5640,41 +5640,41 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-277. ### Give an example on How to use context?
+277. ### Lấy ví dụ về cách sử dụng context? {#give-an-example-on-how-to-use-context}
 
-     **Context** is designed to share data that can be considered **global** for a tree of React components. For example, in the code below lets manually thread through a “theme” prop in order to style the Button component.
+      **Context** được thiết kế để chia sẻ dữ liệu được coi là **toàn cầu** cho các component React trong một cây component. Ví dụ, trong đoạn code bên dưới, cho phép ghép chuỗi thủ công qua props “theme” để style cho component Button.
 
-     ```javascript
-     //Lets create a context with a default theme value "luna"
-     const ThemeContext = React.createContext('luna');
-     // Create App component where it uses provider to pass theme value in the tree
-     class App extends React.Component {
-       render() {
-         return (
-           <ThemeContext.Provider value='nova'>
-             <Toolbar />
-           </ThemeContext.Provider>
-         );
-       }
-     }
-     // A middle component where you don't need to pass theme prop anymore
-     function Toolbar(props) {
-       return (
-         <div>
-           <ThemedButton />
-         </div>
-       );
-     }
-     // Lets read theme value in the button component to use
-     class ThemedButton extends React.Component {
-       static contextType = ThemeContext;
-       render() {
-         return <Button theme={this.context} />;
-       }
-     }
-     ```
+      ```javascript
+      // Tạo một context với giá trị mặc định của theme: "luna"
+      const ThemeContext = React.createContext('luna');
+      // Tạo component App sử dụng provider để truyền giá trị theme vào cây component
+      class App extends React.Component {
+        render() {
+          return (
+            <ThemeContext.Provider value='nova'>
+              <Toolbar />
+            </ThemeContext.Provider>
+          );
+        }
+      }
+      // Một component trung gian không cần dùng đến theme
+      function Toolbar(props) {
+        return (
+          <div>
+            <ThemedButton />
+          </div>
+        );
+      }
+      // Đọc giá trị của theme trong component button để sử dụng 
+      class ThemedButton extends React.Component {
+        static contextType = ThemeContext;
+        render() {
+          return <Button theme={this.context} />;
+        }
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 278. ### What is the purpose of default value in context?
 
