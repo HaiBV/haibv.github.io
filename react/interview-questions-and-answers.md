@@ -5676,15 +5676,15 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-278. ### What is the purpose of default value in context?
+278. ### Mục đích của giá trị mặc định của context là gì? {#what-is-the-purpose-of-default-value-in-context}
 
-     The defaultValue argument is only used when a component does not have a matching Provider above it in the tree. This can be helpful for testing components in isolation without wrapping them. Below code snippet provides default theme value as Luna.
+      Tham số defaultValue chỉ được sử dụng khi một component không có Provider phù hợp trong cây component. Điều này sẽ hữu ích cho việc kiểm thử các component riêng mà không cần bọc chúng lại. Trong đoạn code dưới đây, giá trị mặc định của theme là Luna.
 
-     ```javascript
-     const MyContext = React.createContext(defaultValue);
-     ```
+      ```javascript
+      const MyContext = React.createContext(defaultValue);
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 279. ### How do you use contextType?
 
