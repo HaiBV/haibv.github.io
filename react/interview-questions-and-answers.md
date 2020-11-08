@@ -5686,50 +5686,50 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-279. ### How do you use contextType?
+279. ### Sử dụng contextType như thế nào? {#how-do-you-use-contexttype}
 
-     ContextType is used to consume the context object. The contextType property can be used in two ways,
+      ContextType sử dụng với đối tượng context. Thuộc tính contextType có thể được sử dụng theo 2 cách,
 
-     1. **contextType as property of class:**
-        The contextType property on a class can be assigned a Context object created by React.createContext(). After that, you can consume the nearest current value of that Context type using this.context in any of the lifecycle methods and render function.
-        Lets assign contextType property on MyClass as below,
+      1. **contextType sử dụng như một thuộc tính của class:**
+        Thuộc tính contextType trong một class có thể được gán một đối tượng Context tạo bởi React.createContext(). Sau đó, bạn có thể sử dụng giá trị hiện tại gần nhất của Context bằng cách sử dụng this.context tron bất kỳ phương thức vòng đời và hàm kết xuất nào.
+        Xem ví dụ dưới đây, gán thuộc tính contextType cho MyClass,
 
-     ```javascript
-     class MyClass extends React.Component {
-       componentDidMount() {
-         let value = this.context;
-         /* perform a side-effect at mount using the value of MyContext */
-       }
-       componentDidUpdate() {
-         let value = this.context;
-         /* ... */
-       }
-       componentWillUnmount() {
-         let value = this.context;
-         /* ... */
-       }
-       render() {
-         let value = this.context;
-         /* render something based on the value of MyContext */
-       }
-     }
-     MyClass.contextType = MyContext;
-     ```
+      ```javascript
+      class MyClass extends React.Component {
+        componentDidMount() {
+          let value = this.context;
+          /* perform a side-effect at mount using the value of MyContext */
+        }
+        componentDidUpdate() {
+          let value = this.context;
+          /* ... */
+        }
+        componentWillUnmount() {
+          let value = this.context;
+          /* ... */
+        }
+        render() {
+          let value = this.context;
+          /* render something based on the value of MyContext */
+        }
+      }
+      MyClass.contextType = MyContext;
+      ```
 
-     2. **Static field**
-        You can use a static class field to initialize your contextType using public class field syntax.
+      2. **Trường tĩnh**
+        Bạn có thể sử dụng trường tĩnh để khởi tạo contextType bằng cú pháp trường tĩnh public.
 
-     ```javascript
-     class MyClass extends React.Component {
-       static contextType = MyContext;
-       render() {
-         let value = this.context;
-         /* render something based on the value */
-       }
-     }
-     ```
+      ```javascript
+      class MyClass extends React.Component {
+        static contextType = MyContext;
+        render() {
+          let value = this.context;
+          /* render something based on the value */
+        }
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 280. ### What is a consumer?
 
