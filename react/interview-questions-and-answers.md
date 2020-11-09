@@ -5731,17 +5731,17 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-280. ### What is a consumer?
+280. ### Consumer là gì? {#what-is-a-consumer}
 
-     A Consumer is a React component that subscribes to context changes. It requires a function as a child which receives current context value as argument and returns a react node. The value argument passed to the function will be equal to the value prop of the closest Provider for this context above in the tree. Lets take a simple example,
+      Consumer là một component React đăng ký nhận sự thay đổi của context. Nó yêu cầu một hàm con nhận giá trị context hiện tại làm tham số và trả về một phần tử react. Giá trị tham số truyền vào sẽ bằng với giá trị prop của Provider gần nhất cho context ở trong cây. Lấy một ví dụ đơn giản dưới đây,
 
-     ```javascript
-     <MyContext.Consumer>
-       {value => /* render something based on the context value */}
-     </MyContext.Consumer>
-     ```
+      ```javascript
+      <MyContext.Consumer>
+        {value => /* kết xuất dựa trên giá trị của context */}
+      </MyContext.Consumer>
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 281. ### How do you solve performance corner cases while using context?
 
