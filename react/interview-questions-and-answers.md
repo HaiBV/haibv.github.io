@@ -5743,44 +5743,44 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-281. ### How do you solve performance corner cases while using context?
+281. ### Xử lý vấn đề hiệu xuất khi sử dụng context như thế nào? {#how-do-you-solve-performance-corner-cases-while-using-context}
 
-     The context uses reference identity to determine when to re-render, there are some gotchas that could trigger unintentional renders in consumers when a provider’s parent re-renders. For example, the code below will re-render all consumers every time the Provider re-renders because a new object is always created for value.
+      Context sủ dụng danh tính tham chiếu để xác định thời điểm tái kết xuất, có một số lỗi có thể kích hoạt không chủ định kết xuất trong comsumer khi component cha cung cấp tái kết xuất. Ví dụ, đoạn code dưới đây sẽ tái kết xuất tất cả comsumer mỗi khi Provider tái kết xuất bì mỗi đối tượng mới sẽ tạo ra giá trị riêng.
 
-     ```javascript
-     class App extends React.Component {
-       render() {
-         return (
-           <Provider value={{ something: 'something' }}>
-             <Toolbar />
-           </Provider>
-         );
-       }
-     }
-     ```
+      ```javascript
+      class App extends React.Component {
+        render() {
+          return (
+            <Provider value={{ something: 'something' }}>
+              <Toolbar />
+            </Provider>
+          );
+        }
+      }
+      ```
 
-     This can be solved by lifting up the value to parent state,
+      Việc này có thể giải quyết được bằng cách nâng giá trị đó lên state của component cha,
 
-     ```javascript
-     class App extends React.Component {
-       constructor(props) {
-         super(props);
-         this.state = {
-           value: { something: 'something' },
-         };
-       }
+      ```javascript
+      class App extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            value: { something: 'something' },
+          };
+        }
 
-       render() {
-         return (
-           <Provider value={this.state.value}>
-             <Toolbar />
-           </Provider>
-         );
-       }
-     }
-     ```
+        render() {
+          return (
+            <Provider value={this.state.value}>
+              <Toolbar />
+            </Provider>
+          );
+        }
+      }
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 282. ### What is the purpose of forward ref in HOCs?
 
