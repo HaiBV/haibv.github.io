@@ -5782,57 +5782,57 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-282. ### What is the purpose of forward ref in HOCs?
+282. ### Mục đích của chuyển tiếp ref trong HOCs là gì? {#what-is-the-purpose-of-forward-ref-in-HOCs}
 
-     Refs will not get passed through because ref is not a prop. It handled differently by React just like **key**. If you add a ref to a HOC, the ref will refer to the outermost container component, not the wrapped component. In this case, you can use Forward Ref API. For example, we can explicitly forward refs to the inner FancyButton component using the React.forwardRef API.
-     The below HOC logs all props,
+      Refs sẽ không được truyền xuống vì ref không phải là một prop. Nó được xử lý theo một cách khác, tương tự như **key**. Nếu bạn thêm một ref trong một HOC, ref sẽ viện dẫn đến component ở ngoài cùng, không phải component được bọc bên trong. Trong trường hợp này, bạn có thể sử dụng Forward Ref API. Ví dụ, chúng ta có thể chuyển tiếp refs cho các thành phần bên trong component FancyButton sử dụng React.forwardRef API.
+      HOC dưới đây sẽ ghi lại tất cả props,
 
-     ```javascript
-     function logProps(Component) {
-       class LogProps extends React.Component {
-         componentDidUpdate(prevProps) {
-           console.log('old props:', prevProps);
-           console.log('new props:', this.props);
-         }
+      ```javascript
+      function logProps(Component) {
+        class LogProps extends React.Component {
+          componentDidUpdate(prevProps) {
+            console.log('old props:', prevProps);
+            console.log('new props:', this.props);
+          }
 
-         render() {
-           const { forwardedRef, ...rest } = this.props;
+          render() {
+            const { forwardedRef, ...rest } = this.props;
 
-           // Assign the custom prop "forwardedRef" as a ref
-           return <Component ref={forwardedRef} {...rest} />;
-         }
-       }
+            // Assign the custom prop "forwardedRef" as a ref
+            return <Component ref={forwardedRef} {...rest} />;
+          }
+        }
 
-       return React.forwardRef((props, ref) => {
-         return <LogProps {...props} forwardedRef={ref} />;
-       });
-     }
-     ```
+        return React.forwardRef((props, ref) => {
+          return <LogProps {...props} forwardedRef={ref} />;
+        });
+      }
+      ```
 
-     Let's use this HOC to log all props that get passed to our “fancy button” component,
+      Sử dụng HOC này để ghi lại toàn bộ props được truyền vào component “fancy button”,
 
-     ```javascript
-     class FancyButton extends React.Component {
-       focus() {
-         // ...
-       }
+      ```javascript
+      class FancyButton extends React.Component {
+        focus() {
+          // ...
+        }
 
-       // ...
-     }
-     export default logProps(FancyButton);
-     ```
+        // ...
+      }
+      export default logProps(FancyButton);
+      ```
 
-     Now lets create a ref and pass it to FancyButton component. In this case, you can set focus to button element.
+      Tạo một ref và truyền nó vào component FancyButton. Trong trường hợp này, bạn có thể tập trung vào button.
 
-     ```javascript
-     import FancyButton from './FancyButton';
+      ```javascript
+      import FancyButton from './FancyButton';
 
-     const ref = React.createRef();
-     ref.current.focus();
-     <FancyButton label='Click Me' handleClick={handleClick} ref={ref} />;
-     ```
+      const ref = React.createRef();
+      ref.current.focus();
+      <FancyButton label='Click Me' handleClick={handleClick} ref={ref} />;
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 283. ### Is it ref argument available for all functions or class components?
 
