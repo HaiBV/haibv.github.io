@@ -5834,10 +5834,11 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-283. ### Is it ref argument available for all functions or class components?
+283. ### Đối số ref có sẵn cho tất cả component hay không? {#is-it-ref-argument-available-for-all-functions-or-class-components}
 
-     Regular function or class components don’t receive the ref argument, and ref is not available in props either. The second ref argument only exists when you define a component with React.forwardRef call.
-     **[⬆ Mục lục](#table-of-contents)**
+      Component hàm hoặc lớp thông thường không nhận được tham số là ref, và ref cũng không có sẵn trong props. Tham số  thứ 2 ref chỉ tồn tại khi bạn xác định trong component khi sử dụng lệnh gọi React.forwardRef.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 284. ### Why do you need additional care for component libraries while using forward refs?
 
