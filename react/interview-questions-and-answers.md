@@ -5840,10 +5840,11 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-284. ### Why do you need additional care for component libraries while using forward refs?
+284. ### Tại sao bạn cần quan tâm đến các component thư viện khi sử dụng forward refs? {#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs}
 
-     When you start using forwardRef in a component library, you should treat it as a breaking change and release a new major version of your library. This is because your library likely has a different behavior such as what refs get assigned to, and what types are exported. These changes can break apps and other libraries that depend on the old behavior.
-     **[⬆ Mục lục](#table-of-contents)**
+      Khi bạn bắt đầu sử dụng forwardRef trong một thư viện, bạn nên coi nó là một thay đổi lớn và đưa ra một phiên bản chính mới cho thư viện của bạn. Vì thư viện của bạn có thể có một hành vi khác, chẳng hạn như những refs được gán cho và những kiểu được xuất ra. Nhưng thay đổi này có thể phá vỡ các ứng dụng và thư viện khác phụ thuộc vào hành vi cũ.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 285. ### How to create react class components without ES6?
 
