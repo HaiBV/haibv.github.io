@@ -5873,33 +5873,33 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-286. ### Is it possible to use react without JSX?
+286. ### Có thể sử dụng react không có JSX được không? {#is-it-possible-to-use-react-without-jsx}
 
-     Yes, JSX is not mandatory for using React. Actually it is convenient when you don’t want to set up compilation in your build environment. Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). For example, let us take a greeting example with JSX,
+      Có, sử dụng React không bắt buộc cùng JSX. Thực ra, nó sẽ tiện lợi hơn khi bạn không muốn cài đặt trình biên soạn trong môi trường. Mỗi phần tử JSX chỉ là một cú pháp để gọi phương thức React.createElement(component, props, ...children). Xét ví dụ sau, đoạn code dưới đây sử dụng JSX
 
-     ```javascript
-     class Greeting extends React.Component {
-       render() {
-         return <div>Hello {this.props.message}</div>;
-       }
-     }
+      ```javascript
+      class Greeting extends React.Component {
+        render() {
+          return <div>Hello {this.props.message}</div>;
+        }
+      }
 
-     ReactDOM.render(<Greeting message='World' />, document.getElementById('root'));
-     ```
+      ReactDOM.render(<Greeting message='World' />, document.getElementById('root'));
+      ```
 
-     You can write the same code without JSX as below,
+      Bạn có thể viết lại mà không dùng JSX như sau,
 
-     ```javascript
-     class Greeting extends React.Component {
-       render() {
-         return React.createElement('div', null, `Hello ${this.props.message}`);
-       }
-     }
+      ```javascript
+      class Greeting extends React.Component {
+        render() {
+          return React.createElement('div', null, `Hello ${this.props.message}`);
+        }
+      }
 
-     ReactDOM.render(React.createElement(Greeting, { message: 'World' }, null), document.getElementById('root'));
-     ```
+      ReactDOM.render(React.createElement(Greeting, { message: 'World' }, null), document.getElementById('root'));
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 287. ### What is diffing algorithm?
 
