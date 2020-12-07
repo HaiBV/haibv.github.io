@@ -5901,14 +5901,15 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-287. ### What is diffing algorithm?
+287. ### Thuật toán nào được sử dụng để so sánh trong React? {#what-is-diffing-algorithm}
 
-     React needs to use algorithms to find out how to efficiently update the UI to match the most recent tree. The diffing algorithms is generating the minimum number of operations to transform one tree into another. However, the algorithms have a complexity in the order of O(n3) where n is the number of elements in the tree.
-     In this case, for displaying 1000 elements would require in the order of one billion comparisons. This is far too expensive. Instead, React implements a heuristic O(n) algorithm based on two assumptions:
+      React cần phải sử dụng các thuật toán để cập nhật UI hiệu quả nhất và phù hợp với mọi kiểu cây UI. Những thuật toán so sánh này sẽ biến đổi cây UI với số phép tính nhỏ nhất. Tuy nhiên, các thuật toán có độ phức tạp theo thứ tự O(n3) với n là số phần tử trong cây.
+      Trong trường hợp này, để hiển thị 1000 phẩn tử sẽ cần 1 tỷ phép so sánh. Điều này quá đắt. Thay vào đó, React thực hiện một thuật toán có độ phức tạp O(n) algorithm dựa trên 2 giả định:
 
-     1. Two elements of different types will produce different trees.
-     2. The developer can hint at which child elements may be stable across different renders with a key prop.
-        **[⬆ Mục lục](#table-of-contents)**
+      1. 2 phẩn tử khác kiểu đại diện cho 2 cây khác nhau.
+      2. Mỗi phần tử con có thể gắn với giá trị key trong props để định danh giúp ổn định kết xuất.
+        
+      **[⬆ Mục lục](#table-of-contents)**
 
 288. ### What are the rules covered by diffing algorithm?
 
