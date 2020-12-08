@@ -5911,57 +5911,56 @@ layout: default
         
       **[⬆ Mục lục](#table-of-contents)**
 
-288. ### What are the rules covered by diffing algorithm?
+288. ### Những quy tắc nào được sử dụng trong thuật toán so sánh? {#what-are-the-rules-covered-by-diffing-algorithm}
 
-     When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements. It covers the below rules during reconciliation algorithm,
+      Khi so sánh 2 cây UI, React sẽ so sánh 2 phần tử gốc trước. Hành vi tiếp theo sẽ tùy thuộc vào loại của các phần tử làm gốc. Bao gồm các quy tắc dưới đây trong thuật toán điều chỉnh,
 
-     1. **Elements Of Different Types:**
-        Whenever the root elements have different types, React will tear down the old tree and build the new tree from scratch. For example, elements <a> to <img>, or from <Article> to <Comment> of different types lead a full rebuild.
-     2. **DOM Elements Of The Same Type:**
-        When comparing two React DOM elements of the same type, React looks at the attributes of both, keeps the same underlying DOM node, and only updates the changed attributes. Lets take an example with same DOM elements except className attribute,
+      1. **Các phần tử có các loại khác nhau:**
+        Mỗi khi các phần tử gốc có loại khác nhau, React sẽ loại bỏ hoàn toàn cây cũ và xây dựng cây mới từ đầu. Ví dụ, phần tử <a> thành <img>, hoặc từ <Article> thành <Comment> sẽ được xây dựng lại hoàn toàn.
+      2. **Các phần tử DOM có cùng loại:**
+        Khi so sánh 2 phần tử React DOM có cùng loại, React sẽ xem xét các thuộc tính của cả 2, giữ lại những thuộc tính DOM giống nhau, và chỉ cập nhật những thuộc tính bị thay đổi. Xét ví dụ dưới đây, chỉ có thuộc tính className thay đổi
 
-        ```javascript
-        <div className="show" title="ReactJS" />
+          ```javascript
+          <div className="show" title="ReactJS" />
 
-        <div className="hide" title="ReactJS" />
-        ```
+          <div className="hide" title="ReactJS" />
+          ```
+        
+      3. **Các phần tử Component có cùng loại:**
+        Khi một component cập nhật, thực thể của nó được giữ nguyên, do đó state cũng giữ nguyên khi kết xuất. React cập nhật props của thực thể để khớp với phẩn tử mới, và gọi hàm componentWillReceiveProps() và componentWillUpdate() bên trong thực thể. Sau đó, phương thức kết xuất được gọi và thuật toán so sánh sẽ so sánh kết quả cũ và kết quả mới.
+      4. **Đệ quy trong phần tử con:**
+        Khi thực hiện đệ quy bên trong phần tử DOM con, React chỉ lặp lại trên danh sách cùng 1 lúc và tạo ra thay đổi bất cứ khi nào có sự khác biệt. Ví dụ, khi thêm một phần tử vào cuối danh sách.
 
-     3. **Component Elements Of The Same Type:**
-        When a component updates, the instance stays the same, so that state is maintained across renders. React updates the props of the underlying component instance to match the new element, and calls componentWillReceiveProps() and componentWillUpdate() on the underlying instance. After that, the render() method is called and the diff algorithm recurses on the previous result and the new result.
-     4. **Recursing On Children:**
-        when recursing on the children of a DOM node, React just iterates over both lists of children at the same time and generates a mutation whenever there’s a difference. For example, when adding an element at the end of the children, converting between these two trees works well.
+          ```javascript
+          <ul>
+            <li>first</li>
+            <li>second</li>
+          </ul>
 
-        ```javascript
-        <ul>
-          <li>first</li>
-          <li>second</li>
-        </ul>
+          <ul>
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+          </ul>
+          ```
 
-        <ul>
-          <li>first</li>
-          <li>second</li>
-          <li>third</li>
-        </ul>
+      5. **Sử dụng keys:**
+        React hỗ trợ thuộc tính key. Khi phần tử con có keys, React sử dụng key này để khớp phần tử con trong cây bang đầu với phần tử con trong cây tiếp theo. Ví dự dưới đây cho thấy nếu thêm key sẽ làm tăng hiệu năng khi thay đổi,
 
-        ```
+          ```javascript
+          <ul>
+            <li key="2015">Duke</li>
+            <li key="2016">Villanova</li>
+          </ul>
 
-     5. **Handling keys:**
-        React supports a key attribute. When children have keys, React uses the key to match children in the original tree with children in the subsequent tree. For example, adding a key can make the tree conversion efficient,
+          <ul>
+            <li key="2014">Connecticut</li>
+            <li key="2015">Duke</li>
+            <li key="2016">Villanova</li>
+          </ul>
+          ```
 
-     ```javascript
-     <ul>
-       <li key="2015">Duke</li>
-       <li key="2016">Villanova</li>
-     </ul>
-
-     <ul>
-       <li key="2014">Connecticut</li>
-       <li key="2015">Duke</li>
-       <li key="2016">Villanova</li>
-     </ul>
-     ```
-
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 289. ### When do you need to use refs?
 
