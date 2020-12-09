@@ -5962,14 +5962,15 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-289. ### When do you need to use refs?
+289. ### Khi nào bạn nên sử dụng refs? {#when-do-you-need-to-use-refs}
 
-     There are few use cases to go for refs
+      Có một vài trường hợp bạn nên sử dụng refs
 
-     1. Managing focus, text selection, or media playback.
-     2. Triggering imperative animations.
-     3. Integrating with third-party DOM libraries.
-        **[⬆ Mục lục](#table-of-contents)**
+      1. Quản lý việc focus input, đánh dấu văn bản, hoặc điều chỉnh nhạc/video.
+      2. Kích hoạt mệnh lệnh cho hiệu ứng chuyển động.
+      3. Tích hợp với thư viện DOM của bên thứ 3.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 290. ### Is it prop must be named as render for render props?
 
