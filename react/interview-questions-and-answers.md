@@ -5972,41 +5972,41 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-290. ### Is it prop must be named as render for render props?
+290. ### Có phải lúc nào cũng phải đặt tên cho prop? {#is-it-prop-must-be-named-as-render-for-render-props}
 
-     Even though the pattern named render props, you don’t have to use a prop named render to use this pattern. i.e, Any prop that is a function that a component uses to know what to render is technically a “render prop”. Lets take an example with the children prop for render props,
+      Mặc dù có mẫu đặt tên cho prop, nhưng không nhất thiết phải đặt tên theo mẫu này. Tức là, mọi prop có dạng hàm component sử dụng về kỹ thuật đều được hiểu là prop để kết xuất. Xét ví dụ dưới đây,
 
-     ```javascript
-     <Mouse
-       children={(mouse) => (
-         <p>
-           The mouse position is {mouse.x}, {mouse.y}
-         </p>
-       )}
-     />
-     ```
+      ```javascript
+      <Mouse
+        children={(mouse) => (
+          <p>
+            The mouse position is {mouse.x}, {mouse.y}
+          </p>
+        )}
+      />
+      ```
 
-     Actually children prop doesn’t need to be named in the list of “attributes” in JSX element. Instead, you can keep it directly inside element,
+      Thực ra prop phần tử con không nhất thiết phải đặt tên theo danh sách "thuộc tính" trong JSX. Thay vào đó, bạn chỉ cần đưa trực tiếp vào thuộc tính,
 
-     ```javascript
-     <Mouse>
-       {(mouse) => (
-         <p>
-           The mouse position is {mouse.x}, {mouse.y}
-         </p>
-       )}
-     </Mouse>
-     ```
+      ```javascript
+      <Mouse>
+        {(mouse) => (
+          <p>
+            The mouse position is {mouse.x}, {mouse.y}
+          </p>
+        )}
+      </Mouse>
+      ```
 
-     While using this above technique(without any name), explicitly state that children should be a function in your propTypes.
+      Với kỹ thuật trên (không sử dụng tên), cần bắt buộc phải có đầu vào children trong PropTypes.
 
-     ```javascript
-     Mouse.propTypes = {
-       children: PropTypes.func.isRequired,
-     };
-     ```
+      ```javascript
+      Mouse.propTypes = {
+        children: PropTypes.func.isRequired,
+      };
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 291. ### What are the problems of using render props with pure components?
 
