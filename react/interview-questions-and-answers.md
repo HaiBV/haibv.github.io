@@ -6008,10 +6008,11 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-291. ### What are the problems of using render props with pure components?
+291. ### Sử dụng props kết xuất với pure component có những vấn đề gì? {#what-are-the-problems-of-using-render-props-with-pure-components}
 
-     If you create a function inside a render method, it negates the purpose of pure component. Because the shallow prop comparison will always return false for new props, and each render in this case will generate a new value for the render prop. You can solve this issue by defining the render function as instance method.
-     **[⬆ Mục lục](#table-of-contents)**
+      Nếu bạn tạo hàm bên trong phương thức kết xuất, nó sẽ đi ngược lại với mục đích sử dụng pure component. Bởi vì so sánh prop nông luôn trả về false cho prop mới, và mỗi kết xuất trong trường hợp này sẽ tạo ra một giá trị mới cho prop kết xuất. Bạn có thể xử lý vấn đề này bằng cách định nghĩa hàm kết xuất như một phương thức instance.
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
 292. ### How do you create HOC using render props?
 
