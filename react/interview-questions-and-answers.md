@@ -6032,10 +6032,11 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-293. ### What is windowing technique?
+293. ### Kỹ thuật windoing là gì? {#what-is-windowing-technique}
 
-     Windowing is a technique that only renders a small subset of your rows at any given time, and can dramatically reduce the time it takes to re-render the components as well as the number of DOM nodes created. If your application renders long lists of data then this technique is recommended. Both react-window and react-virtualized are popular windowing libraries which provides several reusable components for displaying lists, grids, and tabular data.
-     **[⬆ Mục lục](#table-of-contents)**
+      Windowing là kỹ thuật chỉ kết xuất một phần nhỏ của danh sách, và có thể giảm thiếu thời gian cần thiết để tái kết xuất tùy theo số phần tử DOM. Nếu ứng dụng của bạn kết xuất một danh sách dữ liệu dài thì nên sử dụng kỹ thuật này. react-window và react-virtualized là 2 thư viện thông dụng sử dụng windowing và cung cấp nhiều component có thể tái sử dụng để hiện thị danh sách, lưới và bảng dữ liệu.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 294. ### How do you print falsy values in JSX?
 
