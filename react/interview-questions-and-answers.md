@@ -6038,15 +6038,15 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-294. ### How do you print falsy values in JSX?
+294. ### In giá trị falsy ra trong JSX thế nào? {#how-do-you-print-falsy-values-in-jsx}
 
-     The falsy values such as false, null, undefined, and true are valid children but they don't render anything. If you still want to display them then you need to convert it to string. Let's take an example on how to convert to a string,
+      Các giá trị phủ định như false, null, undefined, và true là những phần  tử con hợp lệ nhưng chúng không kết xuất ra gì hết. Nếu bạn vẫn muốn hiển thị chúng thì bạn cần chuyển chúng sang dạng chuỗi. Xét ví dụ dưới đây,
 
-     ```javascript
-     <div>My JavaScript variable is {String(myVariable)}.</div>
-     ```
+      ```javascript
+      <div>My JavaScript variable is {String(myVariable)}.</div>
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 295. ### What is the typical use case of portals?
 
