@@ -6048,10 +6048,11 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-295. ### What is the typical use case of portals?
+295. ### Trường hợp sử dụng điển hình của cổng thông tin (portals) là gì? {#what-is-the-typical-use-case-of-portals}
 
-     React portals are very useful when a parent component has overflow: hidden or has properties that affect the stacking context(z-index,position,opacity etc styles) and you need to visually “break out” of its container. For example, dialogs, global message notifications, hovercards, and tooltips.
-     **[⬆ Mục lục](#table-of-contents)**
+      React portals rất hữu dụng khi compoenent cha bị tràn: ẩn hoặc các thuộc tính ảnh hướng đến dữ liệu xếp chồng (z-index, position, opacity vv.vv) và bạn cần hiển thị thoát ra khỏi vùng chứa đó. Ví dụ, dialogs, thông báo chung, hovercards, và tooltips.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 296. ### How do you set default value for uncontrolled component?
 
