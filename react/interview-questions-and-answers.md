@@ -6054,29 +6054,30 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-296. ### How do you set default value for uncontrolled component?
+296. ### Đặt giá trị mặc định cho component không điều khiển như thế nào? {#how-do-you-set-default-value-for-uncontrolled-component}
 
-     In React, the value attribute on form elements will override the value in the DOM. With an uncontrolled component, you might want React to specify the initial value, but leave subsequent updates uncontrolled. To handle this case, you can specify a **defaultValue** attribute instead of **value**.
+      Với React, giá trị thuộc tính của các thành phần trong form sẽ ghi đè lên giá trị trong DOM. Với component không điều khiển, bạn có thể muốn React xác định giá trị ban đầu, nhưng không khiểm soát các cập nhật tiếp theo. Để xử lý trường hợp này, sử dụng thuộc tính **defaultValue** thay cho **value**.
 
-     ```javascript
-     render() {
-       return (
-         <form onSubmit={this.handleSubmit}>
-           <label>
-             User Name:
-             <input
-               defaultValue="John"
-               type="text"
-               ref={this.input} />
-           </label>
-           <input type="submit" value="Submit" />
-         </form>
-       );
-     }
-     ```
+      ```javascript
+      render() {
+        return (
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              User Name:
+              <input
+                defaultValue="John"
+                type="text"
+                ref={this.input} />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+        );
+      }
+      ```
 
-     The same applies for `select` and `textArea` inputs. But you need to use **defaultChecked** for `checkbox` and `radio` inputs.
-     **[⬆ Mục lục](#table-of-contents)**
+      Tương tự đối với `select` và `textArea`. Sử dụng **defaultChecked** với `checkbox` và `radio`.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 297. ### What is your favorite React stack?
 
