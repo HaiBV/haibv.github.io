@@ -6079,11 +6079,12 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-297. ### What is your favorite React stack?
+297. ### React stack ưa thích của bạn là gì? {#what-is-your-favorite-react-stack}
 
-     Even though the tech stack varies from developer to developer, the most popular stack is used in react boilerplate project code. It mainly uses Redux and redux-saga for state management and asynchronous side-effects, react-router for routing purpose, styled-components for styling react components, axios for invoking REST api, and other supported stack such as webpack, reselect, ESNext, Babel.
-     You can clone the project https://github.com/react-boilerplate/react-boilerplate and start working on any new react project.
-     **[⬆ Mục lục](#table-of-contents)**
+      Mặc dù rất stack công nghệ rất đa dạng, nhưng phần lớn stack phổ biến thường sử dụng react boilerplate. Chủ yếu sử dụng Redux và redux-saga để quản lý state và hiệu ứng bất đồng bộ, react-router để điều hướng, styled-components cho styling, axios dùng với REST api, và những ứng dụng hỗ trợ khác như webpack, reselect, ESNext, Babel.
+      Bạn có thể sử dụng dự án tại đây https://github.com/react-boilerplate/react-boilerplate và bắt đầu làm việt với bất kỳ sự án react nào.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 298. ### What is the difference between Real DOM and Virtual DOM?
 
