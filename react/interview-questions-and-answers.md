@@ -6086,20 +6086,19 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-298. ### What is the difference between Real DOM and Virtual DOM?
+298. ### Nêu những điểm khác biệt của DOM thực và DOM ảo? {#what-is-the-difference-between-Real-DOM-and-Virtual-DOM}
 
-     Below are the main differences between Real DOM and Virtual DOM,
+      Dưới đây là những điểm khác biệt căn bản giữa DOM thực và DOM ảo,
 
-     | Real DOM                             | Virtual DOM                          |
-     | ------------------------------------ | ------------------------------------ |
-     | Updates are slow                     | Updates are fast                     |
-     | DOM manipulation is very expensive.  | DOM manipulation is very easy        |
-     | You can update HTML directly.        | You Can’t directly update HTML       |
-     | It causes too much of memory wastage | There is no memory wastage           |
-     | Creates a new DOM if element updates | It updates the JSX if element update |
+      | DOM Thực                             | DOM ảo                               |
+      | ------------------------------------ | ------------------------------------ |
+      | Cập nhật chậm                        | Cập nhật nhanh                       |
+      | Các thao tác rất tốn kém.            | Thao tác dễ dàng                     |
+      | Có thể trực tiếp cập nhật HTML.      | Không thể trực tiếp cập nhật HTML    |
+      | Tốn kèm nhiều bộ nhớ lãng phí        | Không tốn bộ nhớ lãng phí            |
+      | Tạo một DOM mới nếu phần tử cập nhật | Cập nhật JSX nếu phần tử cập nhật    |
 
-
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 299. ### How to add Bootstrap to a react application?
 
