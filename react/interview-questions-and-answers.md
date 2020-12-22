@@ -6100,21 +6100,24 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-299. ### How to add Bootstrap to a react application?
+299. ### Sử dụng Bootstrap trong dự án React như thế nào? {#how-to-add-bootstrap-to-a-react-application}
 
-     Bootstrap can be added to your React app in a three possible ways
+      Bootstrap có thể được sử dụng trong ứng dụng React theo 3 cách dưới đây
 
-     1. Using the Bootstrap CDN:
-        This is the easiest way to add bootstrap. Add both bootstrap CSS and JS resources in a head tag.
-     2. Bootstrap as Dependency:
-        If you are using a build tool or a module bundler such as Webpack, then this is the preferred option for adding Bootstrap to your React application
-        ```javascript
-        npm install bootstrap
-        ``
-        ```
-     3. React Bootstrap Package:
-        In this case, you can add Bootstrap to our React app is by using a package that has rebuilt Bootstrap components to work particularly as React components. Below packages are popular in this category, 1. react-bootstrap 2. reactstrap
-        **[⬆ Mục lục](#table-of-contents)**
+      1. Sử dụng Bootstrap CDN: 
+        Đây là cách dễ nhất để sử dụng bootstrap. Và tất cả tài nguyên của bootstrap CSS và JS nằm trong thẻ head.
+      2. Sử dụng như một thành phần phụ thuộc: 
+        Nếu bạn sử dụng một công cụ xây dựng hoặc gói quản lý thư viện như Webpack, thì đây là cách nên sử dụng để dùng Bootstrap trong ứng dụng React
+          ```javascript
+          npm install bootstrap
+          ``
+          ```
+      3. Thư viện React Bootstrap: 
+        Trong trường hợp này, bạn có thể sử dụng Bootstrap trong ứng dụng React bằng cách sử dụng thư viện dựng sẵn những Bootstrap components hoạt động như những React components. Dưới đây là những thư viện phổ biến, 
+        1. react-bootstrap 
+        2. reactstrap
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 300. ### Can you list down top websites or applications using react as front end framework?
 
