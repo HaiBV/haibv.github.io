@@ -6119,21 +6119,22 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-300. ### Can you list down top websites or applications using react as front end framework?
+300. ### Danh sách websites và ứng dụng sử dụng React? {#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework}
 
-     Below are the `top 10 websites` using React as their front-end framework,
+      Dưới đây là `top 10 websites` sử dụng React,
 
-     1. Facebook
-     2. Uber
-     3. Instagram
-     4. WhatsApp
-     5. Khan Academy
-     6. Airbnb
-     7. Dropbox
-     8. Flipboard
-     9. Netflix
-     10. PayPal
-         **[⬆ Mục lục](#table-of-contents)**
+      1. Facebook
+      2. Uber
+      3. Instagram
+      4. WhatsApp
+      5. Khan Academy
+      6. Airbnb
+      7. Dropbox
+      8. Flipboard
+      9. Netflix
+      10. PayPal
+
+      **[⬆ Mục lục](#table-of-contents)**
 
 301. ### Is it recommended to use CSS In JS technique in React?
 
