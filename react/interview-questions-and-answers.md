@@ -6136,10 +6136,11 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-301. ### Is it recommended to use CSS In JS technique in React?
+301. ### Kỹ thuật CSS-In-JS có được khuyên dùng trong React không? {#is-it-recommended-to-use-css-in-js-technique-in-react}
 
-     React does not have any opinion about how styles are defined but if you are a beginner then good starting point is to define your styles in a separate \*.css file as usual and refer to them using className. This functionality is not part of React but came from third-party libraries. But If you want to try a different approach(CSS-In-JS) then styled-components library is a good option.
-     **[⬆ Mục lục](#table-of-contents)**
+      React không có lựa chọn nào về việc styles được định nghĩa như thế nào nhưng nếu bạn là người mới bắt đầu sử dụng React thì nên bắt đầu với file *.css riêng biệt kết hợp sử dụng className. Chức năng này không phải là một phần của React mà đến từ các thư viện của bên thứ 3. Nhưng nếu bạn muốn thử một cách tiếp khác (CSS-In-JS) thì thư viện styled-components là một lựa chọn tốt.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 302. ### Do I need to rewrite all my class components with hooks?
 
