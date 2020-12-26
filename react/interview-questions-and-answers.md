@@ -6142,10 +6142,11 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-302. ### Do I need to rewrite all my class components with hooks?
+302. ### Tôi có cần viết lại toàn bộ class components với hooks? {#do-i-need-to-rewrite-all-my-class-components-with-hooks}
 
-     No. But you can try Hooks in a few components(or new components) without rewriting any existing code. Because there are no plans to remove classes in ReactJS.
-     **[⬆ Mục lục](#table-of-contents)**
+      Không. Nhưng bạn cần thử Hooks trong một vài components (hoặc những components mới) mà không viết lại component trước đó. Vì không có kế hoạch loại bỏ classes trong ReactJS.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 303. ### How to fetch data with React Hooks?
 
