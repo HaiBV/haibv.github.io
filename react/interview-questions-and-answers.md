@@ -6183,10 +6183,11 @@ layout: default
      Remember we provided an empty array as second argument to the effect hook to avoid activating it on component updates but only for the mounting of the component. i.e, It fetches only for component mount.
      **[⬆ Mục lục](#table-of-contents)**
 
-304. ### Is Hooks cover all use cases for classes?
+304. ### Hooks có phủ được toàn bộ các trường hợp với class? {#is-hooks-cover-all-use-cases-for-classes}
 
-     Hooks doesn't cover all use cases of classes but there is a plan to add them soon. Currently there are no Hook equivalents to the uncommon **getSnapshotBeforeUpdate** and **componentDidCatch** lifecycles yet.
-     **[⬆ Mục lục](#table-of-contents)**
+      Hooks không phủ được toàn bộ các trường hợp của class nhưng có kế hoạch hoàn chỉnh sớm. Hiện tại không có Hook thay thế những hàm không thông dụng như **getSnapshotBeforeUpdate** và **componentDidCatch**.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 305. ### What is the stable release for hooks support?
 
