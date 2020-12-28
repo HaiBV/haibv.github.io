@@ -6148,40 +6148,41 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-303. ### How to fetch data with React Hooks?
+303. ### Lấy dữ liệu với React Hooks như thế nào? {#how-to-fetch-data-with-react-hooks}
 
-     The effect hook called `useEffect` is used to fetch the data with axios from the API and to set the data in the local state of the component with the state hook’s update function.
-     Let's take an example in which it fetches list of react articles from the API
+      Hook với tên gọi `useEffect` sử dụng để lấy dữ liệu với axios từ API và gán dữ liệu cho state của  component với hàm update của hook.
+      Lấy ví dụ việc lấy danh sách bài viết từ API
 
-     ```javascript
-     import React, { useState, useEffect } from 'react';
-     import axios from 'axios';
+      ```javascript
+      import React, { useState, useEffect } from 'react';
+      import axios from 'axios';
 
-     function App() {
-       const [data, setData] = useState({ hits: [] });
+      function App() {
+        const [data, setData] = useState({ hits: [] });
 
-       useEffect(async () => {
-         const result = await axios('http://hn.algolia.com/api/v1/search?query=react');
+        useEffect(async () => {
+          const result = await axios('http://hn.algolia.com/api/v1/search?query=react');
 
-         setData(result.data);
-       }, []);
+          setData(result.data);
+        }, []);
 
-       return (
-         <ul>
-           {data.hits.map((item) => (
-             <li key={item.objectID}>
-               <a href={item.url}>{item.title}</a>
-             </li>
-           ))}
-         </ul>
-       );
-     }
+        return (
+          <ul>
+            {data.hits.map((item) => (
+              <li key={item.objectID}>
+                <a href={item.url}>{item.title}</a>
+              </li>
+            ))}
+          </ul>
+        );
+      }
 
-     export default App;
-     ```
+      export default App;
+      ```
 
-     Remember we provided an empty array as second argument to the effect hook to avoid activating it on component updates but only for the mounting of the component. i.e, It fetches only for component mount.
-     **[⬆ Mục lục](#table-of-contents)**
+      Nhớ rằng chúng ta cung cấp một mảng rỗng làm tham số thứ 2 để hook tránh chạy lại khi component cập nhật, chỉ chạy khi component được loadt. Tức là, chỉ lấy dữ liệu khi component được tải.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 304. ### Hooks có phủ được toàn bộ các trường hợp với class? {#is-hooks-cover-all-use-cases-for-classes}
 
