@@ -6201,18 +6201,19 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-306. ### Why do we use array destructuring (square brackets notation) in `useState`?
-     When we declare a state variable with `useState`, it returns a pair — an array with two items. The first item is the current value, and the second is a function that updates the value. Using [0] and [1] to access them is a bit confusing because they have a specific meaning. This is why we use array destructuring instead.
-     For example, the array index access would look as follows:
-     ```javascript
-     var userStateVariable = useState('userProfile'); // Returns an array pair
-     var user = userStateVariable[0]; // Access first item
-     var setUser = userStateVariable[1]; // Access second item
-     ```
-     Whereas with array destructuring the variables can be accessed as follows:
-     ```javascript
-     const [user, setUser] = useState('userProfile');
-     ```
+306. ### Tại sao chúng ta lại sử dụng array destructuring với useState? {#why-do-we-use-array-destructuring-square-brackets-notation-in-usestate}
+      
+      Khi khai báo giá trị state với `useState`, hàm trả về một cặp - một mảng với 2 phần tử. Phần tử đầu tiên là giá trị hiện tại, và phần tử thứ 2 là một hàm sẽ cập nhật giá trị đó. Sử dụng [0] và [1] để lấy chúng ra sẽ dễ gây nhầm lẫn do chúng có ý nghĩa cụ thể. Đây là lý do vì sao chúng ta sử dụng array destructuring.
+      Ví dụ, sử dụng chỉ mục mảng sẽ như dưới đây:
+      ```javascript
+      var userStateVariable = useState('userProfile'); // Trả về một mảng 2 phần tử
+      var user = userStateVariable[0]; // Lấy phần tử đầu tiên
+      var setUser = userStateVariable[1]; // Lấy phần tử thứ 2
+      ```
+      Trong khi đó với array destructuring, các giá trị có thể được khai báo như sau:
+      ```javascript
+      const [user, setUser] = useState('userProfile');
+      ```
 
 
     **[⬆ Mục lục](#table-of-contents)**
