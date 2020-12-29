@@ -6190,15 +6190,16 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-305. ### What is the stable release for hooks support?
+305. ### Phiên bản ổn định hỗ trợ hook? {#what-is-the-stable-release-for-hooks-support}
 
-     React includes a stable implementation of React Hooks in 16.8 release for below packages
+      React hỗ trợ ổn định cho React Hooks từ phiên bản 16.8 cùng với các gói dưới đây
 
-     1. React DOM
-     2. React DOM Server
-     3. React Test Renderer
-     4. React Shallow Renderer
-        **[⬆ Mục lục](#table-of-contents)**
+      1. React DOM
+      2. React DOM Server
+      3. React Test Renderer
+      4. React Shallow Renderer
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 306. ### Why do we use array destructuring (square brackets notation) in `useState`?
      When we declare a state variable with `useState`, it returns a pair — an array with two items. The first item is the current value, and the second is a function that updates the value. Using [0] and [1] to access them is a bit confusing because they have a specific meaning. This is why we use array destructuring instead.
