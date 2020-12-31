@@ -6218,16 +6218,17 @@ layout: default
 
     **[⬆ Mục lục](#table-of-contents)**
 
-307. ### What are the sources used for introducing hooks?
+307. ### Các nguồn để giới thiệu Hooks? {#what-are-the-sources-used-for-introducing-hooks}
 
-     Hooks got the ideas from several different sources. Below are some of them,
+      Hooks được lấy ý tưởng từ nhiều nguồn khác nhau. Dưới đây là một trong số chúng,
 
-     1. Previous experiments with functional APIs in the react-future repository
-     2. Community experiments with render prop APIs such as Reactions Component
-     3. State variables and state cells in DisplayScript.
-     4. Subscriptions in Rx.
-     5. Reducer components in ReasonReact.
-        **[⬆ Mục lục](#table-of-contents)**
+      1. Các thử nghiệm trước đây với các APIs của thư viện react-future
+      2. Các thử nghiệm cộng đồng với các APIs như trong Reactions Component
+      3. Các biến state và ô state trong DisplayScript.
+      4. Subscriptions trong Rx.
+      5. Reducer components trong ReasonReact.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 308. ### How do you access imperative API of web components?
 
