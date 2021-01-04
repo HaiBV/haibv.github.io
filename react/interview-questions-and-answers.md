@@ -6230,10 +6230,11 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-308. ### How do you access imperative API of web components?
+308. ### Truy cập API mệnh lệnh của web components như thế nào?{#how-do-you-access-imperative-api-of-web-components}
 
-     Web Components often expose an imperative API to implement its functions. You will need to use a **ref** to interact with the DOM node directly if you want to access imperative API of a web component. But if you are using third-party Web Components, the best solution is to write a React component that behaves as a **wrapper** for your Web Component.
-     **[⬆ Mục lục](#table-of-contents)**
+      Web Components thường cung cấp một API mệnh lệnh để thực hiện những hành động của mình. Bạn cần sử dụng một **ref** để tương tác trực tiếp với DOM nếu bạn muốn truy cập vào API mệnh lệnh của một web component. Nhưng nếu bạn sử dụng thư viện thứ 2 của Web Components, cách tốt nhất là việt một React component hoạt động như một **wrapper** với Web Component của bạn.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 309. ### What is formik?
      Formik is a small react form library that helps you with the three major problems,
