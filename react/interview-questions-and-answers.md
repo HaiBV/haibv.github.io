@@ -6236,14 +6236,13 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-309. ### What is formik?
-     Formik is a small react form library that helps you with the three major problems,
-     1. Getting values in and out of form state
-     2. Validation and error messages
-     3. Handling form submission
+309. ### Formik là gì? {#what-is-formik}
+      Formik là một thư viện React nhỏ về form hỗ trợ bạn 3 vấn đề chính,
+      1. Gán giá trị trong và ngoài state của form
+      2. Thẩm định và quản lý lỗi
+      3. Xử lý sự kiện nhập form
 
-
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 310. ### What are typical middleware choices for handling asynchronous calls in Redux?
 
