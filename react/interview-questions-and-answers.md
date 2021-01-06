@@ -6244,10 +6244,11 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-310. ### What are typical middleware choices for handling asynchronous calls in Redux?
+310. ### Những lựa chọn điển hình cho việc quản lý bất đồng bộ với Redux? {#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux}
 
-     Some of the popular middleware choices for handling asynchronous calls in Redux eco system are `Redux Thunk, Redux Promise, Redux Saga`.
-     **[⬆ Mục lục](#table-of-contents)**
+      Có một số lựa chọn phổ biến để quản lý hành động bất đồng bộ với Redux như `Redux Thunk, Redux Promise, Redux Saga`.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 311. ### Is browsers understand JSX code?
 
