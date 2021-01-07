@@ -6250,10 +6250,11 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-311. ### Is browsers understand JSX code?
+311. ### Các trình duyệt có hiểu được mã JSX không? {#is-browsers-understand-jsx-code}
 
-     No, browsers can't understand JSX code. You need a transpiler to convert your JSX to regular Javascript that browsers can understand. The most widely used transpiler right now is Babel.
-     **[⬆ Mục lục](#table-of-contents)**
+      Không, các trình duyệt không thể hiểu được mã JSX. Bạn cần có trình dịch để chuyển từ JSX sang Javascript thông thường để các trình duyệt có thể hiểu được. Trình dịch được sử dụng phổ biến nhất hiện tại là Babel.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 312. ### Describe about data flow in react?
 
