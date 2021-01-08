@@ -6256,10 +6256,11 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-312. ### Describe about data flow in react?
+312. ### Mô tả về luồng dữ liệu trong React? {#describe-about-data-flow-in-react}
 
-     React implements one-way reactive data flow using props which reduce boilerplate and is easier to understand than traditional two-way data binding.
-     **[⬆ Mục lục](#table-of-contents)**
+      React triển khai luồng dữ liệu 1 chiều sử dụng props để giảm bớt boilerplate và dễ hiểu hơn so với luồng dữ liệu 2 chiều truyền thống.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 313. ### What is react scripts?
 
