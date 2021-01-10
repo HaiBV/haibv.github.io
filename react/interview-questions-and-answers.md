@@ -6262,10 +6262,11 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-313. ### What is react scripts?
+313. ### react-scripts là gì? {#what-is-react-scripts}
 
-     The `react-scripts` package is a set of scripts from the create-react-app starter pack which helps you kick off projects without configuring. The `react-scripts start` command sets up the development environment and starts a server, as well as hot module reloading.
-     **[⬆ Mục lục](#table-of-contents)**
+      Thư viện `react-scripts` là một tập những câu lệnh trong gói create-react-app có nhiệm vụ giúp bạn bắt đầu dự án mà không cần chỉnh sửa gì nhiều. Câu lệnh `react-scripts start` sẽ cài đặt môi trường phát triển và khởi động một server, cùng với những module hot reloading.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 314. ### What are the features of create react app?
      Below are the list of some of the features provided by create react app.
