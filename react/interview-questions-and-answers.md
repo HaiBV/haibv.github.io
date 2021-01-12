@@ -6268,18 +6268,17 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-314. ### What are the features of create react app?
-     Below are the list of some of the features provided by create react app.
-     1. React, JSX, ES6, Typescript and Flow syntax support.
-     2. Autoprefixed CSS
-     3. CSS Reset/Normalize
-     4. A live development server
-     5. A fast interactive unit test runner with built-in support for coverage reporting
-     6. A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps
-     7. An offline-first service worker and a web app manifest, meeting all the Progressive Web App criteria.
+314. ### create-react-app có những chức năng nào? {#what-are-the-features-of-create-react-app}
+      Dưới đây là danh sách một số chức năng cung cấp bởi create-react-app.
+      1. Hỗ trợ cú pháp React, JSX, ES6, Typescript và Flow.
+      2. Autoprefixed CSS
+      3. CSS Reset/Normalize
+      4. Server development
+      5. Unit test dựng sẵn
+      6. Xử lý JS, CSS, và ảnh dựng sẵn cho production
+      7. Service worker ưu tiên ngoại tuyến và web app, phù hợp với Progressive Web App.
 
-
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 315. ### What is the purpose of renderToNodeStream method?
 
