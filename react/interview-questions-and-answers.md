@@ -6280,11 +6280,12 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-315. ### What is the purpose of renderToNodeStream method?
+315. ### Mục đích của phương thức renderToNodeStream là gì?  {#what-is-the-purpose-of-renderToNodeStream-method}
 
-     The `ReactDOMServer#renderToNodeStream` method is used to generate HTML on the server and send the markup down on the initial request for faster page loads. It also helps search engines to crawl your pages easily for SEO purposes.
-     **Note:** Remember this method is not available in the browser but only server.
-     **[⬆ Mục lục](#table-of-contents)**
+      Phương thức `ReactDOMServer#renderToNodeStream` được sử dụng để tạo ra HTML trên server và trả về HTML trong request ban đầu để tăng tốc độ trải trang. Nó cũng giúp các công cụ tìm tiếp quét trang của bạn và hỗ trợ SEO dễ dàng hơn.
+      **Note:** Phương thức này chỉ khả dụng trên server, không sử dụng được dưới trình duyệt.
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 316. ### What is MobX?
 
