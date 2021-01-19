@@ -6287,16 +6287,16 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-316. ### What is MobX?
+316. ### MobX là gì? {#what-is-mobx}
 
-     MobX is a simple, scalable and battle tested state management solution for applying functional reactive programming (TFRP). For reactJs application, you need to install below packages,
+      MobX là một giải pháp quản lý state đơn giản, có thể mở rộng và đã được thử nghiệm để áp dụng lập trình phản ứng (TFRP). Với ứng dụng ReactJs, bạn cần cài đặt các thư viện dưới đây,
 
-     ```bash
-     npm install mobx --save
-     npm install mobx-react --save
-     ```
+      ```bash
+      npm install mobx --save
+      npm install mobx-react --save
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 317. ### What are the differences between Redux and MobX?
 
