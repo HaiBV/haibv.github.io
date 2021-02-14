@@ -6216,7 +6216,7 @@ layout: default
       ```
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 307. ### Các nguồn để giới thiệu Hooks? {#what-are-the-sources-used-for-introducing-hooks}
 
@@ -6314,43 +6314,43 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-318. ### Should I learn ES6 before learning ReactJS?
+318. ### Có nên học ES6 trước khi học ReactJS? {#should-i-learn-es6-before-learning-reactjs}
 
-     No, you don’t have to learn es2015/es6 to learn react. But you may find many resources or React ecosystem uses ES6 extensively. Let's see some of the frequently used ES6 features,
+      Không, không nhất thiết phải học es2015/es6 để học react. Nhưng bạn có thể thấy ES6 được sử dụng rộng rãi trong nhiều tài nguyên hoặc hệ sinh thái của React. Hãy xem một vài tính năng của ES6 thường được sử dụng,
 
-     1. Destructuring: To get props and use them in a component
+      1. Destructuring: Để lấy props và sử dụng trong component
 
-     ```javascript
-     // in es 5
-     var someData = this.props.someData;
-     var dispatch = this.props.dispatch;
+      ```javascript
+      // ES5
+      var someData = this.props.someData;
+      var dispatch = this.props.dispatch;
 
-     // in es6
-     const { someData, dispatch } = this.props;
-     ```
+      // ES6
+      const { someData, dispatch } = this.props;
+      ```
 
-     2. Spread operator: Helps in passing props down into a component
+      2. Spread operator: Hỗ trợ truyền props vào trong một component
 
-     ```javascript
-     // in es 5
-     <SomeComponent someData={this.props.someData} dispatch={this.props.dispatch} />
+      ```javascript
+      // ES5
+      <SomeComponent someData={this.props.someData} dispatch={this.props.dispatch} />
 
-     // in es6
-     <SomeComponent {...this.props} />
-     ```
+      // ES6
+      <SomeComponent {...this.props} />
+      ```
 
-     3. Arrow functions: Makes compact syntax
+      3. Arrow functions: Giúp cú pháp ngắn gọn
 
-     ```javascript
-     // es 5
-     var users = usersList.map(function (user) {
-       return <li>{user.name}</li>;
-     });
-     // es 6
-     const users = usersList.map((user) => <li>{user.name}</li>);
-     ```
+      ```javascript
+        // ES5
+      var users = usersList.map(function (user) {
+        return <li>{user.name}</li>;
+      });
+      // ES6
+      const users = usersList.map((user) => <li>{user.name}</li>);
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 319. ### What is Concurrent Rendering?
 
