@@ -6298,21 +6298,21 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-317. ### What are the differences between Redux and MobX?
+317. ### Những đặc điểm khác biệt giữa Redux và MobX? {#what-are-the-differences-between-redux-and-mobx}
 
-     Below are the main differences between Redux and MobX,
+      Dưới đây là những điểm khác biệt giữa Redux và MobX,
 
-     | Topic         | Redux                                                         | MobX                                                                   |
-     | ------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------- |
-     | Definition    | It is a javascript library for managing the application state | It is a library for reactively managing the state of your applications |
-     | Programming   | It is mainly written in ES6                                   | It is written in JavaScript(ES5)                                       |
-     | Data Store    | There is only one large store exist for data storage          | There is more than one store for storage                               |
-     | Usage         | Mainly used for large and complex applications                | Used for simple applications                                           |
-     | Performance   | Need to be improved                                           | Provides better performance                                            |
-     | How it stores | Uses JS Object to store                                       | Uses observable to store the data                                      |
+      | Topic           | Redux                                                          | MobX                                                  |
+      | --------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
+      | Định nghĩa      | Là một thư viện javascript cho việc quản lý state của ứng dụng | Là một thư viện cho việc quản lý state trong ứng dụng |
+      | Về lập trình    | Chủ yếu viết bằng ES6                                          | Viết bằng JavaScript(ES5)                             |
+      | Lưu trữ dữ liệu | Chỉ tồn tại duy nhất một store lớn để lưu trữ dữ liệu          | Có nhiều hơn một store để lưu trữ                     |
+      | Sử dụng         | Chủ yếu sử dụng cho ứng dụng lớn và phức tạp                   | Sử dụng cho những ứng dụng đơn giản                   |
+      | Hiệu năng       | Cần được cải thiện                                             | Cung cấp hiệu năng tốt                                |
+      | Cách lưu trữ    | Sử dụng JS Object                                              | Sử dụng observable                                    |
 
 
-    **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 318. ### Should I learn ES6 before learning ReactJS?
 
