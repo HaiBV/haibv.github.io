@@ -6352,21 +6352,21 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-319. ### What is Concurrent Rendering?
+319. ### Concurrent Rendering là gì? {#what-is-concurrent-rendering}
 
-     The Concurrent rendering makes React apps to be more responsive by rendering component trees without blocking the main UI thread. It allows React to interrupt a long-running render to handle a high-priority event. i.e, When you enabled concurrent Mode, React will keep an eye on other tasks that need to be done, and if there's something with a higher priority it will pause what it is currently rendering and let the other task finish first. You can enable this in two ways,
+      Concurrent rendering giúp ứng dụng React phản hồi nhanh hơn bằng cách kết xuất cây component mà không chặn hiển thị giao diện người dùng chính. Nó cho phép React có thể ngắt một kết xuất đang chạy để xử lý sự kiện có độ ưu tiên cao hơn. Tức là, khi bạn bật chế độ concurrent, React sẽ theo dõi các tác vụ khác cần được thực hiện và nếu có tác vụ có độ ưu tiên cao hơn, nó sẽ tạm dừng những tác vụ đang thực hiện để hoàn thành tác vụ ưu tiên trước. Bạn có thể kích hoạt tính năng này theo 2 cách,
 
-     ```javascript
-     // 1. Part of an app by wrapping with ConcurrentMode
-     <React.unstable_ConcurrentMode>
-       <Something />
-     </React.unstable_ConcurrentMode>;
+      ```javascript
+      // 1. Một phần ứng dụng sử dụng ConcurrentMode
+      <React.unstable_ConcurrentMode>
+        <Something />
+      </React.unstable_ConcurrentMode>;
 
-     // 2. Whole app using createRoot
-     ReactDOM.unstable_createRoot(domNode).render(<App />);
-     ```
+      // 2. Toàn bộ ứng dụng sử dụng
+      ReactDOM.unstable_createRoot(domNode).render(<App />);
+      ```
 
-     **[⬆ Mục lục](#table-of-contents)**
+      **[⬆ Mục lục](#table-of-contents)**
 
 320. ### What is the difference between async mode and concurrent mode?
 
