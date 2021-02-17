@@ -6368,10 +6368,11 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-320. ### What is the difference between async mode and concurrent mode?
+320. ### Async và concurrent khác nhau như thế nào? {#what-is-the-difference-between-async-mode-and-concurrent-mode}
 
-     Both refers the same thing. Previously concurrent Mode being referred to as "Async Mode" by React team. The name has been changed to highlight React’s ability to perform work on different priority levels. So it avoids the confusion from other approaches to Async Rendering.
-     **[⬆ Mục lục](#table-of-contents)**
+      Cả 2 đều đề cập đến một việc. Trước đây Concurrent được nhóm phát triển React coi là "Async". Sau đó được đổi thêm để làm nổi bật khả năng của React trong việc thực hiện các tác vụ có mức độ ưu tiên khác nhau, để tránh nhầm lẫn với kết xuất bất đồng bộ (Async Rendering).
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 321. ### Can I use javascript urls in react16.9?
 
