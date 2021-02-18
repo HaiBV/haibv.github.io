@@ -6374,20 +6374,21 @@ layout: default
       
       **[⬆ Mục lục](#table-of-contents)**
 
-321. ### Can I use javascript urls in react16.9?
+321. ### Có thể sử dụng javascript với urls trong React 16.9? {#can-i-use-javascript-urls-in-react169}
 
-     Yes, you can use javascript: URLs but it will log a warning in the console. Because URLs starting with javascript: are dangerous by including unsanitized output in a tag like <a href> and create a security hole.
+      Có, bạn có thể sử dụng javascript với URLs nhưng sẽ có log cảnh báo trong console. Vì sử dụng javascript với URLs sẽ tạo ra lỗ hổng bảo mật với thẻ <a href>.
 
-     ```javascript
-     const companyProfile = {
-       website: "javascript: alert('Your website is hacked')",
-     };
-     // It will log a warning
-     <a href={companyProfile.website}>More details</a>;
-     ```
+      ```javascript
+      const companyProfile = {
+        website: "javascript: alert('Your website is hacked')",
+      };
+      // Sẽ xuất hiện log cảnh báo
+      <a href={companyProfile.website}>More details</a>;
+      ```
 
-     Remember that the future versions will throw an error for javascript URLs.
-     **[⬆ Mục lục](#table-of-contents)**
+      Để ý rằng những phiên bản tương lai sẽ thông báo lỗi khi sử dụng javascript với URLs.
+     
+      **[⬆ Mục lục](#table-of-contents)**
 
 322. ### What is the purpose of eslint plugin for hooks?
 
