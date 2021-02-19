@@ -6390,13 +6390,14 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-322. ### What is the purpose of eslint plugin for hooks?
+322. ### Mục đích của thư viện eslint cho hooks là gì? {#what-is-the-purpose-of-eslint-plugin-for-hooks}
 
-     The ESLint plugin enforces rules of Hooks to avoid bugs. It assumes that any function starting with ”use” and a capital letter right after it is a Hook. In particular, the rule enforces that,
+      Thư viện ESLint bắt buộc dành cho Hooks để tránh lỗi. Nó sẽ giả định rằng bất kỳ hàm nào cũng bắt đầu bằng ”use” và chữ cái viết hoa tiếp bên phải là một Hook. Đặc biệt, các quy tắc thực thi
 
-     1. Calls to Hooks are either inside a PascalCase function (assumed to be a component) or another useSomething function (assumed to be a custom Hook).
-     2. Hooks are called in the same order on every render.
-        **[⬆ Mục lục](#table-of-contents)**
+      1. Gọi Hooks không nằm trong hàm PascalCase (giả định nằm trong component) hoặc một hàm useSomething khác (giả định nằm trong Hook khác).
+      2. Hooks được gọi với cùng thứ tự trọn mọi render.
+        
+      **[⬆ Mục lục](#table-of-contents)**
 
 323. ### What is the difference between Imperative and Declarative in React?
      Imagine a simple UI component, such as a "Like" button. When you tap it, it turns blue if it was previously grey, and grey if it was previously blue.
