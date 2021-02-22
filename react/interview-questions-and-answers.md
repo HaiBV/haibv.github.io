@@ -6399,34 +6399,37 @@ layout: default
         
       **[⬆ Mục lục](#table-of-contents)**
 
-323. ### What is the difference between Imperative and Declarative in React?
-     Imagine a simple UI component, such as a "Like" button. When you tap it, it turns blue if it was previously grey, and grey if it was previously blue.
+323. ### Khác biệt giữa Imperative and Declarative là gì? {#what-is-the-difference-between-imperative-and-declarative-in-React}
+      Ví dụ một component UI đơn giản như nút "Like". Khi bạn nhấn vào nó, sẽ chuyển sang màu xanh nếu trước đó là xám và ngược lại.
 
-The imperative way of doing this would be:
+      Tiếp cận theo cách imperative:
 
-            ```javascript
-            if( user.likes() ) {
-                if( hasBlue() ) {
-                    removeBlue();
-                    addGrey();
-                } else {
-                    removeGrey();
-                    addBlue();
-                }
-            }```
+      ```javascript
+      if( user.likes() ) {
+          if( hasBlue() ) {
+              removeBlue();
+              addGrey();
+          } else {
+              removeGrey();
+              addBlue();
+          }
+      }
+      ```
 
-Basically, you have to check what is currently on the screen and handle all the changes necessary to redraw it with the current state, including undoing the changes from the previous state. You can imagine how complex this could be in a real-world scenario.
+      Về cơ bản, bạn phải kiểm tra những gì hiện có và xử lý tất cả thay đổi cần thiết để kết xuất lại với state hiện tại, bao gồm cả việc hoàn tác thay đổi so với state trước đó. Bạn sẽ thấy việc này khá phực tạp trong thực tế.
 
-In contrast, the declarative approach would be:
+      Ngược lại, tiếp cận theo declarative:
 
-            ```javascript
-            if( this.state.liked ) {
-                return <blueLike />;
-            } else {
-                return <greyLike />;
-            }```
+      ```javascript
+      if( this.state.liked ) {
+          return <blueLike />;
+      } else {
+          return <greyLike />;
+      }
+      ```
 
-Because the declarative approach separates concerns, this part of it only needs to handle how the UI should look in a sepecific state, and is therefore much simpler to understand.
-**[⬆ Mục lục](#table-of-contents)**
+      Vì cách tiếp cận này khai báo tách biệt các trường hợp, phần này chỉ hiển thị UI với state cụ thể, do đó dễ hiểu hơn nhiều
+      
+      **[⬆ Mục lục](#table-of-contents)**
 
 324. ### ?
