@@ -232,35 +232,35 @@ layout: default
 | 210 | [Redux chỉ hoạt động được với React đúng ko?](#can-redux-only-be-used-with-react)                                                                                                                 |
 | 211 | [Có cần phải có một công cụ biên dịch cụ thể để sử dụng Redux ko?](#do-you-need-to-have-a-particular-build-tool-to-use-redux)                                                                   |
 | 212 | [Giá trị khởi tạo (initialvalues) của Redux Form được cập nhật từ state như thế nào?](#how-redux-form-initialvalues-get-updated-from-state)                                                                             |
-| 213 | [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop)                                                                        |
-| 214 | [Can I import an SVG file as react component?](#can-i-import-an-svg-file-as-react-component)                                                                                             |
-| 215 | [Why are inline ref callbacks or functions not recommended?](#why-are-inline-ref-callbacks-or-functions-not-recommended)                                                                 |
-| 216 | [What is render hijacking in React?](#what-is-render-hijacking-in-react)                                                                                                                 |
-| 217 | [What are HOC factory implementations?](#what-are-hoc-factory-implementations)                                                                                                           |
-| 218 | [How to pass numbers to React component?](#how-to-pass-numbers-to-react-component)                                                                                                       |
-| 219 | [Do I need to keep all my state into Redux? Should I ever use react internal state?](#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state)                  |
-| 220 | [What is the purpose of registerServiceWorker in React?](#what-is-the-purpose-of-registerserviceworker-in-react)                                                                         |
-| 221 | [What is React memo function?](#what-is-react-memo-function)                                                                                                                             |
-| 222 | [What is React lazy function?](#what-is-react-lazy-function)                                                                                                                             |
-| 223 | [How to prevent unnecessary updates using setState?](#how-to-prevent-unnecessary-updates-using-setstate)                                                                                 |
-| 224 | [How do you render Array, Strings and Numbers in React 16 Version?](#how-do-you-render-array-strings-and-numbers-in-react-16-version)                                                    |
-| 225 | [How to use class field declarations syntax in React classes?](#how-to-use-class-field-declarations-syntax-in-react-classes)                                                             |
-| 226 | [What are hooks?](#what-are-hooks)                                                                                                                                                       |
-| 227 | [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)                                                                                           |
-| 228 | [How to ensure hooks followed the rules in your project?](#how-to-ensure-hooks-followed-the-rules-in-your-project)                                                                       |
-| 229 | [What are the differences between Flux and Redux?](#what-are-the-differences-between-flux-and-redux)                                                                                     |
-| 230 | [What are the benefits of React Router V4?](#what-are-the-benefits-of-react-router-v4)                                                                                                   |
-| 231 | [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)                                             |
-| 232 | [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)                                                                     |
-| 233 | [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event-handlers)                                                                     |
-| 234 | [What is the difference between try cath block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)                                              |
-| 235 | [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)                                                                             |
-| 236 | [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)                                                                                 |
-| 237 | [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)                                                   |
-| 238 | [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)                                                     |
-| 239 | [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)                                                                             |
-| 240 | [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)                                                                                                     |
-| 241 | [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)                                                                 |
+| 213 | [Làm thế nào PropTypes cho phép nhiều hơn 1 loại kiểu biến?](#how-react-proptypes-allow-different-types-for-one-prop)                                                                        |
+| 214 | [Có thể import một file SVG vào React component được ko?](#can-i-import-an-svg-file-as-react-component)                                                                                             |
+| 215 | [Tại sao ref không khuyến khích truyền vào hàm hoặc callbacks?](#why-are-inline-ref-callbacks-or-functions-not-recommended)                                                                 |
+| 216 | [Kết xuất hijacking trong React là gì?](#what-is-render-hijacking-in-react)                                                                                                                 |
+| 217 | [HOC factory là gì?](#what-are-hoc-factory-implementations)                                                                                                           |
+| 218 | [Truyền số vào trong React component như thế nào?](#how-to-pass-numbers-to-react-component)                                                                                                       |
+| 219 | [Có cần lưu tất cả state trong Redux? Có nên sử dựng state thông thường?](#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state)                  |
+| 220 | [Mục đích của registerServiceWorker trong React là gì?](#what-is-the-purpose-of-registerserviceworker-in-react)                                                                         |
+| 221 | [Hàm memo trong React là gì?](#what-is-react-memo-function)                                                                                                                             |
+| 222 | [Hàm lazy trong React là gì?](#what-is-react-lazy-function)                                                                                                                             |
+| 223 | [Tránh cập nhật không cần thiết với setState như thế nào?](#how-to-prevent-unnecessary-updates-using-setstate)                                                                                 |
+| 224 | [Kết xuất mảng, chuỗi và số với React 16 như thế nào?](#how-do-you-render-array-strings-and-numbers-in-react-16-version)                                                    |
+| 225 | [Sử dụng class để khai báo React như thế nào?](#how-to-use-class-field-declarations-syntax-in-react-classes)                                                             |
+| 226 | [Hooks là gì?](#what-are-hooks)                                                                                                                                                       |
+| 227 | [Có các quy tắc nào cần tuân theo khi sử dụng hooks?](#what-are-the-rules-needs-to-follow-for-hooks)                                                                                           |
+| 228 | [Làm cách nào để chắc chắn hook tuân theo những nguyên tắc trong dự án?](#how-to-ensure-hooks-followed-the-rules-in-your-project)                                                                       |
+| 229 | [So sánh Flux và Redux?](#what-are-the-differences-between-flux-and-redux)                                                                                     |
+| 230 | [Nêu những lợi ích của React Route V4?](#what-are-the-benefits-of-react-router-v4)                                                                                                   |
+| 231 | [Mô tả phương thức componentDidCatch?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)                                             |
+| 232 | [Trong trường hợp nào error boundaries không bắt được lỗi?](#in-which-scenarios-error-boundaries-do-not-catch-errors)                                                                     |
+| 233 | [Tại sao bạn cần Error Boundarites cho xử lý sự kiện?](#why-do-not-you-need-error-boundaries-for-event-handlers)                                                                     |
+| 234 | [Try catch và error boundaries khác nhau thế nào?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)                                              |
+| 235 | [Hành vi không tính là lỗi ở React 16 là gì?](#what-is-the-behavior-of-uncaught-errors-in-react-16)                                                                             |
+| 236 | [Vị trí thích hợp để đặt error boundaries?](#what-is-the-proper-placement-for-error-boundaries)                                                                                 |
+| 237 | [Lợi ích của component stack trace từ error boundary là gì?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)                                                   |
+| 238 | [Phương thức bắt buộc để định nghĩa một class component là gì?](#what-is-the-required-method-to-be-defined-for-a-class-component)                                                     |
+| 239 | [Phương thức render có thể trả về những kiểu nào?](#what-are-the-possible-return-types-of-render-method)                                                                             |
+| 240 | [Mục đích chính của hàm constructor là gì?](#what-is-the-main-purpose-of-constructor)                                                                                                     |
+| 241 | [Có bắt buộc phải định nghĩa hàm constructor trong React component?](#is-it-mandatory-to-define-constructor-for-react-component)                                                                 |
 | 242 | [What are default props?](#what-are-default-props)                                                                                                                                       |
 | 243 | [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)                                                                           |
 | 244 | [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)                                                                                     |
@@ -4574,7 +4574,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-219. ### Có cần lưu tất cả state trong Redux? Có nên sử dựng state thông thường? {#do-i-need-to-keep-all-my-state-into-redux?-should-i-ever-use-react-internal-state}
+219. ### Có cần lưu tất cả state trong Redux? Có nên sử dựng state thông thường? {#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state}
 
       Điều này tùy thuộc vào quyết định của developer. Việc của developer là xác định nhưng state nào sẽ tạo nên ứng dụng của bạn và nơi mỗi state sẽ được sử dụng. Một số muốn giữ tất cả dữ liệu state trong Redux, để duy trì ứng dụng của họ được tuần tự và kiểm soát hoàn toàn. Một số khác thích giữ những trạng thái không quan trọng hoặc state về UI, chẳng hạn như “menu dropdown đang được thả xuống”, bên trong state nội tuyển component.
 
@@ -4656,7 +4656,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-224. ### Kết xuất mảng, chuỗi và số với React 16 như thế nào? {#how-do-you-render-array,-strings-and-numbers-in-react-16-version}
+224. ### Kết xuất mảng, chuỗi và số với React 16 như thế nào? {#how-do-you-render-array-strings-and-numbers-in-react-16-version}
 
       **Mảng**: Không giống như những phiên bản trước đó, phương thức **render** không cần phải trả về một phần tử duy nhất với React16. Bạn cũng có thể trả về nhiều phần tử đồng cấp mà không cần phải đưa phần tử vào hàm return. Hãy lấy một ví dụ về danh sách các developer,
 
@@ -4695,7 +4695,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-225. ### {#how-to-use-class-field-declarations-syntax-in-react-classes}
+225. ### Sử dụng class để khai báo React như thế nào? {#how-to-use-class-field-declarations-syntax-in-react-classes}
 
       React Class Components được khai báo ngắn gọn hơn nhiều vì sử dụng các khai báo lớp. Bạn có thể khởi tạo giá trị ban đầu của state mà không cần sử dụng hàm constructor và khai báo các phương thức bằng hàm arrow mà không cần sử dụng bind. Lấy một ví dự về khai báo component với chức năng đếm mà không sử dụng hàm constructor và phương thức không cần binding,
 
