@@ -261,25 +261,25 @@ layout: default
 | 239 | [Phương thức render có thể trả về những kiểu nào?](#what-are-the-possible-return-types-of-render-method)                                                                             |
 | 240 | [Mục đích chính của hàm constructor là gì?](#what-is-the-main-purpose-of-constructor)                                                                                                     |
 | 241 | [Có bắt buộc phải định nghĩa hàm constructor trong React component?](#is-it-mandatory-to-define-constructor-for-react-component)                                                                 |
-| 242 | [What are default props?](#what-are-default-props)                                                                                                                                       |
-| 243 | [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)                                                                           |
-| 244 | [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)                                                                                     |
-| 245 | [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)                                                                           |
-| 246 | [What are the methods invoked during error handling?](#what-are-the-methods-invoked-during-error-handling)                                                                               |
-| 247 | [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property)                                                                                 |
-| 248 | [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)                                                                               |
-| 249 | [What is the purpose of unmountComponentAtNode method?](#what-is-the-purpose-of-unmountcomponentatnode-method)                                                                           |
-| 250 | [What is code-splitting?](#what-is-code-splitting)                                                                                                                                       |
-| 251 | [What is the benefit of strict mode?](#what-is-the-benefit-of-strict-mode)                                                                                                               |
-| 252 | [What are Keyed Fragments?](#what-are-keyed-fragments)                                                                                                                                   |
-| 253 | [Does React support all HTML attributes?](#does-react-support-all-html-attributes)                                                                                                       |
-| 254 | [What are the limitations with HOCs?](#what-are-the-limitations-with-hocs)                                                                                                               |
-| 255 | [How to debug forwardRefs in DevTools?](#how-to-debug-forwardrefs-in-devtools)                                                                                                           |
-| 256 | [When component props defaults to true?](#when-component-props-defaults-to-true)                                                                                                         |
-| 257 | [What is NextJS and major features of it?](#what-is-nextjs-and-major-features-of-it)                                                                                                     |
-| 258 | [How do you pass an event handler to a component?](#how-do-you-pass-an-event-handler-to-a-component)                                                                                     |
-| 259 | [Is it good to use arrow functions in render methods?](#is-it-good-to-use-arrow-functions-in-render-methods)                                                                             |
-| 260 | [How to prevent a function from being called multiple times?](#how-to-prevent-a-function-from-being-called-multiple-times)                                                               |
+| 242 | [Giá trị mặc định của props là gì?](#what-are-default-props)                                                                                                                                       |
+| 243 | [Có nên gọi setState() trong componentWillUnmount() không?](#why-should-not-call-setstate-in-componentwillunmount)                                                                           |
+| 244 | [Mục đích của getDerivedStateFromError() là gì?](#what-is-the-purpose-of-getderivedstatefromerror)                                                                                     |
+| 245 | [Thứ tự phương thức khi component tái kết xuất?](#what-is-the-methods-order-when-component-re-rendered)                                                                           |
+| 246 | [Những phương thức nào được sử dụng trong quá trình xử lý lỗi?](#what-are-the-methods-invoked-during-error-handling)                                                                               |
+| 247 | [Mục đích của thuộc tính displayName là gì?](#what-is-the-purpose-of-displayname-class-property)                                                                                 |
+| 248 | [Những trình duyệt nào hỗ trợ ứng dụng React?](#what-is-the-browser-support-for-react-applications)                                                                               |
+| 249 | [Mục đích của phương thức unmountComponentAtNode là gì?](#what-is-the-purpose-of-unmountcomponentatnode-method)                                                                           |
+| 250 | [Code-splitting là gì?](#what-is-code-splitting)                                                                                                                                       |
+| 251 | [Lợi ích của strict mode là gì?](#what-is-the-benefit-of-strict-mode)                                                                                                               |
+| 252 | [Tác dụng của thuộc tính key với Fragments?](#what-are-keyed-fragments)                                                                                                                                   |
+| 253 | [React có hỗ trợ tất cả các thuộc tính trong HTML không? ](#does-react-support-all-html-attributes)                                                                                                       |
+| 254 | [HOC có những giới hạn nào?](#what-are-the-limitations-with-hocs)                                                                                                               |
+| 255 | [Làm sao để debug forwardRefs trong DevTools?](#how-to-debug-forwardrefs-in-devtools)                                                                                                           |
+| 256 | [Trong trường hợp nào giá trị của prop mặc định là true?](#when-component-props-defaults-to-true)                                                                                                         |
+| 257 | [NextJS là gì và các chức năng chính của nó?](#what-is-nextjs-and-major-features-of-it)                                                                                                     |
+| 258 | [Làm thế nào để truyền một hàm xử lý sự kiện vào một component?](#how-do-you-pass-an-event-handler-to-a-component)                                                                                     |
+| 259 | [Sử dụng hàm arrow trong phương thức kết xuất có tốt không?](#is-it-good-to-use-arrow-functions-in-render-methods)                                                                             |
+| 260 | [Làm thế nào để ngăn việc gọi một hàm nhiều lần?](#how-to-prevent-a-function-from-being-called-multiple-times)                                                               |
 | 261 | [How JSX prevents Injection Attacks?](#how-jsx-prevents-injection-attacks)                                                                                                               |
 | 262 | [How do you update rendered elements?](#how-do-you-update-rendered-elements)                                                                                                             |
 | 263 | [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)                                                                                                     |
@@ -5160,7 +5160,7 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-253. ### React có hỗ trợ tất cả các thuộc tính trong HTML không? {does-React-support-all-HTML-attributes}
+253. ### React có hỗ trợ tất cả các thuộc tính trong HTML không? {#does-react-support-all-html-attributes}
 
       Với React 16, tất cả các thuộc tính HTML cơ bản và tùy biến đều được hỗ trợ. Vì React components thường nhận biến tùy chỉnh và liên quan đến DOM làm props, React sử dụng quy ước camelCase tương tự như DOM APIs. Dưới đây là một số ví dụ liên quan đến thuộc tính HTML cơ bản,
 
