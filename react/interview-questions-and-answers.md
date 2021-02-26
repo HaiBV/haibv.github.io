@@ -280,15 +280,15 @@ layout: default
 | 258 | [Làm thế nào để truyền một hàm xử lý sự kiện vào một component?](#how-do-you-pass-an-event-handler-to-a-component)                                                                                     |
 | 259 | [Sử dụng hàm arrow trong phương thức kết xuất có tốt không?](#is-it-good-to-use-arrow-functions-in-render-methods)                                                                             |
 | 260 | [Làm thế nào để ngăn việc gọi một hàm nhiều lần?](#how-to-prevent-a-function-from-being-called-multiple-times)                                                               |
-| 261 | [How JSX prevents Injection Attacks?](#how-jsx-prevents-injection-attacks)                                                                                                               |
-| 262 | [How do you update rendered elements?](#how-do-you-update-rendered-elements)                                                                                                             |
-| 263 | [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)                                                                                                     |
-| 264 | [How do you say that state updates are merged?](#how-do-you-say-that-state-updates-are-merged)                                                                                           |
-| 265 | [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)                                                                                         |
-| 266 | [How to prevent component from rendering?](#how-to-prevent-component-from-rendering)                                                                                                     |
-| 267 | [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)                                                                   |
-| 268 | [Is it keys should be globally unique?](#is-it-keys-should-be-globally-unique)                                                                                                           |
-| 269 | [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)                                                                                           |
+| 261 | [JSX ngăn chặn tấn công injection bằng cách nào?](#how-jsx-prevents-injection-attacks)                                                                                                               |
+| 262 | [Cập nhật những phần tử đã kết xuất như thế nào?](#how-do-you-update-rendered-elements)                                                                                                             |
+| 263 | [Giải thích việc props của component không thể cập được cập nhật?](#how-do-you-say-that-props-are-read-only)                                                                                                     |
+| 264 | [Giải thích việc cập nhật state được gọi là hợp nhất?](#how-do-you-say-that-state-updates-are-merged)                                                                                           |
+| 265 | [Truyền tham số vào hàm xử lý sự kiện như thế nào?](#how-do-you-pass-arguments-to-an-event-handler)                                                                                         |
+| 266 | [Làm cách nào để ngăn component kết xuất?](#how-to-prevent-component-from-rendering)                                                                                                     |
+| 267 | [Điều kiện an toàn của index làm key là gì?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)                                                                   |
+| 268 | [Các key có cần duy nhất trên toàn cục không?](#is-it-keys-should-be-globally-unique)                                                                                                           |
+| 269 | [Lựa chọn nào phổ biến cho xử lý form?](#what-is-the-popular-choice-for-form-handling)                                                                                           |
 | 270 | [What are the advantages of formik over redux form library?](#what-are-the-advantages-of-formik-over-redux-form-library)                                                                 |
 | 271 | [Why do you not required to use inheritance?](#why-do-you-not-required-to-use-inheritance)                                                                                               |
 | 272 | [Can I use web components in react application?](#can-i-use-web-components-in-react-application)                                                                                         |
@@ -5466,7 +5466,7 @@ layout: default
 
       **[⬆ Mục lục](#table-of-contents)**
 
-268. ### Các key cos cần duy nhất trên toàn cục không? {#is-it-keys-should-be-globally-unique}
+268. ### Các key có cần duy nhất trên toàn cục không? {#is-it-keys-should-be-globally-unique}
 
       Keys trong một mảng phải là duy nhất đối với các thành phần đồng cấp nhưng không cần duy nhất trên toàn cục. Bạn có thể sử dụng cùng một tập key với 2 mảng khác nhau. Ví dụ, component dưới đây sử dụng 2 mảng với khác nhau,
 
