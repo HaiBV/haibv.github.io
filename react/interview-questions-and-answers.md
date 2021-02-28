@@ -289,26 +289,26 @@ layout: default
 | 267 | [Điều kiện an toàn của index làm key là gì?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)                                                                   |
 | 268 | [Các key có cần duy nhất trên toàn cục không?](#is-it-keys-should-be-globally-unique)                                                                                                           |
 | 269 | [Lựa chọn nào phổ biến cho xử lý form?](#what-is-the-popular-choice-for-form-handling)                                                                                           |
-| 270 | [What are the advantages of formik over redux form library?](#what-are-the-advantages-of-formik-over-redux-form-library)                                                                 |
-| 271 | [Why do you not required to use inheritance?](#why-do-you-not-required-to-use-inheritance)                                                                                               |
-| 272 | [Can I use web components in react application?](#can-i-use-web-components-in-react-application)                                                                                         |
-| 273 | [What is dynamic import?](#what-is-dynamic-import)                                                                                                                                       |
-| 274 | [What are loadable components?](#what-are-loadable-components)                                                                                                                           |
-| 275 | [What is suspense component?](#what-is-suspense-component)                                                                                                                               |
-| 276 | [What is route based code splitting?](#what-is-route-based-code-splitting)                                                                                                               |
-| 277 | [Give an example on How to use context?](#give-an-example-on-how-to-use-context)                                                                                                         |
-| 278 | [What is the purpose of default value in context?](#what-is-the-purpose-of-default-value-in-context)                                                                                     |
-| 279 | [How do you use contextType?](#how-do-you-use-contexttype)                                                                                                                               |
-| 280 | [What is a consumer?](#what-is-a-consumer)                                                                                                                                               |
-| 281 | [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)                                                         |
-| 282 | [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs)                                                                                               |
-| 283 | [Is it ref argument available for all functions or class components?](#is-it-ref-argument-available-for-all-functions-or-class-components)                                               |
-| 284 | [Why do you need additional care for component libraries while using forward refs?](#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs)                   |
-| 285 | [How to create react class components without ES6?](#how-to-create-react-class-components-without-es6)                                                                                   |
-| 286 | [Is it possible to use react without JSX?](#is-it-possible-to-use-react-without-jsx)                                                                                                     |
-| 287 | [What is diffing algorithm?](#what-is-diffing-algorithm)                                                                                                                                 |
-| 288 | [What are the rules covered by diffing algorithm?](#what-are-the-rules-covered-by-diffing-algorithm)                                                                                     |
-| 289 | [When do you need to use refs?](#when-do-you-need-to-use-refs)                                                                                                                           |
+| 270 | [Những ưu điểm của formilk so với thư viện form redux?](#what-are-the-advantages-of-formik-over-redux-form-library)                                                                 |
+| 271 | [Tại sao bạn không cần bắt buộc sử dụng kế thừa?](#why-do-you-not-required-to-use-inheritance)                                                                                               |
+| 272 | [Có thể sử dụng web component trong React component hay không?](#can-i-use-web-components-in-react-application)                                                                                         |
+| 273 | [Dynamic import là gì?](#what-is-dynamic-import)                                                                                                                                       |
+| 274 | [Loadable component là gì?](#what-are-loadable-components)                                                                                                                           |
+| 275 | [Suspense component là gì?](#what-is-suspense-component)                                                                                                                               |
+| 276 | [Chia code dựa theo định tuyến là gì?](#what-is-route-based-code-splitting)                                                                                                               |
+| 277 | [Lấy ví dụ về cách sử dụng context?](#give-an-example-on-how-to-use-context)                                                                                                         |
+| 278 | [Mục đích của giá trị mặc định của context là gì?](#what-is-the-purpose-of-default-value-in-context)                                                                                     |
+| 279 | [Sử dụng contextType như thế nào?](#how-do-you-use-contexttype)                                                                                                                               |
+| 280 | [Consumer là gì?](#what-is-a-consumer)                                                                                                                                               |
+| 281 | [Xử lý vấn đề hiệu xuất khi sử dụng context như thế nào?](#how-do-you-solve-performance-corner-cases-while-using-context)                                                         |
+| 282 | [Mục đích của chuyển tiếp ref trong HOCs là gì?](#what-is-the-purpose-of-forward-ref-in-hocs)                                                                                               |
+| 283 | [Đối số ref có sẵn cho tất cả component hay không?](#is-it-ref-argument-available-for-all-functions-or-class-components)                                               |
+| 284 | [Tại sao bạn cần quan tâm đến các component thư viện khi sử dụng forward refs?](#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs)                   |
+| 285 | [Tạo component class không sử dụng ES6 như thế nào](#how-to-create-react-class-components-without-es6)                                                                                   |
+| 286 | [Có thể sử dụng react không có JSX được không?](#is-it-possible-to-use-react-without-jsx)                                                                                                     |
+| 287 | [Thuật toán nào được sử dụng để so sánh trong React?](#what-is-diffing-algorithm)                                                                                                                                 |
+| 288 | [Những quy tắc nào được sử dụng trong thuật toán so sánh?](#what-are-the-rules-covered-by-diffing-algorithm)                                                                                     |
+| 289 | [Khi nào bạn nên sử dụng refs?](#when-do-you-need-to-use-refs)                                                                                                                           |
 | 290 | [Is it prop must be named as render for render props?](#is-it-prop-must-be-named-as-render-for-render-props)                                                                             |
 | 291 | [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)                                                   |
 | 292 | [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)                                                                                                   |
@@ -5510,7 +5510,7 @@ layout: default
      
       **[⬆ Mục lục](#table-of-contents)**
 
-270. ### Những ưu điểm của formil so với thư viện form redux? {#what-are-the-advantages-of-formik-over-redux-form-library}
+270. ### Những ưu điểm của formilk so với thư viện form redux? {#what-are-the-advantages-of-formik-over-redux-form-library}
       Dưới đây là những lý do khiến formik tốt hơn thư viện form redux
       1. State trong form là ngắn hạn và cục bộ, vì vậy việc theo dõi state trong Redux (hoặc Flux) là không cần thiết.
       2. Redux-Form gọi reducer nhiều lần mỗi khi có bất kỳ thay đổi dữ liệu trong form. Việc này làm tăng độ trễ đầu vào rất lớn.
