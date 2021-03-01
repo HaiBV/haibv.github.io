@@ -309,40 +309,42 @@ layout: default
 | 287 | [Thuật toán nào được sử dụng để so sánh trong React?](#what-is-diffing-algorithm)                                                                                                                                 |
 | 288 | [Những quy tắc nào được sử dụng trong thuật toán so sánh?](#what-are-the-rules-covered-by-diffing-algorithm)                                                                                     |
 | 289 | [Khi nào bạn nên sử dụng refs?](#when-do-you-need-to-use-refs)                                                                                                                           |
-| 290 | [Is it prop must be named as render for render props?](#is-it-prop-must-be-named-as-render-for-render-props)                                                                             |
-| 291 | [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)                                                   |
-| 292 | [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)                                                                                                   |
-| 293 | [What is windowing technique?](#what-is-windowing-technique)                                                                                                                             |
-| 294 | [How do you print falsy values in JSX?](#how-do-you-print-falsy-values-in-jsx)                                                                                                           |
-| 295 | [What is the typical use case of portals?](#what-is-the-typical-use-case-of-portals?)                                                                                                    |
-| 296 | [How do you set default value for uncontrolled component?](#how-do-you-set-default-value-for-uncontrolled-component)                                                                     |
-| 297 | [What is your favorite React stack?](#what-is-your-favorite-react-stack)                                                                                                                 |
-| 298 | [What is the difference between Real DOM and Virtual DOM?](#what-is-the-difference-between-real-dom-and-virtual-dom)                                                                     |
-| 299 | [How to add Bootstrap to a react application?](#how-to-add-bootstrap-to-react-application)                                                                                               |
-| 300 | [Can you list down top websites or applications using react as front end framework?](#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework)                 |
-| 301 | [Is it recommended to use CSS In JS technique in React?](#is-it-recommended-to-use-css-in-js-technique-in-react)                                                                         |
-| 302 | [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)                                                                     |
-| 303 | [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)                                                                                                               |
-| 304 | [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)                                                                                                   |
-| 305 | [What is the stable release for hooks support?](#what-is-the-stable-release-for-hooks-support)                                                                                           |
-| 306 | [Why do we use array destructuring (square brackets notation) in useState?](#why-do-we-use-array-destructuring-square-brackets-notation-in-usestate)                                     |
-| 307 | [What are the sources used for introducing hooks?](#what-are-the-sources-used-for-introducing-hooks)                                                                                     |
-| 308 | [How do you access imperative API of web components?](#how-do-you-access-imperative-api-of-web-components)                                                                               |
-| 309 | [What is formik?](#what-is-formik)                                                                                                                                                       |
-| 310 | [What are typical middleware choices for handling asynchronous calls in Redux?](#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux)                           |
-| 311 | [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)                                                                                                                     |
-| 312 | [Describe about data flow in react?](#describe-about-data-flow-in-react)                                                                                                                 |
-| 313 | [What is react scripts?](#what-is-react-scripts)                                                                                                                                         |
-| 314 | [What are the features of create react app?](#what-are-the-features-of-create-react-app)                                                                                                 |
-| 315 | [What is the purpose of renderToNodeStream method?](#what-is-the-purpose-of-rendertonodestream-method)                                                                                   |
-| 316 | [What is MobX?](#what-is-mobx)                                                                                                                                                           |
-| 317 | [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)                                                                                     |
-| 318 | [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)                                                                                               |
-| 319 | [What is Concurrent Rendering?](#what-is-concurrent-rendering)                                                                                                                           |
-| 320 | [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)                                                         |
-| 321 | [Can I use javascript urls in react16.9?](#can-i-use-javascript-urls-in-react16.9)                                                                                                       |
-| 322 | [What is the purpose of eslint plugin for hooks?](#what-is-the-purpose-of-eslint-plugin-for-hooks)                                                                                       |
-| 323 | [What is the difference between Imperative and Declarative in React?](#what-is-the-difference-between-imperative-and-declarative-in-react)                                               |
+| 290 | [Có phải lúc nào cũng phải đặt tên cho prop?](#is-it-prop-must-be-named-as-render-for-render-props)                                                                             |
+| 291 | [Sử dụng props kết xuất với pure component có những vấn đề gì?](#what-are-the-problems-of-using-render-props-with-pure-components)                                                   |
+| 292 | [Tạo HOC với render prop như thế nào?](#how-do-you-create-hoc-using-render-props)                                                                                                   |
+| 293 | [Kỹ thuật windoing là gì?](#what-is-windowing-technique)                                                                                                                             |
+| 294 | [In giá trị falsy ra trong JSX thế nào?](#how-do-you-print-falsy-values-in-jsx)                                                                                                           |
+| 295 | [Trường hợp sử dụng điển hình của cổng thông tin (portals) là gì?](#what-is-the-typical-use-case-of-portals)                                                                           |
+| 296 | [Đặt giá trị mặc định cho component không điều khiển như thế nào?](#how-do-you-set-default-value-for-uncontrolled-component)                                                                     |
+| 297 | [React stack ưa thích của bạn là gì?](#what-is-your-favorite-react-stack)                                                                                                                 |
+| 298 | [Nêu những điểm khác biệt của DOM thực và DOM ảo?](#what-is-the-difference-between-real-dom-and-virtual-dom)                                                                     |
+| 299 | [Sử dụng Bootstrap trong dự án React như thế nào?](#how-to-add-bootstrap-to-react-application)                                                                                               |
+| 300 | [Danh sách websites và ứng dụng sử dụng React?]
+(#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework)                 |
+| 301 | [Kỹ thuật CSS-In-JS có được khuyên dùng trong React không?](#is-it-recommended-to-use-css-in-js-technique-in-react)                                                                         |
+| 302 | [Tôi có cần viết lại toàn bộ class components với hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)                                                                     |
+| 303 | [Lấy dữ liệu với React Hooks như thế nào?](#how-to-fetch-data-with-react-hooks)                                                                                                               |
+| 304 | [Hooks có phủ được toàn bộ các trường hợp với class?](#is-hooks-cover-all-use-cases-for-classes)                                                                                                   |
+| 305 | [Phiên bản ổn định hỗ trợ hook?](#what-is-the-stable-release-for-hooks-support)                                                                                           |
+| 306 | [Tại sao chúng ta lại sử dụng array destructuring với useState?](#why-do-we-use-array-destructuring-square-brackets-notation-in-usestate)                                     |
+| 307 | [Các nguồn để giới thiệu Hooks?]
+(#what-are-the-sources-used-for-introducing-hooks)                                                                                     |
+| 308 | [Truy cập API mệnh lệnh của web components như thế nào](#how-do-you-access-imperative-api-of-web-components)                                                                               |
+| 309 | [Formik là gì?](#what-is-formik)                                                                                                                                                       |
+| 310 | [Những lựa chọn điển hình cho việc quản lý bất đồng bộ với Redux?](#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux)                           |
+| 311 | [Các trình duyệt có hiểu được mã JSX không?](#is-browsers-understand-jsx-code)                                                                                                                     |
+| 312 | [Mô tả về luồng dữ liệu trong React?](#describe-about-data-flow-in-react)                                                                                                                 |
+| 313 | [react-scripts là gì?](#what-is-react-scripts)                                                                                                                                         |
+| 314 | [create-react-app có những chức năng nào?](#what-are-the-features-of-create-react-app)                                                                                                 |
+| 315 | [Mục đích của phương thức renderToNodeStream là gì? ](#what-is-the-purpose-of-rendertonodestream-method)                                                                                   |
+| 316 | [MobX là gì?](#what-is-mobx)                                                                                                                                                           |
+| 317 | [Những đặc điểm khác biệt giữa Redux và MobX?](#what-are-the-differences-between-redux-and-mobx)                                                                                     |
+| 318 | [Có nên học ES6 trước khi học ReactJS?](#should-i-learn-es6-before-learning-reactjs)                                                                                               |
+| 319 | [Concurrent Rendering là gì?](#what-is-concurrent-rendering)                                                                                                                           |
+| 320 | [Async và concurrent khác nhau như thế nào?](#what-is-the-difference-between-async-mode-and-concurrent-mode)                                                         |
+| 321 | [Có thể sử dụng javascript với urls trong React 16.9?](#can-i-use-javascript-urls-in-react16.9)                                                                                                       |
+| 322 | [Mục đích của thư viện eslint cho hooks là gì?](#what-is-the-purpose-of-eslint-plugin-for-hooks)                                                                                       |
+| 323 | [Khác biệt giữa Imperative and Declarative là gì?](#what-is-the-difference-between-imperative-and-declarative-in-react)                                               |
 | 324 | (#) ?                                                                                                                                                                                    |
 
 ## Core React
