@@ -16,6 +16,11 @@ Các bạn sẽ thắc mắc vì sao tôi lại biết những thái độ, kỷ
 
 Năm 1969, khi tôi 17 tuổi. Cha tôi đã xin cho tôi vào làm lập trình viên bán thời gian tạm thời ở một doanh nghiệp địa phương tên ASC. (Đúng, cha tôi có khả năng đó. Có một lần tôi chứng kiến ông bước ra chặn trước một chiếc ô tô chạy quá tốc độ, đưa tay ra lệnh cho nó "Dừng lại!" Chiếc xe dừng lại. Không một ai có thể nói "không" với cha tôi.) Tôi được vào làm việc trong một căn phòng lưu giữ tất cả các tài liệu hướng dẫn sử dụng máy tính IBM. Họ yêu cầu tôi đưa các bản cập nhật trong hàng năm trời vào sách hướng dẫn. Chính tại đây, lần đầu tiên tôi nhìn thấy cụm từ "Trang này cố tình để trống".
 
-Sau vài ngày cập nhật hướng dẫn, người giám sát bảo tôi viết một chương trình Easycoder đơn giản. Tôi rất phần khích khi nhận được yêu cầu. Trước đây tôi chưa từng thực sự viết chương trình cho máy tính. Tuy nhiên, tôi đã đọc một vài cuốn sách về Autocoder, và có một vài khái niệm mơ hồ để bắt đầu.
+Sau vài ngày cập nhật hướng dẫn, giám sát viên bảo tôi viết một chương trình Easycoder đơn giản. Tôi rất phần khích khi nhận được yêu cầu. Trước đây tôi chưa từng thực sự viết chương trình cho máy tính. Tuy nhiên, tôi đã đọc một vài cuốn sách về Autocoder, và có một vài khái niệm mơ hồ để bắt đầu.
 
 Chương trình rất đơn giản, nó sẽ đọc bản ghi từ một cuộn băng, thay thế ID của những bản ghi đó bằng ID mới. Các ID với bắt đầu từ 1 và tăng 1 với mỗi bản ghi mới. Bản ghi với ID mới được viết vào cuộn băng mới.
+
+Giám sát viên bảo chỉ cho tôi một cái kệ chứa những chồng thẻ đục lỗ xanh và đỏ. Tưởng tượng bạn mua 50 bộ bài, 25 bộ xanh, 25 bộ đỏ. Bạn xếp chồng chúng lên nhau. Chồng thẻ sẽ trông tương tự như vậy. Chúng có sọc đỏ và xanh, mỗi sọc khoảng 200 thẻ. Mỗi một sọc chứa mã nguồn cho thư viện của chương trình con mà lập trình viên thường hay sử dụng. Các lập trình viên chỉ cần lấy bộ thẻ trên cùng, đảm bảo rằng họ không lấy gì khác ngoài các thẻ đỏ và xanh, và sau đó đặt nó vào cuối chương trình.
+
+Tôi viết chương trình của tôi trên những khuôn mã hóa. Khuôn mã hóa là những tờ giấy hình chữ nhật lớn được chia thành 25 dòng và 80 cột. Mỗi dòng đại diện cho 1 thẻ. Bạn sử dụng những chữ cái in hoa và bút chì số 2. Với 6 cột cuối cùng của mỗi dòng, bạn viết một số thứ tự với bút chì số 2. Thông thường, bạn sẽ tăng số thứ tự này lên 10 đơn vị mỗi lần để về sau có thể chèn thêm dòng vào giữa.
+
