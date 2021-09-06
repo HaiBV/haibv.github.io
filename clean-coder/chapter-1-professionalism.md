@@ -18,3 +18,7 @@ Vâng, cảm giác rất khác nếu đó là tiền của chính bạn phải k
 
 ## Chịu trách nhiệm
 
+Bạn đọc phần giới thiệu rồi đúng không? Nếu chưa, hãy quay lại và đọc luôn bây giờ; Phần giới thiệu đưa ra bối cảnh cho mọi thứ tiếp theo trong cuốn sách này.
+
+Tôi đã học được cách chịu trách nhiệm qua việc gánh chịu hậu quả của việc chối bỏ trách nhiệm.
+
