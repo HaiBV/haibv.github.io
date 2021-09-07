@@ -22,3 +22,4 @@ Bạn đọc phần giới thiệu rồi đúng không? Nếu chưa, hãy quay l
 
 Tôi đã học được cách chịu trách nhiệm qua việc gánh chịu hậu quả của việc chối bỏ trách nhiệm.
 
+Năm 1979, khi tôi đang làm việc cho Teradyne. Tôi là kỹ sư chịu trách nhiệm cho phần mềm điều khiển hệ thống máy tính đánh giá chất lượng đường truyền điện thoại. Một chiến máy tính trung tâm được kết nối qua đường dây điện thoại quay số hoặc chuyên dụng 300-baud với hàng chục máy tính vệ tinh điều khiển phần cứng đó lường. Tất cả mã đều được viết bằng Assembler.
