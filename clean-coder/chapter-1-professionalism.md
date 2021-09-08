@@ -23,3 +23,6 @@ Bạn đọc phần giới thiệu rồi đúng không? Nếu chưa, hãy quay l
 Tôi đã học được cách chịu trách nhiệm qua việc gánh chịu hậu quả của việc chối bỏ trách nhiệm.
 
 Năm 1979, khi tôi đang làm việc cho Teradyne. Tôi là kỹ sư chịu trách nhiệm cho phần mềm điều khiển hệ thống máy tính đánh giá chất lượng đường truyền điện thoại. Một chiến máy tính trung tâm được kết nối qua đường dây điện thoại quay số hoặc chuyên dụng 300-baud với hàng chục máy tính vệ tinh điều khiển phần cứng đó lường. Tất cả mã đều được viết bằng Assembler.
+
+Khách hàng của chúng tôi là những giám đốc dịch vụ của các công ty điện thoại lớn. Mỗi người chịu trách nhiệm khoảng hơn 100,000 đường dây điện thoại. Hệ thống của tôi hỗ trợ họ tìm và sửa chữa các trục trặc và sự cố trong đường dây điện thoại trước khi khách hàng của họ nhận ra. Điều này giảm tỉ lệ phàn nàn của khách hàng do các tổ chức công ích đo lường, và được sử dụng để điều chỉnh mức giá điện thoại công ty điện thoại đưa ra. Tóm lại, hệ thống này cực kỳ quan trọng.
+
