@@ -43,3 +43,41 @@ Tôi gọi cho Tom và thông báo tôi đã biết vấn đề ở đâu. Anh �
 Lỗi rất khó tìm, và việc kiểm thử mất nhiều giờ. Bản sửa lỗi đầu tiên không hoạt động. Lần thứ 2 cũng thế. Tôi đã mất vài lần thử, cũng là vài ngày, để tìm hiểu chuyện gì đã xảy ra. Trong suốt thời gian này, cứ vài giờ Tom lại gọi cho tôi và hỏi khi nào tôi sẽ sửa xong. Anh ta cũng đảm bảo rằng tôi biết về những lời khiển trách nhận được từ những quản lý khu vực, và thật xấu hổ khi anh ta hướng dẫn họ sử dụng lại phiên bản cũ.
 
 Cuối cùng, tôi đã sửa được lỗi, gửi cho khách hàng những cuộn băng mới, và mọi thứ quay trở về bình thường. Tom, người không phải sếp của tôi, đã bình tĩnh lại và chúng tôi bỏ lại mọi thứ lại phía sau. Sếp của tôi đến gặp tôi khi mọi thứ kết thúc và nói "Tôi cá rằng bạn sẽ không để điều đó lặp lại." Tôi đã đồng ý.
+
+Nghĩ lại thì, tôi thấy rằng việc gửi bản cập nhật đi mà không kiểm thử lại "quy trình" là một việc vô trách nhiệm. Lý do tôi đưa ra là để bàn giao công việc đúng thời hạn. Đó chỉ là lý do để giữ thể diện cho mình. Không quan tâm đến khách hàng cũng như công ty của mình. Tôi chỉ quan tâm đến danh tiếng của chính mình. Lẽ ra tôi nên nhận trách nhiệm sớm hơn và nói với Tom việc kiểm thử chưa hoàn thành và tôi không thể bàn giao đúng hạn. Đó là một việc khó, và Tom có thể sẽ phiền lòng. Nhưng không khách hàng nào bị mất dữ liệu, và không có lời phàn nàn nào từ phía quản lý khu vực.
+
+## Việc đầu tiên, không gây hại
+
+Vậy thì chúng ta nhận trách nhiệm bằng cách nào? Có một số nguyên tắc được rút ra từ lời thề Hippocrate, nghe khá xa lạ nhưng liệu có nguyên tắc nào tốt hơn? Thực sự thì, bạn ko hiểu tại sao trách nhiệm và mục tiêu hàng đầu của một chuyên gia đầy tham vọng là sử dụng năng lực của mình cho mục đích tốt?
+
+Một lập trình viên phần mềm thì có thể gây hại gì? Từ quan điểm của phần mềm, họ có thể gây hại chả cả chức năng và cấu trúc phần mềm. Chúng ta sẽ khám phá cách tránh gây ra việc đó.
+
+### Không gây hại đến hàm (function)
+
+Rõ ràng là, chúng ta muốn phần mềm hoạt động. Thực tế là, phần lớn chúng ta trở thành lập trình viên vì chúng ta đã khiến chương trình nào đó hoạt động một lần và chúng ta muốn có lại cảm giác đó. Nhưng chúng ta không phải là những người duy nhất muốn chương trình hoạt động. Khách hàng và công ty cũng muốn thế. Và trên thực tế, họ trả tiền cho chúng ta tạo ra những phần mềm hoạt động theo cách họ muốn.
+
+Chúng ta gây hại đến hàm của phần mềm khi chúng ta tạo ra lỗi. Vì vậy, để trở nên chuyên nghiệp, chúng ta không được tạo ra lỗi.
+
+"Nhưng đợi đã" Bạn nói "Điều đó không hợp lý. Phần mềm quá phức tạp để tạo ra mà không có lỗi".
+
+Tất nhiên là bạn có quyền để lọt lỗi. Phần mềm quá phức tạp để tạo ra mà không có lỗi. Nhưng không may là điều đó không giúp bạn chối bỏ trách nhiệm. Cơ thể con người quá phức tạo để có thể hiểu được toàn bộ, nhưng các bác sỹ vẫn tuyên thệ không làm tổn hại đến chúng. Nếu họ không chối bỏ trách nhiệm, sao chúng ta có thể?
+
+"Bạn đang nói rằng chúng tôi cần hoàn hảo?" Bạn đang phản đối đúng không?
+
+Không, tôi đang nói với bạn rằng bạn phải chịu trách nhiệm cho sự không hoàn hảo của mình. Các lỗi chắc chắn sẽ xảy ra trong code của bạn không có nghĩa là bạn không có trách nhiệm với chúng. Nhiệm vụ viết phần mềm hoàn hảo gần như là không thể không có nghĩa là bạn không phải chịu trách nhiệm cho sự không hoàn hảo.
+
+Rất nhiều chuyên gia phải chịu trách nhiệm cho các sai sót mặc dù chúng hầu như chắc chắn xảy ra. Vì vậy, những chuyên gia đầy tham vọng của tôi, điều đầu tiên bạn cần thực hành là xin lỗi. Lời xin lỗi là cần thiết những chưa đủ. Bạn không thể tiếp tục mắc lại một lỗi hết lần này đến lần khác. Khi bạn trưởng thành trong công việc, tỷ lệ sai sót của bạn sẽ nhanh chóng giảm dần và tiệm cận 0. Nó sẽ không bao giờ về 0, nhưng bạn phải có trách nhiệm làm giảm ít nhất có thể.
+
+### QA sẽ không tìm thấy gì cả
+
+Khi bạn bàn giao chương trình của mình, bạn nên mong rằng QA không tìm thấy vấn đề gì. Sẽ là vô cùng thiếu chuyên nghiệp nếu bạn bàn giao chương trình cho QA mà bạn biết thừa là sẽ có lỗi. Và đoạn code nào bạn biết sẽ có lỗi? Tất cả những phần bạn không nắm rõ.
+
+Vài người coi QA là công cụ tìm lỗi. Họ bàn giao chương trình không được kiểm thử kỹ lưỡng. Họ dựa vào QA để tìm lỗi và báo lại. Trên thực tế, nhiều công ty còn thưởng cho QA dựa trên số lỗi mà họ tìm được. Càng nhiều lỗi, phần thưởng càng lớn.
+
+Bỏ qua việc hành vi này cực kỳ tốn kém gây thiệt hại cho công ty và chương trình. Bỏ qua việc hành vi này làm hỏng lịch trình và suy giảm niềm tin của công ty với đội ngũ phát triển. Bỏ qua việc hành vi này thực sự lười biếng và vô trách nhiệm. Xét cho cùng, bàn giao cho QA chương trình mà bạn không biết có hoạt động không là rất thiếu chuyên nghiệp. Nó vi phạm nguyên tắc "không gây hại".
+
+Vậy QA có thể tìm được lỗi không? Có thể, nên hãy sẵn sàng để xin lỗi - và sau đó tìm hiểu những tại sao những lỗi đó lại thoát được và ngăn chặn điều đó diễn ra lần sau.
+
+Mỗi khi QA, hoặc tệ hơn là người dùng, tìm thấy vấn đề, bạn nên ngạc nhiên, lo lắng và quyết tâm ngăn chặn nó xảy ra một lần nữa.
+
+### Bạn phải biết rằng nó hoạt động
