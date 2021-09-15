@@ -80,4 +80,6 @@ Vậy QA có thể tìm được lỗi không? Có thể, nên hãy sẵn sàng 
 
 Mỗi khi QA, hoặc tệ hơn là người dùng, tìm thấy vấn đề, bạn nên ngạc nhiên, lo lắng và quyết tâm ngăn chặn nó xảy ra một lần nữa.
 
-### Bạn phải biết rằng nó hoạt động
+### Bạn phải _biết_ chương trình hoạt động
+
+Làm sao để _biết_ code hoạt động? Dễ thôi. Test nó, test đi test lại, test lên test xuống. Test từ cách thứ 7 đến chủ nhật!
