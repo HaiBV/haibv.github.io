@@ -82,4 +82,28 @@ Mỗi khi QA, hoặc tệ hơn là người dùng, tìm thấy vấn đề, bạ
 
 ### Bạn phải _biết_ chương trình hoạt động
 
-Làm sao để _biết_ code hoạt động? Dễ thôi. Test nó, test đi test lại, test lên test xuống. Test từ cách thứ 7 đến chủ nhật!
+Làm sao để _biết_ code hoạt động? Dễ thôi. Test nó, test đi test lại, test lên test xuống. Test từ 7 cách đến chủ nhật!
+
+Có thể bạn lo việc test quá nhiều sẽ mất rất nhiều thời gian. Trong khi bạn cần giữ đúng lịch trình và hạn chót. Nếu bạn dành tất cả thời gian để test, bạn sẽ không viết được gì cả. Câu hỏi rất hay! Giải pháp là, hãy tự động hóa nó. Viết những unit test có thể chạy ngay lập tức, và chạy chúng thường xuyên nhất có thể.
+
+Bao nhiêu code nên được kiểm thử với những unit test tự động này? Tôi có thực sự cần trả lời câu hỏi này không? Tất cả! Tất. Cả.
+
+Tôi đang đề xuất test phủ 100% code? Không, tôi không _đề xuất_. Tôi đang _đòi hỏi_ điều đó. Tất cả mọi dòng code đều phải được test. Chấm hết.
+
+Nghe khá thiếu thực tế? Dĩ nhiên là không. Bạn viết code vì bạn mong đợi nó được sử dụng. Nếu bạn muốn nó được sử dụng, bạn phải _biết_ rằng nó hoạt động. Cách duy nhất để biết điều đó là test.
+
+Tôi là một thành viên chính của dự án mã nguồn mở có tên FitNesse. Tính đến thời điểm viết những dòng này, FitNesse có khoảng 60 ksloc ((1000)K Source Lines of Code). Trong đó có 26 ksloc được tạo nên bởi hơn 2000 unit test. EMMA (a free Java code coverage tool) thông kê độ phủ của hơn 2000 unit test là khoảng 90%.
+
+Tại sao không phủ được nhiều hơn? EMMA không thể nhìn thấy được tất cả các dòng code đang được thực thi! Tôi tin rằng độ phủ còn cao hơn thế nhiều. Liệu có đến 100%? Không, nhưng sẽ phải tiệm cận 100%.
+
+Nhưng sẽ có một vài đoạn code rất khó kiểm thử? Có, nhưng chỉ khi đoạn code đó được _thiết kế_ để khó kiểm thử. Cách tốt nhất để làm điều đó là viết kiểm thử trước khi viết code vượt qua chúng.
+
+Đây là một quy chuẩn được biết đến với cái tên Test Driven Development (TDD), sẽ được nói rõ hơn ở chương sau.
+
+### Tự động hóa QA
+
+Toàn bộ quy trình QA cho FitNesse bao gồm việc chạy unit test và kiểm thử chấp nhận (Acceptance Tests). Khi vượt qua quy trình này, tôi bàn giao chương trình. Có thể thấy quy trình QA của tôi mất khoảng 3 phút và tôi có thể thực hiện nó tùy ý.
+
+Thực tế thì, không có ai chết nếu có FitNesse có lỗi, cũng chẳng có ai mất hàng triệu đô la. Nhưng FitNesse có hàng nghìn người dùng với số lỗi rất nhỏ.
+
+Chắc chắn là một số hệ thống có những nhiệm vụ quan trọng đến mức những kiểm thử tự động không thể xác định mức độ sẵn sàng đưa vào sử dụng. Tuy nhiên, bạn - với cương vị là một lập trình viên - cần một cơ chế tương đối nhanh chóng và tin cậy để biết rằng code của bạn hoạt động và không ảnh hưởng đến phần còn lại của hệ thống. Vì vậy, ít nhất, những kiểm thử tự động của bạn sẽ cho bạn biết hệ thống có _khả năng cao_ vượt qua QA.
