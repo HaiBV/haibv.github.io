@@ -107,3 +107,9 @@ Toàn bộ quy trình QA cho FitNesse bao gồm việc chạy unit test và ki�
 Thực tế thì, không có ai chết nếu có FitNesse có lỗi, cũng chẳng có ai mất hàng triệu đô la. Nhưng FitNesse có hàng nghìn người dùng với số lỗi rất nhỏ.
 
 Chắc chắn là một số hệ thống có những nhiệm vụ quan trọng đến mức những kiểm thử tự động không thể xác định mức độ sẵn sàng đưa vào sử dụng. Tuy nhiên, bạn - với cương vị là một lập trình viên - cần một cơ chế tương đối nhanh chóng và tin cậy để biết rằng code của bạn hoạt động và không ảnh hưởng đến phần còn lại của hệ thống. Vì vậy, ít nhất, những kiểm thử tự động của bạn sẽ cho bạn biết hệ thống có _khả năng cao_ vượt qua QA.
+
+### Không ảnh hưởng đến cấu trúc
+
+Người thực sự chuyên nghiệp biết rằng 
+
+Tóm lại: _Bạn phải thực hiện những thay đổi với chi phí không quá đắt đỏ_
