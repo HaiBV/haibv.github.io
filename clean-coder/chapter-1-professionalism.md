@@ -132,4 +132,33 @@ Tại sao phần lớn lập trình viên đều sợ những thay đổi liên 
 
 Tất cả quay trở lại với những kiểm thử. Nếu bạn có một bộ kiểm thử tự động phủ gần như 100% code, và nếu nó được thực thi nhanh chóng tùy theo ý bạn, khi đó _bạn đơn giản là sẽ không ngại thay đổi code nữa_. Làm thế nào dể bạn chứng minh rằng bạn không sợ thay đổi code? Bạn thay đổi nó mọi lúc. 
 
-Những lập trình viên chuyên nghiệp nắm rõ về code và kiểm thử của họ đến mức họ cảm thấy bình thường _kinh khủng_ khi thực hiện những thay đổi ngẫu nhiên và cơ hội. Họ sẽ thay đổi tên một class, theo ý thích. Họ sẽ thấy một phương thức dài khi đọc một module và phân chia lại nó như một việc tất nhiên. Họ sẽ thay đổi một câu lệnh switch thành triển khai đa hình, hoặc thu gọn hệ thống phân cấp kế thừa thành một chuỗi các câu lệnh. Tóm lại, họ xử lý phần mềm như cách một nhà điêu khắc xử lý đất sét - liên tục tạo hình và nhào nặn nó.
+Những lập trình viên chuyên nghiệp nắm rõ về code và kiểm thử của họ đến mức họ cảm thấy bình thường _kinh khủng_ khi thực hiện những thay đổi ngẫu nhiên và cơ hội. Họ sẽ thay đổi tên một class, theo ý thích. Họ sẽ thấy một phương thức dài khi đọc một module và phân chia lại nó như một việc tất nhiên. Họ sẽ thay đổi một câu lệnh switch thành triển khai đa hình, hoặc thu gọn hệ thống phân cấp kế thừa thành một chuỗi các câu lệnh. Tóm lại, họ xử lý phần mềm như cách một nhà điêu khắc xử lý đất sét - liên tục tạo hình và nhào nặn sản phẩm của mình.
+
+## Đạo đức nghề nghiệp
+
+Sự nghiệp của bạn là trách nhiệm _của bạn_. Quản lý không phải là người có trách nhiệm đảm bảo bạn được đánh giá cao. Họ cũng không có trách nhiệm đào tạo ban, hoặc đưa bạn đến hội thảo, hay mua sách cho bạn. Tất cả là trách nhiệm _của bạn_. Thật tội nghiệm cho những lập trình viên phần mềm giao phó sự nghiệp cho quản lý của mình.
+
+Một vài vị quản lý sẵn lòng mua sách cho bạn, cho bạn tham gia các lớp đào tạo và đi dự hội thảo. Tốt thôi, họ đang giúp đỡ bạn. Nhưng đừng bao giờ rơi vào bẫy khi nghĩ rằng đó là trách nhiệm của quản lý. Nếu họ không làm điều đó cho bạn, bạn phải tìm cách tự thực hiện những việc này.
+
+Quản lý cũng không có trách nhiệm dành cho bạn thời gian bạn cần để học tập. Một vài người có thể cho bạn thời gian. Thậm chí có người còn yêu cầu bạn dành thời gian cho học tập. Nhưng một lần nữa, họ đang giúp đỡ bạn, và bạn nên thấy cảm ơn vì điều đó. Những ưu ái như vậy không phải là điều bạn nên mong đợi.
+
+Bạn nợ quản lý của mình một khoảng thời gian và nỗ lực nhất định. Ví dụ như tiêu chuẩn của Mỹ là 40 giờ mỗi tuần. Bạn nên dành 40 giờ này để giải quyết vấn đề _của quản lý_, chứ không phải vấn đề _của bạn_.
+
+Bạn nên lên kế hoạch làm việc 60 giờ một tuần. 40 giờ đầu tiên cho quản lý, 20h còn lại dành cho bạn. Với 20h này, bạn nên đọc, luyện tập, học hỏi, hoặc là nâng tầm sự nghiệp của mình.
+
+Bạn đang thắc mắc: "Nhưng còn gia đình tôi? Cuộc sống của tôi? Tôi phải hi sinh chúng cho quản lý của mình? 
+
+Tôi không nói đến _toàn bộ_ thời gian rảnh của bạn. Mỗi tuần bạn chỉ cần dành thêm 20 giờ. Như vậy mỗi ngày chỉ khoảng 3 giờ. Nếu bạn dành thời gian ăn trưa để đọc, nghe podcast lúc đi làm, và dành 90 phút mỗi ngày để học một ngôn ngữ mới, bạn sẽ có tất cả.
+
+Thử tính xem. Một tuần có 168 giờ. 40 giờ dành cho công việc, và 20 giờ nữa dành cho sự nghiệp. Còn lại 108 giờ. 56 giờ nữa dành cho giấc ngủ, bạn còn lại 52 giờ cho mọi việc khác.
+
+Có thể bạn sẽ không muốn cam kết như vậy. Cũng chả sao, nhưng bạn không nên nghĩ mình là một người chuyên nghiệp. Tất cả các chuyên gia đều dành thời gian phát triển sự nghiệp của mình.
+
+Có thể bạn nghĩ rằng công việc nên ở lại văn phòng, bạn không nên mang công việc về nhà. Đồng ý! Bạn không nên làm việc cho quản lý của bạn trong 20 giờ đó. Thay vào đó, bạn nên phát triển sự nghiệp của mình.
+
+Đôi khi 2 việc này xen kẽ nhau. Đôi khi việc bạn làm cho quản lý có lợi rất nhiều cho sự nghiệp của bạn. Trong trường hợp này, dành 20 giờ đó cho công việc rất hợp lý. Nhưng hãy nhớ rằng, 20 giờ này là dành cho _bạn_. Chúng phải được sử dụng để làm bạn có giá trị hơn, như một người chuyên nghiệp.
+
+Có thể bạn nghĩ rằng đây là công thức cho sự kiệt sức. Thực ra là ngược lại, đây là công thức để tránh kiệt sức. Khi bạn là muốn mình trở thành một lập trình viên phần mềm vì bạn đam mê lập trình và bạn muốn trở thành một chuyên gia bởi niềm đam mê đó. Trong 20 giờ đó, bạn có thể làm những việc để củng cố đam mê đó. Bạn sẽ có 20 giờ _vui vẻ!_
+
+### Nắm rõ lĩnh vực của mình
+
