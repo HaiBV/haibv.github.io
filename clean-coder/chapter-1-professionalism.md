@@ -162,3 +162,6 @@ Có thể bạn nghĩ rằng đây là công thức cho sự kiệt sức. Thự
 
 ### Nắm rõ lĩnh vực của mình
 
+Bạn có biết biểu đồ Nassi-Schneiderman là gì không? Nếu không thì tại sao? Bạn có biết sự khác nhau giữa máy Mealy và máy Moore không? Bạn nên biết. Bạn có thể viết một đoạn code sắp xếp nhanh (quick sort) mà không cần tra cứu không? Bạn có biết thuật ngữ "Transform Analysis" nghĩa là gì không? Bạn có thể thực hiện phân tích chức năng với sơ đồ luồng dữ liệu (Data Flow Diagrams) không? Thuật ngữ "Tramp Data" có nghĩa là gì? Bạn đã bao giờ nghe thuật ngữ "Conascense" chưa? Bảng Parnas là gì?
+
+Có vô số ý tưởng, khuôn phép, kỹ thuật, công cụ và thuật ngữ được tạo ra trong lĩnh vực của chúng ta suốt 50 năm qua. Bạn biết được bao nhiêu trong số đó? Nếu bạn muốn trở nên chuyên nghiệp, bạn phải biết được một phần khá lớn và không ngừng tăng hiểu biết của mình lên.
