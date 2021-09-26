@@ -116,7 +116,7 @@ Giả thiết ngầm cơ bản của tất cả dự án phần mềm là phần
 
 Tóm lại: _Bạn phải thực hiện những thay đổi với ảnh hưởng nhỏ nhất đến cấu trúc_
 
-Không may là, có quá nhiều dự án sa lầy với một cấu trúc kém. Công việc bình thường mất vài ngày, sẽ mất vài tuần, sau đó là vài tháng. Ban quản lý, muốn lấy lại năng suất vốn có trong tuyệt vọng, tuyển thêm nhiều lập trình viên để đẩy nhanh tiến độ. Nhưng những người mới chỉ thêm vào một mớ hỗn độn, ảnh hưởng đến cấu trúc nhiều hơn và khó khăn càng lớn hơn. 
+Không may là, có quá nhiều dự án sa lầy với một cấu trúc kém. Công việc bình thường mất vài ngày, sẽ mất vài tuần, sau đó là vài tháng. Ban quản lý, muốn lấy lại năng suất vốn có trong tuyệt vọng, tuyển thêm nhiều lập trình viên để đẩy nhanh tiến độ. Nhưng những người mới chỉ thêm vào một mớ hỗn độn, ảnh hưởng đến cấu trúc nhiều hơn và khó khăn càng lớn hơn.
 
 Hầu hết những bài viết về nguyên tắc và nguyên mẫu thiết kế phần mềm đều hỗ trợ cho tính linh hoạt và dễ bảo trì của cấu trúc. Những lập trình viên chuyên nghiệp ghi nhớ điều này và cố gắng tuân thủ chúng. Nhưng có một mẹo nhỏ mà rất ít người làm theo: _Nếu bạn muốn phần mềm của mình linh hoạt, chính bạn phải làm nó linh hoạt._
 
@@ -130,7 +130,7 @@ Triết lý này đôi khi được gọi là _tái cấu trúc không thương 
 
 Tại sao phần lớn lập trình viên đều sợ những thay đổi liên tục trong code của họ? Họ lo sợ họ sẽ phá vỡ nó! Tại sao họ lại lo sợ sẽ phá vỡ nó? Bởi vì họ không có những kiểm thử.
 
-Tất cả quay trở lại với những kiểm thử. Nếu bạn có một bộ kiểm thử tự động phủ gần như 100% code, và nếu nó được thực thi nhanh chóng tùy theo ý bạn, khi đó _bạn đơn giản là sẽ không ngại thay đổi code nữa_. Làm thế nào dể bạn chứng minh rằng bạn không sợ thay đổi code? Bạn thay đổi nó mọi lúc. 
+Tất cả quay trở lại với những kiểm thử. Nếu bạn có một bộ kiểm thử tự động phủ gần như 100% code, và nếu nó được thực thi nhanh chóng tùy theo ý bạn, khi đó _bạn đơn giản là sẽ không ngại thay đổi code nữa_. Làm thế nào dể bạn chứng minh rằng bạn không sợ thay đổi code? Bạn thay đổi nó mọi lúc.
 
 Những lập trình viên chuyên nghiệp nắm rõ về code và kiểm thử của họ đến mức họ cảm thấy bình thường _kinh khủng_ khi thực hiện những thay đổi ngẫu nhiên và cơ hội. Họ sẽ thay đổi tên một class, theo ý thích. Họ sẽ thấy một phương thức dài khi đọc một module và phân chia lại nó như một việc tất nhiên. Họ sẽ thay đổi một câu lệnh switch thành triển khai đa hình, hoặc thu gọn hệ thống phân cấp kế thừa thành một chuỗi các câu lệnh. Tóm lại, họ xử lý phần mềm như cách một nhà điêu khắc xử lý đất sét - liên tục tạo hình và nhào nặn sản phẩm của mình.
 
@@ -146,7 +146,7 @@ Bạn nợ quản lý của mình một khoảng thời gian và nỗ lực nh�
 
 Bạn nên lên kế hoạch làm việc 60 giờ một tuần. 40 giờ đầu tiên cho quản lý, 20h còn lại dành cho bạn. Với 20h này, bạn nên đọc, luyện tập, học hỏi, hoặc là nâng tầm sự nghiệp của mình.
 
-Bạn đang thắc mắc: "Nhưng còn gia đình tôi? Cuộc sống của tôi? Tôi phải hi sinh chúng cho quản lý của mình? 
+Bạn đang thắc mắc: "Nhưng còn gia đình tôi? Cuộc sống của tôi? Tôi phải hi sinh chúng cho quản lý của mình?
 
 Tôi không nói đến _toàn bộ_ thời gian rảnh của bạn. Mỗi tuần bạn chỉ cần dành thêm 20 giờ. Như vậy mỗi ngày chỉ khoảng 3 giờ. Nếu bạn dành thời gian ăn trưa để đọc, nghe podcast lúc đi làm, và dành 90 phút mỗi ngày để học một ngôn ngữ mới, bạn sẽ có tất cả.
 
@@ -165,3 +165,19 @@ Có thể bạn nghĩ rằng đây là công thức cho sự kiệt sức. Thự
 Bạn có biết biểu đồ Nassi-Schneiderman là gì không? Nếu không thì tại sao? Bạn có biết sự khác nhau giữa máy Mealy và máy Moore không? Bạn nên biết. Bạn có thể viết một đoạn code sắp xếp nhanh (quick sort) mà không cần tra cứu không? Bạn có biết thuật ngữ "Transform Analysis" nghĩa là gì không? Bạn có thể thực hiện phân tích chức năng với sơ đồ luồng dữ liệu (Data Flow Diagrams) không? Thuật ngữ "Tramp Data" có nghĩa là gì? Bạn đã bao giờ nghe thuật ngữ "Conascense" chưa? Bảng Parnas là gì?
 
 Có vô số ý tưởng, khuôn phép, kỹ thuật, công cụ và thuật ngữ được tạo ra trong lĩnh vực của chúng ta suốt 50 năm qua. Bạn biết được bao nhiêu trong số đó? Nếu bạn muốn trở nên chuyên nghiệp, bạn phải biết được một phần khá lớn và không ngừng tăng hiểu biết của mình lên.
+
+Tại sao bạn cần biết những thứ này? Xét cho cùng, phải chăng lĩnh vực của chúng ta đang phát triển quá nhanh đến mức mọi ý tưởng cũ đã trở nên không phù hợp? Phần đầu tiên của câu hỏi có vẻ rất rõ ràng. Chắc chắn là lĩnh vực của chúng ta đang phát triển với tốc độ chóng mặt. Tuy nhiên, thật thú vụ là sự tiến bộ phần lớn đều nằm ở phần ngoại vi. Đúng là bây giờ chúng ta không cần đợi 24h để biên dịch quay vòng nữa. Đúng là chúng ta có thể viết các hệ thống có kích thước GB. Đúng là chúng ta đang làm việc giữa một mạng lưới rộng khắp toàn cầu cung cấp khả năng truy cập thông tin tức thì. Mặt khác, chúng ta đang viết những câu lệnh _if_ và _while_ giống như chúng ta đã viết cách đây 50 năm. Nhiều thứ đã thay đổi, nhiều thứ thì không.
+
+Phần thứ 2 của câu hỏi chắn chắn không đúng. Rất ít ý tưởng trong 50 năm qua trở nên không phù hợp. Một số đã bị loại bỏ, điều đó đúng. Khái nhiệm phát triển theo mô hình thác nước đã rơi vào quên lãng. Nhưng không có nghĩa là chúng ta không biết nó là gì, và có những điểm nào tốt cũng như chưa tốt.
+
+Tuy nhiên, nhìn chung thì phần lớn những ý tưởng xương máu trong 50 năm qua vẫn còn giá trị tới ngày nay. Thậm chí đến bây giờ còn có giá trị hơn.
+
+Hãy nhớ lời nguyền Santayana: "Những người không nhớ đến lịch sử, thì chắc chắn sẽ lặp lại nó"
+
+Dưới đây là một danh sách _tối thiếu_ những thứ mà mọi chuyên gia phần mềm nên thông thạo:
+
+- Các khuôn mẫu thiết kế (Design patterns). Bạn phải mô tả được tất cả 24 mẫu trong sách [GOF](https://en.wikipedia.org/wiki/Design_Patterns) (Gang of Four) và có kiến thức về nhiều mẫu trong sách POSA (Pattern-Oriented Software Architecture)
+- Các nguyên tắc thiết kế. Bạn nên biết về nguyên tắc SOLID và hiểu rõ các thành phần của nó.
+- Các mô hình phát triển. Bạn nên hiểu về XP, Scrum, Lean, Kanban, Waterfall, Structured Analysis (Phân tích cấu trúc), và Structured Design (Thiết kế cấu trúc).
+- Các khuôn phép. Bạn nên thực hành TDD, thiết kế Object-Oriented, Structured Programming, Continuous Integration, và Pair Programming
+- Các ứng dụng. Bạn nên biết cách sử dụng UML, DFDs, sơ đồ cấu trúc (Structure Charts), Petri Nets, sơ đồ và bảng chuyển đổi trạng thái (State Transition Diagrams and Tables), biểu đồ luồng (flow charts), và bảng quyết định (decision tables).
