@@ -181,3 +181,14 @@ Dưới đây là một danh sách _tối thiếu_ những thứ mà mọi chuy�
 - Các mô hình phát triển. Bạn nên hiểu về XP, Scrum, Lean, Kanban, Waterfall, Structured Analysis (Phân tích cấu trúc), và Structured Design (Thiết kế cấu trúc).
 - Các khuôn phép. Bạn nên thực hành TDD, thiết kế Object-Oriented, Structured Programming, Continuous Integration, và Pair Programming
 - Các ứng dụng. Bạn nên biết cách sử dụng UML, DFDs, sơ đồ cấu trúc (Structure Charts), Petri Nets, sơ đồ và bảng chuyển đổi trạng thái (State Transition Diagrams and Tables), biểu đồ luồng (flow charts), và bảng quyết định (decision tables).
+
+### Không ngừng học hỏi
+
+Tốt độ thay đổi điên cuồng trong ngành CNTT đồng nghĩa với việc các lập trình viên phần mềm phải liên tục học hỏi nhiều thứ chỉ để theo kịp sự thay đổi. Thật buồn cho những kiến trúc sư ngừng viết code - họ sẽ sớm thấy mình không liên quan. Buồn cho những lập trình viên ngừng học ngôn ngữ mới - họ sẽ sớm nhìn thấy mọi thứ lướt qua. Buồn cho những lập trình viên không học những khuôn phép và kỹ thuật mới - đồng nghiệp của họ sẽ nổi trội hơn khi họ bị sa sút.
+
+Bạn có đến khám một vị bác sỹ không cập nhật các tạp chí y khoa không? Bạn có thuê một luật sư thuế không cập nhật luật thuế và các tiền lệ không? Vậy tại sao chủ doanh nghiệp lại đi thuê những lập trình viên không chịu cập nhật?
+
+Đọc sách, bài viết, blog, tweet. Tham gia các buổi đàm luận. Tham gia những nhóm người dùng. Tham gia đọc và học nhóm. Học những thứ ngoài vùng an toàn của bạn. Nếu bạn đã là một lập trình viên .NET, học Java. Nếu bạn lập trình Java, học Ruby. Nếu bạn lập trình C, học Lisp. Nếu bạn thực sự muốn thử thách bộ não của mình, học Prolog và Forth!
+
+### Luyện tập
+
