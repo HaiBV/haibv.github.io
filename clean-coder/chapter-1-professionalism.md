@@ -203,3 +203,18 @@ Một kata thường bắt nguồn từ việc giải quyết một bài toàn l
 Tôi thực hiện 1 đến 2 kata mỗi ngày, thường là một phần để ổn định công việc. Tôi có thể làm điều này bằng Java, Ruby, Clojure, hoặc bằng một số ngôn ngữ khác tôi muốn duy trì kỹ năng của mình. Tôi sử dụng kata để mài dũa một kỹ năng cụ thể, chẳng hạn như giữ các ngón tay của tôi quen với các phím tắt, hoặc sử dụng những tái cấu trúc xác định.
 
 Hãy coi kata như một bài tập khởi động 10 phút buổi sáng và 10 phút hạ nhiệt vào buổi tối.
+
+### Cộng tác
+
+Cách tốt nhất thứ 2 để học là cộng tác với những người khác. Những lập trình viên phần mềm chuyên nghiệp dành nỗ lực đặc biệt để cùng lập trình, cùng luyện tập, thiết kế và lập kế hoạch. Bằng cách đó, họ có thể học hỏi được nhiều điều từ nhau và hoàn thành công việc nhanh hơn, ít lỗi hơn.
+
+Điều đó không có nghĩa là bạn phải dành 100% thời gian làm việc với những người khác. Thời gian một mình cũng rất quan trọng. Tôi rất thích làm việc với người khác, nhưng tôi sẽ phát điên lên nếu thỉnh thoảng không thể làm việc một mình.
+
+### Cố vấn
+
+Cách tốt nhất để học là dạy. Không gì có thể nhồi vào đầu bạn những dữ kiện và giá trị nhanh hơn và khó hơn việc phải truyền đạt chúng cho những người mà bạn có trách nhiệm. Vì vậy, lợi ích của việc giảng dạy là một đặc ân của giáo viên.
+
+Tương tự, không có cách nào tốt hơn để đữa những người mới vào một tổ chức hơn là ngồi xuống và chỉ cho họ những sợi dây. Các chuyên gia chịu trách nhiệm cá nhân trong việc kèm cặp đàn em. Họ sẽ không để cho một đàn em than vãn về việc không được giám sát.
+
+### Hiểu được khu vực của bạn
+
