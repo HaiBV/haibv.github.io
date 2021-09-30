@@ -216,5 +216,12 @@ Cách tốt nhất để học là dạy. Không gì có thể nhồi vào đầ
 
 Tương tự, không có cách nào tốt hơn để đữa những người mới vào một tổ chức hơn là ngồi xuống và chỉ cho họ những sợi dây. Các chuyên gia chịu trách nhiệm cá nhân trong việc kèm cặp đàn em. Họ sẽ không để cho một đàn em than vãn về việc không được giám sát.
 
-### Hiểu được khu vực của bạn
+### Hiểu được lĩnh vực của bạn
 
+Mọi chuyên gia phần mềm phải có trách nhiệm hiểu rõ lĩnh vực của các giải pháp mà họ đang lập trình. Nếu bạn xây dựng một hệ thống kế toán, bạn nên biết về lĩnh vực kế toán. Nếu bạn đang xây dựng một ứng dụng du lịch, bạn nên biết về ngành du lịch. Bạn không cần trở thành chuyên gia trong lĩnh vực đó, nhưng cũng đòi hỏi bạn phải biết một lượng kiến thức hợp lý.
+
+Khi bắt đầu một dự án trong một lĩnh vực mới, đọc một hoặc hai cuốn sách về chủ đề này. Phỏng vấn khách hàng và người dùng về nền tảng và những khái niệm cơ bản của lĩnh vực. Dành một chút thời gian với các chuyên gia, và cố gắng nắm bắt được những nguyên tắc và giá trị của họ.
+
+Loại hành vi thiếu chuyên nghiệp tồi tệ nhất là chỉ viết code dựa trên đặc điểm kỹ thuật mà không hiểu tại sao đặc điểm kỹ thuật đó có ý nghĩa với doanh nghiệp như thế nào. Thay vào đó, bạn nên hiểu đủ về lĩnh vực để có thể nhận ra và xử lý các lỗi đặc thù.
+
+### Xác định chủ doanh nghiệp/khách hàng
