@@ -224,4 +224,20 @@ Khi bắt đầu một dự án trong một lĩnh vực mới, đọc một ho�
 
 Loại hành vi thiếu chuyên nghiệp tồi tệ nhất là chỉ viết code dựa trên đặc điểm kỹ thuật mà không hiểu tại sao đặc điểm kỹ thuật đó có ý nghĩa với doanh nghiệp như thế nào. Thay vào đó, bạn nên hiểu đủ về lĩnh vực để có thể nhận ra và xử lý các lỗi đặc thù.
 
-### Xác định chủ doanh nghiệp/khách hàng
+### Xác định chủ doanh nghiệp/khách hàng của bạn
+
+Vấn đề của chủ doanh nghiệp là vấn đề của _bạn_. Bạn cần phải hiểu những vấn đề đó là gì và hướng đến những cách giải quyết tốt nhất. Là một lập trình viên hệ thống, bạn cần đặt mình vào vị trí chủ doanh nghiệp và chắc chắn rằng những tính năng mà bạn tạo ra thực sự khớp với mong muốn của chủ doanh nghiệp.
+
+Các lập trình viên rất dễ dàng tách biệt 2 vấn đề này. Càng dễ dàng rơi vào thái độ _tôi và họ_ với chủ doanh nghiệp. Các chuyên gia tránh điều này bằng mọi giá.
+
+### Khiêm tốn
+
+Lập trình là một công việc sáng tạo. Khi chúng ta viết code, chúng ta tạo ra một thứ gì đó từ con số 0. Chúng ta mạnh mẽ áp đặt trật tự lên sự hỗn loạn. Chúng ta tự tin chỉ huy, chính xác từng chi tiết, các hành vi của một cỗ máy có thể gây ra những thiệt hại không lường. Vì thế nên, lập trình là một công việc rất đáng kiêu ngạo.
+
+Các chuyên gia biết họ kiêu ngạo và không khiêm tốn vô lý. Một chuyên gia biết công việc của mình và tự hào về nó. Một chuyên gia tự tin vào khả năng của mình, chấp nhận rủi ro một cách táo bạo và có tính toán dựa trên sự tự tin đó. Một chuyên gia không được rụt rè.
+
+Tuy nhiê, một chuyên gia cũng biết rằng sẽ có lúc mình thất bại, tính toán rủi ro của anh ta sẽ sai, các kỹ năng không đủ đáp ứng. Anh ta sẽ nhìn vào gương và nhìn thấy một kẻ ngốc kiêu ngạo đang nhìn lại.
+
+Vì vậy, khi một chuyên gia thấy mình như một trò đùa, anh ta sẽ là người đầu tiên cười. Anh ta sẽ không bao giờ chế giễu người khác, nhưng sẽ chấp nhận chế giễu khi nó xứng đán và người nhạo khi điều đó không xứng đáng. Anh ta sẽ không hạ thấp người khác khi họ mắc sai lầm vì anh ta biết mình có thể là người tiếp theo.
+
+Một chuyên gia hiểu rõ sự kiêu ngạo của mình. và số phận cuối cùng cũng sẽ nhận thấy và cân bằng chúng. Và khi mục tiêu đó liên kết lại, điều tốt nhất bạn có thể làm theo là nghe theo lời khuyên của Howard: Cười.
