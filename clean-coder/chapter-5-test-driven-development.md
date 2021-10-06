@@ -53,3 +53,14 @@ Chu kỳ tiếp tục lặp đi lặp lại. Thêm một ít code kiểm thử. 
 ### Lợi ích
 
 #### Chắc chắn
+
+Nếu bạn áp dụng TDD như một khuôn mẫu chuyên nghiệp, bạn sẽ viết hàng chục unit test mỗi ngày, hàng trăm unit test mỗi tuần và hàng ngàn unit test mỗi năm. Và bạn luôn có tất cả những unit test đó để chạy bất cứ khi nào bạn thực hiện thay đổi code.
+
+Tôi là một trong những tác giả và người bảo trì của FitNesse, một công cụ kiểm thử dựa trên Java. Tính đến thời điểm hiện tại, FitNesse có khoảng 64000 dòng code, trong đó 28000 dòng code dành cho 2200 unit test riêng lẻ. Những unit test này phủ ít nhất 90% code thành phẩm và mất khoảng 90s để chạy.
+
+Mỗi khi tôi thực hiện một thay đổi ở bất kỳ phần nào của FitNesse, tôi chỉ cần chạy những unit test đó. Nếu chúng đạt, tôi gần như chắc chắn rằng sự thay đổi không làm hỏng bất cứ thứ gì. Thế nào là "gần như chắc chắn"? Đủ để bàn giao công việc!
+
+Quy trình QA cho FitNesse là dòng lệnh: ant release. Lệnh đó dựng FitNesse từ đầu, sau đó chạy tất cả các unit test và kiểm thử chấp nhận. Nếu chúng đều thành công, tôi sẽ bàn giao thành phẩm.
+
+
+### Giảm tỷ lệ lỗi
