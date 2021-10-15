@@ -42,3 +42,11 @@ Một con số _lớn_. Chúng ta đang nói về 22 _cấp độ mũ!_ Đó là
 Và tôi đang làm gì với sức mạnh của 22 cấp số mũ của 10? Tôi đang làm những việc tương tự như tôi đã làm với PDP-8/I. Tôi đang viết những câu lệnh _if_, vòng lặp _while_, và _những việc được giao_.
 
 Oh, tôi có những công cụ tốt hơn để viết những câu lệnh đó. Và tôi có những ngôn ngữ tốt hơn để viết những câu lệnh đó. Nhưng bản chất của những câu lệnh đó không hề thay đổi. Code ở năm 2010 sẽ dễ nhận biết với một lập trình viên từ những năm 1960. Đất sét mà chúng tôi chế tác không thay đổi nhiều trong 4 thập kỷ đó.
+
+### Vòng thời gian
+
+Nhưng cách chúng ta làm việ đã thay đổi đáng kể. Vào những năm 60, tôi có thể phải đợi 1 hoặc 2 ngày để có được kết quả biên dịch. Đến cuối những năm 70, biên dịch một chương trình với 50 nghìn dòng mất 45 phút. Ngay đến những năm 90, thời gian biên dịch vẫn còn rất lâu.
+
+Lập trình viên ngày nay không đợi biên dịch. Lập trình viên bây giờ có sức mạnh rất lớn dưới những ngón tay và họ có thể quay vòng tái cấu trúc trong chỉ vài giây. 
+
+Ví dụ, tôi làm việc với dự án FitNesse với 64 nghìn dòng code Java. Một bản dựng hoàn chỉnh, bao gồm toàn bộ unit test và test tích hợp, mất dưới 4 phút để chạy. Nếu qua được test, tôi sẵn sàng bàn giao sản phẩm. _Nên toàn bộ quy trình QA, từ source code cho đến triển khai, chỉ cần ít hơn 4 phút._ Thời gian biên dịch không đáng kể. Từng unit test chỉ cần vài _giây_. Vì vậy tôi có thể thực hiện quay vòng giữa biên dịch/kiểm thử _10 lần mỗi phút_.
