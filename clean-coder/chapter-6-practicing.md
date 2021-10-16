@@ -50,3 +50,5 @@ Nhưng cách chúng ta làm việ đã thay đổi đáng kể. Vào những nă
 Lập trình viên ngày nay không đợi biên dịch. Lập trình viên bây giờ có sức mạnh rất lớn dưới những ngón tay và họ có thể quay vòng tái cấu trúc trong chỉ vài giây. 
 
 Ví dụ, tôi làm việc với dự án FitNesse với 64 nghìn dòng code Java. Một bản dựng hoàn chỉnh, bao gồm toàn bộ unit test và test tích hợp, mất dưới 4 phút để chạy. Nếu qua được test, tôi sẵn sàng bàn giao sản phẩm. _Nên toàn bộ quy trình QA, từ source code cho đến triển khai, chỉ cần ít hơn 4 phút._ Thời gian biên dịch không đáng kể. Từng unit test chỉ cần vài _giây_. Vì vậy tôi có thể thực hiện quay vòng giữa biên dịch/kiểm thử _10 lần mỗi phút_.
+
+Không phải lúc nào nhanh cũng là khôn ngoan. Thường thì nên chậm lại và nghĩ kỹ sẽ tốt hơn. Nhưng có những lúc những vòng quy lặp lại nhanh nhất có thể được coi là _hiệu quả cao._
