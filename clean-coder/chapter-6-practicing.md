@@ -52,3 +52,18 @@ Lập trình viên ngày nay không đợi biên dịch. Lập trình viên bây
 Ví dụ, tôi làm việc với dự án FitNesse với 64 nghìn dòng code Java. Một bản dựng hoàn chỉnh, bao gồm toàn bộ unit test và test tích hợp, mất dưới 4 phút để chạy. Nếu qua được test, tôi sẵn sàng bàn giao sản phẩm. _Nên toàn bộ quy trình QA, từ source code cho đến triển khai, chỉ cần ít hơn 4 phút._ Thời gian biên dịch không đáng kể. Từng unit test chỉ cần vài _giây_. Vì vậy tôi có thể thực hiện quay vòng giữa biên dịch/kiểm thử _10 lần mỗi phút_.
 
 Không phải lúc nào nhanh cũng là khôn ngoan. Thường thì nên chậm lại và nghĩ kỹ sẽ tốt hơn. Nhưng có những lúc những vòng quy lặp lại nhanh nhất có thể được coi là _hiệu quả cao._
+
+Muốn làm nhanh bất kỳ điều gì đều cần luyện tập. Việc xoay vòng code/test nhanh chóng đòi hỏi bạn đưa ra quyết định rất nhanh. Đưa ra quyết định nhanh chóng nghĩa là phải nhận ra rất nhiều tình huống cũng như vấn đề và _biết_ làm thế nào để giải quyết chúng.
+
+Hãy xem xét 2 võ sư trong trận chiến. Mỗi người đều phải nhận ra ý định của người còn lại và có cách phản ứng phù hợp chỉ trong mili giây. Trong một trận chiến, bạn không thể dừng thời gian lại, nghiên cứu các tư thế, và cân nhắc các phản ứng phù hợp. Trong một trận chiến bạn chỉ có thể _phản ứng_. Thực ra là, _cơ thể_ bạn phản ứng trong khi tâm trí bạn làm việc ở một cấp độ cao hơn.
+
+Khi bạn xoay vòng code/test nhiều lần trong một phút, chính _cơ thể_ bạn biết cần bấm vào phím nào. Một phần tiềm thức của bạn nhận ra tình huống và phản ứng trong vòng mili giây với giải pháp thích hợp trong khi tâm trí bạn được tự do tập trung vào vấn đề cấp cao hơn.
+
+Trong cả 2 trường hợp đấu võ và lập trình, tốc độ phụ thuộc vào thực hành. Và trong cả 2 trường hợp, việc thực hành tương tự nhau. Chúng ta chọn một số cặp vấn đề/giải pháp và thực hiện chúng lặp đi lặp lại cho đến khi chúng ta hoàn toàn kiểm soát chúng.
+
+Xem xét một nghệ sỹ guitar như Carlos Santana. Âm nhạc trong đầu ông đơn giản phát ra từ ngón tay ông. Ông không tập trung vào vị trí của những ngón tay hay kỹ thuật. Tâm trí ông được tự do lên kế hoạch cho các giai điệu và hòa âm ở cấp độ cao hơn trong khi cơ thể ông chuyển các kế hoạch đó thành các chuyện động ngón tay ở cấp độ thấp hơn.
+
+Nhưng để đạt được cấp độ đó yêu cầu rất nhiều luyện tập. Nhạc sỹ luyện tập thang âm, giai điệu và riff lặp đi lặp lại cho đến khi họ hoàn toàn kiểm soát chúng.
+
+## Coding Dojo
+
