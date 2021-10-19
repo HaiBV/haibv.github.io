@@ -67,3 +67,22 @@ Nhưng để đạt được cấp độ đó yêu cầu rất nhiều luyện t
 
 ## Coding Dojo
 
+Từ năm 2001, tôi sử dụng một chương trình gọi là _The Bowling Game_ để thuyết trình bài giảng về TDD. Nó là một bài tập nhỏ đáng yêu và cần khoảng 30 phút. Bạn sẽ được trải nghiệm xung đột trong thiết kế, xây dựng cao trào, và kết thúc bằng sự bất ngờ. Tôi đã viết cả một chương về ví dụ này ở [PPP2003]
+
+Qua nhiều năm, tôi đã thuyết trình bài giảng này hàng trăm, thậm chí hàng ngàn lần. Tôi đã học thuộc lòng nó. Tôi có thể làm cả trong khi đang ngủ. Tôi tối thiểu số lần gõ phím, điều chỉnh tên biến và chỉnh sửa cấu trúc thuật tuán cho đến khi vừa ý. Mặc dù tôi không biết bắt đầu từ khi nào, nhưng đó là bài kata đầu tiên của tôi.
+
+Năm 2005 tôi tham dự hội thảo XP2005 ở Sheffield, Anh. Tôi tham dự một buổi họp có tên là _Coding Dojo_ do Laurent Bossavit và Emmanuel Gaillot trình bày. Họ yêu cầu tất cả mọi người mở laptop của mình và code cùng họ khi họ sử dụng TDD để viết chương trình _Game of Life_ của Conway. Họ gọi nó là một "Kata" và ý tưởng ban đầu là của "Pragmatic" Dave Thomas.
+
+Kể từ đó, nhiều lập trình viên đã sử dụng võ thuật như một phép ẩn dụ về việc thực hành của họ. Cái tên Coding Dojo bắt đầu gắn liền với hoạt động này. Đôi khi một nhóm lập trình viên sẽ gặp gỡ và luyện tập cùng nhau giống như các võ sĩ thường làm. Và ở thời điểm khác, những lập trình viên sẽ luyện tập một mình, cũng giống như các võ sĩ thường làm. 
+
+Khoảng 1 năm trước tôi có dạy cho một nhóm lập trình viên ở Omaha. Vào buổi trưa, họ mời tôi tham gia Coding Dojo của họ. Tôi quan sát khoảng 20 lập trình viên mở laptop của họ ra, gõ phím liên tục, thực hiện Kata _The Bowling Game_ theo người trưởng nhóm.
+
+Có một vài hoạt động thường diễn ra ở võ đường. Dưới đây là một vài ví dụ:
+
+### Kata
+
+Trong võ thuật, 
+
+### Wasa
+
+### Randori
