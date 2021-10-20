@@ -33,7 +33,7 @@ Một trong những chiếc máy đầu tiên tôi từng sử dụng để lậ
 
 Tôi vừa mua một chiếc laptop Macbook Pro mới. Nó có bộ xử lý 2.8GHz lõi kép, 8GB RAM, 512GB SSD, và màn hình 17-inch 1920x1200 LED. Tôi mang nó trong balo của tôi. Có thể đặt trên đùi và tiêu thụ ít hơn 85w.
 
-Chiếc laptop của tôi nhanh hơn 8000 lần, có bộ nhớ trong nhiều hơn 2 triệu lần, có bộ nhớ nhiều hơn 16 triệu lần, tiêu thụ 1% điện năng và kích thước chỉ bằng 1%, và giá tiền chỉ bằng 1/25 có với PDP-8/I. Hãy làm một phép tính: 
+Chiếc laptop của tôi nhanh hơn 8000 lần, có bộ nhớ trong nhiều hơn 2 triệu lần, có bộ nhớ nhiều hơn 16 triệu lần, tiêu thụ 1% điện năng và kích thước chỉ bằng 1%, và giá tiền chỉ bằng 1/25 có với PDP-8/I. Hãy làm một phép tính:
 
 8000 x 2000000 x 16000000 x 100 x 100 x 25 =6.4 x 10^22
 
@@ -47,7 +47,7 @@ Oh, tôi có những công cụ tốt hơn để viết những câu lệnh đó
 
 Nhưng cách chúng ta làm việ đã thay đổi đáng kể. Vào những năm 60, tôi có thể phải đợi 1 hoặc 2 ngày để có được kết quả biên dịch. Đến cuối những năm 70, biên dịch một chương trình với 50 nghìn dòng mất 45 phút. Ngay đến những năm 90, thời gian biên dịch vẫn còn rất lâu.
 
-Lập trình viên ngày nay không đợi biên dịch. Lập trình viên bây giờ có sức mạnh rất lớn dưới những ngón tay và họ có thể quay vòng tái cấu trúc trong chỉ vài giây. 
+Lập trình viên ngày nay không đợi biên dịch. Lập trình viên bây giờ có sức mạnh rất lớn dưới những ngón tay và họ có thể quay vòng tái cấu trúc trong chỉ vài giây.
 
 Ví dụ, tôi làm việc với dự án FitNesse với 64 nghìn dòng code Java. Một bản dựng hoàn chỉnh, bao gồm toàn bộ unit test và test tích hợp, mất dưới 4 phút để chạy. Nếu qua được test, tôi sẵn sàng bàn giao sản phẩm. _Nên toàn bộ quy trình QA, từ source code cho đến triển khai, chỉ cần ít hơn 4 phút._ Thời gian biên dịch không đáng kể. Từng unit test chỉ cần vài _giây_. Vì vậy tôi có thể thực hiện quay vòng giữa biên dịch/kiểm thử _10 lần mỗi phút_.
 
@@ -73,7 +73,7 @@ Qua nhiều năm, tôi đã thuyết trình bài giảng này hàng trăm, thậ
 
 Năm 2005 tôi tham dự hội thảo XP2005 ở Sheffield, Anh. Tôi tham dự một buổi họp có tên là _Coding Dojo_ do Laurent Bossavit và Emmanuel Gaillot trình bày. Họ yêu cầu tất cả mọi người mở laptop của mình và code cùng họ khi họ sử dụng TDD để viết chương trình _Game of Life_ của Conway. Họ gọi nó là một "Kata" và ý tưởng ban đầu là của "Pragmatic" Dave Thomas.
 
-Kể từ đó, nhiều lập trình viên đã sử dụng võ thuật như một phép ẩn dụ về việc thực hành của họ. Cái tên Coding Dojo bắt đầu gắn liền với hoạt động này. Đôi khi một nhóm lập trình viên sẽ gặp gỡ và luyện tập cùng nhau giống như các võ sĩ thường làm. Và ở thời điểm khác, những lập trình viên sẽ luyện tập một mình, cũng giống như các võ sĩ thường làm. 
+Kể từ đó, nhiều lập trình viên đã sử dụng võ thuật như một phép ẩn dụ về việc thực hành của họ. Cái tên Coding Dojo bắt đầu gắn liền với hoạt động này. Đôi khi một nhóm lập trình viên sẽ gặp gỡ và luyện tập cùng nhau giống như các võ sĩ thường làm. Và ở thời điểm khác, những lập trình viên sẽ luyện tập một mình, cũng giống như các võ sĩ thường làm.
 
 Khoảng 1 năm trước tôi có dạy cho một nhóm lập trình viên ở Omaha. Vào buổi trưa, họ mời tôi tham gia Coding Dojo của họ. Tôi quan sát khoảng 20 lập trình viên mở laptop của họ ra, gõ phím liên tục, thực hiện Kata _The Bowling Game_ theo người trưởng nhóm.
 
@@ -81,7 +81,23 @@ Có một vài hoạt động thường diễn ra ở võ đường. Dưới đ�
 
 ### Kata
 
-Trong võ thuật, 
+Trong võ thuật, kata là một tập hợp những động tác được biên đạo, mô phỏng chính xác một trận chiến. Với mục tiêu, hướng đến tiệm cận, là sự hoàn hảo. Người luyện võ cố gắng dạy cơ thể mình thực hiện từng chuyển động hoàn hảo và tập hợp thành một bài tập trôi chảy. Kata được luyện tập tốt khi trình diễn sẽ rất đẹp mắt.
+
+Mặc dù nhìn rất đẹp, nhưng mục đích luyện tập kata không phải là để trình diễn trên sân khấu. Mục đích là để luyện tập tâm trí và cơ thể bạn cách phản xạ với tình huống nhất định trong trận chiến. Mục tiêu cuối cùng là làm cho các chuyển động đã hoàn thiện trở nên tự động và theo bản năng để chúng có mặt khi bạn cần.
+
+Kata trong lập trình là một tập hợp những tổ hợp phím và chuyển động chuột được biên đạo, mô phỏng chính xác việc xử lý một vài vấn đề trong lập trình. Bạn không thực sự giải quyết vấn đề bởi vì bạn đã biết cách giải quyết chúng rồi. Thay vào đó, bạn luyện tập chuyển động và quyết định liên quan đến việc giải quyết vấn đề.
+
+Một lần nữa mục tiêu là tiệm cận của sự hoàn hảo. Bạn lặp đi lặp lại bài tập để rèn luyện chuyển động cũng như phản ứng cho não bộ và những ngón tay của bạn. Trong khi luyện tập, bạn có thể khám phá ra những cải tiến tinh tế trong chuyển động hoặc trong chính giải pháp.
+
+Luyện tập những bài kata thích hợp là một cách tốt để học hotkeys và thành ngữ điều hướng. Đó cũng là một cách tốt để học những nguyên tắc như TDD hay CI. Nhưng quan trọng nhất, đó là một cách tốt để đưa những cặp vấn đề/giải pháp vào tiềm thức của bạn, để bạn dễ dàng biết cách giải quyết khi đối mặt với chúng trong lập trình thực tế.
+
+Cũng như các võ sư, mọt lập trình viên nên biết nhiều bài kata khác nhau và luyện chúng thường xuyên để tránh bị lãng quên qua thời gian. Nhiều bài kata được lưu lại ở http://katas.softwarecraftsmanship.org. Một số khác có thể tìm thấy ở http://codekata.pragprog.com. Dưới đây là những bài ưa thích của tôi:
+
+- (The Bowling Game)[http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata]
+- (Prime Factors)[http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata]
+- (Word Wrap)[http://thecleancoder.blogspot.com/2010/10/craftsman-62-darkpath.html]
+
+Đối với những thử thách thực sự, hãy thử học một bài kata thật tốt đến mức trôi chảy. Làm tốt được điều này _rất khó_.
 
 ### Wasa
 
