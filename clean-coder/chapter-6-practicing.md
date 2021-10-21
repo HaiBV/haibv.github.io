@@ -93,12 +93,17 @@ Luyện tập những bài kata thích hợp là một cách tốt để học h
 
 Cũng như các võ sư, mọt lập trình viên nên biết nhiều bài kata khác nhau và luyện chúng thường xuyên để tránh bị lãng quên qua thời gian. Nhiều bài kata được lưu lại ở http://katas.softwarecraftsmanship.org. Một số khác có thể tìm thấy ở http://codekata.pragprog.com. Dưới đây là những bài ưa thích của tôi:
 
-- (The Bowling Game)[http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata]
-- (Prime Factors)[http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata]
-- (Word Wrap)[http://thecleancoder.blogspot.com/2010/10/craftsman-62-darkpath.html]
+- [The Bowling Game](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata)
+- [Prime Factors](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata)
+- [Word Wrap](http://thecleancoder.blogspot.com/2010/10/craftsman-62-darkpath.html)
 
 Đối với những thử thách thực sự, hãy thử học một bài kata thật tốt đến mức trôi chảy. Làm tốt được điều này _rất khó_.
 
 ### Wasa
 
+Khi tôi học jujitsu, phần lớn thời gian ở võ đường được dành cho luyện tập theo cặp _wasa_. Wasa giống như một bài tập kata cho 2 người. Các quy trình được ghi nhớ và phát lại chính xác. Một bên đóng vai tấn công, và bên còn lại phòng thủ. Các chuyển động được lặp đi lặp lại đến khi 2 bên hoán đổi vai trò. 
+
+Lập trình viên có thể luyện tập theo cách tương tự bằng trò chơi _bóng bàn (ping-pong)_. Cả 2 chọn một kata, hoặc một vấn đề đơn giản. Một người viết unit test, và người còn lại phải chạy qua được unit test đó. Sau đó họ đổi lại vai trò.
+
+Nếu 2 bên chọn một kata thông thường, thì kết quả sẽ được biết trước và các lập trình viên sẽ luyện tập và nhận xét về kỹ thuật gõ phím và di chuyển chuột của nhau cũng như cách họ ghi nhớ kata thế nào. Mặt khác, nếu 2 bên chọn một vấn đề mới để giải quyết, thì trò chơi có thể trở nên thú vị hơn một chút. Lập trình viên sẽ viết unit test có một lượng lớn quyền kiểm soát với cách giải quyết vấn đề. Anh cũng có quyền đáng kể thiết lập các ràng buộc. Ví dụ, nếu các lập trình viên chọn thực hiện một thuật toán sắp xếp, người viết unit test có thể dễ dàng đưa ra các hạn chế về tốc độ và bộ nhớ làm thách thức cho đối tác của anh ta. Điều đó có thể làm trò chơi trở nên cạnh tranh ... và vui vẻ.
 ### Randori
