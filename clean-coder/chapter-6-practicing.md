@@ -65,7 +65,7 @@ Xem xét một nghệ sỹ guitar như Carlos Santana. Âm nhạc trong đầu �
 
 Nhưng để đạt được cấp độ đó yêu cầu rất nhiều luyện tập. Nhạc sỹ luyện tập thang âm, giai điệu và riff lặp đi lặp lại cho đến khi họ hoàn toàn kiểm soát chúng.
 
-## Coding Dojo
+## Coding Dojo (Võ đường code)
 
 Từ năm 2001, tôi sử dụng một chương trình gọi là _The Bowling Game_ để thuyết trình bài giảng về TDD. Nó là một bài tập nhỏ đáng yêu và cần khoảng 30 phút. Bạn sẽ được trải nghiệm xung đột trong thiết kế, xây dựng cao trào, và kết thúc bằng sự bất ngờ. Tôi đã viết cả một chương về ví dụ này ở [PPP2003]
 
@@ -107,3 +107,5 @@ Lập trình viên có thể luyện tập theo cách tương tự bằng trò c
 
 Nếu 2 bên chọn một kata thông thường, thì kết quả sẽ được biết trước và các lập trình viên sẽ luyện tập và nhận xét về kỹ thuật gõ phím và di chuyển chuột của nhau cũng như cách họ ghi nhớ kata thế nào. Mặt khác, nếu 2 bên chọn một vấn đề mới để giải quyết, thì trò chơi có thể trở nên thú vị hơn một chút. Lập trình viên sẽ viết unit test có một lượng lớn quyền kiểm soát với cách giải quyết vấn đề. Anh cũng có quyền đáng kể thiết lập các ràng buộc. Ví dụ, nếu các lập trình viên chọn thực hiện một thuật toán sắp xếp, người viết unit test có thể dễ dàng đưa ra các hạn chế về tốc độ và bộ nhớ làm thách thức cho đối tác của anh ta. Điều đó có thể làm trò chơi trở nên cạnh tranh ... và vui vẻ.
 ### Randori
+
+_Randori_ là dạng chiến đấu tự do. Trong võ đường jujitsu, chúng tôi sẽ thiết lập nhiều tính huống chiến đấu khác nhau và cùng thực hiện chúng. Đôi khi một người thực hiện phòng thủ, những người còn lại sẽ tấn công anh ta theo trình tự. Đôi khi chúng tôi bố trí hai hoặc nhiều người tấn công một người phòng thủ duy nhất (thường là sensei, hầu như luôn thắng cuộc). Đôi khi chúng tôi thực hiện 2vs2, hoặc 4vs4.
