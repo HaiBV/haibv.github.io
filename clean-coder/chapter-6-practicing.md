@@ -109,3 +109,27 @@ Nếu 2 bên chọn một kata thông thường, thì kết quả sẽ được 
 ### Randori
 
 _Randori_ là dạng chiến đấu tự do. Trong võ đường jujitsu, chúng tôi sẽ thiết lập nhiều tính huống chiến đấu khác nhau và cùng thực hiện chúng. Đôi khi một người thực hiện phòng thủ, những người còn lại sẽ tấn công anh ta theo trình tự. Đôi khi chúng tôi bố trí hai hoặc nhiều người tấn công một người phòng thủ duy nhất (thường là sensei, hầu như luôn thắng cuộc). Đôi khi chúng tôi thực hiện 2vs2, hoặc 4vs4.
+
+Mô phỏng chiến đấu không phù hợp với lập trình. Tuy nhiên, có một trò chơi gọi là randori được chơi rất nhiều ở các võ đường coding. Nó rất giống với luyện tập theo cặp wasa trong trường hợp cùng nhau giải quyết vấn đề. Tuy nhiên, nó được chơi với nhiều người và quy tắc có chút thay đổi. Với màn hình được chiếu trên tường, một người viết unit test và ngồi xuống. Người tiếp theo sẽ chạy qua unit test đó và viết tiếp một unit test khác. Việc này thực hiện theo trình tự bàn tròn, hoặc mọi người chỉ cần xếp hàng khi họ muốn thực hiện. Trong cả hai trường hợp, những bài tập này đều _rất thú vị_.
+
+Điều cần nhấn mạnh là bạn có thể học được bao nhiêu từ những buổi học anyf. Bạn có thể có được cái nhìn sâu sắc về cách người khác giải quyết vấn đề. Nhưng thông tin này có thể giúp bạn mở rộng cách tiếp cận và cải thiện kỹ năng của mình.
+
+## Mở rộng kinh nghiệm của bạn
+
+Các lập trình viên chuyên nghiệp thường mắc phải sự thiếu đa dạng trong các loại vấn đề mà họ giải quyết. Các nhà tuyển dụng/chủ doanh nghiệp thường tập trung vào một ngôn ngữ, nền tảng và lĩnh vực duy nhất mà họ muốn lập trình viên của họ phải làm việc. Nếu không mở rộng hiểu biết, nó có thể dấn đến việc hạn chế sơ yếu lý lịch và tư duy của bạn. Không có gì là lạ khi những lập trình viên đó cảm thấy thiếu sự chuẩn bị cho những thay đổi định kỳ của ngành này.
+
+### Mã nguồn mở
+
+Một cách để chuẩn bị cho những thay đổi đó là làm những gì luật sư và bác sĩ thường làm: Thực hiện một số công việc phi lợi nhuận (pro-bono) bằng cách đóng góp cho những dự án mã nguồn mở. Có rất nhiều dự án như vậy, và có lẽ không có cách nào tốt hơn để nâng cao trình độ kỹ năng của bạn hơn là thực sự bắt tay vào việc mà người khác quan tâm.
+
+Vậy nếu bạn là một lập trình viên Java, hãy đóng góp cho một dự án Rails. Nếu bạn viết rất nhiều C++ cho doanh nghiệp, tìm một dự án Python và đóng góp cho nó.
+
+### Đạo đức của việc luyện tập
+
+Các lập trình viên chuyên nghiệp dùng thời gian của họ để luyện tập. Công việc của nhà tuyển dụng không phải là giúp bạn rèn luyện kỹ năng cũng như điều chỉnh sơ yếu lý lịch của bạn. Bệnh nhân không trả tiền cho bác sĩ để luyện tập kỹ thuật khâu. Người hâm mộ bóng đá (thường) không trả tiền để xem các cầu thủ tập chạy đến khi mệt. Người đi xem hòa nhạc không trả tiền để cho nhạc sĩ lập chỉnh âm. Và nhà tuyển dụng của lập trình viên không trả tiền cho thời gian luyện tập của bạn.
+
+Vì thời gian luyện tập của bạn là thời gian của riêng bạn, nên bạn không cần phải sử dụng cùng ngôn ngữ hoặc nền tảng bạn sử dụng cho nhà tuyển dụng. Chọn bất kỳ ngôn ngữ nào mà bạn thích và giữ cho kỹ năng đa ngôn ngữ của bạn sắc bén. Nếu bạn làm việc với .NET, hãy luyện tập một chút Java hoặc Ruby vào buổi trưa, hoặc ở nhà.
+
+## Kết luận
+
+Bằng một hay nhiều cách, _tất cả_ lập trình viên chuyên nghiệp đều luyện tập. Họ làm vậy bởi vì họ quan tâm đến việc thực hiện tốt nhất công việc của mình. Hơn thế nữa, họ luyện tập trong thời gian riêng vì họ tự nhận thức được việc rèn luyện kỹ năng là trách nhiệm của họ - chứ không phải của các nhà tuyển dụng. Luyện tập là việc bạn làm khi bạn không được trả công. Bạn làm việc đó để bạn _sẽ_ được trả công, và trả _xứng đáng_.
