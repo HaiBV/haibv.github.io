@@ -11,3 +11,5 @@ layout: default
 [Chương 5 - Test Driven Development](./chapter-5-test-driven-development.html).
 
 [Chương 6 - Luyện tập](./chapter-6-practicing.html).
+
+[Chương 10 - Ước lượng (Estimation)](./chapter-10-estimation.html).
