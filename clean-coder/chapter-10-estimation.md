@@ -44,7 +44,7 @@ Tôi nhớ tôi đã hỏi Ken rằng anh có phát điên với tôi không, v�
 
 Vấn đề là chúng ta nhìn nhận estimation theo những cách khác nhau. Khách hàng coi estimation là một cam kết. Trong khi dev coi estimation như một sự phỏng đoán. Sự khác biệt là rất lớn.
 
-### Một cam kết 
+### Một cam kết
 
 Một cam kết là một thứ bạn phải hoàn thành. Nếu bạn cam kết hoàn thành một việc gì đó vào một ngày nhất định, đơn giản nghĩa là bạn cần phải hoàn thành việc đó vào đúng ngày hôm đó. Nếu điều đó đồng nghĩa với việc bạn phải làm 12 tiếng một ngày, kể cả cuối tuần, bỏ qua kỳ nghỉ với gia đình, thì hãy chấp nhận. Bạn đã lập ra cam kết, bạn phải tôn trọng nó.
 
@@ -53,6 +53,7 @@ Người chuyên nghiệp không cam kết trừ khi họ biết họ có thể 
 Can kết cần một sự chắc chắn. Mọi người sẽ chấp nhận những cam kết của bạn và lập kế hoạch dựa trên nó. Cái giá của việc bỏ lỡ những cam kết đó, với họ, và với uy tín của bạn, là vô cùng lớn. Bỏ lỡ cam kết là một hành vi không trung thực chỉ nhẹ hơn một chút so với nói dối công khai.
 
 ### Một ước lượng
+
 Ước lượng là một phỏng đoán. Không có sự cam kết nào trong đó. Không lời hứa nào được đưa ra. Bỏ lỡ ước lượng không phải là một việc đáng chê trách. Lý do chúng ta đưa ra ước lượng là bởi vì chúng ta không thể biết được một việc có thể làm trong bao lâu.
 
 Không may là, phần lớn lập trình viên phần mềm đều rất tệ trong việc ước lượng. Không phải bởi vì việc ước lượng cần có kỹ năng bí mật nào đó – thực ra là không. Lý do mà chúng ta thường rất kém trong việc ước lượng là vì chúng ta không thực sự hiểu được ý nghĩa thật sự của nó.
@@ -80,13 +81,16 @@ Peter: Chà, chỉ khi mọi thứ đều hỏng bét. Khỉ thật, nếu mọi
 Bây giờ, chúng ta đã có thêm hiểu biết về sự thật. Ước lượng của Peter là sự phân phối xác suất. Trong ý nghĩ của Peter, anh ta thấy khả năng hoàn thành giống như những gì mô tả trong hình 10-1 dưới đây
 
 ![10-1](images/10-1.png)
+<p style="text-align: center; font-weight: 700">
 Hình 10-1 Phân phối xác suất
+</p>
 
 Bạn có thể thấy lý do Peter đưa ra ước lượng ban đầu là 3 ngày. Đó là thanh cao nhất trong biểu đồ. Nên trong ý nghĩ của Peter, đó là khoảng thời gian hợp lý nhất để hoàn thành công việc. Nhưng Mike lại có một góc nhìn khác. Anh ta nhìn về phía phải của biểu đồ và lo rằng Peter có thể mất đến 11 ngày để hoàn thành công việc.
 
 Mike có nên lo lắng về điều đó? Tất nhiên rồi! Murphy sẽ có cách của anh ta với Peter, vậy nên một vài thứ có thể sẽ hỏng bét.
 
 ### Sự ngụ ý ước lượng
+
 Bây giờ thì Mike có một vấn đề. Anh ta không biết chắc chắn thời gian mà Peter cần để hoàn thành công việc. Để tối thiểu hóa rủi ro Mike cần Peter đưa ra một cam kết. Đó là điều Peter sẽ không muốn đưa ra.
 
 Mike: Peter, anh có thể đưa ra số ngày cụ thể anh cần để làm xong không?
@@ -115,11 +119,15 @@ N: Ước lượng danh nghĩa (Nominal Estimate). Đây là con số ước lư
 P: Ước lượng bi quan (Pessimistic Estimate). Đây lại là con số cực kỳ bi quan. Nó sẽ bao gồm mọi thứ trừ siêu bão, chiến tranh hạt nhân, lỗ đen, và những thảm họa khủng khiếp khác. Tương tự, công thức sẽ chính xác khi xác suất đạt được phải nhỏ hơn 1%. Trong trường hợp của Peter, con số này nằm về phía phải của biểu đồ, là 12 ngày.
 Với 3 tham số ước lượng này, chúng ta có thể mô tả phân phối xác suất như sau:
 
-μ = (O + 4N + P) / 6
+<p style="text-align: center;">
+<img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\mu&space;=&space;\frac{O&space;&plus;&space;4N&space;&plus;&space;P}{6}" title="\LARGE \mu = \frac{O + 4N + P}{6}" />
+</p>
 
 μ là khoảng thời gian kỳ vọng của công việc. Với trường hợp của Peter, μ = (1+12+12)/6 = 4,2 ngày. Đối với hầu hết nhiệm vụ, đây là một con số hơi bi quan vì phần bên phải của đồ thị phân phối dài hơn phần bên trái.
 
-σ = (P - O) / 6
+<p style="text-align: center;">
+<img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\sigma&space;=&space;\frac{P&space;-&space;O}{6}" title="\LARGE \sigma = \frac{P - O}{6}" />
+</p>
 
 σ là độ lệch chuẩn của phân phối xác suất cho công việc. Nó là thước đo độ không chắc chắn của công việc. Khi con số này lớn, sự không chắc chắn cũng lớn theo. Trong trường hợp của Peter, nó có giá trị (12 -1 )/ 6 = 1,8 ngày.
 
@@ -128,4 +136,106 @@ Với ước lượng của Peter là 4.2/1.8, Mike hiểu rằng tác vụ này
 Nhưng Mike không chỉ quản lý 1 tác vụ. Anh ta quản lý một dự án với rất nhiều tác vụ. Peter có 3 trong số những tác vụ đó và anh ta phải thực hiện theo trình tự. Peter đã ước lượng các tác vụ của mình theo như bảng dưới đây
 
 ![10-2](images/10-2.png)
+<p style="text-align: center; font-weight: 700">
 Bảng 10-2 Các tác vụ của Peter
+</p>
+
+Như trên bảng, có thể thấy Peter khác tự tin với tác vụ “Beta”, nhưng nếu có sai sót, nó có thể làm mất khá nhiều thời gian. Mike sẽ phải hiểu điều này như thế nào? Mike sẽ kế hoạch ra sao để Peter đủ thời gian hoàn thành cả 3 tác vụ trên.
+
+Điều này thực ra là những phép toán khá dễ dàng, Mike có thể kết hợp tất cả các tác vụ của Peter và đưa ra phân phối xác suất cho toàn bộ những tác vụ đó. Công thức khá đơn giản:
+
+<p style="text-align: center;">
+<img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\mu&space;_{sequence}=&space;\sum&space;\mu&space;_{task}" title="\LARGE \mu _{sequence}= \sum \mu _{task}" />
+</p>
+
+Với bất kỳ chuỗi tác vụ nào, thời gian kỳ vọng sẽ là tổng thời gian kỳ vọng của tất cả các tác vụ của chuỗi. Để Peter hoàn thành cả 3 tác vụ với ước lượng từng tác vụ là 4.2/1.8, 3.5/2.2 và 6.5/1.3, thì Peter cần khoảng 14 ngày để hoàn thành (4.2 + 3.5 + 6.5)
+
+<p style="text-align: center;">
+<img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\sigma&space;_{sequence}=&space;\sqrt{\sum&space;{\sigma_{task}}^{2}}" title="\LARGE \sigma _{sequence}= \sqrt{\sum {\sigma_{task}}^{2}}" />
+</p>
+
+Độ lệch chuẩn của chuỗi tác vụ được tính như công thức trên (căn bậc 2 của tổng bình phương độ lệch chuẩn các tác vụ con). Độ lệch chuẩn 3 tác vụ của Peter là 3.
+
+<p style="text-align: center;">
+<img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\sqrt{(1.8^{2}&space;&plus;&space;2.2^{2}&space;&plus;&space;1.3^{2})}&space;=" title="\LARGE \sqrt{(1.8^{2} + 2.2^{2} + 1.3^{2})} =" />
+</p>
+<p style="text-align: center;">
+<img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\sqrt{(3.24&space;&plus;&space;2.48&space;&plus;&space;1.69)}&space;=" title="\LARGE \sqrt{(3.24 + 2.48 + 1.69)} =" />
+</p>
+<p style="text-align: center;">
+<img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\sqrt{9.77}&space;=&space;\sim&space;3.13" title="\LARGE \sqrt{9.77} = \sim 3.13" />
+</p>
+
+Vậy có thể nói với Mike rằng Peter sẽ hết khoảng 14 ngày, nhưng cũng có thể hết 17 ngày (1σ) và cũng có thể hết đến 20 ngày (2σ). Thậm chí có thể mất nhiều thời gian hơn, nhưng điều đó khó có thể xảy ra.
+
+Trở lại với bảng ước lượng 10-2. Bạn có cảm thấy áp lực khi cần phải hoàn thành toàn bộ 3 tác vụ trong vòng 5 ngày? Rốt cuộc thì, ước lượng trong trường hợp tốt nhất là 1, 1, và 3. Ngay cả những ước tính danh nghĩa cũng chỉ lên đến tối đa 10 ngày. Vậy tại sao chúng ta lại có được con số 14, và có khả năng lên đến 17 hoặc 20? Câu trả lời là sự không chắc chắn trong các tác vụ kết hợp với tính thực tế khi thực hiện kế hoạch.
+
+Nếu bạn là một programmer có nhiều hơn vài năm kinh nghiệm, bạn có thể đã thấy vài dự án ước tính quá lạc quan và mất đến 3 hoặc 5 lần so với kỳ vọng. Công thức PERT đơn giản nhưng hợp lý và hiệu quả để giúp ngăn chặn những ước tính lạc quan. Các chuyên gia phần mềm rất cẩn thận khi đặt ra những kỳ vọng hợp lý bất chấp sự ép phải cố gắng đi nhanh.
+
+## Estimate công việc
+
+Mike và Peter mặc một sai lầm tồi tệ. Mike hỏi Peter hết bao lâu để hoàn thành công việc. Peter đã đưa ra câu trả lời thành thật, nhưng còn ý kiến của các thành viên khác? Liệu họ có ý kiến khác?
+
+Những người xung quanh bạn là giúp ích rất nhiều trong việc ước lượng. Họ có thể thấy những thứ mà bạn không thấy. Họ có thể giúp bạn ước lượng công việc của bạn chính xác hơn bạn tự làm.
+
+### Wideband Delphi
+
+Vào những năm 1970, Barry Boehm giới thiệu với chúng ta một kỹ thuật ước lượng được gọi là “wideband delphi”. Từ đó đã có rất nhiều biến thể được tạo ra. Dù là chính thống hay không chính thống; tất cả đều có một điểm chung: sự thống nhất.
+
+Chiến lược rất đơn giản. Một đội tập hợp lại, thảo luận về một tác vụ, ước lượng tác vụ đó, và lặp lại thảo luận và ước lượng cho đén khi đạt đến thống nhất. Cách tiếp cận bạn đầu do Boehm khởi xướng đặt ra quá nhiều cuộc họp, tài liệu kéo theo quá nhiều nghi lễ và chi phí không phù hợp với tôi. Tôi thích những cách tiếp cận đơn giản và chi phí thấp dưới đây.
+
+### Flying Fingers
+
+Tất cả mọi người ngồi xung quanh cái bàn. Từng tác vụ một được thảo luận. Với mỗi tác vụ, vấn đề đưa ra thảo luận gồm những gì nó liên quan, những gì có thể gây cản trở hoặc phức tạp hóa, và cách thực hiện. Sau đó, người tham gia đặt bàn tay của mình xuống dưới bàn và xòe ra từ 0 đến 5 ngón tay dựa trên thời gian mà họ nghĩ sẽ cần cho tác vụ. Người điều hành sẽ đếm 1-2-3, và tất cả sẽ cùng giơ tay lên.
+
+Nếu mọi người đều tán thành, họ sẽ chuyển sang tác vụ tiếp theo. Nếu không thì họ tiếp tục thảo luận lý do tại sao họ không tán thành. Việc này lặp lại cho đến khi mọi người đều tán thành.
+
+Sự thống nhất không cần quá tuyệt đối. Chỉ cần các ước lượng gần nhau là đủ. Ví dụ, một tác vụ ước lượng 3s và 4s đc coi là thống nhất. Tuy nhiên, nếu mọi người đều giơ 4 ngón tay trừ một người giơ 1 ngón tay, thì họ cần phải thảo luận lại.
+
+Thang đo của ước lượng được quyết định vào đầu cuộc họp. Nó có thể là số ngày cho một tác vụ, hoặc có thể là một số thang đo thú vị hơn như “ngón tay nhân 3” hoặc “ngón tay bình phương”
+
+Việc giơ tay đồng thời rất quan trọng. Người tham gia có thể thay đổi ước lượng của họ dựa trên ước lượng của người khác.
+
+### Planning Poker
+
+Vào năm 2002 James Grenning đã viết một báo mô tả “Planning Poker”. Biến thể này của wideban delphi trở nên rất phổ biến đến mức có vài công ty sử dụng ý tưởng này để tặng quà tiếp thị dưới hình thức những bộ bài lập kế hoạch poker. Thậm chí có một trang web có tên planningpoker.com giúp bạn lên kế hoạch poker trực tuyến.
+
+Ý tưởng rất đơn giản. Mỗi thành viên trong đội ước lượng, chọn một lá bài với số khác nhau. Có thể từ 0 đến 5, và làm tương tự như với flying fingers.
+
+Chọn 1 tác vụ và thảo luận về nó. Sau đó, người chủ trì yêu cầu mọi người chọn một lá bài. Các thành viên trong đội chọn một lá bài phù hợp với ước lượng của họ và úp xuống để không ai nhìn thấy. Cuối cùng mọi người mở bài của mình theo hiệu lệnh người chủ trì.
+
+Phần còn lại giống như flying fingers. Nếu đạt được thống nhất, ước lượng được chấp nhận. Nếu không thì mọi người trả lại lá bài, và tiếp tục thảo luận về tác vụ.
+
+Nhiều “nghiên cứu” được thực hiện để lựa chọn giá trị chính xác cho bộ bài poker. Một số người còn tiến xa đến mức sử dụng giá trị của dãy Fibonacci. Một số khác thêm vào các giá trị như dương vô cùng và dấu hỏi. Với tôi, chỉ cần những giá trị 0, 1, 3, 5, 10 là đủ.
+
+### Ước lượng tương đương
+
+Một biến thể đặc biệt độc đáo của wideband delphi được Lowell Lindstrom giới thiệu cho tôi vài năm trước. Tôi có khá nhiều may mắn khi dùng cách tiếp cận này với một vài khách hàng và đội nhóm.
+
+Tất cả tác vụ được viết lên trên những tấm thẻ. Cả đội sẽ đứng xung quanh một cái bàn hoặc bức tường với những tấm thẻ được sắp xếp ngẫu nhiên. Các thành viên không được nói, họ chỉ được sắp xếp những tấm thẻ. Những tác vụ mất nhiều thời gian hơn được xếp về phía phải, ít thời gian hơn về bên phải.
+
+Mọi thành viên đều có thể di chuyển bất kỳ tấm thẻ nào họ muốn, ngay cả khi nó đã được di chuyển bởi thành viên khác. Tất cả những tấm thẻ được di chuyển nhiều hơn η lần sẽ được đặt sang một bên để thảo luận.
+
+Cuối cùng, việc im lặng sắp xếp kết thúc và cuộc thảo luận bắt đầu. Những bất đồng về thứ tự của các tấm thẻ được đưa ra. Có thể có thêm vài phiên thiết kế nhanh hoặc vẽ tay để đưa đến thống nhất
+
+Bước tiếp theo là vẽ vài đường ở giữa những thẻ bài để phân loại kích thước của chúng. Kích thước có thể dựa theo ngày, tuần hoặc điểm. Thường sẽ là 5 giá trị đầu của dãy Fibonacci (1, 2, 3, 5, 8)
+
+### Ước lượng 3 Biến
+
+Những kỹ thuật wideband delphi trên rất tốt để chọn một ước lượng danh nghĩa cho một tác vụ. Nhưng như chúng ta đã nói ở trên, chúng ta cần có 3 ước lượng để thiết lập phân phối xác suất. Giá trị lạc quan và bi quan cho mỗi tác vụ có thể thu được nhanh chóng khi sử dụng bất kỳ biến thể nào ở trên. Ví dụ, nếu bạn sử dụng planing poker, bạn chỉ cần hỏi cả đội lựa chọn lá bài cho ước lượng bi quan sau đó chọn giá trị lớn nhất. Tương tự với ước lượng khách quan và chọn giá trị nhỏ nhất.
+
+## Luật của số lớn
+
+Các ước lượng thường có rất nhiều sai sót. Đó là lý do chúng ta gọi chúng là ước lượng. Có một cách để quản lý lỗi là tận dụng Luật của Số lớn. Hàm ý của luật này là nếu bạn chia nhỏ một tác vụ lớn thành nhiều tác vụ nhỏ hơn và ước lượng chúng độc lập, tổng ước lượng của những tác vụ nhỏ sẽ chính xác hơn so với ước lượng một tác vụ lớn. Việc này chính xác hơn vì những lỗi trong các nhiệm vụ nhỏ có xu hướng biểu hiện rõ rệt.
+
+Thành thật mà nói, điều này khá lạc quan. Sai sót trong việc ước lượng thường có xu hướng đánh giá thấp tác vụ hơn là đánh giá cao, nên việc tích hợp gần như không bao giờ hoàn hảo. Tuy nhiên, chia nhỏ tác vụ lớn thành những tác vụ nhỏ hơn và ước lượng độc lập những tác vụ nhỏ vẫn là một kỹ thuật tốt. Một số lỗi sẽ dễ dàng đc nhìn thấy, và chia nhỏ tác vụ là một cách tốt để hiểu hơn về nó và loại bỏ bất ngờ.
+
+## Kết luận
+
+Lập trình viên phần mềm chuyên nghiệp biết làm thế nào để cung cấp cho khách hàng ước lượng thực dụng nhất để khách hàng có thể sử dụng để lập kế hoạch. Họ không hứa nếu họ không thể giữ lời, và họ sẽ không cam kết nếu họ không thể hoàn thành.
+
+Khi người chuyên nghiệp cam kết, họ đưa ra một con số cụ thể, và hiện thực con số đó. Tuy nhiên, trong phần lớn trường họp, họ sẽ không đưa ra những cam kết đó. Thay vào đó, họ đưa ra ước lượng xác suất mô tả thời gian kỳ vọng và phương sai.
+
+Lập trình viên chuyên nghiệp làm việc với các thành viên khác trong team, đi đến thống nhất việc ước lượng trước khi đưa cho quản lý.
+
+Những kỹ thuật được mô tả trong chương này là những ví dụ của một số cách khác nhau mà lập trình viên chuyên nghiệp dùng. Đây không phải là những kỹ thuật duy nhất và cũng không phải tốt nhất. Chúng đơn giản là những kỹ thuật tôi biết và có hiệu quả với tôi.
