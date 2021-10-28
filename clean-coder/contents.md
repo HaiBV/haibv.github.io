@@ -12,4 +12,6 @@ layout: default
 
 [Chương 6 - Luyện tập](./chapter-6-practicing.html).
 
+[Chương 9 - Quản lý thời gian](./chapter-9-time-management.html).
+
 [Chương 10 - Ước lượng (Estimation)](./chapter-10-estimation.html).
