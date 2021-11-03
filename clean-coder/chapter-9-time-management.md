@@ -33,3 +33,11 @@ Những chuyên gia nhận thức được chi phí cao của các cuộc họp.
 Bạn không cần phải tham gia tất cả các cuộc họp bạn được mời. Thực tế là, tham gia quá nhiều cuộc họp thể hiện sự thiếu chuyên nghiệp. Bạn cần sử dụng thời gian của mình thật thông minh. Vậy nên hãy thật cẩn thận lựa chọn cuộc họp nào nên tham gia và cuộc họp nào nên lịch sự từ chối.
 
 Người mời bạn tham gia cuộc họp không có trách nhiệm quản lý thời gian của bạn. Chỉ có _bạn_ mới làm được điều đó. Vì vậy, khi nhận được một lời mời họp, đừng chấp nhận trừ khi sự tham gia của bạn là cần thiết ngay lập tức và quan trọng đáng kể cho công việc bạn đang làm.
+
+Đôi khi cuộc họp sẽ có vài thứ mà bạn quan tâm, nhưng nó không cần thiết ngay lập tức. Bạn sẽ phải cân nhắc xem bạn có đủ thời gian hay không. Hãy cẩn thận - có thể nó sẽ tiêu tốn cả ngày của bạn.
+
+Đôi khi cuộc họp sẽ có thứ gì đó bạn đóng góp được những không có ý nghĩa ngay lập tức với những gì bạn đang làm. Bạn phải cân nhắc xem liệu tổn thất đối với dự án của bạn có xứng đáng với lợi ích của họ hay không. Nghe có vẻ ích kỷ, nhưng trách nhiệm của bạn cần phải dành cho dự án _của bạn_ trước. Tuy nhiên, thường thì việc giúp đỡ này sẽ mang lại kết quả tốt, do đó, bạn có thể muốn thảo luận về sự tham gia của mình với nhóm và PM.
+
+Đôi khi sự hiện diện của bạn trong cuộc họp được yêu cầu bởi người có thẩm quyền, chẳng hạn như một kỹ sư cấp rất cao trong một dự án khác hoặc PM của dự án khác. Bạn sẽ phải cân nhắc xem quyền hạn đó có vượt qua được lịch trình làm việc của bạn hay không. Một lần nữa, nhóm của bạn và người giám sát của bạn có thể giúp đỡ trong việc đưa ra quyết định.
+
+Một trong những nghĩa vụ quan trọng nhất của người quản lý của bạn là không cho bạn đi họp. Một người quản lý giỏi sẽ sẵn sàng bảo vệ quyết định từ chối tham dự của bạn vì người đó cũng quan tâm đến thời gian của bạn như bạn.
