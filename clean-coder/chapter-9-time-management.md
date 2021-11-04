@@ -41,3 +41,11 @@ Người mời bạn tham gia cuộc họp không có trách nhiệm quản lý 
 Đôi khi sự hiện diện của bạn trong cuộc họp được yêu cầu bởi người có thẩm quyền, chẳng hạn như một kỹ sư cấp rất cao trong một dự án khác hoặc PM của dự án khác. Bạn sẽ phải cân nhắc xem quyền hạn đó có vượt qua được lịch trình làm việc của bạn hay không. Một lần nữa, nhóm của bạn và người giám sát của bạn có thể giúp đỡ trong việc đưa ra quyết định.
 
 Một trong những nghĩa vụ quan trọng nhất của người quản lý của bạn là không cho bạn đi họp. Một người quản lý giỏi sẽ sẵn sàng bảo vệ quyết định từ chối tham dự của bạn vì người đó cũng quan tâm đến thời gian của bạn như bạn.
+
+### Bỏ đi
+
+Các cuộc họp không phải lúc nào cũng theo kế hoạch. Đôi khi trong cuộc họp bạn nhận ra rằng bạn nên từ chối từ đầu nếu biết thêm thông tin. Đôi khi các chủ đề mới được thêm vào, hoặc thú cưng của ai đó chiếm ưu thế trong các cuộc thảo luận. Trong nhiều năm, tôi đặt ra một quy tắc đơn giản: Khi một cuộc họp trở nên nhàm chán, hãy bỏ đi.
+
+Một lần nữa, bạn có nghĩa vụ quản lý tốt thời gian của mình. Nếu bạn thấy mình bị mắc kẹt trong một cuộc họp không sử dụng tốt thời gian của mình. bạn cần tìm cách thoát khỏi cuộc họp đó một cách lịch sự.
+
+Rõ ràng là bạn không muốn đứng dậy phũ phàng và thốt lên "Thật nhàm chán!". Không cần phải tỏ ra thô lỗ.
