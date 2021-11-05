@@ -48,4 +48,26 @@ Các cuộc họp không phải lúc nào cũng theo kế hoạch. Đôi khi tro
 
 Một lần nữa, bạn có nghĩa vụ quản lý tốt thời gian của mình. Nếu bạn thấy mình bị mắc kẹt trong một cuộc họp không sử dụng tốt thời gian của mình. bạn cần tìm cách thoát khỏi cuộc họp đó một cách lịch sự.
 
-Rõ ràng là bạn không muốn đứng dậy phũ phàng và thốt lên "Thật nhàm chán!". Không cần phải tỏ ra thô lỗ.
+Rõ ràng là bạn không muốn đứng dậy phũ phàng và thốt lên "Thật nhàm chán!". Không cần phải tỏ ra thô lỗ như vậy. Bạn chỉ cần hỏi, vào thời điểm thích hợp, nếu sự hiện diện của bạn vẫn cần thiết. Bạn có thể giải thích rằng bạn không thể dành nhiều thời gian hơn và hỏi có cách nào để xúc tiến cuộc thảo luận hay rút ngắn chương trình làm việc hay không.
+
+Điều quan trọng bạn cần nhận ra là việc ở lại trong một cuộc họp đang lãng phí thời gian của bạn, và bạn không còn có thể đóng góp đáng kể vào cuộc họp, là không chuyên nghiệp. Bạn có nghĩa vụ tiết kiệm thời gian và tiền bạc cho chủ doanh nghiệp một cách khôn ngoan, vì vậy, hãy chọn một thời điểm thích hợp để thương lượng việc rời đi của bạn không phải là thiếu chuyên nghiệp.
+
+### Cuộc họp có lịch trình và mục tiêu rõ ràng.
+
+Lý do chúng ta sẵn sàng chịu đựng chi phí cho các cuộc họp là đôi khi chúng ta _cần_ những người tham gia ngồi lại cùng nhau để đạt được một mục tiêu cụ thể. Để sử dụng khôn ngoan thời gian của những người tham gia, cuộc họp cần phải có một lịch trình rõ ràng, có thời gian cho từng chủ đề và mục tiêu đã nêu.
+
+Nếu bạn được mời tham gia một cuộc họp, hãy chắc chắn rằng bạn biết điều gì sẽ được đưa ra thảo luận, thời gian được phân bổ cho chúng là bao nhiêu, và mục tiêu cuối cùng đạt được là gì. Nếu bạn không có được câu trả lời rõ ràng cho những câu hỏi trên, thì hãy lịch sự từ chối tham gia.
+
+Nếu bạn tham dự một buổi họp và bạn thấy rằng lịch trình đã bị quá tải hoặc bị bỏ qua, bạn nên yêu cầu bàn bạc một chủ đề mới và tuân theo lịch trình đặt ra. Nếu không thực hiện điều đó, bạn nên lịch sự rời đi khi có thể.
+
+### Các cuộc họp đứng
+
+Những cuộc họp này là một phần của phương pháp Agile. Tên của chúng đến từ thực tế, người tham gia sẽ đứng trong suốt thời gian họp. Mỗi người lần lượt trả lời 3 câu hỏi:
+1. Tôi đã làm gì ngày hôm qua?
+2. Tôi sẽ làm gì hôm nay?
+3. Điều gì đang cản trở tôi? 
+
+Đó là tất cả. Mỗi câu hỏi trả lời _không quá_ 20 giây, nên mỗi người không được trả lời quá 1 phút. Ngay cả với một nhóm 10 người, cuộc họp này nên kết thúc tốt đẹp trước 10 phút.
+
+### Các cuộc họp lập kế hoạch lặp lại
+
