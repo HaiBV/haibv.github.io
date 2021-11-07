@@ -62,12 +62,26 @@ Nếu bạn tham dự một buổi họp và bạn thấy rằng lịch trình �
 
 ### Các cuộc họp đứng
 
-Những cuộc họp này là một phần của phương pháp Agile. Tên của chúng đến từ thực tế, người tham gia sẽ đứng trong suốt thời gian họp. Mỗi người lần lượt trả lời 3 câu hỏi:
+Những cuộc họp này là một phần của phát triển Agile. Tên của chúng đến từ thực tế, người tham gia sẽ đứng trong suốt thời gian họp. Mỗi người lần lượt trả lời 3 câu hỏi:
 1. Tôi đã làm gì ngày hôm qua?
 2. Tôi sẽ làm gì hôm nay?
 3. Điều gì đang cản trở tôi? 
 
 Đó là tất cả. Mỗi câu hỏi trả lời _không quá_ 20 giây, nên mỗi người không được trả lời quá 1 phút. Ngay cả với một nhóm 10 người, cuộc họp này nên kết thúc tốt đẹp trước 10 phút.
 
-### Các cuộc họp lập kế hoạch lặp lại
+### Các cuộc họp lập kế hoạch từng giai đoạn (Sprint)
+
+Với phát triển Agile, những cuộc họp này là khó làm tốt nhất. Làm không tốt, chúng rất tốn thời gian. Cần có kỹ năng để cho những cuộc họp này diễn ra tốt đẹp, và kỹ năng đó rất đáng để học hỏi.
+
+Họp lập kế hoạch trong giai đoạn tức là chọn những hạng mục trong danh sách tồn đọng (backlog) sẽ được thực hiện trong giai đoạn tiếp theo. Những hạng mục được chọn phải được ước lượng và hoàn thành đánh giá chức năng trước đó. Thậm chí, các cuộc họp được tổ chức tốt, các kiểm thử chấp nhận / thành phần đã được viết sẵn, hoặc ít nhất là phác thảo.
+
+Cuộc họp nên tiến hành nhanh chóng với mỗi hạng mục được chọn, thảo luận ngắn gọn sau đó đưa ra kết luận lựa chọn hoặc loại bỏ. Không nên dành quá 5 hoặc 10 phút cho bất kỳ một hạng mục nào. Nếu cần thảo luận dài hơn, nó nên được lên lịch vào một thời điểm khác với một nhóm nhỏ hơn.
+
+Theo kinh nghiệm của tôi thì cuộc họp này không nên kéo dài quá 5% tổng thời gian của một giai đoạn. Vì vậy, với giai đoạn 1 tuần (40 giờ) cuộc họ này nên thực hiện trong vòng 2 giờ.
+
+### Các cuộc họp tổng kết (restrospective) và demo
+
+Những cuộc họp này tiến hành vào mỗi cuối giai đoạn. Các thành viên thảo luận điều gì đúng và điều gì sai. Các bên liên quan xem bản demo các tính mới hoạt động. Các cuộc họp này có thể bị nhiều lạm dụng và có thể làm mất rất nhiều thời gian, vì vậy hãy lên lịch cho chúng vào 45 phút trước khi hết giờ và vào ngày cuối cùng của giai đoạn. Phân bổ không quá 20 phút cho tổng kết và 25 phút cho demo. Hãy nhớ rằng, chỉ mới 1 hoặc 2 tuần nên không có nhiều điều để nói. 
+
+### Tranh cãi / Bất đồng
 
