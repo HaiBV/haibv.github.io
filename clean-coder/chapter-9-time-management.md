@@ -85,3 +85,4 @@ Những cuộc họp này tiến hành vào mỗi cuối giai đoạn. Các thà
 
 ### Tranh cãi / Bất đồng
 
+Kent Beck đã từng chia sẻ với tôi một điều sâu sắc như sau: "Bất kỳ cuộc tranh cãi nào không thể giải quyết trong 5 phút sẽ không thể giải quyết được bằng tranh cãi". Lý do nó kéo dài như vậy là do cả 2 bên đều không có bằng chứng rõ ràng. Lập luận có thể dựa trên tôn giáo, trái ngược với thực tế.
