@@ -86,3 +86,5 @@ Những cuộc họp này tiến hành vào mỗi cuối giai đoạn. Các thà
 ### Tranh cãi / Bất đồng
 
 Kent Beck đã từng chia sẻ với tôi một điều sâu sắc như sau: "Bất kỳ cuộc tranh cãi nào không thể giải quyết trong 5 phút sẽ không thể giải quyết được bằng tranh cãi". Lý do nó kéo dài như vậy là do cả 2 bên đều không có bằng chứng rõ ràng. Lập luận có thể dựa trên tôn giáo, trái ngược với thực tế.
+
+Những bất đồng về mặt kỹ thuật có xu hướng trôi vào vô tận. Mỗi bên đều có đủ loại biện minh cho lập trường của mình nhưng hiếm khi có bất kỳ dữ liệu nào. Nếu không có dữ liệu, bất kỳ lập luận nào cũng không thể đi đến thỏa thuận trong vài phút (khoảng từ 5 đến 30 phút) và sẽ không được thỏa thuận. Điều duy nhất cần làm là đi xác minh dữ liệu.
