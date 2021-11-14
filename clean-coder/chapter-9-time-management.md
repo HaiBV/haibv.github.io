@@ -88,3 +88,17 @@ Những cuộc họp này tiến hành vào mỗi cuối giai đoạn. Các thà
 Kent Beck đã từng chia sẻ với tôi một điều sâu sắc như sau: "Bất kỳ cuộc tranh cãi nào không thể giải quyết trong 5 phút sẽ không thể giải quyết được bằng tranh cãi". Lý do nó kéo dài như vậy là do cả 2 bên đều không có bằng chứng rõ ràng. Lập luận có thể dựa trên tôn giáo, trái ngược với thực tế.
 
 Những bất đồng về mặt kỹ thuật có xu hướng trôi vào vô tận. Mỗi bên đều có đủ loại biện minh cho lập trường của mình nhưng hiếm khi có bất kỳ dữ liệu nào. Nếu không có dữ liệu, bất kỳ lập luận nào cũng không thể đi đến thỏa thuận trong vài phút (khoảng từ 5 đến 30 phút) và sẽ không được thỏa thuận. Điều duy nhất cần làm là đi xác minh dữ liệu.
+
+Một số người cố gắng giành chiến thắng trong một cuộc tranh cãi bằng cách nhắm vào tính cách. Họ có thể la hét, nói thẳng vào mặt bạn hoặc cư xử trịnh thượng. Nó không quan trọng; sức mạnh ý chí không giải quyết được bất đồng trong thời gian dài. Dữ liệu thì làm được.
+
+Một số người sẽ chọn xử lý hung hăng một cách bị động. Họ sẽ đồng ý để kết thúc tranh cãi, nhưng sau đó họ phá hoại kết quả bằng cách từ chối tham gia vào giải pháp. Họ sẽ nói với chính mình, "Đây là cách họ muốn và bây giờ họ sẽ đạt được những gì họ muốn". Đây có lẽ là loại hành vi thiếu chuyên nghiệp tồi tệ nhất. Không bao giờ, đừng bao giờ làm thế. Nếu bạn đồng ý, bạn phải tham gia.
+
+Làm thế nào để có được dữ liệu bạn cần cho việc dàn xếp bất đồng? Đôi khi bạn có thể chạy thử nghiệm hoặc thực hiện một số mô phỏng. Nhưng đôi khi giải pháp thay thế tốt nhất là tung đồng xu để chọn 1 trong 2 cách được đề cập. 
+
+Nếu mọi thứ suôn sẻ, thì cách đó khả thi. Nếu bạn gặp phải rắc rối, bạn có thể lùi lại và làm theo cách còn lại. Sẽ khôn ngoan hơn nếu bạn thống nhất về thời gian cũng như các tiêu chí xác định khi nào nên từ bỏ cách đã chọn.
+
+Hãy cẩn thận với những cuộc họp thực sự chỉ là nơi trút bỏ bất đồng và thu thập ủng hộ cho bên này hoặc bên kia. Và tránh những nơi chỉ có một trong những người tranh luận đang trình bày.
+
+Nếu một cuộc tranh cãi thực sự được giải quyết, hãy yêu cầu mỗi người tranh luận trình bày trường hợp của họ trước nhóm trong 5 phút hoặc ít hơn. Sau đó cả nhóm sẽ bầu chọn. Toàn bộ cuộc họp sẽ diễn ra trong chưa đầy 15 phút.
+
+## Mana tập trung
