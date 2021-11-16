@@ -112,3 +112,21 @@ Tôi không biết thứ manna tập trung này là gì, nhưng tôi có thể c
 Manna tập trung cũng là một nguồn tài nguyên dễ mất đi. Nếu bạn không sử dụng nó khi nó ở đó, bạn có khả năng làm mất nó. Đó là một trong những lý do khiến các cuộc họp mang tính hủy hoại tàn khốc. Nếu bạn dùng toàn bộ manna tập trung cho một cuộc họp, bạn sẽ không còn lại gì để viết code.
 
 Lo lắng và mất tập trung cũng làm hao phí manna tập trung. Cuộc tranh cãi với vợ/chồng bạn vào tối qua, vết lõm trên xe bạn gặp sáng nay, hoặc hóa đơn bạn quên trả tuần trước, tất cả sẽ bòn rút manna tập trung của bạn rất nhanh.
+
+### Ngủ
+
+Có lẽ tôi không cần phải nhấn mạnh việc này nữa. Tôi có đầy đủ manna tập trung nhất sau một đêm ngon giấc. Một giấc ngủ 7h trường giúp tôi có đủ 8h tập trung. Các lập trình viên chuyên nghiệp quản lý lịch trình ngủ của họ để đảm bảo rằng họ sẽ có hầu hết manna tập trung vào lúc đi làm buổi sáng.
+
+### Caffeine 
+
+Không có gì khó hiểu khi vài người trong chúng ta sử dụng manna tập trung hiệu quả hơn khi uống một lượng vừa phải caffeine. Nhưng hãy cẩn thận. Caffeine cũng mang lại cảm giác "bồn chồn" cho sự tập trung của bạn. Quá nhiều caffeine có thể khiến sự tập trung của bạn đi theo những hướng rất lạ. Một lượng caffeine mạnh có thể khiến bạn lãng phí cả ngày tập trung cao độ vào những việc không đâu.
+
+Sử dụng caffeine là chuyện cá nhân. Cá nhân tôi có sở thích uống một cốc coffee đậm vào buổi sáng và một cốc coke ăn kiêng vào buổi trưa. Đôi khi tôi tăng gấp đôi liều lượng, nhưng hiếm khi nhiều hơn thế.
+
+### Sạc lại
+
+Manna tập trung có thể nạp lại một phần bằng sự không tập trung. Đi dạo một lúc, trò chuyện với bạn bè, hoặc dành thời gian chỉ nhìn ra ngoài cửa sổ đều có thể giúp bạn phục hồi lại manna tập trung.
+
+Một số người thiền định. Vài người ngủ một giấc ngắn. Một số khác sẽ nghe padcast hoặc lướt qua vài tờ tạp chí.
+
+Tôi nhận thấy rằng một khi manna đã cạn, bạn không thể ép mình phải tập trung. Bạn có thể vẫn viết được code, nhưng gần như chắc chắn bạn sẽ phải viết lại vào hôm sau, hoặc sống với một đống rác trong hàng tuần cho đến hàng tháng sau. Vậy nên tốt hơn là dành ra 30, thậm chí 60 phút để không tập trung. 
