@@ -130,3 +130,15 @@ Manna tập trung có thể nạp lại một phần bằng sự không tập tr
 Một số người thiền định. Vài người ngủ một giấc ngắn. Một số khác sẽ nghe padcast hoặc lướt qua vài tờ tạp chí.
 
 Tôi nhận thấy rằng một khi manna đã cạn, bạn không thể ép mình phải tập trung. Bạn có thể vẫn viết được code, nhưng gần như chắc chắn bạn sẽ phải viết lại vào hôm sau, hoặc sống với một đống rác trong hàng tuần cho đến hàng tháng sau. Vậy nên tốt hơn là dành ra 30, thậm chí 60 phút để không tập trung. 
+
+### Tập trung thể chất
+
+Có một số điều đặc biệt ở những hoạt động thể chất có tính kỷ luật như võ thuật, thái cực quyền hoặc yoga. Mặc dù những hoạt động này đòi hỏi sự tập trung đáng kể, nhưng vẫn là một loại tập trung khác so với coding. Nó không mang nhiều tính trí tuệ, nó là thể chất. Và bằng cách nào đó, sự tập trung thể chất giúp nạp lại tập trung tinh thần. Nó không chỉ là sự hồi phục thông thường. Tôi nhận thấy rằng với một chế độ tập trung thể chất hợp lý có thể tăng khả năng tập trung tinh thần. 
+
+Loại hình tập trung thể chất tôi lựa chọn là đạp xe. Tôi sẽ đạp xe từ một đến 2 giờ, đôi khi đi được khoảng 20 hoặc 30 dặm. Tôi đạp xe trên một con đường mòn song song với sông Des Plaines, nên tôi không cần lo đến những chiếc xe ô tô.
+
+Trong khi đạp xe tôi thường nghe podcast về thiên văn học hoặc chính trị. Đôi khi tôi chỉ nghe những bài hát ưa thích. Và đôi khi tôi tắt tai nghe đi để lắng nghe thiên nhiên.
+
+Vài người sử dụng thời gian để thực hiện những công việc thủ công. Họ có thể tận hưởng nghề mộc, xây dựng những mô hình, hoặc làm vườn. Dù là hoạt động nào, những hoạt động tập trung vào thể chất đều có thể nâng cao khả năng làm việc với trí óc của bạn.
+
+### Đầu vào so với đầu ra
