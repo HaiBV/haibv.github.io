@@ -142,3 +142,28 @@ Trong khi đạp xe tôi thường nghe podcast về thiên văn học hoặc ch
 Vài người sử dụng thời gian để thực hiện những công việc thủ công. Họ có thể tận hưởng nghề mộc, xây dựng những mô hình, hoặc làm vườn. Dù là hoạt động nào, những hoạt động tập trung vào thể chất đều có thể nâng cao khả năng làm việc với trí óc của bạn.
 
 ### Đầu vào so với đầu ra
+
+Một điều khác tôi cần thiết cho sự tập trung là cân bằng phù hợp giữa đầu ra và đầu vào. Viết phần mềm là một hoạt động _sáng tạo_. Tôi nhận thấy rằng tôi sáng tạo nhất khi tôi tiếp xúc với sự sáng tạo của người khác. Do đó, tôi đọc rất nhiều tiểu thuyết khoa học viễn tưởng. Sự sáng tạo của những tác giả phần nào đó kích thích sự sáng tạo của tôi dành cho phần mềm.
+
+## Hộp thời gian và Quả cà chua
+
+Một cách rất hiệu quả tôi sử dụng để quản lý thời gian và tập trung là sử dụng Pomodoro - một kỹ thuật rất phổ biến, hay còn được biết đến với cái tên quả cà chua. Ý tưởng căn bản rất đơn giản. Bạn sử dụng đồng hồ hẹn giờ nhà bếp tiêu chuẩn (thường có hình dạng giống quả cả chua) trong 25 phút. Trong thời gian đồng hồ chạy, bạn không để bất cứ điều gì cản trở công việc bạn đang làm. Nếu điện thoại đổ chuông, bạn nhấc máy và lịch sự hỏi xem bạn có thể gọi lại trong khoảng 25 phút được không. Nếu giữa chừng ai đó hỏi bạn một câu hỏi, bạn lịch sự hỏi xem bạn có thể trả lời sau khoảng 25 phút được không. Bất kể sự gián đoạn là gì, bạn đơn giản là hoãn chúng lại cho đến khi đồng hồ báo hết giờ. Rốt cuộc, có rất ít sự gián đoạn khẩn cấp đến mức chúng không thể đợi được 25 phút!
+
+Khi đồng hồ cà chua kêu, bạn dừng công việc đang thực hiện _ngay lập tức_. Bạn xử lý những sự gián đoạn xảy ra trong khoảng thời gian cà chua. Rồi bạn nghỉ ngơi khoảng 5 phút. Sau đó bạn tiếp tục hẹn giờ đồng hồ 25 phút nữa và bắt đầu khoảng thời gian cà chua tiếp theo. Với 4 khoảng thời gian cà chua liên tiếp bạn sẽ nghỉ ngơi lâu hơn khoảng 30 phút.
+
+Có khá nhiều bài viết về kỹ thuật này, và tôi mong bạn nên đọc nó. Tuy nhiên, mô tả ở trên sẽ cung cấp cho bạn những ý chính của kỹ thuật này.
+
+Sử dụng kỹ thuật này, thời gian của bạn sẽ được chia ra thành thời gian cà chua và ngoài cà chua. Khoảng thời gian cà chua là khoảng thời gian năng suất. Trong thời gian này bạn hoàn thành những công việc thực sự. Thời gian ngoài cà chua ngược lại dành cho sự xao nhãng, họp hành, giải lao, và thời gian không dành cho công việc của bạn.
+
+Bao nhiêu khoảng thời gian cà chua bạn có thể thực hiện được trong 1 ngày? Vào một ngày đẹp trời, bạn có thể thực hiện 12 hoặc thậm chí 14. Vào một ngày tệ hại, bạn có thể chỉ thực hiện được 2 hoặc 3. Nếu bạn đếm và theo dõi chúng theo biểu đồ, rất nhanh, bạn sẽ biết được thời gian hàng ngày bạn dành cho sự năng suất là bao nhiêu và thời gian dành cho những _việc khác_ là bao nhiêu. 
+
+Một vài người sẽ rất quen thuộc với kỹ thuật này đến mức họ ước tính nhiệm vụ của họ bằng cà chua và sau đó đánh giá bằng tốc độ/số lượng cà chua hàng tuần. Nhưng đây chỉ là một ứng dụng rất đơn giản. Lợi ích thực sự của kỹ thuật Pomodoro là trong khoảng thời gian 25 phút làm việc hiệu quả đó bạn tích cực bảo vệ sự năng suất trước mọi sự gián đoạn.
+
+## Sự né tránh
+
+Đôi khi tâm trí bạn không nằm ở công việc bạn đang làm. Nó có thể cảm thấy điều bạn cần làm là đáng sợ hoặc khó chịu hoặc nhàm chán. Có lẽ bạn nghĩ rằng nó sẽ buộc bạn nhảy vào một cuộc đối đầu hoặc dẫn bạn tới một hố chuột không lối thoát. Hoặc đơn giản là bạn không muốn làm.
+
+### Đảo ngược ưu tiên
+
+
+
