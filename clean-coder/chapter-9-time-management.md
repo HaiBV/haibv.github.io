@@ -161,9 +161,28 @@ Một vài người sẽ rất quen thuộc với kỹ thuật này đến mức
 
 ## Sự né tránh
 
-Đôi khi tâm trí bạn không nằm ở công việc bạn đang làm. Nó có thể cảm thấy điều bạn cần làm là đáng sợ hoặc khó chịu hoặc nhàm chán. Có lẽ bạn nghĩ rằng nó sẽ buộc bạn nhảy vào một cuộc đối đầu hoặc dẫn bạn tới một hố chuột không lối thoát. Hoặc đơn giản là bạn không muốn làm.
+Đôi khi bạn không thể đặt tâm trí vào công việc bạn đang làm. Nó có thể cảm thấy điều bạn cần làm là đáng sợ, khó chịu hoặc nhàm chán. Có lẽ bạn nghĩ rằng nó sẽ buộc bạn nhảy vào một cuộc đối đầu hoặc dẫn bạn tới một hố chuột không lối thoát. Hoặc đơn giản là bạn không muốn làm điều đó.
 
 ### Đảo ngược ưu tiên
 
+Bất kể lý do là gì, bạn luôn tìm được cách để trì hoãn những công việc thực sự. Bạn tự thuyết phục bản thân rằng có những thứ khác khẩn cấp hơn, và bạn sẽ làm điều đó, thay vì thực sự làm việc. Hiện tượng này được gọi là _đảo ngược ưu tiên_. Bạn nâng mức độ ưu tiên của một việc để hoãn một việc khác có mức độ ưu tiên thực sự. Đảo ngược ưu tiên là lời nói dối ta tự nói với bản thân. Chúng ta không thể đối mắt với thứ cần phải hoàn thành, vậy nên chúng ta tự thuyết phục bản thân rằng có một công việc khác quan trọng hơn. Chúng ta biết rằng không phải thế, nhưng chúng ta vẫn tự lừa dối bản thân.
 
+Trên thực tế, chúng ta không tự lừa dối bản thân. Cái chúng ta thực sự làm là chuẩn bị một lời nói dối để biện minh khi có ai đó hỏi về việc chúng ta đang làm và tại sao chúng ta lại làm việc đó. Chúng ta đang xây dựng một phòng tuyến để bảo vệ mình khỏi sự đánh giá của người khác.
 
+Rõ ràng đây là một hành động thiếu chuyên nghiệp. Những người chuyên nghiệp đánh giá sự ưu tiên của mỗi công việc, không quan tâm đến sự sợ hãi và mong muốn của bản thân, và thực thi những công việc đó theo thứ tự ưu tiên.
+
+## Những ngõ cụt
+
+Ngõ cụt là một thực tế cuộc sống cho mọi lập trình viên. Đôi khi bạn đưa ra quyết định và đi vào một lối mòn của những kỹ thuật sẽ không đưa bạn đến đâu. Bạn càng được đảm bảo trong quyết định của mình, bạn càng đắm chìm trong đó. Nếu bạn đã tạo dựng được danh tiếng trong lĩnh vực của mình, bạn sẽ lang thang mãi mãi.
+
+Sự thận trọng và kinh nghiệm sẽ giúp bạn tránh được những ngõ cụt nhất định, nhưng bạn sẽ không bao giờ tránh được tất cả. Vì vậy, kỹ năng thực sự bạn cần là nhanh chóng nhận ra khi nào bạn đang ở trong tình trạng đó, và có đủ can đảm để rút lui. Điều này đôi khi được gọi là _Quy tắc cái hố_: Khi bạn đang trong một cái hố, hãy ngừng đào.
+
+Những người chuyên nghiệp tránh đưa một ý tưởng chắc chắn đến mức họ không thể từ bỏ và quay lại. Họ luôn cởi mở về những ý tưởng khác để khi đi vào ngõ cụ họ vẫn có những lựa chọn khác.
+
+## Các thể loại đầm lầy/lộn xộn
+
+Tệ hơn cả ngõ cụt là lộn xộn. Lộn xộn sẽ làm bạn chậm lại, nhưng không khiến bạn dừng lại. Lộn xộn cản trở tiến trình của bạn, nhưng bạn vẫn có thể phát triển nhờ cục súc tay to. Lộn xộn tệ hơn ngõ cụt vì bạn luôn nhìn thấy con được phía trước, và nó luôn có vẻ ngắn hơn đường trở lại (nhưng thực sự không phải vậy)
+
+Tôi đã từng thấy những sản phẩm trở nên tàn tạ và những công ty bị hủy vì phần mềm lộn xộn. Tôi đã từng thấy năng suất của một số đội nhóm giảm từ khó khăn xuống tồi tệ chỉ trong vài tháng. Không có gì ảnh hưởng tiêu cực sâu sắc hoặc lâu dài đến năng suất hơn là một mớ hỗn độn. Hoàn toàn không.
+
+Vấn đề là việc vướng vào một mớ lộn xộn, cũng giống như ngõ cụ, là không thể tránh được. Kinh nghiệm và sự thận trọng 
