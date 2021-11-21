@@ -185,4 +185,14 @@ Tệ hơn cả ngõ cụt là lộn xộn. Lộn xộn sẽ làm bạn chậm l�
 
 Tôi đã từng thấy những sản phẩm trở nên tàn tạ và những công ty bị hủy vì phần mềm lộn xộn. Tôi đã từng thấy năng suất của một số đội nhóm giảm từ khó khăn xuống tồi tệ chỉ trong vài tháng. Không có gì ảnh hưởng tiêu cực sâu sắc hoặc lâu dài đến năng suất hơn là một mớ hỗn độn. Hoàn toàn không.
 
-Vấn đề là việc vướng vào một mớ lộn xộn, cũng giống như ngõ cụ, là không thể tránh được. Kinh nghiệm và sự thận trọng 
+Vấn đề là việc vướng vào một mớ lộn xộn, cũng giống như ngõ cụt, là không thể tránh được. Kinh nghiệm và sự thận trọng có thể giúp bạn tránh được chúng, nhưng cuối cùng thì bạn sẽ có quyết định dẫn đến sự lộn xộn.
+
+Tiến trình dẫn đến sự lộn xộn diễn ra một cách âm thầm. Bạn có giải pháp cho một vấn đề đơn giản, cẩn thận giữ cho code thật đơn giản và sạch. Khi phạm vi và độ phức tạp của vấn đề phát triển, code sẽ được mở rộng theo, bạn vẫn giữ cho chúng sạch nhất có thể. Đến khi bạn nhận ra rằng bạn thiết kế sai ngay từ lúc đầu, và code của bạn không thể mở rộng tốt theo hướng mà những yêu cầu phát triển.
+
+Đây là thời điểm nhạy cảm! Bạn có thể quay lại và sửa thiết kế. Nhưng bạn vẫn có thể tiếp tục tiến về phía trước. Quay lại nhìn có vẻ tốn kém vì bạn sẽ phải làm lại những phần đã thực hiện trước đó, nhưng quay trở lại sẽ không bao giờ dễ dàng hơn bây giờ. Nếu bạn tiếp tục tiến tới, bạn sẽ đưa cả hệ thống vào đầm lầy không có đường ra.
+
+Những người chuyên nghiệp sợ sự lộn xộn hơn cả sợ những ngõ cụt. Họ luôn luôn đề phòng sự lộn xộn khi chúng bắt đầu phát triển mà không có ràng buộc, và sẽ dành mọi nỗ lực cần thiết để thoát khỏi chúng càng sớm và càng nhanh càng tốt.
+
+## Kết luận
+
+Lập trình viên phần mềm chuyên nghiệp rất tận tụy trong việc quản lý thời gian và sự tập trung của họ. Họ hiểu rõ sự cám dỗ của đảo ngược ưu tiên và chống lại chúng với danh dự của mình. Họ giữ cho các lựa chọn của mình luôn mở bằng cách giữ một tâm trí cởi mở với các giải pháp thay thế. Họ khong bao giờ tin tưởng vào một giải pháp đến mức họ không thể từ bỏ nó. Và họ luôn đề phòng những sự lộn xộn ngày một gia tăng, họ sẽ dọn dẹp chúng ngay khi được nhận ra. Không có cảnh tượng nào đáng buồn hơn việc một nhóm phát triển vượt qua vũng lầy ngày càng sâu mà không có kết quả.
