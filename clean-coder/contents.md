@@ -15,3 +15,5 @@ layout: default
 [Chương 9 - Quản lý thời gian](./chapter-9-time-management.html).
 
 [Chương 10 - Ước lượng (Estimation)](./chapter-10-estimation.html).
+
+[Chương 11 - Áp lực](./chapter-11-pressure.html).
