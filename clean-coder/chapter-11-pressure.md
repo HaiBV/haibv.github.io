@@ -22,3 +22,12 @@ Hạn chót được thúc đẩy bởi các sự kiện. Các chức năng ph�
 
 Nếu bạn làm việc 80 giờ một tuần, bạn có thể là người hùng. Nếu bạn cùng nhau hack một mớ hỗn độn cho một bản giới thiệu đến khách hàng, bạn có thể là người hùng. Nếu bạn làm đủ, bạn có thể được đề bạt. Nếu không, bạn có thể bị sa thải. Đó là một công ty khởi nghiệp - tất cả được tính theo cổ phần. Và vào năm 1988, với gần 20 năm kinh nghiệm của mình, tôi đã mua nó. 
 
+Tôi là quản lý nhóm phát triển yêu cầu những lập trình viên dưới quyền phải làm việc nhiều hơn và nhanh hơn. Tôi là người làm 80 tiếng, viết những hàm C với 3000 dòng vào 2h sáng khi con tôi ngủ ở nhà mà không có cha chúng ở đó. Tôi là người đã ném bút và la hét. Tôi sa thải những ai không tuân lệnh. Điều đó thật tồi tệ. Tôi thật tồi tệ.
+
+Cho đến một ngày vợ tôi ép tôi phải tự kiểm điểm lại bản thân trong gương. Và tôi thực sự không thích điều mình nhìn thấy. Cố ấy nói với tôi rằng ở bên cạnh tôi không vui chút nào. Tôi phải đồng ý về điều đó. Nhưng tôi không thích nó, vì vậy tôi tức giận lao ra khỏi nhà và bắt đầu bước đi trong vô định. Tôi đi bộ khoảng 30 phút, sải bước giận dữ, và sau đó trời bắt đầu đổ mưa. 
+
+Và có thứ gì đó nảy ra trong đầu tôi. Tôi bắt đầu cười. Tôi cười vì sự điền rồ của mình. Tôi cười vì sự căng thẳng của mình. Tôi cười nhạo người tôi nhìn thấy trong gương, một kẻ khốn nạn đáng thương đang khiến cuộc sống của chính mình và những người khác trở nên khốn khổ với danh nghĩa -- cái gì?
+
+Mọi thứ đã thay đổi vào ngày hôm đó. Tôi ngừng làm việc thêm giờ. Tôi ngừng lối sống đầy căng thẳng. Tôi ngừng ném bút và viết những hàm C 3000 dòng. Tôi xác định rằng tôi sẽ tận hưởng sự nghiệp của mình bằng cách làm tốt nó, chứ không phải làm một cách ngu ngốc. 
+
+Tôi bỏ công việc đó một cách chuyên nghiệp nhất có thể, và tôi trở thành một nhà tư vấn. Kể từ ngày đó, tôi chưa bao giờ gọi người khác là "sếp".
