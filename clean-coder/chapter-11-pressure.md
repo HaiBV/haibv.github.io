@@ -64,3 +64,30 @@ Chọn những kỷ luật bạn thấy thoải mái khi tuân theo trong cơn k
 
 ## Xử lý áp lực
 
+Ngăn chặn, giảm nhẹ và loại bỏ áp lực là việc tốt, nhưng đôi khi áp lực sẽ đến bất chấp mọi ý định và biện pháp phòng ngừa tốt nhất của bạn. Đôi khi dự án mất nhiều thời gian hơn so với dự đoán của bất kỳ ai. Thỉnh thoảng thiết kế ban đầu sai hướng và phải làm lại. Đôi khi bạn đánh mất một thành viên hoặc một khách hàng quan trọng. Đôi khi bạn đưa ra một cam kết mà bạn không thể đáp ứng. Sau đó thì sao?
+
+### Đừng hoảng sợ
+
+Kiểm soát sự căng thẳng của bạn. Những đêm mất ngủ sẽ không giúp bạn hoàn thành công việc nhanh hơn. Ngồi một chỗ và băn khoăn cũng không giúp gì cả. Và điều tệ nhất bạn có thể làm là vội vàng! Hãy chống lại cám dỗ đó bằng mọi giá. Nóng vội sẽ chỉ đẩy bạn vào hố sâu hơn.
+
+Thay vào đó, hãy chậm lại. Suy nghĩ về vấn đề gặp phải một cách thấu đáo. Lập kế hoạch cho một lộ trình để đạt được kết quả tốt nhất có thể, và sau đó hướng tới kết quả đó với tốc độ hợp lý và ổn định.
+
+### Giao tiếp
+
+Hãy để đội của bạn và cấp trên của bạn biết bạn đang gặp rắc rối. Nói với họ kế hoạch tốt nhất của bạn để thoát khỏi rắc rối này. Yêu cầu họ đóng góp ý kiến và hướng dẫn. Tránh tạo ra sự bất ngờ. Không gì khiến con người ta tức giận và kém lý trí hơn những điều bất ngờ. Ngạc nhiên/bất ngờ làm áp lực nặng hơn gấp 10 lần.
+
+### Tin tưởng kỷ luật của bạn
+
+Khi mọi thứ trở nên khó khăn, _tin vào kỷ luật của bạn_. Lý do bạn _có_ những kỷ luật đó là chúng hướng dẫn bạn vượt qua khoảng thời gian áp lực lớn. Đó là thời gian đặc biệt chú ý đến tất cả những kỷ luật của bạn. Đó _không_ phải là lúc để nghi ngờ và từ bỏ chúng.
+
+Thay vì nhìn xung quanh trong hoảng sợ điều gì đó, bất kỳ điều gì, kỷ luật sẽ giúp bạn hoàn thành công việc nhanh hơn, hãy trở nên có chủ ý và chuyên tâm hơn để tuân thủ đúng kỷ luật mà bạn đã chọn. Nếu bạn tuân thủ TDD, thì hãy viết nhiều test hơn bình thường. Nếu bạn có thể tái cấu trúc (refactor) không thương tiếc, thì hãy tái cấu trúc nhiều hơn. Nếu bạn giữ cho các hàm của mình nhỏ, thì hãy làm cho chúng nhỏ hơn nữa. Cách duy nhất để vượt qua áp lực là dựa vào những gì bạn biết chắc rằng chúng hoạt động - kỷ luật của bạn.
+
+### Tìm kiếm sự giúp đỡ
+
+Ghép cặp! Khi mọi thứ bùng phát, hãy tìm một cộng sự sẵn sàng ghép cặp với bạn. Bạn sẽ hoàn thành công việc nhanh hơn, ít sai sót hơn. Đối tác theo cặp của bạn sẽ giúp bạn giữ vững kỷ luật của mình và giúp bạn không bị hoảng sợ. Đối tác của bạn sẽ phát hiện ra những điều bạn thiếu sót, sẽ có những ý tưởng hữu ích và nhận ra sự chểnh mảng, thiếu tập trung của bạn.
+
+Tương tự, khi bạn thấy ai đó đang chịu áp lực, hãy đề nghị ghép cặp vưới họ. Giúp họ ra khỏi rắc rối của họ.
+
+## Kết luận
+
+Mẹo để xử lý áp lực là tránh nó khi bạn có thể và vượt qua nó khi bạn không thể. Bạn tránh điều đó bằng cách quản lý các cam kết, tuân thủ kỷ luận và giữ mọi thứ sạch sẽ. Bạn vượt qua nó bằng cách giữ bình tĩnh, giao tiếp, tuân thủ kỷ luật và tìm kiếm sự giúp đỡ.
