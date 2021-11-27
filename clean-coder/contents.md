@@ -17,3 +17,5 @@ layout: default
 [Chương 10 - Ước lượng (Estimation)](./chapter-10-estimation.html).
 
 [Chương 11 - Áp lực](./chapter-11-pressure.html).
+
+[Chương 13 - Đội nhóm và dự án](./chapter-13-teams-and-projects.html).
