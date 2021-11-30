@@ -17,3 +17,9 @@ Bạn đã nhận ra khuôn mẫu chưa? Dự án quả nhỏ nên không cá nh
 Bây giờ, quy tắc là: Không có cái gì gọi là nửa người.
 
 Thật vô nghĩa khi nói một lập trình viên dành một nửa thời gian của họ cho dự án A và thời gian còn lại cho dự án B, đặc biệt là khi 2 dự án có 2 PM khác nhau, 2 BA khác nhau, lập trình viên khác nhau và tester khác nhau. Làm thế nào bạn có thể gọi đó là một đội? Đó không phải là một đội, đó là một thứ máy xay sinh tố.
+
+### Một đội gắn kết
+
+Cần thời gian để thành lập một team. Những thành viên bắt đầu hình thành các mối quan hệ. Họ học cách cộng tác với nhau. Họ hiểu được những điều kỳ quặc, điểm mạnh và điểm yếu của nhau. Cuối cùng họ sẽ bắt đầu _gắn kết_.
+
+Có một điều thực sự nhiệm màu ở một team gắn kết. Họ có thể làm ra những điều kỳ diệu. Họ dự đoán, che chở, hỗ trợ cho nhau và thể hiện những gì tốt nhất ở mỗi người. Họ khiến mọi thứ hoạt động.
