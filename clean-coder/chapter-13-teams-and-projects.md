@@ -23,3 +23,13 @@ Thật vô nghĩa khi nói một lập trình viên dành một nửa thời gia
 Cần thời gian để thành lập một team. Những thành viên bắt đầu hình thành các mối quan hệ. Họ học cách cộng tác với nhau. Họ hiểu được những điều kỳ quặc, điểm mạnh và điểm yếu của nhau. Cuối cùng họ sẽ bắt đầu _gắn kết_.
 
 Có một điều thực sự nhiệm màu ở một team gắn kết. Họ có thể làm ra những điều kỳ diệu. Họ dự đoán, che chở, hỗ trợ cho nhau và thể hiện những gì tốt nhất ở mỗi người. Họ khiến mọi thứ hoạt động.
+
+Một team gắn kết thường bao gồm khoảng chục người. Có thể nhiều đến 20 hoặc ít hơn là 3, nhưng con số tốt nhất có lẽ là khoảng 12. Team nên bao gồm lập trình viên, tester, và BA. Và nó cần có một PM.
+
+Tỉ lệ giữa lập trình viên so với tester và BA có thể thay đổi rất nhiều, những 2:1 là một con số tốt. Vì vậy, một team gắn kết 12 người sẽ bao gồm 7 lập trình viên, 2 tester, 2 BA và 1 PM.
+
+Các BA phân tích các yêu cầu và viết các kiểm tra chấp nhận tự động. Tester cũng viết các kiểm tra chấp nhận tự động. Chúng sẽ khác nhau về mặt quan điểm. Cả 2 đều đọc yêu cầu. Nhưng BA tập trung vào giá trị sản phẩm, còn tester tập trung vào tính đúng đắn. BA sẽ viết những con đường hoàn hảo; tester quan tấm đến những thứ có thể gây nên sai sót và các trường hợp thất bại và giới hạn. 
+
+PA sẽ theo dõi tiến độ của nhóm và đảm bảo rằng cả nhóm hiểu được lịch trình và mức độ ưu tiên. 
+
+Một trong các thành viên trong nhóm có thể đóng vai trò huấn luyện hoặc quản lý bán thời gian với trách nhiệm bảo vệ quy trình và kỷ luật nhóm. Họ đóng vai trò lương tâm của nhóm khi họ bị cám dỗ di sai quy trình vì áp lực lịch trình.
