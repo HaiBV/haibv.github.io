@@ -33,3 +33,15 @@ Các BA phân tích các yêu cầu và viết các kiểm tra chấp nhận t�
 PA sẽ theo dõi tiến độ của nhóm và đảm bảo rằng cả nhóm hiểu được lịch trình và mức độ ưu tiên. 
 
 Một trong các thành viên trong nhóm có thể đóng vai trò huấn luyện hoặc quản lý bán thời gian với trách nhiệm bảo vệ quy trình và kỷ luật nhóm. Họ đóng vai trò lương tâm của nhóm khi họ bị cám dỗ di sai quy trình vì áp lực lịch trình.
+
+### Sôi nổi
+
+Cần có thời gian để một nhóm như vậy tìm ra sự khác biệt giữa họ, thống nhất với nhau và thực sự gắn kết. Có thể mất đến 6 tháng, thậm chí 1 năm. Nhưng một khi nó xảy ra, đó là một điều kỳ diệu. Một team gắn kết sẽ cùng nhau lập kế hoạch, cùng nhau giải quyết vấn đề, cùng nhau đối mặt với khó khăn và khiến _mọi thứ hoạt động_.
+
+Một khi nó xảy ra, thật là lố bịch khi phá vỡ team chỉ vì dự án kết thúc. Tốt nhất là giữ team đó lại với nhau và tiếp tục giao những dự án khác.
+
+### Điều gì sẽ có trước, Team hay Dự án?
+
+Ngân hàng và các công ty bảo hiểm cố gắng thành lập các nhóm xung quanh dự án. Đó là một cách làm ngốc nghếch. Những team đó không thể gắn kết. Các cá nhân chỉ tham gia dự án trong một thời gian ngắn, và chỉ trong 1% thời gian của họ, và do đó không bao giờ học được cách làm việc với nhau.
+
+Các tổ chức phát triển chuyên nghiệp phân bổ dự án cho các nhóm đã gắn kết hiện có, họ không thành lập nhóm xung quanh các dự án. Một nhóm gắn kết có thể chấp nhận nhiều dự án đồng thời và sẽ phân chia công việc theo ý kiến, kỹ năng của riêng họ. Nhóm gắn kết sẽ hoàn thành các dự án.
