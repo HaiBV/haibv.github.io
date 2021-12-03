@@ -45,3 +45,15 @@ Một khi nó xảy ra, thật là lố bịch khi phá vỡ team chỉ vì dự
 Ngân hàng và các công ty bảo hiểm cố gắng thành lập các nhóm xung quanh dự án. Đó là một cách làm ngốc nghếch. Những team đó không thể gắn kết. Các cá nhân chỉ tham gia dự án trong một thời gian ngắn, và chỉ trong 1% thời gian của họ, và do đó không bao giờ học được cách làm việc với nhau.
 
 Các tổ chức phát triển chuyên nghiệp phân bổ dự án cho các nhóm đã gắn kết hiện có, họ không thành lập nhóm xung quanh các dự án. Một nhóm gắn kết có thể chấp nhận nhiều dự án đồng thời và sẽ phân chia công việc theo ý kiến, kỹ năng của riêng họ. Nhóm gắn kết sẽ hoàn thành các dự án.
+
+### Nhưng làm thế nào bạn quản lý được việc đó?
+
+Các team đều có vận tốc. Vận tốc của một team hiểu đơn giản là khối lượng công việc đọi đó có thể hoàn thành trong một khoảng thời gian cố định. Một số team đo vận tốc của họ bằng _point_ mỗi tuần, với _point_ là đơn vị cho mức độ phức tạp. Họ chi nhỏ các chức năng của những dự án họ thực hiện và ước tính chúng theo point. Sau đó, họ đo xem họ hoàn thành được bao nhiêu point mỗi tuần.
+
+Vận tốc là một thước đo thống kê. Một team có thể hoàn thành 38 point một tuần, 42 point trong tuần tiếp theo, và 25 point trong tuần kế tiếp. Giá trị này sẽ được tính trung bình theo thời gian.
+
+Ban quản lý có thể đặt mục tiêu cho từng dự án được giao cho team. Ví dụ, nếu vận tốc trung bình của team là 50 và họ đang làm việc trên 3 dự án, ban quản lý có thể yêu cầu team chia công sức của họ thành 15, 15 và 20.
+
+Bên cạnh việc có một team gắn kết làm việc với những dự án của bạn, lợi thế của việc lên kế hoạch này là trong trường hợp khẩn cấp, khách hàng có thể nói: "Dự án B đang rơi vào khủng hoảng; dành 100% công sức của bạn cho dự án đó trong 3 tuần tới"
+
+Việc phân bổ lại mức ưu tiên một cách nhanh chóng hầu như không thể với các team xuất phát từ máy xay sinh tốt, nhưng với team gắn kết đang thực hiện 2 hoặc 3 dự án đồng thời có thể giúp ích rất nhiều.
