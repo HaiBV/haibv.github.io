@@ -57,3 +57,15 @@ Ban quản lý có thể đặt mục tiêu cho từng dự án được giao ch
 Bên cạnh việc có một team gắn kết làm việc với những dự án của bạn, lợi thế của việc lên kế hoạch này là trong trường hợp khẩn cấp, khách hàng có thể nói: "Dự án B đang rơi vào khủng hoảng; dành 100% công sức của bạn cho dự án đó trong 3 tuần tới"
 
 Việc phân bổ lại mức ưu tiên một cách nhanh chóng hầu như không thể với các team xuất phát từ máy xay sinh tốt, nhưng với team gắn kết đang thực hiện 2 hoặc 3 dự án đồng thời có thể giúp ích rất nhiều.
+
+### Sự khó xử của chủ dự án
+
+Một trong những ý kiến phản đối cách làm mà tôi đang ủng hộ là những chủ dự án sẽ mất đi một số quyền an ninh và ảnh hưởng. Họ có một team dành riêng cho dự án của họ để có thể tin tưởng vào nỗ lực của team đó. Họ biết rằng việc tạo dựng và giải tán một team là một việc tốn kém, khách hàng sẽ không loại bỏ team vì những lý do ngắn hạn.
+
+Mặt khác, nếu dự án được giao cho một team gắn kết, và nếu những team đó đảm nhận một vài dự án cùng một lúc, thì khách hàng sẽ thoải mái thay đổi ưu tiên theo ý thích. Điều này có thể khiến chủ dự án bất an hơn trong tương lai. Nguồn lực mà họ phụ thuộc có thể đột ngột rời bỏ họ.
+
+Thành thật mà nói, tôi thích tình huống sau hơn. Doanh nghiệp không nên tự trói tay mình bởi những khó khăn giả tạo trong việc thành lập và giải tán team. Nếu doanh nghiệp quyết định rằng dự án này có ưu tiên cao hơn dự án khác, nó nên được phân bổ nguồn lực nhanh chóng. Chủ dự án có trách nhiệm ủng hộ dự án của mình.
+
+## Kết luận
+
+Xây dựng team khó hơn xây dựng dự án. Vậy nên, sẽ tốt hơn nếu xây dựng một team cố định có thể chuyển cùng nhau từ dự án này sang dự án khác và có thể cùng lúc đảm nhiệm nhiều hơn 1 dự án. Mục tiêu gây dựng một team là cho team đó đủ thời gian để gắn kết, và sau đó duy trì như một cỗ máy để hoàn thành nhiều dự án. 
