@@ -19,3 +19,5 @@ layout: default
 [Chương 11 - Áp lực](./chapter-11-pressure.html).
 
 [Chương 13 - Đội nhóm và dự án](./chapter-13-teams-and-projects.html).
+
+[Chương 14 - Cố vấn, học việc và sự khéo léo](./chapter-14-mentoring-apprenticeship-and-craftsmanship.html).
