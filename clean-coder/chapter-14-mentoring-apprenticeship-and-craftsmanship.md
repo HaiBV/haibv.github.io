@@ -31,3 +31,10 @@ Cách chúng ta học lập trình như thế nào? Hãy để tôi kể cho b�
 ### Digi-Comp 1, Máy tính đầu tiên
 
 Năm 1964, mẹ tôi tặng tôi một chiếc máy tính nhỏ bằng nhựa vào sinh nhật thứ 12 của tôi. Tôi gọi nó là Digi-Comp 1. Nó có 3 flip-flops bằng nhựa và sáu chân kết nối nhựa. Bạn có thể kết nối đầu ra của flip-flops với đầu vào của chân kết nối. Bạn cũng có thể kết nối đâu ra của chân kết nối với đầu vào của flip-flops. Nói tóm lại, điều này cho phép bạn tạo một máy trạng thái hữu hạn ba bit.
+
+Bộ dụng cụ đi kèm với hướng dẫn cung cấp cho bạn một số chương trình để chạy. Bạn lập trình bằng cách đẩy các ống nhỏ (các đoạn ống hút ngắn) lên cách chốt nhỏ nhô ra từ đầu flip-flops. Hướng dẫn cho bạn biết chính xác vị trí đặt mỗi ống, nhưng không phải những gì chúng _làm_. Tôi thấy khá là bực bội!
+
+Tôi nhìn chằm chằm vào cỗ máy hàng giờ liên và tìm hiểu chúng làm những việc đơn giản nhất như thế nào; nhưng tôi không làm được, trong cả cuộc đời mình, tìm cách để nó có thể làm được việc tôi muốn nó làm. Trang cuối cùng của hướng dẫn yêu cầu tôi gửi cho họ 1$ và họ sẽ gửi lại một hướng dẫn về cách trình cỗ máy.
+
+Tôi gửi tiền đi và chờ đợi với sự thấp thỏm của tuổi 12. Ngày hướng dẫn được gửi đến tôi đã ngấu nghiến nó. Nó là một lý thuyết đơn giản về đại số nhị phân bao gồm tính toán cơ bản của các phương trình nhị phân, luật liên kết và phân phối, và định lý DeMorgan. Hướng dẫn chỉ ra cách diễn đạt một vấn đề dưới dạng một chuỗi các phương trình nhị phân. Nó cũng mô tả làm thế nào để giảm các phương trình đó để phù hợp với 6 đầu ra.
+
