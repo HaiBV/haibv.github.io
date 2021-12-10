@@ -38,3 +38,13 @@ Tôi nhìn chằm chằm vào cỗ máy hàng giờ liên và tìm hiểu chúng
 
 Tôi gửi tiền đi và chờ đợi với sự thấp thỏm của tuổi 12. Ngày hướng dẫn được gửi đến tôi đã ngấu nghiến nó. Nó là một lý thuyết đơn giản về đại số nhị phân bao gồm tính toán cơ bản của các phương trình nhị phân, luật liên kết và phân phối, và định lý DeMorgan. Hướng dẫn chỉ ra cách diễn đạt một vấn đề dưới dạng một chuỗi các phương trình nhị phân. Nó cũng mô tả làm thế nào để giảm các phương trình đó để phù hợp với 6 đầu ra.
 
+Tôi đã hoàn thành chương trình đầu tiên của mình. Tôi vẫn còn nhớ tên của nó: Mr. Patternson's Computerized Gate. Tôi viết những phương trình, rút gọn chúng và ghép chúng vào các ống và chốt của máy. _Và nó đã hoạt động!_
+
+Viết 3 từ vừa rồi (And it worked) khiến tôi ớn lạnh sống lưng. Cảm giác ớn lạnh tương tự khi còn là cậu bé 12 tuổi gần nửa thế kỷ trước. Tôi đã mắc câu. Cuộc sống của tôi đã thay đổi hoàn toàn từ ngày đó.
+
+Bạn có nhớ được khoảnh khắc chương trình đầu tiên của bạn hoạt động? Nó có thay đổi cuộc sống của bạn hoặc đưa bạn vào con đường bạn không thể quay lại?
+
+Tôi không tự khám phá ra khoảnh khắc đó. Tôi đã được cố vấn. Một số người rất tốt bụng và rất lão luyện (người tôi mang một món nợ ân tình lớn) đã dành thời gian để viết lý thuyết về đại số nhị phân cho một đứa trẻ 12 tuổi có thể hiểu được. Họ kết nối lý thuyết toán học với một chiếc máy tính nhỏ bằng nhựa và trao quyền cho tôi để làm cho chiếc máy tính đó làm những gì tôi muốn.
+
+Tôi vừa mở bản sao của cuốn sổ tay định mệnh đó. Tôi giữ nó trong một chiếc túi khóa zip. Tuy năm tháng đã khiến giấy bị ố vàng và trở nên giòn. Nhưng sức mạnh từ lời nói vẫn tỏa ra từ chúng. Sự thanh lịch của những dòng mô tả về đại số nhị phân đã tiêu tốn 3 trang thưa thớt. Việc xem qua từng bước của họ về các phương trình cho mỗi phương trình vẫn còn hấp dẫn như lần đầu tiên. Đó là một công việc bậc thầy. Đó là một tác phẩm đã thay đổi cuộc đời của ít nhất một người đàn ông trẻ tuổi. Tuy nhiên, tôi nghi nhờ rằng tôi sẽ khong bao giờ biết đến tên của tác giả.
+
