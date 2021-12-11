@@ -48,3 +48,15 @@ Tôi không tự khám phá ra khoảnh khắc đó. Tôi đã được cố v�
 
 Tôi vừa mở bản sao của cuốn sổ tay định mệnh đó. Tôi giữ nó trong một chiếc túi khóa zip. Tuy năm tháng đã khiến giấy bị ố vàng và trở nên giòn. Nhưng sức mạnh từ lời nói vẫn tỏa ra từ chúng. Sự thanh lịch của những dòng mô tả về đại số nhị phân đã tiêu tốn 3 trang thưa thớt. Việc xem qua từng bước của họ về các phương trình cho mỗi phương trình vẫn còn hấp dẫn như lần đầu tiên. Đó là một công việc bậc thầy. Đó là một tác phẩm đã thay đổi cuộc đời của ít nhất một người đàn ông trẻ tuổi. Tuy nhiên, tôi nghi nhờ rằng tôi sẽ khong bao giờ biết đến tên của tác giả.
 
+### Chiếc ECP-18 năm trung học
+
+Năm tôi 15 tuổi, là học sinh năm đầu trung học, tôi thích chơi ở khoa toán. (Ngạc nhiên chưa!) Một ngày nọ, họ nhận được một cỗ máy có kích thước băng một chiếc bàn cưa. Đó là một máy tính giáo dục dành cho các trường trung học, được gọi là ECP-18. Trường tôi nhận được một bản demo trong 2 tuần.
+
+Tôi đứng ở hậu trường khi các giáo viên và kỹ thuật viên nói chuyện. Máy tính có một bộ nhớ 15-bit từ (là gì nhỉ?) và 1024-từ trống. (Lúc đó tôi biết bộ nhớ trống là gì, nhưng chỉ trên khái niệm.)
+
+Khi họ bật nguồn, nó tạo ra âm thanh giống như máy bay phản lực đang cất cánh. Tôi đoán rằng đó là bộ nhớ trống đang xoay. Một khi đạt đến tốc độ nhất định, nó khá là yên tĩnh.
+
+Chiếc máy tính rất _đáng yêu_. Về cơ bản, nó là một chiếc bàn văn phòng với một bảng điều khiển kỳ diệu nhô ra từ phía trên như cầu của một con tàu chiến. Bảng điều khiển được tô điểm bởi các dãy đèn cũng là nút bấm. Ngồi ở bàn đó giống như ngồi trên ghế của thuyền trường Kirk.
+
+Tôi quan sát kỹ thuật viên ấn những cái nút. Tôi nhận thấy chúng sáng lên khi họ ấn xuống, và họ bấm lần nữa để tắt đi. Tôi cũng nhận thấy rằng một số nút khác họ bấm có tên như _nhập vào (deposit)_ và _chạy (run)_.
+
