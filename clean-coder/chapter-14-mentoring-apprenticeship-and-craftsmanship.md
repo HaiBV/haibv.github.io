@@ -61,3 +61,7 @@ Chiếc máy tính rất _đáng yêu_. Về cơ bản, nó là một chiếc b�
 Tôi quan sát kỹ thuật viên ấn những cái nút. Tôi nhận thấy chúng sáng lên khi họ ấn xuống, và họ bấm lần nữa để tắt đi. Tôi cũng nhận thấy rằng một số nút khác họ bấm có tên như _nhập vào (deposit)_ và _chạy (run)_.
 
 Các nút được nhóm lại trên từng hàng, mỗi hàng có 5 cụm, mỗi cụm 3 nút. Máy Digi-Comp của tôi cũng có 3 bit, vì vậy tôi có thế đọc dược chứ số bát phân khi biểu thị dưới dạng nhị phân. Không khó khi nhận ra rằng đay chỉ là 5 chữ số bát phân.
+
+Mỗi khi kỹ thuật viên bấm nút tôi có thể nghe thấy họ đang tự lẩm bẩm. Họ sẽ bấm 1,5,2,0,4 trên hàng _bộ nhớ đếm_ khi thầm nói "lưu vào 204". Họ sẽ bấm 1,0,2,1,3 và lẩm bẩm "nạp 213 vào _bộ tích lũy_". Có một hàng nút có tên _bộ tích lũy!_ 
+
+Mười phút quan sát là đủ rõ ràng với trí não 15 tuổi của tôi, biết được 15 là _lưu_ và 10 tức là _nạp_, bộ tích lũy dùng để lưu hoặc nạp, và những số khác nằm trong 1024 từ trên bộ nhớ trống (Vậy _đó_ là 1 từ!)
