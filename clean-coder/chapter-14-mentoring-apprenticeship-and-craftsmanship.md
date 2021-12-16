@@ -65,3 +65,9 @@ Các nút được nhóm lại trên từng hàng, mỗi hàng có 5 cụm, mỗ
 Mỗi khi kỹ thuật viên bấm nút tôi có thể nghe thấy họ đang tự lẩm bẩm. Họ sẽ bấm 1,5,2,0,4 trên hàng _bộ nhớ đếm_ khi thầm nói "lưu vào 204". Họ sẽ bấm 1,0,2,1,3 và lẩm bẩm "nạp 213 vào _bộ tích lũy_". Có một hàng nút có tên _bộ tích lũy!_ 
 
 Mười phút quan sát là đủ rõ ràng với trí não 15 tuổi của tôi, biết được 15 là _lưu_ và 10 tức là _nạp_, bộ tích lũy dùng để lưu hoặc nạp, và những số khác nằm trong 1024 từ trên bộ nhớ trống (Vậy _đó_ là 1 từ!)
+
+Từng chút một, tâm trí háo hức của tôi thu được càng nhiều hướng dẫn code và khái niệm. Đến khi kỹ thuật viên đi khỏi, tôi đã biết những điều cơ bản về cách hoạt động của cỗ máy.
+
+Chiều hôm đó, trong giờ học, tôi lẻn vào trong phòng thí nghiệm toán và bắt đầu tìm hiểu cỗ máy. Tôi đã học được từ lâu rằng xin tha thứ sẽ tốt hơn xin phép! Tôi chuyển đổi một chương trình nhỏ sẽ nhân bộ tích lũy với 2 và cộng thêm 1. Tôi đưa số 5 vào bộ tích lũy, chạy chương trình, và nhìn thấy số 13 (hệ bát phân) trên bộ tích lũy! Nó đã hoạt động!
+
+Tôi thử với một vài chương trình đơn giản khác tương tự và tất cả đều hoạt động theo kế hoạch. Tôi thấy mình như điều khiển được cả vũ trụ!
