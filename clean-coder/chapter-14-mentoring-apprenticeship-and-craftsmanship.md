@@ -68,6 +68,9 @@ Mười phút quan sát là đủ rõ ràng với trí não 15 tuổi của tôi
 
 Từng chút một, tâm trí háo hức của tôi thu được càng nhiều hướng dẫn code và khái niệm. Đến khi kỹ thuật viên đi khỏi, tôi đã biết những điều cơ bản về cách hoạt động của cỗ máy.
 
-Chiều hôm đó, trong giờ học, tôi lẻn vào trong phòng thí nghiệm toán và bắt đầu tìm hiểu cỗ máy. Tôi đã học được từ lâu rằng xin tha thứ sẽ tốt hơn xin phép! Tôi chuyển đổi một chương trình nhỏ sẽ nhân bộ tích lũy với 2 và cộng thêm 1. Tôi đưa số 5 vào bộ tích lũy, chạy chương trình, và nhìn thấy số 13 (hệ bát phân) trên bộ tích lũy! Nó đã hoạt động!
+Chiều hôm đó, trong giờ học, tôi lẻn vào trong phòng thực hành toán và bắt đầu tìm hiểu cỗ máy. Tôi đã học được từ lâu rằng xin tha thứ sẽ tốt hơn xin phép! Tôi chuyển đổi một chương trình nhỏ sẽ nhân bộ tích lũy với 2 và cộng thêm 1. Tôi đưa số 5 vào bộ tích lũy, chạy chương trình, và nhìn thấy số 13 (hệ bát phân) trên bộ tích lũy! Nó đã hoạt động!
 
-Tôi thử với một vài chương trình đơn giản khác tương tự và tất cả đều hoạt động theo kế hoạch. Tôi thấy mình như điều khiển được cả vũ trụ!
+Tôi thử với một vài chương trình đơn giản khác tương tự và tất cả đều hoạt động theo kế hoạch. Tôi thấy mình như chủ nhân của vũ trụ!
+
+Những ngày sau đó tôi mới nhận ra mình thật ngốc nghếch, và may mắn biết bao. Tôi tìm thấy một tờ hướng dẫn nằm đâu đó trong phòng thực hành toán. Nó chứa tất cả hướng dẫn và mã lựa chọn khác nhau, cùng với rất nhiều hướng dẫn tôi không học được bằng cách quan sát kỹ thuật viên. Tôi đã rất hài lòng khi tôi giải thích được những điều mà tôi đã biết chính xác và xúc động bởi những thứ khác. Tuy nhiên, một trong những hướng dẫn đó viết bằng HLT. Nó chỉ xảy ra với lệnh tạm dừng là một từ với tất cả số 0. Và điều xảy ra là tôi đã đã đặt một từ với tất cả là số 0 và cuối mỗi chương trình của tôi để tôi có thể tải nó vào bộ tích lũy và xóa nó. Khái niệm tạm dừng đơn giản là không xảy ra với tôi. Tôi chỉ nghĩ rằng chương trình sẽ dừng lại khi nó được thực hiện!
+
