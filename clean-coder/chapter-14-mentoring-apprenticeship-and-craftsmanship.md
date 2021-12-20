@@ -76,3 +76,8 @@ Những ngày sau đó tôi mới nhận ra mình thật ngốc nghếch, và ma
 
 Tôi nhớ có lần tôi đang ngồi trong phòng thực hành toán quan sát một trong những giáo viên vật lộn để chương trình hoạt động. Ông cố nhập vào 2 số thập phân và in ra tổng của 2 số đó. Bất kỳ ai đã từng viết một chương trình như vậy bằng ngôn ngữ máy trên một máy tính mini đều biết rằng nó không hề tầm thường. Bạn phải đọc các ký tự, chuyển đổi chúng thành số, sau dó sang hệ nhị phân, tính tổng, chuyển đổi ngược lại thành thập phân và mã hóa lại thành ký tự. Và, tin tôi đi, sẽ tệ hơn rất nhiều khi bạn nhập chương trình ở dạng nhị phân thông qua bảng điều khiển.
 
+Tôi quan sát giáo viên tạm dừng chương trình của mình và sau đó chạy nó cho đến khi nó dừng lại. (Ồ! Đó là một ý tưởng hay) Điểm ngắt ban đầu này cho phép ông kiểm tra nội dung của các số nhập vào xem chương trình đã làm gì. Tôi nhớ ông đã lẩm bẩm, "Chà, nhanh quá!" Chàng trai, tôi có tin mới cho anh đây.
+
+Tôi không biết thuật toán của anh ta là gì. Kiểu lập trình đó vẫn còn là điều kỳ diệu với tôi. Và ông không bao giờ nói chuyện với tôi khi tôi quan sát ông. Thực sự, _không ai_ nói chuyện máy tính với tôi. Tôi nghĩ rằng họ coi tôi là một đứa nhóc phiền toái có thể làm ngơ, loanh quanh trong phòng thực hành toán như con thiêu thân. Cần phải nói rằng cả học sinh và giáo viên đều không phát triển được kỹ năng xã hội ở mức độ cao. 
+
+Đến cuối cùng chương trình cũng hoạt động. Thực kinh ngạc khi nhìn thấy. Thầy chậm chạp đánh vào 2 số, 
