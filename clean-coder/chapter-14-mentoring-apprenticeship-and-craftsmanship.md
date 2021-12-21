@@ -80,4 +80,8 @@ Tôi quan sát giáo viên tạm dừng chương trình của mình và sau đó
 
 Tôi không biết thuật toán của anh ta là gì. Kiểu lập trình đó vẫn còn là điều kỳ diệu với tôi. Và ông không bao giờ nói chuyện với tôi khi tôi quan sát ông. Thực sự, _không ai_ nói chuyện máy tính với tôi. Tôi nghĩ rằng họ coi tôi là một đứa nhóc phiền toái có thể làm ngơ, loanh quanh trong phòng thực hành toán như con thiêu thân. Cần phải nói rằng cả học sinh và giáo viên đều không phát triển được kỹ năng xã hội ở mức độ cao. 
 
-Đến cuối cùng chương trình cũng hoạt động. Thực kinh ngạc khi nhìn thấy. Thầy chậm chạp đánh vào 2 số, 
+Đến cuối cùng chương trình cũng hoạt động. Thực kinh ngạc khi quan sát. Thầy chậm chạp đánh vào 2 số bởi vì chiếc máy tính đó không được nhanh lắm, mặc dù đã phản đối trước đó (hãy nghĩ đến việc đọc các từ liên tiếp từ một cái trống quay vào năm 1967). Khi thầy nhập xong số thứ 2 và bấm enter, máy tính nhấp nháy dữ dội 1 chút và in ra kết quả sau đó. Nó mất khoảng 1s cho mỗi chữ số. Nó in ra tất cả trừ chữ số cuối cùng, nhấp nháy dữ dội hơn trong 5s, sau đó in chữ số cuối cùng và dừng lại.
+
+Tại sao lại tạm dừng trước chữ số cuối cùng? Tôi không bao giờ biết được. Nhưng nó khiến tôi nhận ra rằng cách tiếp cận một vấn đề có thể ảnh hưởng sâu sắc đến người dùng. Ngay cả khi chương trình đưa ra câu trả lời chính xác, nhưng vẫn có điều gì đó không ổn với nó.
+
+Đó chính là cố vấn. Chắc chắn đó không phải là kiểu cố vấn mà tôi có thể hy vọng. Sẽ thật tuyệt nếu một trong những giáo viên đó đã dẫn dắt tôi và làm việc với tôi. Nhưng điều đó không thành vấn đề, bởi vì tôi đã quan sát họ và học với một tốc độ điên cuồng.
