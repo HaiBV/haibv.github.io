@@ -85,3 +85,12 @@ Tôi không biết thuật toán của anh ta là gì. Kiểu lập trình đó 
 Tại sao lại tạm dừng trước chữ số cuối cùng? Tôi không bao giờ biết được. Nhưng nó khiến tôi nhận ra rằng cách tiếp cận một vấn đề có thể ảnh hưởng sâu sắc đến người dùng. Ngay cả khi chương trình đưa ra câu trả lời chính xác, nhưng vẫn có điều gì đó không ổn với nó.
 
 Đó chính là cố vấn. Chắc chắn đó không phải là kiểu cố vấn mà tôi có thể hy vọng. Sẽ thật tuyệt nếu một trong những giáo viên đó đã dẫn dắt tôi và làm việc với tôi. Nhưng điều đó không thành vấn đề, bởi vì tôi đã quan sát họ và học với một tốc độ điên cuồng.
+
+## Sự cố vấn độc đáo
+
+Tôi kể cho bạn nghe 2 câu chuyện trên bởi vì chúng diễn tả 2 cách cố vấn rất khác biệt, không phải cách cố vấn các bạn vẫn thường được nghe. Trong trường hợp đầu tiên tôi được học từ một tác giả của một cuốn sách hướng dẫn được viết rất tốt. Trong trường hợp thứ 2 tôi được học qua cách quan sát những người chủ động cố gắng làm lơ tôi. Trong cả 2 trường hợp, khiến thức có được vẫn mang tính nền tảng và sâu sắc. 
+
+Tất nhiên, tôi cũng có những cố vấn khác nữa. Đó là người hàng xóm thân thiện làm việc tại Teletype, người đã mang về nhà cho tôi một chiếc hộp gồm 30 chiếu rơ le chiếc điện thoại để chơi cùng. Để tôi cho bạn biết, hãy đưa cho một chàng trai một số rơ le và một máy biến áp, anh ta có thể chinh phục cả thế giới!
+
+Đó là một người hàng xóm tốt bụng, một người vận hành, đã chỉ cho tôi cách sử dụng một chiếc đồng hồ vạn năng (mà tôi đã nhanh chóng bẻ gãy). Đó là một chủ cửa hàng đồ văn phòng cho phép tôi vào và "chơi" với chiếc máy tính lập trình đắt tiền của ông ta. Đó là văn phòng kinh doanh của Digital Equipment Corporation đã cho phép tôi đến và "chơi" với PDP-8 và PDP-10 của họ.
+
