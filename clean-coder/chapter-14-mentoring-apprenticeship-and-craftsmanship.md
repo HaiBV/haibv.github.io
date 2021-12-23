@@ -94,3 +94,16 @@ Tất nhiên, tôi cũng có những cố vấn khác nữa. Đó là người h
 
 Đó là một người hàng xóm tốt bụng, một người vận hành, đã chỉ cho tôi cách sử dụng một chiếc đồng hồ vạn năng (mà tôi đã nhanh chóng bẻ gãy). Đó là một chủ cửa hàng đồ văn phòng cho phép tôi vào và "chơi" với chiếc máy tính lập trình đắt tiền của ông ta. Đó là văn phòng kinh doanh của Digital Equipment Corporation đã cho phép tôi đến và "chơi" với PDP-8 và PDP-10 của họ.
 
+Và đó là người anh Jum Carlin, một lập trình viên BAL, người cứu tôi khỏi sa thải khi đang làm công việc lập trình đầu tiên của mình, bằng cách giúp tôi debug một chương trình Cobol vượt quá khả năng của tôi. Anh dạy tôi cách đọc dữ liệu từ lõi trống, và dạy tôi cách format code với những dòng trống thích hợp, hàng dấu sao và chú thích hợp lý. Anh ấy đã dạy tôi những bước đi thủ công đầu tiên. Tôi xin lỗi vì không thể trả ơn khi ông chủ không hài lòng với anh ta 1 năm sau đó.
+
+Nhưng, thành thật thì, đó là về nó. Không có nhiều lập trình viên cao cấp vào khoảng đầu những năm 70. Tất cả những nơi tôi đã từng làm việc, tôi đều là cấp cao. Không có ai giúp tôi tìm hiểu xem thực sự lập trình viên chuyên nghiệp là gì. Không có hình mẫu nào chỉ dạy cho tôi cách cư xử cũng như giá trị là gì. Những thứ tôi đang có đều thông qua tự học hỏi, và tất cả đều không dễ dàng.
+
+## Gõ mạnh
+
+Như tôi đã nói với bạn, trên thực tế, tôi đã bị sa thải khỏi công việc ở nhà máy tự động hóa năm 1976. Mặc dù tôi rất giỏi về mặt kỹ thuật, nhưng tôi không học cách để tâm đến việc kinh doanh và mục tiêu kinh doanh. Ngày tháng và hạn chót không có ý nghĩa gì với tôi. Tôi quên mất buổi demo lớn vào sáng thứ 2, bỏ mặc hệ thống sập vào thứ 6, và đi làm muộn vào thứ 2 với ánh mắt giận dữ của tất cả mọi người.
+
+Giám đốc gửi cho tôi một bức thư cảnh báo tôi rằng tôi phải thay đổi ngay lập tức hoặc sẽ bị sa thải. Đó là một lời cảnh tỉnh quan trọng với tôi. Tôi đánh giá lại cuộc sống và sự nghiệp của mình và bắt đầu có những thay đổi đáng kể trong hành vi của mình - có vài thay đổi bạn đã được đọc trong cuốn sách này. Nhưng tất cả đã quá muộn. Động lực đi sai hướng và những điều không quan trọng trước đây đều trở nên quan trọng. Vì vậy, mặc dù tôi đã cố gắng rất nhiều, cuối cùng họ vẫn tống cổ tôi ra khỏi tòa nhà.
+
+Không cần nói cũng biết, thật không vui chút nào khi mang tin này về nhà cho một người vợ đang mang thai với cô con gái 2 tuổi. Nhưng tôi đã tự vực dậy bản thân mình và chấp nhận một số bài học mạnh mẽ của cuộc sống cho công việc tiếp theo - công việc tôi đã làm trong 15 năm tiếp theo và là nền tảng thực sự của sự nghiệp hiện tại của tôi.
+
+Cuối cùng, tôi đã sống sót và thành công. Nhưng sẽ phải có cách tốt hơn. Sẽ tốt hơn rất nhiều cho tôi nếu tôi có một người cố vấn thực thụ, một người sẽ dạy tôi biết đầu vào và đầu ra. Một người tôi có thể quan sát trong khi giúp anh ta làm những công việc nhỏ, và một người sẽ xem xét, hướng dẫn tôi từ những ngày đầu. Một người nào đó để làm hình mẫu và dạy cho tôi những giá trị và hành động phù hợp. Một sensei, một bậc thầy, một cố vấn.
