@@ -107,3 +107,19 @@ Giám đốc gửi cho tôi một bức thư cảnh báo tôi rằng tôi phải
 Không cần nói cũng biết, thật không vui chút nào khi mang tin này về nhà cho một người vợ đang mang thai với cô con gái 2 tuổi. Nhưng tôi đã tự vực dậy bản thân mình và chấp nhận một số bài học mạnh mẽ của cuộc sống cho công việc tiếp theo - công việc tôi đã làm trong 15 năm tiếp theo và là nền tảng thực sự của sự nghiệp hiện tại của tôi.
 
 Cuối cùng, tôi đã sống sót và thành công. Nhưng sẽ phải có cách tốt hơn. Sẽ tốt hơn rất nhiều cho tôi nếu tôi có một người cố vấn thực thụ, một người sẽ dạy tôi biết đầu vào và đầu ra. Một người tôi có thể quan sát trong khi giúp anh ta làm những công việc nhỏ, và một người sẽ xem xét, hướng dẫn tôi từ những ngày đầu. Một người nào đó để làm hình mẫu và dạy cho tôi những giá trị và hành động phù hợp. Một sensei, một bậc thầy, một cố vấn.
+
+## Học việc
+
+Các bác sỹ làm việc gì? Bạn có nghĩ rằng các bệnh viện thuê sinh viên mới tốt nghiệp y khoa rồi ném họ vào phòng phẫu thuật tim trong ngày đầu tiên đi làm? Tất nhiên là không.
+
+Ngành y đã phát triển một kỹ luật cố vấn căng thẳng tuân theo nghi lễ và bôi trơn bằng truyền thống. Ngành y tế giám sát các trường đại học và đảm bảo sinh viên tốt nghiệp có nền giáo dục tốt nhất. Việc giáo dục liên quan đến khối lượng học tập trên lớp và hoạt động lâm sàng tương đương khi làm việc với các chuyên gia trong các bệnh viện.
+
+Khi tốt nghiệp, và trước khi họ có chứng chỉ, các bác sỹ mới toanh được yêu cầu dành 1 năm trong thực tế có giám sát và đào tạo được gọi là thực tập. Đây là quá trình đào tạo theo công việc căng thẳng. Sinh viên thực tập được bao quanh bởi giáo viên và các hình mẫu.
+
+Sau khi thời gian thực tập sinh kết thúc, mỗi chuyên ngành y tế yêu cầu thêm từ 3 đến 5 năm thực hành và đào tạo có giám sát được gọi là nội trú. Bác sỹ nội trú có được sự tự tin bằng cách đảm nhận những trách nhiệm lớn hơn bao giờ hết trong khi vẫn được bao quanh và giám sát bởi các bác sỹ nhiều kinh nghiệm.
+
+Rất nhiều chuyên ngành yêu cầu thêm 1 đến 3 năm nghiên cứu sinh trong đó sinh viên tiếp tục đào tạo chuyên ngành và thực hành có giám sát. 
+
+Và _sau đó_ họ đủ điều kiện tham gia các kỳ thi của họ và được chứng nhận bởi hội đồng thi.
+
+Mô tả này về nghề y hơi được lý tưởng hóa, và có lẽ không hoàn toàn chính xác. Nhưng thực tế vẫn là khi mức độ rủi ro cao, chúng ta không đưa sinh viên mới tốt nghiệp vào một phòng, thỉnh thoảng ném thịt vào, và mong điều tốt đẹp sẽ xuất hiện. Vậy tại sao chúng ta làm việc này với phần mềm?
