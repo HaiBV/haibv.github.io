@@ -123,3 +123,13 @@ Rất nhiều chuyên ngành yêu cầu thêm 1 đến 3 năm nghiên cứu sinh
 Và _sau đó_ họ đủ điều kiện tham gia các kỳ thi của họ và được chứng nhận bởi hội đồng thi.
 
 Mô tả này về nghề y hơi được lý tưởng hóa, và có lẽ không hoàn toàn chính xác. Nhưng thực tế vẫn là khi mức độ rủi ro cao, chúng ta không đưa sinh viên mới tốt nghiệp vào một phòng, thỉnh thoảng ném thịt vào, và mong điều tốt đẹp sẽ xuất hiện. Vậy tại sao chúng ta làm việc này với phần mềm?
+
+Đúng là có tương đối ít trường hợp tử vong do lỗi phần mềm. Nhưng nó gây ra những thiệt hại đáng kể về tiền. Các công ty mất một số tiền lớn do đào tạo không đầy đủ các lập trình viên của họ.
+
+Bằng một cách nào đó, ngành phát triển phần mềm có ý tưởng rằng lập trình viên là lập trình viên, và một khi bạn tốt nghiệp, bạn có thể code. Thực vậy, nó không phải là chuyện hiếm gặp khi các công ty tuyển những đứa nhóc mới rời ghế nhà trường, xây dựng họ thành một "team", và yêu cầu xây dựng những hệ thống quan trọng nhất. Thật điên rồ!
+
+Họa sỹ không làm vậy. Thợ sửa ống nước không làm vậy. Thợ điện không. Chết tiệt, tôi thậm chí không nghĩ rằng những người nấu món ăn nhanh có thể làm vậy. Đối với tôi, các công ty thuê sinh viên tốt nghiệp khoa học máy tính phải đầu tư nhiều hơn vào việc đào tạo của họ hơn là McDonalds đầu tư vào máy chủ của họ.
+
+Đừng tự đùa rằng việc này không quan trọng. Có rất nhiều thứ rủi ro. Nền văn minh của chúng ta dựa vào phần mềm. Đó là phần mềm di chuyển và điều khiển thông tin tràn ngập cuộc sống hàng ngày của chúng ta. Phần mềm điều khiển động cơ, hộp số và phanh của ô tô. Chúng duy trì số dư trong tài khoản ngân hàng, gửi hóa đơn và chấp nhận thanh toán cho chúng ta. Phần mềm giặt quần áo và cho ta biết thời gian. Chúng đưa ảnh vào TV, gửi tin nhắn, thực hiện cuộc gọi, và giải trí khi ta buồn chán. Chúng ở mọi nơi.
+
+Và khi chúng ta đang giao phó cho các lập trình viên phần mềm mọi khía cạnh của cuộc sống của chúng ta, từ những điều vụn vặt đến quan trọng, tôi đề nghị một thời gian đào tạo và thực hành có giám sát hợp lý là không phù hợp.
