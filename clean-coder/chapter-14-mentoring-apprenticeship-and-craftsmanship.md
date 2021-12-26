@@ -133,3 +133,14 @@ Họa sỹ không làm vậy. Thợ sửa ống nước không làm vậy. Thợ
 Đừng tự đùa rằng việc này không quan trọng. Có rất nhiều thứ rủi ro. Nền văn minh của chúng ta dựa vào phần mềm. Đó là phần mềm di chuyển và điều khiển thông tin tràn ngập cuộc sống hàng ngày của chúng ta. Phần mềm điều khiển động cơ, hộp số và phanh của ô tô. Chúng duy trì số dư trong tài khoản ngân hàng, gửi hóa đơn và chấp nhận thanh toán cho chúng ta. Phần mềm giặt quần áo và cho ta biết thời gian. Chúng đưa ảnh vào TV, gửi tin nhắn, thực hiện cuộc gọi, và giải trí khi ta buồn chán. Chúng ở mọi nơi.
 
 Và khi chúng ta đang giao phó cho các lập trình viên phần mềm mọi khía cạnh của cuộc sống của chúng ta, từ những điều vụn vặt đến quan trọng, tôi đề nghị một thời gian đào tạo và thực hành có giám sát hợp lý là không phù hợp.
+
+### Học việc trong nghề lập trình viên
+
+Vậy làm thế nào để chỉ dạy cho những sinh viên trẻ mới ra trường về các cấp độ trong ngành lập trình? Họ nên làm theo những bước nào? Họ nên gặp những thách thức nào? Họ nên đạt được mục tiêu gì? Hãy bắt đầu từ cấp độ cao nhất.
+
+#### Bậc thầy
+
+Đây là những lập trình viên đã chịu trách nhiệm dẫn dất nhiều hơn một dự án quan trọng. Thường thì họ sẽ có hơn 10 năm kinh nghiệp và đã từng làm việc qua nhiều hệ thống, ngôn ngữ, và hệ điều hành khác nhau. Họ biết cách dẫn dẵn và điều phối nhiều team, là những nhà thiết kế và kiến trúc sư thành thạo, đồng thời có thể viết code quay vòng với tất cả mọi người mà không đổ một giọt mồ hôi. Họ đã được đề nghị vị trí quản lý, nhưng đã từ chối, hoặc quay lại sau khi nhận lời, hoặc tích hợp quản lý với vai trò kỹ thuật là chính. Họ duy trì vị trí kỹ thuật bằng cách đọc, nghiên cứu, thực hành, thực hiện và giảng dạy. Đó là người mà công ty sẽ giao trách nhiệm kỹ thuật cho một dự án. Nghĩ đi, "Scotty".
+
+#### Thạo việc
+
