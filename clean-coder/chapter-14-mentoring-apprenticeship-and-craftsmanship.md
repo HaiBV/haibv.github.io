@@ -144,3 +144,9 @@ Vậy làm thế nào để chỉ dạy cho những sinh viên trẻ mới ra tr
 
 #### Thạo việc
 
+Đây là những lập trình viên đã được đào tạo, có năng lực và năng động. Trong giai đoạn này của sự nghiệp, họ sẽ học hỏi để làm việc hiệu qua trong team và trở thành trưởng nhóm. Họ am hiểu về công nghệ hiện tại nhưng thường thiếu kinh nghiệm với nhiều hệ thống đa dạng. Họ có xu hướng biết một ngôn ngữ, một hệ thống, một nền tảng; nhưng họ đang học hỏi nhiều hơn. Mức độ kinh nghiệp rất khác nhau giữa các cấp bậc của họ, nhưng mức trung bình khoảng năm năm. Ở phía xa của mức trung bình đó, chúng ta có được những bậc thầy, ở phía gần, chúng ta có những người học việc.
+
+Người thạo việc được giám sát bởi các bậc thầy, hoặc những người thạo việc cao cấp hơn. Những người trẻ tuổi hiếm khi có quyền tự chủ. Công việc của họ được giám sát chặt chẽ. Code của họ được xem xét kỹ lưỡng. Khi họ tích lũy được kinh nghiệm, quyền tự chủ sẽ tăng lên. Ít bị giám sát trực tiếp hơn và nhiều quyền hạn hơn. Cuối cùng, nó chuyển thành đánh giá ngang hàng.
+
+
+#### Học việc
