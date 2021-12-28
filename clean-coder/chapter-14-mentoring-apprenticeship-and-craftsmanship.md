@@ -62,7 +62,7 @@ Tôi quan sát kỹ thuật viên ấn những cái nút. Tôi nhận thấy ch�
 
 Các nút được nhóm lại trên từng hàng, mỗi hàng có 5 cụm, mỗi cụm 3 nút. Máy Digi-Comp của tôi cũng có 3 bit, vì vậy tôi có thế đọc dược chứ số bát phân khi biểu thị dưới dạng nhị phân. Không khó khi nhận ra rằng đay chỉ là 5 chữ số bát phân.
 
-Mỗi khi kỹ thuật viên bấm nút tôi có thể nghe thấy họ đang tự lẩm bẩm. Họ sẽ bấm 1,5,2,0,4 trên hàng _bộ nhớ đếm_ khi thầm nói "lưu vào 204". Họ sẽ bấm 1,0,2,1,3 và lẩm bẩm "nạp 213 vào _bộ tích lũy_". Có một hàng nút có tên _bộ tích lũy!_ 
+Mỗi khi kỹ thuật viên bấm nút tôi có thể nghe thấy họ đang tự lẩm bẩm. Họ sẽ bấm 1,5,2,0,4 trên hàng _bộ nhớ đếm_ khi thầm nói "lưu vào 204". Họ sẽ bấm 1,0,2,1,3 và lẩm bẩm "nạp 213 vào _bộ tích lũy_". Có một hàng nút có tên _bộ tích lũy!_
 
 Mười phút quan sát là đủ rõ ràng với trí não 15 tuổi của tôi, biết được 15 là _lưu_ và 10 tức là _nạp_, bộ tích lũy dùng để lưu hoặc nạp, và những số khác nằm trong 1024 từ trên bộ nhớ trống (Vậy _đó_ là 1 từ!)
 
@@ -78,7 +78,7 @@ Tôi nhớ có lần tôi đang ngồi trong phòng thực hành toán quan sát
 
 Tôi quan sát giáo viên tạm dừng chương trình của mình và sau đó chạy nó cho đến khi nó dừng lại. (Ồ! Đó là một ý tưởng hay) Điểm ngắt ban đầu này cho phép ông kiểm tra nội dung của các số nhập vào xem chương trình đã làm gì. Tôi nhớ ông đã lẩm bẩm, "Chà, nhanh quá!" Chàng trai, tôi có tin mới cho anh đây.
 
-Tôi không biết thuật toán của anh ta là gì. Kiểu lập trình đó vẫn còn là điều kỳ diệu với tôi. Và ông không bao giờ nói chuyện với tôi khi tôi quan sát ông. Thực sự, _không ai_ nói chuyện máy tính với tôi. Tôi nghĩ rằng họ coi tôi là một đứa nhóc phiền toái có thể làm ngơ, loanh quanh trong phòng thực hành toán như con thiêu thân. Cần phải nói rằng cả học sinh và giáo viên đều không phát triển được kỹ năng xã hội ở mức độ cao. 
+Tôi không biết thuật toán của anh ta là gì. Kiểu lập trình đó vẫn còn là điều kỳ diệu với tôi. Và ông không bao giờ nói chuyện với tôi khi tôi quan sát ông. Thực sự, _không ai_ nói chuyện máy tính với tôi. Tôi nghĩ rằng họ coi tôi là một đứa nhóc phiền toái có thể làm ngơ, loanh quanh trong phòng thực hành toán như con thiêu thân. Cần phải nói rằng cả học sinh và giáo viên đều không phát triển được kỹ năng xã hội ở mức độ cao.
 
 Đến cuối cùng chương trình cũng hoạt động. Thực kinh ngạc khi quan sát. Thầy chậm chạp đánh vào 2 số bởi vì chiếc máy tính đó không được nhanh lắm, mặc dù đã phản đối trước đó (hãy nghĩ đến việc đọc các từ liên tiếp từ một cái trống quay vào năm 1967). Khi thầy nhập xong số thứ 2 và bấm enter, máy tính nhấp nháy dữ dội 1 chút và in ra kết quả sau đó. Nó mất khoảng 1s cho mỗi chữ số. Nó in ra tất cả trừ chữ số cuối cùng, nhấp nháy dữ dội hơn trong 5s, sau đó in chữ số cuối cùng và dừng lại.
 
@@ -88,7 +88,7 @@ Tại sao lại tạm dừng trước chữ số cuối cùng? Tôi không bao g
 
 ## Sự cố vấn độc đáo
 
-Tôi kể cho bạn nghe 2 câu chuyện trên bởi vì chúng diễn tả 2 cách cố vấn rất khác biệt, không phải cách cố vấn các bạn vẫn thường được nghe. Trong trường hợp đầu tiên tôi được học từ một tác giả của một cuốn sách hướng dẫn được viết rất tốt. Trong trường hợp thứ 2 tôi được học qua cách quan sát những người chủ động cố gắng làm lơ tôi. Trong cả 2 trường hợp, khiến thức có được vẫn mang tính nền tảng và sâu sắc. 
+Tôi kể cho bạn nghe 2 câu chuyện trên bởi vì chúng diễn tả 2 cách cố vấn rất khác biệt, không phải cách cố vấn các bạn vẫn thường được nghe. Trong trường hợp đầu tiên tôi được học từ một tác giả của một cuốn sách hướng dẫn được viết rất tốt. Trong trường hợp thứ 2 tôi được học qua cách quan sát những người chủ động cố gắng làm lơ tôi. Trong cả 2 trường hợp, khiến thức có được vẫn mang tính nền tảng và sâu sắc.
 
 Tất nhiên, tôi cũng có những cố vấn khác nữa. Đó là người hàng xóm thân thiện làm việc tại Teletype, người đã mang về nhà cho tôi một chiếc hộp gồm 30 chiếu rơ le chiếc điện thoại để chơi cùng. Để tôi cho bạn biết, hãy đưa cho một chàng trai một số rơ le và một máy biến áp, anh ta có thể chinh phục cả thế giới!
 
@@ -118,7 +118,7 @@ Khi tốt nghiệp, và trước khi họ có chứng chỉ, các bác sỹ mớ
 
 Sau khi thời gian thực tập sinh kết thúc, mỗi chuyên ngành y tế yêu cầu thêm từ 3 đến 5 năm thực hành và đào tạo có giám sát được gọi là nội trú. Bác sỹ nội trú có được sự tự tin bằng cách đảm nhận những trách nhiệm lớn hơn bao giờ hết trong khi vẫn được bao quanh và giám sát bởi các bác sỹ nhiều kinh nghiệm.
 
-Rất nhiều chuyên ngành yêu cầu thêm 1 đến 3 năm nghiên cứu sinh trong đó sinh viên tiếp tục đào tạo chuyên ngành và thực hành có giám sát. 
+Rất nhiều chuyên ngành yêu cầu thêm 1 đến 3 năm nghiên cứu sinh trong đó sinh viên tiếp tục đào tạo chuyên ngành và thực hành có giám sát.
 
 Và _sau đó_ họ đủ điều kiện tham gia các kỳ thi của họ và được chứng nhận bởi hội đồng thi.
 
@@ -148,5 +148,6 @@ Vậy làm thế nào để chỉ dạy cho những sinh viên trẻ mới ra tr
 
 Người thạo việc được giám sát bởi các bậc thầy, hoặc những người thạo việc cao cấp hơn. Những người trẻ tuổi hiếm khi có quyền tự chủ. Công việc của họ được giám sát chặt chẽ. Code của họ được xem xét kỹ lưỡng. Khi họ tích lũy được kinh nghiệm, quyền tự chủ sẽ tăng lên. Ít bị giám sát trực tiếp hơn và nhiều quyền hạn hơn. Cuối cùng, nó chuyển thành đánh giá ngang hàng.
 
-
 #### Học việc
+
+Sinh viên mới tốt nghiệp bắt đầu sự nghiệp của mình từ vị trí học việc. Người học việc không có quyền tự chủ. Họ được giám sát chặt chẽ bởi người thạo việc. Bạn đầu họ không nhận được nhiệm vụ gì cả, họ chỉ hỗ trợ những người thạo việc. Đây sẽ là thời điểm căng thẳng của làm việc theo cặp. Đây là lúc các kỷ luật được học hỏi và củng cố. Đây là lúc nền tảng của các giá trị được tạo ra.
