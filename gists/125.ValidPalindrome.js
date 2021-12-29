@@ -21,7 +21,6 @@ var isPalindrome = function (s) {
         break;
       case s[start].toLowerCase() !== s[end].toLowerCase():
         return false;
-        break;
       default:
         start++;
         end--;

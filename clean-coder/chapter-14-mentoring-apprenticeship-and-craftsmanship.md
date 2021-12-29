@@ -151,3 +151,10 @@ Người thạo việc được giám sát bởi các bậc thầy, hoặc nhữ
 #### Học việc
 
 Sinh viên mới tốt nghiệp bắt đầu sự nghiệp của mình từ vị trí học việc. Người học việc không có quyền tự chủ. Họ được giám sát chặt chẽ bởi người thạo việc. Bạn đầu họ không nhận được nhiệm vụ gì cả, họ chỉ hỗ trợ những người thạo việc. Đây sẽ là thời điểm căng thẳng của làm việc theo cặp. Đây là lúc các kỷ luật được học hỏi và củng cố. Đây là lúc nền tảng của các giá trị được tạo ra.
+
+Người thạo việc sẽ là những người hướng dẫn. Họ cần chắc chắn rằng người học việc biết được các nguyên tắc thiết kế, khuôn mẫu thiết kế, kỷ luật, và các nghi thức. Người tạo việc sẽ dạy TDD, tái cấu trúc code, ước lượng và những thứ khác. Họ sẽ giao cho người học việc đọc, luyện tập và thực hành, họ là người kiểm tra sự tiến bộ.
+
+Thời gian học việc có thể kéo dài 1 năm. Trong thời gian đó, nếu người thạo việc có thể chấp nhận người học việc vào hàng ngũ của họ, họ sẽ đề nghị với bậc thầy. Các bậc thầy sẽ kiểm tra người học việc bằng phỏng vấn và đánh giá những thành tích. Nếu bậc thầy đồng ý, người học việc sẽ trở thành người thạo việc.
+
+#### Thực tế
+
