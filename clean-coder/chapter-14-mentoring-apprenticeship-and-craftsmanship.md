@@ -158,3 +158,8 @@ Thời gian học việc có thể kéo dài 1 năm. Trong thời gian đó, n�
 
 #### Thực tế
 
+Một lần nữa, mọi thứ ở trên chỉ là lý tưởng và giả định. Tuy nhiên, nếu bạn thay đổi tên và để ý từ ngữ, bạn sẽ nhận ra rằng nó không hoàn toàn khác với cách chúng ta _mong đợi_ mọi thứ hoạt động như hiện tại. Sinh viên mới tốt nghiệp được giám sát bởi các trường nhóm trẻ, những người được giám sát bởi trưởng dự án, v.v. Vấn đề là, trong hầu hết các trường hợp, sự giám sát này _không phải về kỹ thuật_! Ở hầu hết các công ty, không có sự  giám sát kỹ thuật nào cả. Các lập trình viên được tăng lương và cuối cùng thăng chức bởi vì, chà, đó những gì bạn làm với lập trình viên. 
+
+Sự khác biệt giữa việc chúng ta làm bây giờ và lý tưởng của tôi về học việc lập trình là sự tập trung vào giảng dạy, rèn luyện, giám sát và đánh giá về kỹ thuật. 
+
+Sự khác biệt là quan điểm cho rằng cách giá trị nghề nghiệp và sự nhạy bén về kỹ thuật phải được dạy dỗ, nuôi dưỡng, vun đắp, uốn nắn, rèn luyện và phát triển. Điều còn thiếu trong phương pháp tiếp cận vô trùng hiện tại của chúng ta là trách nhiệm của những người  lớn tổi trong việc dạy dỗ những người trẻ hơn.
