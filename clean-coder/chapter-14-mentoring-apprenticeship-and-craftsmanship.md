@@ -162,4 +162,24 @@ Một lần nữa, mọi thứ ở trên chỉ là lý tưởng và giả địn
 
 Sự khác biệt giữa việc chúng ta làm bây giờ và lý tưởng của tôi về học việc lập trình là sự tập trung vào giảng dạy, rèn luyện, giám sát và đánh giá về kỹ thuật. 
 
-Sự khác biệt là quan điểm cho rằng cách giá trị nghề nghiệp và sự nhạy bén về kỹ thuật phải được dạy dỗ, nuôi dưỡng, vun đắp, uốn nắn, rèn luyện và phát triển. Điều còn thiếu trong phương pháp tiếp cận vô trùng hiện tại của chúng ta là trách nhiệm của những người  lớn tổi trong việc dạy dỗ những người trẻ hơn.
+Sự khác biệt là quan điểm cho rằng cách giá trị nghề nghiệp và sự nhạy bén về kỹ thuật phải được dạy dỗ, nuôi dưỡng, vun đắp, uốn nắn, rèn luyện và phát triển. Điều còn thiếu trong phương pháp tiếp cận vô trùng hiện tại của chúng ta là trách nhiệm của những người lớn tuổi trong việc dạy dỗ những người trẻ hơn.
+
+## Nghề thủ công
+
+Vậy là bây giờ bạn đang ở vị trí để định nghĩa từ này: _craftsmanship_. Vậy nó là gì? Để tìm hiểu, hãy xem xét từ _thợ thủ công (craftsman)_. Một từ mang lại hình dung về kỹ năng và chất lượng cao. Nó bao gồm kinh nghiệm và năng lực. Một người thợ thủ công là một người làm việc nhanh chóng, nhưng không vội vàng, một người đưa ra những ước lượng hợp lý và đáp ứng được cam kết. Một người thợ thủ công biết khi nào cần nói không, nhưng cố gắng hết sức để nói có. Một người thợ thủ công là một chuyên gia. 
+
+Nghề thủ công là một _tư duy (mindset)_ của thợ thủ công. Nghề thủ công là một meme chứa đựng các giá trị, kỷ luật, kỹ thuật, thái độ và kết quả. 
+
+Nhưng làm thế nào thợ chủ công áp dựng được meme này? Làm thế nào họ đạt được tư duy này?
+
+Meme nghề thủ công được truyền từ người ngày sang người khác. Được truyền dạy từ người lớn tuổi cho người trẻ. Nó được trao đổi với nhau. Nó là sự quan sát và xác định lại, như nhưng người lớn tuổi quan sát người trẻ hơn. Nghề thủ công là một thứ lây nhiễm, một loại virus tâm trí. Bạn nắm bắt được nó thông qua quan sát những người khác và cho phép meme làm phần còn lại. 
+
+### Thuyết phục người khác
+
+Bạn không thể thuyết phục người ta trở thành thợ thủ công. Bạn không thể thuyết phục họ chấp nhận meme nghề thủ công. Lập luận không mang lại hiệu quả. Dữ liệu không quan trọng. Case study không có ý nghĩa gì. Việc chấp nhận một meme không phải là một quyết định lý trí như một quyết định cảm tính. Đây là một điều rất con người. 
+
+Vậy làm thế nào bạn khiến người khác chấp nhận meme nghề thủ công? Nhớ rằng meme có thể lây nhiễm, nhưng chỉ khi nó được quan sát. Vậy nên bạn phải làm cho meme _quan sát được_. Bạn trình diễn như một hình mẫu. Bạn trở thành thợ thủ công trước, và để cho nghề thủ công của bạn thể hiện. Sau đó để meme làm nốt phần còn lại. 
+
+## Kết luận
+
+Trường học có thể dạy lý thuyết về lập trình máy tính. Nhưng trường học không dạy, và không thể dạy về kỷ luật, thực hành và kỹ năng để trở thành một thợ thủ công. Những thứ đó được tích lũy hàng năm trời bởi sự kèm cặp và cố vấn của mỗi cá nhân. Đây là lúc mỗi người trong ngành phần mềm đối mặt với sự thật rằng hướng dẫn thế hệ tiếp theo nằm trong tay chúng ta, không phải ở trong trường đại học. Đây là lúc chúng ta nên áp dụng chương trình học việc, thực tập và hướng dẫn dài hạn.
