@@ -8,6 +8,8 @@ layout: default
 
 [Chương 1 - Sự chuyên nghiệp](./chapter-1-professionalism.html).
 
+[Chương 2 - Phản đối (Nói không)](./chapter-2-saying-no.html).
+
 [Chương 5 - Test Driven Development](./chapter-5-test-driven-development.html).
 
 [Chương 6 - Luyện tập](./chapter-6-practicing.html).
