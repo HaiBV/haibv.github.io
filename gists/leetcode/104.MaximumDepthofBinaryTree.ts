@@ -2,17 +2,7 @@
  * 104. Maximum Depth of Binary Tree
  * Binary Tree, DFS, BFS
  */
-
-class TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.left = left === undefined ? null : left;
-    this.right = right === undefined ? null : right;
-  }
-}
+import TreeNode from '../dataStructures/TreeNode';
 
 // Recursion, DFS
 function maxDepth(root: TreeNode | null): number {
