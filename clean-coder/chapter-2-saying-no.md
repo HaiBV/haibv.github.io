@@ -20,13 +20,33 @@ Quản lý của tôi, Bill, là một người dễ mến. Anh ta đã làm vi�
 
 Vì vậy, chúng tôi go live đúng ngày. Và nó là một thảm họa kinh hoàng.
 
-Có hàng tá máy 300-baud, thiết bị đầu cuối bán song công, kết nối từ trụ sở chính của Teamster ở Chicago đến máy của chúng tôi ở vùng ngoại ô 30 dặm về phía bắc. Mỗi thiết bị đó bị khóa 30 phút hoặc lâu hơn. Chúng tôi đã từng gặp sự cố này trước đây nhưng chưa mô phỏng lưu truy cập khi mà một loạt nhân viên nhập dữ liệu đột ngột truy cập vào hệ thống.
+Có hàng tá máy 300-baud, thiết bị đầu cuối bán song công, kết nối từ trụ sở chính của Teamster ở Chicago đến máy của chúng tôi ở vùng ngoại ô 30 dặm về phía bắc. Mỗi thiết bị đó đều bị tê liệt 30 phút hoặc lâu hơn. Chúng tôi đã từng gặp sự cố này trước đây nhưng chưa mô phỏng lưu truy cập khi mà một loạt nhân viên nhập dữ liệu đột ngột truy cập vào hệ thống.
 
 Tệ hơn nữa, những băng giấy được in từ máy ASR35 cũng kết nối với hệ thống của chúng tôi bằng đường dây điện thoại 110-baud cũng dừng lại khi đang in.
 
-...
+Giải pháp cho việc tê liệt là khởi động lại. Vì vậy họ phải yêu cầu những ai còn làm việc với máy đang hoạt động hoàn thành công việc và dừng lại. Khi tất cả đã dừng lại, họ thông báo cho chúng thôi khởi động lại hệ thống. Những máy bị tê liệt sẽ bắt đầu công việc lại từ đầu. Và việc này tái diễn nhiều hơn 1 lần trong vòng 1 giờ.
 
-Làm thế nào bạn nói không với sếp của bạn? Sau tất cả, đó là sếp của bạn! Bạn không phải làm theo những gì họ nói?
+Sau nửa ngày như vậy, quản lý văn phòng tại Teamster bảo chúng tôi tắt hệ thống đi và không hoạt động lại cho đến khi mọi thứ hoạt động ổn định. Trong khi đó, họ sẽ mất nửa ngày làm việc và cần phải sử dụng hệ thống cũ để nhập lại mọi thứ.
+
+Chúng tôi nghe thấy tiếng rên rỉ và gào thét của Frank vang lên khắp tòa nhà. Họ bàn bạc rất, rất lâu. Sau đó Bill và phân tích hệ thống Jalil đến gặp chúng tôi và hỏi khi nào chúng tôi có thể làm cho hệ thống hoạt động ổn định. Tôi nói, "4 tuần".
+
+Khuôn mặt họ chuyển từ kinh hãi sang quyết tâm. "Không", họ nói, "nó phải chạy được vào thứ 6";
+
+Nên tôi trả lời: "Nhìn xem, chúng ta vừa mới có hệ thống này để giải quyết công việc vào tuần trước. Chúng ta cần ngồi xuống và giải quyết những rắc rối và vấn đề gặp phải. Chúng ta cần 4 tuần".
+
+Nhưng Bill và Jalil vẫn cương quyết. "Không, nó phải chạy được vào thứ 6. Ít nhất hãy thử cố một lần xem?"
+
+Sau đó trưởng nhóm chúng tôi nói: "OK, chúng tôi sẽ cố".
+
+Thứ 6 là một lựa chọn tốt, lượng tải vào cuối tuần thấp hơn nhiều. Chúng tôi có thể tìm ra nhiều vấn đề và chỉnh sửa chúng trước thứ 2. Tuy nhiên, mọi thứ lại sụp đổ một lần nữa. Hệ thống vẫn bị tê liệt 1 hoặc 2 lần trong ngày. Có cả những vấn đề khác nữa. Nhưng dần dần, sau một vài tuần, chúng tôi đưa được hệ thống về mức ổn định, và cuộc sống bình thường có vẻ thực sự diễn ra.
+
+Và sau đó, như tôi đã nói với bạn ở phần giới thiệu, tất cả chúng tôi đều nghỉ việc. Và họ đã bị bỏ lại với một cuộc khủng hoảng thực sự. Họ đã phải thuê một loạt lập trình viên mới để cố gắng giải quyết vấn lượng tải khổng lồ từ khách hàng.
+
+Chúng ta có thể đổ lỗi thất bại này cho ai? Rõ ràng, kiểu quản lý của Frank là một phần vấn đề. Những lời đe dọa của đã khiến ông ta khó có thể nghe được sự thật. Đáng nhẽ Bill và Jalil nên kìm chế Frank lại nhiều hơn. Đáng nhẽ trưởng nhóm không nên chấp nhận hạn chót vào thứ 6. Và đáng nhẽ, tôi nên tiếp nói "không" thay vì nghe theo trưởng nhóm.
+
+Người chuyên nghiệp nói lên sự thật với quyền lực. Người chuyên nghiệp đủ can đảm để nói không với quản lý của họ.
+
+Làm thế nào bạn nói "không" với sếp của bạn? Sau tất cả, đó là sếp của bạn! Bạn không phải làm theo những gì họ nói?
 
 Không, nếu bạn là một người chuyên nghiệp.
 
