@@ -51,3 +51,14 @@ Làm thế nào bạn nói "không" với sếp của bạn? Sau tất cả, đ�
 Không, nếu bạn là một người chuyên nghiệp.
 
 Nô lệ không được phép nói không. Người lao động có thể do dự khi nói không. Nhưng những người chuyên nghiệp phải biết nói không. Thật vậy, những nhà quản lý giỏi luôn khát khao có một người đủ can đảm để từ chối. Đó là cách duy nhất bạn thực sự có thể hoàn thành mọi việc.
+
+## Vai trò đối đầu
+
+Một trong những người đánh giá cuốn sách thực sự ghét chính chương này. Anh ấy nói rằng nó suýt khiến anh phải bỏ cuốn sách xuống. Anh ta đã xây dựng những đội nhóm không có mối quan hệ đối đầu nào; những đội nhóm đó làm việc với nhau rất hòa hợp và không hề có bất đồng.
+
+Tôi lấy làm hạnh phúc cho anh ta, nhưng tôi tự hỏi liệu những đội nhóm đó có thực sự không tồn tại bất đồng như anh ta vẫn nghĩ. Và nếu vậy, tôi tự hỏi liệu họ có hiệu quả như họ nghĩ không. Kinh nghiệm của riêng tôi là các quyết định khó khăn được quyết định tốt nhất thông qua việc đối đầu với các vai trò đối địch.
+
+Quản lý là những người có 1 việc để làm, và phần lớn họ biết cách làm khá tốt tốt công việc đó. Một phần của công việc là theo đuổi và bảo vệ mục tiêu của họ một cách quyết liệt nhất có thể. 
+
+Nhưng mặt khác, lập trình viên cũng là những người có 1 việc để làm, và phần lớn họ biết cách hoàn thành khá tốt công việc đó. Nếu họ là người chuyên nghiệp, họ sẽ theo đuổi và bảo vệ mục tiêu _của họ_ một cách quyết liệt nhất có thể.
+
