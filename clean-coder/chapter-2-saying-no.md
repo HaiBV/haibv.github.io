@@ -58,7 +58,20 @@ Một trong những người đánh giá cuốn sách thực sự ghét chính c
 
 Tôi lấy làm hạnh phúc cho anh ta, nhưng tôi tự hỏi liệu những đội nhóm đó có thực sự không tồn tại bất đồng như anh ta vẫn nghĩ. Và nếu vậy, tôi tự hỏi liệu họ có hiệu quả như họ nghĩ không. Kinh nghiệm của riêng tôi là các quyết định khó khăn được quyết định tốt nhất thông qua việc đối đầu với các vai trò đối địch.
 
-Quản lý là những người có 1 việc để làm, và phần lớn họ biết cách làm khá tốt tốt công việc đó. Một phần của công việc là theo đuổi và bảo vệ mục tiêu của họ một cách quyết liệt nhất có thể. 
+Quản lý là những người có 1 việc để làm, và phần lớn họ biết cách làm khá tốt tốt công việc đó. Một phần của công việc là theo đuổi và bảo vệ mục tiêu của họ một cách quyết liệt nhất có thể.
 
 Nhưng mặt khác, lập trình viên cũng là những người có 1 việc để làm, và phần lớn họ biết cách hoàn thành khá tốt công việc đó. Nếu họ là người chuyên nghiệp, họ sẽ theo đuổi và bảo vệ mục tiêu _của họ_ một cách quyết liệt nhất có thể.
 
+Khi quản lý của bạn nói với bạn rằng trang đăng nhập cần sẵn sàng vào ngày mai, anh ta đang theo đuổi và bảo vệ một trong những mục tiêu của mình. Anh ta đang làm công việc của mình. Nếu bạn biết chắc rằng hoàn thành trang đăng nhập vào ngày mai là không thể, vậy thì bạn đang không làm tốt công việc của mình nếu bạn nói "OK, tôi sẽ cố". Cách duy nhất để thực hiện công việc của bạn, tại thời điểm đó, là nói "Không, điều đó là không thể".
+
+Nhưng bạn không cần phải làm những việc quản lý của bạn yêu cầu sao? Không, quản lý sẽ tin tưởng để bạn bảo vệ mục tiêu của bạn quyết liệt như anh ta bảo vệ mục tiêu của anh ta. Đó là cách đôi bên có thể đưa ra được _kết quả tốt nhất_.
+
+Kết quả tốt nhất là mục tiêu mà bạn và quản lý cùng chia sẻ. Bí quyết để đạt được kết quả đó thường là thông qua thương lượng.
+
+Thương lượng có đôi khi rất dễ chịu.
+
+Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
+Paula: "Oh, wow! Sớm thế ah? Chà, OK, tôi sẽ cố"
+Mike: "OK, tuyệt quá. Cảm ơn nhé!"
+
+Đó là một cuộc trò chuyện ngắn tốt đẹp. Tránh được tất cả xung đột. Cả hai đều tươi cười ra về. Rất tốt.
