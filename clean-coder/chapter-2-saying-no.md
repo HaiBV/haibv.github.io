@@ -75,3 +75,7 @@ Paula: "Oh, wow! Sớm thế ah? Chà, OK, tôi sẽ cố"
 Mike: "OK, tuyệt quá. Cảm ơn nhé!"
 
 Đó là một cuộc trò chuyện ngắn tốt đẹp. Tránh được tất cả xung đột. Cả hai đều tươi cười ra về. Rất tốt.
+
+Nhưng cả 2 bên đều đang cư xử thiếu chuyên nghiệp. Paula biết rõ rằng cô cần nhiều hơn một ngày cho trang đăng nhập, tức là cô đang nói dối. Cô ấy có thể không nghĩ đó là nói dối. Có thể cô ấy nghĩ rằng mình _thực sự sẽ cố gắng_, và có thể cô ấy giữ lấy một chút hy vọng nhỏ nhoi rằng cô sẽ thực sự hoàn thành nó. Nhưng cuối cùng thì đó vẫn là một lời nói dối.
+
+Ở phía còn lại, Mike, chấp nhận câu trả lời "Tôi sẽ cố" như một sự khẳng định. Đó thực sự là một việc ngốc nghếch. Anh ấy nên biết rằng Paula chỉ đang lảng tránh sự xung đột, nên anh ấy nên nhấn mạnh vào vấn đề bằng việc nói, "Bạn có vẻ do dự. Bạn có chắc rằng nó sẽ hoàn thành vào ngày mai hay không?"
