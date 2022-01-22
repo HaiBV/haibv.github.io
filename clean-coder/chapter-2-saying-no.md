@@ -79,3 +79,15 @@ Mike: "OK, tuyệt quá. Cảm ơn nhé!"
 Nhưng cả 2 bên đều đang cư xử thiếu chuyên nghiệp. Paula biết rõ rằng cô cần nhiều hơn một ngày cho trang đăng nhập, tức là cô đang nói dối. Cô ấy có thể không nghĩ đó là nói dối. Có thể cô ấy nghĩ rằng mình _thực sự sẽ cố gắng_, và có thể cô ấy giữ lấy một chút hy vọng nhỏ nhoi rằng cô sẽ thực sự hoàn thành nó. Nhưng cuối cùng thì đó vẫn là một lời nói dối.
 
 Ở phía còn lại, Mike, chấp nhận câu trả lời "Tôi sẽ cố" như một sự khẳng định. Đó thực sự là một việc ngốc nghếch. Anh ấy nên biết rằng Paula chỉ đang lảng tránh sự xung đột, nên anh ấy nên nhấn mạnh vào vấn đề bằng việc nói, "Bạn có vẻ do dự. Bạn có chắc rằng nó sẽ hoàn thành vào ngày mai hay không?"
+
+Sau đây là một cuộc trò chuyện thú vị khác 
+
+Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
+Paula: "Oh, xin lỗi Mike, nhưng tôi cần nhiều thời gian hơn để hoàn thành"
+Mike: "Khi nào bạn nghĩ bạn có thể hoàn thành được?"
+Paula: "2 tuần nữa kể từ giờ thì sao?"
+Mike: "OK, cảm ơn nhé."
+
+Cũng rất dễ chịu, nó cũng vô cùng rối loạn và hoàn toàn không chuyên nghiệp. Cả hai đều thất bại trong việc tìm kiếm kết quả tốt nhất có thể. Thay vì hỏi liệu 2 tuần có ổn không, Paula nên quyết đoán hơn: "Tôi sẽ mất 2 tuần, Mike"
+
+Ở phía còn lại, Mike, chấp nhận thời hạn mà không hỏi lại, dường như mục tiêu của riêng anh ta không quan trọng. Mọi người tự hỏi nếu anh ta không chỉ đơn giản báo cáo lại với sếp mình rằng buổi giới thiệu sản phẩm sẽ hoãn lại vì Paula. Kiểu hành vi hung hăng thụ động đó có đáng trách về mặt đạo đức?
