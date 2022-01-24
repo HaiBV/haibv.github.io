@@ -80,7 +80,7 @@ Nhưng cả 2 bên đều đang cư xử thiếu chuyên nghiệp. Paula biết 
 
 Ở phía còn lại, Mike, chấp nhận câu trả lời "Tôi sẽ cố" như một sự khẳng định. Đó thực sự là một việc ngốc nghếch. Anh ấy nên biết rằng Paula chỉ đang lảng tránh sự xung đột, nên anh ấy nên nhấn mạnh vào vấn đề bằng việc nói, "Bạn có vẻ do dự. Bạn có chắc rằng nó sẽ hoàn thành vào ngày mai hay không?"
 
-Sau đây là một cuộc trò chuyện thú vị khác 
+Sau đây là một cuộc trò chuyện thú vị khác
 
 Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
 Paula: "Oh, xin lỗi Mike, nhưng tôi cần nhiều thời gian hơn để hoàn thành"
@@ -91,3 +91,10 @@ Mike: "OK, cảm ơn nhé."
 Cũng rất dễ chịu, nó cũng vô cùng rối loạn và hoàn toàn không chuyên nghiệp. Cả hai đều thất bại trong việc tìm kiếm kết quả tốt nhất có thể. Thay vì hỏi liệu 2 tuần có ổn không, Paula nên quyết đoán hơn: "Tôi sẽ mất 2 tuần, Mike"
 
 Ở phía còn lại, Mike, chấp nhận thời hạn mà không hỏi lại, dường như mục tiêu của riêng anh ta không quan trọng. Mọi người tự hỏi nếu anh ta không chỉ đơn giản báo cáo lại với sếp mình rằng buổi giới thiệu sản phẩm sẽ hoãn lại vì Paula. Kiểu hành vi hung hăng thụ động đó có đáng trách về mặt đạo đức?
+
+Trong tất cả các trường hợp trên không bên nào theo đuổi một mục tiêu chung có thể chấp nhận được. Không bên nào tìm kiếm kết quả tốt nhất có thể. Chúng ta hãy xem thử ví dụ dưới đây.
+
+Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
+Paula: "Không, Mike, việc đó cần 2 tuần"
+Mike: "2 tuần? Các kiến trúc sư ước tính nó hết khoang 3 ngày, bây giờ là 5!"
+Paula: "Họ đã sai, Mike."
