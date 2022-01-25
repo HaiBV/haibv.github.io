@@ -97,4 +97,13 @@ Trong tất cả các trường hợp trên không bên nào theo đuổi một 
 Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
 Paula: "Không, Mike, việc đó cần 2 tuần"
 Mike: "2 tuần? Các kiến trúc sư ước tính nó hết khoang 3 ngày, bây giờ là 5!"
-Paula: "Họ đã sai, Mike."
+Paula: "Họ đã sai, Mike. Họ ước lượng trước khi có yêu cầu cuối cùng. Tôi cần ít nhất 10 ngày để hoàn thành. Anh chưa xem ước lượng mới nhất của tôi trên wiki ah?"
+Mike: (với vẻ mặt vô cùng thất vọng) "Điều này không chấp nhận được, Paula. Khách hàng sẽ tới cho một buổi demo vào ngày mai, và tôi cần cho họ thấy trang đăng nhập hoạt động."
+Paula: "Phần nào của trang đăng nhập anh muốn hoạt động vào ngày mai?"
+Mike: "Tôi muốn _trang đăng nhập_! Tôi muốn nó có thể _đăng nhập_ được"
+Paula: "Mike, tôi có thể cung cấp cho anh một bản mô phỏng của trang đăng nhập cho phép đăng nhập. Tôi sẽ làm việc đó ngay bây giờ. Nó sẽ không thực sự kiểm tra tên và mật khẩu, và nó sẽ không gửi email quên mật khẩu. Nó sẽ không có biểu ngữ tin tức của công ty, và nút trợ giúp sẽ không hoạt động. Nó sẽ không lưu cookie ghi nhớ và sẽ không đặt ra bất kỳ giới hạn nào đối với anh. Nhưng anh có thể đăng nhập. Điều đó được chứ?
+Mike: "Tôi sẽ có thể đăng nhập?"
+Paula: "Đúng, anh sẽ có thể đăng nhập".
+Mike: "Thật tuyệt vời Paula, bạn là vị cứu tinh!" (bước đi với tay giơ lên không "Yes")
+
+Họ đã đạt được kết quả tốt nhất có thể. Họ làm được vậy bằng cách nói không và sau đó cùng tìm ra giải pháp được cả 2 đồng thuận. Họ hành động như những người chuyên nghiệp. Cuộc trò chuyện có chút mâu thuẫn và có đôi lúc không thoải mãi, nhưng điều đó xảy ra khi cả hai quyết tâm theo đuổi những mục tiêu không khớp nhau.
