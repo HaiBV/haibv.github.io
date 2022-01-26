@@ -107,3 +107,11 @@ Paula: "Đúng, anh sẽ có thể đăng nhập".
 Mike: "Thật tuyệt vời Paula, bạn là vị cứu tinh!" (bước đi với tay giơ lên không "Yes")
 
 Họ đã đạt được kết quả tốt nhất có thể. Họ làm được vậy bằng cách nói không và sau đó cùng tìm ra giải pháp được cả 2 đồng thuận. Họ hành động như những người chuyên nghiệp. Cuộc trò chuyện có chút mâu thuẫn và có đôi lúc không thoải mãi, nhưng điều đó xảy ra khi cả hai quyết tâm theo đuổi những mục tiêu không khớp nhau.
+
+### Vậy "lý do" là gì?
+
+Có thể bạn nghĩ rằng Paula nên giải thích _tại sao_ trang đăng nhập lại cần thêm nhiều thời gian. Theo kinh nghiệm của tôi, _lý do tại sao_ không quan trọng bằng _sự thật_. Sự thật là trang đăng nhập cần đến 2 tuần. Tại sao nó cần đến 2 tuần chỉ là một chi tiết.
+
+Tuy nhiên, biết lý do tại sao sẽ giúp Mike hiểu và do đó chấp nhận sự thật. Công bằng hơn. Và trong trường hợp Mike có chuyên môn về kỹ thuật và đủ kiên nhẫn để hiểu, khi đó sự giải thích sẽ có tác dụng. Mặt khác, Mike có thể không đồng ý với kết luận này. Mike có thể kết luận Paula đã làm sai mọi thứ. Anh ta có thể nói với Paula rằng cô không cần unit test, hoặc đánh giá, hoặc bước thứ 12 có thể bỏ qua. Cung cấp quá nhiều chi tiết có thể là một lời mời cho việc quản lý vi mô.
+
+## Rủi ro cao
