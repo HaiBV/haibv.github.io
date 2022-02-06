@@ -115,3 +115,7 @@ Có thể bạn nghĩ rằng Paula nên giải thích _tại sao_ trang đăng n
 Tuy nhiên, biết lý do tại sao sẽ giúp Mike hiểu và do đó chấp nhận sự thật. Công bằng hơn. Và trong trường hợp Mike có chuyên môn về kỹ thuật và đủ kiên nhẫn để hiểu, khi đó sự giải thích sẽ có tác dụng. Mặt khác, Mike có thể không đồng ý với kết luận này. Mike có thể kết luận Paula đã làm sai mọi thứ. Anh ta có thể nói với Paula rằng cô không cần unit test, hoặc đánh giá, hoặc bước thứ 12 có thể bỏ qua. Cung cấp quá nhiều chi tiết có thể là một lời mời cho việc quản lý vi mô.
 
 ## Rủi ro cao
+
+Thời điểm quan trọng nhất để nói không là khi sự rủi ro ở mức cao. Mức độ rủi ro càng cao, giá trị của sự phản đổi càng cao. 
+
+Điều này rất hiển nhiên. Khi cái giá của thất bại cao đến mức sự tồn vong của công ty bạn phụ thuộc vào nó, bạn phải hoàn toàn quyết tâm cung cấp cho quản lý của mình những thông tin tốt nhất bạn có. Và điều đó thường có nghĩa là nói không. 
