@@ -3,7 +3,7 @@
  * String, Dynamic Programming, Backtracking
  */
 function generateParenthesis(n: number): string[] {
-  const res = [];
+  const res: string[] = [];
 
   function go(l: number, r: number, s: string) {
     if (l > r) return;
