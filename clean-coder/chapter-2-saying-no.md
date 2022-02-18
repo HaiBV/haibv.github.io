@@ -119,3 +119,25 @@ Tuy nhiên, biết lý do tại sao sẽ giúp Mike hiểu và do đó chấp nh
 Thời điểm quan trọng nhất để nói không là khi sự rủi ro ở mức cao. Mức độ rủi ro càng cao, giá trị của sự phản đổi càng cao. 
 
 Điều này rất hiển nhiên. Khi cái giá của thất bại cao đến mức sự tồn vong của công ty bạn phụ thuộc vào nó, bạn phải hoàn toàn quyết tâm cung cấp cho quản lý của mình những thông tin tốt nhất bạn có. Và điều đó thường có nghĩa là nói không. 
+
+Don (Giám đốc phát triển): "Vậy là, ước lượng hiện tại để hoàn thành dự án Goose Golden (ngỗng vàng!!!) là 12 tuần kể từ bây giờ, có thể thêm hoặc bớt đi 5 tuần nhưng không chắc lắm".
+
+Charles (CEO): (nhìn trừng trừng 15s với khuôn mặt đở bừng) "Anh đang nói với tôi rằng chúng tôi có thể cần đến 17 tuần để hoàn thành?"
+
+Don: "Vâng, có thể như thế."
+
+Charles: (lập tức đứng dậy): "Chết tiệt, Don! Nó đáng nhẽ phải hoàn thành từ 3 tuần trước! Tôi nhận được cuộc gọi của Galitron mỗi ngày chỉ để hỏi về hệ thống chết tiệt đó đang ở đâu. Tôi sẽ không nói với họ rằng họ phải đợi thêm 4 tháng nữa. Chúng ta phải làm gì đó tốt hơn.
+
+Don: Chuck, tôi đã nói với anh _3 tháng trước_, sau tất cả cắt giảm, chúng ta cần thêm 4 tháng nữa. Ý tôi là, Chúa Chuck ơi, anh giảm 20% nhân sự của tôi! Anh có nói với Galitron chúng ta sẽ chậm tiến độ không?
+
+Charles: "Anh biết rõ là tôi không thể. Chúng ta không thể trụ được nếu mất hợp đồng này Don ạ. (Charles dừng lại, mặt trắng bệch) Không có Galitron, chúng ta chỉ có cạp đất. Anh biết điều đó đúng không? Và bây giờ với sự chậm trễ này, tôi e là ... Nếu tôi nói với ban giám thì sao? (Anh ta từ từ ngồi xuống, cố gắng không gục ngã) Don, anh cần phải làm tốt hơn"
+
+Don: "Tôi không thể được gì cả Chuck. Chúng ta đã trải qua việc này rồi. Galitron không cắt giảm khối lượng công việc, và họ sẽ không chấp nhận bất kỳ phiên bản tạm thời nào. Họ muốn cài đặt và hoàn thiện một lần duy nhất. Tôi không thể làm nó nhanh hơn được. Điều đó _không thể_ xảy ra."
+
+Charles: "Chết tiệt. Tôi không nghĩ sẽ có vấn đề gì nếu tôi nói với anh rằng vị trí của anh đang gặp rắc rối."
+
+Don: "Sa thải tôi sẽ không làm thay đổi ước lượng đâu, Charles"
+
+Charles: "Thôi, tôi không muốn nói thêm nữa. Quay lại với đội phát triển và giữ cho dự án tiếp tục chạy. Tôi cần thực hiện một vài cuộc gọi khó khăn bây giờ."
+
+Tất nhiên, ngay khi nhận được ước lượng mới, Charles cần phải nói với Galitron rằng sẽ không có chuyện hoàn thành từ 3 tháng trước. Ít nhất bây giờ anh ta đã làm một việc đúng đắn là gọi cho họ (và ban giám đốc). Nhưng nếu Don giữ vững lập trường của mình, những cuộc gọi đó có thể bị trì hoãn lâu hơn.
