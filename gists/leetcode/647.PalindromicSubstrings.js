@@ -3,7 +3,7 @@
  * String, Dynamic Programming
  */
 
-function countSubstrings(s: string): number {
+function countSubstrings(s) {
   const l = s.length;
   let counter = 0;
 
