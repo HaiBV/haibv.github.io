@@ -141,3 +141,9 @@ Don: "Sa thải tôi sẽ không làm thay đổi ước lượng đâu, Charles
 Charles: "Thôi, tôi không muốn nói thêm nữa. Quay lại với đội phát triển và giữ cho dự án tiếp tục chạy. Tôi cần thực hiện một vài cuộc gọi khó khăn bây giờ."
 
 Tất nhiên, ngay khi nhận được ước lượng mới, Charles cần phải nói với Galitron rằng sẽ không có chuyện hoàn thành từ 3 tháng trước. Ít nhất bây giờ anh ta đã làm một việc đúng đắn là gọi cho họ (và ban giám đốc). Nhưng nếu Don giữ vững lập trường của mình, những cuộc gọi đó có thể bị trì hoãn lâu hơn.
+
+## Là một "Team player" (người có kỹ năng làm việc nhóm tốt)
+
+Chúng ta đều biết được tầm quan trong của việc là một "team player". Trở thành một team player tức là bạn chơi tốt vị trí của mình một cách tốt nhất bạn có thể, và giúp đỡ đồng đội khi họ gặp rắc rối. Một team player thường xuyên tương tác, quan tâm đến đồng đội của anh/cô ấy, và đảm bảo trách nhiệm của riêng anh/cô ấy tốt nhất có thể.
+
+Một team player không phải là người lúc nào cũng nói có. Xem xét ví dụ dưới đây:
