@@ -33,6 +33,19 @@ var decodeString = function (s) {
   return curString;
 };
 
+var decodeStringWithRegex = function (s) {
+  const regex = /(\d+)\[([A-Za-z]+)\]/g;
+
+  function replacer(match, number, letter) {
+    return letter.repeat(number);
+  }
+
+  while (s.includes('[')) {
+    s = s.replace(regex, replacer);
+  }
+  return s;
+};
+
 decodeString('3[a]2[bc]'); // "aaabcbc"
 decodeString('3[a2[c]]'); // "accaccacc"
 decodeString('2[abc]3[cd]ef'); // "abcabccdcdcdef"
