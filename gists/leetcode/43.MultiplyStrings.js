@@ -27,7 +27,11 @@ var multiply = function (num1, num2) {
     }
   }
 
-  return pos.join('').replace(/^0*/, '');
+  const res = pos.join('').replace(/^0*/, '');
+
+  return res.length > 0 ? res : '0';
 };
 
-console.log(multiply('2', '3'));
+multiply('2', '3');
+
+multiply('0', '0');
