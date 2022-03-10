@@ -2,9 +2,8 @@
  * 24. Swap Nodes in Pairs
  * Linked List, Recursion
  */
-import ListNode from '../dataStructures/ListNode';
 
-function swapPairs(head: ListNode | null): ListNode | null {
+function swapPairs(head) {
   if (!head || !head.next) return head;
   var v1 = head,
     v2 = head.next,
