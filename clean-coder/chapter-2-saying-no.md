@@ -192,3 +192,7 @@ Don: "OK, Mike, như anh đã biết 6 tuần nữa khách hàng sẽ tới đâ
 Mike: "Vâng, và chúng ta sẽ sẵn sàng. Team của tôi đang rất nỗ lực và chúng ta sẽ hoàn thành đúng hẹn. Chúng tôi có thể làm thêm giờ, và có một chút sáng tạo, nhưng chúng tôi sẽ hoàn thành.
 
 Don: "Thật tuyệt vời khi anh và nhân viên của anh là những team player"
+
+Ai thực sự là những team player trong tình huống trên? Paula có tinh thần đồng đội, vì cô đã nêu ra những thứ có thể, hoặc không thể, hoàn thành với khả năng tốt nhất của mình. Cô ấy tích cực bảo vệ ý kiến của mình, bất chấp sự đe dọa và nịnh nọt của Mike. Mike có tinh thần đồng đội của team 1 người, anh ta chỉ nghĩ cho mình. Anh ta rõ ràng không đứng về phía Paula vì anh ta chỉ muốn cô cam kết những thứ trước đó cô đã nói rằng không thể hoàn thành. Anh ta cũng không đứng về phía Don (mặc dù anh ta không nghĩ thế) vì anh ta đã nói dối Don.
+
+Vậy tại sao Mike làm vậy? Anh ta muốn thể hiện mình là một người có tinh thần đồng đội với Don, và anh ta có lòng tin vào khả năng sẽ đe dọa và kiểm soát Paula "cố gắng" cho hạn chót 6 tuần. Mike không hề xấu xa; anh ta chỉ có tự tin vào khả năng của mình có thể khiến người khác làm việc anh ta muốn.
