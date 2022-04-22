@@ -196,3 +196,12 @@ Don: "Thật tuyệt vời khi anh và nhân viên của anh là những team pl
 Ai thực sự là những team player trong tình huống trên? Paula có tinh thần đồng đội, vì cô đã nêu ra những thứ có thể, hoặc không thể, hoàn thành với khả năng tốt nhất của mình. Cô ấy tích cực bảo vệ ý kiến của mình, bất chấp sự đe dọa và nịnh nọt của Mike. Mike có tinh thần đồng đội của team 1 người, anh ta chỉ nghĩ cho mình. Anh ta rõ ràng không đứng về phía Paula vì anh ta chỉ muốn cô cam kết những thứ trước đó cô đã nói rằng không thể hoàn thành. Anh ta cũng không đứng về phía Don (mặc dù anh ta không nghĩ thế) vì anh ta đã nói dối Don.
 
 Vậy tại sao Mike làm vậy? Anh ta muốn thể hiện mình là một người có tinh thần đồng đội với Don, và anh ta có lòng tin vào khả năng sẽ đe dọa và kiểm soát Paula "cố gắng" cho hạn chót 6 tuần. Mike không hề xấu xa; anh ta chỉ có tự tin vào khả năng của mình có thể khiến người khác làm việc anh ta muốn.
+
+### Cố gắng
+
+Điều tệ nhất mà Paula có thể trả lời cho sự kiểm soát của Mike là nói "OK, chúng tôi sẽ cố gắng". Tôi ghét phải mượn lời Yoda, nhưng trong trường hợp này ông đã đúng. _Không có gì gọi là cố gắng cả_.
+
+Có thể bạn không thích ý tưởng này? Có thể bạn nghĩ rằng _cố gắng_ là một việc làm tích cực. Suy cho cùng, liệu Columbus có tìm ra Châu Mỹ nếu ông không cố gắng?
+
+Từ _cố gắng_ mang rất nhiều nghĩa. Ý nghĩa mà tôi thấy có vấn đề ở đây là "dành nhiều nỗ lực hơn nữa". Liệu Paula có thể dành thêm nỗ lực để có được bản demo kịp thời? Nếu cô có thể nỗ lực hơn nữa, hẳn là cô ấy và nhóm của mình trước đây vẫn chưa nỗ lực hết sức. Họ hẵn vẫn dự trữ/giữ lại phần nào đõ nỗ lực của mình.
+
