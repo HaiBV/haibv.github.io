@@ -203,5 +203,6 @@ Vậy tại sao Mike làm vậy? Anh ta muốn thể hiện mình là một ngư
 
 Có thể bạn không thích ý tưởng này? Có thể bạn nghĩ rằng _cố gắng_ là một việc làm tích cực. Suy cho cùng, liệu Columbus có tìm ra Châu Mỹ nếu ông không cố gắng?
 
-Từ _cố gắng_ mang rất nhiều nghĩa. Ý nghĩa mà tôi thấy có vấn đề ở đây là "dành nhiều nỗ lực hơn nữa". Liệu Paula có thể dành thêm nỗ lực để có được bản demo kịp thời? Nếu cô có thể nỗ lực hơn nữa, hẳn là cô ấy và nhóm của mình trước đây vẫn chưa nỗ lực hết sức. Họ hẵn vẫn dự trữ/giữ lại phần nào đõ nỗ lực của mình.
+Từ _cố gắng_ mang rất nhiều nghĩa. Ý nghĩa mà tôi thấy có vấn đề ở đây là "dành nhiều nỗ lực hơn nữa". Liệu Paula có thể dành thêm nỗ lực để có được bản demo kịp thời? Nếu cô có thể nỗ lực hơn nữa, hẳn là cô ấy và nhóm của mình trước đây vẫn chưa nỗ lực hết sức. Họ hẵn vẫn dự trữ/giữ lại phần nào đố nỗ lực của mình.
 
+Lời hứa về việc cố gắng là một sự thừa nhận rằng bạn đang tự kìm hãm, rằng bạn có thể nỗ lực hơn nữa. Lời hứa về việc cố gắng là một sự thừa nhận rằng mục tiêu có thể đạt được thông qua việc thực hiện những nỗ lực thêm này; Hơn nữa, đó là một lời cam kết nỗ lực thêm để đạt được mục tiêu. Vì vậy, 
