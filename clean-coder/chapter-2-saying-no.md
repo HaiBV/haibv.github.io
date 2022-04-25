@@ -205,4 +205,48 @@ Có thể bạn không thích ý tưởng này? Có thể bạn nghĩ rằng _c�
 
 Từ _cố gắng_ mang rất nhiều nghĩa. Ý nghĩa mà tôi thấy có vấn đề ở đây là "dành nhiều nỗ lực hơn nữa". Liệu Paula có thể dành thêm nỗ lực để có được bản demo kịp thời? Nếu cô có thể nỗ lực hơn nữa, hẳn là cô ấy và nhóm của mình trước đây vẫn chưa nỗ lực hết sức. Họ hẵn vẫn dự trữ/giữ lại phần nào đố nỗ lực của mình.
 
-Lời hứa về việc cố gắng là một sự thừa nhận rằng bạn đang tự kìm hãm, rằng bạn có thể nỗ lực hơn nữa. Lời hứa về việc cố gắng là một sự thừa nhận rằng mục tiêu có thể đạt được thông qua việc thực hiện những nỗ lực thêm này; Hơn nữa, đó là một lời cam kết nỗ lực thêm để đạt được mục tiêu. Vì vậy, 
+Lời hứa về việc cố gắng là một sự thừa nhận rằng bạn đang tự kìm hãm, rằng bạn có thể nỗ lực hơn nữa. Lời hứa về việc cố gắng là một sự thừa nhận rằng mục tiêu có thể đạt được thông qua việc thực hiện những nỗ lực thêm này; Hơn nữa, đó là một lời cam kết nỗ lực thêm để đạt được mục tiêu. Vì vậy, bằng lời hứa về việc cố gắng, bạn đã cam kết cho thành công. Điều này sẽ đặt gánh nặng lên bạn. Nếu "cố gắng" của bạn không đạt kết quả mong muốn, đó sẽ là thất bại của bạn.
+
+Bạn có sự nỗ lực nào đang bị bản thân kìm hãm không? Nếu bạn sử dụng chúng, liệu bạn sẽ đạt được mục tiêu? Hoặc, bằng cách hứa sẽ cố gắng, bạn đơn giản là sắp đặt cho mình một thất bại?
+
+Bằng việc hứa sẽ cố gắng bạn đang hứa sẽ thay đổi kế hoạch. Tức là, kế hoạch ban đầu của bạn không đủ tốt. Bằng việc hứa sẽ cố gắng, bạn đang thể hiện rằng mình sẽ có một kế hoạch mới. Kế hoạch mới là gì? Bạn sẽ thực hiện thay đổi nào với hành động của mình? Những việc bạn sẽ phải làm khác đi khi bạn đang "cố gắng" là gì?
+
+Nếu bạn không có một kế hoạch mới, nếu bạn không thay đổi hành vi của mình, nếu bạn làm mọi thứ chính xác như cách bạn thực hiện trước khi hứa sẽ "cố gắng", vậy thì ý nghĩa của việc cố gắng là gì?
+
+Nếu bạn không giữ lại sự nỗ lực để dự phòng, nếu bạn không có kế hoạch mới, nếu bạn không thay đổi hành vi của mình, và nếu bạn hoàn toàn tin tưởng vào ước lượng ban đầu của mình, thì việc hứa cố gắng về cơ bản là không trung thực. Bạn đang _nói dối_. Và bạn làm điều đó có thể chỉ để giữ thể diện và tránh xung đột.
+
+Cách của Paula tốt hơn nhiều. Cô ấy luôn nhắc Mike rằng ước lượng của team là không chắc chắn. Cô ấy luôn nói rằng "8 hoặc 9 tuần". Cô ấy kéo dãn sự không chắc chắn và không nhượng bộ. Cô ấy không bao giờ gợi ý về những nỗ lực bổ sung, hoặc kế hoạch mới, hoặc thay đổi phương thức có thể giảm được sự không chắc chắn.
+
+Ba tuần sau ...
+
+Mike: "Paula, 3 tuần nữa sẽ có bản dùng thử và khách hàng yêu cầu phải có chức năng 'Tải tập tin lên' hoạt động"
+
+Paula: "Mike, điều này không có trong danh sách chức năng chúng ta đã đồng ý làm"
+
+Mike: "Tôi biết, nhưng họ yêu cầu như vậy"
+
+Paula: "OK, điều đó có nghĩa là SSO hoặc sao lưu sẽ bị loại khỏi bản dùng thử"
+
+Mike: "Tuyệt đối không! Họ cũng mong muốn các tính năng đó hoạt động"
+
+Paula: "Tức là, họ đang mong đọi mọi tính năng hoạt động. Đó là những gì anh đang nói với tôi. Tôi đã nói là điều đó sẽ không xảy ra"
+
+Mike: "Tôi xin lỗi Paula, nhưng khách hàng không nhượng bộ cho việc đó. Họ muốn thấy tất cả.
+
+Paula: "Chuyện đó sẽ không xảy ra, Mike. Đơn giản thế thôi"
+
+Mike: "Thôi nào Paula, ít nhất các bạn có thể _cố_ được không?"
+
+Paula: "Mike, tôi có thể _cố_ để bay. Tôi có thể _cố_ biến chì thành vàng. Tôi có thể _cố_ bơi qua Đại Tây Dương. Anh có nghĩ rằng tôi sẽ thành công?
+
+Mike: "Cô nói không hợp lý chút nào. Tôi không yêu cầu những _điều không thể_"
+
+Paula: "Có đấy, Mike, anh đang làm vậy"
+
+(Mike cười khẩy, gật đầu, rồi quay lưng bước đi)
+
+Mike: "Tôi có lòng tin ở cô Paula, tôi biết cô sẽ không làm tôi thất vọng"
+
+Paula: (nói phía sau Mike) "Mike, anh đang mơ thôi. Và nó sẽ không có kết cục tốt đẹp đâu"
+
+(Mike chỉ vẫy tay và không quay lại)
