@@ -150,47 +150,28 @@ Một team player không phải là người lúc nào cũng nói có. Xem xét 
 Paula: "Mike, tôi có bản ước lượng cho anh rồi đây. Mọi người trong team đã thống nhất chúng ta cần 8 tuần để có bản dùng thử, có thể hơn hoặc kém 1 tuần.
 
 Mike: "Paula, chúng ta đã lên kế hoạch cho bản dùng thử trong 6 tuần nữa kể từ giờ."
-
 Paula: "Và không nghe ý kiến từ chúng tôi? Thôi nào Mike, anh không thể ép chúng tôi như vậy"
-
 Mike: "Mọi việc đã được quyết định"
-
 Paula: (thở dài) "Thôi được, thế này nhé, tôi sẽ xem xét lại với 6 tuần chúng ta có thể an toàn bàn giao được những phần nào, sẽ không phải là toàn bộ hệ thống đâu. Sẽ có một vài chức năng chưa hoàn thành, và lượng dữ liệu tải được chưa hoàn thiện.
-
 Mike: "Paula, khách hàng muốn thấy một bản dùng thử hoàn thiện"
-
 Paula: "Điều đó không thể được Mike"
-
 Mike: "Chết tiệt. Thôi được, hãy đưa ra một bản kế hoạch tốt nhất có thể và đưa cho tôi vào ngày mai"
-
 Paula: "Đó là điều tôi sẽ làm"
-
 Mike: "Cô không thể làm bất cứ điều gì để hoàn thành sớm hơn ah? Có thể có cách nào đó thông minh và sáng tạo hơn."
-
 Paula: "Tất cả chúng tôi đều rất sáng tạo, Mike. Chúng tôi có cách giải quyết tốt cho vấn đề này, và thời gian sẽ là 8 hoặc 9 tuần, không phải 6"
-
 Mike: "Cô có thể làm thêm giờ"
-
 Paula: "Nó sẽ làm chúng tôi chậm hơn, Mike. Hãy nhớ lần gần nhất chúng ta làm thêm giờ, mọi thứ trở nên mất kiểm soát như thế nào?"
-
 Mike: "Đúng vậy, nhưng lần này mọi thứ sẽ khác"
-
 Paula: "Nó sẽ giống lần đó thôi, Mike. Tin tôi đi. Phải là 8 hoặc 9 tuần, không phải 6"
-
 Mike: "OK, cho tôi kế hoạch tốt nhất cô có, nhưng cứ tiếp tục nghĩ về việc làm thế nào để hoàn thành trong 6 tuần. Tôi biết các bạn sẽ tìm được cách nào đó"
-
 Paula: "Không, Mike, chúng tôi sẽ không làm thế. Chúng tôi có thể đưa ra một kế hoạch cho 6 tuần, nhưng nó sẽ thiếu nhiều chức năng và dữ liệu. Đó là cách mọi thứ diễn ra"
-
 Mike: "OK, Paula, nhưng tôi cá là các bạn có thể làm nên điều kỳ diệu nếu các bạn thử"
-
 (Paula lắc đầu bỏ đi)
 
 Sau đó, trong buổi họp chiến lược của ban giám đốc...
 
-Don: "OK, Mike, như anh đã biết 6 tuần nữa khách hàng sẽ tới đây cho buổi dùng thử. Họ muốn nhìn thấy mọi thứ vận hành.
-
-Mike: "Vâng, và chúng ta sẽ sẵn sàng. Team của tôi đang rất nỗ lực và chúng ta sẽ hoàn thành đúng hẹn. Chúng tôi có thể làm thêm giờ, và có một chút sáng tạo, nhưng chúng tôi sẽ hoàn thành.
-
+Don: "OK, Mike, như anh đã biết 6 tuần nữa khách hàng sẽ tới đây cho buổi dùng thử. Họ muốn nhìn thấy mọi thứ vận hành."
+Mike: "Vâng, và chúng ta sẽ sẵn sàng. Team của tôi đang rất nỗ lực và chúng ta sẽ hoàn thành đúng hẹn. Chúng tôi có thể làm thêm giờ, và có một chút sáng tạo, nhưng chúng tôi sẽ hoàn thành."
 Don: "Thật tuyệt vời khi anh và nhân viên của anh là những team player"
 
 Ai thực sự là những team player trong tình huống trên? Paula có tinh thần đồng đội, vì cô đã nêu ra những thứ có thể, hoặc không thể, hoàn thành với khả năng tốt nhất của mình. Cô ấy tích cực bảo vệ ý kiến của mình, bất chấp sự đe dọa và nịnh nọt của Mike. Mike có tinh thần đồng đội của team 1 người, anh ta chỉ nghĩ cho mình. Anh ta rõ ràng không đứng về phía Paula vì anh ta chỉ muốn cô cam kết những thứ trước đó cô đã nói rằng không thể hoàn thành. Anh ta cũng không đứng về phía Don (mặc dù anh ta không nghĩ thế) vì anh ta đã nói dối Don.
@@ -220,33 +201,26 @@ Cách của Paula tốt hơn nhiều. Cô ấy luôn nhắc Mike rằng ước l
 Ba tuần sau ...
 
 Mike: "Paula, 3 tuần nữa sẽ có bản dùng thử và khách hàng yêu cầu phải có chức năng 'Tải tập tin lên' hoạt động"
-
 Paula: "Mike, điều này không có trong danh sách chức năng chúng ta đã đồng ý làm"
-
 Mike: "Tôi biết, nhưng họ yêu cầu như vậy"
-
 Paula: "OK, điều đó có nghĩa là SSO hoặc sao lưu sẽ bị loại khỏi bản dùng thử"
-
 Mike: "Tuyệt đối không! Họ cũng mong muốn các tính năng đó hoạt động"
-
 Paula: "Tức là, họ đang mong đọi mọi tính năng hoạt động. Đó là những gì anh đang nói với tôi. Tôi đã nói là điều đó sẽ không xảy ra"
-
-Mike: "Tôi xin lỗi Paula, nhưng khách hàng không nhượng bộ cho việc đó. Họ muốn thấy tất cả.
-
+Mike: "Tôi xin lỗi Paula, nhưng khách hàng không nhượng bộ cho việc đó. Họ muốn thấy tất cả."
 Paula: "Chuyện đó sẽ không xảy ra, Mike. Đơn giản thế thôi"
-
 Mike: "Thôi nào Paula, ít nhất các bạn có thể _cố_ được không?"
-
-Paula: "Mike, tôi có thể _cố_ để bay. Tôi có thể _cố_ biến chì thành vàng. Tôi có thể _cố_ bơi qua Đại Tây Dương. Anh có nghĩ rằng tôi sẽ thành công?
-
+Paula: "Mike, tôi có thể _cố_ để bay. Tôi có thể _cố_ biến chì thành vàng. Tôi có thể _cố_ bơi qua Đại Tây Dương. Anh có nghĩ rằng tôi sẽ thành công?"
 Mike: "Cô nói không hợp lý chút nào. Tôi không yêu cầu những _điều không thể_"
-
 Paula: "Có đấy, Mike, anh đang làm vậy"
-
 (Mike cười khẩy, gật đầu, rồi quay lưng bước đi)
-
 Mike: "Tôi có lòng tin ở cô Paula, tôi biết cô sẽ không làm tôi thất vọng"
-
 Paula: (nói phía sau Mike) "Mike, anh đang mơ thôi. Và nó sẽ không có kết cục tốt đẹp đâu"
-
 (Mike chỉ vẫy tay và không quay lại)
+
+### Quyết liệt thụ động
+
+Paula cần đưa ra một quyết định thú vị. Cô ấy nghi ngờ Mike sẽ không nói với Don về ước lượng của mình. Cô ấy có thể đấy Mike vào đường cùng. Cô ấy đảm bảo tất cả các biên bản ghi nhớ đều được lưu trong hồ sơ, để khi thảm họa xảy ra, cô ấy có thể trình bày những lại nội dung và thời điểm mình đã nói với Mike. Đây là hành động quyết liệt thụ động. Paula để Mike tự đi vào đường cùng.
+
+Hoặc, cô ấy có thể cố gắng đối đầu với thảm họa bằng cách liên lạc trực tiếp với Don. Điều này chắc chắn là rủi ro, nhưng đó cũng là điều mà một người có tinh thần đồng đội thực sự hướng đến. Khi một đoàn tàu chở hàng lao xuống bạn và bạn là người duy nhất có thể nhìn thấy no, bạn có thể lặng lẽ bước ra khỏi đường ray và nhìn nó lao vào những người khác hoặc bạn có thể hét lên "Tàu, về lại đúng đường"
+
+Hai ngày sau...
