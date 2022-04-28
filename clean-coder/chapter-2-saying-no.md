@@ -224,3 +224,19 @@ Paula cần đưa ra một quyết định thú vị. Cô ấy nghi ngờ Mike s
 Hoặc, cô ấy có thể cố gắng đối đầu với thảm họa bằng cách liên lạc trực tiếp với Don. Điều này chắc chắn là rủi ro, nhưng đó cũng là điều mà một người có tinh thần đồng đội thực sự hướng đến. Khi một đoàn tàu chở hàng lao xuống bạn và bạn là người duy nhất có thể nhìn thấy no, bạn có thể lặng lẽ bước ra khỏi đường ray và nhìn nó lao vào những người khác hoặc bạn có thể hét lên "Tàu, về lại đúng đường"
 
 Hai ngày sau...
+
+Paula: "Mike, anh đã nói với Don về ước lượng của tôi chưa? Anh ấy đã nói với khách hàng rằng chức năng 'Tải tập tin lên' sẽ không sử dụng được ở bản dùng thử sẽ chưa?"
+Mike: "Paula, cô đã nói là cô sẽ làm cho nó hoạt động mà"
+Paula: "Không, Mike, tôi không nói thế. Tôi đã nói với anh là nó không thể. Đây là bản ghi chú tôi gửi cho anh sau cuộc họp"
+Mike: "Phải, những cô có nói là cô có thể _cố_ mà phải không?"
+Paula: "Chúng ta cũng đã bàn về việc đó Mike. Anh nhớ chứ, vàng và chì?
+Mike: (thở dài) "Nghe này, Paula, cô cần làm việc đó. Cô phải làm việc đó. Làm ơn bằng mọi giá, hãy làm cho nó hoạt động giúp tôi"
+Paula: "Mike, anh nhầm rồi. Tôi không cần phải làm cho nó hoạt động cho anh. Việc tôi _phải_ làm là, nếu anh không nói với Don, thì tôi sẽ nói"
+Mike: "Anh ta sẽ giết tôi mất, cô không được làm vậy"
+Paula: "Tôi không muốn làm thế, nhưng tôi sẽ nói nếu anh ép tôi"
+Mike: "Ôi, Paula..."
+Paula: Nghe này, Mike, những chức năng này _không thể_ hoàn thành kịp thời gian cho bản dùng thử. Anh cần phải lưu lại điều đó trong đầu. Đừng cố thuyết phục tôi làm việc chăm chỉ hơn. Đừng lừa đối bản thân rằng bằng cách nào đó tôi có thể lôi được con thỏ từ cái mũ. Đối mặt với thực tế rằng anh phải nói cho Don, và anh phải nói với anh ta _hôm nay_."
+Mike: (mở to mắt) "Hôm nay ah?"
+Paula: "Đúng, Mike. Là hôm nay. Vì ngày mai tôi sẽ có một cuộc họp với anh và Don về những chức năng sẽ nằm trong bản dùng thử. Nếu cuộc họp không diễn ra vào ngày mai, thì tự tôi bắt buộc phải đi gặp Don. Đây là bản ghi chú giải thích cho việc đó.
+Mike: "Cô đang cứu một bàn thua cho tôi đấy"
+Paula: "Mike, tôi đang cố cứu cả hai chúng ta. Anh có tưởng tượng được sẽ ra sao nếu khách hàng đến đây và mong đợi một bản dùng thử đầy đủ - thứ mà chúng ta không thể đưa ra?"
