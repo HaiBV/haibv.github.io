@@ -71,7 +71,9 @@ Kết quả tốt nhất là mục tiêu mà bạn và quản lý cùng chia s�
 Thương lượng có đôi khi rất dễ chịu.
 
 Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
+
 Paula: "Oh, wow! Sớm thế ah? Chà, OK, tôi sẽ cố"
+
 Mike: "OK, tuyệt quá. Cảm ơn nhé!"
 
 Đó là một cuộc trò chuyện ngắn tốt đẹp. Tránh được tất cả xung đột. Cả hai đều tươi cười ra về. Rất tốt.
@@ -83,9 +85,13 @@ Nhưng cả 2 bên đều đang cư xử thiếu chuyên nghiệp. Paula biết 
 Sau đây là một cuộc trò chuyện thú vị khác
 
 Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
+
 Paula: "Oh, xin lỗi Mike, nhưng tôi cần nhiều thời gian hơn để hoàn thành"
+
 Mike: "Khi nào bạn nghĩ bạn có thể hoàn thành được?"
+
 Paula: "2 tuần nữa kể từ giờ thì sao?"
+
 Mike: "OK, cảm ơn nhé."
 
 Cũng rất dễ chịu, nó cũng vô cùng rối loạn và hoàn toàn không chuyên nghiệp. Cả hai đều thất bại trong việc tìm kiếm kết quả tốt nhất có thể. Thay vì hỏi liệu 2 tuần có ổn không, Paula nên quyết đoán hơn: "Tôi sẽ mất 2 tuần, Mike"
@@ -95,15 +101,25 @@ Cũng rất dễ chịu, nó cũng vô cùng rối loạn và hoàn toàn không
 Trong tất cả các trường hợp trên không bên nào theo đuổi một mục tiêu chung có thể chấp nhận được. Không bên nào tìm kiếm kết quả tốt nhất có thể. Chúng ta hãy xem thử ví dụ dưới đây.
 
 Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
+
 Paula: "Không, Mike, việc đó cần 2 tuần"
+
 Mike: "2 tuần? Các kiến trúc sư ước tính nó hết khoang 3 ngày, bây giờ là 5!"
+
 Paula: "Họ đã sai, Mike. Họ ước lượng trước khi có yêu cầu cuối cùng. Tôi cần ít nhất 10 ngày để hoàn thành. Anh chưa xem ước lượng mới nhất của tôi trên wiki ah?"
+
 Mike: (với vẻ mặt vô cùng thất vọng) "Điều này không chấp nhận được, Paula. Khách hàng sẽ tới cho một buổi demo vào ngày mai, và tôi cần cho họ thấy trang đăng nhập hoạt động."
+
 Paula: "Phần nào của trang đăng nhập anh muốn hoạt động vào ngày mai?"
+
 Mike: "Tôi muốn _trang đăng nhập_! Tôi muốn nó có thể _đăng nhập_ được"
+
 Paula: "Mike, tôi có thể cung cấp cho anh một bản mô phỏng của trang đăng nhập cho phép đăng nhập. Tôi sẽ làm việc đó ngay bây giờ. Nó sẽ không thực sự kiểm tra tên và mật khẩu, và nó sẽ không gửi email quên mật khẩu. Nó sẽ không có biểu ngữ tin tức của công ty, và nút trợ giúp sẽ không hoạt động. Nó sẽ không lưu cookie ghi nhớ và sẽ không đặt ra bất kỳ giới hạn nào đối với anh. Nhưng anh có thể đăng nhập. Điều đó được chứ?
+
 Mike: "Tôi sẽ có thể đăng nhập?"
+
 Paula: "Đúng, anh sẽ có thể đăng nhập".
+
 Mike: "Thật tuyệt vời Paula, bạn là vị cứu tinh!" (bước đi với tay giơ lên không "Yes")
 
 Họ đã đạt được kết quả tốt nhất có thể. Họ làm được vậy bằng cách nói không và sau đó cùng tìm ra giải pháp được cả 2 đồng thuận. Họ hành động như những người chuyên nghiệp. Cuộc trò chuyện có chút mâu thuẫn và có đôi lúc không thoải mãi, nhưng điều đó xảy ra khi cả hai quyết tâm theo đuổi những mục tiêu không khớp nhau.
@@ -124,17 +140,21 @@ Don (Giám đốc phát triển): "Vậy là, ước lượng hiện tại để
 
 Charles (CEO): (nhìn trừng trừng 15s với khuôn mặt đở bừng) "Anh đang nói với tôi rằng chúng tôi có thể cần đến 17 tuần để hoàn thành?"
 
+
 Don: "Vâng, có thể như thế."
 
 Charles: (lập tức đứng dậy): "Chết tiệt, Don! Nó đáng nhẽ phải hoàn thành từ 3 tuần trước! Tôi nhận được cuộc gọi của Galitron mỗi ngày chỉ để hỏi về hệ thống chết tiệt đó đang ở đâu. Tôi sẽ không nói với họ rằng họ phải đợi thêm 4 tháng nữa. Chúng ta phải làm gì đó tốt hơn.
+
 
 Don: Chuck, tôi đã nói với anh _3 tháng trước_, sau tất cả cắt giảm, chúng ta cần thêm 4 tháng nữa. Ý tôi là, Chúa Chuck ơi, anh giảm 20% nhân sự của tôi! Anh có nói với Galitron chúng ta sẽ chậm tiến độ không?
 
 Charles: "Anh biết rõ là tôi không thể. Chúng ta không thể trụ được nếu mất hợp đồng này Don ạ. (Charles dừng lại, mặt trắng bệch) Không có Galitron, chúng ta chỉ có cạp đất. Anh biết điều đó đúng không? Và bây giờ với sự chậm trễ này, tôi e là ... Nếu tôi nói với ban giám thì sao? (Anh ta từ từ ngồi xuống, cố gắng không gục ngã) Don, anh cần phải làm tốt hơn"
 
+
 Don: "Tôi không thể được gì cả Chuck. Chúng ta đã trải qua việc này rồi. Galitron không cắt giảm khối lượng công việc, và họ sẽ không chấp nhận bất kỳ phiên bản tạm thời nào. Họ muốn cài đặt và hoàn thiện một lần duy nhất. Tôi không thể làm nó nhanh hơn được. Điều đó _không thể_ xảy ra."
 
 Charles: "Chết tiệt. Tôi không nghĩ sẽ có vấn đề gì nếu tôi nói với anh rằng vị trí của anh đang gặp rắc rối."
+
 
 Don: "Sa thải tôi sẽ không làm thay đổi ước lượng đâu, Charles"
 
@@ -147,31 +167,50 @@ Tất nhiên, ngay khi nhận được ước lượng mới, Charles cần ph�
 Chúng ta đều biết được tầm quan trong của việc là một "team player". Trở thành một team player tức là bạn chơi tốt vị trí của mình một cách tốt nhất bạn có thể, và giúp đỡ đồng đội khi họ gặp rắc rối. Một team player thường xuyên tương tác, quan tâm đến đồng đội của anh/cô ấy, và đảm bảo trách nhiệm của riêng anh/cô ấy tốt nhất có thể.
 
 Một team player không phải là người lúc nào cũng nói có. Xem xét ví dụ dưới đây:
+
 Paula: "Mike, tôi có bản ước lượng cho anh rồi đây. Mọi người trong team đã thống nhất chúng ta cần 8 tuần để có bản dùng thử, có thể hơn hoặc kém 1 tuần.
 
 Mike: "Paula, chúng ta đã lên kế hoạch cho bản dùng thử trong 6 tuần nữa kể từ giờ."
+
 Paula: "Và không nghe ý kiến từ chúng tôi? Thôi nào Mike, anh không thể ép chúng tôi như vậy"
+
 Mike: "Mọi việc đã được quyết định"
+
 Paula: (thở dài) "Thôi được, thế này nhé, tôi sẽ xem xét lại với 6 tuần chúng ta có thể an toàn bàn giao được những phần nào, sẽ không phải là toàn bộ hệ thống đâu. Sẽ có một vài chức năng chưa hoàn thành, và lượng dữ liệu tải được chưa hoàn thiện.
+
 Mike: "Paula, khách hàng muốn thấy một bản dùng thử hoàn thiện"
+
 Paula: "Điều đó không thể được Mike"
+
 Mike: "Chết tiệt. Thôi được, hãy đưa ra một bản kế hoạch tốt nhất có thể và đưa cho tôi vào ngày mai"
+
 Paula: "Đó là điều tôi sẽ làm"
+
 Mike: "Cô không thể làm bất cứ điều gì để hoàn thành sớm hơn ah? Có thể có cách nào đó thông minh và sáng tạo hơn."
+
 Paula: "Tất cả chúng tôi đều rất sáng tạo, Mike. Chúng tôi có cách giải quyết tốt cho vấn đề này, và thời gian sẽ là 8 hoặc 9 tuần, không phải 6"
+
 Mike: "Cô có thể làm thêm giờ"
+
 Paula: "Nó sẽ làm chúng tôi chậm hơn, Mike. Hãy nhớ lần gần nhất chúng ta làm thêm giờ, mọi thứ trở nên mất kiểm soát như thế nào?"
+
 Mike: "Đúng vậy, nhưng lần này mọi thứ sẽ khác"
+
 Paula: "Nó sẽ giống lần đó thôi, Mike. Tin tôi đi. Phải là 8 hoặc 9 tuần, không phải 6"
+
 Mike: "OK, cho tôi kế hoạch tốt nhất cô có, nhưng cứ tiếp tục nghĩ về việc làm thế nào để hoàn thành trong 6 tuần. Tôi biết các bạn sẽ tìm được cách nào đó"
+
 Paula: "Không, Mike, chúng tôi sẽ không làm thế. Chúng tôi có thể đưa ra một kế hoạch cho 6 tuần, nhưng nó sẽ thiếu nhiều chức năng và dữ liệu. Đó là cách mọi thứ diễn ra"
+
 Mike: "OK, Paula, nhưng tôi cá là các bạn có thể làm nên điều kỳ diệu nếu các bạn thử"
 (Paula lắc đầu bỏ đi)
 
 Sau đó, trong buổi họp chiến lược của ban giám đốc...
 
 Don: "OK, Mike, như anh đã biết 6 tuần nữa khách hàng sẽ tới đây cho buổi dùng thử. Họ muốn nhìn thấy mọi thứ vận hành."
+
 Mike: "Vâng, và chúng ta sẽ sẵn sàng. Team của tôi đang rất nỗ lực và chúng ta sẽ hoàn thành đúng hẹn. Chúng tôi có thể làm thêm giờ, và có một chút sáng tạo, nhưng chúng tôi sẽ hoàn thành."
+
 Don: "Thật tuyệt vời khi anh và nhân viên của anh là những team player"
 
 Ai thực sự là những team player trong tình huống trên? Paula có tinh thần đồng đội, vì cô đã nêu ra những thứ có thể, hoặc không thể, hoàn thành với khả năng tốt nhất của mình. Cô ấy tích cực bảo vệ ý kiến của mình, bất chấp sự đe dọa và nịnh nọt của Mike. Mike có tinh thần đồng đội của team 1 người, anh ta chỉ nghĩ cho mình. Anh ta rõ ràng không đứng về phía Paula vì anh ta chỉ muốn cô cam kết những thứ trước đó cô đã nói rằng không thể hoàn thành. Anh ta cũng không đứng về phía Don (mặc dù anh ta không nghĩ thế) vì anh ta đã nói dối Don.
@@ -201,19 +240,32 @@ Cách của Paula tốt hơn nhiều. Cô ấy luôn nhắc Mike rằng ước l
 Ba tuần sau ...
 
 Mike: "Paula, 3 tuần nữa sẽ có bản dùng thử và khách hàng yêu cầu phải có chức năng 'Tải tập tin lên' hoạt động"
+
 Paula: "Mike, điều này không có trong danh sách chức năng chúng ta đã đồng ý làm"
+
 Mike: "Tôi biết, nhưng họ yêu cầu như vậy"
+
 Paula: "OK, điều đó có nghĩa là SSO hoặc sao lưu sẽ bị loại khỏi bản dùng thử"
+
 Mike: "Tuyệt đối không! Họ cũng mong muốn các tính năng đó hoạt động"
+
 Paula: "Tức là, họ đang mong đọi mọi tính năng hoạt động. Đó là những gì anh đang nói với tôi. Tôi đã nói là điều đó sẽ không xảy ra"
+
 Mike: "Tôi xin lỗi Paula, nhưng khách hàng không nhượng bộ cho việc đó. Họ muốn thấy tất cả."
+
 Paula: "Chuyện đó sẽ không xảy ra, Mike. Đơn giản thế thôi"
+
 Mike: "Thôi nào Paula, ít nhất các bạn có thể _cố_ được không?"
+
 Paula: "Mike, tôi có thể _cố_ để bay. Tôi có thể _cố_ biến chì thành vàng. Tôi có thể _cố_ bơi qua Đại Tây Dương. Anh có nghĩ rằng tôi sẽ thành công?"
+
 Mike: "Cô nói không hợp lý chút nào. Tôi không yêu cầu những _điều không thể_"
+
 Paula: "Có đấy, Mike, anh đang làm vậy"
 (Mike cười khẩy, gật đầu, rồi quay lưng bước đi)
+
 Mike: "Tôi có lòng tin ở cô Paula, tôi biết cô sẽ không làm tôi thất vọng"
+
 Paula: (nói phía sau Mike) "Mike, anh đang mơ thôi. Và nó sẽ không có kết cục tốt đẹp đâu"
 (Mike chỉ vẫy tay và không quay lại)
 
@@ -226,17 +278,33 @@ Hoặc, cô ấy có thể cố gắng đối đầu với thảm họa bằng c
 Hai ngày sau...
 
 Paula: "Mike, anh đã nói với Don về ước lượng của tôi chưa? Anh ấy đã nói với khách hàng rằng chức năng 'Tải tập tin lên' sẽ không sử dụng được ở bản dùng thử sẽ chưa?"
+
 Mike: "Paula, cô đã nói là cô sẽ làm cho nó hoạt động mà"
+
 Paula: "Không, Mike, tôi không nói thế. Tôi đã nói với anh là nó không thể. Đây là bản ghi chú tôi gửi cho anh sau cuộc họp"
+
 Mike: "Phải, những cô có nói là cô có thể _cố_ mà phải không?"
+
 Paula: "Chúng ta cũng đã bàn về việc đó Mike. Anh nhớ chứ, vàng và chì?
+
 Mike: (thở dài) "Nghe này, Paula, cô cần làm việc đó. Cô phải làm việc đó. Làm ơn bằng mọi giá, hãy làm cho nó hoạt động giúp tôi"
+
 Paula: "Mike, anh nhầm rồi. Tôi không cần phải làm cho nó hoạt động cho anh. Việc tôi _phải_ làm là, nếu anh không nói với Don, thì tôi sẽ nói"
+
 Mike: "Anh ta sẽ giết tôi mất, cô không được làm vậy"
+
 Paula: "Tôi không muốn làm thế, nhưng tôi sẽ nói nếu anh ép tôi"
+
 Mike: "Ôi, Paula..."
+
 Paula: Nghe này, Mike, những chức năng này _không thể_ hoàn thành kịp thời gian cho bản dùng thử. Anh cần phải lưu lại điều đó trong đầu. Đừng cố thuyết phục tôi làm việc chăm chỉ hơn. Đừng lừa đối bản thân rằng bằng cách nào đó tôi có thể lôi được con thỏ từ cái mũ. Đối mặt với thực tế rằng anh phải nói cho Don, và anh phải nói với anh ta _hôm nay_."
+
 Mike: (mở to mắt) "Hôm nay ah?"
+
 Paula: "Đúng, Mike. Là hôm nay. Vì ngày mai tôi sẽ có một cuộc họp với anh và Don về những chức năng sẽ nằm trong bản dùng thử. Nếu cuộc họp không diễn ra vào ngày mai, thì tự tôi bắt buộc phải đi gặp Don. Đây là bản ghi chú giải thích cho việc đó.
+
 Mike: "Cô đang cứu một bàn thua cho tôi đấy"
+
 Paula: "Mike, tôi đang cố cứu cả hai chúng ta. Anh có tưởng tượng được sẽ ra sao nếu khách hàng đến đây và mong đợi một bản dùng thử đầy đủ - thứ mà chúng ta không thể đưa ra?"
+
+Cuối cùng thì chuyện gì sẽ xảy ra với Paula và Mike? Tôi sẽ để mở những khả năng dành cho bạn. Vấn đề là Paula đã cư xử rất chuyên nghiệp. Cô ấy đã nói không vào mọi lúc, và với một cách đúng đắn. Cô ấy nói không khi ước lượng của mình bị buộc phải thay đổi. Cô ấy nói không khi bị thao túng, nịnh nọt, và van xin. Và quan trọng nhất, cô ấy nói không với việc Mike tự ảo tưởng và không thực hiện nghĩa vụ. Paula đã có tinh thần đồng đội tốt. Mike cần sự giúp đỡ, và cô ấy dùng mọi cách trong khả năng của mình để giúp anh ta.
