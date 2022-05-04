@@ -308,3 +308,12 @@ Mike: "Cô đang cứu một bàn thua cho tôi đấy"
 Paula: "Mike, tôi đang cố cứu cả hai chúng ta. Anh có tưởng tượng được sẽ ra sao nếu khách hàng đến đây và mong đợi một bản dùng thử đầy đủ - thứ mà chúng ta không thể đưa ra?"
 
 Cuối cùng thì chuyện gì sẽ xảy ra với Paula và Mike? Tôi sẽ để mở những khả năng dành cho bạn. Vấn đề là Paula đã cư xử rất chuyên nghiệp. Cô ấy đã nói không vào mọi lúc, và với một cách đúng đắn. Cô ấy nói không khi ước lượng của mình bị buộc phải thay đổi. Cô ấy nói không khi bị thao túng, nịnh nọt, và van xin. Và quan trọng nhất, cô ấy nói không với việc Mike tự ảo tưởng và không thực hiện nghĩa vụ. Paula đã có tinh thần đồng đội tốt. Mike cần sự giúp đỡ, và cô ấy dùng mọi cách trong khả năng của mình để giúp anh ta.
+
+## Cái giá của việc đồng ý nhượng bộ
+
+Phần lớn mọi việc chúng ta đều muốn đồng ý. Thực tế là, các đội nhóm mạnh mẽ luôn có gắng tìm cách đồng ý. Quản lý và lập trình viên trong các nhóm vận hành tốt sẽ thương lượng với nhau cho đến khi họ đi đến một kế hoạch hành động đã được thống nhất. 
+
+Nhưng, như chúng ta đã thấy, đôi khi cách duy nhất để có được sự đồng thuận đúng đắn là không ngần ngại nói không.
+
+Hãy xem xét câu chuyện dưới dây của John Blanco trên blog của anh ấy. Nó đã được cho phép trích dẫn trong sách này. Khi bạn đọc nó, hãy tự hỏi bản thân xem khi nào và làm cách nào để anh ấy có thể từ chối.
+
