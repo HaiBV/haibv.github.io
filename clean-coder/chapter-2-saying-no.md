@@ -140,21 +140,17 @@ Don (Giám đốc phát triển): "Vậy là, ước lượng hiện tại để
 
 Charles (CEO): (nhìn trừng trừng 15s với khuôn mặt đở bừng) "Anh đang nói với tôi rằng chúng tôi có thể cần đến 17 tuần để hoàn thành?"
 
-
 Don: "Vâng, có thể như thế."
 
 Charles: (lập tức đứng dậy): "Chết tiệt, Don! Nó đáng nhẽ phải hoàn thành từ 3 tuần trước! Tôi nhận được cuộc gọi của Galitron mỗi ngày chỉ để hỏi về hệ thống chết tiệt đó đang ở đâu. Tôi sẽ không nói với họ rằng họ phải đợi thêm 4 tháng nữa. Chúng ta phải làm gì đó tốt hơn.
-
 
 Don: Chuck, tôi đã nói với anh _3 tháng trước_, sau tất cả cắt giảm, chúng ta cần thêm 4 tháng nữa. Ý tôi là, Chúa Chuck ơi, anh giảm 20% nhân sự của tôi! Anh có nói với Galitron chúng ta sẽ chậm tiến độ không?
 
 Charles: "Anh biết rõ là tôi không thể. Chúng ta không thể trụ được nếu mất hợp đồng này Don ạ. (Charles dừng lại, mặt trắng bệch) Không có Galitron, chúng ta chỉ có cạp đất. Anh biết điều đó đúng không? Và bây giờ với sự chậm trễ này, tôi e là ... Nếu tôi nói với ban giám thì sao? (Anh ta từ từ ngồi xuống, cố gắng không gục ngã) Don, anh cần phải làm tốt hơn"
 
-
 Don: "Tôi không thể được gì cả Chuck. Chúng ta đã trải qua việc này rồi. Galitron không cắt giảm khối lượng công việc, và họ sẽ không chấp nhận bất kỳ phiên bản tạm thời nào. Họ muốn cài đặt và hoàn thiện một lần duy nhất. Tôi không thể làm nó nhanh hơn được. Điều đó _không thể_ xảy ra."
 
 Charles: "Chết tiệt. Tôi không nghĩ sẽ có vấn đề gì nếu tôi nói với anh rằng vị trí của anh đang gặp rắc rối."
-
 
 Don: "Sa thải tôi sẽ không làm thay đổi ước lượng đâu, Charles"
 
@@ -311,9 +307,20 @@ Cuối cùng thì chuyện gì sẽ xảy ra với Paula và Mike? Tôi sẽ đ�
 
 ## Cái giá của việc đồng ý nhượng bộ
 
-Phần lớn mọi việc chúng ta đều muốn đồng ý. Thực tế là, các đội nhóm mạnh mẽ luôn có gắng tìm cách đồng ý. Quản lý và lập trình viên trong các nhóm vận hành tốt sẽ thương lượng với nhau cho đến khi họ đi đến một kế hoạch hành động đã được thống nhất. 
+Phần lớn mọi việc chúng ta đều muốn đồng ý. Thực tế là, các đội nhóm mạnh mẽ luôn có gắng tìm cách đồng ý. Quản lý và lập trình viên trong các nhóm vận hành tốt sẽ thương lượng với nhau cho đến khi họ đi đến một kế hoạch hành động đã được thống nhất.
 
 Nhưng, như chúng ta đã thấy, đôi khi cách duy nhất để có được sự đồng thuận đúng đắn là không ngần ngại nói không.
 
 Hãy xem xét câu chuyện dưới dây của John Blanco trên blog của anh ấy. Nó đã được cho phép trích dẫn trong sách này. Khi bạn đọc nó, hãy tự hỏi bản thân xem khi nào và làm cách nào để anh ấy có thể từ chối.
 
+Code sạch có khả thi không?
+
+Bạn quyết định sẽ trở thành một lập trình viên phần mềm vào những năm tuổi teen. Trong suốt những năm trung học, bạn học viết phần mềm theo các nguyên tắc hướng đối tượng. Khi bạn tốt nghiệp đại học, bạn dùng toàn bộ kiến thức, nguyên tắc mình học được vào một số lĩnh vực như trí tuệ nhân tạo (AI) hoặc in 3D.
+
+Và khi bạn đạt đến trình độ chuyên nghiệp, bạn bắt đầu thực hiện những nhiệm vụ không dứt để viết code chất lượng thương mai, có thể bảo trì và "hoàn hảo" trước thử thách thời gian.
+
+Chất lượng thương mại (commercial quality). Huh. Nghe buồn cười phải không.
+
+Tôi tự cho mình là một người may mắn, tôi thích các design pattern. Tôi thích nghiên cứu lý thuyết về sự "hoàn hảo" của code. Tôi không ngần ngại thảo luận hàng giờ liền với đồng nghiệp về cách kế thừa phân cấp sai của họ - rằng HAS-A tốt hơn IS-A trong nhiều trường hợp. Nhưng gần đây có điều gì đó làm tôi khó chịu và băn khoăn...
+
+...Liệu chúng ta không thể có code sạch trong phát triển phần mềm hiện tại?
