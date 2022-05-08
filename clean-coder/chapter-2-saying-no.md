@@ -324,3 +324,16 @@ Chất lượng thương mại (commercial quality). Huh. Nghe buồn cười ph
 Tôi tự cho mình là một người may mắn, tôi thích các design pattern. Tôi thích nghiên cứu lý thuyết về sự "hoàn hảo" của code. Tôi không ngần ngại thảo luận hàng giờ liền với đồng nghiệp về cách kế thừa phân cấp sai của họ - rằng HAS-A tốt hơn IS-A trong nhiều trường hợp. Nhưng gần đây có điều gì đó làm tôi khó chịu và băn khoăn...
 
 ...Liệu chúng ta không thể có code sạch trong phát triển phần mềm hiện tại?
+
+Đề xuất dự án tiêu biểu
+
+Khi đang là một lập trình viên toàn thời gian (và bán thời gian), tôi dành thời gian ban ngày (và ban đêm) phát triển những ứng dụng di động cho khách hàng. Và những thứ tôi học được sau nhiều năm làm việc là nhu cầu công việc của khách hàng ngăn cả tôi viết các ứng dụng thực sự chất lượng như ý mình. 
+
+Trước khi bắt đầu, tôi phải nói trước rằng đó không phải do tôi không cố gắng. Tôi yêu mọi thứ về code sạch. Tôi không biết có ai khác theo đuổi thiết kế phần mềm hoàn hảo như tôi không. Đó là cách tôi thấy khá khó nắm bắt, và không phải những lý do bạn nghĩ.
+
+Được rồi, để tôi kể cho bạn nghe một câu chuyện.
+
+Vào khoảng cuối năm ngoái, một công ty khá nổi tiếng đã đưa ra một RFP (Request for Proposal - Yêu cầu đề xuất) cho một ứng dụng của họ. Họ là một công ty bán lẻ khổng lồ, nhưng vì lý do bảo mật, chúng ta hãy gọi họ là Gorilla Mart. Họ nói họ cần một ứng dụng trên iPhone để sử dụng cho Black Friday. Một cuộc rượt đuổi? Lúc đó đã là 01/11. Chỉ còn dưới 4 tuần đề tạo ứng dụng. Và vào thời điểm đó Apple vẫn mất 2 tuần để phê duyệt các ứng dụng. (Những ngày xưa cũ) Vì vậy, chờ đã, ứng dụng này phải được viết trong ... HAI TUẦN???
+
+Vâng, chúng ta có hai tuần để viết ứng dụng. Và, không may là, chúng tôi trúng thầu. (Trong kinh doanh, phải đặt vấn đề của khách hàng lên hàng đầu). Vậy điều gì sẽ xảy ra.
+
