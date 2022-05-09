@@ -327,7 +327,7 @@ Tôi tự cho mình là một người may mắn, tôi thích các design patter
 
 Đề xuất dự án tiêu biểu
 
-Khi đang là một lập trình viên toàn thời gian (và bán thời gian), tôi dành thời gian ban ngày (và ban đêm) phát triển những ứng dụng di động cho khách hàng. Và những thứ tôi học được sau nhiều năm làm việc là nhu cầu công việc của khách hàng ngăn cả tôi viết các ứng dụng thực sự chất lượng như ý mình. 
+Khi đang là một lập trình viên toàn thời gian (và bán thời gian), tôi dành thời gian ban ngày (và ban đêm) phát triển những ứng dụng di động cho khách hàng. Và những thứ tôi học được sau nhiều năm làm việc là nhu cầu công việc của khách hàng ngăn cả tôi viết các ứng dụng thực sự chất lượng như ý mình.
 
 Trước khi bắt đầu, tôi phải nói trước rằng đó không phải do tôi không cố gắng. Tôi yêu mọi thứ về code sạch. Tôi không biết có ai khác theo đuổi thiết kế phần mềm hoàn hảo như tôi không. Đó là cách tôi thấy khá khó nắm bắt, và không phải những lý do bạn nghĩ.
 
@@ -337,3 +337,14 @@ Vào khoảng cuối năm ngoái, một công ty khá nổi tiếng đã đưa r
 
 Vâng, chúng ta có hai tuần để viết ứng dụng. Và, không may là, chúng tôi trúng thầu. (Trong kinh doanh, phải đặt vấn đề của khách hàng lên hàng đầu). Vậy điều gì sẽ xảy ra.
 
+"Nhưng sẽ ổn thôi" Điều hành số 1 của Gorilla Mart nói. "Ứng dụng rất đơn giản. Nó chỉ cần hiển thị cho người dùng một vài sản phẩm từ danh mục sản phẩm của chúng tôi và cho phép họ tìm kiếm vị trí cửa hàng. Chúng tôi đã có sẵn chúng trên trang web của mình. Chúng tôi cũng sẽ cung cấp ảnh. Bạn có thể - có thể ư? - hardcode!"
+
+Điều hành số 2 của Gorilla Mart chêm vào. "Và chúng ta chỉ cần một vài phiếu giảm giá mà người dùng có thể xuất trình tại quầy thu ngân. Sau này chúng ta có thể bỏ ứng dụng đó đi, và ở giai đoạn 2 chúng ta sẽ làm một ứng dụng khác lớn hơn và tốt hơn từ đầu."
+
+Và sau đó mọi chuyện được diễn ra. Bất chấp những kinh nghiệm trong nhiều năm nhắc nhở tôi rằng khi bắt tay vào làm, mọi tính năng mà khách hàng yêu cầu sẽ luôn phức tạp hơn so với khi khách hàng giải thích, bạn cứ thử mà xem. Bạn thực sự tin rằng lần này nó thực sự có thể được thực hiện trong 2 tuần. Đúng! Chúng ta có thể làm được! Lần này sẽ khác! Đó chỉ là một vài hình ảnh đồ họa và một cuộc gọi dịch vụ để có được vị trí cửa hàng. XML! Dễ ẹc. Chúng ta có thể làm được. Tôi sẵn sàng! Chiến thôi!
+
+Chỉ mất một ngày để bạn làm quen với thực tế một lần nữa.
+
+Tôi: Vậy, bạn có thể cung cấp cho tôi thông tin tôi cần để gọi dịch vụ web (web service) cung cấp vị trí cửa hàng của bạn được không?
+Khách hàng: Dịch vụ web nào?
+Tôi: ...
