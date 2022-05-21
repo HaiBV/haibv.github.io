@@ -14,24 +14,24 @@
  * @param {ListNode} list2
  * @return {ListNode}
  */
- var mergeTwoLists = function(list1, list2) {
+var mergeTwoLists = function (list1, list2) {
   if (!list1) {
-      return list2;
+    return list2;
   }
-  
+
   if (!list2) {
-      return list1;
+    return list1;
   }
-  
+
   let list = new ListNode();
-  
+
   if (list1.val < list2.val) {
-      list.val = list1.val;
-      list.next = mergeTwoLists(list1.next, list2);
+    list.val = list1.val;
+    list.next = mergeTwoLists(list1.next, list2);
   } else {
-      list.val = list2.val;
-      list.next = mergeTwoLists(list1, list2.next);
+    list.val = list2.val;
+    list.next = mergeTwoLists(list1, list2.next);
   }
-  
+
   return list;
 };
