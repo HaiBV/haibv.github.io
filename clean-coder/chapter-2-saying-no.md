@@ -346,5 +346,21 @@ Và sau đó mọi chuyện được diễn ra. Bất chấp những kinh nghi�
 Chỉ mất một ngày để bạn làm quen với thực tế một lần nữa.
 
 Tôi: Vậy, bạn có thể cung cấp cho tôi thông tin tôi cần để gọi dịch vụ web (web service) cung cấp vị trí cửa hàng của bạn được không?
+
 Khách hàng: Dịch vụ web nào?
+
 Tôi: ...
+
+Và đó chính xác là cách nó diễn ra. Dịch vụ tìm kiếm vị trí cửa hàng của họ, xuất hiện ở góc trên cùng bên phải trang web của họ, không phải là một web service. Nó được viết bằng Java. Ix-nay và API-ay. Để khởi động, nó được quản lý bởi một đối tác chiến lược của Gorilla Mart.
+
+Nói về "bên thứ 3" bất chính này
+
+Trong thuật ngữ của khách hàng, "bên thứ 3" giống như Angelina Jolie. Bất chấp lời hứa về cuộc trò chuyện thú vị trong một bữa ăn ngon và hy vọng sẽ có kết nối sau đó... xin lỗi, nó sẽ không xảy ra. Bạn sẽ chỉ phải mơ mộng về điều đó trong khi bạn tự lo công việc của mình.
+
+Trong trường hợp của tôi, điều duy nhất tôi có thể có được khi rời khỏi Gorilla Mart là một bức ảnh chụp nhanh danh sách cửa hàng hiện tại của họ trong một tập tin Excel. Tôi phải viết chương trình tìm kiếm vị trí của hàng từ đầu.
+
+Họa vô đơn chí, khó khăn tiếp theo đến vào muộn ngày hôm đó: Họ muốn dữ liệu sản phẩm và phiếu giảm giá trực tuyến để nó có thể thay đổi hàng tuần. Thế này gọi là hardcode! Từ chỗ có 2 tuần để viết một ứng dụng iPhone trở thành 2 tuần để viết một ứng dụng iPhone, backend PHP, và tích hợp chúng lại với nhau. ... Cái gì vậy? Họ còn muốn tôi đảm nhiệm luôn phần kiểm định chất lượng (QA) nữa???
+
+Để bù đắp cho phần công việc thêm vào, tôi cần làm nhanh hơn một chút. Quên việc abstract factory đi. Sử dụng những vòng lặp for lớn thay vì composite, không có thời gian nữa!!
+
+Code tốt thành không thể.
