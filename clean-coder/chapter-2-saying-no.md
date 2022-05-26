@@ -364,3 +364,14 @@ Họa vô đơn chí, khó khăn tiếp theo đến vào muộn ngày hôm đó:
 Để bù đắp cho phần công việc thêm vào, tôi cần làm nhanh hơn một chút. Quên việc abstract factory đi. Sử dụng những vòng lặp for lớn thay vì composite, không có thời gian nữa!!
 
 Code tốt thành không thể.
+
+## Hai tuần hoàn thiện
+
+Để tôi kể cho bạn về 2 tuần khá là khổ sở đó. Hai ngày đầu tiên không làm được gì do phải họp cả ngày cho dự án tiếp theo. (Điều đó càng làm cho thời gian eo hẹp hơn) Cuối cùng, tôi chỉ thực sự có 8 ngày để hoàn thành công việc. Tôi làm việc 74 tiếng trong tuần đầu tiên và tuần tiếp theo thì ... Chúa ơi ... tôi còn không thể nhớ được, nó đã bị xóa khỏi đầu tôi. Có lẽ là một việc tốt.
+
+Tôi dùng 8 ngày đó để viết code trong giận dữ. Tôi sử dụng tất cả các công cụ có sẵn cho mình để hoàn thành công việc: sao chép và dán (hay tái sử dụng code), các con số ma thuật (tránh trùng lặp khi xác định hằng số và haizz, nhập lại chúng), và hoàn toàn KHÔNG CÓ unit test! (Ai cần những thanh đỏ trong trường hợp này, chúng chỉ làm cản trở tôi)
+
+Code khá tệ và tôi không có thời gian để tái cầu trúc. Tuy nhiên, về thời gian, nó lại khá tốt, và xét cho cùng chúng là những đoạn code bỏ đi phải không nào? Câu này nghe quen không ạ? Hãy đợi đó, mọi việc sẽ tốt hơn.
+
+Khi tôi đang hoàn thiện những bước cuối cùng với ứng dụng (là viết lại toàn bộ code server), tôi bắt đầu xem xét và tự hỏi liệu nó có xứng đáng hay không. Cuối cùng ứng dụng đã hoàn thành. Tôi sống sót!
+
