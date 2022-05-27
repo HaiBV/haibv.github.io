@@ -373,5 +373,14 @@ Tôi dùng 8 ngày đó để viết code trong giận dữ. Tôi sử dụng t�
 
 Code khá tệ và tôi không có thời gian để tái cầu trúc. Tuy nhiên, về thời gian, nó lại khá tốt, và xét cho cùng chúng là những đoạn code bỏ đi phải không nào? Câu này nghe quen không ạ? Hãy đợi đó, mọi việc sẽ tốt hơn.
 
-Khi tôi đang hoàn thiện những bước cuối cùng với ứng dụng (là viết lại toàn bộ code server), tôi bắt đầu xem xét và tự hỏi liệu nó có xứng đáng hay không. Cuối cùng ứng dụng đã hoàn thành. Tôi sống sót!
+Khi tôi đang hoàn thiện những bước cuối cùng với ứng dụng (là viết lại toàn bộ code server), tôi bắt đầu xem xét và tự hỏi liệu nó có xứng đáng hay không. Cuối cùng ứng dụng đã hoàn thành. Tôi đã sống sót!
 
+"Này, chúng tôi vừa mới thuê Bob, anh ấy rất bận và không thể thực hiện cuộc gọi, nhưng anh ấy nói rằng chúng tôi nên yêu cầu người dùng cung cấp địa chỉ email của họ để nhận phiếu thưởng. Anh ấy chưa nhìn thấy ứng dụng, nhưng anh ấy nghĩ đây sẽ là một ý tưởng tuyệt với! Chúng tôi cũng muốn có một hệ thống báo cáo để lấy những email đó từ máy chủ. Một thứ đẹp nhưng không quá đắt (Chờ đã, đoạn cuối chính là Monty Python). Nói về phiếu giảm giá, chúng có thể hết hạn vào thời gian chúng tôi chỉ địng. Oh, và ..."
+
+Hãy quay lại một chút. Chúng ta biết code tốt là gì? Code tốt có thể mở rộng. Có thể bảo trì. Nó sẽ tự sửa đổi. Nó sẽ được đọc như văn xuôi. Chà, đây không phải mã tốt.
+
+Một việc nữa. Nếu bạn muốn trở thành một lập trình viên tốt hơn, bạn phải luôn ghi nhớ điều tất yếu này: Khách hàng sẽ luôn kéo dài thời hạn. Họ sẽ luôn muốn có nhiều tính năng hơn. Họ sẽ luôn muốn thay đổi - MUỘN. Và đây là công thức cho những gì mong đợi:
+
+(số người điều hành)^2 + 2 \* số giám đốc điều hành mới + số con của Bob = số lượng ngày được thêm vào phút cuối.
+
+Bây giờ, các giám đốc điều hành là những người tử tế. Tôi nghĩ. Họ chu cấp cho gia đình (giả sử Satan chấp thuận cho việc đó). Họ muốn ứng dụng thành công (thời gian khuyến mãi). Vấn đề là tất cả họ đều muốn có một tuyên bố trực tiếp cho sự thành công của dự án. Khi tất cả được nói và hoàn thành, tất cả đều muốn chỉ ra một số tính năng hoặc quyết định thiết kế mà mỗi người có thể gọi là của riêng mình. Vì vậy, trở lại câu chuyên, chúng tôi có thêm vào ngày nữa cho dự án và nhận được một email. Và sau đó tôi gục ngã vì kiệt sức.
