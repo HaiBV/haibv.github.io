@@ -313,6 +313,7 @@ Nhưng, như chúng ta đã thấy, đôi khi cách duy nhất để có đượ
 
 Hãy xem xét câu chuyện dưới dây của John Blanco trên blog của anh ấy. Nó đã được cho phép trích dẫn trong sách này. Khi bạn đọc nó, hãy tự hỏi bản thân xem khi nào và làm cách nào để anh ấy có thể từ chối.
 
+```php
 Code sạch có khả thi không?
 
 Bạn quyết định sẽ trở thành một lập trình viên phần mềm vào những năm tuổi teen. Trong suốt những năm trung học, bạn học viết phần mềm theo các nguyên tắc hướng đối tượng. Khi bạn tốt nghiệp đại học, bạn dùng toàn bộ kiến thức, nguyên tắc mình học được vào một số lĩnh vực như trí tuệ nhân tạo (AI) hoặc in 3D.
@@ -365,7 +366,7 @@ Họa vô đơn chí, khó khăn tiếp theo đến vào muộn ngày hôm đó:
 
 Code tốt thành không thể.
 
-## Hai tuần hoàn thiện
+Hai tuần hoàn thiện
 
 Để tôi kể cho bạn về 2 tuần khá là khổ sở đó. Hai ngày đầu tiên không làm được gì do phải họp cả ngày cho dự án tiếp theo. (Điều đó càng làm cho thời gian eo hẹp hơn) Cuối cùng, tôi chỉ thực sự có 8 ngày để hoàn thành công việc. Tôi làm việc 74 tiếng trong tuần đầu tiên và tuần tiếp theo thì ... Chúa ơi ... tôi còn không thể nhớ được, nó đã bị xóa khỏi đầu tôi. Có lẽ là một việc tốt.
 
@@ -383,4 +384,14 @@ Một việc nữa. Nếu bạn muốn trở thành một lập trình viên t�
 
 (số người điều hành)^2 + 2 \* số giám đốc điều hành mới + số con của Bob = số lượng ngày được thêm vào phút cuối.
 
+
 Bây giờ, các giám đốc điều hành là những người tử tế. Tôi nghĩ. Họ chu cấp cho gia đình (giả sử Satan chấp thuận cho việc đó). Họ muốn ứng dụng thành công (thời gian khuyến mãi). Vấn đề là tất cả họ đều muốn có một tuyên bố trực tiếp cho sự thành công của dự án. Khi tất cả được nói và hoàn thành, tất cả đều muốn chỉ ra một số tính năng hoặc quyết định thiết kế mà mỗi người có thể gọi là của riêng mình. Vì vậy, trở lại câu chuyên, chúng tôi có thêm vào ngày nữa cho dự án và nhận được một email. Và sau đó tôi gục ngã vì kiệt sức.
+
+Khách hàng không bao giờ quan tâm bằng bạn
+
+Các khách hàng, bất chấp sự phản đối của họ, bất chấp sự khẩn cấp của họ, không bao giờ quan tấm đến việc ứng dụng có hoàn thành đúng hẹn hay không nhiều bằng bạn. Vào buổi chiều mà tôi nghĩ rằng ứng dụng đã hoàn thành, tôi gửi email với bản build cuối cùng cho tất cả các bên liên quan, Giám đốc điều hành, quản lý, v.v. "NÓ ĐÃ HOÀN THÀNH! ĐÂY LÀ BẢN v1.0!" Tôi bấm gửi, ngả lưng vào ghế với nụ cười tự mãn, bắt đầu tưởng tượng về việc công ty sẽ tôn tôi lên vai và dẫn đầu đoàn diễu hành xuống phố 42 trong khi tôi được trao danh hiệu "Lập trình viên vĩ đại nhất". Ít nhất, mặt tôi sẽ xuất hiện trên tất cả các quảng cáo của họ, phải không?
+
+Buồn cười là, họ dường như không đồng ý. Trên thực tế, tôi còn không biết họ nghĩ gì. Tôi không nhận được phản hồi gì. Liếc nhìn cũng không. Hóa ra, Gorilla Mart đang rất háo hức và đã chuyển sang bước tiếp theo.
+
+Bạn nghĩ tôi đã nói dối? 
+```
