@@ -393,5 +393,11 @@ Các khách hàng, bất chấp sự phản đối của họ, bất chấp sự
 
 Buồn cười là, họ dường như không đồng ý. Trên thực tế, tôi còn không biết họ nghĩ gì. Tôi không nhận được phản hồi gì. Liếc nhìn cũng không. Hóa ra, Gorilla Mart đang rất háo hức và đã chuyển sang bước tiếp theo.
 
-Bạn nghĩ tôi đã nói dối? 
+Bạn nghĩ tôi đã nói dối? Vậy thì nghe này. Tôi đây ứng dụng lên Apple store và không có mô tả ứng dụng. Tôi yêu cầu Gorilla Mart cung cấp cho tôi mô tả đó, và họ không thèm trả lời tôi, không còn thời gian để đợi nữa. Tôi yêu cầu lại lần nữa. Và một lần nữa. Tôi nhận được trả lời của một trong số quản lý của họ. Hai lần tôi nhận được phản hồi và hai lần tôi trả lời như thế này: "Anh lại cần gì nữa? TÔI MUỐN MÔ TẢ CỦA ỨNG DỤNG"
+
+Một tuần sau, Apple bắt đầu kiểm tra ứng dụng. Thường thì đây sẽ là một việc vui vẻ, nhưng thay vào đó là một sự kinh hoàng. Đúng như dự đoán, ứng dụng của tôi đã bị từ chối ngay trong ngày. Đó là lý do từ chối buồn nhất, tồi tệ nhất mà tôi có thể tưởng tượng: "Ứng dụng thiết phần mô tả". Hoàn hảo về chức năng, không có mô tả ứng dụng. Và vì lý do này, Gorilla Mart không có ứng dụng của họ trong ngày Black Friday. Tôi thực sự khó chịu
+
+Tôi đã hy sinh gia đình của mình trong 2 tuần vô cùng nước rút, và không ai ở Gorilla Mart bận tâm đến việc viết mô tả ứng dụng trong một tuần. Họ đã đưa nó cho tôi sau một giờ bị từ chối - rõ ràng đó là tín hiệu để bắt tay vào công việc.
+
+
 ```
