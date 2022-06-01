@@ -399,5 +399,13 @@ Một tuần sau, Apple bắt đầu kiểm tra ứng dụng. Thường thì đ�
 
 Tôi đã hy sinh gia đình của mình trong 2 tuần vô cùng nước rút, và không ai ở Gorilla Mart bận tâm đến việc viết mô tả ứng dụng trong một tuần. Họ đã đưa nó cho tôi sau một giờ bị từ chối - rõ ràng đó là tín hiệu để bắt tay vào công việc.
 
+Nếu tôi trước đây tôi đã từng khó chịu thì sau một tuần rưỡi tôi đã trở nên tức giận. Bạn thấy đấy, tôi vẫn chưa nhận được dữ liệu thật từ họ. Các sản phẩm và phiếu giảm giá trên server là giả. Mã phiếu thưởng là 1234567890. Bạn biết đấy, phoney baloney.
 
+Và chính buổi sáng định mệnh đó, tôi đã kiểm tra cổng thông tin và ỨNG DỤNG ĐÃ SĂN SÀNG! Tất cả dữ liệu là giả mạo. Tôi hét lên kinh hoàng, gọi bất kỳ ai tôi có thể và hét lên, "TÔI CẦN DỮ LIỆU" và người phụ nữ ở đầu dây bên kia hỏi tôi có cần cứu hỏa hay cảnh sát không, vì vậy tôi ngắt máy qua số 911. Nhưng sau đó tôi gọi cho Gorilla Mart và nói "TÔI CẦN DỮ LIỆU!" Và tôi sẽ không bao giờ quên câu trả lời:
+
+Oh, này, John. Chúng tôi có một VP mới và chúng tôi đã quyết định không phát hành ứng dụng. Bạn có thể hạ chúng xuống khỏi App Store không?
+
+Cuối cùng, có khoảng 11 người đã đăng ký địa chỉ email của họ trong cơ sở dữ liệu, có nghĩa là có 11 người có khả năng bước vào Gorilla Mart với một phiếu giảm giá iPhone giả. Các bạn, điều đó thật đáng xấu hổ.
+
+Khi tất cả đã hoàn thành, khách hàng nói đúng một điều: Đó là một thứ vứt đi. Vấn đề duy nhất là, nó không nên được phát hành ngay từ đầu.
 ```
