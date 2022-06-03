@@ -408,4 +408,16 @@ Oh, này, John. Chúng tôi có một VP mới và chúng tôi đã quyết đ�
 Cuối cùng, có khoảng 11 người đã đăng ký địa chỉ email của họ trong cơ sở dữ liệu, có nghĩa là có 11 người có khả năng bước vào Gorilla Mart với một phiếu giảm giá iPhone giả. Các bạn, điều đó thật đáng xấu hổ.
 
 Khi tất cả đã hoàn thành, khách hàng nói đúng một điều: Đó là một thứ vứt đi. Vấn đề duy nhất là, nó không nên được phát hành ngay từ đầu.
+
+Kết quả? Vội vàng để hoàn thành nhưng chậm đưa ra thị trường
+
+Bài học trong câu chuyện này là các bên bạn làm việc cùng - dù là khách hàng bên ngoài hay quản lý nội bộ - đã tìm ra cách để lập trình viên viết code nhanh chóng. Hiệu quả không? Không. Nhanh không? Có. Và đây là cách họ làm:
+
+- Nói với lập trình viên rằng ứng dụng rất đơn giản. Điều này gây ra một áp lực khiến nhóm lập trình gặp phải những định kiến sai lầm. Nó cũng khiến họ bắt đầu làm việc sớm hơn, nhờ đó họ...
+
+- Thêm các tính năng bằng cách đổ lỗi cho nhóm lập trình vì đã không nhận ra sự cần thiết của chúng từ sớm. Trong câu chuyện trên, nội dung được hardcode sẽ yêu cầu các bản cập nhật ứng dụng để thay đổi. Tại sao tôi có thể không nhận ra việc đó? Tôi nhận ra, nhưng tôi đã thực hiện một lời hứa sai lầm trước đó, đó chính là lý do. Hoặc khách hàng sẽ thuê "một nhân sự mới", người sẽ nhận ra rằng có một số thiếu sót rõ ràng. Một ngày nọ khách hàng nói họ đã thuê Steve Jobs và hỏi chúng ta có thể thêm thuật giả kim vào ứng dụng không? Sau đó, họ sẽ...
+
+- Nhắc nhở về hạn chót, liên tục và liên tục. Những lập trình viên sẽ làm việc trong trạng thái nhanh nhất và chăm chỉ nhất (và tất nhiên là dễ mắc lỗi nhất, nhưng có ai quan tâm đâu, phải không nào?) với thời hạn chỉ vài ngày. Tại sao phải nói với họ rằng chúng ta có thể lùi hạn chót ra xa hơn trong khi họ đang làm việc rất hiệu quả? Tận dụng lợi thế của nó đi. Và mọi việc cứ thế trôi qua, một vài ngày được thêm vào, một tuần được thêm vào, ngay cả khi bạn đã làm việc 20 tiếng một ngày để mọi thứ hoạt động. Nó giống như câu chuyện con lừa và củ cà rốt, ngoại trừ việc bạn được đối xử không bằng con lừa.
+
+
 ```
