@@ -419,5 +419,10 @@ Bài học trong câu chuyện này là các bên bạn làm việc cùng - dù 
 
 - Nhắc nhở về hạn chót, liên tục và liên tục. Những lập trình viên sẽ làm việc trong trạng thái nhanh nhất và chăm chỉ nhất (và tất nhiên là dễ mắc lỗi nhất, nhưng có ai quan tâm đâu, phải không nào?) với thời hạn chỉ vài ngày. Tại sao phải nói với họ rằng chúng ta có thể lùi hạn chót ra xa hơn trong khi họ đang làm việc rất hiệu quả? Tận dụng lợi thế của nó đi. Và mọi việc cứ thế trôi qua, một vài ngày được thêm vào, một tuần được thêm vào, ngay cả khi bạn đã làm việc 20 tiếng một ngày để mọi thứ hoạt động. Nó giống như câu chuyện con lừa và củ cà rốt, ngoại trừ việc bạn được đối xử không bằng con lừa.
 
+Đây là một sách lược tuyệt vời. Bạn có thể đổ lỗi cho họ vì nghĩ rằng cách này sẽ ổn? Nhưng họ không nhìn thấy mớ code kinh khủng khiếp đó. Và mọi việc cứ tiếp diễn, lặp đi lặp lại, bất chấp kết quả.
 
+Trong nền kinh tế toàn cầu, khi các tập đoàn đang dựa trên đồng đô la toàn năng và việc tăng giá cổ phiếu liên quan đến sa thải nhân viên, làm việc quá sức, và thuê ngoài, chiến thuật này mà tôi vừa cho bạn thấy giúp cắt giảm chi phí cho lập trình viên đang làm cho code tốt trở nên lỗi thời. Là những lập trình viên, chúng ta yêu cầu viết code nhiều gấp 2 lần với một nữa thời gian nếu chúng ta không cẩn trọng.
 ```
+
+# Code bất khả thi
+
