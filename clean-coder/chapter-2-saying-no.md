@@ -426,3 +426,12 @@ Trong nền kinh tế toàn cầu, khi các tập đoàn đang dựa trên đồ
 
 # Code bất khả thi
 
+Trong câu truyện trên John có đặt câu hỏi "Liệu code tốt có bất khả thi?", nhưng thực ra anh ấy đang hỏi là "Liệu sự chuyên nghiệp có bất khả thi?". Rút cục, không chỉ có những đoạn code bị rối loạn trong câu truyện vừa rồi của John. Mà còn có gia đình, đồng nghiệp, khách hàng của John và cả những người dùng. Tất cả mọi người đều thua. Và họ thua vì họ thiếu chuyên nghiệp.
+
+Vậy thì ai đã hành động thiếu chuyên nghiệp? John nói rằng anh ấy nghĩ đó là các giám đốc điều hành của Gorilla Mart. Rút cục, bài viết của anh ta là một bản cáo trạng rõ ràng về hành vi xấu của họ. Nhưng hành vi của họ có thực sự tệ? Tôi không nghĩ vậy.
+
+Người của Gorilla Mart muốn một ứng dụng iPhone vào ngày Black Friday. Họ sẵn sàng trả tiền để có được nó. Họ tìm thấy một người sàng cung cấp dịch vụ cho họ. Vậy thì tại sao bạn có thể đổ lỗi cho họ?
+
+Thật vậy, đồng ý là có một số hiểu lầm khi trao đổi thông tin. Rõ ràng là các giám đốc điều hành không biết web service thực sự là gì, và có một vấn đề cố hữu trong một tập đoàn lớn là bộ phận này không biết bộ phận khác đang làm gì. John thậm chí còn thừa nhận việc đó khi nói: "Mặc dù nhiều năm kinh nghiệm luôn nhắc nhở rằng tất cả tính năng của khách hàng yêu cầu sẽ luôn phức tạp rất nhiều so với khi mô tả trước đó..."
+
+Vậy nếu thủ phạm không phải là Gorilla Mart, thì là ai?
