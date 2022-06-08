@@ -435,3 +435,9 @@ Người của Gorilla Mart muốn một ứng dụng iPhone vào ngày Black Fr
 Thật vậy, đồng ý là có một số hiểu lầm khi trao đổi thông tin. Rõ ràng là các giám đốc điều hành không biết web service thực sự là gì, và có một vấn đề cố hữu trong một tập đoàn lớn là bộ phận này không biết bộ phận khác đang làm gì. John thậm chí còn thừa nhận việc đó khi nói: "Mặc dù nhiều năm kinh nghiệm luôn nhắc nhở rằng tất cả tính năng của khách hàng yêu cầu sẽ luôn phức tạp rất nhiều so với khi mô tả trước đó..."
 
 Vậy nếu thủ phạm không phải là Gorilla Mart, thì là ai?
+
+Có thể là sếp của John. John không nói rõ việc này, nhưng anh ấy có ám chỉ điều này khi để trong ngoặc kép, "Trong kinh doanh, khách hàng là số 1". Vậy có phải sếp của John đã đưa ra những lời hứa vô lý với Gorilla Mart không? Họ đã gây áp lực lên John, trực tiếp hoặc gián tiếp, để những lời hứa đó thành hiện thực? John không nói vậy, nên chúng ta chỉ có thể đoán.
+
+Mặc dù vậy, trách nhiệm của John ở đâu trong toàn bộ câu chuyện này? Tôi cho rằng tất cả lỗi là ở John. John là người đã chấp nhận thời hạn 2 tuần ban đầu, trong khi biết rõ rằng dự án sẽ phức tạp hơn những gì khách hàng nói. John là người chấp nhận việc viết PHP server. John là người chấp nhận đăng ký bằng email và coupon hết hạn. John là người đã làm việc 20 giờ một ngày và 90 giờ một tuần. John là người đã từ bỏ gia đình và cuộc sống của mình để hoàn thành hạn chót này.
+
+Và tại sao John lại làm như vậy? Anh ta đã nói một cách không chắc chắn: "Tôi nhấn Gửi, ngả lưng vào ghế, và với một nụ cười tự mãn, tôi bắt đầu tưởng tượng về việc công ty sẽ đưa tôi lên vai họ và dẫn đầu một đoàn rước xuống Phố 42 trong khi tôi đăng quang "Lập trình viên tuyệt với nhất từ trước đến nay". Tóm lại, John đang cố trở thành một anh hùng. Anh ta thấy có cơ hội có được giải thưởng, và cố gắng giành được nó. Anh ta nghiêng người và chộp lấy chiếc nhẫn bằng đồng.
