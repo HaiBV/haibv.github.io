@@ -438,6 +438,16 @@ Vậy nếu thủ phạm không phải là Gorilla Mart, thì là ai?
 
 Có thể là sếp của John. John không nói rõ việc này, nhưng anh ấy có ám chỉ điều này khi để trong ngoặc kép, "Trong kinh doanh, khách hàng là số 1". Vậy có phải sếp của John đã đưa ra những lời hứa vô lý với Gorilla Mart không? Họ đã gây áp lực lên John, trực tiếp hoặc gián tiếp, để những lời hứa đó thành hiện thực? John không nói vậy, nên chúng ta chỉ có thể đoán.
 
-Mặc dù vậy, trách nhiệm của John ở đâu trong toàn bộ câu chuyện này? Tôi cho rằng tất cả lỗi là ở John. John là người đã chấp nhận thời hạn 2 tuần ban đầu, trong khi biết rõ rằng dự án sẽ phức tạp hơn những gì khách hàng nói. John là người chấp nhận việc viết PHP server. John là người chấp nhận đăng ký bằng email và coupon hết hạn. John là người đã làm việc 20 giờ một ngày và 90 giờ một tuần. John là người đã từ bỏ gia đình và cuộc sống của mình để hoàn thành hạn chót này.
+Mặc dù vậy, trách nhiệm của John ở đâu trong toàn bộ câu chuyện này? Tôi cho rằng tất cả lỗi là ở John. John là người đã chấp nhận thời hạn 2 tuần ban đầu, trong khi biết rõ rằng dự án sẽ phức tạp hơn những gì khách hàng nói. John là người chấp nhận việc viết PHP server. John là người chấp nhận đăng ký bằng email và phiếu giảm giá hết hạn. John là người đã làm việc 20 giờ một ngày và 90 giờ một tuần. John là người đã từ bỏ gia đình và cuộc sống của mình để hoàn thành hạn chót này.
 
 Và tại sao John lại làm như vậy? Anh ta đã nói một cách không chắc chắn: "Tôi nhấn Gửi, ngả lưng vào ghế, và với một nụ cười tự mãn, tôi bắt đầu tưởng tượng về việc công ty sẽ đưa tôi lên vai họ và dẫn đầu một đoàn rước xuống Phố 42 trong khi tôi đăng quang "Lập trình viên tuyệt với nhất từ trước đến nay". Tóm lại, John đang cố trở thành một anh hùng. Anh ta thấy có cơ hội có được giải thưởng, và cố gắng giành được nó. Anh ta nghiêng người và chộp lấy chiếc nhẫn bằng đồng.
+
+Những người chuyên nghiệp thường là những người hùng, nhưng không bởi vì họ cố gằng trở thành. Người chuyên nghiệp trở thành người hùng khi họ hoàn thành tốt công việc, đúng thời gian, và đúng ngân sách. Bằng cách cố trở thành người đàn ông của thời đại, vị cứu tinh trong ngày, John đã không hành động như một người chuyên nghiệp.
+
+John lẽ ra nên nói không với thời hạn 2 tuần ban đầu. Hoặc nếu không, thì anh ta nên nói không khi thấy không có web service. Lẽ ra anh ta nên nói không với yêu cầu đăng ký email và phiếu giảm giá hết hạn. Và cuối cùng, anh ta phải nói không với bất cứ thứ gì đòi hỏi phải làm thêm giờ và hy sinh những thứ lớn hơn.
+
+Nhưng trên hết, John lẽ ra phải nói không với quyết định của chính mình, rằng cách duy nhất để hoàn thành công việc đúng thời hạn là gây là một mớ hỗn độn lớn. Hãy để ý những điều John nói về code tốt và unit tests:
+
+"Để bù đắp cho công việc mới thêm vào, cần code nhanh hơn một chút. Quên những lớp trừu tượng đi. Sử dụng một vòng lặp lớn phức tạp thay vì hỗn hợp, không còn thời gian nữa!"
+
+Và thêm nữa:
