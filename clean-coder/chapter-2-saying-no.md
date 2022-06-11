@@ -451,3 +451,15 @@ Nhưng trên hết, John lẽ ra phải nói không với quyết định của 
 "Để bù đắp cho công việc mới thêm vào, cần code nhanh hơn một chút. Quên những lớp trừu tượng đi. Sử dụng một vòng lặp lớn phức tạp thay vì hỗn hợp, không còn thời gian nữa!"
 
 Và thêm nữa:
+
+"Tôi dành 8 ngày viết code trong cơn giận dữ. Tôi sử dụng tất cả các công cụ có sẵn để hoàn thành công việc: copy-paste (sử dụng lại code), các con số ma thuật (tránh trùng lặp khi xác định hằng số và nhập lại), và hoàn toàn không có unit tests! (Ai cần những thanh màu đỏ vào thời điểm này, chỉ thêm cản trở)"
+
+Nói đồng ý với những quyết định đó là mấu chốt thực sự của thất bại. John chấp nhận rằng cách duy nhất để thành công là hành động thiếu chuyên nghiệp, vì vậy anh đã thu được phần thưởng xứng đáng.
+
+Điều này nghe thật khắc nghiệt. Thực ra nó không hẳn như vậy. Trong các chương trước, tôi đã mô tả cách tôi mắc sai lầm tương tự trong sự nghiệp của mình, hơn một lần. Sự cám dỗ để trở thành một anh hùng và "giải quyết được vấn đề" là rất lớn. Điều mà tất cả chúng ta phải nhận ra là nói đồng ý để bỏ kỷ luật chuyên môn không phải là cách giải quyết vấn đề. Bỏ những kỷ luật đó là cách bạn tạo ra vấn đề.
+
+Cho nên, tôi cuối cùng đã có câu trả lời cho câu hỏi đầu tiên của John:
+
+"Code tốt có bất khả thi? Sự chuyên nghiệp có bất khả thi?"
+
+Trả lời: Tôi nói _không_.
