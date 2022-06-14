@@ -23,3 +23,23 @@ Tôi không hề lường trước việc này. Tôi đoán rằng anh ta sẽ n
 "Cảm ơn Russ. Tôi hứa là ... tôi chắc"
 
 Và sau đó, hãy để tôi giới thiệu cho bạn về Roy Osherove, người sẽ cho bạn biết câu nói đó thảm hại đến mức nào.
+
+# Ngôn ngữ của sự cam kết
+
+Với Roy Osherove
+
+Nói. Là. Phải. Làm
+
+Một sự cam kết sẽ có 3 phần.
+
+1. Bạn nói bạn sẽ thực hiện
+2. Bạn thực sự nghĩ mình sẽ thực hiện
+3. Bạn thực sự thực hiện
+
+Nhưng bạn có thường xuyên bắt gặp người khác (không phải chúng ta, tất nhiên!) không bao giờ thực hiện đủ 3 bước đó?
+
+- Bạn hỏi một anh chàng IT tại sao mạng lại chậm như vậy và anh ta trả lời "Yeah, chúng ta thực sự cần một số router mới" Và bạn _biết_ rằng sẽ không có gì xảy ra.
+
+- Bạn yêu cầu một thành viên trong team chạy một số kiểm thử thủ công trước khi kiểm tra source code, và anh ta trả lời, "Chắc chắn rồi. Tôi hy vọng sẽ làm điều đó vào cuối ngày" Và bằng cách nào đó, bạn cảm thấy rằng ngày mai bạn sẽ cần hỏi lại xem liệu có bất kỳ kiểm thử nào thực sự được chạy trước khi kiểm tra.
+
+- Sếp của bạn đi loanh quanh trong phòng và lẩm bẩm, "chúng ta cần phải làm nhanh hơn". Và bạn biết sếp thực sự muốn BẠN cần phải làm nhanh hơn. Sếp sẽ không làm gì cả.
