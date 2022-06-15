@@ -43,3 +43,11 @@ Nhưng bạn có thường xuyên bắt gặp người khác (không phải chú
 - Bạn yêu cầu một thành viên trong team chạy một số kiểm thử thủ công trước khi kiểm tra source code, và anh ta trả lời, "Chắc chắn rồi. Tôi hy vọng sẽ làm điều đó vào cuối ngày" Và bằng cách nào đó, bạn cảm thấy rằng ngày mai bạn sẽ cần hỏi lại xem liệu có bất kỳ kiểm thử nào thực sự được chạy trước khi kiểm tra.
 
 - Sếp của bạn đi loanh quanh trong phòng và lẩm bẩm, "chúng ta cần phải làm nhanh hơn". Và bạn biết sếp thực sự muốn BẠN cần phải làm nhanh hơn. Sếp sẽ không làm gì cả.
+
+Có rất ít người thực sự muốn và thực sự làm những điều họ nói. Có vài người khi nói ra điều gì đó, họ thực sự muốn nó nhưng cuối cùng không hoàn thành. Và có rất nhiều người hứa hẹn nhiều điều và thậm chí không muốn thực hiện nó. Bạn đã bao giờ nghe ai đó nói: "Anh bạn, tôi thực sự cần giảm cân một chút" và bạn biết họ sẽ không làm gì cả? Luôn là như vậy.
+
+Tại sao trong hầu hết mọi lúc, bạn luôn có cảm giác kỳ lạ là mọi người không thực sự cam kết hoàn thành một việc gì đó?
+
+Tệ hơn, trực giác thường khiến chúng ta thất vọng. Đôi khi chúng ta muốn tin rằng ai đó thực sự muốn điều họ vừa nói ra trong khi họ thực sự không muốn. Chúng ta muốn tin một lập trình viên khi họ nói họ có thể hoàn thành một công việc 2 tuần chỉ với 1 tuần, nhưng họ không làm được.
+
+Thay vì tin tưởng vào gan ruột mình, chúng ta có thể sử dụng một số thủ thuật liên quan đến ngôn ngữ để thử và tìm hiểu xem mọi người có thực sự muốn điều họ nói hay không. Và bằng cách thay đổi những gì chúng ta noi, chúng ta có thể bắt đầu thực hiện bước 1 và 2 của danh sách trên. Khi chúng ta nói rằng chúng tôi sẽ cam kết với một điều gì đó, chúng ta thực sự muốn cam kết đó.
