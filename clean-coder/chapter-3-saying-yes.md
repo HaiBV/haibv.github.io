@@ -51,3 +51,15 @@ Tại sao trong hầu hết mọi lúc, bạn luôn có cảm giác kỳ lạ l�
 Tệ hơn, trực giác thường khiến chúng ta thất vọng. Đôi khi chúng ta muốn tin rằng ai đó thực sự muốn điều họ vừa nói ra trong khi họ thực sự không muốn. Chúng ta muốn tin một lập trình viên khi họ nói họ có thể hoàn thành một công việc 2 tuần chỉ với 1 tuần, nhưng họ không làm được.
 
 Thay vì tin tưởng vào gan ruột mình, chúng ta có thể sử dụng một số thủ thuật liên quan đến ngôn ngữ để thử và tìm hiểu xem mọi người có thực sự muốn điều họ nói hay không. Và bằng cách thay đổi những gì chúng ta noi, chúng ta có thể bắt đầu thực hiện bước 1 và 2 của danh sách trên. Khi chúng ta nói rằng chúng tôi sẽ cam kết với một điều gì đó, chúng ta thực sự muốn cam kết đó.
+
+# Nhận biết sự thiếu trung thực trong cam kết
+
+Chúng ta cần để ý tới ngôn ngữ mà chúng ta dùng khi cam kết làm một việc gì đó, nó sẽ là một dấu hiệu cho biết điều gì sắp diễn ra. Thực ra, chính xác hơn là nhận biết một số từ cụ thể trong những lời nói đó. Nếu bạn không thể tìm thấy những từ khóa kỳ diệu đó, rất có thể chúng tôi không thực sự muốn điều mình vừa nói, hoặc chúng tôi có thể không tin rằng chúng khả thi.
+
+Dưới đây là vài ví dụ về những từ khóa và cụm từ cần tìm như một dấu hiệu nhận biết sự thất hứa.
+
+- Cần/Nên (Need\Should): "Chúng ta cần hoàn thành việc này." "Tôi cần giảm cân." "Ai đó nên biến điều đó thành hiện thực."
+
+- Hy vọng/Ước (Hope/Wish): "Tôi hy vọng có thể hoàn thành vào ngày mai." "Tôi hy vọng chúng ta có thể gặp lại vào ngày nào đó." "Tôi ước tôi có thời gian cho việc đó." "Tôi ước chiếc máy tính này nhanh hơn."
+
+- Hãy (Let's) (không được theo sau "Tôi...(I...)") "Hãy gặp nhau nhé." "Hãy hoàn thành việc này."
