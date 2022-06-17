@@ -63,3 +63,13 @@ Dưới đây là vài ví dụ về những từ khóa và cụm từ cần tì
 - Hy vọng/Ước (Hope/Wish): "Tôi hy vọng có thể hoàn thành vào ngày mai." "Tôi hy vọng chúng ta có thể gặp lại vào ngày nào đó." "Tôi ước tôi có thời gian cho việc đó." "Tôi ước chiếc máy tính này nhanh hơn."
 
 - Hãy (Let's) (không được theo sau "Tôi...(I...)") "Hãy gặp nhau nhé." "Hãy hoàn thành việc này."
+
+Khi bắt đầu để ý những từ này, bạn bắt đầu phát hiện ra chúng ở hầu hết mọi nơi quanh bạn, ngay cả trong những điều bạn nói.
+
+Bạn sẽ thấy chúng ta có xu hướng rất bận rộn và không chịu trách nhiệm về mọi việc.
+
+Và việc này thật sự không ổn khi bạn hoặc người khác dựa vào những lời hứa đó như một phần của công việc. Tuy nhiên bạn đã thực hiện được bước đầu tiên - bắt đầu nhận biết sự thiếu trung thực trong cam kết quanh bạn và trong bạn.
+
+Chúng ta đã nghe được âm thanh cuộc sự thất hứa. Vậy còn những cam kết thực sự?
+
+# Những cam kết thật sự nghe như thế nào?
