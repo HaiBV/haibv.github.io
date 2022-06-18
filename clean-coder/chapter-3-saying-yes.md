@@ -52,9 +52,9 @@ Tệ hơn, trực giác thường khiến chúng ta thất vọng. Đôi khi ch�
 
 Thay vì tin tưởng vào gan ruột mình, chúng ta có thể sử dụng một số thủ thuật liên quan đến ngôn ngữ để thử và tìm hiểu xem mọi người có thực sự muốn điều họ nói hay không. Và bằng cách thay đổi những gì chúng ta noi, chúng ta có thể bắt đầu thực hiện bước 1 và 2 của danh sách trên. Khi chúng ta nói rằng chúng tôi sẽ cam kết với một điều gì đó, chúng ta thực sự muốn cam kết đó.
 
-# Nhận biết sự thiếu trung thực trong cam kết
+# Dấu hiệu của sự "lươn lẹo"
 
-Chúng ta cần để ý tới ngôn ngữ mà chúng ta dùng khi cam kết làm một việc gì đó, nó sẽ là một dấu hiệu cho biết điều gì sắp diễn ra. Thực ra, chính xác hơn là nhận biết một số từ cụ thể trong những lời nói đó. Nếu bạn không thể tìm thấy những từ khóa kỳ diệu đó, rất có thể chúng tôi không thực sự muốn điều mình vừa nói, hoặc chúng tôi có thể không tin rằng chúng khả thi.
+Hãy để ý tới ngôn ngữ mà chúng ta dùng khi cam kết làm một việc gì đó, nó sẽ là một dấu hiệu cho báo trước của việc đó. Thực ra, chính xác hơn là để ý một số từ cụ thể trong những lời cam kết đó. Nếu bạn không thể tìm thấy những từ khóa kỳ diệu đó, rất có thể chúng tôi không thực sự muốn điều mình vừa nói, hoặc chúng tôi có thể không tin rằng chúng khả thi.
 
 Dưới đây là vài ví dụ về những từ khóa và cụm từ cần tìm như một dấu hiệu nhận biết sự thất hứa.
 
@@ -73,3 +73,15 @@ Và việc này thật sự không ổn khi bạn hoặc người khác dựa v�
 Chúng ta đã nghe được âm thanh cuộc sự thất hứa. Vậy còn những cam kết thực sự?
 
 # Những cam kết thật sự nghe như thế nào?
+
+Điểm chung của những cụm từ trong phần trước là họ cho rằng những thứ đó nằm ngoài tầm tay của "tôi" hoặc họ không có trách nhiệm cá nhân trong việc đó.
+
+Sự thật là _bạn_, _chính bản thân bạn_, LUÔN LUÔN có điều gì đó nằm trong tầm kiểm soát của bạn, vì vậy luôn có điều gì đó bạn hoàn toàn có thể cam kết thực hiện.
+
+Công thức bí mật để nhận ra lời cam kết trung thực là để ý tới những câu nghe giống như: Tôi sẽ ... vào ... (ví dụ: Tôi sẽ hoàn thành vào thứ 3)
+
+Có gì quan trọng trong câu nói trên? Bạn sẽ đối mặt với một thực tế rằng BẠN cần làm một việc gì đó với thời gian hoàn thành rõ ràng. Bạn đang không nói về bất cứ ai khác ngoài bản thân bạn. Bạn đang nói về hành động bạn sẽ làm. Bạn không "có thể" làm nó hoặc "có thể đạt được", bạn sẽ hoàn thành nó.
+
+Không có cách nào (về mặt lý thuyết) thoát khỏi cam kết bằng câu nói trên. Bạn nói bạn sẽ làm nó và bây giờ chỉ có 2 trường hợp có thể xảy ra - bạn hoàn thành nó, hoặc không. Nếu bạn không hoàn thành, bạn sẽ làm thất vọng những người phụ thuộc lời hứa đó. Bạn sẽ càm thấy _tồi tệ_ khi không hoàn thành. Bạn sẽ thấy ngại khi nói chuyện với ai đó khi chưa xong việc (nếu người đó nghe được lời hứa của bạn)
+
+Khá đáng sợ phải không?
