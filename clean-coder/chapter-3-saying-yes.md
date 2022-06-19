@@ -85,3 +85,9 @@ Có gì quan trọng trong câu nói trên? Bạn sẽ đối mặt với một 
 Không có cách nào (về mặt lý thuyết) thoát khỏi cam kết bằng câu nói trên. Bạn nói bạn sẽ làm nó và bây giờ chỉ có 2 trường hợp có thể xảy ra - bạn hoàn thành nó, hoặc không. Nếu bạn không hoàn thành, bạn sẽ làm thất vọng những người phụ thuộc lời hứa đó. Bạn sẽ càm thấy _tồi tệ_ khi không hoàn thành. Bạn sẽ thấy ngại khi nói chuyện với ai đó khi chưa xong việc (nếu người đó nghe được lời hứa của bạn)
 
 Khá đáng sợ phải không?
+
+Bạn đang chịu toàn bộ trách nhiệm về việc gì đó, trước ít nhất là một người. Không giống như bạn đang đứng trước gương, hoặc màn hình máy tính. Chính là bạn, đối mặt với một người khác, và nói rằng bạn sẽ làm điều đó. Đó là khi cam kết sẽ bắt đầu. Đặt mình vào tình huống buộc bạn phải làm điều đó.
+
+Bạn đã thay đổi ngôn ngữ bạn sử dụng thành ngôn ngữ của sự cam kết, và điều đó sẽ giúp bạn đi tới 2 bước tiếp theo: thực sự muốn, và làm theo.
+
+Sau đây là một số lý do bạn có thể không muốn điều đó, hoặc làm theo, và một số giải pháp.
