@@ -91,3 +91,16 @@ Bạn đang chịu toàn bộ trách nhiệm về việc gì đó, trước ít 
 Bạn đã thay đổi ngôn ngữ bạn sử dụng thành ngôn ngữ của sự cam kết, và điều đó sẽ giúp bạn đi tới 2 bước tiếp theo: thực sự muốn, và làm theo.
 
 Sau đây là một số lý do bạn có thể không muốn điều đó, hoặc làm theo, và một số giải pháp.
+
+Nó sẽ không hiệu quả vì tôi phải phụ thuộc vào người X để hoàn thành việc này.
+
+Bạn chỉ có thể cam kết những việc bạn _toàn quyền kiểm soát_. Lấy ví dụ, nếu mục tiêu của bạn là hoàn thành một module phụ thuộc vào một đội khác, bạn không thể cam kết hoàn thành module đó với tích hợp đầy đủ của nhóm khác. Nhưng bạn có thể cam kết thực hiện những hành động cụ thể sẽ đưa bạn đến mục tiêu của mình.
+
+- Dành ra một giờ bàn bạc với Gary từ nhóm cơ sở hạ tầng để làm rõ sự phụ thuộc của bạn.
+- Tạo một interface để trừu tượng hóa sự phụ thuộc module của bạn với cơ sở hạ tầng của nhóm khác.
+- Gặp gỡ người dựng hệ thống ít nhất 3 lần trong tuần để đảm bảo các thay đổi của bạn hoạt động tốt trong hệ thống của công ty.
+- Tạo bản dựng cá nhân của riêng bạn để chạy các kiểm thử tích hợp cho module.
+
+Bạn đã thấy sự khác biệt chưa?
+
+Nếu mục tiêu cuối cùng phụ thuộc vào một ai đó, bạn nên cam kết những hành động cụ thể sẽ đưa bạn đến gần hơn với mục tiêu cuối cùng.
