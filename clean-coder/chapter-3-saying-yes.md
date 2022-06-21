@@ -92,7 +92,7 @@ Bạn đã thay đổi ngôn ngữ bạn sử dụng thành ngôn ngữ của s�
 
 Sau đây là một số lý do bạn có thể không muốn điều đó, hoặc làm theo, và một số giải pháp.
 
-Nó sẽ không hiệu quả vì tôi phải phụ thuộc vào người X để hoàn thành việc này.
+## Nó sẽ không hiệu quả vì tôi phải phụ thuộc vào người X để hoàn thành việc này.
 
 Bạn chỉ có thể cam kết những việc bạn _toàn quyền kiểm soát_. Lấy ví dụ, nếu mục tiêu của bạn là hoàn thành một module phụ thuộc vào một đội khác, bạn không thể cam kết hoàn thành module đó với tích hợp đầy đủ của nhóm khác. Nhưng bạn có thể cam kết thực hiện những hành động cụ thể sẽ đưa bạn đến mục tiêu của mình.
 
@@ -104,3 +104,13 @@ Bạn chỉ có thể cam kết những việc bạn _toàn quyền kiểm soát
 Bạn đã thấy sự khác biệt chưa?
 
 Nếu mục tiêu cuối cùng phụ thuộc vào một ai đó, bạn nên cam kết những hành động cụ thể sẽ đưa bạn đến gần hơn với mục tiêu cuối cùng.
+
+## Nó sẽ không hiệu quả vì tôi thực sự không biết liệu có thể thực hiện được hay không
+
+Nếu nó không thể hoàn thành, bạn vẫn có thể cam kết những hành động sẽ đưa bạn đến gần mục tiêu hơn. Tìm hiểu xem nó có thể thực hiện hay không có thể là một trong những hành động cần cam kết!
+
+Thay vì cam kết sẽ sửa toàn bộ 25 lỗi còn lại trước khi bàn giao (có thể bất khả thi), bạn có thể cam kết những hành động cụ thể sau sẽ đưa bạn đến gần mục tiêu hơn:
+
+- Rà soát một lượt 25 lỗi và cố gắng tái hiện chúng.
+- Nói chuyện với QA, người đã tìm ra những lỗi đó để xem bản tóm tắt của lỗi đó.
+- Dành toàn bộ thời gian trong tuần của bạn để sửa từng lỗi một.
