@@ -114,3 +114,19 @@ Thay vì cam kết sẽ sửa toàn bộ 25 lỗi còn lại trước khi bàn g
 - Rà soát một lượt 25 lỗi và cố gắng tái hiện chúng.
 - Nói chuyện với QA, người đã tìm ra những lỗi đó để xem bản tóm tắt của lỗi đó.
 - Dành toàn bộ thời gian trong tuần của bạn để sửa từng lỗi một.
+
+## Nó sẽ không hiệu quả vì đôi lúc tôi sẽ không làm được.
+
+Điều đó có thể xảy ra. Đôi khi những thứ không lường trước sẽ xảy ra, cuộc sống mà. Nhưng bạn luôn muốn sống theo sự kỳ vọng. Trong trường hợp đó, đã đến lúc thay đổi sự kỳ vọng đó, ngay và luôn.
+
+Nếu bạn không thể thực hiện cam kết của mình, việc quan trọng nhất là báo động ngay và luôn cho những người bạn đã cam kết với.
+
+Bạn càng thông báo cho các bên liên quan sớm bao nhiêu, thì càng có nhiều khả năng và thời gian cho đội của bạn dừng lại, đánh giá lại các hành động hiện tại và quyết định xem có thể thực hiện hoặc thay đổi điều gì đó không (ví dụ như về mức độ ưu tiên). Bằng cách này, cam kết của bạn vẫn có thể hoàn thành, hoặc bạn có thể thay đổi thành một cam kết khác.
+
+Dưới đây là một vài ví dụ:
+
+- Nếu bạn lên lịch hẹn vào buổi chiều ở một quán cà phê tại khu trung tâm với một đồng nghiệp và bạn bị tắc đường, bạn nghi ngờ việc bạn có thể giữ cam kết đến đúng giờ của mình. Bạn có thể gọi cho đồng nghiệp ngay khi bạn nhận ra bạn có thể đến trễ, và cho họ biết. Biết đâu bạn sẽ tìm được một địa điểm gần hơn, hoặc có thể hoãn buổi hẹn lại.
+
+- Nếu bạn cam kết sửa một lỗi mà bạn nghĩ là có thể sửa được và bạn phát hiện ra có vài vấn đề còn ẩn giấu phức tạp hơn so với suy nghĩ ban đầu, bạn có thể nêu vấn đề lên. Sau đó, cả đội có thể quyết định quá trình để thực hiện cam kết đó (cùng làm, brainstorming, ...) hoặc thay đổi mức độ ưu tiên và giao một lỗi khác đơn giản hơn cho bạn.
+
+Điều quan trọng ở đây là: Nếu bạn không nói với ai về vấn đề tiềm tàng sớm nhất có thể, bạn sẽ không cho người khác cơ hội để giúp đỡ bạn hoàn thành cam kết của mình.
