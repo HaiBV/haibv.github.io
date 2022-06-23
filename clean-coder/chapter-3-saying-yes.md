@@ -130,3 +130,11 @@ Dưới đây là một vài ví dụ:
 - Nếu bạn cam kết sửa một lỗi mà bạn nghĩ là có thể sửa được và bạn phát hiện ra có vài vấn đề còn ẩn giấu phức tạp hơn so với suy nghĩ ban đầu, bạn có thể nêu vấn đề lên. Sau đó, cả đội có thể quyết định quá trình để thực hiện cam kết đó (cùng làm, brainstorming, ...) hoặc thay đổi mức độ ưu tiên và giao một lỗi khác đơn giản hơn cho bạn.
 
 Điều quan trọng ở đây là: Nếu bạn không nói với ai về vấn đề tiềm tàng sớm nhất có thể, bạn sẽ không cho người khác cơ hội để giúp đỡ bạn hoàn thành cam kết của mình.
+
+## Tóm lại
+
+Tạo nên ngôn ngữ của sự cam kết nghe có đôi chút đáng sợ, nhưng nó có thể giúp xử lý rất nhiều vấn đề về trao đổi thông tin mà các lập trình viên phải đối mặt ngày nay - ước lượng (estimation), hạn chót, và giao tiếp mặt đối mặt. Bạn sẽ được coi là một lập trình viên nghiêm túc luôn giữ lời hứa, và đó là một trong những điều tốt nhất mà bạn có thể hy vọng trong ngành của chúng ta.
+
+# Học cách để nói "Có"
+
+Tôi yêu cầu Roy đóng góp bài báo đó vì nó mắc kẹt trong đầu tôi khá lâu. Tôi đã giảng về việc học cách nói "không" trong một thời gian dài. Nhưng điều quan trong không kém là học cách để nói "có"
