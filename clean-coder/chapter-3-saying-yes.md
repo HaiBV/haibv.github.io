@@ -165,4 +165,26 @@ Marge: "Nó sẽ đi cùng với tài liệu chứ?"
 
 Peter: "Tôi cần vài giờ để làm tài liệu, nên có thể vào thứ 2, nhưng có thể đến cuối ngày thứ 3"
 
-Trong trường hợp này, ngôn ngữ của Peter trung thực hơn. Anh ta đang mô tả sự không chắc chắn của mình cho Marge. Marge có thể đối phó với sự không chắc chắn đó. Mặt khác, cô ấy không hề biết về nó.
+Trong trường hợp này, ngôn ngữ của Peter trung thực hơn. Anh ta đang mô tả sự không chắc chắn của mình cho Marge. Marge có thể đối phó với sự không chắc chắn đó. Còn không thì cô ấy không hề biết về nó.
+
+## Cam kết với kỷ luật
+
+Marge: "Peter, tôi muốn một câu trả lời rõ ràng, có hoặc không. Anh sẽ hoàn thành công cụ xếp hạng cùng với tài liệu vào thứ 6 chứ?
+
+Đây là một câu hỏi hoàn toàn hợp lý của Marge. Cô ấy có một lịch trình cần quan tâm và cô cần một câu trả lời có hoặc không về ngày thứ 6. Peter nên trả lời thế nào?
+
+Peter: "Trong trường hợp này, Marge, tôi sẽ phải nói không. Thời điểm sớm nhất mà tôi chắc chắn tôi sẽ hoàn thành chỉnh sửa cùng tài liệu là vào thứ 3."
+
+Marge: "Vậy anh cam kết vào thứ 3."
+
+Peter: "Đúng, tôi sẽ hoàn thành mọi thứ vào thứ 3."
+
+Nhưng nếu Marge rất muốn điều chỉnh và tài liệu hoàn thành vào thứ 6?
+
+Marge: "Peter, tôi có rất nhiều vấn đề với thứ 3. Willy, người viết tài liệu kỹ thuật, sẽ bắt đầu công việc vào thứ 2. Anh ta có 5 ngày để hoàn thành hướng dẫn người dùng. Nếu tôi không có tài liệu của công cụ xếp hạng vào sáng thứ 2, anh ta sẽ không thể hoàn thành hướng dẫn đúng hẹn. Anh có thể làm tài liệu trước không?
+
+Peter: "Không, phần chỉnh sửa phải hoàn thành trước, vì chúng ta tạo ra tài liệu từ kết quả của những kiểm thử."
+
+Marge: "Chà, vậy có cách nào anh hoàn thành chỉnh sửa và tài liệu trước sáng thứ 2 không?"
+
+Bây giờ Peter cần phải ra quyết định.
