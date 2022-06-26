@@ -187,4 +187,18 @@ Peter: "Không, phần chỉnh sửa phải hoàn thành trước, vì chúng ta
 
 Marge: "Chà, vậy có cách nào anh hoàn thành chỉnh sửa và tài liệu trước sáng thứ 2 không?"
 
-Bây giờ Peter cần phải ra quyết định.
+Bây giờ Peter cần phải ra quyết định. Có khả năng cao anh ta sẽ hoàn thành chỉnh sửa công cụ xếp hạng vào thứ 6, và anh ta có khả năng hoàn thành tài liệu trước khi về nhà cho cuối tuần. Anh ta có thể dành thêm vài giờ vào thứ 7 nếu mọi thứ cần nhiều thời gian hơn anh ta nghĩ. Vậy anh ta nên trả lời Marge thế nào?
+
+Peter: "Nghe này Marge, có khả năng cao là tôi có thể hoàn thành mọi thứ vào sáng thứ 2 nếu tôi có thể làm thêm vài giờ vào thứ 7."
+
+Liệu có giải quyết vấn đề của Marge? Không, nó đơn giản là thay đổi sự kỳ lạ, và đó là thứ Peter phải nói cho cô ấy.
+
+Marge: "Tôi có thể trông cậy vào sáng thứ 2 không?"
+
+Peter: "Có thể, nhưng không chắc chắn."
+
+Điều đó không đủ với Marge.
+
+Marge: "Nghe này Peter, tôi thực sự cần sự chắc chắn. Có bất kỳ cách nào anh có thể cam kết hoàn thành trước sáng thứ 2 không?
+
+
