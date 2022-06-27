@@ -201,4 +201,11 @@ Peter: "Có thể, nhưng không chắc chắn."
 
 Marge: "Nghe này Peter, tôi thực sự cần sự chắc chắn. Có bất kỳ cách nào anh có thể cam kết hoàn thành trước sáng thứ 2 không?
 
+Peter có thể bị cám dỗ để phá vơ kỷ luật vào lúc này. Anh ta có thể hoàn thành nhanh hơn nếu anh ta bỏ qua các kiểm thử của mình. Anh ta có thể hoàn thành nhanh hơn nếu không refactor. Anh ta có thể hoàn thành nhanh hơn nếu anh ta không chạy đầy đủ hồi quy.
+
+Đây là lúc người chuyên nghiệp xác định ranh giới. Trước hết, giả thiết của Peter không chính xác. Anh ta sẽ không hoàn thành nhanh hơn nếu bỏ qua kiểm thử. Anh ta sẽ không hoàn thành nhanh hơn nếu không refactor. Anh ta sẽ không hoàn thành nhanh hơn nếu không chạy đầy đủ hồi quy. Kinh nghiệm nhiều năm đã dạy chúng tôi rằng vi phạm kỷ luật chỉ khiến chúng tôi chậm lại.
+
+Nhưng thứ 2, với tư cách một chuyên gia, anh ta có trách nhiệm duy trì các tiêu chuẩn nhất định. Code của anh ta cần được kiểm thử, cần phải phải có kiểm thử, cần được giữ sạch sẽ. Và anh ta phải chắc chắn mình không phá vỡ bất kỳ điều gì khác trong hệ thống.
+
+Peter, là một người chuyên nghiệp, đã cam kết duy trì các tiêu chuẩn này. Tất cả các cam kết khác mà anh ta đưa ra phải tuân theo điều đó. Vì vậy, toàn bộ dòng ký do này cần phải hủy bỏ.
 
