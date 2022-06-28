@@ -209,3 +209,17 @@ Nhưng thứ 2, với tư cách một chuyên gia, anh ta có trách nhiệm duy
 
 Peter, là một người chuyên nghiệp, đã cam kết duy trì các tiêu chuẩn này. Tất cả các cam kết khác mà anh ta đưa ra phải tuân theo điều đó. Vì vậy, toàn bộ dòng ký do này cần phải hủy bỏ.
 
+Peter: "Không, Marge, tôi thực sự không thể chắc chắn bất kỳ dead line nào trước thứ 3. Tôi rất tiếc nếu điều đó làm xáo trộn lịch trình của bạn, nhưng đó là thực tế mà chúng ta phải đối mặt."
+
+Marge: "Chết tiệt, tôi thực sự muốn sớm hơn. Anh chắc chứ?"
+
+Peter: "Tôi chắc chắn rằng có thể xong vào muộn ngày thứ 3."
+
+Marge: "OK, tôi đoán là tôi sẽ nói chuyện với Willy để xem anh ta có thể sắp xếp lại lịch trình của mình hay không."
+
+Đó là trong trường hợp Marge chấp nhận câu trả lời của Peter và bắt đầu cân nhắc các lựa chọn khác. Nhưng nếu Marge không còn lựa chọn nào nữa? Nếu Peter là hy vọng cuối cùng của Peter?
+
+Marge: "Peter, nghe này, tôi biết đây là một áp đặt lớn, nhưng tôi thực sự cần anh tìm cách hoàn thành công việc này vào sáng thứ 2. Nó thực sự rất quan trọng. Anh không thể làm được gì sao?
+
+Bây giờ Peter bắt đầu thực sự suy nghĩ về việc làm thêm giờ, có lẽ hầu hết vào các ngày cuối tuần. Peter cần phải rất thành thật với bản thân về khả năng chịu đựng và dự trữ của mình. Có thể dễ dàng nói rằng bạn sẽ hoàn thành rất nhiều việc vào cuối tuần, nhưng sẽ khó hơn để thực sự tập hợp đủ năng lượng để làm công việc chất lượng cao.
+
