@@ -223,3 +223,14 @@ Marge: "Peter, nghe này, tôi biết đây là một áp đặt lớn, nhưng t
 
 Bây giờ Peter bắt đầu thực sự suy nghĩ về việc làm thêm giờ, có lẽ hầu hết vào các ngày cuối tuần. Peter cần phải rất thành thật với bản thân về khả năng chịu đựng và dự trữ của mình. Có thể dễ dàng nói rằng bạn sẽ hoàn thành rất nhiều việc vào cuối tuần, nhưng sẽ khó hơn để thực sự tập hợp đủ năng lượng để làm công việc chất lượng cao.
 
+Người chuyên nghiệp biết giới hạn của mình. Họ biết mình có thể làm overtime bao lâu là hiệu quả nhất và cái giá cho việc đó là gì.
+
+Trong trường hợp này, Peter cảm thấy khá tự tin rằng một vài giờ làm thêm trong tuần và một chút thời gian cuối tuần là đủ.
+
+Peter: "OK, Marge, nghe tôi nói này. Tôi sẽ gọi về nhà và xác định thời gian overtime với gia đình tôi. Nếu họ đồng ý, thì tôi sẽ hoàn thành công việc vào sáng thứ 2. Tôi sẽ đến vào sáng thứ 2 để chắc chắn rằng mọi thứ sẽ ổn với Willy. Nhưng sau đó tôi sẽ về nhà và chỉ quay trở lại vào thứ 4. Thỏa thuận như vậy nhé?"
+
+Điều này hoàn toàn công bằng. Peter biết rằng anh ấy có thể hoàn thành các sửa đổi và tài liệu nếu anh ấy làm việc ngoài giờ. Anh ấy cũng biết mình sẽ vô dụng trong vài ngày sau đó.
+
+# Kết luận
+
+Người chuyên nghiệp không bắt buộc phải nói có với mọi thứ họ được yêu cầu. Tuy nhiên, họ nên làm việc chỉ để tìm ra những cách sáng tạo có thể biến những điều đó thành khả thi. Khi họ nói có, họ sử dụng ngôn ngữ của cam kết để không ai nghi ngờ về lời hứa của họ.
