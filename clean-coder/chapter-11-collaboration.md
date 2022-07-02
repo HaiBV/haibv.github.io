@@ -7,3 +7,9 @@ layout: default
 Phần lớn chương trình được tạo ra bởi các đội nhóm (team). Đội nhóm có hiệu quả tốt khi các thành viên hợp tác chuyên nghiệp với nhau. Nếu trong một team, bạn là một người cô độc hoặc một ẩn sĩ, thì đó là sự thiếu chuyên nghiệp.
 
 Vào năm 1974, tôi lúc đó 22 tuổi. Cuộc hôn nhân với người vợ tuyệt vời của tôi, Ann Marie, vừa được 6 tháng. Vẫn còn một năm nữa mới đến ngày sinh con đầu lòng của chúng tôi, Angela. Và lúc đó tôi đang làm việc tại Chicago Laser Systems, một bộ phận của Teradyne.
+
+Làm việc cùng là cậu bạn thời trung học, Tim Conrad. Tim và tôi đã làm được khá nhiều điều kỳ diệu trong thời đại của chúng tôi. Chúng tôi cùng nhau dựng vài chiếc máy tính trong tầng hầm nhà Tim. Chúng tôi dựng thang Jacob ở tầng hầm nhà tôi. Chúng tôi dạy nhau cách lập trình PDP-8s và cách nối các mạch tích hợp và bóng bán dẫn vào chương trình máy tính.
+
+Chúng tôi là những lập trình viên làm việc trên một hệ thống sử dụng tia laze để cắt những thành phần điện tử như điện trở, tụ điện với độ chính xác cực cao. Ví dụ: chúng tôi đã cắt tinh thể cho chiếc đồng hồ kỹ thuật số đầu tiên, Motorola Pulsar.
+
+Chiếc máy tính chúng tôi dùng để lập trình là M365, một phiên bản PDP-8 của Teradyne. Chúng tôi sử dụng ngôn ngữ Assemble, và mã nguồn được lưu trên những cuộn băng từ. Mặc dù chúng tôi có thể chỉnh sửa trên màn hình, nhưng quá trình này khá phức tạp, nên hầu như chúng tôi sử dụng danh sách in cho việc đọc code và chỉnh sửa sơ bộ.
