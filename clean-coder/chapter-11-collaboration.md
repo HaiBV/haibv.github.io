@@ -13,3 +13,14 @@ Làm việc cùng là cậu bạn thời trung học, Tim Conrad. Tim và tôi �
 Chúng tôi là những lập trình viên làm việc trên một hệ thống sử dụng tia laze để cắt những thành phần điện tử như điện trở, tụ điện với độ chính xác cực cao. Ví dụ: chúng tôi đã cắt tinh thể cho chiếc đồng hồ kỹ thuật số đầu tiên, Motorola Pulsar.
 
 Chiếc máy tính chúng tôi dùng để lập trình là M365, một phiên bản PDP-8 của Teradyne. Chúng tôi sử dụng ngôn ngữ Assemble, và mã nguồn được lưu trên những cuộn băng từ. Mặc dù chúng tôi có thể chỉnh sửa trên màn hình, nhưng quá trình này khá phức tạp, nên hầu như chúng tôi sử dụng danh sách in cho việc đọc code và chỉnh sửa sơ bộ.
+
+Chúng tôi không có công cụ nào để tìm kiếm trong code base. Không có cách nào để tìm ra tất cả những nơi sử dụng một hàm hoặc một hằng số nào đó. Và như bạn đang tưởng tượng, đây là một trở ngại khá lớn.
+
+Vậy là vào một ngày nọ, Tim và tôi quyết định sẽ viết một chương trình tham chiếu chéo. Chương trình này sẽ đọc mã nguồn của chúng tôi trong các cuộn băng và in ra danh sách mọi ký hiệu, cùng với tệp và số dòng nơi ký hiệu đó được sử dụng.
+
+Chương trình ban đầu khá dễ để viết. Nó đơn giản chỉ đọc các đoạn băng chứa code, phân tích cú pháp Assemble, tạo một bảng ký hiệu và thêm các tham chiếu các mục đó. Nó hoạt động tốt, nhưng chậm kinh khủng. Phải mất hơn một giờ để xử lý chương trình điều hành chính (MOP - Master Operating Program) của chúng tôi
+
+Lý do nó quá chậm là vì chúng tôi giữ bảng ký hiệu khá lớn vào một bộ nhớ đệm duy nhất. Bất cứ khi nào chúng tôi tìm thấy một tham chiếu mới, chúng tôi sẽ chèn nó vào bộ đệm, di chuyển phần còn lại xuống một vài byte để tạo khoảng trống.
+
+Tim và tôi không phải chuyên gia về cấu trúc dữ liệu và giải thuật. Chúng tôi chưa bao giờ được nghe về bảng băm hoặc tìm kiếm nhị phân. Chúng tôi không biết làm thế nào để tạo ra một thuật toán nhanh hơn. Chúng tôi chỉ biết rằng những gì chúng tôi làm là quá chậm.
+
