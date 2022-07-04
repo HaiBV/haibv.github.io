@@ -24,3 +24,11 @@ Lý do nó quá chậm là vì chúng tôi giữ bảng ký hiệu khá lớn v�
 
 Tim và tôi không phải chuyên gia về cấu trúc dữ liệu và giải thuật. Chúng tôi chưa bao giờ được nghe về bảng băm hoặc tìm kiếm nhị phân. Chúng tôi không biết làm thế nào để tạo ra một thuật toán nhanh hơn. Chúng tôi chỉ biết rằng những gì chúng tôi làm là quá chậm.
 
+Vậy là chúng tôi thử hết cách này đến cách khác. Chúng tôi thử đặt tham chiếu vào trong linked list. Chúng tôi thử để những khoảng trống trong mảng và chỉ phát triển bộ đệm khi các khoảng trống được lấp đầy. Chúng tôi thử tạo linked list của những khoảng trống. Chúng tôi thử mọi ý tưởng điền rồ nhất.
+
+Chúng tôi đứng trước bảng trắng trong văn phòng, vẽ mô hình về cấu trúc dữ liệu của mình và thực hiện tính toán để dự đoán về hiệu suất. Chúng tôi đến văn phòng mỗi ngày với một ý tưởng mới. Chúng tôi hợp tác với nhau như những "con yêu tinh"
+
+Một vài ý tưởng trong đó làm tăng hiệu suất. Vài thứ làm chậm đi. Thật đáng buồn. Đây là lần đầu tiên tôi nhận ra việc tối ưu phần mềm khó đến mức nào và quy trình này không trực quan ra sao.
+
+Cuối cùng chúng tôi đã rút ngắn thời gian xuống dưới 15 phút, rất gần với khoảng thời gian cần để đọc đoạn băng nguồn. Vì vậy chúng tôi đã hài lòng.
+
