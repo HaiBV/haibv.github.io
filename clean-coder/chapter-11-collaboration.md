@@ -32,3 +32,11 @@ Một vài ý tưởng trong đó làm tăng hiệu suất. Vài thứ làm ch�
 
 Cuối cùng chúng tôi đã rút ngắn thời gian xuống dưới 15 phút, rất gần với khoảng thời gian cần để đọc đoạn băng nguồn. Vì vậy chúng tôi đã hài lòng.
 
+# Lập trình viên và mọi người
+
+Chúng ta không trở thành lập trình viên bởi vì chúng ta thích làm việc với mọi người. Như một quy luật, chúng ta thấy các mối quan hệ giữa cá nhân với nhau thật lộn xộn và khó đoán. Chúng tôi thích những hành vi rõ ràng và dự đoán được của những chiếc máy mà chúng tôi lập trình. Chúng ta hành phúc nhất khi ở một mình trong phòng hàng giờ tập trung sâu vào một vấn đề thực sự thú vị nào đó.
+
+OK, đó là sự tổng quá hóa quá mức và có vô số những ngoại lệ. Có rất nhiều lập trình viên giỏi làm việc với mọi người và thích thử thách. Nhưng điểm trung bình của nhóm vẫn có xu hướng theo như tôi đã nêu. Chúng tôi, những lập trình viên, tận hưởng cảm giác một mình và đắm chìm vào sự tập trung.
+
+## Lập trình viên với sếp
+
