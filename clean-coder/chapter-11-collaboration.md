@@ -40,3 +40,8 @@ OK, đó là sự tổng quá hóa quá mức và có vô số những ngoại l
 
 ## Lập trình viên với sếp
 
+Vào những năm 70 và 80, khi còn là một lập trình viên ở Teradyne, tôi đã học được cách gỡ lỗi _thực sự_ giỏi. Tôi yêu những thử thách và luôn muốn đối mặt với các vấn đề một cách đầy năng lượng và nhiệt tình. Không một lỗi nào có thể tránh khỏi tôi quá lâu!
+
+Khi tôi xử lý được 1 lỗi, nó giống như giành được chiến thắng, hoặc tiêu diệt được Jabberwock! Tôi đến gặp sếp của tôi lúc đó, Ken Finder, với thanh Vorpal trên tay, và sau sưa mô tả cho ông hiểu lỗi đó _thú vị_ thế nào. Một ngày nọ, Ken cuối cùng đã nổi đóa lên trong sự thất vọng: "Lỗi không thú vị. Lỗi chỉ cần sửa thôi!"
+
+Tôi học được vài thứ ngày hôm đó. Làm việc với đam mê là một điều tuyệt vời. Nhưng đồng thời cũng nên để mắt đến mục tiêu của người đang trả lương cho bạn.
