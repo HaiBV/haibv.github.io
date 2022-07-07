@@ -45,3 +45,11 @@ Vào những năm 70 và 80, khi còn là một lập trình viên ở Teradyne,
 Khi tôi xử lý được 1 lỗi, nó giống như giành được chiến thắng, hoặc tiêu diệt được Jabberwock! Tôi đến gặp sếp của tôi lúc đó, Ken Finder, với thanh Vorpal trên tay, và sau sưa mô tả cho ông hiểu lỗi đó _thú vị_ thế nào. Một ngày nọ, Ken cuối cùng đã nổi đóa lên trong sự thất vọng: "Lỗi không thú vị. Lỗi chỉ cần sửa thôi!"
 
 Tôi học được vài thứ ngày hôm đó. Làm việc với đam mê là một điều tuyệt vời. Nhưng đồng thời cũng nên để mắt đến mục tiêu của người đang trả lương cho bạn.
+
+Trách nhiệm đầu tiên của một lập trình viên chuyên nghiệp là hoàn thành các yêu cầu của người sử dụng lao động. Tức là kết hợp với các quản lý, phân tích nghiệp vụ , tester, và các thành viên khác trong team để có được sự _thấu hiểu_ về mục tiêu nghiệp vụ. Điều đó không có nghĩa là bạn cần trở thành một người làm nghiệp vụ kinh doanh. Nó có nghĩa là bạn cần hiểu những dòng code bạn viết ra để làm gì, và làm cách nào công ty/người sử dụng lao động được hưởng lợi từ nó.
+
+Điều tệ nhất một lập trình viên chuyên nghiệp có thể làm là hạnh phúc vùi mình trong ngôi mộ công nghệ khi xung quanh anh/cô ta công việc kinh doanh sụp đổ và bùng cháy. _Việc_ của bạn là giữ cho doanh nghiệp phát triển.
+
+Vậy nên, lập trình viên chuyên nghiệp dành thời gian để tìm hiểu về nghiệp vụ. Trò chuyện với người dùng về phần mềm mà họ đang sử dụng. Trò chuyện với quản lý để hiểu được mục tiêu ngắn hạn và dài hạn của team.
+
+Tóm lại, họ quan tâm đến con tàu mà họ đang chèo lái.
