@@ -53,3 +53,10 @@ Trách nhiệm đầu tiên của một lập trình viên chuyên nghiệp là 
 Vậy nên, lập trình viên chuyên nghiệp dành thời gian để tìm hiểu về nghiệp vụ. Trò chuyện với người dùng về phần mềm mà họ đang sử dụng. Trò chuyện với quản lý để hiểu được mục tiêu ngắn hạn và dài hạn của team.
 
 Tóm lại, họ quan tâm đến con tàu mà họ đang chèo lái.
+
+Lần duy nhất tôi bị sa thải khỏi công việc lập trình vào năm 1976. Lúc đó tôi đang làm việc tại Outboard Marine Corp. Tôi có nhiệm vụ viết một hệ thống tự động hóa sử dụng IBM System/7s để giám sát hàng chục máy đúc nhôm.
+
+Về lý thuyết, đây là một công việc đầy thử thách và thú vị. Kiến trúc của System/7 rất hấp dẫn, và bản thân hệ thống tự động hóa của nhà máy cũng rất thú vị.
+
+Chúng tôi cũng có một team rất tốt. Trưởng nhóm, John, có năng lực và cầu tiến. Hai thành viên khác trong team cũng rất vui vẻ và đắc lực. Chúng tôi có một phòng thí nghiệm dành riêng cho dự án và tất cả làm việc trong phòng thí nghiệm đó. Đối tác kinh doanh cũng tham gia và làm việc ở đó với chúng tôi. Quản lý của chúng tôi, Ralph, người có năng lực, tập trung và có trách nhiệm.
+
