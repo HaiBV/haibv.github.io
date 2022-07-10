@@ -66,4 +66,11 @@ Tôi mắc lỗi ngay ngày đầu tiên. Tôi xuất hiện mà không đeo cà
 
 Tôi không thể nói cho bạn biết tôi khó chịu đến mức nào. Nó thực sự làm tôi thấy phiền. Tôi đeo cà vạt hằng ngày, và tôi ghét nó. Nhưng tại sao? Tôi biết tôi đang ở đâu. Tôi biết những quy tắc đã được thông qua. Tại sao tôi lại khó chịu như vậy? Bởi vì tôi là một đứa trẻ ích kỷ và tự ái.
 
-Tôi thường xuyên không đi làm đúng giờ. Và tôi nghĩ nó không quan trọng. Rút cục, tôi đang _làm tốt_ công việc. Và đó là sự thật, tôi đã làm rất tốt việc viết các chương trình của mình. Tôi dễ dàng trở thành lập trình viên có kỹ thuật giỏi nhất trong nhóm. Tôi có thể viết code nhanh hơn và tốt hơn những người khác. Tôi có thể chuẩn đoán và giải quyết vấn đề nhanh hơn. Tôi biết tôi có giá trị. Vì vậy, thời gian và ngày tháng không quan trọng với tôi.
+Tôi thường xuyên không đi làm đúng giờ. Và tôi nghĩ nó không quan trọng. Rút cục, tôi đang _làm tốt_ công việc. Và đó là sự thật, tôi đã làm rất tốt việc viết các chương trình của mình. Tôi dễ dàng trở thành lập trình viên có kỹ thuật giỏi nhất trong nhóm. Tôi có thể viết code nhanh hơn và tốt hơn những người khác. Tôi có thể chuẩn đoán và giải quyết vấn đề nhanh hơn. Tôi _biết_ tôi có giá trị. Vì vậy, thời gian và ngày tháng không quan trọng với tôi.
+
+Quyết định sa thải tôi được đưa ra vào ngày tôi không đến đúng giờ cho một cột mốc quan trọng. Rõ ràng là John đã nói với chúng tôi rằng anh ta cần bản demo những chức năng hoạt động vào thứ 2 tuần sau. Chắc chắn là tôi biết điều đó, nhưng đơn giản là ngày tháng không quan trọng với tôi. 
+
+Chúng tôi đang trong giai đoạn phát triển tích cực. Hệ thống không ở trạng thái đưa vào sử dụng. Không có lý do gì để hệ thống chạy khi không có ai ở phòng thí nghiệm. Tôi phải là người cuối cùng rời khỏi đó vào thứ 6, và rõ ràng là tôi đã để hệ thống ở trạng thái không hoạt động. Thực tế thứ 2 là ngày quan trọng không hề lưu lại trong não của tôi.
+
+Tôi đến muộn 1h vào thứ 2, và thấy mọi người đang ủ rũ tụ tập quanh hệ thống đang không hoạt động. John hỏi tôi: "Tại sao hôm nay hệ thống không hoạt động, Bob?" Tôi trả lời: "Tôi không biết". Và tôi ngồi xuống để debug nó. Tôi vẫn không nhờ gì về bản demo ngày thứ 2, nhưng với ngôn ngữ cơ thể thì mọi người đều biết rằng có điều gì đó không ổn. Sau đó, John đến và nói nhỏ với tôi: "Điều gì sẽ xảy ra nếu Stenberg quyết định đến thăm?" và bỏ đi trong sự chán ghét.
+
