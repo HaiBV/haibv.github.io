@@ -60,7 +60,7 @@ Về lý thuyết, đây là một công việc đầy thử thách và thú v�
 
 Chúng tôi cũng có một team rất tốt. Trưởng nhóm, John, có năng lực và cầu tiến. Hai thành viên khác trong team cũng rất vui vẻ và đắc lực. Chúng tôi có một phòng thí nghiệm dành riêng cho dự án và tất cả làm việc trong phòng thí nghiệm đó. Đối tác kinh doanh cũng tham gia và làm việc ở đó với chúng tôi. Quản lý của chúng tôi, Ralph, người có năng lực, tập trung và có trách nhiệm.
 
-Mọi thứ lẽ ra phải tuyệt vời. Vấn đề là ở tôi. Tôi hoàn toàn đủ tâm huyết với dự án, với công nghệ đang sử dụng, nhưng ở tuổi 24, tôi đơn giản là không quan tâm đến doanh nghiệp hoặc cấu trúc chính trị nội bộ của nó.
+Mọi thứ lẽ ra phải tuyệt vời. Vấn đề là ở tôi. Tôi hoàn toàn đủ tâm huyết với dự án, với công nghệ đang sử dụng, nhưng ở tuổi 24, tôi đơn giản là không quan tâm đến doanh nghiệp hoặc cấu trúc chính sách nội bộ của nó.
 
 Tôi mắc lỗi ngay ngày đầu tiên. Tôi xuất hiện mà không đeo cà vạt. Tôi đã đeo trong buổi phỏng vấn, và tôi cũng thấy những thành viên khác đeo cà vạt, nhưng tôi không thể quen với điều đó. Vậy nên, vào ngày đầu tiên của tôi, Ralph đến gặp tôi và nói rõ rằng: "Ở đây chúng tôi đeo cà vạt."
 
@@ -68,9 +68,23 @@ Tôi không thể nói cho bạn biết tôi khó chịu đến mức nào. Nó 
 
 Tôi thường xuyên không đi làm đúng giờ. Và tôi nghĩ nó không quan trọng. Rút cục, tôi đang _làm tốt_ công việc. Và đó là sự thật, tôi đã làm rất tốt việc viết các chương trình của mình. Tôi dễ dàng trở thành lập trình viên có kỹ thuật giỏi nhất trong nhóm. Tôi có thể viết code nhanh hơn và tốt hơn những người khác. Tôi có thể chuẩn đoán và giải quyết vấn đề nhanh hơn. Tôi _biết_ tôi có giá trị. Vì vậy, thời gian và ngày tháng không quan trọng với tôi.
 
-Quyết định sa thải tôi được đưa ra vào ngày tôi không đến đúng giờ cho một cột mốc quan trọng. Rõ ràng là John đã nói với chúng tôi rằng anh ta cần bản demo những chức năng hoạt động vào thứ 2 tuần sau. Chắc chắn là tôi biết điều đó, nhưng đơn giản là ngày tháng không quan trọng với tôi. 
+Quyết định sa thải tôi được đưa ra vào ngày tôi không đến đúng giờ cho một cột mốc quan trọng. Rõ ràng là John đã nói với chúng tôi rằng anh ta cần bản demo những chức năng hoạt động vào thứ 2 tuần sau. Chắc chắn là tôi biết điều đó, nhưng đơn giản là ngày tháng không quan trọng với tôi.
 
 Chúng tôi đang trong giai đoạn phát triển tích cực. Hệ thống không ở trạng thái đưa vào sử dụng. Không có lý do gì để hệ thống chạy khi không có ai ở phòng thí nghiệm. Tôi phải là người cuối cùng rời khỏi đó vào thứ 6, và rõ ràng là tôi đã để hệ thống ở trạng thái không hoạt động. Thực tế thứ 2 là ngày quan trọng không hề lưu lại trong não của tôi.
 
 Tôi đến muộn 1h vào thứ 2, và thấy mọi người đang ủ rũ tụ tập quanh hệ thống đang không hoạt động. John hỏi tôi: "Tại sao hôm nay hệ thống không hoạt động, Bob?" Tôi trả lời: "Tôi không biết". Và tôi ngồi xuống để debug nó. Tôi vẫn không nhờ gì về bản demo ngày thứ 2, nhưng với ngôn ngữ cơ thể thì mọi người đều biết rằng có điều gì đó không ổn. Sau đó, John đến và nói nhỏ với tôi: "Điều gì sẽ xảy ra nếu Stenberg quyết định đến thăm?" và bỏ đi trong sự chán ghét.
+
+Stenberg là phó giám đốc phụ trách mảng tự động hóa. Bây giờ gọi là CIO (Giám đốc thông tin - Chief Information Officer). Câu hỏi không có ý nghĩa gì với tôi cả. "Thì sao chứ?" Tôi nghĩ. "Hệ thống chưa đưa vào sử dụng, có vấn đề gì to tát đâu?"
+
+Tôi nhận bức thư cảnh cáo đầu tiên ngay ngày hôm đó. Yêu cầu tôi phải thay đổi thái độ làm việc ngay lập tức hoặc "thôi việc sớm". Tôi thức sự hốt hoảng!
+
+Tôi dành thời gian xem xét lại hành động của mình và bắt đầu nhận ra những gì mình đã làm sai. Tôi nói chuyện với John và Ralph về điều đó. Tôi quyết tâm thay đổi bản thân và công việc của mình.
+
+Và tôi đã làm được! Tôi không đi làm muộn nữa. Tôi bắt đầu chú ý đến chính sách nội bộ. Tôi bắt đầu hiểu tại sao John lại lo lắng về Stenberg. TÔi nhận ra tình huống tồi tệ mà tôi đã đưa anh ta vào khi hệ thống không hoạt động vào thứ Hai.
+
+Nhưng đã quá trễ. Mọi thứ đã an bài. Tôi nhận được thư cảnh cáo thứ 2 một tháng sau đó cho một lỗi nhỏ tôi mắc phải. Thời điểm đó, tôi lẽ ra phải nhận ra rằng những lá thư chỉ là vấn đề hình thức và quyết định chấm dứt hợp đồng với tôi đã được đưa ra. Nhưng tôi vấn quyết tâm giải cứu tình hình. Vì vậy, tôi đã làm việc chăm chỉ hơn nữa.
+
+Tôi bị cho nghỉ việc vài tuần sau đó.
+
+Ngày hôm đó, tôi trở về nhà nói với người vợ 22 tuổi đang mang thai của mình rằng tôi đã bị sa thải. Đó là trải nghiệm tôi không bao giờ muốn lặp lại.
 
