@@ -88,3 +88,9 @@ Tôi bị cho nghỉ việc vài tuần sau đó.
 
 Ngày hôm đó, tôi trở về nhà nói với người vợ 22 tuổi đang mang thai của mình rằng tôi đã bị sa thải. Đó là trải nghiệm tôi không bao giờ muốn lặp lại.
 
+## Lập trình viên với lập trình viên
+
+Các lập trình viên thường gặp khó khăn khi làm việc cùng với nhau. Điều này dẫn đến một số vấn đề thực sự tệ.
+
+### Sở hữu code
+
