@@ -92,7 +92,7 @@ Ngày hôm đó, tôi trở về nhà nói với người vợ 22 tuổi đang m
 
 Các lập trình viên thường gặp khó khăn khi làm việc cùng với nhau. Điều này dẫn đến một số vấn đề thực sự tệ.
 
-### Chủ sở hữu code
+### Cá nhân sở hữu code
 
 Một trong những dấu hiệu tồi tệ nhất của một team rối loạn là khi mỗi lập trình viên xây dựng một bức tường xung quanh code của mình và từ chối để các lập trình viên khác động vào nó. Tôi đã gặp những team nơi mà các lập trình viên thậm chí còn không cho xem mã của nhau. Đây là công thức dẫn đến thảm họa.
 
@@ -101,3 +101,9 @@ Trong một lần tư vấn cho một công ty chế tạo máy in cao cấp. Nh
 Mỗi lập trình viên sẽ làm việc trên thiết bị của mình. Một người sẽ viết code cho bộ nạp, một người khác sẽ viết code cho kim bấm. Mỗi người trong số họ giữ công nghệ của riêng mình và ngăn không có bất kỳ ai khác chạm vào code của họ. Mức độ quan trọng của thiết bị gây nên những ảnh hưởng trực tiếp đến lập trình viên. Lập trình viên làm việc với máy in là không thể thay thế.
 
 Đây là một thảm họa công nghê. Với tư cách là một nhà tư vấn, tôi có thể thấy có một sự trùng lặp lớn trong code và giao diện giữa các mô đun hoàn toàn bị lệch. Nhưng tôi không có lý lẽ nào để thuyết phục các lập trình viên (hoặc doanh nghiệp) thay đổi cách làm của họ. Rốt cuộc, đánh giá lương của họ gắn liền với tầm quan trọng của các thiết bị mà họ đang nắm giữ.
+
+### Sở hữu tập thể
+
+Tốt hơn hết là bạn nên phá bỏ mọi bức tường về quyền sở hữu code và để toàn bộ team sở hữu tất cả code. Tôi thích các team trong đó bất kỳ thành viên nào cũng có thể kiểm tra bất kỳ mô-đun nào và thực hiện bất kỳ thay đổi nào mà họ cho là phù hợp. Tôi muốn _team_ sở hữu code, không phải cá nhân.
+
+Lập trình viên chuyên nghiệp không ngăn cản người khác làm việc với code của mình. Họ không dựng những bức tường về quyền sở hữu xung quanh code. Thay vào đó, họ làm việc với nhau về trên toàn hệ thống nhiều nhất có thể. Họ học hỏi lẫn nhau bằng cách làm việc với nhau trên các thành phần khác nhau của hệ thống.
