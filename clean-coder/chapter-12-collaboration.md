@@ -107,3 +107,8 @@ Mỗi lập trình viên sẽ làm việc trên thiết bị của mình. Một 
 Tốt hơn hết là bạn nên phá bỏ mọi bức tường về quyền sở hữu code và để toàn bộ team sở hữu tất cả code. Tôi thích các team trong đó bất kỳ thành viên nào cũng có thể kiểm tra bất kỳ mô-đun nào và thực hiện bất kỳ thay đổi nào mà họ cho là phù hợp. Tôi muốn _team_ sở hữu code, không phải cá nhân.
 
 Lập trình viên chuyên nghiệp không ngăn cản người khác làm việc với code của mình. Họ không dựng những bức tường về quyền sở hữu xung quanh code. Thay vào đó, họ làm việc với nhau về trên toàn hệ thống nhiều nhất có thể. Họ học hỏi lẫn nhau bằng cách làm việc với nhau trên các thành phần khác nhau của hệ thống.
+
+### Ghép đôi (Pair-programing)
+
+Nhiều lập trình viên không thích ý tưởng lập trình đôi (pair-programming). Tôi lại thấy khá kỳ lạ vì hầu hết các lập trình viên sẽ ghép đôi trong những trường hợp khẩn cấp. Tại sao? Bởi vì nó rõ ràng là cách hiệu quả nhất để giải quyết vấn đề. Nó sử dụng câu ngạn ngữ cũ: Hai cái đầu thì tốt hơn một cái. Nhưng nếu ghép đôi là cách hiệu quả nhất để giải quyết vấn đề trong trường hợp khẩn cấp, thì tại sao nó không phải là cách hiệu quả nhất để giải quyết vấn đề lúc bình thường?
+
