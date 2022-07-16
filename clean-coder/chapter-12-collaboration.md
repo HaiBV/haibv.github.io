@@ -112,3 +112,8 @@ Lập trình viên chuyên nghiệp không ngăn cản người khác làm việ
 
 Nhiều lập trình viên không thích ý tưởng lập trình đôi (pair-programming). Tôi lại thấy khá kỳ lạ vì hầu hết các lập trình viên sẽ ghép đôi trong những trường hợp khẩn cấp. Tại sao? Bởi vì nó rõ ràng là cách hiệu quả nhất để giải quyết vấn đề. Nó sử dụng câu ngạn ngữ cũ: Hai cái đầu thì tốt hơn một cái. Nhưng nếu ghép đôi là cách hiệu quả nhất để giải quyết vấn đề trong trường hợp khẩn cấp, thì tại sao nó không phải là cách hiệu quả nhất để giải quyết vấn đề lúc bình thường?
 
+Tôi sẽ không trích dẫn các nghiên cứu cho bạn, mặc dù có một số nghiên cứ có thể đưa ra làm trích dẫn. Tôi sẽ không kể cho bạn nghe bất kỳ giai thoại nào, dù cho tôi có thể kể ra một số. Tôi thậm chí sẽ không nói cho bạn biết bạn nên ghép đôi bao nhiêu. Tất cả những gì tôi sẽ nói với bạn là _các chuyên gia sẽ ghép đôi_. Tại sao ư? Bởi vì chí ít với một số vấn đề, đó là cách hiệu quả nhất để giải quyết chúng. Nhưng đó không phải là lý do duy nhất.
+
+Các chuyên gia ghép đôi bởi vì đó là cách tốt nhất để chia sẻ kiến thức với nhau. Các chuyên gia không tạo ra những kho kiến thức. Thay vào đó, họ học những phần khác nhau của hệ thống và hoạt động kinh doanh và sau đó ghép lại với nhau. Họ nhận ra rằng mặc dù mọi cả thành viên trong team có vị trí khác nhau, nhưng họ có thể thay đổi sang vị trí khác nếu cần thiết.
+
+Các chuyên gia ghép đôi bởi vì đó là cách tốt nhất để kiểm duyệt code. Không có hệ thống nào chứa code chưa được kiểm duyệt bởi các lập trình viên khác. Có rất nhiều cách để thực hiện kiểm duyệt code; hầu hết chúng đều kém hiệu quả kinh khủng. Cách hiệu quả nhất để kiểm duyệt mã là cùng nhau viết ra nó.
