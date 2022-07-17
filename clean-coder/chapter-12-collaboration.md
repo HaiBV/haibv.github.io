@@ -117,3 +117,10 @@ Tôi sẽ không trích dẫn các nghiên cứu cho bạn, mặc dù có một 
 Các chuyên gia ghép đôi bởi vì đó là cách tốt nhất để chia sẻ kiến thức với nhau. Các chuyên gia không tạo ra những kho kiến thức. Thay vào đó, họ học những phần khác nhau của hệ thống và hoạt động kinh doanh và sau đó ghép lại với nhau. Họ nhận ra rằng mặc dù mọi cả thành viên trong team có vị trí khác nhau, nhưng họ có thể thay đổi sang vị trí khác nếu cần thiết.
 
 Các chuyên gia ghép đôi bởi vì đó là cách tốt nhất để kiểm duyệt code. Không có hệ thống nào chứa code chưa được kiểm duyệt bởi các lập trình viên khác. Có rất nhiều cách để thực hiện kiểm duyệt code; hầu hết chúng đều kém hiệu quả kinh khủng. Cách hiệu quả nhất để kiểm duyệt mã là cùng nhau viết ra nó.
+
+## Cerebellums
+
+Tôi đang trên chuyến tàu đến Chicago vào một buổi sáng năm 2000, giữa thời kỳ đỉnh cao của bong bóng dot com. Khi tôi ra khỏi tàu, bước xuống sân ga, tôi bị tấn công bởi một bảng quảng cáo lớn treo trên cửa thoát hiểm. Tấm biển thông báo đợt tuyển dụng lập trình viên của một công ty phần mềm nổi tiếng. Trên đó viết: "Giao lưu tiểu não với những người suất sắc nhất (Come rub cerebellums with the best)"
+
+Tôi ngay lập tức bị ấn tưởng bởi một biển hiểu có cấp độ ngờ nghệch đến vậy. Những người làm quảng cáo kém cỏi này đang cố gắng thu hút một nhóm lập trình viên có kỹ thuật cao, thông minh và hiểu biết. Đây là những kiểu người đặc biệt không bị ngốc. Các nhà quảng cáo đang cố gắng gợi lên hình ảnh chia sẻ kiến thức với những người thông minh khác. Không may là, họ đề cập một phần của não bộ, tiểu não, nơi có chức năng kiểm soát cơ năng, không phải trí thông minh. Vì vậy, chính những người mà họ đang cố gắng thu hút đã chế nhạo lỗi ngớ ngẩn đó.
+
