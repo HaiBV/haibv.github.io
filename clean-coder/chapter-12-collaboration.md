@@ -131,3 +131,9 @@ Các chuyên gia làm việc _cùng nhau_. Các bạn không thể làm việc c
 Có thể bạn tin rằng bạn làm việc tốt hơn khi làm một mình. Điều đó có thể đúng, nhưng không có nghĩa là cả team làm việc tốt hơn khi bạn làm một mình. Và, trên thực tế, có rất ít khả năng bạn làm việc tốt hơn khi làm một mình.
 
 Có những lúc làm việc một mình là hợp lý. Có những lúc bạn cần xem xét một vấn đề một cách sâu và rộng hơn. Có những lúc công việc quá nhỏ nhặt để một người nữa làm cùng bạn, rất lãng phí thời gian. Nhưng, nói chung, tốt hơn hết là cộng tác chặt chẽ với người khác và kết hợp với họ trong phần lớn thời gian.
+
+# Kết luận
+
+Có lẽ chúng ta không trở thành lập trình viên để làm việc với con người. Chớ trêu thay cho chúng ta. Làm lập trình lại hoàn toàn là làm việc với con người. Chúng ta cần phải làm việc với doanh nghiệp của chúng ta, và cần phải làm việc với nhau.
+
+Tôi biết, tôi biết. Nếu họ chỉ cần nhốt chúng ta vào một căn phòng với 6 màn hình lớn, một ống T3, một loạt bộ vi xử lý song song siêu nhanh, ram và đĩa cứng không giới hạn, cùng với vô hạn khoai tây chiên cay và cola ăn kiêng, sẽ thật tuyệt phải không? Than ôi, điều đó là không thể. Nếu chúng ta thực sự muốn dành cả ngày để lập trình, chúng ta phải học cách nói chuyện với -- mọi người.
