@@ -26,6 +26,12 @@ Coding là một hoạt động trí tuệ đầy thử thách và mệt mỏi. 
 
 2. Code của bạn phải giải quyết được vấn đề khách hàng đặt ra cho bạn. Thông thường, các yêu cầu của khách hàng không thực sự giải quyết được vấn đề của khách hàng. Bạn cần xem xét điều này và thương lượng với khách hàng để đảm bảo nhu cầu thực sự của khách hàng được đáp ứng.
 
-3. Code của bạn phải phù hợp với hệ thống hiện có. Nó không được làm hệ thống khó phát triển hơn, dễ đổ vỡ hơn và kém rõ ràng hơn. Các phụ thuộc phải được quản lý tốt. Tóm lại, code của bạn cần phải tuân theo các nguyên tắc kỹ thuật vững chắc.
+3. Code của bạn phải phù hợp với hệ thống hiện có. Nó không được làm hệ thống khó phát triển hơn, dễ đổ vỡ hơn và mờ hồ hơn. Các phụ thuộc phải được quản lý tốt. Tóm lại, code của bạn cần phải tuân theo các nguyên tắc kỹ thuật vững chắc.
 
 4. Code của bạn phải dễ đọc với những lập trình viên khác. Không chỉ là viết những ghi chú hay. Thay vào đó, nó đòi hỏi bạn phải viết code theo cách mà nó tiết lộ ý định của bạn. Điều này là khó thực hiện. Thật vậy, đây có thể là điều khó khăn nhất mà một lập trình viên có thể thành thạo.
+
+Rất khó để đảm bảo được tất cả yếu tố trên. Rất khó để duy trì sự tập trung cần thiết trong thời gian dài. Thêm vào đó là những vấn đề và phiền nhiễu khi làm việc trong một nhóm, trong một tổ chức, và những mối quan tâm của cuộc sống hàng ngày. Điều mấu chốt là khả năng bị mất tập trung rất cao.
+
+Khi bạn không thể tập trung hoàn toàn, code bạn viết sẽ bị sai. Sẽ có lỗi xảy ra. Cấu trúc không chính xác. Nó sẽ mơ hồ và phức tạp. Và sẽ không giải quyết được các vấn đề thực sự của khách hàng. Tóm lại, nó sẽ phải làm lại hoặc hoàn thành lại. Làm việc mất tập trung sẽ gây nên lãng phí.
+
+Nếu bạn mệt mỏi hoặc mất tập trung, _đừng code_. Bạn sẽ chỉ làm lại những gì bạn đã làm. Thay vào đó, hãy tìm cách loại bỏ những phiền nhiễu và ổn định tâm trí.
