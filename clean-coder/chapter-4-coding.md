@@ -35,3 +35,10 @@ Rất khó để đảm bảo được tất cả yếu tố trên. Rất khó �
 Khi bạn không thể tập trung hoàn toàn, code bạn viết sẽ bị sai. Sẽ có lỗi xảy ra. Cấu trúc không chính xác. Nó sẽ mơ hồ và phức tạp. Và sẽ không giải quyết được các vấn đề thực sự của khách hàng. Tóm lại, nó sẽ phải làm lại hoặc hoàn thành lại. Làm việc mất tập trung sẽ gây nên lãng phí.
 
 Nếu bạn mệt mỏi hoặc mất tập trung, _đừng code_. Bạn sẽ chỉ làm lại những gì bạn đã làm. Thay vào đó, hãy tìm cách loại bỏ những phiền nhiễu và ổn định tâm trí.
+
+## Code vào lúc 3h sáng
+
+Tôi viết những dòng code tệ nhất vào lúc 3h sáng. Lúc đó là năm 1988, và tôi đang làm việc tại một start-up viễn thông có tên Clear Communications. Chúng tôi đã dành rất nhiều thời gian để xây dựng công ty. Chúng tôi, tất nhiên, đều mơ trở nên giàu có.
+
+Vào một buổi tối rất muộn - hay đúng hơn là sáng sớm, để giải quyết vấn đề về thời gian - tôi viết một đoạn code gửi một tin nhắn đến chính nó thông qua hệ thống điều phối sự kiện (chúng tôi gọi là "gửi thư"). Đây là một giải pháp _sai lầm_, nhưng vào lúc 3h sáng, nó trông khá bảnh. Thật vậy, sau 18h ngồi viết code (chưa kể 60-70 giờ trong tuần), đó là _tất cả_ những gì tôi có thể nghĩ đến.
+
