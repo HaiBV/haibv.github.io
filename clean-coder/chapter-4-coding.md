@@ -42,3 +42,8 @@ Tôi viết những dòng code tệ nhất vào lúc 3h sáng. Lúc đó là nă
 
 Vào một buổi tối rất muộn - hay đúng hơn là sáng sớm, để giải quyết vấn đề về thời gian - tôi viết một đoạn code gửi một tin nhắn đến chính nó thông qua hệ thống điều phối sự kiện (chúng tôi gọi là "gửi thư"). Đây là một giải pháp _sai lầm_, nhưng vào lúc 3h sáng, nó trông khá bảnh. Thật vậy, sau 18h ngồi viết code (chưa kể 60-70 giờ trong tuần), đó là _tất cả_ những gì tôi có thể nghĩ đến.
 
+Tôi nhớ rằng mình đã cảm thấy tự hào về bản thân ra sao sau khi làm việc nhiều giờ. Tôi nhớ rằng mình thật tận tâm. Tôi nhớ rằng làm việc đến 3h sáng là việc các chuyên gia nghiêm túc nên làm. Thật ngây thơ làm sao!
+
+Đoạn code đó quay lại cắn trả tôi hết lần này đến lần khác. Cấu trúc được thiết kế sai lầm khiến những người sử dụng phải liên tục khắc phục. Nó gây ra tất cả các loại lỗi thời gian và vòng lặp kỳ lạ. Chúng ta sẽ đi vào vòng lặp vô hạn khi một message khiến một message khác được gửi, sau đó là vô hạn thư khác. Chúng tôi không bao giờ có thời gian để viết lại "cục nhọt" này (vì chúng tôi nghĩ vậy) nhưng chúng tôi luôn có thời gian để thêm một "cục nhọt" khác hoặc bản vá để khắc phục nó. Chúng ngày càng lớn dần, xung quanh đoạn code lúc 3h sáng đó ngày càng nhiều thứ kèm theo và tác dụng phụ. Nhiều năm sau, nó đã trở thành trò đùa của cả team. Bất cứ khi nào tôi mệt mỏi hoặc thất vọng, họ sẽ nói: "Coi chừng! Bob sắp gửi thư cho chính mình".
+
+Bài học của câu chuyện trên là: Đừng viết code khi bạn mệt mỏi. Tận tâm và chuyên nghiệp thể hiện ở tính kỷ luật hơn là số giờ làm việc. Đảm bảo giấc ngủ, sức khỏe và lối sống của bạn được điều phù hợp để bạn có thể thực hiện _tốt_ 8 tiếng làm việc mỗi ngày.
