@@ -61,3 +61,8 @@ Tôi học được rằng đây không phải thời điểm thích hợp để
 Tất nhiên, có rất nhiều mối lo không đơn giản để giải quyết được trong một hai giờ. Hơn nữa, các nhà tuyển dụng của chúng ta có khả năng không chấp nhận nhân viên không có khả năng làm việc trong thời gian dài khi họ bận giải quyết những vấn đề cá nhân của mình. Bí quyết là tìm hiểu cách loại bỏ những ý nghĩ ngầm hoặc ít nhất là giảm mức độ ưu tiên của nó để không bị phân tâm liên tục.
 
 Tôi làm điều này bằng cách phân chia thời gian của mình. Thay vì ép bản phân viết code trong lo nghĩ đeo bám, tôi sẽ dành ra một khoảng thời gian hợp lý, khoảng một giờ, để giải quyết vấn đề tạo ra nỗi lo đó. Nếu con tôi bị ốm, tôi sẽ gọi điện về nhà và kiểm tra. Nếu tôi cãi nhau với vợ, tôi sẽ gọi cho cô ấy và nói rõ mọi vấn đề. Nếu tôi gặp vấn đề về tiền bạc, tôi sẽ dành thời gian suy nghĩ về cách giải quyết các vấn đề tài chính. Tôi biết mình không có khả năng giải quyết dứt điểm vấn đề trong khoảng 1 giờ đó, nhưng rất có thể sẽ làm tôi giảm bớt lo lắng và dập tắt những ý nghĩ ngầm trong đầu.
+
+Thời gian lý tưởng nhất dành cho các vấn đề cá nhân là ngoài giờ làm việc. Sẽ thật đang tiếc nếu dành một giờ tại văn phòng để xử lý việc cá nhân. Lập trình viên chuyên nghiệp phân bổ thời gian ngoài giờ của họ để đảm bảo thời gian ở văn phòng hiệu quả nhất có thể. Điều đó có nghĩa là bạn nên dành thời gian ngoài giờ để để giải quyết những lo lắng cá nhân của mình để chúng không theo bạn lên văn phòng.
+
+Mặt khác, nếu bạn đang ở văn phòng nhưng vẫn có những ý nghĩ ngầm làm ảnh hưởng đến năng suất của bạn, thì tốt hơn bạn nên dành một giờ để làm yên chúng hơn là ép buộc bản thân viết những dòng code mà về sau bạn phải vứt bỏ (hoặc tệ hơn, là sống với chúng).
+
