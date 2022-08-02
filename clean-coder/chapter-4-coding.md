@@ -66,3 +66,9 @@ Thời gian lý tưởng nhất dành cho các vấn đề cá nhân là ngoài 
 
 Mặt khác, nếu bạn đang ở văn phòng nhưng vẫn có những ý nghĩ ngầm làm ảnh hưởng đến năng suất của bạn, thì tốt hơn bạn nên dành một giờ để làm yên chúng hơn là ép buộc bản thân viết những dòng code mà về sau bạn phải vứt bỏ (hoặc tệ hơn, là sống với chúng).
 
+## "Dòng chảy" (Flow)
+
+Nhiều bài viết nói về trạng thái siêu năng suất với tên "dòng chảy (flow)". Một số lập trình viên gọi nó là "the Zone". Dù nó được gọi là gì, bạn có thể sẽ cảm thấy quen thuộc với nó. Đó là trạng thái tập trung ý thức cao độ, tầm-nhìn-đường-hầm mà các lập trình viên có thể đạt được khi họ viết code. Ở trạng thái này, họ thấy hiệu quả. Ở trạng thái này, họ cảm thấy không thể sai lầm. Và vì vậy, họ mong muốn đạt được trạng thái đó, và thường đo lường giá trị bản thân bằng khoảng thời gian họ có thể đạt được trạng thái đó.
+
+Dưới đây là một gợi ý nhỏ từ một người đã từng ở đó và quay lại: "Tránh xa the Zone". Trạng thái ý thức này không thực sự siêu năng suất và chắc chắn không mắc sai lầm. Đó thực sự chỉ là một trạng thái thiền định nhẹ nhàng, trong đó một số năng lực lý trí nhất định sẽ bị suy giảm theo hướng có cảm giác về tốc độ.
+
