@@ -72,3 +72,7 @@ Nhiều bài viết nói về trạng thái siêu năng suất với tên "dòng
 
 Dưới đây là một gợi ý nhỏ từ một người đã từng ở đó và quay lại: "Tránh xa the Zone". Trạng thái ý thức này không thực sự siêu năng suất và chắc chắn không mắc sai lầm. Đó thực sự chỉ là một trạng thái thiền định nhẹ nhàng, trong đó một số năng lực lý trí nhất định sẽ bị suy giảm theo hướng có cảm giác về tốc độ.
 
+Để tôi mô tả cho bạn rõ hơn. Bạn _sẽ_ viết nhiều code hơn trong the Zone. Nếu bạn đang luyện tập TDD, bạn sẽ thực hiện vòng lặp đỏ/xanh/tái cấu trúc nhanh hơn. Và bạn sẽ _cảm thấy_ hưng phần nhẹ hoặc cảm giác muốn chinh phục. Vấn đề là bạn sẽ đánh mất cái nhìn toàn cảnh khi ở trong the Zone, vì vậy bạn có thể sẽ đưa ra những quyết định mà sau này bạn sẽ phải quay lại và đảo ngược chúng. Code được viết trong the Zone có thể nhiều hơn, nhưng bạn sẽ quay lại thăm nó nhiều hơn.
+
+Hiện tại, khi tôi cảm thấy mình đang rơi vào the Zone, tôi sẽ đi bộ vài phút. Tôi giải tỏa đầu óc bằng cách trả lời một vài email hoặc xem một số dòng tweet. Nếu gần đến trưa, tôi sẽ nghỉ ăn trưa. Nếu tôi đang làm việc trong một team, tôi sẽ tìm một người để ghép cặp.
+
