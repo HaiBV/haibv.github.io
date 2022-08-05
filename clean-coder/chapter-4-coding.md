@@ -79,3 +79,10 @@ Hiện tại, khi tôi cảm thấy mình đang rơi vào the Zone, tôi sẽ đ
 Một trong những lợi ích lớn của lập trình theo cặp là hầu như cả 2 không thể rơi vào trong the Zone. The Zone là một trạng thái đơn độc, trong khi việc ghép nối đòi hỏi giao tiếp liên tục và cường độ cao. Thức tế là, một trong những phàn nàn mà tôi thường nghe về việc ghép nối là nó ngăn chặn sự xuất hiện của the Zone. Tốt! The Zone không phải là nơi bạn nên rơi vào.
 
 Chà, điều đó không hoàn toàn đúng. Có những lúc the Zone chính xác là thứ bạn muốn. Khi bạn đang _luyện tập_. Nhưng chúng ta sẽ nói về điều đó trong một chương khác.
+
+## Âm nhạc
+
+Vào những năm ở Teradyne, tôi có một phòng riêng. Tôi làm ở vị trí quản trị hệ thống với những chiếc PDP 11/60, và vì vậy tôi là một trong số ít lập trình viên có thiết bị đầu cuối riêng. Thiết bị đầu cuối đó là VT100 chạy ở tốc độ 9600 baud và kết nối với chiếu PDP 11 bằng 80 feet cáp RS232 kéo từ phòng máy tính, qua trần nhà đến phòng tôi.
+
+Tôi có một hệ thống âm thanh nổi trong phòng mình. Đó là một bàn xoay, âm ly, và loa sàn cũ. Tôi có một bộ sưu tập đĩa đáng kể, bao gồm Led Zeppelin, Pink Floyd, và ... Chà, bạn biết rồi đấy.
+
