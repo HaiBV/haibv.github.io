@@ -86,3 +86,8 @@ Vào những năm ở Teradyne, tôi có một phòng riêng. Tôi làm ở vị
 
 Tôi có một hệ thống âm thanh nổi trong phòng mình. Đó là một bàn xoay, âm ly, và loa sàn cũ. Tôi có một bộ sưu tập đĩa đáng kể, bao gồm Led Zeppelin, Pink Floyd, và ... Chà, bạn biết rồi đấy.
 
+Tôi sử dụng dàn âm thanh đó và sau đó viết code. Tôi tưởng nó đã giúp tôi tập trung. Nhưng tôi đã nhầm.
+
+Một ngày nọ, tôi quay lại một mo-dun mà tôi chỉnh sửa trong lúc nghe đoạn mở đầu của bài _The Wall_. Các bình luận trong đoạn code đó chứa lời bài hát và các chú thích biên tập về máy bay ném bom bổ nhào và những đứa trẻ đang khóc.
+
+Điều đó thực sự gây sock cho tôi. Là một người đọc code, thay vì tìm hiều về vấn đề mà code đang cố gắng giải quyết, tôi lại tìm hiểu về bộ sưu tập âm nhạc của tác giả (là tôi).
