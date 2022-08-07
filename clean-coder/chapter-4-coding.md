@@ -91,3 +91,7 @@ Tôi sử dụng dàn âm thanh đó và sau đó viết code. Tôi tưởng nó
 Một ngày nọ, tôi quay lại một mo-dun mà tôi chỉnh sửa trong lúc nghe đoạn mở đầu của bài _The Wall_. Các bình luận trong đoạn code đó chứa lời bài hát và các chú thích biên tập về máy bay ném bom bổ nhào và những đứa trẻ đang khóc.
 
 Điều đó thực sự gây sock cho tôi. Là một người đọc code, thay vì tìm hiều về vấn đề mà code đang cố gắng giải quyết, tôi lại tìm hiểu về bộ sưu tập âm nhạc của tác giả (là tôi).
+
+Tôi nhận ra rằng tôi code không tốt lắm khi nghe nhạc. Âm nhạc không giúp tôi tập trung. Thực tế là, hành động nghe nhạc dường như tiêu tốn một số tài nguyên quan trọng trong tâm trí tôi, những thứ cần để viết code rõ ràng và có thiết kế tốt.
+
+Có thể điều đó không đúng với bạn. Có thể âm nhạc giúp bạn viết code. Tôi biết rất nhiều người viết code khi đeo tai nghe. Tôi chấp nhận rằng âm nhạc có thể giúp ích cho họ, nhưng tôi nghi ngờ rằng điều thực sự đang xảy ra là âm nhạc đang giúp họ tiến vào the Zone.
