@@ -95,3 +95,9 @@ Một ngày nọ, tôi quay lại một mo-dun mà tôi chỉnh sửa trong lúc
 Tôi nhận ra rằng tôi code không tốt lắm khi nghe nhạc. Âm nhạc không giúp tôi tập trung. Thực tế là, hành động nghe nhạc dường như tiêu tốn một số tài nguyên quan trọng trong tâm trí tôi, những thứ cần để viết code rõ ràng và có thiết kế tốt.
 
 Có thể điều đó không đúng với bạn. Có thể âm nhạc giúp bạn viết code. Tôi biết rất nhiều người viết code khi đeo tai nghe. Tôi chấp nhận rằng âm nhạc có thể giúp ích cho họ, nhưng tôi nghi ngờ rằng điều thực sự đang xảy ra là âm nhạc đang giúp họ tiến vào the Zone.
+
+## Những gián đoạn
+
+Hãy hình dung bản thân bạn khi đang viết code tại máy cá nhân. Bạn phản ứng thế nào khi ai đó hỏi bạn một câu hỏi? Bạn có xua tay không? Bạn có trừng mắt không? Ngôn ngữ cơ thể của bạn có bảo họ biến đi vì bạn bận không? Tóm lại, bạn có thô lỗ không? 
+
+Hoặc, bạn có dừng việc đang làm và lịch sự giúp đỡ ai đó đang gặp khó khăn? Bạn có đối xử với họ như bạn sẽ đối xử với bạn nêú bạn gặp khó khăn?
