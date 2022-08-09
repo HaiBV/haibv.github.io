@@ -98,6 +98,10 @@ Có thể điều đó không đúng với bạn. Có thể âm nhạc giúp b�
 
 ## Những gián đoạn
 
-Hãy hình dung bản thân bạn khi đang viết code tại máy cá nhân. Bạn phản ứng thế nào khi ai đó hỏi bạn một câu hỏi? Bạn có xua tay không? Bạn có trừng mắt không? Ngôn ngữ cơ thể của bạn có bảo họ biến đi vì bạn bận không? Tóm lại, bạn có thô lỗ không? 
+Hãy hình dung bản thân bạn khi đang viết code tại máy cá nhân. Bạn phản ứng thế nào khi ai đó hỏi bạn một câu hỏi? Bạn có xua tay không? Bạn có trừng mắt không? Ngôn ngữ cơ thể của bạn có bảo họ biến đi vì bạn bận không? Tóm lại, bạn có thô lỗ không?
 
 Hoặc, bạn có dừng việc đang làm và lịch sự giúp đỡ ai đó đang gặp khó khăn? Bạn có đối xử với họ như bạn sẽ đối xử với bạn nêú bạn gặp khó khăn?
+
+Phản ứng thô lỗ thường bắt nguồn từ the Zone. Bạn có thể bực bội khi bị kéo ra khỏi the Zone, hoặc do ai đó ngăn cản bạn đi vào the Zone. Dù bằng cách nào, sự thô lỗ thường xuất phát từ mối quan hệ của bạn với the Zone.
+
+Tuy nhiên, đôi khi lại không phải là lỗi của the Zone, chỉ đơn giản là bạn đang cố gắng hiểu một vấn đề phức tạp yêu cầu phải tập trung. Có một vài giải pháp cho điều này.
