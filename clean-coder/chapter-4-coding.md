@@ -105,3 +105,9 @@ Hoặc, bạn có dừng việc đang làm và lịch sự giúp đỡ ai đó �
 Phản ứng thô lỗ thường bắt nguồn từ the Zone. Bạn có thể bực bội khi bị kéo ra khỏi the Zone, hoặc do ai đó ngăn cản bạn đi vào the Zone. Dù bằng cách nào, sự thô lỗ thường xuất phát từ mối quan hệ của bạn với the Zone.
 
 Tuy nhiên, đôi khi lại không phải là lỗi của the Zone, chỉ đơn giản là bạn đang cố gắng hiểu một vấn đề phức tạp yêu cầu phải tập trung. Có một vài giải pháp cho điều này.
+
+Ghép cặp có thể là cách hữu ích để đối phó với sự gián đoạn. Đối tác của bạn có thể nắm được trạng thái của vấn đề trong khi bạn nhận một cuộc điện thoại hoặc một câu hỏi từ đồng nghiệp. Khi bạn quay lại, họ sẽ nhanh chón giúp bạn xây dựng lại trạng thái tinh thần của mình trước khi bị gián đoạn.
+
+TDD cũng là một trợ giúp. Nếu bạn có kiểm thử không đạt, kiểm thử đó sẽ giữ được trạng thái của bạn đang ở đâu. Bạn có thể quay lại sau khi bị gián đoạn và tiếp tục vượt qua kiểm thử đó.
+
+Cuối cùng, _tất nhiên là sẽ có những gián đoạn_ khiến bạn mất tập trung và mất thời gian. Khi chúng xảy ra, hãy nhớ rằng lần sau, bạn có thể là người cần phải ngắt lời người khác. Vì vậy, thái độ của người chuyên nghiệp là sẵn sàng giúp đỡ.
