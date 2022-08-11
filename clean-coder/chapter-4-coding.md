@@ -111,3 +111,10 @@ Ghép cặp có thể là cách hữu ích để đối phó với sự gián đ
 TDD cũng là một trợ giúp. Nếu bạn có kiểm thử không đạt, kiểm thử đó sẽ giữ được trạng thái của bạn đang ở đâu. Bạn có thể quay lại sau khi bị gián đoạn và tiếp tục vượt qua kiểm thử đó.
 
 Cuối cùng, _tất nhiên là sẽ có những gián đoạn_ khiến bạn mất tập trung và mất thời gian. Khi chúng xảy ra, hãy nhớ rằng lần sau, bạn có thể là người cần phải ngắt lời người khác. Vì vậy, thái độ của người chuyên nghiệp là sẵn sàng giúp đỡ.
+
+# Write's Block
+
+Đôi khi code không tự đến với chúng ta. Tôi đã trải nghiệm điều này xảy ra với tôi và những người khác. Bạn ngồi trước máy tính cá nhân và không có gì xảy ra cả.
+
+Thường thì bạn sẽ tìm công việc khác để làm. Bạn sẽ đọc email. Bạn sẽ đọc tweets. Bạn sẽ qua xem sách, lịch trình, hoặc tài liệu. Bạn sẽ tham gia các cuộc họp. Bạn sẽ bắt đầu trò chuyện với những người khác. Bạn sẽ làm bất cứ điều gì để không phải đối mặt với máy tính và cảm nhận việc bất lực khi viết code.
+
