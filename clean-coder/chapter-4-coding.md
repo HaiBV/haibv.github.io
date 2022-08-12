@@ -118,3 +118,9 @@ Cuối cùng, _tất nhiên là sẽ có những gián đoạn_ khiến bạn m�
 
 Thường thì bạn sẽ tìm công việc khác để làm. Bạn sẽ đọc email. Bạn sẽ đọc tweets. Bạn sẽ qua xem sách, lịch trình, hoặc tài liệu. Bạn sẽ tham gia các cuộc họp. Bạn sẽ bắt đầu trò chuyện với những người khác. Bạn sẽ làm bất cứ điều gì để không phải đối mặt với máy tính và cảm nhận việc bất lực khi viết code.
 
+Nguyên nhân nào gây nên tình trạng tắc nghẽn như vậy? Chúng ta đã nói về rất nhiều nguyên nhân khác nhau. Với tôi, còn một nguyên nhân quan trọng nữa là giấc ngủ. Nếu tôi không ngủ đủ giấc, tôi đơn giản không thể viết code. Tệ hơn là lo lắng, sợ hãi, và trầm cảm.
+
+Kỳ lạ hơn nữa là có một giải pháp rất đơn giản. Nó hoạt động hầu như mọi lúc. Việc này rất dễ thực hiện và nó có thể cung cấp cho bạn động lực để viết được nhiều hơn.
+
+Giải pháp là: Tìm một đối tác ghép cặp.
+
