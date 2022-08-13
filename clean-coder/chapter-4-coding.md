@@ -124,3 +124,6 @@ Kỳ lạ hơn nữa là có một giải pháp rất đơn giản. Nó hoạt �
 
 Giải pháp là: Tìm một đối tác ghép cặp.
 
+Cách này hoạt động tốt một cách kỳ lạ. Ngay khi bạn ngồi cạnh người khác, những vấn đề cản trở bạn sẽ biến mất. Có một sự thay đổi sinh lý diễn ra khi bạn làm việc cùng với một ai đó. Tôi không biết nó là gì, nhưng tôi chắc chắn có thể cảm nhận được. Có một số loại thay đổi hóa học trong não hoặc cơ thể tôi giúp tôi vượt qua sự tắc nghẽn và giúp tôi tiếp tục làm việc.
+
+Đây không phải giải pháp hoàn hảo. Đôi khi sự thay đổi chỉ kéo dài 1 hoặc 2 giờ, sau đó là kiệt sức nghiêm trọng đến mức tôi phải bỏ lại đồng nghiệp của mình và tìm một khoảng trống để phục hồi. Đôi khi, ngay cả khi ngồi với ai đó, tôi cũng không thể làm gì hơn là đồng ý với những gì người đó làm. Nhưng đối với tôi, phản ứng của việc ghép đôi thường là sự phục hồi động lực bản thân.
