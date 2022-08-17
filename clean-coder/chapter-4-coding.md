@@ -137,3 +137,9 @@ Tôi đọc rất nhiều, và tôi đọc tất cả các loại tài liệu. T
 Với bạn, có thể là một thể loại khác. Có thể là một cuốn tiểu thuyết bí ẩn tuyệt vời, hoặc thơ, hoặc thậm chí là tiểu thuyết lãng mạn. Tôi nghĩ vấn để thực sự là sự sáng tạo sẽ nuôi dưỡng sáng tạo. Ngoài ra còn có một yếu tố nữa là chủ nghĩa thoát ly. Những giờ tôi dành ra để thoát khỏi những vấn đề thưởng ngày của mình, đồng thời được kích thích tích cự bởi những ý tưởng đầy thách thức và sáng tạo, dẫn đến một áp lực gần như không thể cưỡng lại để tự mình tạo ra thứ gì đó.
 
 Không phải tất cả các hình thức đầu vào sáng tạo nào cũng phù hợp với tôi. Xem TV thường không giúp tôi sáng tạo. Đi xem phim thì tốt hơn nhưng chỉ một chút. Nghe nhạc không giúp tôi viết code, nhưng giúp tôi tạo bản thuyết trình, bài phát biểu và video. Trong tất cả các hình thức đầu vào sáng tạo, không có gì phù hợp với tôi hơn là một vở opera hay trong một không gian cổ kính.
+
+### Debuging (Gỡ lỗi)
+
+Một trong những phiên gỡ lỗi tồi tệ nhất trong sự nghiệp của tôi là vào năm 1972. Các thiết bị đầu cuối kết nối với hệ thống kế toàn của Teamsters thường bị đơ 1 hoặc 2 lần mỗi ngày. Không có cách nào tự tái hiện được hiện tượng này. Lỗi không xảy ra trên bất kỳ thiết bị đầu cuối hoặc ứng dụng cụ thể nào. Không cần biết người dùng đã làm gì trước khi bị đơ. Một phút trước thiết bị đầu cuối còn hoạt động tốt, và ngay sau đó nó bị đơ, trong vô vọng.
+
+Phải mất vài tuần để làm rõ được vấn đề. Trong khi đó, Teamsters càng ngày càng khó chịu. Mỗi khi có sự cố, người ở thiết bị đầu cuối bị đơ sẽ phải dừng làm việc và đợi đến khi tất cả những người khác trong hệ thống hoàn thành công việc hiện tại. Sau đó họ gọi cho chúng tôi để khởi động lại hệ thống. Đó là một cơn ác mộng. 
