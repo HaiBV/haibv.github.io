@@ -151,3 +151,8 @@ Chúng tôi không có log, không bộ đếm, không trình gỡ lỗi. Quyề
 Chúng tôi dành một vài ngày tiếp theo viết một chương trình kiểm tra thời gian thực đơn giản có thể chạy từ ASR-33, đóng vai trò bảng điều khiển. Với nó, chúng tôi có thể "chọc ngoáy" (peak and poke) vào bộ nhớ khi hệ thống đang chạy. Chúng tôi thêm log đưa những thông điệp lên teletype vào những thời điểm quan trọng. Chúng tôi tạo ra các bộ đếm trong bộ nhớ để đếm các sự kiện và ghi nhớ lịch sử các trạng thái có thể kiểm tra được. Và tất nhiên, tất cả những việc này phải được làm lúc hệ thống khởi động và kiểm tra vào buổi tối khi hệ thống không được sử dụng. 
 
 Các thiết bị đầu cuối đã có thể điều khiển được gián đoạn. Các ký tự được gửi đến thiết bị đầu cuối được giữ trong các bộ đệm tròn. Mỗi khi một cổng nối tiếp gửi đi xong một ký tự, một trình ngắt sẽ kích hoạt và ký tự tiếp theo trong bộ đệm tròn sẽ sẵn sàng để gửi đi.
+
+Chúng tôi cuối cùng cũng phát hiện ra lý do thiết bị đầu cuối bị đơ, đó là khi 3 biến quản lý bộ đệm tròn mất đồng bộ. Chúng tôi không biết tại sao nó lại xảy ra, nhưng ít nhất đó là một manh mối. Ở đâu đó trong 5 KSLOC của mã giám sát có lỗi xử lý sai một trong những con trỏ. 
+
+Phát hiện mới này cho phép chúng tôi có thể giải phóng thiết bị đầu cuối chủ động hơn! Chúng tôi có thể chèn các giá trị mặc định vào 3 biết đó bằng chương trình kiểm tra, sau đó các thiết bị đầu cuối sẽ có thể chạy lại một cách kỳ diệu. Cuối cùng, chúng tôi đã viết một bản hack nhỏ kiểm tra tất cả các bộ đếm xem khi nào chúng bị lệch và sửa lại. Lúc đầu chúng tôi kích hoạt bản hack đó bằng cách nhấn vào một công tắc đặc biệt trên bảng điều khiển, thực hiện bất kỳ khi nào Teamsters gọi báo lỗi hệ thống. Sau đó, chúng tôi chạy chương trình sửa chữa mỗi giây 1 lần.
+
