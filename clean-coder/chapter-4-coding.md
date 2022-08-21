@@ -156,3 +156,8 @@ Chúng tôi cuối cùng cũng phát hiện ra lý do thiết bị đầu cuối
 
 Phát hiện mới này cho phép chúng tôi có thể giải phóng thiết bị đầu cuối chủ động hơn! Chúng tôi có thể chèn các giá trị mặc định vào 3 biết đó bằng chương trình kiểm tra, sau đó các thiết bị đầu cuối sẽ có thể chạy lại một cách kỳ diệu. Cuối cùng, chúng tôi đã viết một bản hack nhỏ kiểm tra tất cả các bộ đếm xem khi nào chúng bị lệch và sửa lại. Lúc đầu chúng tôi kích hoạt bản hack đó bằng cách nhấn vào một công tắc đặc biệt trên bảng điều khiển, thực hiện bất kỳ khi nào Teamsters gọi báo lỗi hệ thống. Sau đó, chúng tôi chạy chương trình sửa chữa mỗi giây 1 lần.
 
+Đâu đó hơn một tháng sau, hiện tượng đơ hệ thống đã không còn nữa, theo những gì mà Teamster phản hồi. Đôi khi một trong các thiết bị đầu cuối của họ sẽ đơ trong nửa giây hoặc lâu hơn, nhưng với tốc độ cơ bản là 30 ký tự trên giây, dường như không ai nhận ra. 
+
+Nhưng tại sao bộ đếm lại bị lệch? Tôi quyết tâm tìm hiểu điều đó với nhiệt huyết của tuổi 19
+
+Trình giám sát được viết bởi Richard, đã nghỉ để đi học đại học. Chúng tôi không ai nắm được code trong đó vì Richard chiếm hữu chúng khá kỹ. Code đó của _anh ta_, và chúng thôi không được phép biết về nó. Nhưng giờ Richard đã nghỉ, vì vậy tôi thoát khỏi danh sách dày hàng inch và bắt đầu xem từng trang. 
