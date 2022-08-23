@@ -112,7 +112,7 @@ TDD cũng là một trợ giúp. Nếu bạn có kiểm thử không đạt, ki�
 
 Cuối cùng, _tất nhiên là sẽ có những gián đoạn_ khiến bạn mất tập trung và mất thời gian. Khi chúng xảy ra, hãy nhớ rằng lần sau, bạn có thể là người cần phải ngắt lời người khác. Vì vậy, thái độ của người chuyên nghiệp là sẵn sàng giúp đỡ.
 
-# Write's Block
+## Write's Block
 
 Đôi khi code không tự đến với chúng ta. Tôi đã trải nghiệm điều này xảy ra với tôi và những người khác. Bạn ngồi trước máy tính cá nhân và không có gì xảy ra cả.
 
@@ -165,3 +165,7 @@ Trình giám sát được viết bởi Richard, đã nghỉ để đi học đ�
 Các hàng đợi tròn trong hệ thống chỉ là cấu trúc dữ liệu FIFO, tức là hàng đợi (queue). Các ký tự được đẩy vào một đầu của hàng đợi cho đến khi đầy. Các đầu ngắt xuất hiện các ký tự ở đầu kia của hàng đợi khi máy in sẵn sàng cho chúng. Khi hàng đợi trống, máy in sẽ dừng. Lỗi của chúng tôi là khiến các ứng dụng nghĩ rằng hàng đợi đã đầy, nhưng lại khiến các đầu ngắt nghĩ rằng hàng đợi đang trống.
 
 Các đầu ngắt chạy trong một "luồng (thread)" khác với phần còn lại. Vì vậy bộ đếm và biến được kiểm soát bởi cả đầu ngắt và phần còn lại cần được bảo vệ để tránh tình trạng cập nhật đồng thời. Trong trường hợp của chúng tôi, khi có một thao tác nào với 3 biến này, các thao tác khác với chúng phải dừng lại. Vào thời điểm tôi nghiên cứu đống code đó, tôi biết rằng tôi phải tìm kiếm một chỗ nào đó trong code chỉnh sửa những biến đó nhưng không vô hiệu hoá bộ ngắt trước.
+
+Ngày nay, tất nhiên, chúng ta có rất nhiều công cụ mạnh mẽ để tìm tất cả các vị trí mà biến này được sử dụng. Trong vài giây, chúng tôi sẽ biết mọi dòng code có thể đụng vào biến đó. Trong vòng vài phút, chúng tôi sẽ biết vị trí code không vô hiệu hoá bộ ngắt. Nhưng lúc đó là năm 1972, và tôi không có bất kỳ công cụ nào như vậy. Những gì tôi có chỉ là đôi mắt của mình.
+
+Tôi nghiền ngẫm từng trang code, tìm kiếm các biến cần tìm. Không may là, các biến đó sử dụng ở _khắp mọi nơi_. Gần như tất cả mọi trang đều chạm vào chúng theo cách này hay cách khác. Rất nhiều trong số các tham chiều đó không vô hiệu hoá bộ ngắt vì chúng là các tham chiếu chỉ đọc giá trị, do đó chúng vô hại. Vấn đề là, cách duy nhất để biết một tham chiếu có phải chỉ đọc hay không là phải biết được logic của đoạn code đó. Bất cứ khi nào một biến được đọc, nó có thể được cập nhật và lưu lại sau đó. Và nếu điều đó xảy ra trong khi bộ ngắt đang bật, các biến đó có thể gây lỗi.
