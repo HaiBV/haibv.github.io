@@ -169,3 +169,9 @@ Các đầu ngắt chạy trong một "luồng (thread)" khác với phần còn
 Ngày nay, tất nhiên, chúng ta có rất nhiều công cụ mạnh mẽ để tìm tất cả các vị trí mà biến này được sử dụng. Trong vài giây, chúng tôi sẽ biết mọi dòng code có thể đụng vào biến đó. Trong vòng vài phút, chúng tôi sẽ biết vị trí code không vô hiệu hoá bộ ngắt. Nhưng lúc đó là năm 1972, và tôi không có bất kỳ công cụ nào như vậy. Những gì tôi có chỉ là đôi mắt của mình.
 
 Tôi nghiền ngẫm từng trang code, tìm kiếm các biến cần tìm. Không may là, các biến đó sử dụng ở _khắp mọi nơi_. Gần như tất cả mọi trang đều chạm vào chúng theo cách này hay cách khác. Rất nhiều trong số các tham chiều đó không vô hiệu hoá bộ ngắt vì chúng là các tham chiếu chỉ đọc giá trị, do đó chúng vô hại. Vấn đề là, cách duy nhất để biết một tham chiếu có phải chỉ đọc hay không là phải biết được logic của đoạn code đó. Bất cứ khi nào một biến được đọc, nó có thể được cập nhật và lưu lại sau đó. Và nếu điều đó xảy ra trong khi bộ ngắt đang bật, các biến đó có thể gây lỗi.
+
+Tôi mất nhiều ngày nghiên cứu căng thẳng, nhưng cuối cùng đã tìm ra nó. Nơi đó, trong một rừng code, có một nơi mà một trong 3 biến được cập nhật trong khi các bộ ngắt đang bật.
+
+Sau khi tính toán một chút. Thời gian lỗi dài khoảng 2ms. Có một tá thiết bị đầu cuối chạy ở tốc độ 30 cps, vì vậy cứ sau 3s lại đơ một lần. Với kích thước của trình giám sát và tốc độ CPU, chúng tôi dự kiến xử lý looix này trong vòng 1 hoặc 2 lần một ngày. Trúng phóc!
+
+Tôi đã khắc phục lỗi đó, tất nhiên, nhưng không bao giờ có đủ can đảm để tắt tính năng tự động kiểm tra và sửa lại bộ đếm. Cho đến hôm nay, tôi không tin là không có một lỗ hổng khác.
