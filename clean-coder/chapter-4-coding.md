@@ -182,3 +182,6 @@ Vì một vài lý do nào đó mà các lập trình viên phần mềm không 
 
 Ngày nay, thời gian gỡ lỗi của tôi ít hơn nhiều so với cách đây 10 năm. Tôi chưa đo chính xác sự khác biệt, nhưng tôi tin nó ít hơn khoảng 10 lần. Sử dụng TDD giúp tôi giảm thời gian gỡ lỗi triệt để, chúng ta sẽ thảo luận về nó trong một chương khác.
 
+Dù bạn áp dụng TDD hay một cách khác có hiệu quả tương đương, thì với tư cách một chuyên gia, bạn phải giảm thời gian gỡ lỗi của mình xuống gần đến 0 nhất có thể. Rõ ràng 0 là mục tiêu tiệm cận, nhưng dù sao thì vẫn là mục tiêu.
+
+Các bác sỹ không muốn mở lại cơ thể bệnh nhân để sửa lại điều họ đã làm sai. Các luận sư không thích mở lại phiên tòa mà họ thất bại. Một bác sỹ và luật sư làm việc đó quá thường xuyên sẽ không được coi là chuyên nghiệp. Tương tự, tạo ra nhiều lỗi là biểu hiện của một lập trình viên phần mềm thiếu chuyên nghiệp.
