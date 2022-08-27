@@ -185,3 +185,10 @@ Ngày nay, thời gian gỡ lỗi của tôi ít hơn nhiều so với cách đ�
 Dù bạn áp dụng TDD hay một cách khác có hiệu quả tương đương, thì với tư cách một chuyên gia, bạn phải giảm thời gian gỡ lỗi của mình xuống gần đến 0 nhất có thể. Rõ ràng 0 là mục tiêu tiệm cận, nhưng dù sao thì vẫn là mục tiêu.
 
 Các bác sỹ không muốn mở lại cơ thể bệnh nhân để sửa lại điều họ đã làm sai. Các luận sư không thích mở lại phiên tòa mà họ thất bại. Một bác sỹ và luật sư làm việc đó quá thường xuyên sẽ không được coi là chuyên nghiệp. Tương tự, tạo ra nhiều lỗi là biểu hiện của một lập trình viên phần mềm thiếu chuyên nghiệp.
+
+## Nhịp độ của bản thân
+
+Phát triển phần mềm là một cuộc đua Marathon, không phải đua nước rút. Bạn không thể chiến thắng cuộc đua bằng cách cố gắng chạy nhanh nhất có thể ngay từ đầu. Bạn giành chiến thắng bằng cách bảo toàn tài nguyên của mình và điều chỉnh nhịp độ bản thân. Một vận động viên marathon chăm sóc cơ thể của mình cả trước và trong cuộc đua. Các lập trình viên chuyên nghiệp cũng chăm sóc như vậy để bảo tồn năng lượng và sự sáng tạo của mình.
+
+### Biết khi nào nên từ bỏ
+
