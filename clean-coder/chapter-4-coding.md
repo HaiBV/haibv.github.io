@@ -190,5 +190,9 @@ Các bác sỹ không muốn mở lại cơ thể bệnh nhân để sửa lại
 
 Phát triển phần mềm là một cuộc đua Marathon, không phải đua nước rút. Bạn không thể chiến thắng cuộc đua bằng cách cố gắng chạy nhanh nhất có thể ngay từ đầu. Bạn giành chiến thắng bằng cách bảo toàn tài nguyên của mình và điều chỉnh nhịp độ bản thân. Một vận động viên marathon chăm sóc cơ thể của mình cả trước và trong cuộc đua. Các lập trình viên chuyên nghiệp cũng chăm sóc như vậy để bảo tồn năng lượng và sự sáng tạo của mình.
 
-### Biết khi nào nên từ bỏ
+### Biết khi nào nên dừng lại
+
+Không về nhà cho đến khi giải quyết được vấn đề? Tất nhiên bạn có thể, và có lẽ bạn nên như vậy! Sáng tạo và thông minh là những trạng thái thoáng qua của tâm trí. Khi bạn mệt mỏi, chúng biến mất. Nếu bạn cố gắng ép bộ não đang tê liệt sau hàng giờ hoạt động lúc đêm khuya để giải quyết vấn đề, bạn sẽ chỉ khiến bản thân mệt mỏi hơn và giảm khả năng tắm hoặc ô tô có thể giúp bạn giải quyết vấn đề.
+
+Khi bạn bế tắc, mệt mỏi, hãy cho bản thân thư giãn một lúc. Cung cấp cho tiềm thức sáng tạo của bạn một ý niệm về vấn đề. Bạn sẽ hoàn thành được nhiều việc hơn trong thời gian ngắn hơn và ít nỗ lực hơn nếu bạn dùng khả năng của bạn thật cẩn thận. Đồng bộ bản thân và đội nhóm của bạn. Tìm hiểu các mô hình sáng tạo và thông minh của bạn, tận dụng chúng hay vì làm việc chống lại chúng.
 
