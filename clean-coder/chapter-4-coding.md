@@ -196,3 +196,7 @@ Không về nhà cho đến khi giải quyết được vấn đề? Tất nhiê
 
 Khi bạn bế tắc, mệt mỏi, hãy cho bản thân thư giãn một lúc. Cung cấp cho tiềm thức sáng tạo của bạn một ý niệm về vấn đề. Bạn sẽ hoàn thành được nhiều việc hơn trong thời gian ngắn hơn và ít nỗ lực hơn nếu bạn dùng khả năng của bạn thật cẩn thận. Đồng bộ bản thân và đội nhóm của bạn. Tìm hiểu các mô hình sáng tạo và thông minh của bạn, tận dụng chúng hay vì làm việc chống lại chúng.
 
+### Trở về nhà
+
+Một nơi mà tôi đã giải quyết được một số vấn đề là ở trên xe khi đang về nhà. Lái xe đòi hỏi rất nhiều nguồn lực trí óc không sáng tạo. Bạn phải dành đôi mắt, đôi tay và một phần trí óc của mình cho nó. Do đó, bạn phải thoát ra khỏi những rắc rối trong công việc. Có điều gì đó về sự thảnh thơi cho phép tâm trí của bạn tìm kiếm các giải pháp theo một cách khác và sáng tạo hơn.
+
