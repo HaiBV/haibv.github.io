@@ -200,3 +200,8 @@ Khi bạn bế tắc, mệt mỏi, hãy cho bản thân thư giãn một lúc. C
 
 Một nơi mà tôi đã giải quyết được một số vấn đề là ở trên xe khi đang về nhà. Lái xe đòi hỏi rất nhiều nguồn lực trí óc không sáng tạo. Bạn phải dành đôi mắt, đôi tay và một phần trí óc của mình cho nó. Do đó, bạn phải thoát ra khỏi những rắc rối trong công việc. Có điều gì đó về sự thảnh thơi cho phép tâm trí của bạn tìm kiếm các giải pháp theo một cách khác và sáng tạo hơn.
 
+### Tắm
+
+Tôi giải quyết được vô số vấn đề trong phòng tắm. Có lẽ những tia nước vào buổi sáng đã đánh thức tôi và giúp tôi xem lại tất cả các giải pháp mà bộ não của tôi đã nghĩ ra khi tôi đang ngủ.
+
+Khi bạn đang giải quyết một vấn đề, đôi khi bạn đến gần nó đến mức bạn không thể nhìn thấy tất cả các lực chọn. Bạn bỏ lỡ những giải pháp tốt hơn bởi vì phần sáng tạo trong tâm trí bạn bị đè nén bởi cường độ tập trung của bạn. Đôi khi cách tốt nhất để giải quyết vấn đề là về nhà, ăn tối, xem TV, đi ngủ và sáng hôm sau thức dậy đi tắm.
