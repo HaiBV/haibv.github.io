@@ -205,3 +205,9 @@ Một nơi mà tôi đã giải quyết được một số vấn đề là ở 
 Tôi giải quyết được vô số vấn đề trong phòng tắm. Có lẽ những tia nước vào buổi sáng đã đánh thức tôi và giúp tôi xem lại tất cả các giải pháp mà bộ não của tôi đã nghĩ ra khi tôi đang ngủ.
 
 Khi bạn đang giải quyết một vấn đề, đôi khi bạn đến gần nó đến mức bạn không thể nhìn thấy tất cả các lực chọn. Bạn bỏ lỡ những giải pháp tốt hơn bởi vì phần sáng tạo trong tâm trí bạn bị đè nén bởi cường độ tập trung của bạn. Đôi khi cách tốt nhất để giải quyết vấn đề là về nhà, ăn tối, xem TV, đi ngủ và sáng hôm sau thức dậy đi tắm.
+
+## Chậm deadline
+
+Bạn _sẽ_ bị chậm. Nó xảy ra với tất cả chúng ta. Nó xảy đến với những người tận tâm nhất. Đôi khi chúng ta thổi phồng ước lượng của mình và cuối cùng bị chậm.
+
+Bí quyết quản lý việc bị chậm deadline là phát hiện sớm và minh bạch. Trường hợp xấu nhất xảy ra khi bạn tiếp tục nói với mọi người, thậm chí đến cuối cùng, rằng bạn sẽ hoàn thành đúng hạn - và sau đó khiến họ thất vọng. _Đừng_ làm như vậy. Thay vào đó, thường xuyên đo lường tiến độ của bạn so với mục tiêu và đưa ra 3 hạn chót dựa trên thực tế: trường hợp lạc quan nhất, trường hợp bình thường và trường hợp xấu nhất. Hãy trung thực nhất có thể về cả 3 hạn chót đó. _Đừng mang hi vọng vào ước lượng của bạn!_ Trình bày tất cả 3 hạn chót cho nhóm của bạn và các bên liên quan. Cập nhật con số đó hằng ngày.
