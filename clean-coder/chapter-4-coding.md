@@ -210,4 +210,12 @@ Khi bạn đang giải quyết một vấn đề, đôi khi bạn đến gần n
 
 Bạn _sẽ_ bị chậm. Nó xảy ra với tất cả chúng ta. Nó xảy đến với những người tận tâm nhất. Đôi khi chúng ta thổi phồng ước lượng của mình và cuối cùng bị chậm.
 
-Bí quyết quản lý việc bị chậm deadline là phát hiện sớm và minh bạch. Trường hợp xấu nhất xảy ra khi bạn tiếp tục nói với mọi người, thậm chí đến cuối cùng, rằng bạn sẽ hoàn thành đúng hạn - và sau đó khiến họ thất vọng. _Đừng_ làm như vậy. Thay vào đó, thường xuyên đo lường tiến độ của bạn so với mục tiêu và đưa ra 3 hạn chót dựa trên thực tế: trường hợp lạc quan nhất, trường hợp bình thường và trường hợp xấu nhất. Hãy trung thực nhất có thể về cả 3 hạn chót đó. _Đừng mang hi vọng vào ước lượng của bạn!_ Trình bày tất cả 3 hạn chót cho nhóm của bạn và các bên liên quan. Cập nhật con số đó hằng ngày.
+Bí quyết quản lý việc bị chậm deadline là phát hiện sớm và minh bạch. Trường hợp xấu nhất xảy ra khi bạn tiếp tục nói với mọi người, thậm chí đến cuối cùng, rằng bạn sẽ hoàn thành đúng hạn - và sau đó khiến họ thất vọng. _Đừng_ làm như vậy. Thay vào đó, thường xuyên đo lường tiến độ của bạn so với mục tiêu và đưa ra 3 hạn chót dựa trên thực tế: trường hợp lạc quan nhất, trường hợp thực tế và trường hợp xấu nhất. Hãy trung thực nhất có thể về cả 3 hạn chót đó. _Đừng mang hi vọng vào ước lượng của bạn!_ Trình bày tất cả 3 hạn chót cho nhóm của bạn và các bên liên quan. Cập nhật con số đó hằng ngày.
+
+### Hy vọng
+
+Điều gì sẽ xảy ra nếu những số cho thấy bạn sẽ chậm deadline? Lấy ví dụ, giả sử 10 ngày nữa sẽ có triển lãm thương mai và chúng tôi cần có sản phẩm của mình ở đó. Nhưng cũng giả sửa rằng ước tính 3 hạn chót của bạn cho tính năng đang thực hiện là 8/12/20
+
+_Đừng hy vọng bạn có thể hoàn thành tất cả trong 10 ngày!_ Hy vọng là thứ giết chết dự án. Hy vọng phá hủy lịch trình và hủy hoại danh tiếng. Hy vọng sẽ khiến bạn gặp rắc rối sâu sắc. Nếu triển lãm thương mại diễn ra trong 10 ngày và ước tính thực tế của bạn là 12 ngày, bạn sẽ không kịp để dự triển lãm. Đảm bảo rằng đội của bạn và các bên liên quan hiểu tình hình và không bỏ cuộc cho đến khi có kế hoạch dự phòng. Đừng để bất kỳ ai khác có hy vọng.
+
+
