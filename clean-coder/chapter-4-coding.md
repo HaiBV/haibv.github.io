@@ -218,4 +218,8 @@ Bí quyết quản lý việc bị chậm deadline là phát hiện sớm và mi
 
 _Đừng hy vọng bạn có thể hoàn thành tất cả trong 10 ngày!_ Hy vọng là thứ giết chết dự án. Hy vọng phá hủy lịch trình và hủy hoại danh tiếng. Hy vọng sẽ khiến bạn gặp rắc rối sâu sắc. Nếu triển lãm thương mại diễn ra trong 10 ngày và ước tính thực tế của bạn là 12 ngày, bạn sẽ không kịp để dự triển lãm. Đảm bảo rằng đội của bạn và các bên liên quan hiểu tình hình và không bỏ cuộc cho đến khi có kế hoạch dự phòng. Đừng để bất kỳ ai khác có hy vọng.
 
+### Vội vàng
 
+Sẽ ra sao nếu quản lý của bạn yêu cầu bạn cố gắng hoàn thành đúng hạn? Điều gì xảy ra nếu quản lý của bạn khăng khăng rằng bạn phải làm "mọi việc cần phải làm"? _Giữ nguyên ước lượng của bạn!_ Ước tính ban đầu của bạn chính xác hơn bất kỳ thay đổi nào bạn thực hiện trong khi sếp đối đầu với bạn. Nói với sếp rằng bạn đã cân nhắc các lựa chọn (vì bạn có) và cách duy nhất để cải thiện lịch trình là giảm khối lượng công việc. _Đừng để bị sự vội vàng cám dỗ_
+
+Buồn thay cho những lập trình viên kém cỏi, người phải chịu áp lực và đồng ý cố gắng hoàn thành đúng hạn. Họ sẽ bắt đầu sử dụng đường tắt và làm thêm giờ với hy vọng trong vô vọng sẽ tạo ra một điều kỳ diệu. Đây là một công thức cho thảm họa bởi vì nó mang lại cho bạn, nhóm của bạn và các bên liên quan hy vọng sai lầm. Nó khiến mọi người tránh đối mặt với vấn đề và trì hoãn các quyết định khó khăn khi cần thiết.
