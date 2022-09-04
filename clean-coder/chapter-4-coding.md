@@ -227,3 +227,9 @@ Buồn thay cho những lập trình viên kém cỏi, người phải chịu á
 Vội vàng không phải là cách. Bạn không thể viết code nhanh hơn. Bạn không thể bắt mình giải quyết vấn đề nhanh hơn. Nếu bạn cố gắng, bạn sẽ chỉ làm chậm bản thân và tạo ra một mớ hỗn độn khiến những người khác cũng phải chậm lại.
 
 Vì vậy, bạn cần phải tước đi hi vọng của sếp, nhóm và các bên liên quan bằng câu trả lời của bạn.
+
+### Làm thêm giờ
+
+Bây giờ sếp của bạn nói "Nếu bạn làm thêm 2h một ngày thì sao? Nếu bạn làm thêm vào thứ 7 thì sao? Thôi nào, phải có cách nào đó để có đủ thời gian hoàn thành tính năng đúng hạn."
+
+Làm thêm giờ có thể có tác dụng, và đôi khi là cần thiết. Đôi khi bạn ra một ngày bằng cách làm 10 tiếng vào những ngày khác và thêm một hoặc 2 ngày thứ 7. Nhưng điều này rất rủi ro. Bạn không có khả năng hoàn thành thêm 20% công việc bằng cách làm thêm 20% giờ. Hơn nữa, làm thêm giờ chắc chắn sẽ không thành công nếu nó kéo dài hơn 2 hoặc 3 tuần.
