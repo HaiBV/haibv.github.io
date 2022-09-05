@@ -233,3 +233,7 @@ Vì vậy, bạn cần phải tước đi hi vọng của sếp, nhóm và các 
 Bây giờ sếp của bạn nói "Nếu bạn làm thêm 2h một ngày thì sao? Nếu bạn làm thêm vào thứ 7 thì sao? Thôi nào, phải có cách nào đó để có đủ thời gian hoàn thành tính năng đúng hạn."
 
 Làm thêm giờ có thể có tác dụng, và đôi khi là cần thiết. Đôi khi bạn ra một ngày bằng cách làm 10 tiếng vào những ngày khác và thêm một hoặc 2 ngày thứ 7. Nhưng điều này rất rủi ro. Bạn không có khả năng hoàn thành thêm 20% công việc bằng cách làm thêm 20% giờ. Hơn nữa, làm thêm giờ chắc chắn sẽ không thành công nếu nó kéo dài hơn 2 hoặc 3 tuần.
+
+Vì vậy, bạn không nên đồng ý làm thêm giờ trừ khi (1) bạn có đủ khả năng cá nhân để đáp ứng công việc, (2) trong khoảng thời gian ngắn, chỉ trong 2 tuần hoặc ít hơn, (3) _sếp của bạn có kế hoạch dự phòng_ trong trường hợp nỗ lực làm thêm không thành công
+
+Tiêu chí cuối cùng đó là thứ sẽ phá vỡ thỏa thuận. Nếu sếp bạn không thể nói rõ cho bạn biết ông ấy sẽ làm gì nếu nỗ lực làm thêm giờ không thành công, thì bạn không nên đồng ý làm thêm giờ.
