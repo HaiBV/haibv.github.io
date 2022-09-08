@@ -249,3 +249,9 @@ Khi một đội rơi vào cái bẫy này, các quản lý thấy rằng mọi 
 ### Định nghĩa "Hoàn Thành"
 
 Bạn tránh được vấn đề trên bằng cách tạo ra một định nghĩa độc lập về "đã hoàn thành". Cách tốt nhất để làm điều này là yêu cầu BA và tester tạo ra các kiểm thử chấp nhận tự động (automated acceptance test), và bạn phải vượt qua chúng trước khi được coi là hoàn thành. Những kiểm thử này phải được viết bằng ngôn ngữ kiểm thử như FitNesse, Selenium, RobotFX, Cucumber, v.v. Các kiểm thử phải được các bên liên quan hiểu được và phải được thực hiện thường xuyên.
+
+## Giúp đỡ
+
+Lập trình là khó. Bạn càng trẻ, bạn càng ít tin vào điều này. Rốt cuộc, đó chỉ là một loạt các câu lệnh if và while. Nhưng khi bạn đã có kinh nghiệm, bạn bắt đầu nhận ra rằng cách bạn kết hợp các câu lệnh if và while là cực kỳ quan trọng. Không thể chỉ tập hợp chúng lại với nhau và hy vọng điều tốt nhất xảy ra. Thay vào đó, cần phải cẩn thận phân vùng hệ thống thành các đơn vị nhỏ dễ hiểu và càng ít liên quan đến nhau càng tốt — và điều đó thật khó.
+
+Lập trình rất khó, trên thực tế, nó mức vượt qua khả năng của một người để làm tốt. Bất kể bạn có kỹ năng như thế nào, bạn chắc chắn sẽ được hưởng lợi từ những suy nghĩ và ý tưởng của một lập trình viên khác.
