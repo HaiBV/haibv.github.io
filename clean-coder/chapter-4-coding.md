@@ -255,3 +255,9 @@ Bạn tránh được vấn đề trên bằng cách tạo ra một định ngh�
 Lập trình là khó. Bạn càng trẻ, bạn càng ít tin vào điều này. Rốt cuộc, đó chỉ là một loạt các câu lệnh if và while. Nhưng khi bạn đã có kinh nghiệm, bạn bắt đầu nhận ra rằng cách bạn kết hợp các câu lệnh if và while là cực kỳ quan trọng. Không thể chỉ tập hợp chúng lại với nhau và hy vọng điều tốt nhất xảy ra. Thay vào đó, cần phải cẩn thận phân vùng hệ thống thành các đơn vị nhỏ dễ hiểu và càng ít liên quan đến nhau càng tốt — và điều đó thật khó.
 
 Lập trình rất khó, trên thực tế, nó mức vượt qua khả năng của một người để làm tốt. Bất kể bạn có kỹ năng như thế nào, bạn chắc chắn sẽ được hưởng lợi từ những suy nghĩ và ý tưởng của một lập trình viên khác.
+
+### Giúp đỡ người khác
+
+Do đó, các lập trình viên có trách nhiệm sẵn sàng giúp đỡ lẫn nhau. Nếu bạn tự cô lập mình và từ chối yêu cầu của người khác, bạn đang vi phạm đạo đức nghề nghiệp. Công việc của bạn không quá quan trọng đến mức không thể cho dành ra một chút thời gian của mình để giúp đỡ người khác. Thật vậy, là một chuyên gia, bạn vinh dự được cung cấp sự trợ giúp đó bất cứ khi nào cần thiết.
+
+Điều này không có nghĩa là bạn không có thời gian cho riêng mình. Tất nhiên là có. Nhưng cần phải công bằng và lịch sự về nó. Ví dụ, bạn có thể cho mọi người biết rằng trong khoảng thời gian từ 10 giờ sáng đến trưa bạn không muốn bị làm phiền, nhưng từ 1 giờ chiều đến 3 giờ chiều thì không vấn đề.
