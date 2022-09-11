@@ -256,12 +256,18 @@ Lập trình là khó. Bạn càng trẻ, bạn càng ít tin vào điều này.
 
 Lập trình rất khó, trên thực tế, nó mức vượt qua khả năng của một người để làm tốt. Bất kể bạn có kỹ năng như thế nào, bạn chắc chắn sẽ được hưởng lợi từ những suy nghĩ và ý tưởng của một lập trình viên khác.
 
-### Giúp đỡ người khác
+### Trợ giúp người khác
 
-Do đó, các lập trình viên có trách nhiệm sẵn sàng giúp đỡ lẫn nhau. Nếu bạn tự cô lập mình và từ chối yêu cầu của người khác, bạn đang vi phạm đạo đức nghề nghiệp. Công việc của bạn không quá quan trọng đến mức không thể cho dành ra một chút thời gian của mình để giúp đỡ người khác. Thật vậy, là một chuyên gia, bạn vinh dự được cung cấp sự trợ giúp đó bất cứ khi nào cần thiết.
+Do đó, các lập trình viên có trách nhiệm sẵn sàng trợ giúp lẫn nhau. Nếu bạn tự cô lập mình và từ chối yêu cầu của người khác, bạn đang vi phạm đạo đức nghề nghiệp. Công việc của bạn không quá quan trọng đến mức không thể cho dành ra một chút thời gian của mình để giúp đỡ người khác. Thật vậy, là một chuyên gia, bạn vinh dự được cung cấp sự trợ giúp đó bất cứ khi nào cần thiết.
 
 Điều này không có nghĩa là bạn không có thời gian cho riêng mình. Tất nhiên là có. Nhưng cần phải công bằng và lịch sự về nó. Ví dụ, bạn có thể cho mọi người biết rằng trong khoảng thời gian từ 10 giờ sáng đến trưa bạn không muốn bị làm phiền, nhưng từ 1 giờ chiều đến 3 giờ chiều thì không vấn đề.
 
-Bạn cũng nên để ý đến tình trạng của đồng đội. Nếu thấy ai đó có vẻ đang gặp khó khăn, hãy đề nghị giúp đỡ. Bạn có thể sẽ khá ngạc nhiên về hiệu quả sâu sắc mà sự giúp đỡ đó có thể mang lại. Không phải bạn thông minh hơn người khác quá nhiều, mà chỉ là quan điểm mới mẻ có thể là chất xúc tác sâu sắc để giải quyết vấn đề.
+Bạn cũng nên để ý đến tình trạng của đồng đội. Nếu thấy ai đó có vẻ đang gặp khó khăn, hãy đề nghị trợ giúp. Bạn có thể sẽ khá ngạc nhiên về hiệu quả sâu sắc mà sự trợ giúp đó có thể mang lại. Không phải bạn thông minh hơn người khác quá nhiều, mà chỉ là quan điểm mới mẻ có thể là chất xúc tác sâu sắc để giải quyết vấn đề.
 
 Khi bạn giúp ai đó, hãy ngồi xuống và viết code cùng nhau. Lên kế hoạch dành khoảng một giờ hoặc hơn. Có thể mất ít thời gian hơn, nhưng bạn không muốn tỏ ra vội vàng. Hãy cam kết với nhiệm vụ và nỗ lực hết mình. Sau đó bạn có thể sẽ học được nhiều hơn những gì bạn đã cho đi.
+
+### Được trợ giúp
+
+Khi ai đó đề nghị trợ giúp bạn, hãy trân trọng điều đó. Hãy chấp nhận nó một cách biết ơn và thật sự hết mình. Không bảo vệ phần sân của bạn. Đừng đẩy sự trợ giúp ra xa vì bạn đang ở dưới họng súng. Dành ra 30 phút hoặc lâu hơn. Nếu đến thời điểm đó mà điều đó không thực sự hỗ trợ bạn nhiều như kỳ vọng thì hãy lịch sự xin lỗi và kết thúc bằng lời cảm ơn. Hãy nhớ rằng, cũng như bạn có vinh dự được đề nghị trợ giúp, bạn cũng có vinh dự được chấp nhận trợ giúp.
+
+Học cách yêu cầu trợ giúp. Khi bạn gặp khó khăn, bối rối hoặc không thể giải quyết được vấn đề nào đó, hãy nhờ ai đó giúp. Nếu bạn đang ngồi trong phòng cùng team, bạn có thể chỉ cần ngồi tại chỗ và nói, "Tôi cần một số trợ giúp." Nếu không, hãy sử dụng yammer, twitter hoặc email, hoặc điện thoại trên bàn làm việc của bạn. Gọi trợ giúp. Một lần nữa, đây là vấn đề đạo đức nghề nghiệp. Thật không chuyên nghiệp nếu vẫn bị mắc kẹt khi có thể dễ dàng tiếp cận sự trợ giúp.
