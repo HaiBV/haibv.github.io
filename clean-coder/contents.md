@@ -12,9 +12,13 @@ layout: default
 
 [Chương 3 - Đồng ý (Nói có)](./chapter-3-saying-yes.html).
 
+[Chương 4 - Coding](./chapter-4-coding.html).
+
 [Chương 5 - Test Driven Development](./chapter-5-test-driven-development.html).
 
 [Chương 6 - Luyện tập](./chapter-6-practicing.html).
+
+[Chương 7 - Kiểm thử chấp nhận](./chapter-7-acceptance-testing.html).
 
 [Chương 9 - Quản lý thời gian](./chapter-9-time-management.html).
 
