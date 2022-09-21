@@ -26,4 +26,10 @@ Vì vậy, từng chút một tôi thấy mình phát triển ứng dụng này 
 
 Chúng tôi mất nguyên 1 ngày. Anh ấy mô tả một tính năng và tôi phát triển nó khi anh ấy quan sát. Thời gian cho 1 vòng lặp là năm phút hoặc ít hơn, vì vậy không có lý do gì để anh ta đứng dậy và làm bất cứ điều gì khác. Anh ấy yêu cầu tôi làm X và trong vòng năm phút, tôi đã làm được X.
 
-Thường thì anh ấy sẽ vẽ những gì mình muốn trên một tờ giấy nháp. Một số điều anh ấy muốn khó thực hiện được trong ED-402, vì vậy tôi đề xuất một điều gì đó khác. Cuối cùng chúng tôi đưa ra thống nhất và tôi thực hiện chức năng đó.
+Thường thì anh ấy vẽ những gì mình muốn trên một tờ giấy nháp. Một số điều anh ấy muốn khó thực hiện được trong ED-402, vì vậy tôi đề xuất một cách khác. Cuối cùng chúng tôi đưa ra thống nhất và tôi thực hiện chức năng đó.
+
+Nhưng khi chúng tôi chạy thử, có thể anh ấy sẽ thay đổi quyết định. Anh ấy nói đại loại như: “Vâng, điều đó có vẻ không giống với chu trình mà tôi nghĩ tới. Hãy thử một cách khác."
+
+Thời gian trôi qua, chúng tôi mày mò, chọc ngoáy và thúc đẩy ứng dụng đó thành hình. Chúng tôi đã thử cái này, rồi cái khác, rồi lại cái khác. Tôi thấy rất rõ ràng rằng _anh ấy_ là nhà điêu khắc, còn tôi là công cụ đang được sử dụng.
+
+Cuối cùng, anh ấy đã nhận được ứng dụng mà mình cần nhưng không biết làm thế nào để bắt đầu xây dựng ứng dụng tiếp theo cho chính mình. Mặt khác, tôi đã học được một bài học mạnh mẽ về cách khách hàng thực sự khám phá những gì họ cần. Tôi biết được rằng tầm nhìn của họ về các tính năng thường không tồn tại khi tiếp xúc thực tế với máy tính.
