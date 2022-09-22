@@ -33,3 +33,11 @@ Nhưng khi chúng tôi chạy thử, có thể anh ấy sẽ thay đổi quyết
 Thời gian trôi qua, chúng tôi mày mò, chọc ngoáy và thúc đẩy ứng dụng đó thành hình. Chúng tôi đã thử cái này, rồi cái khác, rồi lại cái khác. Tôi thấy rất rõ ràng rằng _anh ấy_ là nhà điêu khắc, còn tôi là công cụ đang được sử dụng.
 
 Cuối cùng, anh ấy đã nhận được ứng dụng mà mình cần nhưng không biết làm thế nào để bắt đầu xây dựng ứng dụng tiếp theo cho chính mình. Mặt khác, tôi đã học được một bài học mạnh mẽ về cách khách hàng thực sự khám phá những gì họ cần. Tôi biết được rằng tầm nhìn của họ về các tính năng thường không tồn tại khi tiếp xúc thực tế với máy tính.
+
+### Chính xác quá sớm
+
+Cả khách hàng và lập trình viên đều dễ bị cám dỗ bởi cái bẫy của chính xác quá sớm. Khách hàng muốn biết chính xác những gì họ sẽ nhận được trước khi họ ủy quyền cho một dự án. Các lập trình viên muốn biết chính xác những gì họ phải cung cấp trước khi họ ước lượng dự án. Cả hai bên đều muốn có một độ chính xác không thể đạt được và thường sẵn sàng lãng phí cả một gia tài để cố gắng đạt được nó.
+
+#### Nguyên tắc bất định
+
+Vấn đề là mọi thứ xuất hiện trên giấy tờ khác sẽ với lúc hệ thống làm việc. Khi khách hàng thực sự thấy những gì họ chỉ định đang chạy trong một hệ thống, họ nhận ra rằng đó hoàn toàn không phải là những gì họ muốn. Khi họ thấy yêu cầu thực sự đang chạy, họ lại có ý tưởng tốt hơn về những gì họ thực sự muốn — và đó thường không phải là những gì họ đang thấy.
