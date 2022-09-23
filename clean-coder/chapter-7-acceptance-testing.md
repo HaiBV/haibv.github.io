@@ -41,3 +41,7 @@ Cả khách hàng và lập trình viên đều dễ bị cám dỗ bởi cái b
 #### Nguyên tắc bất định
 
 Vấn đề là mọi thứ xuất hiện trên giấy tờ khác sẽ với lúc hệ thống làm việc. Khi khách hàng thực sự thấy những gì họ chỉ định đang chạy trong một hệ thống, họ nhận ra rằng đó hoàn toàn không phải là những gì họ muốn. Khi họ thấy yêu cầu thực sự đang chạy, họ lại có ý tưởng tốt hơn về những gì họ thực sự muốn — và đó thường không phải là những gì họ đang thấy.
+
+Nó được gọi là hiệu ứng người quan sát, hay nguyên tắc bất định. Khi bạn đưa ra một tính năng cho khách hàng, nó cung cấp cho họ nhiều thông tin hơn so với trước đây và thông tin mới đó sẽ ảnh hưởng đến cách họ nhìn nhận toàn bộ hệ thống.
+
+Cuối cùng, bạn đưa ra các yêu cầu của mình càng chính xác thì chúng càng trở nên ít liên quan hơn khi hệ thống được triển khai.
