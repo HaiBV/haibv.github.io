@@ -45,3 +45,11 @@ Vấn đề là mọi thứ xuất hiện trên giấy tờ khác sẽ với lú
 Nó được gọi là hiệu ứng người quan sát, hay nguyên tắc bất định. Khi bạn đưa ra một tính năng cho khách hàng, nó cung cấp cho họ nhiều thông tin hơn so với trước đây và thông tin mới đó sẽ ảnh hưởng đến cách họ nhìn nhận toàn bộ hệ thống.
 
 Cuối cùng, bạn đưa ra các yêu cầu của mình càng chính xác thì chúng càng trở nên ít liên quan hơn khi hệ thống được triển khai.
+
+#### Ước lượng lo lắng
+
+Các lập trình viên cũng có thể mắc vào cái bẫy chính xác. Họ biết rằng họ phải ước lượng hệ thống và thường nghĩ rằng điều này đòi hỏi sự chính xác. Không đúng.
+
+Thứ nhất, ngay cả khi có được thông tin hoàn hảo, ước lượng của bạn vẫn sẽ có một phương sai lớn. Thứ hai, nguyên tắc bất định gây khó khăn cho tính chính xác. Các yêu cầu sẽ thay đổi và làm mâu thuẫn tính chính xác đó.
+
+Các lập trình viên chuyên nghiệp hiểu rằng các ước lượng có thể và nên được thực hiện dựa trên các yêu cầu có độ chính xác thấp và phải xác định rằng ước lượng là ước lượng. Để củng cố điều này, các lập trình viên chuyên nghiệp luôn đưa sai số vào ước lượng của mình để khách hàng hiểu được sự không chắc chắn. (Xem Chương 10, “Ước lượng.”)
