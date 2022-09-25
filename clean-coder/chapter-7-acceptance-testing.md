@@ -53,3 +53,9 @@ Các lập trình viên cũng có thể mắc vào cái bẫy chính xác. Họ 
 Thứ nhất, ngay cả khi có được thông tin hoàn hảo, ước lượng của bạn vẫn sẽ có một phương sai lớn. Thứ hai, nguyên tắc bất định gây khó khăn cho tính chính xác. Các yêu cầu sẽ thay đổi và làm mâu thuẫn tính chính xác đó.
 
 Các lập trình viên chuyên nghiệp hiểu rằng các ước lượng có thể và nên được thực hiện dựa trên các yêu cầu có độ chính xác thấp và phải xác định rằng ước lượng là ước lượng. Để củng cố điều này, các lập trình viên chuyên nghiệp luôn đưa sai số vào ước lượng của mình để khách hàng hiểu được sự không chắc chắn. (Xem Chương 10, “Ước lượng.”)
+
+#### Sự mơ hồ muộn màng
+
+Giải pháp cho chính xác quá sớm là trì hoãn độ chính xác càng lâu càng tốt. Các lập trình viên chuyên nghiệp không đưa ra yêu cầu cho đến khi họ chuẩn bị phát triển nó. Tuy nhiên, điều đó có thể dẫn đến một tật xấu khác: sự mơ hồ muộn màng.
+
+Thường thì các bên liên quan sẽ có mâu thuẫn. Khi đó, họ thấy việc sửa tài liệu dễ dàng hơn là giải quyết vấn đề bất đồng. Họ sẽ tìm ra cách diễn đạt yêu cầu mà tất cả họ đồng ý, nhưng không thực sự giải quyết tranh chấp. Tôi từng nghe Tom DeMarco nói, "Tài liệu yêu cầu không rõ ràng thể hiện mâu thuẫn giữa các bên liên quan."
