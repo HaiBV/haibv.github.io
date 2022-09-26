@@ -58,4 +58,8 @@ Các lập trình viên chuyên nghiệp hiểu rằng các ước lượng có 
 
 Giải pháp cho chính xác quá sớm là trì hoãn độ chính xác càng lâu càng tốt. Các lập trình viên chuyên nghiệp không đưa ra yêu cầu cho đến khi họ chuẩn bị phát triển nó. Tuy nhiên, điều đó có thể dẫn đến một tật xấu khác: sự mơ hồ muộn màng.
 
-Thường thì các bên liên quan sẽ có mâu thuẫn. Khi đó, họ thấy việc sửa tài liệu dễ dàng hơn là giải quyết vấn đề bất đồng. Họ sẽ tìm ra cách diễn đạt yêu cầu mà tất cả họ đồng ý, nhưng không thực sự giải quyết tranh chấp. Tôi từng nghe Tom DeMarco nói, "Tài liệu yêu cầu không rõ ràng thể hiện mâu thuẫn giữa các bên liên quan."
+Thường thì các bên liên quan sẽ có mâu thuẫn. Khi đó, họ thấy việc sửa tài liệu dễ dàng hơn là giải quyết vấn đề bất đồng. Họ sẽ tìm ra cách diễn đạt yêu cầu mà tất cả họ đồng ý, nhưng không thực sự giải quyết tranh chấp. Tôi từng nghe Tom DeMarco nói, "Tài liệu yêu cầu không rõ ràng thể hiện mâu thuẫn của khách hàng."
+
+Tất nhiên, tranh cãi hoặc bất đồng không tạo ra sự mơ hồ. Đôi khi các bên liên quan cho rằng người đọc biết họ muốn nói gì.
+
+Nó có thể hoàn toàn rõ ràng với họ trong ngữ cảnh của họ, nhưng có ý nghĩa hoàn toàn khác đối với lập trình viên khi đọc. Loại mơ hồ về ngữ cảnh này có thể xảy ra khi khách hàng và lập trình viên nói chuyện trực tiếp với nhau.
