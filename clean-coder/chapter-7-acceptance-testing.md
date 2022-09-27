@@ -63,3 +63,39 @@ Thường thì các bên liên quan sẽ có mâu thuẫn. Khi đó, họ thấy
 Tất nhiên, tranh cãi hoặc bất đồng không tạo ra sự mơ hồ. Đôi khi các bên liên quan cho rằng người đọc biết họ muốn nói gì.
 
 Nó có thể hoàn toàn rõ ràng với họ trong ngữ cảnh của họ, nhưng có ý nghĩa hoàn toàn khác đối với lập trình viên khi đọc. Loại mơ hồ về ngữ cảnh này có thể xảy ra khi khách hàng và lập trình viên nói chuyện trực tiếp với nhau.
+
+Sam (khách hàng): "OK, bây giờ các tệp nhật ký (log files) cần được sao lưu"
+
+Paula: "OK, bao lâu một lần?"
+
+Sam: "Hàng ngày"
+
+Paula: "Được. Và chúng ta sẽ lưu chúng ở đâu?"
+
+Sam: "Ý cô là sao?"
+
+Paula: "Anh có muốn tôi lưu chúng ra một thư mục con riêng?"
+
+Sam: "Đúng rối, rất tốt"
+
+Paula: "Chúng ta sẽ đặt tên thư mục là gì?"
+
+Sam: "'backup' thì sao nhỉ?"
+
+Paula: "Chắc rồi, ổn thôi. Vậy là chúng ta sẽ ghi tệp nhật ký vào thư mục backup mỗi ngày. Sẽ thực hiện vào lúc nào?"
+
+Sam: "Hàng ngày"
+
+Paula: "Không, ý tôi là thời điểm nào trong này anh muốn nó được sao lưu?"
+
+Sam: "Lúc nào cũng được."
+
+Paula: "Buổi chiều?"
+
+Sam: "Không, hãy tránh thời gian giao dịch ra. Nửa đêm sẽ tốt hơn."
+
+Paula: "OK, vậy thì nửa đêm"
+
+Sam: "Tuyệt, cảm ơn!"
+
+Paula: "Rất hân hạnh"
