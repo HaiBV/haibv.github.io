@@ -99,3 +99,23 @@ Paula: "OK, vậy thì nửa đêm"
 Sam: "Tuyệt, cảm ơn!"
 
 Paula: "Rất hân hạnh"
+
+Sau đó, Paula đang nói với đồng đội của cô ấy là Peter về nhiệm vụ.
+
+Paula: "OK, chúng ta cần sao chép tệp nhật ký vào thư mục con có tên 'backup' mỗi tối vào lúc nửa đêm."
+
+Peter: "OK, chúng ta sẽ đặt tên tệp là gì?"
+
+Paula: "Nên đặt là log.backup"
+
+Peter: "Xong ngay"
+
+Ở một văn phòng khác, Sam nói chuyện điện thoại với khách hàng của mình.
+
+Sam: "Đúng, đúng, các tệp nhật ký sẽ được sao lưu."
+
+Carl: "Được, điều quan trọng là chúng ta sẽ không bao giờ mất bất kỳ tệp nhật ký nào. Chúng tôi cần xem lại tất cả các tệp nhật ký đó, vài tháng hoặc thậm chí vài năm sau, bất cứ khi nào có sự cố, sự kiện hoặc tranh chấp."
+
+Sam: "Đừng lo, tôi vừa nói chuyện với Paula. Cô ấy sẽ lưu tệp nhật ký vào một thư mục có tên là backup, sao lưu mỗi đêm lúc nửa đêm."
+
+Carl: "Được rồi, nghe hay đấy."
