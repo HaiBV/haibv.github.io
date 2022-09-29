@@ -119,3 +119,9 @@ Carl: "Được, điều quan trọng là chúng ta sẽ không bao giờ mất 
 Sam: "Đừng lo, tôi vừa nói chuyện với Paula. Cô ấy sẽ lưu tệp nhật ký vào một thư mục có tên là backup, sao lưu mỗi đêm lúc nửa đêm."
 
 Carl: "Được rồi, nghe hay đấy."
+
+Tôi chắc là bạn đã phát hiện ra sự mơ hồ ở đây. Khách hàng mong muốn tất cả các tệp nhật ký được lưu lại và Paula nghĩ rằng họ chỉ muốn lưu tệp nhật ký ngày hôm trước. Khi khách hàng tìm kiếm các bản sao lưu tệp nhật ký tháng trước, họ sẽ chỉ tìm thấy tệp của ngày hôm trước.
+
+Trong trường hợp này, cả Paula và Sam phạm sai lầm. Các lập trình viên chuyên nghiệp (và khách hàng) có trách nhiệm đảm bảo loại bỏ tất cả mơ hồ khỏi các yêu cầu.
+
+Việc này rất _khó_ và tôi chỉ biết một cách để thực hiện.
