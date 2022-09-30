@@ -125,3 +125,7 @@ Tôi chắc là bạn đã phát hiện ra sự mơ hồ ở đây. Khách hàng
 Trong trường hợp này, cả Paula và Sam phạm sai lầm. Các lập trình viên chuyên nghiệp (và khách hàng) có trách nhiệm đảm bảo loại bỏ tất cả mơ hồ khỏi các yêu cầu.
 
 Việc này rất _khó_ và tôi chỉ biết một cách để thực hiện.
+
+## Kiểm thử chấp nhận
+
+Thuật ngữ _kiểm thử chấp nhận_ đang bị quá tải và sử dụng quá mức. Một số người cho rằng đây là những kiểm thử mà người dùng thực hiện trước khi họ chấp nhận phiên bản mới. Những người khác cho rằng đây là các kiểm thử QA. Trong chương này, chúng ta sẽ định nghĩa kiểm thử chấp nhận là các kiểm thử được viết bởi sự hợp tác của khách hàng và lập trình viên để _xác định khi nào một yêu cầu được hoàn thành_.
