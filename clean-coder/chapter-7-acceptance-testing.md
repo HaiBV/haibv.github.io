@@ -129,3 +129,9 @@ Việc này rất _khó_ và tôi chỉ biết một cách để thực hiện.
 ## Kiểm thử chấp nhận
 
 Thuật ngữ _kiểm thử chấp nhận_ đang bị quá tải và sử dụng quá mức. Một số người cho rằng đây là những kiểm thử mà người dùng thực hiện trước khi họ chấp nhận phiên bản mới. Những người khác cho rằng đây là các kiểm thử QA. Trong chương này, chúng ta sẽ định nghĩa kiểm thử chấp nhận là các kiểm thử được viết bởi sự hợp tác của khách hàng và lập trình viên để _xác định khi nào một yêu cầu được hoàn thành_.
+
+### Định nghĩa của "hoàn thành" (DoD)
+
+Một trong những mơ hồ phổ biến nhất mà chúng ta phải đối mặt với tư cách lập trình viên là sự mơ hồ của "hoàn thành". Khi một lập trình viên nói rằng anh ta đã hoàn thành một nhiệm vụ, điều đó có nghĩa là gì? Điều đó có nghĩa là tính năng đó đã sẵn sàng triển khai với 100% tự tin không? Hay nó đã sẵn sàng cho QA? Hoặc nó được viết xong và mới được chạy một lần nhưng chưa thực sự kiểm thử nó.
+
+Tôi đã làm việc với các nhóm có định nghĩa khác nhau cho các từ "hoàn thành (done)" và "đầy đủ (complete)". Một nhóm khác sử dụng các từ như "hoàn thành (done)" và "đã hoàn thành (done-done)".
