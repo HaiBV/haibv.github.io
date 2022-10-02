@@ -135,3 +135,7 @@ Thuật ngữ _kiểm thử chấp nhận_ đang bị quá tải và sử dụng
 Một trong những mơ hồ phổ biến nhất mà chúng ta phải đối mặt với tư cách lập trình viên là sự mơ hồ của "hoàn thành". Khi một lập trình viên nói rằng anh ta đã hoàn thành một nhiệm vụ, điều đó có nghĩa là gì? Điều đó có nghĩa là tính năng đó đã sẵn sàng triển khai với 100% tự tin không? Hay nó đã sẵn sàng cho QA? Hoặc nó được viết xong và mới được chạy một lần nhưng chưa thực sự kiểm thử nó.
 
 Tôi đã làm việc với các nhóm có định nghĩa khác nhau cho các từ "hoàn thành (done)" và "đầy đủ (complete)". Một nhóm khác sử dụng các từ như "hoàn thành (done)" và "đã hoàn thành (done-done)".
+
+Các lập trình viên chuyên nghiệp có một định nghĩa duy nhất về hoàn thành: Hoàn thành nghĩa là hoàn thành. Hoàn thành nghĩa là tất cả code được viết, tất cả các bài kiểm thử đều vượt qua, QA và khách hàng đã chấp nhận. Hoàn thành.
+
+Nhưng làm thế nào bạn có thể đạt được mức độ hoàn thành này mà vẫn có tiến độ nhanh chóng lặp đi lặp lại? Bạn tạo một tập hợp các kiểm thử tự động mà khi chúng vượt qua, đáp ứng tất cả các tiêu chí trên! Khi các bài kiểm thử chấp nhận cho tính năng được vượt qua, nghĩa là bạn đã hoàn thành.
