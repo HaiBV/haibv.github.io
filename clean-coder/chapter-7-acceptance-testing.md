@@ -28,7 +28,7 @@ Chúng tôi mất nguyên 1 ngày. Anh ấy mô tả một tính năng và tôi 
 
 Thường thì anh ấy vẽ những gì mình muốn trên một tờ giấy nháp. Một số điều anh ấy muốn khó thực hiện được trong ED-402, vì vậy tôi đề xuất một cách khác. Cuối cùng chúng tôi đưa ra thống nhất và tôi thực hiện chức năng đó.
 
-Nhưng khi chúng tôi chạy thử, có thể anh ấy sẽ thay đổi quyết định. Anh ấy nói đại loại như: “Vâng, điều đó có vẻ không giống với chu trình mà tôi nghĩ tới. Hãy thử một cách khác."
+Nhưng khi chúng tôi chạy thử, có thể anh ấy sẽ thay đổi quyết định. Anh ấy nói đại loại như: "Vâng, điều đó có vẻ không giống với chu trình mà tôi nghĩ tới. Hãy thử một cách khác."
 
 Thời gian trôi qua, chúng tôi mày mò, chọc ngoáy và thúc đẩy ứng dụng đó thành hình. Chúng tôi đã thử cái này, rồi cái khác, rồi lại cái khác. Tôi thấy rất rõ ràng rằng _anh ấy_ là nhà điêu khắc, còn tôi là công cụ đang được sử dụng.
 
@@ -52,7 +52,7 @@ Các lập trình viên cũng có thể mắc vào cái bẫy chính xác. Họ 
 
 Thứ nhất, ngay cả khi có được thông tin hoàn hảo, ước lượng của bạn vẫn sẽ có một phương sai lớn. Thứ hai, nguyên tắc bất định gây khó khăn cho tính chính xác. Các yêu cầu sẽ thay đổi và làm mâu thuẫn tính chính xác đó.
 
-Các lập trình viên chuyên nghiệp hiểu rằng các ước lượng có thể và nên được thực hiện dựa trên các yêu cầu có độ chính xác thấp và phải xác định rằng ước lượng là ước lượng. Để củng cố điều này, các lập trình viên chuyên nghiệp luôn đưa sai số vào ước lượng của mình để khách hàng hiểu được sự không chắc chắn. (Xem Chương 10, “Ước lượng.”)
+Các lập trình viên chuyên nghiệp hiểu rằng các ước lượng có thể và nên được thực hiện dựa trên các yêu cầu có độ chính xác thấp và phải xác định rằng ước lượng là ước lượng. Để củng cố điều này, các lập trình viên chuyên nghiệp luôn đưa sai số vào ước lượng của mình để khách hàng hiểu được sự không chắc chắn. (Xem Chương 10, "Ước lượng.")
 
 #### Sự mơ hồ muộn màng
 
@@ -139,3 +139,45 @@ Tôi đã làm việc với các nhóm có định nghĩa khác nhau cho các t�
 Các lập trình viên chuyên nghiệp có một định nghĩa duy nhất về hoàn thành: Hoàn thành nghĩa là hoàn thành. Hoàn thành nghĩa là tất cả code được viết, tất cả các bài kiểm thử đều vượt qua, QA và khách hàng đã chấp nhận. Hoàn thành.
 
 Nhưng làm thế nào bạn có thể đạt được mức độ hoàn thành này mà vẫn có tiến độ nhanh chóng lặp đi lặp lại? Bạn tạo một tập hợp các kiểm thử tự động mà khi chúng vượt qua, đáp ứng tất cả các tiêu chí trên! Khi các bài kiểm thử chấp nhận cho tính năng được vượt qua, nghĩa là bạn đã hoàn thành.
+
+Các lập trình viên chuyên nghiệp định hướng xác định yêu cầu thành các kiểm thử chấp nhận tự động. Họ làm việc với các bên liên quan và QA để đảm bảo rằng các kiểm thử tự động này là đặc điểm kỹ thuật hoàn chỉnh về việc hoàn thành.
+
+Sam (khách hàng): "OK, bây giờ các tệp nhật ký (log files) cần được sao lưu"
+
+Paula: "OK, bao lâu một lần?"
+
+Sam: "Hàng ngày"
+
+Paula: "Được. Và chúng ta sẽ lưu chúng ở đâu?"
+
+Sam: "Ý cô là sao?"
+
+Paula: "Anh có muốn tôi lưu chúng ra một thư mục con riêng?"
+
+Sam: "Đúng rối, rất tốt"
+
+Paula: "Chúng ta sẽ đặt tên thư mục là gì?"
+
+Sam: "'backup' thì sao nhỉ?"
+
+Tom (tester): "Đợi đã, tên backup chung chung quá. Anh thực sự muốn lưu những gì trong thư mục này."
+
+Sam: "The backups."
+
+Tom: "Backups của cái gì?"
+
+Sam: "Những tệp nhật ký"
+
+Paula: "Nhưng chỉ có duy nhất 1 tệp"
+
+Sam: "Không, có nhiều. Mỗi ngày 1 tệp"
+
+Tom: "Ý anh là có 1 tệp nhật ký hoạt động, và nhiều tệp nhật ký sao lưu?"
+
+Sam: "Tất nhiên"
+
+Paula: "Ồ! Tôi tưởng anh chỉ muốn một tệp sao lưu tạm thời"
+
+Sam: "Không, khách hàng muốn giữ chúng mãi mãi."
+
+Paula: "Cái này mới với tôi nha. OK, thật tốt là chúng ta làm rõ được nó"
