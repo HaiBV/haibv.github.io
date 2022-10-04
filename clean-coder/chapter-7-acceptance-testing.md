@@ -158,13 +158,13 @@ Sam: "Đúng rối, rất tốt"
 
 Paula: "Chúng ta sẽ đặt tên thư mục là gì?"
 
-Sam: "'backup' thì sao nhỉ?"
+Sam: "`backup` thì sao nhỉ?"
 
-Tom (tester): "Đợi đã, tên backup chung chung quá. Anh thực sự muốn lưu những gì trong thư mục này."
+Tom (tester): "Đợi đã, tên `backup` chung chung quá. Anh thực sự muốn lưu những gì trong thư mục này."
 
-Sam: "The backups."
+Sam: "`The backups`"
 
-Tom: "Backups của cái gì?"
+Tom: "Sao lưu của cái gì?"
 
 Sam: "Những tệp nhật ký"
 
@@ -181,3 +181,27 @@ Paula: "Ồ! Tôi tưởng anh chỉ muốn một tệp sao lưu tạm thời"
 Sam: "Không, khách hàng muốn giữ chúng mãi mãi."
 
 Paula: "Cái này mới với tôi nha. OK, thật tốt là chúng ta làm rõ được nó"
+
+Tom: "Vậy tên của thư mục con sẽ cho chúng ta biết những gì bên trong."
+
+Sam: "Nó chứa tất cả các nhật ký cũ không hoạt động."
+
+Tom: "Vậy hãy đặt là `old_inactive_logs`"
+
+Sam: "Tuyệt vời"
+
+Tom: "Vậy khi nào thư mục này được tạo?"
+
+Sam: "Sao cơ?"
+
+Paula: "Chúng ta nên tạo thư mục khi hệ thống khởi động, chỉ khi thư mục chưa tồn tại."
+
+Tom: "Được rồi, đây là kiểm thử đầu tiên của chúng ta. Tôi sẽ khởi động hệ thống và xem thư mục `old_inactive_logs` đã được tạo chưa. Sau đó, tôi sẽ thêm một tệp vào thư mục đó. Sau đó, tôi sẽ tắt và khởi động lại, đồng thời đảm bảo rằng cả thư mục và tệp vẫn ở đó."
+
+Paula: "Như vậy sẽ mất nhiều thời gian. Hệ thống khởi động hiện tại hết 20 giây và sẽ lâu hơn. Bên cạnh đó, tôi thực sự không muốn phải dựng toàn bộ hệ thống mỗi khi chạy các bài kiểm tra chấp nhận."
+
+Tom: "Cô có đề nghị gì không?"
+
+Paula: "Chúng tôi sẽ tạo một lớp `SystemStarter`. Chương trình chính sẽ tải phần khởi động này với một nhóm các đối tượng `StartupCommand`, sẽ tuân theo mẫu `Command`. Sau đó, trong quá trình khởi động hệ thống, `SystemStarter` sẽ chỉ cho tất cả các đối tượng `StartupCommand` chạy. Một trong các dẫn xuất `StartupCommand` đó sẽ tạo thư mục `old_inactive_logs` khi nó chưa tồn tại."
+
+Tom: "Ồ, được thôi, tất cả những gì tôi cần kiểm tra là dẫn xuất `StartupCommand` đó. Tôi có thể viết một bài kiểm tra `FitNesse` đơn giản cho điều đó."
