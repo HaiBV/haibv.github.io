@@ -205,3 +205,32 @@ Tom: "Cô có đề nghị gì không?"
 Paula: "Chúng tôi sẽ tạo một lớp `SystemStarter`. Chương trình chính sẽ tải phần khởi động này với một nhóm các đối tượng `StartupCommand`, sẽ tuân theo mẫu `Command`. Sau đó, trong quá trình khởi động hệ thống, `SystemStarter` sẽ chỉ cho tất cả các đối tượng `StartupCommand` chạy. Một trong các dẫn xuất `StartupCommand` đó sẽ tạo thư mục `old_inactive_logs` khi nó chưa tồn tại."
 
 Tom: "Ồ, được thôi, tất cả những gì tôi cần kiểm tra là dẫn xuất `StartupCommand` đó. Tôi có thể viết một bài kiểm tra `FitNesse` đơn giản cho điều đó."
+
+Tom viết lên bảng
+
+"Phần đầu tiên sẽ như thế này"
+
+`given the command LogFileDirectoryStartupCommand`
+`given that the old_inactive_logs directory does not exist`
+`when the command is executed`
+`then the old_inactive_logs directory should exist`
+`and it should be empty`
+
+"Tiếp theo sẽ như thế này"
+
+`given the command LogFileDirectoryStartupCommand`
+`given that the old_inactive_logs directory exists`
+`and that it contains a file named x`
+`When the command is executed`
+`Then the old_inactive_logs directory should still exist`
+`and it should still contain a file named x`
+
+Paula: "Đúng thế, nó sẽ đảm bảo được điều đó"
+
+Sam: "Chà, tất cả có thực sự cần thiết không?"
+
+Paula: "Sam, phần nào không đủ quan trọng?"
+
+Sam: "Ý tôi là có quá nhiều việc phải làm với các kiểm thử này"
+
+Tom: "Đúng vậy, nhưng không nhiều hơn việc làm kế hoạch kiểm thử thủ công. Và thực hiện lặp đi lặp lại kiểm thử thủ công còn nhiều việc hơn."
