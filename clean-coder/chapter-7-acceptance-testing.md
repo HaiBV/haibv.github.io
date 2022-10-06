@@ -210,22 +210,31 @@ Tom viết lên bảng
 
 "Phần đầu tiên sẽ như thế này"
 
-`given the command LogFileDirectoryStartupCommand`
-`given that the old_inactive_logs directory does not exist`
-`when the command is executed`
-`then the old_inactive_logs directory should exist`
-`and it should be empty`
+`xác định câu lệnh LogFileDirectoryStartupCommand`
+
+`xác định thư mục old_inactive_logs không tồn tại`
+
+`sau khi lệnh được chạy`
+
+`thư mục old_inactive_logs được khởi tạo`
+
+`và thư mục phải rỗng`
 
 "Tiếp theo sẽ như thế này"
 
-`given the command LogFileDirectoryStartupCommand`
-`given that the old_inactive_logs directory exists`
-`and that it contains a file named x`
-`When the command is executed`
-`Then the old_inactive_logs directory should still exist`
-`and it should still contain a file named x`
+`xác định câu lệnh LogFileDirectoryStartupCommand`
 
-Paula: "Đúng thế, nó sẽ đảm bảo được điều đó"
+`xác định thư mục old_inactive_logs tồn tại`
+
+`và nó chứa tệp tin x`
+
+`sau khi câu lệnh chạy`
+
+`thư mục old_inactive_logs vẫn tồn tại`
+
+`và nó vẫn chứa tập tin x`
+
+Paula: "Chính xác, nó sẽ đảm bảo được yêu cầu đưa ra"
 
 Sam: "Chà, tất cả có thực sự cần thiết không?"
 
@@ -234,3 +243,7 @@ Paula: "Sam, phần nào không đủ quan trọng?"
 Sam: "Ý tôi là có quá nhiều việc phải làm với các kiểm thử này"
 
 Tom: "Đúng vậy, nhưng không nhiều hơn việc làm kế hoạch kiểm thử thủ công. Và thực hiện lặp đi lặp lại kiểm thử thủ công còn nhiều việc hơn."
+
+### Giao tiếp thông suốt
+
+Mục đích của kiểm thử chấp nhận là thông suốt, rõ ràng và chính xác. Bằng cách đồng ý với họ, các lập trình viên, khách hàng và tester đều nắm được toàn bộ hành vi hệ thống. Để đạt được sự rõ ràng này là trách nhiệm của tất cả các bên. Các lập trình viên chuyên nghiệp sẽ nhận lấy trách nhiệm làm việc với các khách hàng và tester để đảm bảo rằng tất cả các bên đều biết những gì sắp được xây dựng.
