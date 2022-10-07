@@ -247,3 +247,9 @@ Tom: "Đúng vậy, nhưng không nhiều hơn việc làm kế hoạch kiểm t
 ### Giao tiếp thông suốt
 
 Mục đích của kiểm thử chấp nhận là thông suốt, rõ ràng và chính xác. Bằng cách đồng ý với họ, các lập trình viên, khách hàng và tester đều nắm được toàn bộ hành vi hệ thống. Để đạt được sự rõ ràng này là trách nhiệm của tất cả các bên. Các lập trình viên chuyên nghiệp sẽ nhận lấy trách nhiệm làm việc với các khách hàng và tester để đảm bảo rằng tất cả các bên đều biết những gì sắp được xây dựng.
+
+### Tự động hóa
+
+Tất cả các kiểm thử chấp nhận phải _luôn_ được tự động hóa. Có thể có kiểm thử thủ công ở đâu đó trong khi phát triển phần mềm, nhưng những loại kiểm thử này không bao giờ nên là thủ công. Lý do rất đơn giản: chi phí.
+
+Trong hình 7-1. Bàn tay mà bạn thấy trong ảnh thuộc về quản lý đội QA của một công ty Internet lớn. Tài liệu anh ta đang giữ là _mục lục_ cho kế hoạch kiểm thử _thủ công_. Anh ta có một đội quân của những người kiểm thử thủ công ở các địa điểm khác nhau để thực hiện kế hoạch này sáu tuần một lần. Chi phí cho mỗi lần khoảng hơn một triệu đô la. Anh ấy đang giữ nó cho tôi khi vừa trở về sau một cuộc họp, ở đó quản lý của anh ấy đã nói rằng họ cần cắt giảm ngân sách cho việc kiểm thử xuống 50%. Câu hỏi của anh ấy đối với tôi là, "Tôi sẽ bỏ đi 50% kiểm thử nào trong số này?"
