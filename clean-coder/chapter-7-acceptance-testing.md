@@ -253,3 +253,7 @@ Mục đích của kiểm thử chấp nhận là thông suốt, rõ ràng và c
 Tất cả các kiểm thử chấp nhận phải _luôn_ được tự động hóa. Có thể có kiểm thử thủ công ở đâu đó trong khi phát triển phần mềm, nhưng những loại kiểm thử này không bao giờ nên là thủ công. Lý do rất đơn giản: chi phí.
 
 Trong hình 7-1. Bàn tay mà bạn thấy trong ảnh thuộc về quản lý đội QA của một công ty Internet lớn. Tài liệu anh ta đang giữ là _mục lục_ cho kế hoạch kiểm thử _thủ công_. Anh ta có một đội quân của những người kiểm thử thủ công ở các địa điểm khác nhau để thực hiện kế hoạch này sáu tuần một lần. Chi phí cho mỗi lần khoảng hơn một triệu đô la. Anh ấy đang giữ nó cho tôi khi vừa trở về sau một cuộc họp, ở đó quản lý của anh ấy đã nói rằng họ cần cắt giảm ngân sách cho việc kiểm thử xuống 50%. Câu hỏi của anh ấy đối với tôi là, "Tôi sẽ bỏ đi 50% kiểm thử nào trong số này?"
+
+Nói hơi thô thiển thì đây hẳn là một thảm họa. Chi phí cho kiểm thử thủ công lớn đến mức họ đã quyết định hy sinh nó và chấp nhận với thực tế rằng họ sẽ không biết một nửa sản phẩm của mình có hoạt động hay không!
+
+Các lập trình viên chuyên nghiệp không để xảy ra tình trạng này. Chi phí cho việc tự động hóa các bài kiểm thử chấp nhận là quá nhỏ so với chi phí thực hiện kiểm thử thủ công nên việc viết các kịch bản cho con người thực hiện hoàn toàn không có có lợi về mặt kinh tế. Các lập trình viên chuyên nghiệp chịu trách nhiệm về phần của họ trong việc đảm bảo rằng các kiểm thử chấp nhận được tự động hóa.
