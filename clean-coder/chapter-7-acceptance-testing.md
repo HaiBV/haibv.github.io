@@ -263,3 +263,9 @@ Có nhiều công cụ mã nguồn mở và thương mại tạo điều kiện 
 ### Công việc bổ sung
 
 Quan điểm của Sam về khối lượng công việc là điều dễ hiểu. Có vẻ sẽ cần rất nhiều việc thêm vào để viết các kiểm thử chấp nhận như vậy. Nhưng với Hình 7-1, chúng ta có thể thấy rằng nó không thực sự là thêm việc chút nào. Viết các kiểm thử này chỉ đơn giản là công việc làm rõ hệ thống. Làm rõ với mức độ chi tiết này là cách duy nhất mà chúng tôi, với tư cách là lập trình viên, có thể biết “đã hoàn thành” nghĩa là gì. Làm rõ ở mức độ chi tiết này là cách duy nhất mà khách hàng có thể đảm bảo rằng hệ thống mà họ đang trả tiền thực sự làm được những gì họ cần. Và làm rõ ở mức độ chi tiết này là cách duy nhất để tự động hóa thành công các kiểm thử. Vì vậy, đừng xem những kiểm thử này là thêm việc. Hãy xem chúng như những người tiết kiệm thời gian và tiền bạc. Những bài kiểm tra này sẽ ngăn bạn phát triển sai hệ thống và cho phép bạn _biết_ khi nào bạn hoàn thành.
+
+### Ai viết kiểm thử chấp nhận, và khi nào?
+
+Trong trường hợp lý tưởng, khách hàng và QA sẽ hợp tác để viết ra các kiểm thử này và lập trình viên sẽ xem xét chúng để đảm bảo tính nhất quán. Trong thực tế, khách hàng hiếm khi có thời gian hoặc khuynh hướng đi sâu vào mức độ chi tiết cần thiết. Vì vậy, họ thường giao trách nhiệm cho BA, QA hoặc thậm chí là lập trình viên. Nếu lập trình viên phải viết các kiểm thử này, thì hãy chắc chắn rằng lập trình viên viết kiểm thử sẽ không trực tiếp triển khai chính tính năng đó.
+
+Thông thường, BA sẽ xác định các "happy path" của kiểm thử, bởi vì các kiểm thử đó mô tả các tính năng có giá trị kinh doanh. QA thường viết các kiểm thử "unhappy path", các điều kiện biên, ngoại lệ và trường hợp góc. Điều này là do công việc của QA là giúp suy nghĩ về những gì có thể xảy ra.
