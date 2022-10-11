@@ -268,4 +268,9 @@ Quan điểm của Sam về khối lượng công việc là điều dễ hiểu
 
 Trong trường hợp lý tưởng, khách hàng và QA sẽ hợp tác để viết ra các kiểm thử này và lập trình viên sẽ xem xét chúng để đảm bảo tính nhất quán. Trong thực tế, khách hàng hiếm khi có thời gian hoặc khuynh hướng đi sâu vào mức độ chi tiết cần thiết. Vì vậy, họ thường giao trách nhiệm cho BA, QA hoặc thậm chí là lập trình viên. Nếu lập trình viên phải viết các kiểm thử này, thì hãy chắc chắn rằng lập trình viên viết kiểm thử sẽ không trực tiếp triển khai chính tính năng đó.
 
-Thông thường, BA sẽ xác định các "happy path" của kiểm thử, bởi vì các kiểm thử đó mô tả các tính năng có giá trị kinh doanh. QA thường viết các kiểm thử "unhappy path", các điều kiện biên, ngoại lệ và trường hợp góc. Điều này là do công việc của QA là giúp suy nghĩ về những gì có thể xảy ra.
+Thông thường, BA sẽ xác định các "happy path" của kiểm thử, bởi vì các kiểm thử đó mô tả các tính năng có giá trị kinh doanh. QA thường viết các kiểm thử "unhappy path", các điều kiện biên, ngoại lệ và trường hợp phức tạp. Điều này là do công việc của QA là lường trước những sai sót có thể xảy ra.
+
+Theo nguyên tắc "chính xác muộn", các kiểm thử chấp nhận phải được viết càng muộn càng tốt, thường là vài ngày trước khi tính năng được triển khai. Trong các dự án theo mô hình Agile, các kiểm thử được viết _sau khi_ các tính năng đã được chọn cho Phân đoạn hoặc Sprint tiếp theo.
+
+Một vài kiểm thử chấp nhận đầu tiên sẽ sẵn sàng vào ngày đầu tiên của Phân đoạn. Chúng sẽ được viết liên tục, mỗi ngày một ít và tất cả sẽ sẵn sàng khi đến giai đoạn giữa của Phân đoạn. Nếu tất cả các kiểm thử chấp nhận chưa sẵn sàng vào thời điểm đó, thì phải cần thêm lập trình viên tham gia để hoàn thành chúng. Nếu điều này xảy ra thường xuyên, thì nên thêm nhiều BA và / hoặc QA vào nhóm.
+
