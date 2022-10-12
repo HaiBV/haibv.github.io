@@ -274,3 +274,22 @@ Theo nguyên tắc "chính xác muộn", các kiểm thử chấp nhận phải 
 
 Một vài kiểm thử chấp nhận đầu tiên sẽ sẵn sàng vào ngày đầu tiên của Phân đoạn. Chúng sẽ được viết liên tục, mỗi ngày một ít và tất cả sẽ sẵn sàng khi đến giai đoạn giữa của Phân đoạn. Nếu tất cả các kiểm thử chấp nhận chưa sẵn sàng vào thời điểm đó, thì phải cần thêm lập trình viên tham gia để hoàn thành chúng. Nếu điều này xảy ra thường xuyên, thì nên thêm nhiều BA và / hoặc QA vào nhóm.
 
+### Vai trò của lập trình viên
+
+Công việc triển khai trên một tính năng bắt đầu khi các kiểm thử chấp nhận cho tính năng đó đã sẵn sàng. Các lập trình viên chạy các kiểm thử chấp nhận cho tính năng mới và xem chúng thất bại như thế nào. Sau đó, họ làm việc để kết nối kiểm thử chấp nhận với hệ thống và sau đó bắt đầu vượt qua chúng bằng cách triển khai tính năng mong muốn.
+
+Paula: "Peter, giúp tôi một chút được không?"
+
+Peter: "Chắc rồi, Paula, có chuyện gì vậy?"
+
+Paula: "Đây là một kiểm thử chấp nhận. Nó đang thất bại"
+
+`xác định câu lệnh LogFileDirectoryStartupCommand`
+
+`xác định thư mục old_inactive_logs không tồn tại`
+
+`sau khi lệnh được chạy`
+
+`thư mục old_inactive_logs được khởi tạo`
+
+`và thư mục phải rỗng`
