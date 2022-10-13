@@ -293,3 +293,17 @@ Paula: "Đây là một kiểm thử chấp nhận. Nó đang thất bại"
 `thư mục old_inactive_logs được khởi tạo`
 
 `và thư mục phải rỗng`
+
+Peter: "Đúng vậy, tất cả đều đang đỏ. Chưa có gì được thực hiện. Hãy để tôi viết tác vụ đầu tiên."
+
+`|scenario|given the command _|cmd|`
+
+`|create command|@cmd|`
+
+Paula: "Chúng ta đã có lệnh thực thi `createCommand` chưa?
+
+Peter: "Rồi, nó ở trong `CommandUtilitiesFixture` tôi mới viết tuần trước"
+
+Paula: "OK, chạy lại kiểm thử nào"
+
+Peter: (chạy kiểm thử) "Tuyệt, dòng đầu tiên đã chuyển xanh, hãy tiếp tục với dòng tiếp theo"
