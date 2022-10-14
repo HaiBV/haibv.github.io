@@ -307,3 +307,9 @@ Peter: "Rồi, nó ở trong `CommandUtilitiesFixture` tôi mới viết tuần 
 Paula: "OK, chạy lại kiểm thử nào"
 
 Peter: (chạy kiểm thử) "Tuyệt, dòng đầu tiên đã chuyển xanh, hãy tiếp tục với dòng tiếp theo"
+
+Đừng bận tâm quá nhiều về `Scenarios` và `Fixtures`. Đó chỉ là một tác vụ bạn phải viết để kết nối các kiểm thử với hệ thống đang được kiểm tra.
+
+Nói tóm lại thì tất cả các công cụ đều cung cấp một số cách để sử dụng đối sánh mẫu có thể nhận biết và phân tích cú pháp các câu lệnh của kiểm thử, sau đó gọi các hàm cung cấp dữ liệu trong kiểm thử vào hệ thống đang được kiểm tra. Công sức bỏ ra khá nhỏ, `Scenarios` và `Fixtures` có thể được sử dụng lại qua nhiều kiểm thử khác nhau.
+
+Điều mấu chốt của tất cả những điều này là lập trình viên có nhiệm vụ phải kết nối các kiểm thử chấp nhận với hệ thống và sau đó vượt qua chúng.
