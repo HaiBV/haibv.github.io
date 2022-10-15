@@ -313,3 +313,9 @@ Peter: (chạy kiểm thử) "Tuyệt, dòng đầu tiên đã chuyển xanh, h�
 Nói tóm lại thì tất cả các công cụ đều cung cấp một số cách để sử dụng đối sánh mẫu có thể nhận biết và phân tích cú pháp các câu lệnh của kiểm thử, sau đó gọi các hàm cung cấp dữ liệu trong kiểm thử vào hệ thống đang được kiểm tra. Công sức bỏ ra khá nhỏ, `Scenarios` và `Fixtures` có thể được sử dụng lại qua nhiều kiểm thử khác nhau.
 
 Điều mấu chốt của tất cả những điều này là lập trình viên có nhiệm vụ phải kết nối các kiểm thử chấp nhận với hệ thống và sau đó vượt qua chúng.
+
+### Thương lượng kiểm thử và tích cực thụ động (Passive-Aggression)
+
+Người viết kiểm thử là con người nên hoàn toàn có thể mắc sai lầm. Đôi khi các kiểm thử không có nhiều ý nghĩa khi bạn bắt đầu phát triển chức năng. Chúng có thể quá phức tạp. Hoặc có thể kỳ lạ. Chúng có thể chứa những giả định ngớ ngẩn. Thậm chí có thể sai. Điều này rất khó chịu nếu bạn là lập trình viên phải vượt qua kiểm thử đó.
+
+Là một lập trình viên chuyên nghiệp, nhiệm vụ của bạn là thương lượng với người viết kiểm thử để có những kiểm thử tốt hơn. Điều bạn _không bao giờ_ nên làm là chọn phương án tích cực-thụ động và tự nói với bản thân, "Chà, đó là những gì mà kiểm thử muốn, vậy đó là những điều tôi sẽ làm".
