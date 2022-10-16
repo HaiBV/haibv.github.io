@@ -319,3 +319,25 @@ Nói tóm lại thì tất cả các công cụ đều cung cấp một số cá
 Người viết kiểm thử là con người nên hoàn toàn có thể mắc sai lầm. Đôi khi các kiểm thử không có nhiều ý nghĩa khi bạn bắt đầu phát triển chức năng. Chúng có thể quá phức tạp. Hoặc có thể kỳ lạ. Chúng có thể chứa những giả định ngớ ngẩn. Thậm chí có thể sai. Điều này rất khó chịu nếu bạn là lập trình viên phải vượt qua kiểm thử đó.
 
 Là một lập trình viên chuyên nghiệp, nhiệm vụ của bạn là thương lượng với người viết kiểm thử để có những kiểm thử tốt hơn. Điều bạn _không bao giờ_ nên làm là chọn phương án tích cực-thụ động và tự nói với bản thân, "Chà, đó là những gì mà kiểm thử muốn, vậy đó là những điều tôi sẽ làm".
+
+Hãy nhớ rằng, với tư cách là một chuyên gia, nhiệm vụ của bạn là giúp nhóm của bạn tạo ra phần mềm tốt nhất mà họ có thể. Điều đó có nghĩa là mọi người cần đề phòng những sai sót và sơ suất, đồng thời làm việc cùng nhau để sửa chúng.
+
+Paula: "Tom, kiểm thử này không đúng lắm"
+
+`đảm bảo quá trình xử lý hoàn thành trong 2 giây`
+
+Tom: "Nó có vẻ ổn với tôi. Yêu cầu của chúng tôi là người dùng không đợi quá 2 giây. Vấn đề ở đây là gì?"
+
+Paula: "Vấn đề là chúng ta chỉ có thể đảm bảo điều đó một cách tương đối"
+
+Tom: "Hả? Nghe lạ vậy. Yêu cầu là 2 giây"
+
+Paula: "Phải, và chúng ta có thể đạt được 99.5%"
+
+Tom: "Paula, đó không phải yêu cầu"
+
+Paula: "Nhưng nó là thực tế. Tôi không thể đảm bảo được tất cả các trường hợp."
+
+Tom: "Sam sẽ không đồng ý đâu"
+
+Paula: "Không, thực ra tôi đã nói với anh ta về việc này. Sam đồng ý miễn là trải nghiệp người dùng thông thường từ 2 giây trở xuống"
