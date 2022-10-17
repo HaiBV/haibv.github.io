@@ -341,3 +341,29 @@ Paula: "Nhưng nó là thực tế. Tôi không thể đảm bảo được tấ
 Tom: "Sam sẽ không đồng ý đâu"
 
 Paula: "Không, thực ra tôi đã nói với anh ta về việc này. Sam đồng ý miễn là trải nghiệp người dùng thông thường từ 2 giây trở xuống"
+
+Tom: "OK, vậy làm cách nào với kiểm thử này? Không thể xác định quá trình _thường_ kết thúc sau 2 giây"
+
+Paula: "Có thể bằng cách thống kế"
+
+Tom: "Ý bạn là tôi phải chạy 1000 lần và đảm bảo rằng không quá năm lần dài hơn hai giây? Nghe khá vô lý"
+
+Paula: "Không, như thế này thì sao?"
+
+`thực hiện 15 tác vụ và cộng dồn thời gian.`
+
+`đảm bảo rằng điểm số Z trong 2 giây ít nhất là 2.57`
+
+Tom: "Whoa, điểm số Z là gì?"
+
+Paula: "Chỉ số thống kê. Đây là ví dụ"
+
+`thực hiện 15 tác vụ và cộng dồn thời gian.`
+
+`đảm bảo 99.5% lượt chạy mất ít hơn 2 giây`
+
+Tom: "Được, dễ đọc hơn rồi, đại loại vậy, nhưng tôi có thể tin tưởng vào bài toàn đằng sau không?"
+
+Paula: "Tôi sẽ đảm bảo hiển thị tất cả các phép tính trung gian trong báo cáo kiểm thử để anh có thể kiểm tra phép toán nếu anh có bất kỳ nghi ngờ nào"
+
+Tom: "OK, hoàn toàn đồng ý."
