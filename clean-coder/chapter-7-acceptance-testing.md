@@ -367,3 +367,9 @@ Tom: "Được, dễ đọc hơn rồi, đại loại vậy, nhưng tôi có th�
 Paula: "Tôi sẽ đảm bảo hiển thị tất cả các phép tính trung gian trong báo cáo kiểm thử để anh có thể kiểm tra phép toán nếu anh có bất kỳ nghi ngờ nào"
 
 Tom: "OK, hoàn toàn đồng ý."
+
+### Kiểm thử chấp nhận và Kiểm thử riêng lẻ
+
+Kiểm thử chấp nhận không phải là kiểm thử _riêng lẻ_. Kiểm thử riêng lẻ viết _bởi_ lập trình viên _cho_ lập trình viên. Chúng là các tài liệu thiết kế chính thức mô tả cấu trúc và hành vi cấp thấp nhất của code. Đối tượng là các lập trình viên, không phải khách hàng.
+
+Các kiểm thử chấp nhận được khách hàng viết cho khách hàng (ngay cả khi bạn, nhà phát triển, kết thúc việc viết chúng). Chúng là các tài liệu yêu cầu chính thức chỉ rõ cách hệ thống sẽ hoạt động theo quan điểm của khách hàng. Đối tượng là các khách hàng và các lập trình viên.
