@@ -373,3 +373,9 @@ Tom: "OK, hoàn toàn đồng ý."
 Kiểm thử chấp nhận không phải là kiểm thử _riêng lẻ_. Kiểm thử riêng lẻ viết _bởi_ lập trình viên _cho_ lập trình viên. Chúng là các tài liệu thiết kế chính thức mô tả cấu trúc và hành vi cấp thấp nhất của code. Đối tượng là các lập trình viên, không phải khách hàng.
 
 Các kiểm thử chấp nhận được khách hàng viết cho khách hàng (ngay cả khi bạn, nhà phát triển, kết thúc việc viết chúng). Chúng là các tài liệu yêu cầu chính thức chỉ rõ cách hệ thống sẽ hoạt động theo quan điểm của khách hàng. Đối tượng là các khách hàng và các lập trình viên.
+
+Bạn có thể bị hấp dẫn khi cố gắng loại bỏ sự "thêm việc" bằng cách giả định rằng hai loại kiểm thử là dư thừa. Mặc dù đúng là các kiểm thử đơn vị và kiểm thử chấp nhận thường kiểm tra những thứ giống nhau, nhưng chúng không hề thừa chút nào.
+
+Đầu tiên, mặc dù chúng có thể kiểm tra những thứ giống nhau, nhưng chúng làm như vậy thông qua các cơ chế và cách làm khác nhau. Các kiểm thử đơn vị đào sâu vào phần lõi của hệ thống, thực hiện các lệnh gọi đến các phương thức trong các lớp cụ thể. Kiểm thử chấp nhận kiểm tra hệ thống xa hơn thế, ở cấp độ API hoặc thậm chí là cấp độ giao diện người dùng. Vì vậy, các cách thực thi của các kiểm thử này rất khác nhau.
+
+Nhưng lý do thực sự mà các kiểm thử này không thừa là chức năng chính của chúng _không phải là kiểm tra_. Thực tế, chúng là kiểm thử ngẫu nhiên. Kiểm thử đơn vị và kiểm thử chấp nhận có tác dụng quan trọng hơn là làm tài liệu, sau mới đến kiểm tra. Mục đích chính của chúng là ghi lại thiết kế, cấu trúc và hành vi của hệ thống một cách chính thống. Thực tế là chúng tự động xác minh thiết kế, cấu trúc và hành vi mà chúng chỉ định là cực kỳ hữu ích, nhưng đặc điểm kỹ thuật mới là mục đích thực sự của chúng.
