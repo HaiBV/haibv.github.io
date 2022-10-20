@@ -379,3 +379,11 @@ Bạn có thể bị hấp dẫn khi cố gắng loại bỏ sự "thêm việc"
 Đầu tiên, mặc dù chúng có thể kiểm tra những thứ giống nhau, nhưng chúng làm như vậy thông qua các cơ chế và cách làm khác nhau. Các kiểm thử đơn vị đào sâu vào phần lõi của hệ thống, thực hiện các lệnh gọi đến các phương thức trong các lớp cụ thể. Kiểm thử chấp nhận kiểm tra hệ thống xa hơn thế, ở cấp độ API hoặc thậm chí là cấp độ giao diện người dùng. Vì vậy, các cách thực thi của các kiểm thử này rất khác nhau.
 
 Nhưng lý do thực sự mà các kiểm thử này không thừa là chức năng chính của chúng _không phải là kiểm tra_. Thực tế, chúng là kiểm thử ngẫu nhiên. Kiểm thử đơn vị và kiểm thử chấp nhận có tác dụng quan trọng hơn là làm tài liệu, sau mới đến kiểm tra. Mục đích chính của chúng là ghi lại thiết kế, cấu trúc và hành vi của hệ thống một cách chính thống. Thực tế là chúng tự động xác minh thiết kế, cấu trúc và hành vi mà chúng chỉ định là cực kỳ hữu ích, nhưng đặc điểm kỹ thuật mới là mục đích thực sự của chúng.
+
+### Giao diện người dùng (GUIs) và những biến thể khác
+
+Thật khó để xác định GUI trước. Có thể làm được, nhưng hiếm khi được làm tốt. Nguyên nhân là thẩm mỹ mang tính chủ quan nên dễ thay đổi. Mọi người muốn _thử_ với GUI. Họ muốn xoa bóp và thao túng chúng. Họ muốn thử các phông chữ, màu sắc, bố cục trang và quy trình làm việc khác nhau. GUI liên tục thay đổi.
+
+Điều này làm cho việc viết kiểm thử chấp nhận cho GUI trở nên khó khăn. Bí quyết là thiết kế hệ thống để bạn có thể coi GUI như thể nó là một API hơn là một tập hợp các nút, thanh trượt, lưới và menu. Điều này nghe có vẻ lạ, nhưng đó thực sự là một thiết kế tốt.
+
+Có một nguyên tắc thiết kế được gọi là Nguyên tắc Trách nhiệm Đơn lẻ (Single Responsibility Principle - SRP). Nguyên tắc này nói rằng bạn nên tách những thứ thay đổi vì lý do khác nhau và nhóm những thứ thay đổi vì lý do giống nhau lại với nhau. GUI cũng không ngoại lệ.
