@@ -391,3 +391,9 @@ Có một nguyên tắc thiết kế được gọi là Nguyên tắc Trách nhi
 Bố cục, định dạng và quy trình làm việc của GUI sẽ thay đổi vì lý do thẩm mỹ và hiệu quả, nhưng khả năng cơ bản của GUI sẽ vẫn như cũ bất chấp những thay đổi này. Do đó, khi viết kiểm thử chấp nhận cho GUI, bạn cần tận dụng lợi thế của các phần tóm tắt cơ bản không thay đổi thường xuyên.
 
 Ví dụ, có thể có nhiều nút trên một trang. Thay vì tạo các kiểm thử ấn vào các nút đó dựa trên vị trí của chúng trên trang, bạn có thể ấn vào chúng dựa trên tên của chúng. Tốt hơn, có thể chúng đều có một ID duy nhất mà bạn có thể sử dụng. Sẽ tốt hơn nhiều nếu bạn viết kiểmthử chọn nút có ID là `ok_button` hơn là chọn nút ở cột 3 hàng 4 trong lưới điều khiển.
+
+### Kiểm thử qua giao diện phù hợp
+
+Tốt hơn vẫn là viết kiểm thử gọi các tính năng của hệ thống cơ bản thông qua một API thực thay vì thông qua GUI. API này phải là cùng một API được GUI sử dụng. Điều này không có gì mới. Các chuyên gia thiết kế đã nói với chúng tôi trong nhiều thập kỷ rằng cần tách GUI ra khỏi các quy tắc.
+
+Kiểm thử thông qua GUI luôn có vấn đề trừ khi bạn _chỉ_ đang kiểm tra GUI. Nguyên nhân là do GUI có thể sẽ thay đổi, khiến các kiểm thử trở nên rất mong manh. Khi mỗi thay đổi về GUI phá vỡ khoảng 1000 kiểm thử, bạn sẽ phải lựa chọn giữa viết lại kiểm thử hoặc ngừng thay đổi GUI. Cả hai đều không phải là lựa chọn tốt. Vì vậy, hãy viết các kiểm thử quy tắc kinh doanh của bạn đi qua một API ngay bên dưới GUI.
