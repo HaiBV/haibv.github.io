@@ -401,3 +401,13 @@ Kiểm thử thông qua GUI luôn có vấn đề trừ khi bạn _chỉ_ đang 
 Một số kiểm thử chấp nhận chỉ định hành vi của chính GUI. Các kiểm thử này phải thông qua GUI. Tuy nhiên, các kiểm thử này không kiểm tra các quy tắc nghiệp vụ và do đó không yêu cầu các quy tắc nghiệp vụ phải được kết nối với GUI. Do đó, bạn nên tách GUI và các quy tắc nghiệp vụ ra và thay thế các quy tắc nghiệp vụ bằng các quy tắc sơ khai trong khi kiểm thử GUI.
 
 Giữ các thử nghiệm GUI ít nhất có thể. Chúng rất mỏng manh, bởi vì GUI dễ bay hơi. Bạn càng có nhiều thử nghiệm GUI thì khả năng bạn giữ chúng càng ít.
+
+### CI (Continuous Integration)
+
+Đảm bảo rằng tất cả kiểm thử đơn vị và kiểm thử chấp nhận được chạy nhiều lần mỗi ngày trong một hệ thống CI. Hệ thống này phải được kích hoạt bởi hệ thống kiểm soát source code của bạn. Mỗi khi ai đó commit một mô-đun, hệ thống CI sẽ khởi động một bản dựng, và sau đó chạy tất cả các kiểm thử trong hệ thống. Kết quả của lần chạy đó phải được gửi qua email cho mọi người trong nhóm.
+
+#### Dừng chạy
+
+Điều rất quan trọng là giữ cho các kiểm thử CI chạy mọi lúc. Chúng không bao giờ nên thất bại. Nếu chúng thất bại, thì cả nhóm nên dừng việc họ đang làm và tập trung vào việc vượt qua các bài kiểm tra bị hỏng một lần nữa. Một bản dựng bị hỏng trong hệ thống CI nên được xem như một trường hợp khẩn cấp, một sự kiện “dừng chạy ép”.
+
+Tôi đã tham khảo ý kiến cho các team không thực hiện nghiêm túc các kiểm thử hỏng. Họ "quá bận" để sửa các kiểm thử bị hỏng nên họ đã đặt chúng sang một bên, hứa sẽ sửa chúng sau. Trong một trường hợp, nhóm thực sự đã đưa các kiểm thử bị hỏng ra khỏi bản dựng vì thật bất tiện khi thấy chúng thất bại. Sau đó, sau khi phát hành cho khách hàng, họ nhận ra rằng họ đã quên đưa những kiểm thử đó trở lại bản dựng. Họ biết được điều này bởi vì một khách hàng tức giận gọi điện cho họ và báo cáo lỗi.
