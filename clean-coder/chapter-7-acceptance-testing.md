@@ -411,3 +411,9 @@ Giữ các thử nghiệm GUI ít nhất có thể. Chúng rất mỏng manh, b�
 Điều rất quan trọng là giữ cho các kiểm thử CI chạy mọi lúc. Chúng không bao giờ nên thất bại. Nếu chúng thất bại, thì cả nhóm nên dừng việc họ đang làm và tập trung vào việc vượt qua các bài kiểm tra bị hỏng một lần nữa. Một bản dựng bị hỏng trong hệ thống CI nên được xem như một trường hợp khẩn cấp, một sự kiện “dừng chạy ép”.
 
 Tôi đã tham khảo ý kiến cho các team không thực hiện nghiêm túc các kiểm thử hỏng. Họ "quá bận" để sửa các kiểm thử bị hỏng nên họ đã đặt chúng sang một bên, hứa sẽ sửa chúng sau. Trong một trường hợp, nhóm thực sự đã đưa các kiểm thử bị hỏng ra khỏi bản dựng vì thật bất tiện khi thấy chúng thất bại. Sau đó, sau khi phát hành cho khách hàng, họ nhận ra rằng họ đã quên đưa những kiểm thử đó trở lại bản dựng. Họ biết được điều này bởi vì một khách hàng tức giận gọi điện cho họ và báo cáo lỗi.
+
+## Kết luận
+
+Giao tiếp về chi tiết là khó. Điều này đặc biệt đúng đối với lập trình viên và bên liên quan đang trao đổi về chi tiết của một ứng dụng. Quá dễ dàng để mỗi bên xua tay và _giả định_ rằng bên kia đã hiểu. Thông thường, cả hai bên đều đồng ý rằng họ hiểu và rời đi với những ý kiến hoàn toàn khác nhau.
+
+Cách duy nhất tôi biết để loại bỏ lỗi giao tiếp giữa lập trình viên và bên liên quan là viết kiểm thử chấp nhận tự động. Những kiểm thử phải chính thống như cách chúng thực hiện. Chúng phải hoàn toàn rõ ràng và đồng bộ với ứng dụng. Chúng là tài liệu yêu cầu hoàn hảo.
