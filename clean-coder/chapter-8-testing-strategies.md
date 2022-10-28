@@ -13,3 +13,15 @@ Năm 1989, tôi đang làm việc tại Rational với bản phát hành đầu 
 Tôi đã nói điều này rồi và tôi sẽ nhắc lại. Mặc dù thực tế công ty của bạn có thể có một nhóm QA riêng để kiểm tra phần mềm, nhưng để QA không tìm thấy gì sai phải là mục tiêu của nhóm phát triển.
 
 Tất nhiên, mục tiêu này thường không có khả năng đạt được liên tục. Rốt cuộc, khi một nhóm người thông minh vô cùng quyết tâm tìm ra tất cả các nếp nhăn và khuyết điểm trong một sản phẩm, họ có khả năng sẽ tìm thấy một số. Tuy nhiên, mỗi khi QA tìm thấy thứ gì đó, nhóm phát triển sẽ phản ứng kinh hoàng. Họ nên tự hỏi bản thân xem nó đã xảy ra như thế nào và thực hiện các bước để ngăn chặn nó trong tương lai.
+
+### QA là một phần của team
+
+Chương trước có thể cho thấy QA và lập trình viên có mâu thuẫn với nhau, mối quan hệ của họ dường như đối nghịch. Tôi không có ý đó. Thay vào đó, QA và lập trình viên nên làm việc cùng nhau để đảm bảo chất lượng của hệ thống. Vai trò tốt nhất đối của QA trong nhóm là người chỉ định và đặc tả hệ thống.
+
+#### QA là người chỉ định
+
+Vai trò của QA là làm việc với khách hàng để tạo ra các kiểm thử chấp nhận tự động, thành tài liệu yêu cầu và đặc điểm kỹ thuật thực sự cho hệ thống. Qua mỗi iteration họ thu thập yêu cầu từ khách hàng và chuyển chúng thành các kiểm thử, mô tả cho các lập trình viên cách hệ thống sẽ hoạt động (Xem Chương 7, “Kiểm thử chấp nhận”). Nói chung, khách hàng viết các kiểm thử happy path, trong khi QA viết các kiểm thử phức tạp, điều kiện biên, và unhappy path.
+
+#### QA là người đặc tả
+
+Vai trò khác của QA là sử dụng kỷ luật của kiểm thử khám phá để mô tả hành vi thực sự của hệ thống đang chạy và báo cáo lại hành vi đó cho lập trình viên và khách hàng. Trong vai trò này, QA _không_ giải thích các yêu cầu. Thay vào đó, họ đang xác định các hành vi thực tế của hệ thống.
