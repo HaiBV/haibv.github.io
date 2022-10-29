@@ -25,3 +25,8 @@ Vai trò của QA là làm việc với khách hàng để tạo ra các kiểm 
 #### QA là người đặc tả
 
 Vai trò khác của QA là sử dụng kỷ luật của kiểm thử khám phá để mô tả hành vi thực sự của hệ thống đang chạy và báo cáo lại hành vi đó cho lập trình viên và khách hàng. Trong vai trò này, QA _không_ giải thích các yêu cầu. Thay vào đó, họ đang xác định các hành vi thực tế của hệ thống.
+
+## Tháp kiểm thử tự động
+
+Các lập trình viên chuyên nghiệp sử dụng TDD để tạo kiểm thử đơn vị. Các nhóm phát triển chuyên nghiệp sử dụng các kiểm thử chấp nhận để xác định rõ hệ thống và CI để ngăn chặn lặp lại lỗi. Nhưng những kiểm thử này chỉ là một phần của câu chuyện. Ngoài kiểm thử đơn vị và kiểm thử chấp nhận, chúng ta cũng cần các bài kiểm thử cấp cao hơn để đảm bảo rằng QA sẽ không tìm lỗi nào. Hình 8-1 cho thấy Kim tự tháp kiểm thử tự động (Test Automation Pyramid), mô tả về các loại kiểm thử mà một tổ chức phát triển chuyên nghiệp cần.
+
