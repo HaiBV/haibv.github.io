@@ -30,3 +30,8 @@ Vai trò khác của QA là sử dụng kỷ luật của kiểm thử khám ph�
 
 Các lập trình viên chuyên nghiệp sử dụng TDD để tạo kiểm thử đơn vị. Các nhóm phát triển chuyên nghiệp sử dụng các kiểm thử chấp nhận để xác định rõ hệ thống và CI để ngăn chặn lặp lại lỗi. Nhưng những kiểm thử này chỉ là một phần của câu chuyện. Ngoài kiểm thử đơn vị và kiểm thử chấp nhận, chúng ta cũng cần các bài kiểm thử cấp cao hơn để đảm bảo rằng QA sẽ không tìm lỗi nào. Hình 8-1 cho thấy Kim tự tháp kiểm thử tự động (Test Automation Pyramid), mô tả về các loại kiểm thử mà một tổ chức phát triển chuyên nghiệp cần.
 
+### Unit Tests
+
+Ở tầng dưới cùng của kim tự tháp là unit test. Các kiểm thử này được viết bởi các lập trình viên, dành cho các lập trình viên, bằng ngôn ngữ lập trình của hệ thống. Mục đích của các kiểm thử này là xác định rõ hệ thống ở mức thấp nhất. Các lập trình viên viết các kiểm thử này trước khi viết code sản phẩm như một cách để xác định rõ những gì họ sắp viết. Chúng được thực thi như một phần của CI để đảm bảo rằng ý định của lập trình viên được duy trì.
+
+Trong thực tế, unit test có mức độ bao phủ càng gần 100% càng tốt. Nhìn chung cần lớn hơn 90. Và nó phải _thực sự_ phủ thay vì chỉ vượt qua kiểm thử sai của code mà không xác nhận hành vi của nó.
