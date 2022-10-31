@@ -35,3 +35,9 @@ Các lập trình viên chuyên nghiệp sử dụng TDD để tạo kiểm th�
 Ở tầng dưới cùng của kim tự tháp là unit test. Các kiểm thử này được viết bởi các lập trình viên, dành cho các lập trình viên, bằng ngôn ngữ lập trình của hệ thống. Mục đích của các kiểm thử này là xác định rõ hệ thống ở mức thấp nhất. Các lập trình viên viết các kiểm thử này trước khi viết code sản phẩm như một cách để xác định rõ những gì họ sắp viết. Chúng được thực thi như một phần của CI để đảm bảo rằng ý định của lập trình viên được duy trì.
 
 Trong thực tế, unit test có mức độ bao phủ càng gần 100% càng tốt. Nhìn chung cần lớn hơn 90. Và nó phải _thực sự_ phủ thay vì chỉ vượt qua kiểm thử sai của code mà không xác nhận hành vi của nó.
+
+### Kiểm thử thành phần
+
+Đây là một số kiểm thử chấp nhận được đề cập trong chương trước. Nói chung chúng được viết dựa trên các thành phần riêng lẻ của hệ thống. Các thành phần của hệ thống đóng gói các quy tắc nghiệp vụ, vì vậy các kiểm thử cho các thành phần đó là các kiểm thử chấp nhận cho các quy tắc nghiệp vụ đó.
+
+Như được mô tả trong Hình 8-2, kiểm thử thành phần bao bọc một thành phần. Nó truyền dữ liệu vào thành phần và thu thập dữ liệu đầu ra từ nó. Nó kiểm tra xem đầu ra có khớp với đầu vào hay không. Bất kỳ thành phần hệ thống nào khác được tách ra khỏi kiểm thử bằng cách sử dụng các kỹ thuật mô phỏng và nhân đôi kiểm thử thích hợp.
