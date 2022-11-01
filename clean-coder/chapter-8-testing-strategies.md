@@ -36,8 +36,12 @@ Các lập trình viên chuyên nghiệp sử dụng TDD để tạo kiểm th�
 
 Trong thực tế, unit test có mức độ bao phủ càng gần 100% càng tốt. Nhìn chung cần lớn hơn 90. Và nó phải _thực sự_ phủ thay vì chỉ vượt qua kiểm thử sai của code mà không xác nhận hành vi của nó.
 
-### Kiểm thử thành phần
+### Kiểm thử từng phần
 
 Đây là một số kiểm thử chấp nhận được đề cập trong chương trước. Nói chung chúng được viết dựa trên các thành phần riêng lẻ của hệ thống. Các thành phần của hệ thống đóng gói các quy tắc nghiệp vụ, vì vậy các kiểm thử cho các thành phần đó là các kiểm thử chấp nhận cho các quy tắc nghiệp vụ đó.
 
-Như được mô tả trong Hình 8-2, kiểm thử thành phần bao bọc một thành phần. Nó truyền dữ liệu vào thành phần và thu thập dữ liệu đầu ra từ nó. Nó kiểm tra xem đầu ra có khớp với đầu vào hay không. Bất kỳ thành phần hệ thống nào khác được tách ra khỏi kiểm thử bằng cách sử dụng các kỹ thuật mô phỏng và nhân đôi kiểm thử thích hợp.
+Như được mô tả trong Hình 8-2, kiểm thử từng phần chỉ kiểm tra một thành phần. Nó truyền dữ liệu đầu vào vào thành phần và thu thập dữ liệu đầu ra. Nó kiểm tra xem đầu ra có khớp với đầu vào hay không. Bất kỳ thành phần hệ thống nào khác được tách ra khỏi kiểm thử bằng cách sử dụng các kỹ thuật mô phỏng và nhân đôi kiểm thử thích hợp.
+
+Kiểm thử từng phần được viết bởi QA và nghiệp vụ với sự hỗ trợ từ team dev. Chúng được tạo ra trong các môi trường kiểm thử từng phần như FitNesse, JBehave hoặc Cucumber. (Các thành phần GUI được thử nghiệm với các môi trường thử nghiệm GUI như Selenium hoặc Watir.) Mục đích là bộ phận nghiệp vụ có thể đọc và diễn giải các kiểm thử này, ngay cả khi không phải là tác giả của chúng.
+
+Kiểm thử từng phần phủ gần một nửa hệ thống. Chúng hướng nhiều hơn đến các tình huống happy path và các trường hợp phức tạp, biên và thay thế rõ ràng. Phần lớn các trường hợp un-happy path được phủ bởi unit test và vô nghĩa ở cấp độ kiểm thử từng phần.
