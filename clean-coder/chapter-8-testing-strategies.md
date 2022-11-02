@@ -45,3 +45,9 @@ Như được mô tả trong Hình 8-2, kiểm thử từng phần chỉ kiểm 
 Kiểm thử từng phần được viết bởi QA và nghiệp vụ với sự hỗ trợ từ team dev. Chúng được tạo ra trong các môi trường kiểm thử từng phần như FitNesse, JBehave hoặc Cucumber. (Các thành phần GUI được thử nghiệm với các môi trường thử nghiệm GUI như Selenium hoặc Watir.) Mục đích là bộ phận nghiệp vụ có thể đọc và diễn giải các kiểm thử này, ngay cả khi không phải là tác giả của chúng.
 
 Kiểm thử từng phần phủ gần một nửa hệ thống. Chúng hướng nhiều hơn đến các tình huống happy path và các trường hợp phức tạp, biên và thay thế rõ ràng. Phần lớn các trường hợp un-happy path được phủ bởi unit test và vô nghĩa ở cấp độ kiểm thử từng phần.
+
+### Kiểm thử tích hợp
+
+Các kiểm thử này chỉ có ý nghĩa đối với các hệ thống lớn, có nhiều thành phần. Như trong Hình 8-3, các kiểm thử này tập hợp các thành phần lại thành các nhóm và kiểm tra xem chúng có giao tiếp tốt với nhau không. Các thành phần khác của hệ thống được tách rời như bình thường bằng các mô-đun và bộ đôi kiểm thử thích hợp.
+
+Kiểm tra tích hợp là bài kiểm tra _vũ đạo_. Chúng không kiểm tra các quy tắc nghiệp vụ. Thay vào đó, chúng kiểm tra xem việc ghép các thành phần lại và xem chúng kết hợp với nhau tốt như thế nào. Chúng là các kiểm thử hệ thống _ống nước_ để đảm bảo rằng các bộ phận được kết nối đúng cách và có thể giao tiếp rõ ràng với nhau.
