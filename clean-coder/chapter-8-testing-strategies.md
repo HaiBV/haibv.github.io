@@ -51,3 +51,7 @@ Kiểm thử từng phần phủ gần một nửa hệ thống. Chúng hướng
 Các kiểm thử này chỉ có ý nghĩa đối với các hệ thống lớn, có nhiều thành phần. Như trong Hình 8-3, các kiểm thử này tập hợp các thành phần lại thành các nhóm và kiểm tra xem chúng có giao tiếp tốt với nhau không. Các thành phần khác của hệ thống được tách rời như bình thường bằng các mô-đun và bộ đôi kiểm thử thích hợp.
 
 Kiểm tra tích hợp là bài kiểm tra _vũ đạo_. Chúng không kiểm tra các quy tắc nghiệp vụ. Thay vào đó, chúng kiểm tra xem việc ghép các thành phần lại và xem chúng kết hợp với nhau tốt như thế nào. Chúng là các kiểm thử hệ thống _ống nước_ để đảm bảo rằng các bộ phận được kết nối đúng cách và có thể giao tiếp rõ ràng với nhau.
+
+Kiểm thử tích hợp thường được viết bởi kiến trúc sư hệ thống hoặc thiết kế chính của hệ thống. Các kiểm thử này đảm bảo rằng cấu trúc và kiến trúc của hệ thống thực sự khỏe mạnh. Ở cấp độ này, chúng ta có thể thấy các kiểm thử hiệu suất và lưu lượng.
+
+Kiểm thử tích hợp thường được viết bằng ngôn ngữ và môi trường giống như kiểm thử từng phần. Chúng thường không được thực thi như một phần của CI, vì sẽ có thời gian chạy lâu hơn. Thay vào đó, các kiểm thử này được chạy định kỳ (hàng đêm, hàng tuần, v.v.) lúc tác giả của chúng cho là cần thiết.
