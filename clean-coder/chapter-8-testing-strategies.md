@@ -55,3 +55,11 @@ Kiểm tra tích hợp là bài kiểm tra _vũ đạo_. Chúng không kiểm tr
 Kiểm thử tích hợp thường được viết bởi kiến trúc sư hệ thống hoặc thiết kế chính của hệ thống. Các kiểm thử này đảm bảo rằng cấu trúc và kiến trúc của hệ thống thực sự khỏe mạnh. Ở cấp độ này, chúng ta có thể thấy các kiểm thử hiệu suất và lưu lượng.
 
 Kiểm thử tích hợp thường được viết bằng ngôn ngữ và môi trường giống như kiểm thử từng phần. Chúng thường không được thực thi như một phần của CI, vì sẽ có thời gian chạy lâu hơn. Thay vào đó, các kiểm thử này được chạy định kỳ (hàng đêm, hàng tuần, v.v.) lúc tác giả của chúng cho là cần thiết.
+
+### Kiểm thử hệ thống
+
+Đây là các kiểm thử tự động thực thi trên toàn bộ hệ thống đã tích hợp. Chúng là những kiểm thử tích hợp cuối cùng. Chúng không trực tiếp kiểm tra các quy tắc nghiệp vụ. Thay vào đó, chúng kiểm tra xem hệ thống đã được kết nối với nhau một cách chính xác và các bộ phận của nó tương thích với nhau theo kế hoạch. Chúng ta sẽ mong đợi các kiểm thử lưu lượng và hiệu suất trong phần này.
+
+Các kiểm thử này được viết bởi các kiến trúc sư hệ thống và trưởng nhóm kỹ thuật. Thông thường, chúng được viết bằng ngôn ngữ và môi trường giống như kiểm thử tích hợp cho giao diện người dùng. Chúng được thực hiện tương đối không thường xuyên tùy thuộc vào thời lượng của chúng, nhưng càng thường xuyên thì càng tốt.
+
+Kiểm thử hệ thống phủ khoảng 10% hệ thống. Do mục đích của chúng không phải là đảm bảo hành vi của hệ thống chính xác, mà là xây dựng hệ thống chính xác. Hành vi chính xác của code và các thành phần đã được xác định bằng các lớp kiểm thử bên dưới của kim tự tháp.
