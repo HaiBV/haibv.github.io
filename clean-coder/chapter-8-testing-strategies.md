@@ -63,3 +63,11 @@ Kiểm thử tích hợp thường được viết bằng ngôn ngữ và môi t
 Các kiểm thử này được viết bởi các kiến trúc sư hệ thống và trưởng nhóm kỹ thuật. Thông thường, chúng được viết bằng ngôn ngữ và môi trường giống như kiểm thử tích hợp cho giao diện người dùng. Chúng được thực hiện tương đối không thường xuyên tùy thuộc vào thời lượng của chúng, nhưng càng thường xuyên thì càng tốt.
 
 Kiểm thử hệ thống phủ khoảng 10% hệ thống. Do mục đích của chúng không phải là đảm bảo hành vi của hệ thống chính xác, mà là xây dựng hệ thống chính xác. Hành vi chính xác của code và các thành phần đã được xác định bằng các lớp kiểm thử bên dưới của kim tự tháp.
+
+### Kiểm thử thủ công
+
+Đây là nơi con người đặt tay lên bàn phím và dán mắt vào màn hình. Các kiểm thử này không tự động, _cũng không theo kịch bản nào_. Mục đích của kiểm thử này là khám phá hệ thống để tìm các hành vi không mong muốn, trong khi xác nhận các hành vi được mong đợi. Để đạt được mục tiêu đó, chúng ta cần bộ não của con người, với sự sáng tạo của con người, làm việc để điều tra và khám phá hệ thống. Việc tạo một kế hoạch kiểm thử bằng văn bản cho loại kiểm thử này sẽ làm mất đi mục đích đó.
+
+Một số nhóm sẽ có chuyên gia thực hiện công việc này. Các nhóm khác sẽ chỉ cần đặt ra một hoặc hai ngày “săn lỗi” với càng nhiều người càng tốt, bao gồm cả quản lý, thư ký, lập trình viên, tester và người viết công nghệ, “đập” vào hệ thống để xem liệu có thể làm cho nó bị phá vỡ hay không.
+
+Mục tiêu không phải là độ phủ. Chúng ta sẽ không kiểm chứng mọi quy tắc nghiệp vụ và mọi lộ trình thực thi bằng những thử nghiệm này. Thay vào đó, mục tiêu là đảm bảo hệ thống hoạt động tốt dưới sự vận hành của con người và tìm ra nhiều “điểm đặc biệt” một cách sáng tạo nhất có thể.
