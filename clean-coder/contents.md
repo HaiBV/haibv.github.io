@@ -20,6 +20,8 @@ layout: default
 
 [Chương 7 - Kiểm thử chấp nhận](./chapter-7-acceptance-testing.html).
 
+[Chương 8 - Chiến lược kiểm thử](./chapter-8-testing-strategies.html).
+
 [Chương 9 - Quản lý thời gian](./chapter-9-time-management.html).
 
 [Chương 10 - Ước lượng (Estimation)](./chapter-10-estimation.html).
