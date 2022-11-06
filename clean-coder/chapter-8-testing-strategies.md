@@ -71,3 +71,7 @@ Kiểm thử hệ thống phủ khoảng 10% hệ thống. Do mục đích của
 Một số nhóm sẽ có chuyên gia thực hiện công việc này. Các nhóm khác sẽ chỉ cần đặt ra một hoặc hai ngày “săn lỗi” với càng nhiều người càng tốt, bao gồm cả quản lý, thư ký, lập trình viên, tester và người viết công nghệ, “đập” vào hệ thống để xem liệu có thể làm cho nó bị phá vỡ hay không.
 
 Mục tiêu không phải là độ phủ. Chúng ta sẽ không kiểm chứng mọi quy tắc nghiệp vụ và mọi lộ trình thực thi bằng những thử nghiệm này. Thay vào đó, mục tiêu là đảm bảo hệ thống hoạt động tốt dưới sự vận hành của con người và tìm ra nhiều “điểm đặc biệt” một cách sáng tạo nhất có thể.
+
+## Kết luận
+
+TDD là một phương pháp mạnh mẽ, và Kiểm thử chấp nhận là cách có giá trị thể hiện và thực thi các yêu cầu. Nhưng chúng chỉ là một phần của chiến lược kiểm thử tổng thể. Để thực hiện tốt mục tiêu “QA sẽ không tìm thấy lỗi gì”, các nhóm phát triển cần làm việc song song với QA để tạo ra một hệ thống phân cấp gồm các bài kiểm thử đơn vị, thành phần, tích hợp, hệ thống và khám phá. Các kiểm thử này phải được chạy thường xuyên nhất có thể để cung cấp phản hồi sớm nhất và để đảm bảo rằng hệ thống vẫn liên tục trong sạch.
