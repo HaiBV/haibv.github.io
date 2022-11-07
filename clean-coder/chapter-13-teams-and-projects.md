@@ -6,17 +6,17 @@ layout: default
 
 Sẽ ra sao nếu bạn có nhiều dự án nhỏ cần hoàn thiện? Bạn sẽ phân bổ những dự án đó cho lập trình viên như thế nào? Sẽ ra sao nếu bạn có một dự án thực sự lớn cần hoàn thiện?
 
-## Có nên trộn vào?
+## Có nên dùng chung nhân sự giữa các dự án nhỏ?
 
-Tôi cố vấn cho một số ngân hàng và tổ chức bảo hiểm trong vài năm. Có một điểm chung kỳ lạ giữa họ là cách họ phân chia những dự án.
+Tôi cố vấn cho một số ngân hàng và tổ chức bảo hiểm trong vài năm gần đây. Có một điểm chung kỳ lạ giữa họ là cách họ phân chia những dự án.
 
-Thông thường một dự án ở ngân hàng sẽ là một công việc tương đối nhỏ cần từ một đến 2 lập trình viên trong khoảng vài tuần. Dự án này thường sẽ được quản lý bởi 1 PM, người này đang quản lý những dự án khác. Dự án có một BA, người cũng cung cấp yêu cầu cho những dự án khác. Nó được giao cho một vài lập trình viên cũng làm việc ở một vài dự án khác. Một hoặc 2 tester được chỉ định vào dự án, và họ cũng làm việc ở những dự án khác.
+Thông thường một dự án ở ngân hàng có khối lượng công việc tương đối nhỏ chỉ cần từ 1 đến 2 lập trình viên trong khoảng vài tuần. Dự án này thường sẽ được quản lý bởi 1 PM, người cũng đang quản lý những dự án khác. Dự án có một BA, người cũng đang cung cấp yêu cầu cho những dự án khác. Nó được giao cho một vài lập trình viên cũng đang làm việc ở một vài dự án khác. Một hoặc 2 tester được chỉ định vào dự án, và họ cũng đang làm việc ở những dự án khác.
 
-Bạn đã nhận ra khuôn mẫu chưa? Dự án quả nhỏ nên không cá nhân nào có thể được chỉ định toàn thời gian. Mọi người đang làm việc trong dự án ở mức 50, hoặc thậm chí 25 phần trăm.
+Bạn đã nhận ra khuôn mẫu ở đây chưa? Dự án quả nhỏ nên không cá nhân nào có thể được chỉ định toàn thời gian. Mọi người đang làm việc trong dự án ở mức 50, hoặc thậm chí 25 phần trăm.
 
 Bây giờ, quy tắc là: Không có cái gì gọi là nửa người.
 
-Thật vô nghĩa khi nói một lập trình viên dành một nửa thời gian của họ cho dự án A và thời gian còn lại cho dự án B, đặc biệt là khi 2 dự án có 2 PM khác nhau, 2 BA khác nhau, lập trình viên khác nhau và tester khác nhau. Làm thế nào bạn có thể gọi đó là một đội? Đó không phải là một đội, đó là một thứ máy xay sinh tố.
+Thật vô nghĩa khi nói một lập trình viên dành một nửa thời gian của họ cho dự án A và thời gian còn lại cho dự án B, đặc biệt là khi 2 dự án có 2 PM khác nhau, 2 BA khác nhau, lập trình viên khác nhau và tester khác nhau. Làm thế nào bạn có thể gọi đó là một đội? Đó không phải là một đội, đó là một cái máy xay sinh tố.
 
 ### Một đội gắn kết
 
@@ -28,9 +28,9 @@ Một team gắn kết thường bao gồm khoảng chục người. Có thể n
 
 Tỉ lệ giữa lập trình viên so với tester và BA có thể thay đổi rất nhiều, những 2:1 là một con số tốt. Vì vậy, một team gắn kết 12 người sẽ bao gồm 7 lập trình viên, 2 tester, 2 BA và 1 PM.
 
-Các BA phân tích các yêu cầu và viết các kiểm tra chấp nhận tự động. Tester cũng viết các kiểm tra chấp nhận tự động. Chúng sẽ khác nhau về mặt quan điểm. Cả 2 đều đọc yêu cầu. Nhưng BA tập trung vào giá trị sản phẩm, còn tester tập trung vào tính đúng đắn. BA sẽ viết những con đường hoàn hảo; tester quan tấm đến những thứ có thể gây nên sai sót và các trường hợp thất bại và giới hạn. 
+Các BA phân tích các yêu cầu và viết các kiểm tra chấp nhận tự động. Tester cũng viết các kiểm tra chấp nhận tự động. Chúng sẽ khác nhau về mặt quan điểm. Cả 2 đều đọc yêu cầu. Nhưng BA tập trung vào giá trị sản phẩm, còn tester tập trung vào tính đúng đắn. BA sẽ viết những con đường hoàn hảo; tester quan tấm đến những thứ có thể gây nên sai sót và các trường hợp thất bại và giới hạn.
 
-PA sẽ theo dõi tiến độ của nhóm và đảm bảo rằng cả nhóm hiểu được lịch trình và mức độ ưu tiên. 
+PA sẽ theo dõi tiến độ của nhóm và đảm bảo rằng cả nhóm hiểu được lịch trình và mức độ ưu tiên.
 
 Một trong các thành viên trong nhóm có thể đóng vai trò huấn luyện hoặc quản lý bán thời gian với trách nhiệm bảo vệ quy trình và kỷ luật nhóm. Họ đóng vai trò lương tâm của nhóm khi họ bị cám dỗ di sai quy trình vì áp lực lịch trình.
 
@@ -68,4 +68,4 @@ Thành thật mà nói, tôi thích tình huống sau hơn. Doanh nghiệp khôn
 
 ## Kết luận
 
-Xây dựng team khó hơn xây dựng dự án. Vậy nên, sẽ tốt hơn nếu xây dựng một team cố định có thể chuyển cùng nhau từ dự án này sang dự án khác và có thể cùng lúc đảm nhiệm nhiều hơn 1 dự án. Mục tiêu gây dựng một team là cho team đó đủ thời gian để gắn kết, và sau đó duy trì như một cỗ máy để hoàn thành nhiều dự án. 
+Xây dựng team khó hơn xây dựng dự án. Vậy nên, sẽ tốt hơn nếu xây dựng một team cố định có thể chuyển cùng nhau từ dự án này sang dự án khác và có thể cùng lúc đảm nhiệm nhiều hơn 1 dự án. Mục tiêu gây dựng một team là cho team đó đủ thời gian để gắn kết, và sau đó duy trì như một cỗ máy để hoàn thành nhiều dự án.
