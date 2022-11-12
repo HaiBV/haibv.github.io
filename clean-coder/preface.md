@@ -19,3 +19,9 @@ Các kỹ sư nghi ngờ rằng các vòng chữ O sẽ cứng lại khi gặp l
 Khi đến thời điểm phóng, một số kỹ sư đã từ chối xem chương trình phát sóng vì họ sợ có vụ nổ trên bệ phóng. Nhưng khi tàu Challenger bay lên bầu trời một cách duyên dáng, họ bắt đầu thư giãn. Khoảnh khắc trước khi bị phá hủy, khi họ nhìn con tàu chạy qua Mach 1, một người trong số họ nói rằng họ đã "thoát nạn trong gang tấc".
 
 Bất chấp mọi phản đối, ghi nhớ và khẩn cấp của các kỹ sư, các quản lý tin rằng họ biết rõ hơn. Họ cho rằng các kỹ sư đã phản ứng thái quá. Họ không tin tưởng vào dữ liệu của các kỹ sư hay kết luận của họ. Họ cho phép phóng vì họ đang chịu áp lực lớn về tài chính và chính trị. Họ _hy vọng_ mọi thứ sẽ tốt đẹp.
+
+Những quản lý này không chỉ đơn thuần là ngu ngốc mà họ còn là tội phạm. Cuộc sống của bảy người con người tuyệt vời, và hy vọng của một thế hệ hướng tới du hành vũ trụ, đã tan thành mây khói vào buổi sáng lạnh giá đó vì những quản lý đó đã đặt nỗi sợ hãi, hy vọng và trực giác của riêng họ lên trên lời nói của các chuyên gia. Họ đưa ra một quyết định mà họ không có quyền đưa ra. Họ chiếm đoạt quyền lực của những người thực sự _hiểu biết_: các kỹ sư.
+
+Nhưng còn các kỹ sư thì sao? Chắc chắn các kỹ sư đã làm những gì họ phải làm. Họ đã thông báo cho người quản lý và chiến đấu hết mình với vị trí của họ. Họ đã dùng các kênh liên lạc thích hợp và cầu cứu tất cả các giao thức phù hợp. Họ đã làm những gì họ có thể, trong hệ thống — và các nhà quản lý vẫn chỉ đạo họ. Vì vậy, có vẻ như các kỹ sư có thể bỏ đi mà không bị đổ lỗi.
+
+Nhưng đôi khi tôi tự hỏi liệu có ai trong số những kỹ sư đó thức trắng đêm, bị ám ảnh bởi hình ảnh mẹ của Christa McAuliffe và ước họ được gọi là Dan Rather.
