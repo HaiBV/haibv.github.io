@@ -25,3 +25,13 @@ Những quản lý này không chỉ đơn thuần là ngu ngốc mà họ còn 
 Nhưng còn các kỹ sư thì sao? Chắc chắn các kỹ sư đã làm những gì họ phải làm. Họ đã thông báo cho người quản lý và chiến đấu hết mình với vị trí của họ. Họ đã dùng các kênh liên lạc thích hợp và cầu cứu tất cả các giao thức phù hợp. Họ đã làm những gì họ có thể, trong hệ thống — và các nhà quản lý vẫn chỉ đạo họ. Vì vậy, có vẻ như các kỹ sư có thể bỏ đi mà không bị đổ lỗi.
 
 Nhưng đôi khi tôi tự hỏi liệu có ai trong số những kỹ sư đó thức trắng đêm, bị ám ảnh bởi hình ảnh mẹ của Christa McAuliffe và ước họ được gọi là Dan Rather.
+
+## Về cuốn sách
+
+Cuốn sách này nói về tính chuyên nghiệp trong ngành phần mềm. Nó chứa rất nhiều lời khuyên thực tế nhằm cố gắng trả lời các câu hỏi như:
+
+- Thế nào là chuyên nghiệp trong ngày phần mềm?
+- Làm thế nào để trở thành cư xử như một lập trình viên chuyên nghiệp?
+- Làm thế nào để một người chuyên nghiệp đối phó với xung đột, lịch trình chặt chẽ và quản lý vô lý?
+- Khi nào và bằng cách nào, một người chuyên nghiệp nên nói “không”?
+- Làm thế nào để một người chuyên nghiệp đối phó với áp lực?
