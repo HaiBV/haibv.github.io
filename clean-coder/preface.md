@@ -35,3 +35,7 @@ Cuốn sách này nói về tính chuyên nghiệp trong ngành phần mềm. N�
 - Làm thế nào để một người chuyên nghiệp đối phó với xung đột, lịch trình chặt chẽ và quản lý vô lý?
 - Khi nào và bằng cách nào, một người chuyên nghiệp nên nói “không”?
 - Làm thế nào để một người chuyên nghiệp đối phó với áp lực?
+
+Nhưng ẩn trong những lời khuyên thực dụng trong cuốn sách này, bạn sẽ thấy một thái độ đấu tranh để đột phá. Đó là một thái độ trung thực, danh dự, tự tôn và tự hào. Đó là sự sẵn sàng chấp nhận trách nhiệm nặng nề của một người thợ thủ công và một kỹ sư. Trách nhiệm đó bao gồm làm việc tốt và làm việc sạch sẽ. Nó bao gồm giao tiếp tốt và ước tính trung thực. Nó bao gồm việc quản lý thời gian của bạn và đối mặt với những quyết định khó khăn về phần thưởng đi kèm rủi ro.
+
+Nhưng trách nhiệm đó bao gồm một điều khác nữa - một điều đáng sợ. Là một kỹ sư, bạn có kiến thức chuyên sâu về các hệ thống và dự án của mình mà không quản lý nào có thể có được. Và kiến thức đó đi kèm với trách nhiệm phải _hành động_.
