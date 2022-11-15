@@ -80,11 +80,11 @@ Lúc đó, tôi đã nghĩ các thành viên trong đội kỹ thuật là nhữ
 
 Tuy nhiên giờ đây, khi nghĩ lại, tôi không chắc về điều đó.
 
-Cùng nhìn lại sự kết hợp của Batman và Robin một lần nữa, từ một góc độ khác. Tôi nghĩ rằng tôi đã động viên để team có hiệu suất tốt nhất, nhưng tôi nghi ngờ Joe đã có chiêu trò gì đó, khi ngầm cho rằng các thành viên team kỹ thuật là đối thủ của anh ta. Thử nghĩ mà xem: Tại sao cần phải chạy đôn chạy đáo, đá vào ghế và năn nỉ mọi người?
+Cùng nhìn lại sự kết hợp của Batman và Robin một lần nữa, từ một góc độ khác. Tôi nghĩ rằng tôi đã động viên để đội có hiệu suất tốt nhất, nhưng tôi nghi ngờ Joe đã có chiêu trò gì đó, khi ngầm cho rằng các thành viên đội kỹ thuật là đối thủ của anh ta. Thử nghĩ mà xem: Tại sao cần phải chạy đôn chạy đáo, đá vào ghế và năn nỉ mọi người?
 
 Chẳng lẽ chúng ta không nên hỏi nhân viên rằng khi nào thì họ làm xong, có được câu trả lời chắc chắn, và tin vào câu trả lời họ đưa ra, và không bị đốt cháy bởi niềm tin đó?
 
-Chắc chắn rằng, với những người chuyên nghiệp, chúng ta nên làm vậy... và, đồng thời, chúng ta không thể. Joe không tin câu trả lời của chúng tôi, và cảm thấy thoải mái khi kiếm soát vi mô team kỹ thuật, và đồng thời, vì một vài lý do, anh ta tin bộ phận pháp lý và không muốn kiểm soát vi mô họ.
+Chắc chắn rằng, với những người chuyên nghiệp, chúng ta nên làm vậy... và, đồng thời, chúng ta không thể. Joe không tin câu trả lời của chúng tôi, và cảm thấy thoải mái khi kiếm soát vi mô đội kỹ thuật, và đồng thời, vì một vài lý do, anh ta tin bộ phận pháp lý và không muốn kiểm soát vi mô họ.
 
 Tất cả chuyện này là sao?
 
@@ -92,7 +92,7 @@ Bằng cách nào đó, bộ phận pháp lý đã thể hiện sự chuyên ngh
 
 Cũng bằng cách nào đó, một nhóm khác đã thuyết phục được Joe rằng họ không cần người trông trẻ, rằng họ không ngồi chơi, và họ cần được đối xử như những người cùng cấp độ đáng được tôn trọng.
 
-Không, tôi không nghĩ sự khác biệt nằm ở những tấm bằng háo nhoáng trên tường hoặc một vài năm đại học, mặc dù vài năm đại học có thể gồm một chút đào tạo về cách cư xử trong xã hội.
+Không, tôi không nghĩ sự khác biệt nằm ở những tấm bằng háo nhoáng trên tường hoặc một vài năm đại học, mặc dù vài năm đại học có thể bao gồm một chút đào tạo về cách cư xử trong xã hội.
 
 Kể từ ngày đó, cho tới tận bây giờ, tôi vẫn tự hỏi khi làm những công việc kỹ thuật, tôi phải thay đổi thế nào để được coi là người chuyên nghiệp.
 
@@ -102,7 +102,7 @@ Và rồi một ngày, thật bất ngờ, tôi nhận được một lời đ�
 
 Cuốn sách này sẽ hướng dẫn bạn chính xác từng bước cách để thể hiện bản thân và tương tác như một người chuyên nghiệp. Không phải qua những lời lẽ sáo rỗng, không phải bằng những bằng cấp hấp dẫn, mà bằng những việc bạn có thể làm và bạn làm việc đó như thế nào.
 
-Trong một số trường hợp, những ví dụ đưa ra từng chữ một.
+Trong một số trường hợp, những ví dụ đưa ra chi tiết đến từng chữ một.
 
 Một số ví dụ bao gồm câu trả lời, phản hồi, giải thích rõ ràng, thậm chí là lời khuyên nên làm gì nếu người khác cố tình "phớt lờ bạn".
 
@@ -112,11 +112,11 @@ Và chúng ta trở lại với BigCo, cùng Joe và tôi, một lần nữa tro
 
 Nhưng lần này, nó sẽ hơi khác một chút.
 
-Thay vì tránh cam kết, đội kỹ thuật thực sự thực hiện chúng. Thay vì tránh ước tính hoặc để người khác lên kết hoạch (sau đó phàn nàn về điều đó), đội kỹ thuật thực sự tự tổ chức và đưa ra các cam kết thiết thực.
+Thay vì tránh cam kết, đội kỹ thuật thực sự thực hiện chúng. Thay vì tránh ước lượng hoặc để người khác lên kết hoạch (sau đó phàn nàn về điều đó), đội kỹ thuật thực sự tự tổ chức và đưa ra các cam kết thiết thực.
 
 Bây giờ hãy tưởng tượng tất cả nhân viên sẽ làm việc cùng nhau. Khi lập trình viên bị gián đoạn công việc, họ nhấc điện thoại và quản trị hệ thống sẽ vào việc.
 
-Khi Joe muốn phần việc số 14321 được thực hiện, điều đó không cần thiết; Anh ta có thể thấy DBA đang làm việc chăm chỉ, không lướt web. Tương tự như vậy, những ước lượng mà anh ta nhận được có vẻ hoàn toàn nhất quán và hoàn toàn không có cảm giác dự án được ưu tiên hơn giữa bữa hay kiểm tra email. Mọi thủ thuật và nỗ lực nhằm thao túng lịch trình không phải là "Chúng tôi sẽ cố gắng" mà thay vào đó là "Đó là cam kết của chúng tôi, nếu bạn muốn thực hiện những mục tiêu của mình, cứ tự nhiên".
+Khi Joe muốn phần việc số 14321 được thực hiện, điều đó không cần thiết; Anh ta có thể thấy DBA đang làm việc chăm chỉ, không lướt web. Tương tự như vậy, những ước lượng mà anh ta nhận được có vẻ hoàn toàn nhất quán và hoàn toàn không có cảm giác dự án được xem xét ưu tiên với bữa trưa hay kiểm tra email. Mọi thủ thuật và nỗ lực nhằm thao túng lịch trình đều không cần thiết, thay vì "Chúng tôi sẽ cố gắng" sẽ là "Đó là cam kết của chúng tôi, nếu bạn muốn thực hiện những mục tiêu của mình, cứ tự nhiên".
 
 Sau một thời gian, tôi nghĩ Joe sẽ bắt đầu coi đội kỹ thuật như những người chuyên nghiệp. Và anh ta đã đúng.
 
