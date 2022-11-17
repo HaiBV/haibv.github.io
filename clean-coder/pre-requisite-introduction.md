@@ -24,3 +24,6 @@ Giám đốc chỉ cho tôi cái kệ chứa những chồng thẻ đục lỗ x
 
 Tôi viết chương trình của tôi trên những biểu mẫu mã hóa. Chúng là những tờ giấy hình chữ nhật lớn được chia thành 25 dòng và 80 cột. Mỗi dòng đại diện cho 1 thẻ. Bạn sử dụng những khối chữ cái in hoa và bút chì số 2 để viết chương trình của mình lên biểu mẫu mã hóa. Với 6 cột cuối cùng của mỗi dòng, bạn viết một số thứ tự với bút chì số 2. Thông thường, bạn sẽ tăng số thứ tự này lên 10 đơn vị mỗi lần để về sau có thể chèn thêm dòng vào giữa.
 
+Biểu mẫu mã hóa được chuyển đến những máy đục lỗ. Công ty có vài chục nhân viên nữ lấy chúng từ một cái giỏ lớn, sau đó "nhập" chúng vào máy đục lỗ. Những chiếc máy này rất giống máy đánh chữ, ngoại trừ việc các ký tự được đục lỗ vào thẻ thay vì in trên giấy.
+
+Ngày hôm sau, họ gửi lại chương trình cho tôi bằng thư liên văn phòng. Bộ bài đục lỗ nho nhỏ của tôi được bọc trong các biểu mẫu mã hóa với một sợi dây chun. Tôi kiểm tra các thẻ để tìm lỗi đục lỗ. Không có lỗi nào. Vì vậy sau đó tôi đặt bộ thẻ thư viện chương trình con xuống cuối bộ thẻ chương trình của tôi, và sau đó đưa bộ thẻ bên trên cho điều hành máy tính.
