@@ -27,3 +27,7 @@ Tôi viết chương trình của tôi trên những biểu mẫu mã hóa. Chú
 Biểu mẫu mã hóa được chuyển đến những máy đục lỗ. Công ty có vài chục nhân viên nữ lấy chúng từ một cái giỏ lớn, sau đó "nhập" chúng vào máy đục lỗ. Những chiếc máy này rất giống máy đánh chữ, ngoại trừ việc các ký tự được đục lỗ vào thẻ thay vì in trên giấy.
 
 Ngày hôm sau, họ gửi lại chương trình cho tôi bằng thư liên văn phòng. Bộ bài đục lỗ nho nhỏ của tôi được bọc trong các biểu mẫu mã hóa với một sợi dây chun. Tôi kiểm tra các thẻ để tìm lỗi đục lỗ. Không có lỗi nào. Vì vậy sau đó tôi đặt bộ thẻ thư viện chương trình con xuống cuối bộ thẻ chương trình của tôi, và sau đó đưa bộ thẻ bên trên cho điều hành máy tính.
+
+Các máy tính được khóa trong một căn phòng được kiểm soát môi trường với sàn nâng (dành cho tất cả các loại cáp). Tôi gõ cửa và một nhân viên điều hành khắc khổ lấy bộ thẻ từ tay tôi và bỏ nó vào một giỏ khác bên trong phòng máy tính. Sau đó, họ sẽ chạy bộ thẻ của tôi.
+
+Ngày hôm sau, tôi nhận lại bộ thẻ của mình. Nó được bọc trong một danh sách các kết quả của sau khi chạy và được giữ cùng với một sợi dây chun. (Chúng tôi đã sử dụng rất nhiều dây chun trong những ngày đó!)
