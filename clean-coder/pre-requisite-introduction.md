@@ -30,4 +30,8 @@ Ngày hôm sau, họ gửi lại chương trình cho tôi bằng thư liên văn
 
 Các máy tính được khóa trong một căn phòng được kiểm soát môi trường với sàn nâng (dành cho tất cả các loại cáp). Tôi gõ cửa và một nhân viên điều hành khắc khổ lấy bộ thẻ từ tay tôi và bỏ nó vào một giỏ khác bên trong phòng máy tính. Sau đó, họ sẽ chạy bộ thẻ của tôi.
 
-Ngày hôm sau, tôi nhận lại bộ thẻ của mình. Nó được bọc trong một danh sách các kết quả của sau khi chạy và được giữ cùng với một sợi dây chun. (Chúng tôi đã sử dụng rất nhiều dây chun trong những ngày đó!)
+Ngày hôm sau, tôi nhận lại bộ thẻ của mình. Nó được bọc trong một danh sách các kết quả của sau khi chạy và được giữ cùng với một sợi dây chun. (Chúng tôi đã sử dụng rất nhiều dây chun vào lúc đó!)
+
+Tôi mở danh sách và thấy rằng chương trình của tôi bị lỗi khi biên dịch. Các thông báo lỗi rất khó hiểu đối với tôi, vì vậy tôi đã đưa nó cho giám đốc của mình. Anh ta xem qua, lầm bầm vài câu, ghi nhanh một số ghi chú vào danh sách, nắm lấy bộ thẻ của tôi và sau đó bảo tôi đi theo anh ta.
+
+Anh ấy đưa tôi đến phòng đục lỗ và ngồi vào một chiếc máy đục còn trống. Anh ta sửa từng chiếc thẻ bị lỗi và thêm vào một hoặc hai thẻ khác. Anh nhanh chóng giải thích những gì anh đang làm, nhưng tất cả trôi qua nhanh như chớp.
