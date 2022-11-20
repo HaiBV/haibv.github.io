@@ -16,11 +16,11 @@ Làm thế nào tôi lại biết được những thái độ, kỷ luật và 
 
 Năm 1969, khi tôi 17 tuổi. Cha tôi xin cho tôi vào làm lập trình viên bán thời gian tạm thời ở một doanh nghiệp địa phương tên ASC. (Đúng, cha tôi có khả năng đó. Có một lần tôi chứng kiến ông bước ra chặn trước một chiếc ô tô chạy quá tốc độ, đưa tay ra lệnh cho nó "Dừng lại!" Chiếc xe dừng lại. Không một ai có thể nói "không" với cha tôi.) Tôi được vào làm việc trong một căn phòng lưu giữ tất cả các tài liệu hướng dẫn sử dụng máy tính IBM. Họ yêu cầu tôi đưa các bản cập nhật trong hàng năm trời vào sách hướng dẫn. Chính tại đây, lần đầu tiên tôi nhìn thấy cụm từ "Trang này cố ý để trống".
 
-Sau vài ngày cập nhật hướng dẫn, giám đốc bảo tôi viết một chương trình Easycoder đơn giản. Tôi rất phấn khích khi nhận được yêu cầu. Trước đây tôi chưa từng thực sự viết chương trình cho máy tính. Tuy nhiên, tôi đã đọc một vài cuốn sách về Autocoder, và có khái niệm mơ hồ để bắt đầu.
+Sau vài ngày cập nhật hướng dẫn, trưởng phòng bảo tôi viết một chương trình Easycoder đơn giản. Tôi rất phấn khích khi nhận được yêu cầu. Trước đây tôi chưa từng thực sự viết chương trình cho máy tính. Tuy nhiên, tôi đã đọc một vài cuốn sách về Autocoder, và có khái niệm mơ hồ để bắt đầu.
 
 Chương trình rất đơn giản, nó sẽ đọc bản ghi từ một cuộn băng, thay thế ID của những bản ghi đó bằng ID mới. Các ID với bắt đầu từ 1 và tăng 1 với mỗi bản ghi mới. Bản ghi với ID mới được viết vào cuộn băng mới.
 
-Giám đốc chỉ cho tôi cái kệ chứa những chồng thẻ đục lỗ xanh và đỏ. Bạn hãy tưởng tượng khi bạn mua 50 bộ bài, 25 bộ xanh, 25 bộ đỏ. Rồi bạn xếp chồng chúng lên nhau. Chồng thẻ sẽ trông tương tự như vậy. Chúng có sọc đỏ và xanh, mỗi sọc khoảng 200 thẻ. Mỗi một sọc chứa mã nguồn cho thư viện của chương trình con mà lập trình viên thường hay sử dụng. Các lập trình viên chỉ cần lấy bộ thẻ trên cùng, đảm bảo rằng họ không lấy gì khác ngoài các thẻ đỏ và xanh, và sau đó đặt nó vào cuối chương trình.
+trưởng phòng chỉ cho tôi cái kệ chứa những chồng thẻ đục lỗ xanh và đỏ. Bạn hãy tưởng tượng khi bạn mua 50 bộ bài, 25 bộ xanh, 25 bộ đỏ. Rồi bạn xếp chồng chúng lên nhau. Chồng thẻ sẽ trông tương tự như vậy. Chúng có sọc đỏ và xanh, mỗi sọc khoảng 200 thẻ. Mỗi một sọc chứa mã nguồn cho thư viện của chương trình con mà lập trình viên thường hay sử dụng. Các lập trình viên chỉ cần lấy bộ thẻ trên cùng, đảm bảo rằng họ không lấy gì khác ngoài các thẻ đỏ và xanh, và sau đó đặt nó vào cuối chương trình.
 
 Tôi viết chương trình của tôi trên những biểu mẫu mã hóa. Chúng là những tờ giấy hình chữ nhật lớn được chia thành 25 dòng và 80 cột. Mỗi dòng đại diện cho 1 thẻ. Bạn sử dụng những khối chữ cái in hoa và bút chì số 2 để viết chương trình của mình lên biểu mẫu mã hóa. Với 6 cột cuối cùng của mỗi dòng, bạn viết một số thứ tự với bút chì số 2. Thông thường, bạn sẽ tăng số thứ tự này lên 10 đơn vị mỗi lần để về sau có thể chèn thêm dòng vào giữa.
 
@@ -32,6 +32,10 @@ Các máy tính được khóa trong một căn phòng được kiểm soát mô
 
 Ngày hôm sau, tôi nhận lại bộ thẻ của mình. Nó được bọc trong một danh sách các kết quả của sau khi chạy và được giữ cùng với một sợi dây chun. (Chúng tôi đã sử dụng rất nhiều dây chun vào lúc đó!)
 
-Tôi mở danh sách và thấy rằng chương trình của tôi bị lỗi khi biên dịch. Các thông báo lỗi rất khó hiểu đối với tôi, vì vậy tôi đã đưa nó cho giám đốc của mình. Anh ta xem qua, lầm bầm vài câu, ghi nhanh một số ghi chú vào danh sách, nắm lấy bộ thẻ của tôi và sau đó bảo tôi đi theo anh ta.
+Tôi mở danh sách và thấy rằng chương trình của tôi bị lỗi khi biên dịch. Các thông báo lỗi rất khó hiểu đối với tôi, vì vậy tôi đã đưa nó cho trưởng phòng của mình. Anh ta xem qua, lầm bầm vài câu, ghi nhanh một số ghi chú vào danh sách, nắm lấy bộ thẻ của tôi và sau đó bảo tôi đi theo anh ta.
 
 Anh ấy đưa tôi đến phòng đục lỗ và ngồi vào một chiếc máy đục còn trống. Anh ta sửa từng chiếc thẻ bị lỗi và thêm vào một hoặc hai thẻ khác. Anh nhanh chóng giải thích những gì anh đang làm, nhưng tất cả trôi qua nhanh như chớp.
+
+Anh mang bộ thẻ mới lên gõ cửa phòng máy tính. Sau đó nói vài từ ma thuật với một trong những người điều hành, rồi bước vào phòng máy tính. Tôi được ra hiệu để đi theo. Người điều hành thiết lập các ổ băng và tải bộ thẻ trong khi chúng tôi theo dõi. Các cuộn băng quay, máy in kêu vang, và sau đó kết thúc. Chương trình đã hoạt động.
+
+Ngày hôm sau, trưởng phòng cảm ơn sự giúp đỡ của tôi đồng thời chấm dứt luôn công việc. Rõ ràng ASC cảm thấy họ không có thời gian để hướng dẫn một thanh niên 17 tuổi.
