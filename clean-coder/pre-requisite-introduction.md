@@ -39,3 +39,7 @@ Anh ấy đưa tôi đến phòng đục lỗ và ngồi vào một chiếc máy
 Anh mang bộ thẻ mới lên gõ cửa phòng máy tính. Sau đó nói vài từ ma thuật với một trong những người điều hành, rồi bước vào phòng máy tính. Tôi được ra hiệu để đi theo. Người điều hành thiết lập các ổ băng và tải bộ thẻ trong khi chúng tôi theo dõi. Các cuộn băng quay, máy in kêu vang, và sau đó kết thúc. Chương trình đã hoạt động.
 
 Ngày hôm sau, trưởng phòng cảm ơn sự giúp đỡ của tôi đồng thời chấm dứt luôn công việc. Rõ ràng ASC cảm thấy họ không có thời gian để hướng dẫn một thanh niên 17 tuổi.
+
+Nhưng câu chuyện với ASC vẫn chưa kết thúc. Vài tháng sau, tôi nhận được công việc ca hai toàn thời gian tại ASC là vận hành máy in ngoại tuyến. Các máy in này in thư rác từ các ảnh in được lưu trên băng. Công việc của tôi là nạp giấy vào máy in, nạp băng vào ổ băng, sửa lỗi kẹt giấy, ngoài ra thì chỉ cần xem máy hoạt động.
+
+Đó là năm 1970. Đại học không phải là một lựa chọn của tôi, và cũng không có bất kỳ hấp dẫn cụ thể nào. Chiến tranh Việt Nam vẫn đang hoành hành, và đại học khá hỗn loạn. Tôi đã tiếp tục đọc những cuốn sách về COBOL, Fortran, PL/1, PDP-8 và IBM 360 Assembler. Ý định của tôi là vượt qua trung học và lái xe chăm chỉ nhất có thể để có được một công việc lập trình.
