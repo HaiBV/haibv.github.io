@@ -47,3 +47,9 @@ Nhưng câu chuyện với ASC vẫn chưa kết thúc. Vài tháng sau, tôi nh
 Mười hai tháng sau tôi đã đạt được mục tiêu đó. Tôi được thăng chức thành lập trình viên toàn thời gian tại ASC. Tôi và hai người bạn tốt của mình, Richard và Tim, cùng 19 tuổi, đã làm việc với một đội gồm ba lập trình viên khác để phát triển hệ thống kế toán thời gian thực cho một công đoàn. Sử dụng Varian 620i, là một máy tính mini đơn giản có kiến trúc tương tự như PDP-8 ngoại trừ việc nó có 16-bit từ và hai thanh ghi. Ngôn ngữ được sử dụng là Assembler.
 
 Chúng tôi đã viết mọi dòng code trong hệ thống đó. Và ý tôi là _tất cả_. Chúng tôi đã phát triển hệ điều hành, đầu ngắt, trình điều khiển IO, _hệ thống tệp_ cho đĩa, bộ trao đổi lớp phủ và thậm chí cả trình liên kết tái định vị. Chưa kể tất cả code của các ứng dụng. Chúng tôi làm tất cả trong 8 tháng, làm việc 70 đến 80 giờ một tuần để đáp ứng hạn chót khủng khiếp. Lương của tôi là 7.200 đô la một năm.
+
+Sau khi bàn giao hệ thống đó. Chúng tôi nghỉ việc.
+
+Chúng tôi đột ngột nghỉ việc, và với ác ý. Như bạn thấy, sau tất cả những đóng góp đó, và sau khi cung cấp một hệ thống thành công, công ty đã tăng lương cho chúng tôi 2%. Cảm thấy bị lừa dối và lạm dụng. Một số người trong chúng tôi đã nhận việc ở nơi khác và đơn giản là nộp đơn xin nghỉ.
+
+Tuy nhiên, tôi lại thực hiện theo một cách - rất đáng tiếc - khác. Tôi cùng một người bạn xông vào văn phòng của sếp và cùng nhau bỏ việc một cách ồn ào. Điều này rất thỏa mãn về mặt cảm xúc — cho một ngày.
