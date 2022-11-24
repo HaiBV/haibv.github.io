@@ -53,3 +53,7 @@ Sau khi bàn giao hệ thống đó. Chúng tôi nghỉ việc.
 Chúng tôi đột ngột nghỉ việc, và với ác ý. Như bạn thấy, sau tất cả những đóng góp đó, và sau khi cung cấp một hệ thống thành công, công ty đã tăng lương cho chúng tôi 2%. Cảm thấy bị lừa dối và lạm dụng. Một số người trong chúng tôi đã nhận việc ở nơi khác và đơn giản là nộp đơn xin nghỉ.
 
 Tuy nhiên, tôi lại thực hiện theo một cách - rất đáng tiếc - khác. Tôi cùng một người bạn xông vào văn phòng của sếp và cùng nhau bỏ việc một cách ồn ào. Điều này rất thỏa mãn về mặt cảm xúc — cho một ngày.
+
+Tôi biết thực tế phũ phàng ngay ngày hôm sau, không có việc làm. 19 tuổi, thất nghiệp, không bằng cấp. Tôi đã phỏng vấn cho một vài vị trí lập trình viên, nhưng chúng đều diễn ra không tốt đẹp. Vì vậy, tôi phải làm việc trong cửa hàng sửa chữa máy cắt cỏ của anh rể tôi trong bốn tháng. Thật không may, tôi là một thợ sửa máy cắt cỏ tệ hại. Cuối cùng anh ấy phải cho tôi nghỉ. Tôi rơi vào một giai đoạn kinh khủng.
+
+Tôi thức đến 3 giờ sáng mỗi đêm, ăn pizza và xem những bộ phim quái vật cũ trên chiếc TV tai thỏ đen trắng cũ kỹ của bố mẹ tôi. Chỉ có những bóng ma là nhân vật trong phim. Tôi ở trên giường đến 1 giờ chiều vì tôi không muốn đối mặt với những ngày uể oải của mình. Tôi tham gia một khóa học giải tích tại một trường cao đẳng cộng đồng địa phương nhưng trượt. Tôi hoàn toàn suy sụp.
