@@ -4,7 +4,13 @@ layout: default
 
 # Chương 1 Sự chuyên nghiệp
 
-Vậy là, bạn muốn trở thành một lập trình viên phần mềm chuyên nghiệp phải không? Bạn muốn ngẩng cao đầu và nói với thế giới rằng: "Tôi là một người chuyên nghiệp?" Bạn muốn mọi người nhìn bạn với sự quý mến và đối xử với bạn một cách tôn trọng. Bạn muốn các vị phụ huynh lấy bạn ra làm gương và định hướng con cái họ trở thành người như vậy. Bạn muốn tất cả những thứ trên. Đúng chứ?
+
+![1-1](images/1-1.png)
+_Nụ cười ư, Curtin, ông bạn già. Đó là một trò đùa với chúng ta của chúa trời, hoặc của số phận, hoặc của thiên nhiên, hoặc bất cứ điều gì bạn thích. Nhưng bất cứ ai hay điều gì làm nên nó thì chắc chắn phải có khiếu hài hước! Ha!_
+
+-- Howard, Kho báu của Sierra Madre
+
+Bạn muốn trở thành một lập trình viên phần mềm chuyên nghiệp? Bạn muốn ngẩng cao đầu và nói với thế giới rằng: "Tôi là một người chuyên nghiệp!" Bạn muốn mọi người nhìn bạn và đối xử với bạn một cách tôn trọng. Bạn muốn các vị phụ huynh lấy bạn ra làm gương và định hướng con cái họ trở thành người như vậy. Bạn muốn tất cả những thứ trên. Đúng chứ?
 
 ## Cẩn thận với những gì bạn mong muốn
 
