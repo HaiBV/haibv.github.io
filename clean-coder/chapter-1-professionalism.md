@@ -54,25 +54,25 @@ Nghĩ lại thì, tôi thấy rằng việc gửi bản cập nhật đi mà kh�
 
 ## Việc đầu tiên, không gây hại
 
-Vậy thì chúng ta nhận trách nhiệm bằng cách nào? Có một số nguyên tắc được rút ra từ lời thề Hippocrate, nghe khá xa lạ nhưng liệu có nguyên tắc nào tốt hơn? Thực sự thì, bạn ko hiểu tại sao trách nhiệm và mục tiêu hàng đầu của một chuyên gia đầy tham vọng là sử dụng năng lực của mình cho mục đích tốt?
+Vậy thì chúng ta nhận trách nhiệm bằng cách nào? Có một số nguyên tắc được rút ra từ lời thề Hippocrate, nghe khá xa lạ nhưng khó tìm được nguồn nào tốt hơn? Và thực sự thì, chẳng phải trách nhiệm và mục tiêu hàng đầu của người có tham vọng trở thành chuyên gia là sử dụng năng lực của mình cho những mục đích tốt?
 
-Một lập trình viên phần mềm thì có thể gây hại gì? Từ quan điểm của phần mềm, họ có thể gây hại chả cả chức năng và cấu trúc phần mềm. Chúng ta sẽ khám phá cách tránh gây ra việc đó.
+Một lập trình viên phần mềm thì có thể gây hại gì? Từ quan điểm thuần túy của phần mềm, họ có thể gây hại cho cả chức năng và cấu trúc phần mềm. Chúng ta sẽ khám phá cách tránh những việc đó.
 
 ### Không gây hại đến hàm (function)
 
-Rõ ràng là, chúng ta muốn phần mềm hoạt động. Thực tế là, phần lớn chúng ta trở thành lập trình viên vì chúng ta đã khiến chương trình nào đó hoạt động một lần và chúng ta muốn có lại cảm giác đó. Nhưng chúng ta không phải là những người duy nhất muốn chương trình hoạt động. Khách hàng và công ty cũng muốn thế. Và trên thực tế, họ trả tiền cho chúng ta tạo ra những phần mềm hoạt động theo cách họ muốn.
+Rõ ràng là, chúng ta muốn phần mềm của mình hoạt động. Trên thực tế, phần lớn chúng ta trở thành lập trình viên vì chúng ta đã từng khiến chương trình nào đó hoạt động một lần và chúng ta lại muốn cảm giác đó thêm nữa. Nhưng chúng ta không phải là những người duy nhất muốn chương trình hoạt động. Khách hàng và công ty cũng muốn thế. Và họ trả tiền để chúng ta tạo ra những phần mềm hoạt động theo cách họ muốn.
 
 Chúng ta gây hại đến hàm của phần mềm khi chúng ta tạo ra lỗi. Vì vậy, để trở nên chuyên nghiệp, chúng ta không được tạo ra lỗi.
 
-"Nhưng đợi đã" Bạn nói "Điều đó không hợp lý. Phần mềm quá phức tạp để tạo ra mà không có lỗi".
+"Nhưng đợi đã" Tôi chắc bạn sẽ nói "Điều đó không hợp lý. Phần mềm quá phức tạp để tạo ra mà không có lỗi".
 
-Tất nhiên là bạn có quyền để lọt lỗi. Phần mềm quá phức tạp để tạo ra mà không có lỗi. Nhưng không may là điều đó không giúp bạn chối bỏ trách nhiệm. Cơ thể con người quá phức tạo để có thể hiểu được toàn bộ, nhưng các bác sỹ vẫn tuyên thệ không làm tổn hại đến chúng. Nếu họ không chối bỏ trách nhiệm, sao chúng ta có thể?
+Tất nhiên bạn cũng đúng. Phần mềm quá phức tạp để tạo ra mà không có lỗi. Nhưng không may là điều đó không giúp bạn chối bỏ trách nhiệm. Cơ thể con người quá phức tạo để có thể hiểu được toàn bộ, nhưng các bác sỹ vẫn tuyên thệ không làm tổn hại đến chúng. Nếu họ không chối bỏ trách nhiệm, sao chúng ta có thể?
 
-"Bạn đang nói rằng chúng tôi cần hoàn hảo?" Bạn đang phản đối đúng không?
+"Anh đang nói rằng chúng tôi cần phải hoàn hảo?" Bạn đang phản đối đúng không?
 
-Không, tôi đang nói với bạn rằng bạn phải chịu trách nhiệm cho sự không hoàn hảo của mình. Các lỗi chắc chắn sẽ xảy ra trong code của bạn không có nghĩa là bạn không có trách nhiệm với chúng. Nhiệm vụ viết phần mềm hoàn hảo gần như là không thể không có nghĩa là bạn không phải chịu trách nhiệm cho sự không hoàn hảo.
+Không, tôi đang nói với bạn rằng bạn phải chịu trách nhiệm cho sự không hoàn hảo của mình. Các lỗi chắc chắn sẽ xảy ra trong code của bạn không có nghĩa là bạn không có trách nhiệm với chúng. Nhiệm vụ viết phần mềm hoàn hảo gần như là không thể không có nghĩa là bạn không phải chịu trách nhiệm cho sự không hoàn hảo đó.
 
-Rất nhiều chuyên gia phải chịu trách nhiệm cho các sai sót mặc dù chúng hầu như chắc chắn xảy ra. Vì vậy, những chuyên gia đầy tham vọng của tôi, điều đầu tiên bạn cần thực hành là xin lỗi. Lời xin lỗi là cần thiết những chưa đủ. Bạn không thể tiếp tục mắc lại một lỗi hết lần này đến lần khác. Khi bạn trưởng thành trong công việc, tỷ lệ sai sót của bạn sẽ nhanh chóng giảm dần và tiệm cận 0. Nó sẽ không bao giờ về 0, nhưng bạn phải có trách nhiệm làm giảm ít nhất có thể.
+Rất nhiều chuyên gia phải chịu trách nhiệm cho các sai sót mặc dù chúng hầu như chắc chắn xảy ra. Vì vậy, những chuyên gia đầy tham vọng của tôi, điều đầu tiên bạn cần thực hành là xin lỗi. Lời xin lỗi là cần thiết những chưa đủ. Bạn không thể tiếp tục mắc lại một lỗi hết lần này đến lần khác. Khi bạn trưởng thành trong công việc, tỷ lệ sai sót của bạn sẽ nhanh chóng giảm dần và tiệm cận 0. Nó sẽ không bao giờ về 0, nhưng bạn phải có trách nhiệm giảm số lỗi xuống ít nhất có thể.
 
 ### QA sẽ không tìm thấy gì cả
 
