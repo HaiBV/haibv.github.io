@@ -76,11 +76,11 @@ Rất nhiều chuyên gia phải chịu trách nhiệm cho các sai sót mặc d
 
 ### QA sẽ không tìm thấy gì cả
 
-Khi bạn bàn giao chương trình của mình, bạn nên mong rằng QA không tìm thấy vấn đề gì. Sẽ là vô cùng thiếu chuyên nghiệp nếu bạn bàn giao chương trình cho QA mà bạn biết thừa là sẽ có lỗi. Và đoạn code nào bạn biết sẽ có lỗi? Tất cả những phần bạn không nắm rõ.
+Khi bàn giao chương trình của mình, bạn nên kỳ vọng rằng QA không tìm thấy vấn đề gì. Sẽ là vô cùng thiếu chuyên nghiệp nếu bạn bàn giao chương trình cho QA mà bạn biết thừa là sẽ có lỗi. Và đoạn code nào bạn biết sẽ có lỗi? Tất cả những phần bạn không _hiểu rõ_.
 
-Vài người coi QA là công cụ tìm lỗi. Họ bàn giao chương trình không được kiểm thử kỹ lưỡng. Họ dựa vào QA để tìm lỗi và báo lại. Trên thực tế, nhiều công ty còn thưởng cho QA dựa trên số lỗi mà họ tìm được. Càng nhiều lỗi, phần thưởng càng lớn.
+Vài người coi QA như là công cụ giúp tìm lỗi. Họ bàn giao chương trình chưa được họ kiểm thử kỹ lưỡng. Họ dựa vào QA để tìm lỗi và báo lại. Trên thực tế, nhiều công ty còn thưởng cho QA dựa trên số lỗi mà họ tìm được. Càng nhiều lỗi, phần thưởng càng lớn.
 
-Bỏ qua việc hành vi này cực kỳ tốn kém gây thiệt hại cho công ty và chương trình. Bỏ qua việc hành vi này làm hỏng lịch trình và suy giảm niềm tin của công ty với đội ngũ phát triển. Bỏ qua việc hành vi này thực sự lười biếng và vô trách nhiệm. Xét cho cùng, bàn giao cho QA chương trình mà bạn không biết có hoạt động không là rất thiếu chuyên nghiệp. Nó vi phạm nguyên tắc "không gây hại".
+Tạm bỏ qua việc hành vi này có hậu quả cực kỳ tốn kém, gây thiệt hại cho công ty và chương trình. Bỏ qua việc hành vi này làm hỏng lịch trình và suy giảm niềm tin của công ty với đội ngũ phát triển. Bỏ qua việc hành vi này thể hiện sự lười biếng và vô trách nhiệm. Xét cho cùng, bàn giao cho QA chương trình mà bạn không biết có hoạt động không là rất thiếu chuyên nghiệp. Nó vi phạm nguyên tắc "không gây hại".
 
 Vậy QA có thể tìm được lỗi không? Có thể, nên hãy sẵn sàng để xin lỗi - và sau đó tìm hiểu những tại sao những lỗi đó lại thoát được và ngăn chặn điều đó diễn ra lần sau.
 
