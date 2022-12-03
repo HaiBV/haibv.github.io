@@ -86,25 +86,25 @@ Vậy QA có thể tìm được lỗi không? Có thể, nên hãy sẵn sàng 
 
 Mỗi khi QA, hoặc tệ hơn là người dùng, tìm thấy vấn đề, bạn nên ngạc nhiên, lo lắng và quyết tâm ngăn chặn nó xảy ra một lần nữa.
 
-### Bạn phải _biết_ chương trình hoạt động
+### Bạn phải _biết_ nó hoạt động
 
-Làm sao để _biết_ code hoạt động? Dễ thôi. Test nó, test đi test lại, test lên test xuống. Test từ 7 cách đến chủ nhật!
+Làm sao để _biết_ code hoạt động? Dễ thôi. Kiểm thử nó, kiểm thử đi kiểm thử lại, kiểm thử lên kiểm thử xuống. Kiểm thử với 7 cách đến chủ nhật!
 
-Có thể bạn lo việc test quá nhiều sẽ mất rất nhiều thời gian. Trong khi bạn cần giữ đúng lịch trình và hạn chót. Nếu bạn dành tất cả thời gian để test, bạn sẽ không viết được gì cả. Câu hỏi rất hay! Giải pháp là, hãy tự động hóa nó. Viết những unit test có thể chạy ngay lập tức, và chạy chúng thường xuyên nhất có thể.
+Có thể bạn lo việc kiểm thử quá nhiều sẽ mất quá nhiều thời gian. Trong khi bạn cần giữ đúng lịch trình và hạn chót. Nếu bạn dành tất cả thời gian để kiểm thử, bạn sẽ không viết được gì khác. Rất tốt! Giải pháp là, hãy tự động hóa nó. Viết những kiểm thử đơn vị (Unit test) có thể chạy ngay lập tức, và chạy chúng thường xuyên nhất có thể.
 
-Bao nhiêu code nên được kiểm thử với những unit test tự động này? Tôi có thực sự cần trả lời câu hỏi này không? Tất cả! Tất. Cả.
+Bao nhiêu code nên được kiểm thử với những kiểm thử đơn vị tự động này? Tôi có thực sự cần trả lời câu hỏi này không? Tất cả! Tất. Cả.
 
-Tôi đang đề xuất test phủ 100% code? Không, tôi không _đề xuất_. Tôi đang _đòi hỏi_ điều đó. Tất cả mọi dòng code đều phải được test. Chấm hết.
+Tôi đang đề xuất kiểm thử sẽ bao phủ 100% code? Không, tôi không _đề xuất_. Tôi đang _yêu cầu_ điều đó. Mọi dòng code bạn viết ra đều phải được kiểm thử. Chấm hết.
 
-Nghe khá thiếu thực tế? Dĩ nhiên là không. Bạn viết code vì bạn mong đợi nó được sử dụng. Nếu bạn muốn nó được sử dụng, bạn phải _biết_ rằng nó hoạt động. Cách duy nhất để biết điều đó là test.
+Nghe khá thiếu thực tế? Dĩ nhiên là không. Bạn viết code vì bạn mong đợi nó được sử dụng. Nếu bạn muốn nó được sử dụng, bạn phải _biết_ rằng nó hoạt động. Cách duy nhất để biết điều đó là kiểm thử nó.
 
-Tôi là một thành viên chính của dự án mã nguồn mở có tên FitNesse. Tính đến thời điểm viết những dòng này, FitNesse có khoảng 60 ksloc ((1000)K Source Lines of Code). Trong đó có 26 ksloc được tạo nên bởi hơn 2000 unit test. EMMA (a free Java code coverage tool) thông kê độ phủ của hơn 2000 unit test là khoảng 90%.
+Tôi là một thành viên chính của dự án mã nguồn mở có tên FitNesse. Tính đến thời điểm viết những dòng này, FitNesse có khoảng 60 ksloc ((1000)K Source Lines of Code). Trong đó có 26 ksloc được tạo nên bởi hơn 2000 kiểm thử đơn vị. EMMA (công cụ miễn phí bằng Java đo lường độ bao phủ) thống kê độ bao phủ của hơn 2000 kiểm thử đơn vị đó là khoảng 90%.
 
-Tại sao không phủ được nhiều hơn? EMMA không thể nhìn thấy được tất cả các dòng code đang được thực thi! Tôi tin rằng độ phủ còn cao hơn thế nhiều. Liệu có đến 100%? Không, nhưng sẽ phải tiệm cận 100%.
+Tại sao phạm vi bao phủ không nhiều hơn? EMMA không thể nhìn thấy được tất cả các dòng code đang được thực thi! Tôi tin rằng độ phủ còn cao hơn thế nhiều. Liệu có đến 100%? Không, nhưng sẽ tiệm cận 100%.
 
-Nhưng sẽ có một vài đoạn code rất khó kiểm thử? Có, nhưng chỉ khi đoạn code đó được _thiết kế_ để khó kiểm thử. Cách tốt nhất để làm điều đó là viết kiểm thử trước khi viết code vượt qua chúng.
+Nhưng sẽ có một vài đoạn code rất khó kiểm thử? Có, nhưng chỉ khi đoạn code đó được _thiết kế_ để khó kiểm thử. Giải pháp cho điều đó là thiết kế code của bạn để dễ kiểm thử. Và cách tốt nhất để làm điều đó là viết kiểm thử trước khi viết code vượt qua chúng.
 
-Đây là một quy chuẩn được biết đến với cái tên Test Driven Development (TDD), sẽ được nói rõ hơn ở chương sau.
+Đây là một quy chuẩn được biết đến với cái tên Phát triển Định hướng Kiểm thử (Test Driven Development - TDD), sẽ được nói rõ hơn ở chương sau.
 
 ### Tự động hóa QA
 
