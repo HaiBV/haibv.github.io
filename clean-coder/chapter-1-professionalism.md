@@ -108,7 +108,7 @@ Nhưng sẽ có một vài đoạn code rất khó kiểm thử? Có, nhưng ch�
 
 ### Tự động hóa QA
 
-Toàn bộ quy trình QA cho FitNesse bao gồm việc chạy unit test và kiểm thử chấp nhận (Acceptance Tests). Khi vượt qua quy trình này, tôi bàn giao chương trình. Có thể thấy quy trình QA của tôi mất khoảng 3 phút và tôi có thể thực hiện nó tùy ý.
+Toàn bộ quy trình QA cho FitNesse bao gồm việc chạy kiểm thử đơn vị và kiểm thử chấp nhận (Acceptance Tests). Khi vượt qua quy trình này, tôi bàn giao chương trình. Điều đó có nghĩa là quy trình QA của tôi mất khoảng 3 phút và tôi có thể thực hiện nó tùy ý.
 
 Thực tế thì, không có ai chết nếu có FitNesse có lỗi, cũng chẳng có ai mất hàng triệu đô la. Nhưng FitNesse có hàng nghìn người dùng với số lỗi rất nhỏ.
 
