@@ -114,11 +114,11 @@ Thực tế thì, không có ai chết nếu có FitNesse có lỗi, cũng chẳ
 
 Chắc chắn là một số hệ thống có những nhiệm vụ quan trọng đến mức những kiểm thử tự động không thể xác định mức độ sẵn sàng đưa vào sử dụng. Tuy nhiên, bạn - với cương vị là một lập trình viên - cần một cơ chế tương đối nhanh chóng và tin cậy để biết rằng code của bạn hoạt động và không ảnh hưởng đến phần còn lại của hệ thống. Vì vậy, ít nhất, những kiểm thử tự động của bạn sẽ cho bạn biết hệ thống có _khả năng cao_ vượt qua QA.
 
-### Không ảnh hưởng đến cấu trúc
+### Không hại đến cấu trúc
 
-Người thực sự chuyên nghiệp biết rằng cung cấp một chức năng làm ảnh hưởng tới cấu trúc là một lỗi ngớ ngẩn. Chính cấu trúc code của bạn cho phép nó linh hoạt. Nếu bạn thỏa hiệp với cấu trúc, bạn thỏa hiệp với tương lai.
+Người thực sự chuyên nghiệp biết rằng cung cấp một chức năng làm ảnh hưởng tới cấu trúc là một lỗi ngớ ngẩn. Cấu trúc code của bạn cần phải linh hoạt. Nếu bạn làm tổn hại đến cấu trúc, sẽ là hậu quả xấu trong tương lai.
 
-Giả thiết ngầm cơ bản của tất cả dự án phần mềm là phần mềm đó dễ dàng thay đổi. Nếu bạn vi phạm giả thiết này bằng cách tạo ra các cấu trúc không linh hoạt, thì bạn đã cắt xén mô hình kinh tế mà toàn bộ ngành công nghiệp này dựa vào.
+Tiền đề căn bản cho tất cả các dự án phần mềm là chúng phải dễ dàng thay đổi. Nếu bạn vi phạm tiền đề khi tạo ra các cấu trúc không linh hoạt, thì bạn đã cắt xén mô hình kinh tế mà toàn bộ ngành công nghiệp này dựa vào.
 
 Tóm lại: _Bạn phải thực hiện những thay đổi với ảnh hưởng nhỏ nhất đến cấu trúc_
 
@@ -126,7 +126,7 @@ Không may là, có quá nhiều dự án sa lầy với một cấu trúc kém.
 
 Hầu hết những bài viết về nguyên tắc và nguyên mẫu thiết kế phần mềm đều hỗ trợ cho tính linh hoạt và dễ bảo trì của cấu trúc. Những lập trình viên chuyên nghiệp ghi nhớ điều này và cố gắng tuân thủ chúng. Nhưng có một mẹo nhỏ mà rất ít người làm theo: _Nếu bạn muốn phần mềm của mình linh hoạt, chính bạn phải làm nó linh hoạt._
 
-Cách duy nhất để chứng minh chương trình của bạn dễ thay đổi là làm nó dễ thay đổi. Và khi bạn thấy có sự thay đổi không dễ như bạn nghĩ, tinh chỉnh lại thiết kế để dễ thay đổi hơn về sau.
+Cách duy nhất để chứng minh chương trình của bạn dễ thay đổi là thực hiện những thay đổi dễ dàng với nó. Và khi bạn thấy có sự thay đổi không dễ như bạn nghĩ, tinh chỉnh lại thiết kế để dễ thay đổi hơn về sau.
 
 Khi nào bạn thực hiện những tinh chỉnh này? _Mọi lúc!_ Bất kỳ khi nào bạn nhìn vào một module, bạn thực hiện những thay đổi nhỏ, nhẹ để cải thiện cấu trúc của nó. Mỗi khi mà bạn đọc code, bạn lại điều chỉnh cấu trúc.
 
@@ -134,9 +134,9 @@ Triết lý này đôi khi được gọi là _tái cấu trúc không thương 
 
 Điều này hoàn toàn trái ngược với cách mà hầu hết mọi người nghĩ về phần mềm. Họ nghĩ rằng việc thực hiện những thay đổi liên tục đói với phần mềm đang hoạt động là _rất nguy hiểm_. Không! Điều nguy hiểm là để cho phần mềm ở trạng thái tĩnh. Nếu bạn không uốn nắn nó, khi đến thời điểm bạn cần thay đổi, bạn sẽ thấy rất cứng ngắc.
 
-Tại sao phần lớn lập trình viên đều sợ những thay đổi liên tục trong code của họ? Họ lo sợ họ sẽ phá vỡ nó! Tại sao họ lại lo sợ sẽ phá vỡ nó? Bởi vì họ không có những kiểm thử.
+Tại sao phần lớn lập trình viên đều sợ những thay đổi liên tục trong code của họ? Họ lo sợ họ sẽ phá vỡ nó! Và tại sao họ lại lo sợ sẽ phá vỡ nó? Bởi vì họ không có những kiểm thử.
 
-Tất cả quay trở lại với những kiểm thử. Nếu bạn có một bộ kiểm thử tự động phủ gần như 100% code, và nếu nó được thực thi nhanh chóng tùy theo ý bạn, khi đó _bạn đơn giản là sẽ không ngại thay đổi code nữa_. Làm thế nào dể bạn chứng minh rằng bạn không sợ thay đổi code? Bạn thay đổi nó mọi lúc.
+Tất cả quay trở lại với những kiểm thử. Nếu bạn có một bộ kiểm thử tự động bao phủ gần như 100% code, và nếu nó được thực thi nhanh chóng tùy theo ý bạn, khi đó _bạn đơn giản là sẽ không ngại thay đổi code nữa_. Làm thế nào dể bạn chứng minh rằng bạn không sợ thay đổi code? Bạn thay đổi nó mọi lúc.
 
 Những lập trình viên chuyên nghiệp nắm rõ về code và kiểm thử của họ đến mức họ cảm thấy bình thường _kinh khủng_ khi thực hiện những thay đổi ngẫu nhiên và cơ hội. Họ sẽ thay đổi tên một class, theo ý thích. Họ sẽ thấy một phương thức dài khi đọc một module và phân chia lại nó như một việc tất nhiên. Họ sẽ thay đổi một câu lệnh switch thành triển khai đa hình, hoặc thu gọn hệ thống phân cấp kế thừa thành một chuỗi các câu lệnh. Tóm lại, họ xử lý phần mềm như cách một nhà điêu khắc xử lý đất sét - liên tục tạo hình và nhào nặn sản phẩm của mình.
 
