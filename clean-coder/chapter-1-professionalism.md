@@ -198,11 +198,11 @@ Bạn có đến khám một vị bác sỹ không cập nhật các tạp chí 
 
 ### Luyện tập
 
-Người chuyên nghiệp luôn luyện tập. Người thực sự chuyên nghiệp làm việc chăm chỉ để giữ cho các kỹ năng của họ luôn sắc bén và sẵn sàng. Sẽ là chưa đủ nếu chỉ làm những công việc đơn giản hàng ngày và gọi đó là luyện tập. Làm công việc hàng ngày là nhiệm vụ, không phải luyện tập. Luyện tập là khi cụ thể hóa các kỹ năng của mình ngoài việc thực hiện nhiệm vụ trong công việc của bạn, với mục đích duy nhất là hoàn thiện và nâng cao các kỹ năng đó.
+Người chuyên nghiệp luôn luyện tập. Người thực sự chuyên nghiệp làm việc chăm chỉ để giữ cho các kỹ năng của họ luôn sắc bén và sẵn sàng. Sẽ là chưa đủ nếu chỉ làm những công việc đơn giản hàng ngày và gọi đó là luyện tập. Làm công việc hàng ngày là nhiệm vụ, không phải luyện tập. Luyện tập là khi cụ thể hóa các kỹ năng của mình _ngoài việc_ thực hiện nhiệm vụ trong công việc của bạn, với mục đích duy nhất là hoàn thiện và nâng cao các kỹ năng đó.
 
 Điều này có ý nghĩa là gì với việc luyện tập của lập trình viên phần mềm? Thoạt nghe khái niệm này có vẻ vô lý. Nhưng hãy dừng lại suy nghĩ một chút. Hãy xem cách các nhạc sỹ làm chủ kỹ năng của họ. Không phải qua biểu diễn. Mà qua luyện tập. Và họ luyện tập như thế nào? Trong rất nhiều thứ, họ có các bài tập đặc biệt mà họ thực hiện. Âm giai (scale), khúc luyện (etudes) và chạy (runs). Họ làm đi làm lại những việc này để rèn luyện các ngón tay và tâm trí, cũng như sự thành thạo các kỹ năng của họ.
 
-Vậy các lập trình viên phần mềm làm gì để luyện tập? Có riêng một chương trong cuốn sách này dành riêng cho các kỹ thuật luyện tập khác nhau, vì vậy tôi sẽ không đi sâu vào chi tiết ở đây. Một kỹ thuật tôi thường sử dụng là lặp đi lặp lại các bài tập đơn giản như Bowling Game hoặc Số nguyên tố. Tôi gọi chúng là _kata_. Có rất nhiều _kata_ để lựa chọn.
+Vậy các lập trình viên phần mềm làm gì để luyện tập? Có riêng một chương trong cuốn sách này dành riêng cho các kỹ thuật luyện tập khác nhau, vì vậy tôi sẽ không đi sâu vào chi tiết ở đây. Một kỹ thuật tôi thường sử dụng là lặp đi lặp lại các bài tập đơn giản như Bowling Game hoặc Số nguyên tố. Tôi gọi chúng là _kata_. Có rất nhiều kata để lựa chọn.
 
 Một kata thường bắt nguồn từ việc giải quyết một bài toàn lập trình đơn giản, chẳng hạn như viết hàm tính các thừa só nguyên tố của một số nguyên. Quan điểm của việc thực hiện kata không phải là tìm ra cách giải quyết bài toán, bạn chắc đã biết điều đó rồi. Mục đích của kata là rèn luyện các ngón tay và trí não của bạn.
 
@@ -212,7 +212,7 @@ Hãy coi kata như một bài tập khởi động 10 phút buổi sáng và 10 
 
 ### Cộng tác
 
-Cách tốt nhất thứ 2 để học là cộng tác với những người khác. Những lập trình viên phần mềm chuyên nghiệp dành nỗ lực đặc biệt để cùng lập trình, cùng luyện tập, thiết kế và lập kế hoạch. Bằng cách đó, họ có thể học hỏi được nhiều điều từ nhau và hoàn thành công việc nhanh hơn, ít lỗi hơn.
+Cách tốt nhất thứ 2 để học là cộng tác với người khác. Những lập trình viên phần mềm chuyên nghiệp dành nỗ lực đặc biệt để lập trình cùng nhau, luyện tập cùng nhau, thiết kế và lập kế hoạch cùng nhau. Bằng cách đó, họ có thể học hỏi được nhiều điều từ nhau và hoàn thành công việc nhanh hơn, ít lỗi hơn.
 
 Điều đó không có nghĩa là bạn phải dành 100% thời gian làm việc với những người khác. Thời gian một mình cũng rất quan trọng. Tôi rất thích làm việc với người khác, nhưng tôi sẽ phát điên lên nếu thỉnh thoảng không thể làm việc một mình.
 
