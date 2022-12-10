@@ -218,9 +218,9 @@ Cách tốt nhất thứ 2 để học là cộng tác với người khác. Nh�
 
 ### Cố vấn
 
-Cách tốt nhất để học là dạy. Không gì có thể nhồi vào đầu bạn những dữ kiện và giá trị nhanh hơn và khó hơn việc phải truyền đạt chúng cho những người mà bạn có trách nhiệm. Vì vậy, lợi ích của việc giảng dạy là một đặc ân của giáo viên.
+Cách tốt nhất để học là dạy. Không gì có thể nhồi vào đầu bạn những dữ kiện và giá trị nhanh hơn và khó hơn việc phải truyền đạt chúng cho những người mà bạn có trách nhiệm hướng dẫn. Vì vậy, lợi ích của việc giảng dạy là một đặc ân của giáo viên.
 
-Tương tự, không có cách nào tốt hơn để đữa những người mới vào một tổ chức hơn là ngồi xuống và chỉ cho họ những sợi dây. Các chuyên gia chịu trách nhiệm cá nhân trong việc kèm cặp đàn em. Họ sẽ không để cho một đàn em than vãn về việc không được giám sát.
+Tương tự, để giúp những người mới gia nhập tổ chức, không có cách nào tốt hơn là ngồi xuống và chỉ cho họ cách mọi thứ hoạt động. Các chuyên gia chịu trách nhiệm cá nhân trong việc kèm cặp đàn em. Họ sẽ không để cho một đàn em than vãn về việc không được giám sát.
 
 ### Hiểu được lĩnh vực của bạn
 
@@ -242,8 +242,8 @@ Lập trình là một công việc sáng tạo. Khi chúng ta viết code, chú
 
 Các chuyên gia biết họ kiêu ngạo và không khiêm tốn vô lý. Một chuyên gia biết công việc của mình và tự hào về nó. Một chuyên gia tự tin vào khả năng của mình, chấp nhận rủi ro một cách táo bạo và có tính toán dựa trên sự tự tin đó. Một chuyên gia không được rụt rè.
 
-Tuy nhiê, một chuyên gia cũng biết rằng sẽ có lúc mình thất bại, tính toán rủi ro của anh ta sẽ sai, các kỹ năng không đủ đáp ứng. Anh ta sẽ nhìn vào gương và nhìn thấy một kẻ ngốc kiêu ngạo đang nhìn lại.
+Tuy nhiên, họ cũng biết rằng sẽ có lúc mình thất bại, tính toán rủi ro của anh ta sẽ sai, các kỹ năng không đủ đáp ứng. Anh ta sẽ nhìn vào gương và nhìn thấy một kẻ ngốc kiêu ngạo đang nhìn lại.
 
-Vì vậy, khi một chuyên gia thấy mình như một trò đùa, anh ta sẽ là người đầu tiên cười. Anh ta sẽ không bao giờ chế giễu người khác, nhưng sẽ chấp nhận chế giễu khi nó xứng đán và người nhạo khi điều đó không xứng đáng. Anh ta sẽ không hạ thấp người khác khi họ mắc sai lầm vì anh ta biết mình có thể là người tiếp theo.
+Vì vậy, khi một chuyên gia thấy mình như một trò đùa, anh ta sẽ là người đầu tiên cười. Anh ta sẽ không bao giờ chế giễu người khác, nhưng sẽ chấp nhận chế giễu khi nó xứng đáng và cười nhạo khi điều đó không xứng đáng. Anh ta sẽ không hạ thấp người khác khi họ mắc sai lầm vì anh ta biết mình có thể là người tiếp theo.
 
 Một chuyên gia hiểu rõ sự kiêu ngạo của mình. và số phận cuối cùng cũng sẽ nhận thấy và cân bằng chúng. Và khi mục tiêu đó liên kết lại, điều tốt nhất bạn có thể làm theo là nghe theo lời khuyên của Howard: Cười.
