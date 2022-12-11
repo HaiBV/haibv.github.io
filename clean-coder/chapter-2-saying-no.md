@@ -4,21 +4,22 @@ layout: default
 
 # Chương 2 Phản đối (Saying No)
 
+![2-1](images/2-1.png)
 Làm, hoặc không làm. Không có cố gắng (Do; or do not. There is no trying) - Yoda
 
-Những năm đầu thập kỷ 70, tôi lúc đó 19 tuổi, cùng với 2 người bạn đang làm việc tại một hệ thống kế toán thời gian thực cho Teamster's union ở Chicago, tên công ty là ASC. Nếu bạn đã nghe thấy cái tên Jimmy Hoffa, đúng vậy. Bạn không nên đùa với teamsters vào năm 1971.
+Những năm đầu thập kỷ 70, tôi cùng với 2 người bạn lúc đó 19 tuổi, đang làm việc tại một hệ thống kế toán thời gian thực của hiệp hội Teamster ở Chicago, tên công ty là ASC. Nếu điều này gợi nhớ đến cái tên Jimmy Hoffa, thì đúng vậy. Bạn không nên đùa với teamsters vào năm 1971.
 
-Hệ thống của chúng thôi cần phải go live vào một ngày xác định. Rất nhiều tiền được đổ vào đó. Đội của chúng tôi phải làm việc 60, 70 và 80 giờ một tuần để giữ đúng lịch trình.
+Hệ thống của chúng thôi cần phải đưa vào vận hành vào một ngày xác định. _Rất nhiều_ tiền được đổ vào ngày đó. Đội của chúng tôi phải làm việc 60, 70 và 80 giờ một tuần để giữ đúng lịch trình.
 
-Một tuần trước ngày go-live, cuối cùng thì chúng tôi đã có thể hoàn thiện toàn bộ hệ thống. Có rất nhiều lỗi và vấn đề cần giải quyết, và chúng tôi đã điên cuồng làm việc với danh sách này. Chẳng còn thời gian để ăn và ngủ chứ đừng nói đến suy nghĩ.
+Cuối cùng, một tuần trước hạn chót, chúng tôi đã hoàn thiện toàn bộ hệ thống. Có rất nhiều lỗi và vấn đề cần giải quyết, và chúng tôi đã điên cuồng làm việc với danh sách này. Gần như không có thời gian để ăn và ngủ chứ đừng nói đến suy nghĩ.
 
-Frank, quản lý ở ASC, là một đại tá không quân về hưu. Ông ta là kiểu quản lý sẽ quát thẳng vào mặt bạn. Mọi thứ phải là đường của ông ta hoặc đường cao tốc, và ông ta sẽ đưa bạn vào đường cao tốc bằng cách trả bạn từ độ cao 10000 feet mà không có dù. Chúng tôi, những đứa nhóc 19 tuổi, hiếm khi có thể nhìn thẳng vào mắt ông ta.
+Frank, giám đốc ở ASC, là đại tá không quân đã về hưu. Ông ta là kiểu quản lý sẽ quát thẳng vào mặt bạn. Mọi thứ phải là đường của ông ta hoặc đường cao tốc, và ông ta sẽ đưa bạn vào đường cao tốc bằng cách trả bạn từ độ cao 10000 feet mà không có dù. Chúng tôi, những đứa nhóc 19 tuổi, hầu như không thể nhìn thẳng vào mắt ông ta.
 
-Frank yêu cầu mọi việc phải hoàn thành trước hạn. Đó là tất cả những gì cần có. Khi ngày đó đến, và chúng tôi sẽ hoàn thành. Đúng thời điểm. Không bàn cãi. Chấm hết.
+Frank yêu cầu mọi việc phải hoàn thành đúng hạn. Đó là tất cả những gì cần làm. Khi thời hạn đó đến, chúng tôi sẽ hoàn thành. Không thảo luận. Không bàn cãi. Chấm hết.
 
-Quản lý của tôi, Bill, là một người dễ mến. Anh ta đã làm việc với Frank trong một vài năm và hiểu với Frank điều gì là có thể và điều gì không thể. Anh ta nói với chúng tôi mọi thứ cần go live đúng ngày, bất kể thế nào.
+Quản lý của tôi, Bill, là một người dễ mến. Anh ta đã làm việc với Frank trong vài năm và hiểu với Frank điều gì là có thể và điều gì không thể. Anh ta nói với chúng tôi mọi thứ cần đưa vào vận hành đúng ngày, bất kể thế nào.
 
-Vì vậy, chúng tôi go live đúng ngày. Và nó là một thảm họa kinh hoàng.
+Vì vậy, chúng tôi đưa vào vận hành đúng ngày. Và nó là một thảm họa kinh hoàng.
 
 Có hàng tá máy 300-baud, thiết bị đầu cuối bán song công, kết nối từ trụ sở chính của Teamster ở Chicago đến máy của chúng tôi ở vùng ngoại ô 30 dặm về phía bắc. Mỗi thiết bị đó đều bị tê liệt 30 phút hoặc lâu hơn. Chúng tôi đã từng gặp sự cố này trước đây nhưng chưa mô phỏng lưu truy cập khi mà một loạt nhân viên nhập dữ liệu đột ngột truy cập vào hệ thống.
 
