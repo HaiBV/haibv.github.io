@@ -21,19 +21,19 @@ Quản lý của tôi, Bill, là một người dễ mến. Anh ta đã làm vi�
 
 Vì vậy, chúng tôi đưa vào vận hành đúng ngày. Và nó là một thảm họa kinh hoàng.
 
-Có hàng tá máy 300-baud, thiết bị đầu cuối bán song công, kết nối từ trụ sở chính của Teamster ở Chicago đến máy của chúng tôi ở vùng ngoại ô 30 dặm về phía bắc. Mỗi thiết bị đó đều bị tê liệt 30 phút hoặc lâu hơn. Chúng tôi đã từng gặp sự cố này trước đây nhưng chưa mô phỏng lưu truy cập khi mà một loạt nhân viên nhập dữ liệu đột ngột truy cập vào hệ thống.
+Có hàng tá máy 300-baud, thiết bị đầu cuối bán song công, kết nối từ trụ sở chính của Teamster ở Chicago đến máy của chúng tôi ở vùng ngoại ô cách đó 30 dặm về phía bắc. Mỗi thiết bị đầu cuối đó đều bị tê liệt sau mỗi 30 phút hoặc lâu hơn. Chúng tôi đã từng gặp sự cố này trước đây nhưng chưa mô phỏng lại lưu lượng truy cập khi hàng loạt nhân viên nhập liệu đột ngột vào hệ thống.
 
-Tệ hơn nữa, những băng giấy được in từ máy ASR35 cũng kết nối với hệ thống của chúng tôi bằng đường dây điện thoại 110-baud cũng dừng lại khi đang in.
+Tệ hơn nữa, những băng giấy được in từ máy ASR35, kết nối với hệ thống của chúng tôi bằng đường dây điện thoại 110-baud, cũng dừng lại khi đang in.
 
-Giải pháp cho việc tê liệt là khởi động lại. Vì vậy họ phải yêu cầu những ai còn làm việc với máy đang hoạt động hoàn thành công việc và dừng lại. Khi tất cả đã dừng lại, họ thông báo cho chúng thôi khởi động lại hệ thống. Những máy bị tê liệt sẽ bắt đầu công việc lại từ đầu. Và việc này tái diễn nhiều hơn 1 lần trong vòng 1 giờ.
+Giải pháp cho những lần tê liệt này là khởi động lại. Vì vậy họ phải yêu cầu những máy đang hoạt động nhanh chóng hoàn thành công việc và dừng lại. Khi tất cả đã dừng lại, họ thông báo cho chúng tôi khởi động lại hệ thống. Những máy bị tê liệt sẽ bắt đầu công việc lại từ đầu. Và việc này tái diễn nhiều hơn 1 lần mỗi giờ.
 
-Sau nửa ngày như vậy, quản lý văn phòng tại Teamster bảo chúng tôi tắt hệ thống đi và không hoạt động lại cho đến khi mọi thứ hoạt động ổn định. Trong khi đó, họ sẽ mất nửa ngày làm việc và cần phải sử dụng hệ thống cũ để nhập lại mọi thứ.
+Sau nửa ngày như vậy, quản lý văn phòng tại Teamster yêu cầu chúng tôi tắt hệ thống đi và không mở lại cho đến khi mọi thứ hoạt động ổn định. Trong khi đó, họ sẽ bỏ đi nửa ngày làm việc và phải sử dụng hệ thống cũ để nhập lại mọi thứ.
 
-Chúng tôi nghe thấy tiếng rên rỉ và gào thét của Frank vang lên khắp tòa nhà. Họ bàn bạc rất, rất lâu. Sau đó Bill và phân tích hệ thống Jalil đến gặp chúng tôi và hỏi khi nào chúng tôi có thể làm cho hệ thống hoạt động ổn định. Tôi nói, "4 tuần".
+Chúng tôi nghe thấy tiếng rên rỉ và gào thét của Frank vang lên khắp tòa nhà. Họ bàn bạc rất, rất lâu. Sau đó Bill và phân tích hệ thống Jalil đến gặp chúng tôi và hỏi khi nào chúng tôi có thể làm cho hệ thống hoạt động ổn định. Tôi trả lời, "4 tuần".
 
 Khuôn mặt họ chuyển từ kinh hãi sang quyết tâm. "Không", họ nói, "nó phải chạy được vào thứ 6";
 
-Nên tôi trả lời: "Nhìn xem, chúng ta vừa mới có hệ thống này để giải quyết công việc vào tuần trước. Chúng ta cần ngồi xuống và giải quyết những rắc rối và vấn đề gặp phải. Chúng ta cần 4 tuần".
+Nên tôi trả lời: "Nhìn xem, hệ thống mới đưa vào hoạt động vào tuần trước. Chúng ta phải giải quyết những rắc rối và vấn đề gặp phải. Chúng ta cần 4 tuần".
 
 Nhưng Bill và Jalil vẫn cương quyết. "Không, nó phải chạy được vào thứ 6. Ít nhất hãy thử cố một lần xem?"
 
