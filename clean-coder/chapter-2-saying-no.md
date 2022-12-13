@@ -39,7 +39,7 @@ Nhưng Bill và Jalil vẫn cương quyết. "Không, nó phải chạy được
 
 Sau đó trưởng nhóm chúng tôi nói: "OK, chúng tôi sẽ cố".
 
-Thứ 6 là một lựa chọn tốt, lượng tải vào cuối tuần thấp hơn nhiều. Chúng tôi có thể tìm ra nhiều vấn đề và chỉnh sửa chúng trước thứ 2. Tuy nhiên, mọi thứ lại sụp đổ một lần nữa. Hệ thống vẫn bị tê liệt 1 hoặc 2 lần trong ngày. Có cả những vấn đề khác nữa. Nhưng dần dần, sau một vài tuần, chúng tôi đưa được hệ thống về mức ổn định, và cuộc sống bình thường có vẻ thực sự diễn ra.
+Thứ 6 là một lựa chọn tốt, lượng tải vào cuối tuần thấp hơn nhiều. Chúng tôi có thể tìm ra thêm vài vấn đề và chỉnh sửa chúng trước thứ 2. Tuy nhiên, mọi thứ lại sụp đổ một lần nữa. Hệ thống vẫn bị tê liệt 1 hoặc 2 lần một ngày. Có cả những vấn đề khác nữa. Nhưng dần dần, sau một vài tuần, chúng tôi đưa được hệ thống về mức ổn định, và cuộc sống bình thường có vẻ thực sự diễn ra.
 
 Và sau đó, như tôi đã nói với bạn ở phần giới thiệu, tất cả chúng tôi đều nghỉ việc. Và họ đã bị bỏ lại với một cuộc khủng hoảng thực sự. Họ đã phải thuê một loạt lập trình viên mới để cố gắng giải quyết vấn lượng tải khổng lồ từ khách hàng.
 
@@ -47,11 +47,11 @@ Chúng ta có thể đổ lỗi thất bại này cho ai? Rõ ràng, kiểu qu�
 
 Người chuyên nghiệp nói lên sự thật với quyền lực. Người chuyên nghiệp đủ can đảm để nói không với quản lý của họ.
 
-Làm thế nào bạn nói "không" với sếp của bạn? Sau tất cả, đó là sếp của bạn! Bạn không phải làm theo những gì họ nói?
+Làm thế nào bạn nói "không" với sếp của bạn? Sau tất cả, đó là _sếp_ của bạn! Bạn không phải làm theo những gì họ nói sao?
 
 Không, nếu bạn là một người chuyên nghiệp.
 
-Nô lệ không được phép nói không. Người lao động có thể do dự khi nói không. Nhưng những người chuyên nghiệp phải biết nói không. Thật vậy, những nhà quản lý giỏi luôn khát khao có một người đủ can đảm để từ chối. Đó là cách duy nhất bạn thực sự có thể hoàn thành mọi việc.
+Nô lệ không được phép nói không. Người lao động có thể do dự khi nói không. Nhưng những người chuyên nghiệp phải biết nói không. Sự thật là, những nhà quản lý giỏi luôn khát khao có một người đủ can đảm để từ chối. Đó là cách duy nhất bạn thực sự có thể hoàn thành mọi việc.
 
 ## Vai trò đối đầu
 
