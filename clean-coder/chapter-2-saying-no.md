@@ -55,13 +55,13 @@ Nô lệ không được phép nói không. Người lao động có thể do d�
 
 ## Vai trò đối đầu
 
-Một trong những người đánh giá cuốn sách thực sự ghét chính chương này. Anh ấy nói rằng nó suýt khiến anh phải bỏ cuốn sách xuống. Anh ta đã xây dựng những đội nhóm không có mối quan hệ đối đầu nào; những đội nhóm đó làm việc với nhau rất hòa hợp và không hề có bất đồng.
+Một trong những người đánh giá cuốn sách thực sự ghét chính chương này. Anh ấy nói rằng nó gần như khiến mình phải đặt cuốn sách xuống. Anh ấy đã xây dựng những đội nhóm không có mối quan hệ đối đầu nào; những đội nhóm đó làm việc với nhau rất hòa hợp và không hề có bất đồng.
 
-Tôi lấy làm hạnh phúc cho anh ta, nhưng tôi tự hỏi liệu những đội nhóm đó có thực sự không tồn tại bất đồng như anh ta vẫn nghĩ. Và nếu vậy, tôi tự hỏi liệu họ có hiệu quả như họ nghĩ không. Kinh nghiệm của riêng tôi là các quyết định khó khăn được quyết định tốt nhất thông qua việc đối đầu với các vai trò đối địch.
+Tôi lấy làm hạnh phúc cho anh ta, nhưng tôi tự hỏi liệu những đội nhóm đó có thực sự không tồn tại bất đồng như anh ta vẫn nghĩ. Và nếu vậy, tôi tự hỏi liệu họ có hiệu quả như họ nghĩ không. Kinh nghiệm của riêng tôi là các quyết định khó khăn được quyết định tốt nhất thông qua sự đối đầu của các vai trò đối địch.
 
-Quản lý là những người có 1 việc để làm, và phần lớn họ biết cách làm khá tốt tốt công việc đó. Một phần của công việc là theo đuổi và bảo vệ mục tiêu của họ một cách quyết liệt nhất có thể.
+Quản lý là những người có việc phải làm, và phần lớn họ biết cách làm khá tốt tốt công việc đó. Một phần của công việc là theo đuổi và bảo vệ mục tiêu của họ một cách quyết liệt nhất có thể.
 
-Nhưng mặt khác, lập trình viên cũng là những người có 1 việc để làm, và phần lớn họ biết cách hoàn thành khá tốt công việc đó. Nếu họ là người chuyên nghiệp, họ sẽ theo đuổi và bảo vệ mục tiêu _của họ_ một cách quyết liệt nhất có thể.
+Nhưng mặt khác, lập trình viên cũng là những người có  việc phải làm, và phần lớn họ biết cách hoàn thành khá tốt công việc đó. Nếu họ là người chuyên nghiệp, họ sẽ theo đuổi và bảo vệ mục tiêu _của họ_ một cách quyết liệt nhất có thể.
 
 Khi quản lý của bạn nói với bạn rằng trang đăng nhập cần sẵn sàng vào ngày mai, anh ta đang theo đuổi và bảo vệ một trong những mục tiêu của mình. Anh ta đang làm công việc của mình. Nếu bạn biết chắc rằng hoàn thành trang đăng nhập vào ngày mai là không thể, vậy thì bạn đang không làm tốt công việc của mình nếu bạn nói "OK, tôi sẽ cố". Cách duy nhất để thực hiện công việc của bạn, tại thời điểm đó, là nói "Không, điều đó là không thể".
 
