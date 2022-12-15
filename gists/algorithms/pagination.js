@@ -1,7 +1,7 @@
-function pagination(c, m) {
+function pagination(c, m, d = 1) {
   let current = c,
     last = m,
-    delta = 0,
+    delta = d,
     left = current >= last - delta - 1 ? last - 2 * (delta + 1) : current - delta,
     right = current <= delta + 2 ? 2 * (delta + 2) : current + delta + 1,
     range = [],
@@ -9,8 +9,12 @@ function pagination(c, m) {
 
   for (let i = 1; i <= last; i++) {
     if (i == 1 || i == last || (i >= left && i < right)) {
-      if (l && i - l > 1) {
-        range.push("...");
+      if (l) {
+        if (i - l === 2) {
+          range.push(l + 1);
+        } else if (i - l !== 1) {
+          range.push("...");
+        }
       }
       range.push(i);
       l = i;
@@ -20,8 +24,15 @@ function pagination(c, m) {
   return range;
 }
 
-for (let i = 1, l = 10; i <= l; i++) {
-  console.log(`Selected page ${i}:`, pagination(i, l));
+for (let l = 1; l <= 10; l++) {
+	console.log(`Total page = ${l}`)
+	for (let i = 1; i <= l; i++) {
+		console.log(`Selected page ${i}:`, pagination(i, l, 0));
+	}
+
+	for (let i = 1; i <= l; i++) {
+		console.log(`Selected page ${i}:`, pagination(i, l));
+	}
 }
 
 /*

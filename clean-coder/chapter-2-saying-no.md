@@ -63,7 +63,7 @@ Quản lý là những người có việc phải làm, và phần lớn họ bi
 
 Nhưng mặt khác, lập trình viên cũng là những người có  việc phải làm, và phần lớn họ biết cách hoàn thành khá tốt công việc đó. Nếu họ là người chuyên nghiệp, họ sẽ theo đuổi và bảo vệ mục tiêu _của họ_ một cách quyết liệt nhất có thể.
 
-Khi quản lý của bạn nói với bạn rằng trang đăng nhập cần sẵn sàng vào ngày mai, anh ta đang theo đuổi và bảo vệ một trong những mục tiêu của mình. Anh ta đang làm công việc của mình. Nếu bạn biết chắc rằng hoàn thành trang đăng nhập vào ngày mai là không thể, vậy thì bạn đang không làm tốt công việc của mình nếu bạn nói "OK, tôi sẽ cố". Cách duy nhất để thực hiện công việc của bạn, tại thời điểm đó, là nói "Không, điều đó là không thể".
+Khi quản lý nói với bạn rằng trang đăng nhập cần sẵn sàng vào ngày mai, anh ta đang theo đuổi và bảo vệ một trong những mục tiêu của mình. Anh ta đang làm công việc của mình. Nếu bạn biết chắc chắn rằng hoàn thành trang đăng nhập vào ngày mai là không thể, nhưng nếu bạn nói "OK, tôi sẽ cố", tức là bạn đang không làm tốt công việc của mình. Cách duy nhất để thực hiện tốt công việc của bạn, tại thời điểm đó, là nói "Không, điều đó là không thể".
 
 Nhưng bạn không cần phải làm những việc quản lý của bạn yêu cầu sao? Không, quản lý sẽ tin tưởng để bạn bảo vệ mục tiêu của bạn quyết liệt như anh ta bảo vệ mục tiêu của anh ta. Đó là cách đôi bên có thể đưa ra được _kết quả tốt nhất_.
 
@@ -73,15 +73,15 @@ Thương lượng có đôi khi rất dễ chịu.
 
 Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
 
-Paula: "Oh, wow! Sớm thế ah? Chà, OK, tôi sẽ cố"
+Paula: "Oh wow! Sớm thế ah? Chà, OK, tôi sẽ cố"
 
 Mike: "OK, tuyệt quá. Cảm ơn nhé!"
 
-Đó là một cuộc trò chuyện ngắn tốt đẹp. Tránh được tất cả xung đột. Cả hai đều tươi cười ra về. Rất tốt.
+Đó là cuộc trò chuyện ngắn diễn ra tốt đẹp. Tránh được tất cả xung đột. Cả hai đều tươi cười ra về. Rất tốt.
 
 Nhưng cả 2 bên đều đang cư xử thiếu chuyên nghiệp. Paula biết rõ rằng cô cần nhiều hơn một ngày cho trang đăng nhập, tức là cô đang nói dối. Cô ấy có thể không nghĩ đó là nói dối. Có thể cô ấy nghĩ rằng mình _thực sự sẽ cố gắng_, và có thể cô ấy giữ lấy một chút hy vọng nhỏ nhoi rằng cô sẽ thực sự hoàn thành nó. Nhưng cuối cùng thì đó vẫn là một lời nói dối.
 
-Ở phía còn lại, Mike, chấp nhận câu trả lời "Tôi sẽ cố" như một sự khẳng định. Đó thực sự là một việc ngốc nghếch. Anh ấy nên biết rằng Paula chỉ đang lảng tránh sự xung đột, nên anh ấy nên nhấn mạnh vào vấn đề bằng việc nói, "Bạn có vẻ do dự. Bạn có chắc rằng nó sẽ hoàn thành vào ngày mai hay không?"
+Ở phía còn lại, Mike, chấp nhận câu trả lời "Tôi sẽ cố" như một sự khẳng định. Đó thực sự là một việc ngốc nghếch. Anh ấy nên biết rằng Paula chỉ đang lảng tránh sự xung đột, nên anh ấy phải nhấn mạnh vào vấn đề đó bằng việc hỏi lại, "Bạn có vẻ do dự. Bạn có chắc rằng nó sẽ hoàn thành vào ngày mai hay không?"
 
 Sau đây là một cuộc trò chuyện thú vị khác
 
