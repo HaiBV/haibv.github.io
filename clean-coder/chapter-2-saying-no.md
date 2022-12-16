@@ -89,13 +89,13 @@ Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
 
 Paula: "Oh, xin lỗi Mike, nhưng tôi cần nhiều thời gian hơn để hoàn thành"
 
-Mike: "Khi nào bạn nghĩ bạn có thể hoàn thành được?"
+Mike: "Bạn nghĩ khi nào có thể hoàn thành được?"
 
 Paula: "2 tuần nữa kể từ giờ thì sao?"
 
-Mike: "OK, cảm ơn nhé."
+Mike: (viết gì đó vào sổ tay) "OK, cảm ơn nhé."
 
-Cũng rất dễ chịu, nó cũng vô cùng rối loạn và hoàn toàn không chuyên nghiệp. Cả hai đều thất bại trong việc tìm kiếm kết quả tốt nhất có thể. Thay vì hỏi liệu 2 tuần có ổn không, Paula nên quyết đoán hơn: "Tôi sẽ mất 2 tuần, Mike"
+Cũng rất dễ chịu, nhưng vô cùng rối loạn và hoàn toàn không chuyên nghiệp. Cả hai đều thất bại trong việc tìm kiếm kết quả tốt nhất có thể. Thay vì hỏi liệu 2 tuần có ổn không, Paula nên quyết đoán hơn: "Tôi sẽ mất 2 tuần, Mike"
 
 Ở phía còn lại, Mike, chấp nhận thời hạn mà không hỏi lại, dường như mục tiêu của riêng anh ta không quan trọng. Mọi người tự hỏi nếu anh ta không chỉ đơn giản báo cáo lại với sếp mình rằng buổi giới thiệu sản phẩm sẽ hoãn lại vì Paula. Kiểu hành vi hung hăng thụ động đó có đáng trách về mặt đạo đức?
 
@@ -105,9 +105,9 @@ Mike: "Paula, tôi cần trang đăng nhập hoàn thành vào ngày mai"
 
 Paula: "Không, Mike, việc đó cần 2 tuần"
 
-Mike: "2 tuần? Các kiến trúc sư ước tính nó hết khoang 3 ngày, bây giờ là 5!"
+Mike: "2 tuần? Các kiến trúc sư ước tính nó hết khoảng 3 ngày, bây giờ đã thành 5 ngày rồi!"
 
-Paula: "Họ đã sai, Mike. Họ ước lượng trước khi có yêu cầu cuối cùng. Tôi cần ít nhất 10 ngày để hoàn thành. Anh chưa xem ước lượng mới nhất của tôi trên wiki ah?"
+Paula: "Họ nhầm rồi, Mike. Họ ước lượng trước khi có yêu cầu cuối cùng. Tôi cần ít nhất 10 ngày nữa để hoàn thành. Anh chưa xem ước lượng mới nhất của tôi trên wiki ah?"
 
 Mike: (với vẻ mặt vô cùng thất vọng) "Điều này không chấp nhận được, Paula. Khách hàng sẽ tới cho một buổi demo vào ngày mai, và tôi cần cho họ thấy trang đăng nhập hoạt động."
 
@@ -123,7 +123,7 @@ Paula: "Đúng, anh sẽ có thể đăng nhập".
 
 Mike: "Thật tuyệt vời Paula, bạn là vị cứu tinh!" (bước đi với tay giơ lên không "Yes")
 
-Họ đã đạt được kết quả tốt nhất có thể. Họ làm được vậy bằng cách nói không và sau đó cùng tìm ra giải pháp được cả 2 đồng thuận. Họ hành động như những người chuyên nghiệp. Cuộc trò chuyện có chút mâu thuẫn và có đôi lúc không thoải mãi, nhưng điều đó xảy ra khi cả hai quyết tâm theo đuổi những mục tiêu không khớp nhau.
+Họ đã đạt được kết quả tốt nhất có thể. Họ làm được vậy bằng cách nói không và sau đó cùng tìm ra giải pháp được cả 2 đồng thuận. Họ hành động như những người chuyên nghiệp. Cuộc trò chuyện có chút mâu thuẫn và có đôi lúc không thoải mái, nhưng điều đó xảy ra khi cả hai quyết tâm theo đuổi những mục tiêu không khớp nhau.
 
 ### Vậy "lý do" là gì?
 
