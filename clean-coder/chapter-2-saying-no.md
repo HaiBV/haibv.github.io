@@ -125,27 +125,27 @@ Mike: "Thật tuyệt vời Paula, bạn là vị cứu tinh!" (bước đi vớ
 
 Họ đã đạt được kết quả tốt nhất có thể. Họ làm được vậy bằng cách nói không và sau đó cùng tìm ra giải pháp được cả 2 đồng thuận. Họ hành động như những người chuyên nghiệp. Cuộc trò chuyện có chút mâu thuẫn và có đôi lúc không thoải mái, nhưng điều đó xảy ra khi cả hai quyết tâm theo đuổi những mục tiêu không khớp nhau.
 
-### Vậy "lý do" là gì?
+### Thế còn câu hỏi "Tại sao"?
 
-Có thể bạn nghĩ rằng Paula nên giải thích _tại sao_ trang đăng nhập lại cần thêm nhiều thời gian. Theo kinh nghiệm của tôi, _lý do tại sao_ không quan trọng bằng _sự thật_. Sự thật là trang đăng nhập cần đến 2 tuần. Tại sao nó cần đến 2 tuần chỉ là một chi tiết.
+Có thể bạn nghĩ rằng Paula nên giải thích _tại sao_ trang đăng nhập lại cần thêm nhiều thời gian. Theo kinh nghiệm của tôi, _lý do tại sao_ không quan trọng bằng _sự thật_. Sự thật là trang đăng nhập sẽ cần đến 2 tuần. Tại sao nó cần đến 2 tuần chỉ là một chi tiết.
 
-Tuy nhiên, biết lý do tại sao sẽ giúp Mike hiểu và do đó chấp nhận sự thật. Công bằng hơn. Và trong trường hợp Mike có chuyên môn về kỹ thuật và đủ kiên nhẫn để hiểu, khi đó sự giải thích sẽ có tác dụng. Mặt khác, Mike có thể không đồng ý với kết luận này. Mike có thể kết luận Paula đã làm sai mọi thứ. Anh ta có thể nói với Paula rằng cô không cần unit test, hoặc đánh giá, hoặc bước thứ 12 có thể bỏ qua. Cung cấp quá nhiều chi tiết có thể là một lời mời cho việc quản lý vi mô.
+Tuy nhiên, biết lý do tại sao sẽ giúp Mike hiểu và dễ chấp nhận sự thật hơn. Hợp lý hơn. Và trong trường hợp Mike có chuyên môn về kỹ thuật và đủ kiên nhẫn để hiểu, khi đó sự giải thích sẽ có tác dụng. Mặt khác, Mike có thể không đồng ý với kết luận này. Mike có thể kết luận Paula đã làm sai mọi thứ. Anh ta có thể nói với Paula rằng cô không cần tất cả những kiểm thử này, hoặc tất cả những đánh giá kia, hoặc bước thứ 12 có thể bỏ qua. Cung cấp quá nhiều chi tiết có thể là một lời mời cho việc quản lý vi mô.
 
 ## Rủi ro cao
 
-Thời điểm quan trọng nhất để nói không là khi sự rủi ro ở mức cao. Mức độ rủi ro càng cao, giá trị của sự phản đổi càng cao.
+Thời điểm quan trọng nhất để nói không là khi sự rủi ro ở mức cao nhất. Mức độ rủi ro càng cao, giá trị mang lại càng lớn.
 
-Điều này rất hiển nhiên. Khi cái giá của thất bại cao đến mức sự tồn vong của công ty bạn phụ thuộc vào nó, bạn phải hoàn toàn quyết tâm cung cấp cho quản lý của mình những thông tin tốt nhất bạn có. Và điều đó thường có nghĩa là nói không.
+Điều này rất hiển nhiên. Khi cái giá của thất bại cao đến mức sự tồn vong của công ty bạn phụ thuộc vào nó, bạn phải thực sự quyết tâm cung cấp cho quản lý của mình những thông tin tốt nhất có thể. Và điều đó thường có nghĩa là nói không.
 
-Don (Giám đốc phát triển): "Vậy là, ước lượng hiện tại để hoàn thành dự án Goose Golden (ngỗng vàng!!!) là 12 tuần kể từ bây giờ, có thể thêm hoặc bớt đi 5 tuần nhưng không chắc lắm".
+Don (Giám đốc phát triển): "Ước lượng hiện tại để hoàn thành dự án Goose Golden (ngỗng vàng!!!) là 12 tuần kể từ bây giờ, có thể thêm hoặc bớt đi 5 tuần nhưng không chắc lắm".
 
-Charles (CEO): (nhìn trừng trừng 15s với khuôn mặt đở bừng) "Anh đang nói với tôi rằng chúng tôi có thể cần đến 17 tuần để hoàn thành?"
+Charles (CEO): (nhìn trừng trừng 15s với khuôn mặt đỏ bừng) "Anh đang nói với tôi rằng chúng ta có thể cần đến 17 tuần để hoàn thành?"
 
 Don: "Vâng, có thể như thế."
 
 Charles: (lập tức đứng dậy): "Chết tiệt, Don! Nó đáng nhẽ phải hoàn thành từ 3 tuần trước! Tôi nhận được cuộc gọi của Galitron mỗi ngày chỉ để hỏi về hệ thống chết tiệt đó đang ở đâu. Tôi sẽ không nói với họ rằng họ phải đợi thêm 4 tháng nữa. Chúng ta phải làm gì đó tốt hơn.
 
-Don: Chuck, tôi đã nói với anh _3 tháng trước_, sau tất cả cắt giảm, chúng ta cần thêm 4 tháng nữa. Ý tôi là, Chúa Chuck ơi, anh giảm 20% nhân sự của tôi! Anh có nói với Galitron chúng ta sẽ chậm tiến độ không?
+Don: Chuck, tôi đã nói với anh _3 tháng trước_, sau đợt cắt giảm nhân sự, chúng ta cần thêm 4 tháng nữa. Ý tôi là, Chúa Chuck ơi, anh giảm 20% nhân sự của tôi! Anh có nói với Galitron chúng ta sẽ chậm tiến độ không?
 
 Charles: "Anh biết rõ là tôi không thể. Chúng ta không thể trụ được nếu mất hợp đồng này Don ạ. (Charles dừng lại, mặt trắng bệch) Không có Galitron, chúng ta chỉ có cạp đất. Anh biết điều đó đúng không? Và bây giờ với sự chậm trễ này, tôi e là ... Nếu tôi nói với ban giám thì sao? (Anh ta từ từ ngồi xuống, cố gắng không gục ngã) Don, anh cần phải làm tốt hơn"
 
@@ -155,9 +155,9 @@ Charles: "Chết tiệt. Tôi không nghĩ sẽ có vấn đề gì nếu tôi n
 
 Don: "Sa thải tôi sẽ không làm thay đổi ước lượng đâu, Charles"
 
-Charles: "Thôi, tôi không muốn nói thêm nữa. Quay lại với đội phát triển và giữ cho dự án tiếp tục chạy. Tôi cần thực hiện một vài cuộc gọi khó khăn bây giờ."
+Charles: "Thôi, tôi không muốn nói thêm nữa. Quay lại với đội phát triển và giữ cho dự án tiếp tục chạy. Bây giờ tôi cần thực hiện một vài cuộc gọi khó khăn."
 
-Tất nhiên, ngay khi nhận được ước lượng mới, Charles cần phải nói với Galitron rằng sẽ không có chuyện hoàn thành từ 3 tháng trước. Ít nhất bây giờ anh ta đã làm một việc đúng đắn là gọi cho họ (và ban giám đốc). Nhưng nếu Don giữ vững lập trường của mình, những cuộc gọi đó có thể bị trì hoãn lâu hơn.
+Tất nhiên, ngay khi nhận được ước lượng mới, Charles cần phải nói với Galitron rằng sẽ không có chuyện hoàn thành từ 3 tháng trước. Ít nhất bây giờ anh ta đã làm một việc đúng đắn là gọi cho họ (và ban giám đốc). Nhưng nếu Don không giữ vững lập trường của mình, những cuộc gọi đó có thể bị trì hoãn lâu hơn.
 
 ## Là một "Team player" (người có kỹ năng làm việc nhóm tốt)
 
