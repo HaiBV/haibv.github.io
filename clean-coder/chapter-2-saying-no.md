@@ -218,11 +218,11 @@ Vậy tại sao Mike làm vậy? Anh ta muốn thể hiện mình là một ngư
 
 Điều tệ nhất mà Paula có thể trả lời cho sự kiểm soát của Mike là nói "OK, chúng tôi sẽ cố gắng". Tôi ghét phải mượn lời Yoda, nhưng trong trường hợp này ông đã đúng. _Không có gì gọi là cố gắng cả_.
 
-Có thể bạn không thích ý tưởng này? Có thể bạn nghĩ rằng _cố gắng_ là một việc làm tích cực. Suy cho cùng, liệu Columbus có tìm ra Châu Mỹ nếu ông không cố gắng?
+Có thể bạn không thích điều đó? Có thể bạn nghĩ rằng _cố gắng_ là một việc làm tích cực. Suy cho cùng, liệu Columbus có tìm ra Châu Mỹ nếu ông không cố gắng?
 
-Từ _cố gắng_ mang rất nhiều nghĩa. Ý nghĩa mà tôi thấy có vấn đề ở đây là "dành nhiều nỗ lực hơn nữa". Liệu Paula có thể dành thêm nỗ lực để có được bản demo kịp thời? Nếu cô có thể nỗ lực hơn nữa, hẳn là cô ấy và nhóm của mình trước đây vẫn chưa nỗ lực hết sức. Họ hẵn vẫn dự trữ/giữ lại phần nào đố nỗ lực của mình.
+Từ _cố gắng_ mang rất nhiều nghĩa. Ý nghĩa mà tôi thấy có vấn đề ở đây là "dành thêm nỗ lực". Liệu Paula có thể dành thêm nỗ lực để có được bản demo kịp thời? Nếu cô có thể nỗ lực hơn nữa, hẳn là cô ấy và nhóm của mình trước đây vẫn chưa nỗ lực hết sức. Họ hẳn vẫn dự trữ/giữ lại phần nào đó nỗ lực của mình.
 
-Lời hứa về việc cố gắng là một sự thừa nhận rằng bạn đang tự kìm hãm, rằng bạn có thể nỗ lực hơn nữa. Lời hứa về việc cố gắng là một sự thừa nhận rằng mục tiêu có thể đạt được thông qua việc thực hiện những nỗ lực thêm này; Hơn nữa, đó là một lời cam kết nỗ lực thêm để đạt được mục tiêu. Vì vậy, bằng lời hứa về việc cố gắng, bạn đã cam kết cho thành công. Điều này sẽ đặt gánh nặng lên bạn. Nếu "cố gắng" của bạn không đạt kết quả mong muốn, đó sẽ là thất bại của bạn.
+Lời hứa sẽ cố gắng là một sự thừa nhận rằng bạn đang tự kìm hãm bản thân, rằng bạn có thể nỗ lực hơn nữa. Lời hứa sẽ cố gắng là một sự thừa nhận rằng mục tiêu có thể đạt được thông qua việc bỏ thêm công sức để thực hiện; Hơn nữa, đó là một lời cam kết bỏ thêm công sức để đạt được mục tiêu. Vì vậy, bằng lời hứa về việc cố gắng, bạn đã cam kết cho thành công. Điều này sẽ đặt gánh nặng lên bạn. Nếu "cố gắng" của bạn không đạt kết quả mong muốn, đó sẽ là thất bại của bạn.
 
 Bạn có sự nỗ lực nào đang bị bản thân kìm hãm không? Nếu bạn sử dụng chúng, liệu bạn sẽ đạt được mục tiêu? Hoặc, bằng cách hứa sẽ cố gắng, bạn đơn giản là sắp đặt cho mình một thất bại?
 
