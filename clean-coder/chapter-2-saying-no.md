@@ -236,17 +236,17 @@ Cách của Paula tốt hơn nhiều. Cô ấy luôn nhắc Mike rằng ước l
 
 Ba tuần sau ...
 
-Mike: "Paula, 3 tuần nữa sẽ có bản dùng thử và khách hàng yêu cầu phải có chức năng 'Tải tập tin lên' hoạt động"
+Mike: "Paula, 3 tuần nữa sẽ có bản dùng thử và khách hàng yêu cầu chức năng 'TẢI TẬP TIN LÊN' phải hoạt động"
 
-Paula: "Mike, điều này không có trong danh sách chức năng chúng ta đã đồng ý làm"
+Paula: "Mike, chức năng này không có trong danh sách chức năng chúng ta đã thống nhất"
 
 Mike: "Tôi biết, nhưng họ yêu cầu như vậy"
 
-Paula: "OK, điều đó có nghĩa là SSO hoặc sao lưu sẽ bị loại khỏi bản dùng thử"
+Paula: "OK, điều đó có nghĩa là SSO hoặc SAO LƯU sẽ bị loại khỏi bản dùng thử"
 
 Mike: "Tuyệt đối không! Họ cũng mong muốn các tính năng đó hoạt động"
 
-Paula: "Tức là, họ đang mong đọi mọi tính năng hoạt động. Đó là những gì anh đang nói với tôi. Tôi đã nói là điều đó sẽ không xảy ra"
+Paula: "Tức là, họ đang mong đợi mọi tính năng hoạt động. Đó là những gì anh đang nói với tôi. Tôi đã nói là điều đó sẽ không xảy ra"
 
 Mike: "Tôi xin lỗi Paula, nhưng khách hàng không nhượng bộ cho việc đó. Họ muốn thấy tất cả."
 
@@ -258,12 +258,13 @@ Paula: "Mike, tôi có thể _cố_ để bay. Tôi có thể _cố_ biến chì
 
 Mike: "Cô nói không hợp lý chút nào. Tôi không yêu cầu những _điều không thể_"
 
-Paula: "Có đấy, Mike, anh đang làm vậy"
-(Mike cười khẩy, gật đầu, rồi quay lưng bước đi)
+Paula: "Có đấy, Mike, anh _đang làm vậy_"
 
+(Mike cười khẩy, gật đầu, rồi quay lưng bước đi)
 Mike: "Tôi có lòng tin ở cô Paula, tôi biết cô sẽ không làm tôi thất vọng"
 
-Paula: (nói phía sau Mike) "Mike, anh đang mơ thôi. Và nó sẽ không có kết cục tốt đẹp đâu"
+Paula: (nói phía sau Mike) "Mike, anh đang mơ thôi. Và nó _sẽ không_ có kết cục tốt đẹp đâu"
+
 (Mike chỉ vẫy tay và không quay lại)
 
 ### Quyết liệt thụ động
