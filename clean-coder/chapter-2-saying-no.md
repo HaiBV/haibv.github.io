@@ -269,13 +269,13 @@ Paula: (nói phía sau Mike) "Mike, anh đang mơ thôi. Và nó _sẽ không_ c
 
 ### Quyết liệt thụ động
 
-Paula cần đưa ra một quyết định thú vị. Cô ấy nghi ngờ Mike sẽ không nói với Don về ước lượng của mình. Cô ấy có thể đấy Mike vào đường cùng. Cô ấy đảm bảo tất cả các biên bản ghi nhớ đều được lưu trong hồ sơ, để khi thảm họa xảy ra, cô ấy có thể trình bày những lại nội dung và thời điểm mình đã nói với Mike. Đây là hành động quyết liệt thụ động. Paula để Mike tự đi vào đường cùng.
+Paula đưa ra một quyết định thú vị. Cô ấy nghi ngờ Mike sẽ không nói với Don về ước lượng của mình. Cô ấy có thể đẩy Mike vào đường cùng. Cô ấy đảm bảo tất cả các biên bản ghi nhớ đều được lưu trong hồ sơ, để khi thảm họa xảy ra, cô ấy có thể trình bày lại toàn bộ _nội dung_ cô đã nói với Mike và vào _thời điểm_ nào. Đây là hành động quyết liệt thụ động. Paula để Mike tự đi vào đường cùng.
 
-Hoặc, cô ấy có thể cố gắng đối đầu với thảm họa bằng cách liên lạc trực tiếp với Don. Điều này chắc chắn là rủi ro, nhưng đó cũng là điều mà một người có tinh thần đồng đội thực sự hướng đến. Khi một đoàn tàu chở hàng lao xuống bạn và bạn là người duy nhất có thể nhìn thấy no, bạn có thể lặng lẽ bước ra khỏi đường ray và nhìn nó lao vào những người khác hoặc bạn có thể hét lên "Tàu, về lại đúng đường"
+Hoặc, cô ấy có thể cố gắng đối đầu với thảm họa bằng cách liên lạc trực tiếp với Don. Điều này chắc chắn là rủi ro, nhưng đó cũng là điều mà một người có tinh thần đồng đội thực sự hướng đến. Khi một đoàn tàu chở hàng lao vào bạn và bạn là người duy nhất có thể nhìn thấy nó, bạn có thể lặng lẽ bước ra khỏi đường ray và nhìn nó lao vào những người khác hoặc bạn có thể hét lên "Tàu tới, mau tránh khỏi đường ray!"
 
 Hai ngày sau...
 
-Paula: "Mike, anh đã nói với Don về ước lượng của tôi chưa? Anh ấy đã nói với khách hàng rằng chức năng 'Tải tập tin lên' sẽ không sử dụng được ở bản dùng thử sẽ chưa?"
+Paula: "Mike, anh đã nói với Don về ước lượng của tôi chưa? Anh ấy đã nói với khách hàng rằng chức năng 'TẢI TẬP TIN LÊN' sẽ không sử dụng được ở bản dùng thử sẽ chưa?"
 
 Mike: "Paula, cô đã nói là cô sẽ làm cho nó hoạt động mà"
 
@@ -295,17 +295,17 @@ Paula: "Tôi không muốn làm thế, nhưng tôi sẽ nói nếu anh ép tôi"
 
 Mike: "Ôi, Paula..."
 
-Paula: Nghe này, Mike, những chức năng này _không thể_ hoàn thành kịp thời gian cho bản dùng thử. Anh cần phải lưu lại điều đó trong đầu. Đừng cố thuyết phục tôi làm việc chăm chỉ hơn. Đừng lừa đối bản thân rằng bằng cách nào đó tôi có thể lôi được con thỏ từ cái mũ. Đối mặt với thực tế rằng anh phải nói cho Don, và anh phải nói với anh ta _hôm nay_."
+Paula: "Nghe này, Mike, những chức năng này _không thể_ hoàn thành kịp thời gian cho bản dùng thử. Anh cần phải lưu lại điều đó trong đầu. Đừng cố thuyết phục tôi làm việc chăm chỉ hơn. Đừng lừa đối bản thân rằng bằng cách nào đó tôi có thể lôi được con thỏ từ cái mũ. Đối mặt với thực tế rằng anh phải nói cho Don, và anh phải nói với anh ta _hôm nay_."
 
 Mike: (mở to mắt) "Hôm nay ah?"
 
-Paula: "Đúng, Mike. Là hôm nay. Vì ngày mai tôi sẽ có một cuộc họp với anh và Don về những chức năng sẽ nằm trong bản dùng thử. Nếu cuộc họp không diễn ra vào ngày mai, thì tự tôi bắt buộc phải đi gặp Don. Đây là bản ghi chú giải thích cho việc đó.
+Paula: "Đúng, Mike. Là hôm nay. Vì ngày mai tôi sẽ có một cuộc họp với anh và Don về những chức năng sẽ nằm trong bản dùng thử. Nếu cuộc họp không diễn ra vào ngày mai, thì tự tôi bắt buộc phải đi gặp Don. Đây là bản ghi chú giải thích cho việc đó."
 
 Mike: "Cô đang cứu một bàn thua cho tôi đấy"
 
-Paula: "Mike, tôi đang cố cứu cả hai chúng ta. Anh có tưởng tượng được sẽ ra sao nếu khách hàng đến đây và mong đợi một bản dùng thử đầy đủ - thứ mà chúng ta không thể đưa ra?"
+Paula: "Mike, tôi đang cố cứu _cả hai_ chúng ta. Anh có tưởng tượng được sẽ ra sao nếu khách hàng đến đây và mong đợi một bản dùng thử đầy đủ - thứ mà chúng ta không thể đưa ra?"
 
-Cuối cùng thì chuyện gì sẽ xảy ra với Paula và Mike? Tôi sẽ để mở những khả năng dành cho bạn. Vấn đề là Paula đã cư xử rất chuyên nghiệp. Cô ấy đã nói không vào mọi lúc, và với một cách đúng đắn. Cô ấy nói không khi ước lượng của mình bị buộc phải thay đổi. Cô ấy nói không khi bị thao túng, nịnh nọt, và van xin. Và quan trọng nhất, cô ấy nói không với việc Mike tự ảo tưởng và không thực hiện nghĩa vụ. Paula đã có tinh thần đồng đội tốt. Mike cần sự giúp đỡ, và cô ấy dùng mọi cách trong khả năng của mình để giúp anh ta.
+Cuối cùng thì chuyện gì sẽ xảy ra với Paula và Mike? Tôi sẽ để mở những khả năng dành cho bạn. Vấn đề là Paula đã cư xử rất chuyên nghiệp. Cô ấy luôn nói không đúng lúc, đúng chỗ, và đúng cách. Cô ấy nói không khi bị ép phải chỉnh sửa ước lượng của mình. Cô ấy nói không khi bị thao túng, nịnh nọt, và van xin. Và quan trọng nhất, cô ấy nói không với việc Mike tự ảo tưởng và không thực hiện nghĩa vụ. Paula đã có tinh thần đồng đội tốt. Mike cần sự giúp đỡ, và cô ấy dùng mọi cách trong khả năng của mình để giúp anh ta.
 
 ## Cái giá của việc đồng ý nhượng bộ
 
