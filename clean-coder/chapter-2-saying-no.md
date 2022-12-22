@@ -309,26 +309,26 @@ Cuối cùng thì chuyện gì sẽ xảy ra với Paula và Mike? Tôi sẽ đ�
 
 ## Cái giá của việc đồng ý nhượng bộ
 
-Phần lớn mọi việc chúng ta đều muốn đồng ý. Thực tế là, các đội nhóm mạnh mẽ luôn có gắng tìm cách đồng ý. Quản lý và lập trình viên trong các nhóm vận hành tốt sẽ thương lượng với nhau cho đến khi họ đi đến một kế hoạch hành động đã được thống nhất.
+Phần lớn mọi việc chúng ta đều muốn đồng thuận. Trên thực tế, các đội nhóm mạnh mẽ luôn cố gắng tìm cách đồng ý. Quản lý và lập trình viên trong các nhóm vận hành tốt sẽ thương lượng với nhau cho đến khi họ đi đến một kế hoạch hành động đã được thống nhất.
 
-Nhưng, như chúng ta đã thấy, đôi khi cách duy nhất để có được sự đồng thuận đúng đắn là không ngần ngại nói không.
+Nhưng, như chúng ta đã thấy, đôi khi cách duy nhất để có được sự đồng thuận _đúng đắn_ là không ngần ngại nói không.
 
-Hãy xem xét câu chuyện dưới dây của John Blanco trên blog của anh ấy. Nó đã được cho phép trích dẫn trong sách này. Khi bạn đọc nó, hãy tự hỏi bản thân xem khi nào và làm cách nào để anh ấy có thể từ chối.
+Hãy xem xét câu chuyện dưới đây của John Blanco trên blog của anh ấy. Nó đã được cho phép trích dẫn trong sách này. Khi bạn đọc nó, hãy tự hỏi bản thân xem khi nào và làm cách nào để anh ấy có thể từ chối.
 
 ```php
 Code sạch có khả thi không?
 
-Bạn quyết định sẽ trở thành một lập trình viên phần mềm vào những năm tuổi teen. Trong suốt những năm trung học, bạn học viết phần mềm theo các nguyên tắc hướng đối tượng. Khi bạn tốt nghiệp đại học, bạn dùng toàn bộ kiến thức, nguyên tắc mình học được vào một số lĩnh vực như trí tuệ nhân tạo (AI) hoặc in 3D.
+Khi bạn quyết định sẽ trở thành một lập trình viên phần mềm vào những năm tuổi teen. Trong suốt những năm trung học, bạn học viết phần mềm theo các nguyên tắc hướng đối tượng. Khi bạn tốt nghiệp đại học, bạn dùng toàn bộ kiến thức, nguyên tắc mình học được vào một số lĩnh vực như trí tuệ nhân tạo (AI) hoặc đồ họa 3D.
 
-Và khi bạn đạt đến trình độ chuyên nghiệp, bạn bắt đầu thực hiện những nhiệm vụ không dứt để viết code chất lượng thương mai, có thể bảo trì và "hoàn hảo" trước thử thách thời gian.
+Và khi bạn đạt đến trình độ chuyên nghiệp, bạn bắt đầu thực hiện những nhiệm vụ không ngừng nghỉ để viết code chất lượng thương mại, có thể bảo trì và "hoàn hảo" trước thử thách thời gian.
 
 Chất lượng thương mại (commercial quality). Huh. Nghe buồn cười phải không.
 
-Tôi tự cho mình là một người may mắn, tôi thích các design pattern. Tôi thích nghiên cứu lý thuyết về sự "hoàn hảo" của code. Tôi không ngần ngại thảo luận hàng giờ liền với đồng nghiệp về cách kế thừa phân cấp sai của họ - rằng HAS-A tốt hơn IS-A trong nhiều trường hợp. Nhưng gần đây có điều gì đó làm tôi khó chịu và băn khoăn...
+Tôi tự cho mình là một người may mắn, tôi _thích_ các design pattern. Tôi thích nghiên cứu những lý thuyết về sự "hoàn hảo" của code. Tôi không ngần ngại thảo luận hàng giờ liền với đồng nghiệp về cách kế thừa phân cấp sai của họ - rằng HAS-A tốt hơn IS-A trong nhiều trường hợp. Nhưng gần đây có điều gì đó làm tôi khó chịu và băn khoăn...
 
-...Liệu chúng ta không thể có code sạch trong phát triển phần mềm hiện tại?
+...Liệu code sạch có là bất khả thi trong phát triển phần mềm hiện đại?
 
-Đề xuất dự án tiêu biểu
+Đề xuất dự án điển hình
 
 Khi đang là một lập trình viên toàn thời gian (và bán thời gian), tôi dành thời gian ban ngày (và ban đêm) phát triển những ứng dụng di động cho khách hàng. Và những thứ tôi học được sau nhiều năm làm việc là nhu cầu công việc của khách hàng ngăn cả tôi viết các ứng dụng thực sự chất lượng như ý mình.
 
