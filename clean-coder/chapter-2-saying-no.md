@@ -330,19 +330,19 @@ Tôi tự cho mình là một người may mắn, tôi _thích_ các design patt
 
 Đề xuất dự án điển hình
 
-Khi đang là một lập trình viên toàn thời gian (và bán thời gian), tôi dành thời gian ban ngày (và ban đêm) phát triển những ứng dụng di động cho khách hàng. Và những thứ tôi học được sau nhiều năm làm việc là nhu cầu công việc của khách hàng ngăn cả tôi viết các ứng dụng thực sự chất lượng như ý mình.
+Khi đang là một lập trình viên toàn thời gian (và bán thời gian), tôi dành thời gian ban ngày (và ban đêm) phát triển những ứng dụng di động cho khách hàng. Và những thứ tôi học được sau nhiều năm làm việc là yêu cầu của khách hàng ngăn cản tôi viết các ứng dụng thực sự chất lượng như ý mình.
 
-Trước khi bắt đầu, tôi phải nói trước rằng đó không phải do tôi không cố gắng. Tôi yêu mọi thứ về code sạch. Tôi không biết có ai khác theo đuổi thiết kế phần mềm hoàn hảo như tôi không. Đó là cách tôi thấy khá khó nắm bắt, và không phải những lý do bạn nghĩ.
+Trước khi bắt đầu, tôi phải nói trước rằng đó không phải do tôi không cố gắng. Tôi thích các chủ đề về code sạch. Tôi không biết có ai khác theo đuổi thiết kế phần mềm hoàn hảo như tôi không. Đó là cách thực hiện tôi thấy khá khó nắm bắt, và không phải những lý do mà bạn nghĩ.
 
-Được rồi, để tôi kể cho bạn nghe một câu chuyện.
+Đây, để tôi kể cho bạn nghe một câu chuyện.
 
-Vào khoảng cuối năm ngoái, một công ty khá nổi tiếng đã đưa ra một RFP (Request for Proposal - Yêu cầu đề xuất) cho một ứng dụng của họ. Họ là một công ty bán lẻ khổng lồ, nhưng vì lý do bảo mật, chúng ta hãy gọi họ là Gorilla Mart. Họ nói họ cần một ứng dụng trên iPhone để sử dụng cho Black Friday. Một cuộc rượt đuổi? Lúc đó đã là 01/11. Chỉ còn dưới 4 tuần đề tạo ứng dụng. Và vào thời điểm đó Apple vẫn mất 2 tuần để phê duyệt các ứng dụng. (Những ngày xưa cũ) Vì vậy, chờ đã, ứng dụng này phải được viết trong ... HAI TUẦN???
+Vào khoảng cuối năm ngoái, một công ty khá nổi tiếng đã đưa ra một RFP (Request For Proposal - Đề xuất yêu cầu) cho một ứng dụng của họ. Họ là một công ty bán lẻ khổng lồ, nhưng vì lý do bảo mật, chúng ta hãy gọi họ là Gorilla Mart. Họ nói họ cần một ứng dụng trên iPhone để sử dụng cho Black Friday. Một cuộc rượt đuổi ư? Lúc đó đã là 01/11. Chỉ còn dưới 4 tuần đề tạo ứng dụng. Và vào thời điểm đó Apple vẫn mất 2 tuần để phê duyệt các ứng dụng. (Haizz, những ngày xưa cũ) Vì vậy, chờ đã, ứng dụng này phải được viết trong ... HAI TUẦN???
 
-Vâng, chúng ta có hai tuần để viết ứng dụng. Và, không may là, chúng tôi trúng thầu. (Trong kinh doanh, phải đặt vấn đề của khách hàng lên hàng đầu). Vậy điều gì sẽ xảy ra.
+Vâng, chúng ta có hai tuần để viết ứng dụng. Và, không may là, chúng tôi trúng thầu. (Trong kinh doanh, phải đặt vấn đề của khách hàng lên hàng đầu). Đây là những gì sẽ xảy ra.
 
-"Nhưng sẽ ổn thôi" Điều hành số 1 của Gorilla Mart nói. "Ứng dụng rất đơn giản. Nó chỉ cần hiển thị cho người dùng một vài sản phẩm từ danh mục sản phẩm của chúng tôi và cho phép họ tìm kiếm vị trí cửa hàng. Chúng tôi đã có sẵn chúng trên trang web của mình. Chúng tôi cũng sẽ cung cấp ảnh. Bạn có thể - có thể ư? - hardcode!"
+"Nhưng sẽ ổn thôi" Điều hành thứ nhất của Gorilla Mart nói. "Ứng dụng rất đơn giản. Nó chỉ cần hiển thị cho người dùng một vài sản phẩm từ danh mục sản phẩm của chúng tôi và cho phép họ tìm kiếm vị trí cửa hàng đang bán chúng. Chúng tôi đang có chức năng này trên trang web của mình. Chúng tôi cũng sẽ cung cấp ảnh. Bạn có thể - có thể ư? - hardcode!"
 
-Điều hành số 2 của Gorilla Mart chêm vào. "Và chúng ta chỉ cần một vài phiếu giảm giá mà người dùng có thể xuất trình tại quầy thu ngân. Sau này chúng ta có thể bỏ ứng dụng đó đi, và ở giai đoạn 2 chúng ta sẽ làm một ứng dụng khác lớn hơn và tốt hơn từ đầu."
+Điều hành thứ 2 của Gorilla Mart chêm vào. "Và chúng ta chỉ cần một vài phiếu giảm giá mà người dùng có thể xuất trình tại quầy thu ngân. Sau này chúng ta có thể bỏ ứng dụng đó đi, và ở giai đoạn 2 chúng ta sẽ làm lại một ứng dụng khác từ đầu, lớn hơn và tốt hơn."
 
 Và sau đó mọi chuyện được diễn ra. Bất chấp những kinh nghiệm trong nhiều năm nhắc nhở tôi rằng khi bắt tay vào làm, mọi tính năng mà khách hàng yêu cầu sẽ luôn phức tạp hơn so với khi khách hàng giải thích, bạn cứ thử mà xem. Bạn thực sự tin rằng lần này nó thực sự có thể được thực hiện trong 2 tuần. Đúng! Chúng ta có thể làm được! Lần này sẽ khác! Đó chỉ là một vài hình ảnh đồ họa và một cuộc gọi dịch vụ để có được vị trí cửa hàng. XML! Dễ ẹc. Chúng ta có thể làm được. Tôi sẵn sàng! Chiến thôi!
 
