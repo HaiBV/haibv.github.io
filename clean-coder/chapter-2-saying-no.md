@@ -315,7 +315,7 @@ Nhưng, như chúng ta đã thấy, đôi khi cách duy nhất để có đượ
 
 Hãy xem xét câu chuyện dưới đây của John Blanco trên blog của anh ấy. Nó đã được cho phép trích dẫn trong sách này. Khi bạn đọc nó, hãy tự hỏi bản thân xem khi nào và làm cách nào để anh ấy có thể từ chối.
 
-```php
+```html
 Code sạch có khả thi không?
 
 Khi bạn quyết định sẽ trở thành một lập trình viên phần mềm vào những năm tuổi teen. Trong suốt những năm trung học, bạn học viết phần mềm theo các nguyên tắc hướng đối tượng. Khi bạn tốt nghiệp đại học, bạn dùng toàn bộ kiến thức, nguyên tắc mình học được vào một số lĩnh vực như trí tuệ nhân tạo (AI) hoặc đồ họa 3D.
@@ -372,17 +372,17 @@ Hai tuần hoàn thiện
 
 Để tôi kể cho bạn về 2 tuần khá là khổ sở đó. Hai ngày đầu tiên không làm được gì do phải họp cả ngày cho dự án tiếp theo. (Điều đó càng làm cho thời gian eo hẹp hơn) Cuối cùng, tôi chỉ thực sự có 8 ngày để hoàn thành công việc. Tôi làm việc 74 tiếng trong tuần đầu tiên và tuần tiếp theo thì ... Chúa ơi ... tôi còn không thể nhớ được, nó đã bị xóa khỏi đầu tôi. Có lẽ là một việc tốt.
 
-Tôi dùng 8 ngày đó để viết code trong giận dữ. Tôi sử dụng tất cả các công cụ có sẵn cho mình để hoàn thành công việc: sao chép và dán (hay tái sử dụng code), các con số ma thuật (tránh trùng lặp khi xác định hằng số và haizz, nhập lại chúng), và hoàn toàn KHÔNG CÓ unit test! (Ai cần những thanh đỏ trong trường hợp này, chúng chỉ làm cản trở tôi)
+Tôi dùng 8 ngày đó để viết code trong giận dữ. Tôi sử dụng tất cả các công cụ có sẵn cho mình để hoàn thành công việc: sao chép và dán (hay tái sử dụng code), các con số ma thuật (tránh trùng lặp khi xác định hằng số và haizz, nhập lại chúng), và hoàn toàn KHÔNG CÓ kiểm thử đơn vị! (Ai cần những thanh đỏ trong trường hợp này, chúng chỉ làm cản trở tôi)
 
-Code khá tệ và tôi không có thời gian để tái cầu trúc. Tuy nhiên, về thời gian, nó lại khá tốt, và xét cho cùng chúng là những đoạn code bỏ đi phải không nào? Câu này nghe quen không ạ? Hãy đợi đó, mọi việc sẽ tốt hơn.
+Code khá tệ và tôi không có thời gian để tái cấu trúc. Tuy nhiên, về thời gian, nó lại khá tốt, và xét cho cùng chúng là những đoạn code bỏ đi phải không nào? Câu này nghe quen không ạ? Hãy đợi đó, mọi việc sẽ còn tốt hơn.
 
-Khi tôi đang hoàn thiện những bước cuối cùng với ứng dụng (là viết lại toàn bộ code server), tôi bắt đầu xem xét và tự hỏi liệu nó có xứng đáng hay không. Cuối cùng ứng dụng đã hoàn thành. Tôi đã sống sót!
+Khi tôi đang hoàn thiện những bước cuối cùng với ứng dụng (những bước cuối cùng viết lại toàn bộ code server), tôi bắt đầu xem xét lại toàn bộ và tự hỏi liệu nó có xứng đáng hay không. Cuối cùng ứng dụng đã hoàn thành. Tôi đã sống sót!
 
-"Này, chúng tôi vừa mới thuê Bob, anh ấy rất bận và không thể thực hiện cuộc gọi, nhưng anh ấy nói rằng chúng tôi nên yêu cầu người dùng cung cấp địa chỉ email của họ để nhận phiếu thưởng. Anh ấy chưa nhìn thấy ứng dụng, nhưng anh ấy nghĩ đây sẽ là một ý tưởng tuyệt với! Chúng tôi cũng muốn có một hệ thống báo cáo để lấy những email đó từ máy chủ. Một thứ đẹp nhưng không quá đắt (Chờ đã, đoạn cuối chính là Monty Python). Nói về phiếu giảm giá, chúng có thể hết hạn vào thời gian chúng tôi chỉ địng. Oh, và ..."
+"Này, chúng tôi vừa mới thuê Bob, anh ấy rất bận và không thể nói chuyện với anh lúc này, nhưng anh ấy nói rằng chúng tôi nên yêu cầu người dùng cung cấp địa chỉ email của họ để nhận phiếu giảm giá. Anh ấy chưa nhìn thấy ứng dụng, nhưng anh ấy nghĩ đây sẽ là một ý tưởng tuyệt vời! Chúng tôi cũng muốn có một hệ thống báo cáo để lấy những email đó từ máy chủ. Nó sẽ rất hiệu quả nhưng không quá tốn kém (Chờ đã, đây là đoạn cuối của Monty Python). Nói về phiếu giảm giá, chúng có thể hết hạn vào thời gian chúng tôi chỉ định. Oh, và ..."
 
-Hãy quay lại một chút. Chúng ta biết code tốt là gì? Code tốt có thể mở rộng. Có thể bảo trì. Nó sẽ tự sửa đổi. Nó sẽ được đọc như văn xuôi. Chà, đây không phải mã tốt.
+Cùng xem lại một chút. Chúng ta biết code tốt là gì? Code tốt có thể mở rộng. Có thể bảo trì. Nó nên tự sửa đổi được. Nó sẽ được đọc như văn xuôi. Chà, đây không phải mã tốt.
 
-Một việc nữa. Nếu bạn muốn trở thành một lập trình viên tốt hơn, bạn phải luôn ghi nhớ điều tất yếu này: Khách hàng sẽ luôn kéo dài thời hạn. Họ sẽ luôn muốn có nhiều tính năng hơn. Họ sẽ luôn muốn thay đổi - MUỘN. Và đây là công thức cho những gì mong đợi:
+Một việc nữa. Nếu bạn muốn trở thành một lập trình viên tốt hơn, bạn phải luôn ghi nhớ điều tất yếu này: Khách hàng sẽ luôn gia hạn thêm thời gian. Họ sẽ luôn muốn có nhiều tính năng hơn. Họ sẽ luôn muốn thay đổi - MUỘN. Và đây là công thức cho những gì mong đợi:
 
 (số người điều hành)^2 + 2 \* số giám đốc điều hành mới + số con của Bob = số lượng ngày được thêm vào phút cuối.
 
