@@ -315,7 +315,7 @@ Nhưng, như chúng ta đã thấy, đôi khi cách duy nhất để có đượ
 
 Hãy xem xét câu chuyện dưới đây của John Blanco trên blog của anh ấy. Nó đã được cho phép trích dẫn trong sách này. Khi bạn đọc nó, hãy tự hỏi bản thân xem khi nào và làm cách nào để anh ấy có thể từ chối.
 
-```html
+<pre>
 Code sạch có khả thi không?
 
 Khi bạn quyết định sẽ trở thành một lập trình viên phần mềm vào những năm tuổi teen. Trong suốt những năm trung học, bạn học viết phần mềm theo các nguyên tắc hướng đối tượng. Khi bạn tốt nghiệp đại học, bạn dùng toàn bộ kiến thức, nguyên tắc mình học được vào một số lĩnh vực như trí tuệ nhân tạo (AI) hoặc đồ họa 3D.
@@ -398,17 +398,17 @@ Bạn nghĩ tôi nói dối ư? Vậy thì nghe này. Tôi đẩy ứng dụng l
 
 Một tuần sau, Apple bắt đầu kiểm tra ứng dụng. Thường thì đây sẽ là một việc vui vẻ, nhưng thay vào đó là một sự kinh hoàng. Đúng như dự đoán, ứng dụng của tôi đã bị từ chối vào cuối ngày. Đó là lý do từ chối đáng buồn nhất, tồi tệ nhất mà tôi có thể tưởng tượng: "Ứng dụng thiếu phần mô tả". Hoàn hảo về chức năng, không có mô tả ứng dụng. Và vì lý do này, Gorilla Mart không có ứng dụng của họ trong ngày Black Friday. Tôi thực sự khó chịu.
 
-Tôi đã hy sinh gia đình của mình trong 2 tuần vô cùng nước rút, và không ai ở Gorilla Mart bận tâm đến việc viết mô tả ứng dụng trong một tuần. Họ đã đưa nó cho tôi sau một giờ bị từ chối - rõ ràng đó là tín hiệu để bắt tay vào công việc.
+Tôi đã hy sinh gia đình của mình trong 2 tuần vô cùng nước rút, vậy mà không ai ở Gorilla Mart bận tâm đến việc viết mô tả ứng dụng trong một tuần. Họ đã đưa nó cho tôi sau một giờ bị từ chối - rõ ràng đó là tín hiệu để tiếp tục công việc.
 
-Nếu tôi trước đây tôi đã từng khó chịu thì sau một tuần rưỡi tôi đã trở nên tức giận. Bạn thấy đấy, tôi vẫn chưa nhận được dữ liệu thật từ họ. Các sản phẩm và phiếu giảm giá trên server là giả. Mã phiếu thưởng là 1234567890. Bạn biết đấy, phoney baloney.
+Nếu trước đó tôi chỉ khó chịu thì sau đó một tuần rưỡi tôi đã trở nên tức giận. Như bạn thấy, tôi vẫn chưa nhận được dữ liệu thật từ họ. Các sản phẩm và phiếu giảm giá trên server là giả. Mã phiếu giảm giá là 1234567890. Bạn biết đấy, nó vô giá trị.
 
-Và chính buổi sáng định mệnh đó, tôi đã kiểm tra cổng thông tin và ỨNG DỤNG ĐÃ SĂN SÀNG! Tất cả dữ liệu là giả mạo. Tôi hét lên kinh hoàng, gọi bất kỳ ai tôi có thể và hét lên, "TÔI CẦN DỮ LIỆU" và người phụ nữ ở đầu dây bên kia hỏi tôi có cần cứu hỏa hay cảnh sát không, vì vậy tôi ngắt máy qua số 911. Nhưng sau đó tôi gọi cho Gorilla Mart và nói "TÔI CẦN DỮ LIỆU!" Và tôi sẽ không bao giờ quên câu trả lời:
+Vào buổi sáng định mệnh đó, khi tôi kiểm tra thì ỨNG DỤNG ĐÃ SĂN SÀNG! Nhưng tất cả dữ liệu là đều là giả. Tôi hét lên kinh hoàng, gọi cho bất kỳ ai tôi có thể và hét lên, "TÔI CẦN DỮ LIỆU" và người phụ nữ ở đầu dây bên kia hỏi tôi có cần cứu hỏa hay cảnh sát không, vì vậy tôi ngắt máy quay số 911. Nhưng sau đó tôi gọi cho Gorilla Mart và nói "TÔI CẦN DỮ LIỆU!" Và tôi sẽ không bao giờ quên câu trả lời:
 
-Oh, này, John. Chúng tôi có một VP mới và chúng tôi đã quyết định không phát hành ứng dụng. Bạn có thể hạ chúng xuống khỏi App Store không?
+Oh, nghe này, John. Chúng tôi có một VP mới và chúng tôi quyết định không phát hành ứng dụng nữa. Bạn có thể hạ chúng xuống khỏi App Store không?
 
-Cuối cùng, có khoảng 11 người đã đăng ký địa chỉ email của họ trong cơ sở dữ liệu, có nghĩa là có 11 người có khả năng bước vào Gorilla Mart với một phiếu giảm giá iPhone giả. Các bạn, điều đó thật đáng xấu hổ.
+Cuối cùng, có khoảng 11 người đã đăng ký địa chỉ email của họ trong cơ sở dữ liệu, có nghĩa là có 11 người có khả năng bước vào Gorilla Mart với một phiếu giảm giá giả. Các bạn ah, điều đó thật đáng xấu hổ.
 
-Khi tất cả đã hoàn thành, khách hàng nói đúng một điều: Đó là một thứ vứt đi. Vấn đề duy nhất là, nó không nên được phát hành ngay từ đầu.
+Khi tất cả đã hoàn thành, khách hàng nói đúng một điều: Đó là một thứ vứt đi. Vấn đề duy nhất là, nó không nên được phát triển ngay từ đầu.
 
 Kết quả? Vội vàng để hoàn thành nhưng chậm đưa ra thị trường
 
@@ -423,7 +423,7 @@ Bài học trong câu chuyện này là các bên bạn làm việc cùng - dù 
 Đây là một sách lược tuyệt vời. Bạn có thể đổ lỗi cho họ vì nghĩ rằng cách này sẽ ổn? Nhưng họ không nhìn thấy mớ code kinh khủng khiếp đó. Và mọi việc cứ tiếp diễn, lặp đi lặp lại, bất chấp kết quả.
 
 Trong nền kinh tế toàn cầu, khi các tập đoàn đang dựa trên đồng đô la toàn năng và việc tăng giá cổ phiếu liên quan đến sa thải nhân viên, làm việc quá sức, và thuê ngoài, chiến thuật này mà tôi vừa cho bạn thấy giúp cắt giảm chi phí cho lập trình viên đang làm cho code tốt trở nên lỗi thời. Là những lập trình viên, chúng ta yêu cầu viết code nhiều gấp 2 lần với một nữa thời gian nếu chúng ta không cẩn trọng.
-```
+</pre>
 
 # Code bất khả thi
 
