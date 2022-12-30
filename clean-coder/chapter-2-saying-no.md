@@ -441,23 +441,23 @@ Có thể là sếp của John. John không nói rõ việc này, nhưng anh ấ
 
 Mặc dù vậy, trách nhiệm của John ở đâu trong toàn bộ câu chuyện này? Tôi cho rằng tất cả lỗi là ở John. John là người đã chấp nhận thời hạn 2 tuần ban đầu, trong khi biết rõ rằng dự án sẽ phức tạp hơn so với những gì khách hàng nói. John là người chấp nhận việc viết PHP server. John là người chấp nhận đăng ký bằng email và phiếu giảm giá có thể hết hạn. John là người đã làm việc 20 giờ một ngày và 90 giờ một tuần. John là người đã từ bỏ gia đình và cuộc sống của mình để hoàn thành hạn chót này.
 
-Và tại sao John lại làm như vậy? Anh ta đã nói một cách không chắc chắn: "Tôi bấm gửi, ngả lưng vào ghế với nụ cười tự mãn, bắt đầu tưởng tượng về cảnh cả công ty tôn tôi lên vai và dẫn đầu đoàn diễu hành xuống phố 42 trong khi tôi đội vương miện "Lập trình viên vĩ đại nhất" Tóm lại, John đang cố trở thành một anh hùng. Anh ta thấy có cơ hội nhận được giải thưởng, và cố gắng giành được nó. Anh ta cúi xuống và nhặt lấy chiếc nhẫn bằng đồng.
+Và tại sao John lại làm như vậy? Anh ta kể với chúng ta một cách chắc chắn: "Tôi bấm gửi, ngả lưng vào ghế với nụ cười tự mãn, bắt đầu tưởng tượng về cảnh cả công ty tôn tôi lên vai và dẫn đầu đoàn diễu hành xuống phố 42 trong khi tôi đội vương miện "Lập trình viên vĩ đại nhất" Tóm lại, John đang cố trở thành một người hùng. Anh ta thấy có cơ hội nhận được giải thưởng, và cố gắng giành được nó. Anh ta cúi xuống và nhặt lấy chiếc nhẫn bằng đồng.
 
-Những người chuyên nghiệp thường là những người hùng, nhưng không bởi vì họ cố gằng trở thành. Người chuyên nghiệp trở thành người hùng khi họ hoàn thành tốt công việc, đúng thời gian, và đúng ngân sách. Bằng cách cố trở thành người đàn ông của thời đại, vị cứu tinh trong ngày, John đã không hành động như một người chuyên nghiệp.
+Những người chuyên nghiệp thường là những người hùng, nhưng không bởi vì họ cố gắng trở thành người hùng. Mà là khi họ hoàn thành tốt công việc, đúng thời gian, và đúng ngân sách. Bằng cách cố trở thành người đàn ông của thời đại, vị cứu tinh trong ngày, John đã không hành động như một người chuyên nghiệp.
 
-John lẽ ra nên nói không với thời hạn 2 tuần ban đầu. Hoặc nếu không, thì anh ta nên nói không khi thấy không có web service. Lẽ ra anh ta nên nói không với yêu cầu đăng ký email và phiếu giảm giá hết hạn. Và cuối cùng, anh ta phải nói không với bất cứ thứ gì đòi hỏi phải làm thêm giờ và hy sinh những thứ lớn hơn.
+John lẽ ra nên nói không với thời hạn 2 tuần ban đầu. Hoặc nếu không, thì anh ta nên nói không khi biết không có web service. Lẽ ra anh ta nên nói không với yêu cầu đăng ký email và phiếu giảm giá có kỳ hạn. Và cuối cùng, anh ta phải nói không với bất cứ thứ gì đòi hỏi phải làm thêm giờ và hy sinh những thứ lớn hơn.
 
-Nhưng trên hết, John lẽ ra phải nói không với quyết định của chính mình, rằng cách duy nhất để hoàn thành công việc đúng thời hạn là gây là một mớ hỗn độn lớn. Hãy để ý những điều John nói về code tốt và unit tests:
+Nhưng trên hết, John lẽ ra phải nói không với quyết định của chính mình, rằng cách duy nhất để hoàn thành công việc đúng thời hạn là tạo ra một mớ hỗn độn khổng lồ. Hãy để ý những điều John nói về code tốt và kiểm thử đơn vị:
 
-"Để bù đắp cho công việc mới thêm vào, cần code nhanh hơn một chút. Quên những lớp trừu tượng đi. Sử dụng một vòng lặp lớn phức tạp thay vì hỗn hợp, không còn thời gian nữa!"
+"Để bù đắp cho phần công việc phát sinh, tôi cần làm nhanh hơn một chút. Quên abstract factory đi. Sử dụng những vòng lặp for lớn thay vì composite, không có thời gian nữa!!"
 
 Và thêm nữa:
 
-"Tôi dành 8 ngày viết code trong cơn giận dữ. Tôi sử dụng tất cả các công cụ có sẵn để hoàn thành công việc: copy-paste (sử dụng lại code), các con số ma thuật (tránh trùng lặp khi xác định hằng số và nhập lại), và hoàn toàn không có unit tests! (Ai cần những thanh màu đỏ vào thời điểm này, chỉ thêm cản trở)"
+"Tôi dùng 8 ngày đó để viết code trong giận dữ. Tôi sử dụng tất cả các công cụ có sẵn cho mình để hoàn thành công việc: sao chép và dán (hay tái sử dụng code), các con số ma thuật (tránh trùng lặp khi xác định hằng số và haizz, nhập lại chúng), và hoàn toàn KHÔNG CÓ kiểm thử đơn vị! (Ai cần những thanh đỏ trong trường hợp này, chúng chỉ làm cản trở tôi)"
 
 Nói đồng ý với những quyết định đó là mấu chốt thực sự của thất bại. John chấp nhận rằng cách duy nhất để thành công là hành động thiếu chuyên nghiệp, vì vậy anh đã thu được phần thưởng xứng đáng.
 
-Điều này nghe thật khắc nghiệt. Thực ra nó không hẳn như vậy. Trong các chương trước, tôi đã mô tả cách tôi mắc sai lầm tương tự trong sự nghiệp của mình, hơn một lần. Sự cám dỗ để trở thành một anh hùng và "giải quyết được vấn đề" là rất lớn. Điều mà tất cả chúng ta phải nhận ra là nói đồng ý để bỏ kỷ luật chuyên môn không phải là cách giải quyết vấn đề. Bỏ những kỷ luật đó là cách bạn tạo ra vấn đề.
+Điều này nghe thật khắc nghiệt. Thực ra nó không hẳn như vậy. Trong các chương trước, tôi đã mô tả cách tôi mắc sai lầm tương tự trong sự nghiệp của mình, hơn một lần. Sự cám dỗ để trở thành một anh hùng và "giải quyết được vấn đề" là rất lớn. Điều mà tất cả chúng ta phải nhận ra là đồng ý bỏ kỷ luật chuyên môn _không phải_ là cách giải quyết vấn đề. Bỏ những kỷ luật đó là cách bạn tạo ra vấn đề.
 
 Cho nên, tôi cuối cùng đã có câu trả lời cho câu hỏi đầu tiên của John:
 
