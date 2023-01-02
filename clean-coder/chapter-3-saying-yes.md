@@ -34,17 +34,17 @@ Nói. Là. Phải. Làm
 
 Một sự cam kết sẽ có 3 phần.
 
-1. Bạn nói bạn sẽ thực hiện
-2. Bạn thực sự nghĩ mình sẽ thực hiện
-3. Bạn thực sự thực hiện
+1. Bạn _nói_ bạn sẽ làm điều đó
+2. Bạn _thực lòng_ muốn làm điều đó
+3. Bạn _thực sự_ làm điều đó
 
-Nhưng bạn có thường xuyên bắt gặp người khác (không phải chúng ta, tất nhiên!) không bao giờ thực hiện đủ 3 bước đó?
+Nhưng người ta không bao giờ thực hiện đủ cả 3 bước. Và chắc bạn thường xuyên gặp phải những trường hợp này? (không phải chúng ta, tất nhiên!)
 
-- Bạn hỏi một anh chàng IT tại sao mạng lại chậm như vậy và anh ta trả lời "Yeah, chúng ta thực sự cần một số router mới" Và bạn _biết_ rằng sẽ không có gì xảy ra.
+- **Bạn hỏi một anh chàng IT** tại sao mạng lại chậm như vậy và anh ta trả lời "Đúng. chúng ta thực sự cần thêm vài chiếc router mới" Và bạn _biết_ rằng sẽ không có gì xảy ra.
 
-- Bạn yêu cầu một thành viên trong team chạy một số kiểm thử thủ công trước khi kiểm tra source code, và anh ta trả lời, "Chắc chắn rồi. Tôi hy vọng sẽ làm điều đó vào cuối ngày" Và bằng cách nào đó, bạn cảm thấy rằng ngày mai bạn sẽ cần hỏi lại xem liệu có bất kỳ kiểm thử nào thực sự được chạy trước khi kiểm tra.
+- **Bạn yêu cầu một thành viên trong team** thực hiện một số kiểm thử thủ công trước khi kiểm tra source code, và anh ta trả lời, "Chắc chắn rồi. Tôi hy vọng sẽ làm điều đó vào cuối ngày". Và bằng cách nào đó, bạn _cảm thấy_ rằng ngày mai bạn sẽ cần hỏi lại xem liệu có bất kỳ kiểm thử nào thực sự được chạy trước khi kiểm tra.
 
-- Sếp của bạn đi loanh quanh trong phòng và lẩm bẩm, "chúng ta cần phải làm nhanh hơn". Và bạn biết sếp thực sự muốn BẠN cần phải làm nhanh hơn. Sếp sẽ không làm gì cả.
+- **Sếp** của bạn đi loanh quanh trong phòng và lẩm bẩm, "chúng ta cần phải làm nhanh hơn". Và bạn _biết_ sếp thực sự muốn BẠN cần phải làm nhanh hơn. _Anh/cô ta_ sẽ không làm gì giúp tiến độ nhanh hơn.
 
 Có rất ít người thực sự muốn và thực sự làm những điều họ nói. Có vài người khi nói ra điều gì đó, họ thực sự muốn nó nhưng cuối cùng không hoàn thành. Và có rất nhiều người hứa hẹn nhiều điều và thậm chí không muốn thực hiện nó. Bạn đã bao giờ nghe ai đó nói: "Anh bạn, tôi thực sự cần giảm cân một chút" và bạn biết họ sẽ không làm gì cả? Luôn là như vậy.
 
