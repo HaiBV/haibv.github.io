@@ -26,7 +26,7 @@ Tôi không hề lường trước việc này. Tôi kỳ vọng anh ta sẽ nó
 
 Bây giờ, để tôi giới thiệu cho bạn về Roy Osherove, người sẽ cho bạn biết câu nói đó thảm hại đến mức nào.
 
-# Ngôn ngữ của sự cam kết
+## Ngôn ngữ của sự cam kết
 
 Với Roy Osherove
 
@@ -44,27 +44,27 @@ Nhưng người ta không bao giờ thực hiện đủ cả 3 bước. Và ch�
 
 - **Bạn yêu cầu một thành viên trong team** thực hiện một số kiểm thử thủ công trước khi kiểm tra source code, và anh ta trả lời, "Chắc chắn rồi. Tôi hy vọng sẽ làm điều đó vào cuối ngày". Và bằng cách nào đó, bạn _cảm thấy_ rằng ngày mai bạn sẽ cần hỏi lại xem liệu có bất kỳ kiểm thử nào thực sự được chạy trước khi kiểm tra.
 
-- **Sếp** của bạn đi loanh quanh trong phòng và lẩm bẩm, "chúng ta cần phải làm nhanh hơn". Và bạn _biết_ sếp thực sự muốn BẠN cần phải làm nhanh hơn. _Anh/cô ta_ sẽ không làm gì giúp tiến độ nhanh hơn.
+- **Sếp của bạn** đi loanh quanh trong phòng và lẩm bẩm, "chúng ta cần phải làm nhanh hơn". Và bạn _biết_ sếp thực sự muốn BẠN cần phải làm nhanh hơn. _Anh/cô ta_ sẽ không làm gì giúp tiến độ nhanh hơn.
 
-Có rất ít người thực sự muốn và thực sự làm những điều họ nói. Có vài người khi nói ra điều gì đó, họ thực sự muốn nó nhưng cuối cùng không hoàn thành. Và có rất nhiều người hứa hẹn nhiều điều và thậm chí không muốn thực hiện nó. Bạn đã bao giờ nghe ai đó nói: "Anh bạn, tôi thực sự cần giảm cân một chút" và bạn biết họ sẽ không làm gì cả? Luôn là như vậy.
+Có rất ít người thực sự muốn và thực sự làm những điều họ nói. Có vài người khi nói ra điều gì đó, họ thực sự _muốn_ làm điều đó nhưng không bao giờ hoàn thành. Và có rất nhiều người hứa hẹn nhiều điều mà thậm chí họ không _muốn_ thực hiện nó. Bạn đã bao giờ nghe ai đó nói: "Anh bạn, tôi thực sự cần giảm cân một chút" và bạn biết họ sẽ không làm gì cả? Luôn là như vậy.
 
 Tại sao trong hầu hết mọi lúc, bạn luôn có cảm giác kỳ lạ là mọi người không thực sự cam kết hoàn thành một việc gì đó?
 
-Tệ hơn, trực giác thường khiến chúng ta thất vọng. Đôi khi chúng ta muốn tin rằng ai đó thực sự muốn điều họ vừa nói ra trong khi họ thực sự không muốn. Chúng ta muốn tin một lập trình viên khi họ nói họ có thể hoàn thành một công việc 2 tuần chỉ với 1 tuần, nhưng họ không làm được.
+Tệ hơn, trực giác thường khiến chúng ta thất vọng. Đôi khi chúng ta _muốn_ tin rằng ai đó thực sự muốn điều họ vừa nói ra trong khi họ thực sự không muốn. Chúng ta _muốn_ tin một lập trình viên khi họ nói, lúc đang bị dồn ép, họ có thể hoàn thành một công việc 2 tuần chỉ trong 1 tuần, nhưng chúng ta không nên tin điều đó.
 
-Thay vì tin tưởng vào gan ruột mình, chúng ta có thể sử dụng một số thủ thuật liên quan đến ngôn ngữ để thử và tìm hiểu xem mọi người có thực sự muốn điều họ nói hay không. Và bằng cách thay đổi những gì chúng ta noi, chúng ta có thể bắt đầu thực hiện bước 1 và 2 của danh sách trên. Khi chúng ta nói rằng chúng tôi sẽ cam kết với một điều gì đó, chúng ta thực sự muốn cam kết đó.
+Thay vì tin tưởng vào gan ruột mình, chúng ta có thể sử dụng một số thủ thuật liên quan đến ngôn ngữ để thử và tìm hiểu xem mọi người có thực sự muốn điều họ nói hay không. Và bằng cách thay đổi những gì chúng ta nói, chúng ta có thể bắt đầu thực hiện bước 1 và 2 của danh sách trên. Khi chúng ta _nói_ rằng chúng tôi sẽ cam kết với một điều gì đó, chúng ta thực sự _muốn_ điều đó.
 
-# Dấu hiệu của sự "lươn lẹo"
+### Dấu hiệu của sự "lươn lẹo"
 
-Hãy để ý tới ngôn ngữ mà chúng ta dùng khi cam kết làm một việc gì đó, nó sẽ là một dấu hiệu cho báo trước của việc đó. Thực ra, chính xác hơn là để ý một số từ cụ thể trong những lời cam kết đó. Nếu bạn không thể tìm thấy những từ khóa kỳ diệu đó, rất có thể chúng tôi không thực sự muốn điều mình vừa nói, hoặc chúng tôi có thể không tin rằng chúng khả thi.
+Hãy để ý tới ngôn ngữ mà chúng ta dùng khi _cam kết_ làm một việc gì đó, nó sẽ là một dấu hiệu báo trước cho việc sắp xảy ra. Thực ra, chính xác hơn là để ý tới một số từ cụ thể trong những lời cam kết đó. Nếu bạn không thể tìm thấy những từ khóa kỳ diệu đó, rất có thể chúng tôi không thực sự muốn điều mình vừa nói, hoặc chúng tôi có thể không tin rằng chúng khả thi.
 
 Dưới đây là vài ví dụ về những từ khóa và cụm từ cần tìm như một dấu hiệu nhận biết sự thất hứa.
 
-- Cần/Nên (Need\Should): "Chúng ta cần hoàn thành việc này." "Tôi cần giảm cân." "Ai đó nên biến điều đó thành hiện thực."
+- **Cần/Nên (Need\Should):** "Chúng ta cần hoàn thành việc này." "Tôi cần giảm cân." "Ai đó nên biến điều đó thành hiện thực."
 
-- Hy vọng/Ước (Hope/Wish): "Tôi hy vọng có thể hoàn thành vào ngày mai." "Tôi hy vọng chúng ta có thể gặp lại vào ngày nào đó." "Tôi ước tôi có thời gian cho việc đó." "Tôi ước chiếc máy tính này nhanh hơn."
+- **Hy vọng/Ước (Hope/Wish):** "Tôi hy vọng có thể hoàn thành vào ngày mai." "Tôi hy vọng chúng ta có thể gặp lại vào ngày nào đó." "Tôi ước tôi có thời gian cho việc đó." "Tôi ước chiếc máy tính này nhanh hơn."
 
-- Hãy (Let's) (không được theo sau "Tôi...(I...)") "Hãy gặp nhau nhé." "Hãy hoàn thành việc này."
+- **Hãy (Let's):** (không nói sau "Tôi...(I...)") "Hãy gặp nhau nhé." "Hãy hoàn thành việc này."
 
 Khi bắt đầu để ý những từ này, bạn bắt đầu phát hiện ra chúng ở hầu hết mọi nơi quanh bạn, ngay cả trong những điều bạn nói.
 
@@ -74,7 +74,7 @@ Và việc này thật sự không ổn khi bạn hoặc người khác dựa v�
 
 Chúng ta đã nghe được âm thanh cuộc sự thất hứa. Vậy còn những cam kết thực sự?
 
-# Những cam kết thật sự nghe như thế nào?
+### Những cam kết thật sự nghe như thế nào?
 
 Điểm chung của những cụm từ trong phần trước là họ cho rằng những thứ đó nằm ngoài tầm tay của "tôi" hoặc họ không có trách nhiệm cá nhân trong việc đó.
 
