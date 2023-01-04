@@ -66,27 +66,27 @@ Dưới đây là vài ví dụ về những từ khóa và cụm từ cần tì
 
 - **Hãy (Let's):** (không nói sau "Tôi...(I...)") "Hãy gặp nhau nhé." "Hãy hoàn thành việc này."
 
-Khi bắt đầu để ý những từ này, bạn bắt đầu phát hiện ra chúng ở hầu hết mọi nơi quanh bạn, ngay cả trong những điều bạn nói.
+Khi bắt đầu để ý những từ này, bạn sẽ phát hiện ra chúng hầu hết ở mọi nơi quanh bạn, ngay cả trong những điều bạn nói.
 
-Bạn sẽ thấy chúng ta có xu hướng rất bận rộn và không chịu trách nhiệm về mọi việc.
+Bạn sẽ thấy chúng ta có xu hướng rất bận rộn và không chịu trách nhiệm với mọi việc.
 
-Và việc này thật sự không ổn khi bạn hoặc người khác dựa vào những lời hứa đó như một phần của công việc. Tuy nhiên bạn đã thực hiện được bước đầu tiên - bắt đầu nhận biết sự thiếu trung thực trong cam kết quanh bạn và trong bạn.
+Và thật sự _không_ ổn nếu bạn hoặc người nào khác dựa vào những lời hứa đó như một phần của công việc. Tuy nhiên bạn đã thực hiện được bước đầu tiên - bắt đầu nhận biết được sự thiếu trung thực trong cam kết ở xung quanh và bên trong bạn.
 
-Chúng ta đã nghe được âm thanh cuộc sự thất hứa. Vậy còn những cam kết thực sự?
+Chúng ta đã nghe được âm thanh của sự thất hứa. Vậy còn những cam kết thực sự?
 
 ### Những cam kết thật sự nghe như thế nào?
 
-Điểm chung của những cụm từ trong phần trước là họ cho rằng những thứ đó nằm ngoài tầm tay của "tôi" hoặc họ không có trách nhiệm cá nhân trong việc đó.
+Điểm chung của những cụm từ trong phần trước là họ cho rằng những thứ đó nằm ngoài tầm tay của "tôi" hoặc họ không có trách nhiệm cá nhân trong việc đó. Trong mỗi trường hợp, họ cư xử như đang là _nạn nhân_ của tình huống thay vì kiểm soát nó.
 
-Sự thật là _bạn_, _chính bản thân bạn_, LUÔN LUÔN có điều gì đó nằm trong tầm kiểm soát của bạn, vì vậy luôn có điều gì đó bạn hoàn toàn có thể cam kết thực hiện.
+Sự thật là _bạn_, _bản thân bạn_, LUÔN LUÔN có điều gì đó nằm trong tầm kiểm soát _của mình_, vì vậy luôn có _điều gì đó_ bạn hoàn toàn có thể cam kết thực hiện.
 
 Công thức bí mật để nhận ra lời cam kết trung thực là để ý tới những câu nghe giống như: Tôi sẽ ... vào ... (ví dụ: Tôi sẽ hoàn thành vào thứ 3)
 
-Có gì quan trọng trong câu nói trên? Bạn sẽ đối mặt với một thực tế rằng BẠN cần làm một việc gì đó với thời gian hoàn thành rõ ràng. Bạn đang không nói về bất cứ ai khác ngoài bản thân bạn. Bạn đang nói về hành động bạn sẽ làm. Bạn không "có thể" làm nó hoặc "có thể đạt được", bạn sẽ hoàn thành nó.
+Có gì quan trọng trong câu trên? _Bạn bắt đầu đối mặt với thực tế rằng BẠN cần làm một việc gì đó với thời gian hoàn thành rõ ràng._ Bạn đang _không_ nói về bất cứ ai khác ngoài bản thân bạn. Bạn đang nói về _hành động_ bạn _sẽ_ làm. Bạn không _"có thể"_ làm nó hoặc _"có thể đạt được"_, bạn _sẽ_ hoàn thành nó.
 
-Không có cách nào (về mặt lý thuyết) thoát khỏi cam kết bằng câu nói trên. Bạn nói bạn sẽ làm nó và bây giờ chỉ có 2 trường hợp có thể xảy ra - bạn hoàn thành nó, hoặc không. Nếu bạn không hoàn thành, bạn sẽ làm thất vọng những người phụ thuộc lời hứa đó. Bạn sẽ càm thấy _tồi tệ_ khi không hoàn thành. Bạn sẽ thấy ngại khi nói chuyện với ai đó khi chưa xong việc (nếu người đó nghe được lời hứa của bạn)
+Không có cách nào (về mặt lý thuyết) thoát khỏi cam kết bằng câu nói trên. Bạn nói bạn sẽ làm nó và bây giờ chỉ có 2 trường hợp có thể xảy ra - bạn hoàn thành nó, hoặc không. Nếu bạn không hoàn thành, bạn sẽ làm thất vọng những người phụ thuộc lời hứa đó. Bạn sẽ cảm thấy _tồi tệ_ khi không hoàn thành. Bạn sẽ thấy _ngại_ khi nói chuyện với ai đó rằng bạn chưa xong việc (nếu người đó nghe được lời hứa của bạn)
 
-Khá đáng sợ phải không?
+Khá đáng sợ phải không nào?
 
 Bạn đang chịu toàn bộ trách nhiệm về việc gì đó, trước ít nhất là một người. Không giống như bạn đang đứng trước gương, hoặc màn hình máy tính. Chính là bạn, đối mặt với một người khác, và nói rằng bạn sẽ làm điều đó. Đó là khi cam kết sẽ bắt đầu. Đặt mình vào tình huống buộc bạn phải làm điều đó.
 
