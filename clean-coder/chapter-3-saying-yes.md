@@ -88,15 +88,15 @@ Không có cách nào (về mặt lý thuyết) thoát khỏi cam kết bằng c
 
 Khá đáng sợ phải không nào?
 
-Bạn đang chịu toàn bộ trách nhiệm về việc gì đó, trước ít nhất là một người. Không giống như bạn đang đứng trước gương, hoặc màn hình máy tính. Chính là bạn, đối mặt với một người khác, và nói rằng bạn sẽ làm điều đó. Đó là khi cam kết sẽ bắt đầu. Đặt mình vào tình huống buộc bạn phải làm điều đó.
+Bạn đang chịu toàn bộ trách nhiệm về một việc gì đó, trước ít nhất một người. Không giống như bạn đang đứng trước gương, hoặc màn hình máy tính. Chính bạn, đối mặt với một người khác, và nói rằng bạn sẽ làm điều đó. Đó là khi cam kết sẽ bắt đầu. Đặt mình vào tình huống mà bạn buộc phải làm điều đó.
 
 Bạn đã thay đổi ngôn ngữ bạn sử dụng thành ngôn ngữ của sự cam kết, và điều đó sẽ giúp bạn đi tới 2 bước tiếp theo: thực sự muốn, và làm theo.
 
-Sau đây là một số lý do bạn có thể không muốn điều đó, hoặc làm theo, và một số giải pháp.
+Sau đây là một số lý do bạn có thể đưa ra khi _không_ muốn hoặc làm điều đó, và một số giải pháp.
 
-## Nó sẽ không hiệu quả vì tôi phải phụ thuộc vào người X để hoàn thành việc này.
+#### Nó sẽ không hiệu quả vì tôi phải phụ thuộc vào người X để hoàn thành việc này.
 
-Bạn chỉ có thể cam kết những việc bạn _toàn quyền kiểm soát_. Lấy ví dụ, nếu mục tiêu của bạn là hoàn thành một module phụ thuộc vào một đội khác, bạn không thể cam kết hoàn thành module đó với tích hợp đầy đủ của nhóm khác. Nhưng bạn có thể cam kết thực hiện những hành động cụ thể sẽ đưa bạn đến mục tiêu của mình.
+Bạn có thể chỉ cam kết những việc bạn _toàn quyền kiểm soát_. Lấy ví dụ, nếu mục tiêu của bạn là hoàn thành một module phụ thuộc vào một đội khác, bạn không thể cam kết hoàn thành module đó với tích hợp đầy đủ của nhóm khác. Nhưng bạn _có thể_ cam kết thực hiện những hành động cụ thể sẽ đưa bạn đến mục tiêu của mình. Bạn có thể:
 
 - Dành ra một giờ bàn bạc với Gary từ nhóm cơ sở hạ tầng để làm rõ sự phụ thuộc của bạn.
 - Tạo một interface để trừu tượng hóa sự phụ thuộc module của bạn với cơ sở hạ tầng của nhóm khác.
@@ -107,7 +107,7 @@ Bạn đã thấy sự khác biệt chưa?
 
 Nếu mục tiêu cuối cùng phụ thuộc vào một ai đó, bạn nên cam kết những hành động cụ thể sẽ đưa bạn đến gần hơn với mục tiêu cuối cùng.
 
-## Nó sẽ không hiệu quả vì tôi thực sự không biết liệu có thể thực hiện được hay không
+#### Nó sẽ không hiệu quả vì tôi thực sự không biết liệu có thể thực hiện được hay không
 
 Nếu nó không thể hoàn thành, bạn vẫn có thể cam kết những hành động sẽ đưa bạn đến gần mục tiêu hơn. Tìm hiểu xem nó có thể thực hiện hay không có thể là một trong những hành động cần cam kết!
 
