@@ -109,31 +109,31 @@ Nếu mục tiêu cuối cùng phụ thuộc vào một ai đó, bạn nên cam 
 
 #### Nó sẽ không hiệu quả vì tôi thực sự không biết liệu có thể thực hiện được hay không
 
-Nếu nó không thể hoàn thành, bạn vẫn có thể cam kết những hành động sẽ đưa bạn đến gần mục tiêu hơn. Tìm hiểu xem nó có thể thực hiện hay không có thể là một trong những hành động cần cam kết!
+Nếu không thể hoàn thành, bạn vẫn có thể cam kết những hành động sẽ đưa bạn đến gần mục tiêu hơn. Tìm hiểu xem có thể thực hiện hay không là một trong những hành động cần cam kết!
 
-Thay vì cam kết sẽ sửa toàn bộ 25 lỗi còn lại trước khi bàn giao (có thể bất khả thi), bạn có thể cam kết những hành động cụ thể sau sẽ đưa bạn đến gần mục tiêu hơn:
+Thay vì cam kết sẽ sửa toàn bộ 25 lỗi còn lại trước khi phát hành sản phẩm (có thể bất khả thi), bạn có thể cam kết những hành động cụ thể sẽ đưa bạn đến gần mục tiêu hơn, như sau:
 
 - Rà soát một lượt 25 lỗi và cố gắng tái hiện chúng.
 - Nói chuyện với QA, người đã tìm ra những lỗi đó để xem bản tóm tắt của lỗi đó.
 - Dành toàn bộ thời gian trong tuần của bạn để sửa từng lỗi một.
 
-## Nó sẽ không hiệu quả vì đôi lúc tôi sẽ không làm được.
+#### Nó sẽ không hiệu quả vì đôi lúc tôi sẽ không làm được.
 
-Điều đó có thể xảy ra. Đôi khi những thứ không lường trước sẽ xảy ra, cuộc sống mà. Nhưng bạn luôn muốn sống theo sự kỳ vọng. Trong trường hợp đó, đã đến lúc thay đổi sự kỳ vọng đó, ngay và luôn.
+Điều đó có thể xảy ra. Đôi khi những thứ không lường trước sẽ xảy ra, cuộc sống mà. Nhưng bạn luôn muốn sống theo sự kỳ vọng. Trong trường hợp đó, đã đến lúc thay đổi sự kỳ vọng đó, _ngay và luôn_.
 
-Nếu bạn không thể thực hiện cam kết của mình, việc quan trọng nhất là báo động ngay và luôn cho những người bạn đã cam kết với.
+Nếu bạn không thể thực hiện cam kết của mình, việc quan trọng nhất là báo động ngay và luôn cho những người mà bạn đã cam kết.
 
 Bạn càng thông báo cho các bên liên quan sớm bao nhiêu, thì càng có nhiều khả năng và thời gian cho đội của bạn dừng lại, đánh giá lại các hành động hiện tại và quyết định xem có thể thực hiện hoặc thay đổi điều gì đó không (ví dụ như về mức độ ưu tiên). Bằng cách này, cam kết của bạn vẫn có thể hoàn thành, hoặc bạn có thể thay đổi thành một cam kết khác.
 
 Dưới đây là một vài ví dụ:
 
-- Nếu bạn lên lịch hẹn vào buổi chiều ở một quán cà phê tại khu trung tâm với một đồng nghiệp và bạn bị tắc đường, bạn nghi ngờ việc bạn có thể giữ cam kết đến đúng giờ của mình. Bạn có thể gọi cho đồng nghiệp ngay khi bạn nhận ra bạn có thể đến trễ, và cho họ biết. Biết đâu bạn sẽ tìm được một địa điểm gần hơn, hoặc có thể hoãn buổi hẹn lại.
+- Nếu bạn lên lịch hẹn vào buổi chiều ở một quán cà phê tại khu trung tâm với một đồng nghiệp và bạn bị tắc đường, bạn lo rằng bạn khó có thể giữ cam kết đến đúng giờ của mình. Bạn nên gọi cho đồng nghiệp ngay khi nhận ra mình có thể đến trễ, và cho họ biết. Biết đâu bạn sẽ tìm được một địa điểm gần hơn, hoặc có thể hoãn buổi hẹn lại.
 
-- Nếu bạn cam kết sửa một lỗi mà bạn nghĩ là có thể sửa được và bạn phát hiện ra có vài vấn đề còn ẩn giấu phức tạp hơn so với suy nghĩ ban đầu, bạn có thể nêu vấn đề lên. Sau đó, cả đội có thể quyết định quá trình để thực hiện cam kết đó (cùng làm, brainstorming, ...) hoặc thay đổi mức độ ưu tiên và giao một lỗi khác đơn giản hơn cho bạn.
+- Nếu bạn cam kết sửa một lỗi mà bạn nghĩ là có thể sửa được, nhưng sau đó bạn phát hiện ra có vài vấn đề còn ẩn giấu phức tạp hơn so với suy nghĩ ban đầu, bạn hãy nêu vấn đề đó lên. Cả đội có thể quyết định quá trình để thực hiện cam kết đó (cùng làm, brainstorming, ...) hoặc thay đổi mức độ ưu tiên và giao một lỗi khác đơn giản hơn cho bạn.
 
 Điều quan trọng ở đây là: Nếu bạn không nói với ai về vấn đề tiềm tàng sớm nhất có thể, bạn sẽ không cho người khác cơ hội để giúp đỡ bạn hoàn thành cam kết của mình.
 
-## Tóm lại
+### Tóm lại
 
 Tạo nên ngôn ngữ của sự cam kết nghe có đôi chút đáng sợ, nhưng nó có thể giúp xử lý rất nhiều vấn đề về trao đổi thông tin mà các lập trình viên phải đối mặt ngày nay - ước lượng (estimation), hạn chót, và giao tiếp mặt đối mặt. Bạn sẽ được coi là một lập trình viên nghiêm túc luôn giữ lời hứa, và đó là một trong những điều tốt nhất mà bạn có thể hy vọng trong ngành của chúng ta.
 
