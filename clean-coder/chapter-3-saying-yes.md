@@ -28,7 +28,7 @@ Bây giờ, để tôi giới thiệu cho bạn về Roy Osherove, người sẽ
 
 ## Ngôn ngữ của sự cam kết
 
-Với Roy Osherove
+Viết bởi Roy Osherove
 
 Nói. Là. Phải. Làm
 
@@ -137,15 +137,15 @@ Dưới đây là một vài ví dụ:
 
 Tạo nên ngôn ngữ của sự cam kết nghe có đôi chút đáng sợ, nhưng nó có thể giúp xử lý rất nhiều vấn đề về trao đổi thông tin mà các lập trình viên phải đối mặt ngày nay - ước lượng (estimation), hạn chót, và giao tiếp mặt đối mặt. Bạn sẽ được coi là một lập trình viên nghiêm túc luôn giữ lời hứa, và đó là một trong những điều tốt nhất mà bạn có thể hy vọng trong ngành của chúng ta.
 
-# Học cách để nói "Có"
+## Học cách để nói "Có"
 
-Tôi yêu cầu Roy đóng góp bài báo đó vì nó mắc kẹt trong đầu tôi khá lâu. Tôi đã giảng về việc học cách nói "không" trong một thời gian dài. Nhưng điều quan trong không kém là học cách để nói "có"
+Tôi đề nghị Roy đóng góp bài viết trên vì tôi ấn tượng với nó từ khá lâu. Tôi giảng về việc học cách nói "không" trong một thời gian dài. Nhưng điều quan trọng không kém là học cách để nói "có"
 
-## Mặt khác của "cố gắng"
+### Mặt khác của "cố gắng"
 
-Hãy tưởng tượng Peter có trách nhiệm với một số sửa đổi công cụ xếp hạng. Peter tự ước tính sẽ mất khoảng 5 ~ 6 ngày. Anh ta nghĩ việc viết tài liệu cho các sửa đổi sẽ mất vài giờ. Vào sáng thứ 2, quản lý của anh, Marge, hỏi về tình trạng công việc.
+Hãy tưởng tượng Peter có trách nhiệm với một số sửa đổi của công cụ xếp hạng. Peter tự ước tính chúng sẽ mất khoảng 5 ~ 6 ngày. Anh ta cũng nghĩ đến việc viết tài liệu cho các sửa đổi sẽ mất vài giờ. Vào sáng thứ 2, quản lý của anh, Marge, hỏi về tình hình công việc.
 
-Marge: "Peter, bạn có thể hoàn thành chỉnh sửa cho công cụ xếp hạng vào thứ 6?"
+Marge: "Peter, bạn sẽ hoàn thành các chỉnh sửa của công cụ xếp hạng vào thứ 6 chứ?"
 
 Peter: "Tôi nghĩ là được"
 
@@ -153,21 +153,21 @@ Marge: "Nó sẽ đi cùng với tài liệu chứ?"
 
 Peter: "Tôi sẽ cố để hoàn thành nó"
 
-Có lẽ Marge không nghe thấy sự bối rối trong câu nói của Peter, nhưng chắc chắn anh ta không cam kết nhiều. Marge đang hỏi những câu hỏi với câu trả lời có hoặc không nhưng câu trả lời của Peter khá mờ nhạt.
+Có lẽ Marge không nghe thấy sự bối rối trong câu nói của Peter, nhưng chắc chắn anh ta không đưa ra nhiều cam kết. Marge đưa ra những câu hỏi cần câu trả lời có hoặc không, nhưng Peter trả lời khá mơ hồ.
 
-Lưu ý việc sử dụng từ "cố gắng". Trong chương trước, chúng tôi đã định nghĩa cố gắng như một "nỗ lực thêm". Ở đây, cách nói của Peter đang được hiểu là "có thể có, có thể không"
+Lưu ý việc lạm dụng từ "cố gắng". Trong chương trước, chúng tôi đã định nghĩa cố gắng như một "nỗ lực thêm". Ở đây, cách nói của Peter được hiểu là "có thể có, có thể không"
 
 Tốt hơn Peter nên trả lời thế này:
 
-Marge: "Peter, bạn có thể hoàn thành chỉnh sửa cho công cụ xếp hạng vào thứ 6?"
+Marge: "Peter, bạn sẽ hoàn thành các chỉnh sửa của công cụ xếp hạng vào thứ 6 chứ?"
 
 Peter: "Có thể, nhưng có thể đến thứ 2"
 
 Marge: "Nó sẽ đi cùng với tài liệu chứ?"
 
-Peter: "Tôi cần vài giờ để làm tài liệu, nên có thể vào thứ 2, nhưng có thể đến cuối ngày thứ 3"
+Peter: "Tôi cần vài giờ để làm tài liệu, nên có thể vào thứ 2, nhưng có thể sẽ đến cuối ngày thứ 3"
 
-Trong trường hợp này, ngôn ngữ của Peter trung thực hơn. Anh ta đang mô tả sự không chắc chắn của mình cho Marge. Marge có thể đối phó với sự không chắc chắn đó. Còn không thì cô ấy không hề biết về nó.
+Trong trường hợp này, ngôn ngữ của Peter trung thực hơn. Anh ta mô tả sự không chắc chắn của mình cho Marge. Marge có thể đối phó với sự không chắc chắn đó. Trong trường hợp trước đó, cô ấy không hề biết gì về nó.
 
 ## Cam kết với kỷ luật
 
