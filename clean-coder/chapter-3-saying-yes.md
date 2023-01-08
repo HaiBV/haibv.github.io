@@ -171,11 +171,11 @@ Trong trường hợp này, ngôn ngữ của Peter trung thực hơn. Anh ta m�
 
 ## Cam kết với kỷ luật
 
-Marge: "Peter, tôi muốn một câu trả lời rõ ràng, có hoặc không. Anh sẽ hoàn thành công cụ xếp hạng cùng với tài liệu vào thứ 6 chứ?
+Marge: "Peter, tôi muốn một câu trả lời rõ ràng, có hoặc không. Anh sẽ có chức năng công cụ xếp hạng hoàn chỉnh cùng với tài liệu vào thứ 6 chứ?
 
 Đây là một câu hỏi hoàn toàn hợp lý của Marge. Cô ấy có một lịch trình cần quan tâm và cô cần một câu trả lời có hoặc không về ngày thứ 6. Peter nên trả lời thế nào?
 
-Peter: "Trong trường hợp này, Marge, tôi sẽ phải nói không. Thời điểm sớm nhất mà tôi chắc chắn tôi sẽ hoàn thành chỉnh sửa cùng tài liệu là vào thứ 3."
+Peter: "Trong trường hợp này, Marge, tôi sẽ phải nói không. Thời điểm sớm nhất mà tôi _chắc chắn_ tôi sẽ hoàn thành chỉnh sửa cùng tài liệu là vào thứ 3."
 
 Marge: "Vậy anh cam kết vào thứ 3."
 
@@ -183,13 +183,13 @@ Peter: "Đúng, tôi sẽ hoàn thành mọi thứ vào thứ 3."
 
 Nhưng nếu Marge rất muốn điều chỉnh và tài liệu hoàn thành vào thứ 6?
 
-Marge: "Peter, tôi có rất nhiều vấn đề với thứ 3. Willy, người viết tài liệu kỹ thuật, sẽ bắt đầu công việc vào thứ 2. Anh ta có 5 ngày để hoàn thành hướng dẫn người dùng. Nếu tôi không có tài liệu của công cụ xếp hạng vào sáng thứ 2, anh ta sẽ không thể hoàn thành hướng dẫn đúng hẹn. Anh có thể làm tài liệu trước không?
+Marge: "Peter, nếu là thứ 3 thì tôi sẽ thực sự gặp vấn đề. Willy, người viết tài liệu kỹ thuật, sẽ bắt đầu công việc vào thứ 2. Anh ta có 5 ngày để hoàn thành hướng dẫn người dùng. Nếu tôi không có tài liệu của công cụ xếp hạng vào sáng thứ 2, anh ta sẽ không thể hoàn thành hướng dẫn đúng hẹn. Anh có thể làm tài liệu trước không?
 
 Peter: "Không, phần chỉnh sửa phải hoàn thành trước, vì chúng ta tạo ra tài liệu từ kết quả của những kiểm thử."
 
 Marge: "Chà, vậy có cách nào anh hoàn thành chỉnh sửa và tài liệu trước sáng thứ 2 không?"
 
-Bây giờ Peter cần phải ra quyết định. Có khả năng cao anh ta sẽ hoàn thành chỉnh sửa công cụ xếp hạng vào thứ 6, và anh ta có khả năng hoàn thành tài liệu trước khi về nhà cho cuối tuần. Anh ta có thể dành thêm vài giờ vào thứ 7 nếu mọi thứ cần nhiều thời gian hơn anh ta nghĩ. Vậy anh ta nên trả lời Marge thế nào?
+Bây giờ Peter cần phải ra quyết định. Có khả năng cao anh ta sẽ hoàn thành chỉnh sửa công cụ xếp hạng vào thứ 6, và anh ta có khả năng hoàn thành tài liệu trước khi về nhà cho cuối tuần. Anh ta có thể dành thêm vài giờ vào thứ 7 nếu mọi thứ cần nhiều thời gian hơn anh ta nghĩ. Vậy Peter nên trả lời Marge thế nào?
 
 Peter: "Nghe này Marge, có khả năng cao là tôi có thể hoàn thành mọi thứ vào sáng thứ 2 nếu tôi có thể làm thêm vài giờ vào thứ 7."
 
@@ -203,9 +203,9 @@ Peter: "Có thể, nhưng không chắc chắn."
 
 Marge: "Nghe này Peter, tôi thực sự cần sự chắc chắn. Có bất kỳ cách nào anh có thể cam kết hoàn thành trước sáng thứ 2 không?
 
-Peter có thể bị cám dỗ để phá vơ kỷ luật vào lúc này. Anh ta có thể hoàn thành nhanh hơn nếu anh ta bỏ qua các kiểm thử của mình. Anh ta có thể hoàn thành nhanh hơn nếu không refactor. Anh ta có thể hoàn thành nhanh hơn nếu anh ta không chạy đầy đủ hồi quy.
+Peter có thể bị cám dỗ để phá vỡ kỷ luật vào lúc này. Anh ta có thể hoàn thành nhanh hơn nếu anh ta bỏ qua các kiểm thử của mình. Anh ta có thể hoàn thành nhanh hơn nếu không refactor. Anh ta có thể hoàn thành nhanh hơn nếu anh ta không chạy đầy đủ hồi quy.
 
-Đây là lúc người chuyên nghiệp xác định ranh giới. Trước hết, giả thiết của Peter không chính xác. Anh ta sẽ không hoàn thành nhanh hơn nếu bỏ qua kiểm thử. Anh ta sẽ không hoàn thành nhanh hơn nếu không refactor. Anh ta sẽ không hoàn thành nhanh hơn nếu không chạy đầy đủ hồi quy. Kinh nghiệm nhiều năm đã dạy chúng tôi rằng vi phạm kỷ luật chỉ khiến chúng tôi chậm lại.
+Đây là lúc người chuyên nghiệp xác định ranh giới. Trước hết, giả thiết của Peter không chính xác. Anh ta _sẽ không_ hoàn thành nhanh hơn nếu bỏ qua kiểm thử. Anh ta _sẽ không_ hoàn thành nhanh hơn nếu không refactor. Anh ta _sẽ không_ hoàn thành nhanh hơn nếu không chạy đầy đủ hồi quy. Kinh nghiệm nhiều năm đã dạy chúng tôi rằng vi phạm kỷ luật chỉ khiến chúng tôi chậm lại.
 
 Nhưng thứ 2, với tư cách một chuyên gia, anh ta có trách nhiệm duy trì các tiêu chuẩn nhất định. Code của anh ta cần được kiểm thử, cần phải phải có kiểm thử, cần được giữ sạch sẽ. Và anh ta phải chắc chắn mình không phá vỡ bất kỳ điều gì khác trong hệ thống.
 
