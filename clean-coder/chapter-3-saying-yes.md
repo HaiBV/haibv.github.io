@@ -207,32 +207,32 @@ Peter có thể bị cám dỗ để phá vỡ kỷ luật vào lúc này. Anh t
 
 Đây là lúc người chuyên nghiệp xác định ranh giới. Trước hết, giả thiết của Peter không chính xác. Anh ta _sẽ không_ hoàn thành nhanh hơn nếu bỏ qua kiểm thử. Anh ta _sẽ không_ hoàn thành nhanh hơn nếu không refactor. Anh ta _sẽ không_ hoàn thành nhanh hơn nếu không chạy đầy đủ hồi quy. Kinh nghiệm nhiều năm đã dạy chúng tôi rằng vi phạm kỷ luật chỉ khiến chúng tôi chậm lại.
 
-Nhưng thứ 2, với tư cách một chuyên gia, anh ta có trách nhiệm duy trì các tiêu chuẩn nhất định. Code của anh ta cần được kiểm thử, cần phải phải có kiểm thử, cần được giữ sạch sẽ. Và anh ta phải chắc chắn mình không phá vỡ bất kỳ điều gì khác trong hệ thống.
+Nhưng thứ 2, với tư cách một chuyên gia, anh ta có trách nhiệm duy trì những tiêu chuẩn nhất định. Code của anh ta cần phải được kiểm thử, cần phải có kiểm thử, và cần được giữ sạch sẽ. Và anh ta phải chắc chắn mình không phá vỡ bất kỳ điều gì khác trong hệ thống.
 
-Peter, là một người chuyên nghiệp, đã cam kết duy trì các tiêu chuẩn này. Tất cả các cam kết khác mà anh ta đưa ra phải tuân theo điều đó. Vì vậy, toàn bộ dòng ký do này cần phải hủy bỏ.
+Peter, là một người chuyên nghiệp, đã cam kết duy trì những tiêu chuẩn này. Tất cả các cam kết mà anh ta đưa ra phải tuân theo điều đó. Vì vậy, toàn bộ lý do này cần phải hủy bỏ.
 
-Peter: "Không, Marge, tôi thực sự không thể chắc chắn bất kỳ dead line nào trước thứ 3. Tôi rất tiếc nếu điều đó làm xáo trộn lịch trình của bạn, nhưng đó là thực tế mà chúng ta phải đối mặt."
+Peter: "Không, Marge, tôi thực sự không thể chắc chắn bất kỳ hạn chót nào trước thứ 3. Tôi rất tiếc nếu điều đó làm xáo trộn lịch trình của bạn, nhưng đó là thực tế mà chúng ta phải đối mặt."
 
 Marge: "Chết tiệt, tôi thực sự muốn sớm hơn. Anh chắc chứ?"
 
 Peter: "Tôi chắc chắn rằng có thể xong vào muộn ngày thứ 3."
 
-Marge: "OK, tôi đoán là tôi sẽ nói chuyện với Willy để xem anh ta có thể sắp xếp lại lịch trình của mình hay không."
+Marge: "OK, tôi nghĩ là tôi sẽ nói chuyện với Willy để xem anh ta có thể sắp xếp lại lịch trình của mình hay không."
 
-Đó là trong trường hợp Marge chấp nhận câu trả lời của Peter và bắt đầu cân nhắc các lựa chọn khác. Nhưng nếu Marge không còn lựa chọn nào nữa? Nếu Peter là hy vọng cuối cùng của Peter?
+Đó là trong trường hợp Marge chấp nhận câu trả lời của Peter và bắt đầu cân nhắc các lựa chọn khác. Nhưng sẽ ra sao nếu Marge không còn lựa chọn nào nữa, và Peter là hy vọng cuối cùng?
 
-Marge: "Peter, nghe này, tôi biết đây là một áp đặt lớn, nhưng tôi thực sự cần anh tìm cách hoàn thành công việc này vào sáng thứ 2. Nó thực sự rất quan trọng. Anh không thể làm được gì sao?
+Marge: "Peter, nghe này, tôi biết đây là một sự áp đặt lớn, nhưng tôi thực sự cần anh tìm cách hoàn thành công việc này vào sáng thứ 2. Nó thực sự rất quan trọng. Anh không thể làm gì được sao?
 
-Bây giờ Peter bắt đầu thực sự suy nghĩ về việc làm thêm giờ, có lẽ hầu hết vào các ngày cuối tuần. Peter cần phải rất thành thật với bản thân về khả năng chịu đựng và dự trữ của mình. Có thể dễ dàng nói rằng bạn sẽ hoàn thành rất nhiều việc vào cuối tuần, nhưng sẽ khó hơn để thực sự tập hợp đủ năng lượng để làm công việc chất lượng cao.
+Bây giờ Peter bắt đầu thực sự suy nghĩ về việc làm thêm giờ, có lẽ hầu hết vào các ngày cuối tuần. Peter cần phải rất thành thật với bản thân về khả năng chịu đựng và những gì còn lại của mình. Có thể dễ dàng _nói_ rằng bạn sẽ hoàn thành rất nhiều việc vào cuối tuần, nhưng sẽ khó hơn để thực sự tập hợp đủ năng lượng để làm công việc chất lượng cao.
 
-Người chuyên nghiệp biết giới hạn của mình. Họ biết mình có thể làm overtime bao lâu là hiệu quả nhất và cái giá cho việc đó là gì.
+Người chuyên nghiệp biết giới hạn của mình. Họ biết mình có thể làm thêm giờ bao lâu là hiệu quả nhất và cái giá cho việc đó là gì.
 
 Trong trường hợp này, Peter cảm thấy khá tự tin rằng một vài giờ làm thêm trong tuần và một chút thời gian cuối tuần là đủ.
 
-Peter: "OK, Marge, nghe tôi nói này. Tôi sẽ gọi về nhà và xác định thời gian overtime với gia đình tôi. Nếu họ đồng ý, thì tôi sẽ hoàn thành công việc vào sáng thứ 2. Tôi sẽ đến vào sáng thứ 2 để chắc chắn rằng mọi thứ sẽ ổn với Willy. Nhưng sau đó tôi sẽ về nhà và chỉ quay trở lại vào thứ 4. Thỏa thuận như vậy nhé?"
+Peter: "OK, Marge, nghe tôi nói này. Tôi sẽ gọi về nhà và xác định thời gian làm thêm giờ với gia đình tôi. Nếu họ đồng ý, thì tôi sẽ hoàn thành công việc vào sáng thứ 2. Tôi sẽ đến vào sáng thứ 2 để chắc chắn rằng mọi thứ sẽ ổn với Willy. Nhưng sau đó tôi sẽ về nhà và chỉ quay trở lại vào thứ 4. Thỏa thuận như vậy nhé?"
 
 Điều này hoàn toàn công bằng. Peter biết rằng anh ấy có thể hoàn thành các sửa đổi và tài liệu nếu anh ấy làm việc ngoài giờ. Anh ấy cũng biết mình sẽ vô dụng trong vài ngày sau đó.
 
-# Kết luận
+## Kết luận
 
-Người chuyên nghiệp không bắt buộc phải nói có với mọi thứ họ được yêu cầu. Tuy nhiên, họ nên làm việc chỉ để tìm ra những cách sáng tạo có thể biến những điều đó thành khả thi. Khi họ nói có, họ sử dụng ngôn ngữ của cam kết để không ai nghi ngờ về lời hứa của họ.
+Người chuyên nghiệp không bắt buộc phải nói có với mọi thứ họ được yêu cầu. Tuy nhiên, họ nên làm việc chăm chỉ để tìm ra những cách sáng tạo có thể biến những câu trả lời "có" thành khả thi. Khi họ nói có, họ sử dụng ngôn ngữ của cam kết để không ai nghi ngờ về lời hứa của họ.
