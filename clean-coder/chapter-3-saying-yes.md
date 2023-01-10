@@ -235,4 +235,4 @@ Peter: "OK, Marge, nghe tôi nói này. Tôi sẽ gọi về nhà và xác đị
 
 ## Kết luận
 
-Người chuyên nghiệp không bắt buộc phải nói có với mọi thứ họ được yêu cầu. Tuy nhiên, họ nên làm việc chăm chỉ để tìm ra những cách sáng tạo có thể biến những câu trả lời "có" thành khả thi. Khi họ nói có, họ sử dụng ngôn ngữ của cam kết để không ai nghi ngờ về lời hứa của họ.
+Người chuyên nghiệp không bắt buộc phải nói có với mọi thứ họ được yêu cầu. Tuy nhiên, họ nên làm việc chăm chỉ để tìm ra những cách sáng tạo giúp biến những câu trả lời "có" thành khả thi. Khi họ nói có, họ sử dụng ngôn ngữ của cam kết để không ai nghi ngờ về lời hứa của họ.
