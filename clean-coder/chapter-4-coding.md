@@ -36,29 +36,29 @@ Khi bạn không thể hoàn toàn tập trung cao độ, code bạn viết sẽ
 
 Nếu bạn mệt mỏi hoặc mất tập trung, _đừng code_. Bạn sẽ chỉ làm lại những gì bạn đã làm. Thay vào đó, hãy tìm cách loại bỏ những phiền nhiễu và ổn định tâm trí.
 
-## Code vào lúc 3h sáng
+### Code lúc 3h sáng
 
-Tôi viết những dòng code tệ nhất vào lúc 3h sáng. Lúc đó là năm 1988, và tôi đang làm việc tại một start-up viễn thông có tên Clear Communications. Chúng tôi đã dành rất nhiều thời gian để xây dựng công ty. Chúng tôi, tất nhiên, đều mơ trở nên giàu có.
+Những dòng code tệ nhất mà tôi từng viết là vào lúc 3h sáng. Đó là năm 1988, khi tôi đang làm việc cho một công ty khởi nghiệp trong ngành viễn thông có tên Clear Communications. Chúng tôi đã dành rất nhiều thời gian để xây dựng công ty. Chúng tôi, tất nhiên, đều mơ trở nên giàu có.
 
-Vào một buổi tối rất muộn - hay đúng hơn là sáng sớm, để giải quyết vấn đề về thời gian - tôi viết một đoạn code gửi một tin nhắn đến chính nó thông qua hệ thống điều phối sự kiện (chúng tôi gọi là "gửi thư"). Đây là một giải pháp _sai lầm_, nhưng vào lúc 3h sáng, nó trông khá bảnh. Thật vậy, sau 18h ngồi viết code (chưa kể 60-70 giờ trong tuần), đó là _tất cả_ những gì tôi có thể nghĩ đến.
+Vào một buổi tối rất muộn - hay đúng hơn là sáng sớm, để giải quyết vấn đề về thời gian - tôi viết một đoạn code gửi một tin nhắn đến chính nó thông qua hệ thống điều phối sự kiện (chúng tôi gọi là "gửi thư"). Đây là một giải pháp _sai lầm_, nhưng vào lúc 3h sáng, nó trông khá bảnh. Thực tế là, sau 18h ngồi viết code (chưa kể 60-70 giờ trong tuần), đó là _tất cả_ những gì tôi có thể nghĩ đến.
 
-Tôi nhớ rằng mình đã cảm thấy tự hào về bản thân ra sao sau khi làm việc nhiều giờ. Tôi nhớ rằng mình thật tận tâm. Tôi nhớ rằng làm việc đến 3h sáng là việc các chuyên gia nghiêm túc nên làm. Thật ngây thơ làm sao!
+Tôi nhớ rằng mình đã cảm thấy tự hào về bản thân ra sao sau khi làm việc nhiều giờ. Tôi nhớ cái cảm giác _tận tâm_ lúc đó. Tôi nhớ mình đã nghĩ làm việc đến 3h sáng là việc các chuyên gia nghiêm túc nên làm. Thật ngây thơ làm sao!
 
-Đoạn code đó quay lại cắn trả tôi hết lần này đến lần khác. Cấu trúc được thiết kế sai lầm khiến những người sử dụng phải liên tục khắc phục. Nó gây ra tất cả các loại lỗi thời gian và vòng lặp kỳ lạ. Chúng ta sẽ đi vào vòng lặp vô hạn khi một message khiến một message khác được gửi, sau đó là vô hạn thư khác. Chúng tôi không bao giờ có thời gian để viết lại "cục nhọt" này (vì chúng tôi nghĩ vậy) nhưng chúng tôi luôn có thời gian để thêm một "cục nhọt" khác hoặc bản vá để khắc phục nó. Chúng ngày càng lớn dần, xung quanh đoạn code lúc 3h sáng đó ngày càng nhiều thứ kèm theo và tác dụng phụ. Nhiều năm sau, nó đã trở thành trò đùa của cả team. Bất cứ khi nào tôi mệt mỏi hoặc thất vọng, họ sẽ nói: "Coi chừng! Bob sắp gửi thư cho chính mình".
+Đoạn code đó quay lại "cắn trả" tôi hết lần này đến lần khác. Cấu trúc được thiết kế sai lầm khiến những người sử dụng nó phải liên tục khắc phục. Nó gây ra tất cả các loại lỗi thời gian và vòng lặp phản hồi kỳ lạ. Chúng ta sẽ đi vào vòng lặp vô hạn khi một tin nhắn khiến một tin nhắn khác được gửi, sau đó là vô hạn các tin nhắn khác. Chúng tôi không bao giờ có thời gian để viết lại "cục nhọt" này (vì chúng tôi nghĩ vậy) nhưng chúng tôi luôn có thời gian để thêm một "cục nhọt" khác hoặc bản vá để khắc phục nó. Chúng ngày càng lớn dần, xung quanh đoạn code lúc 3h sáng đó ngày càng nhiều thứ kèm theo và tác dụng phụ. Nhiều năm sau, nó đã trở thành trò đùa của cả team. Bất cứ khi nào tôi mệt mỏi hoặc thất vọng, họ sẽ nói: "Coi chừng! Bob sắp gửi thư cho chính mình".
 
-Bài học của câu chuyện trên là: Đừng viết code khi bạn mệt mỏi. Tận tâm và chuyên nghiệp thể hiện ở tính kỷ luật hơn là số giờ làm việc. Đảm bảo giấc ngủ, sức khỏe và lối sống của bạn được điều phù hợp để bạn có thể thực hiện _tốt_ 8 tiếng làm việc mỗi ngày.
+Bài học của câu chuyện trên là: Đừng viết code khi bạn mệt mỏi. Tận tâm và chuyên nghiệp thể hiện ở tính kỷ luật hơn là số giờ làm việc. Đảm bảo giấc ngủ, sức khỏe và lối sống của bạn được điều chỉnh phù hợp để bạn có thể thực hiện _tốt_ 8 tiếng làm việc mỗi ngày.
 
-## Lo nghĩ khi code
+## Code khi đang lo nghĩ
 
-Bạn đã bao giờ tranh cãi nảy lửa với vợ/chồng hoặc bạn bè, và sau đó cố gắng viết code? Bạn có nhận thấy rằng đang có một suy nghĩ ngầm trong tâm trí bạn đang cố gắng giải quyết, hoặc ít nhất là nghĩ lại cuộc tranh cãi đó? Đôi khi bạn cảm thấy căng thẳng bởi suy nghĩ ngầm đó trong đầu hoặc quặn lên trong bụng bạn. Nó có thể khiến bạn cảm thấy lo lắng, chẳng hạn như khi bạn uống quá nhiều cà phê hoặc coca ăn kiêng. Điều đó gây mất tập trung.
+Bạn đã bao giờ tranh cãi nảy lửa với vợ/chồng hoặc bạn bè, và sau đó cố gắng viết code? Bạn có nhận thấy rằng đang có một suy nghĩ ngầm trong tâm trí bạn đang cố gắng giải quyết, hoặc ít nhất là nghĩ lại cuộc tranh cãi đó? Đôi khi bạn cảm thấy căng thẳng bởi suy nghĩ ngầm đó vang lên trong đầu hoặc quặn lên trong bụng bạn. Nó có thể khiến bạn cảm thấy lo lắng, giống như khi bạn uống quá nhiều cà phê hoặc coca ăn kiêng. Điều đó gây ra sự xao nhãng.
 
-Khi tôi lo nghĩ về cuộc tranh cãi với vợ, cơn khủng hoảng khách hàng hoặc con cái ốm đau, tôi không thể duy trì sự tập trung. Sự tập trung của tôi bị dao động. Tôi thấy mình dán mắt vào màn hình và ngón tay trên bàn phím, không làm gì cả. Câm lặng. Tê liệt. Giải quyết vấn đề cách đó cả triệu dặm trong tâm trí thay vì thực sự giải quyết vấn đề viết code trước mặt mình.
+Khi tôi lo nghĩ về cuộc tranh cãi với vợ, cơn khủng hoảng khách hàng hoặc con cái ốm đau, tôi không thể duy trì sự tập trung. Sự tập trung của tôi bị dao động. Tôi thấy mình dán mắt vào màn hình và ngón tay trên bàn phím, không làm gì cả. Câm lặng. Tê liệt. Tâm trí tôi lúc đó đang giải quyết vấn đề cách đó cả triệu dặm thay vì thực sự giải quyết vấn đề viết code trước mặt mình.
 
 Đôi khi tôi buộc bản thân phải _suy nghĩ_ về code. Tôi ép bản thân viết được một hai dòng. Tôi tự thúc đẩy mình vượt qua một hai kiểm thử. Nhưng tôi không thể tiếp tục. Hiển nhiên tôi lại thấy thấy mình rơi vào trạng thái vô cảm, sững sờ, không nhìn thấy gì qua đôi mắt đang mở của mình, trong nội tâm trào lên nỗi lo lắng.
 
-Tôi học được rằng đây không phải thời điểm thích hợp để viết code. Bất kỳ những gì tôi viết đều trở thành giấy lộn. Vì vậy, thay vì viết code, tôi cần giải quyết nỗi lo trước.
+Tôi học được rằng đó không phải thời điểm thích hợp để viết code. Bất kỳ những gì tôi viết đều trở thành giấy lộn. Vì vậy, thay vì viết code, tôi cần giải quyết nỗi lo trước.
 
-Tất nhiên, có rất nhiều mối lo không đơn giản để giải quyết được trong một hai giờ. Hơn nữa, các nhà tuyển dụng của chúng ta có khả năng không chấp nhận nhân viên không có khả năng làm việc trong thời gian dài khi họ bận giải quyết những vấn đề cá nhân của mình. Bí quyết là tìm hiểu cách loại bỏ những ý nghĩ ngầm hoặc ít nhất là giảm mức độ ưu tiên của nó để không bị phân tâm liên tục.
+Tất nhiên, có rất nhiều mối lo không đơn giản để có thể giải quyết được trong một hai giờ. Hơn nữa, các nhà tuyển dụng của chúng ta khó có khả năng chấp nhận nhân viên không làm việc trong thời gian dài và dành thời gian giải quyết những vấn đề cá nhân. Bí quyết là tìm hiểu cách loại bỏ những suy nghĩ ngầm hoặc ít nhất là giảm mức độ ưu tiên của chúng để không bị phân tâm liên tục.
 
 Tôi làm điều này bằng cách phân chia thời gian của mình. Thay vì ép bản phân viết code trong lo nghĩ đeo bám, tôi sẽ dành ra một khoảng thời gian hợp lý, khoảng một giờ, để giải quyết vấn đề tạo ra nỗi lo đó. Nếu con tôi bị ốm, tôi sẽ gọi điện về nhà và kiểm tra. Nếu tôi cãi nhau với vợ, tôi sẽ gọi cho cô ấy và nói rõ mọi vấn đề. Nếu tôi gặp vấn đề về tiền bạc, tôi sẽ dành thời gian suy nghĩ về cách giải quyết các vấn đề tài chính. Tôi biết mình không có khả năng giải quyết dứt điểm vấn đề trong khoảng 1 giờ đó, nhưng rất có thể sẽ làm tôi giảm bớt lo lắng và dập tắt những ý nghĩ ngầm trong đầu.
 
