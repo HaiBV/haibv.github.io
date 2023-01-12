@@ -60,7 +60,7 @@ Tôi học được rằng đó không phải thời điểm thích hợp để 
 
 Tất nhiên, có rất nhiều mối lo không đơn giản để có thể giải quyết được trong một hai giờ. Hơn nữa, các nhà tuyển dụng của chúng ta khó có khả năng chấp nhận nhân viên không làm việc trong thời gian dài và dành thời gian giải quyết những vấn đề cá nhân. Bí quyết là tìm hiểu cách loại bỏ những suy nghĩ ngầm hoặc ít nhất là giảm mức độ ưu tiên của chúng để không bị phân tâm liên tục.
 
-Tôi làm điều này bằng cách phân chia thời gian của mình. Thay vì ép bản phân viết code trong lo nghĩ đeo bám, tôi sẽ dành ra một khoảng thời gian hợp lý, khoảng một giờ, để giải quyết vấn đề tạo ra nỗi lo đó. Nếu con tôi bị ốm, tôi sẽ gọi điện về nhà và kiểm tra. Nếu tôi cãi nhau với vợ, tôi sẽ gọi cho cô ấy và nói rõ mọi vấn đề. Nếu tôi gặp vấn đề về tiền bạc, tôi sẽ dành thời gian suy nghĩ về cách giải quyết các vấn đề tài chính. Tôi biết mình không có khả năng giải quyết dứt điểm vấn đề trong khoảng 1 giờ đó, nhưng rất có thể sẽ làm tôi giảm bớt lo lắng và dập tắt những ý nghĩ ngầm trong đầu.
+Tôi giải quyết việc đó bằng cách phân chia thời gian của mình. Thay vì ép bản phân viết code trong khi lo nghĩ đeo bám, tôi sẽ dành ra một khoảng thời gian hợp lý, khoảng một giờ, để giải quyết vấn đề gây ra nỗi lo đó. Nếu con tôi bị ốm, tôi sẽ gọi điện về nhà và kiểm tra. Nếu tôi cãi nhau với vợ, tôi sẽ gọi cho cô ấy và nói rõ mọi vấn đề. Nếu tôi gặp vấn đề về tiền bạc, tôi sẽ dành thời gian suy nghĩ về cách giải quyết các vấn đề tài chính. Tôi biết mình không có khả năng giải quyết dứt điểm vấn đề trong khoảng 1 giờ đó, nhưng rất có thể sẽ làm tôi giảm bớt lo lắng và dập tắt những ý nghĩ ngầm trong đầu.
 
 Thời gian lý tưởng nhất dành cho các vấn đề cá nhân là ngoài giờ làm việc. Sẽ thật đang tiếc nếu dành một giờ tại văn phòng để xử lý việc cá nhân. Lập trình viên chuyên nghiệp phân bổ thời gian ngoài giờ của họ để đảm bảo thời gian ở văn phòng hiệu quả nhất có thể. Điều đó có nghĩa là bạn nên dành thời gian ngoài giờ để để giải quyết những lo lắng cá nhân của mình để chúng không theo bạn lên văn phòng.
 
@@ -68,33 +68,33 @@ Mặt khác, nếu bạn đang ở văn phòng nhưng vẫn có những ý nghĩ
 
 ## "Dòng chảy" (Flow)
 
-Nhiều bài viết nói về trạng thái siêu năng suất với tên "dòng chảy (flow)". Một số lập trình viên gọi nó là "the Zone". Dù nó được gọi là gì, bạn có thể sẽ cảm thấy quen thuộc với nó. Đó là trạng thái tập trung ý thức cao độ, tầm-nhìn-đường-hầm mà các lập trình viên có thể đạt được khi họ viết code. Ở trạng thái này, họ thấy hiệu quả. Ở trạng thái này, họ cảm thấy không thể sai lầm. Và vì vậy, họ mong muốn đạt được trạng thái đó, và thường đo lường giá trị bản thân bằng khoảng thời gian họ có thể đạt được trạng thái đó.
+Đã có rất nhiều bài viết nói về trạng thái siêu năng suất với tên "dòng chảy (flow)". Một số lập trình viên gọi nó là "the Zone". Dù được gọi là gì, bạn có thể sẽ cảm thấy quen thuộc. Đó là trạng thái tập trung ý thức cao độ, tầm-nhìn-đường-hầm mà các lập trình viên có thể đạt được khi họ viết code. Ở trạng thái này, họ thấy _năng suất_. Ở trạng thái này, họ cảm thấy _không thể sai lầm_. Và vì vậy, họ mong muốn đạt được trạng thái đó, và thường đo lường giá trị bản thân bằng khoảng thời gian họ có thể đạt được trạng thái đó.
 
-Dưới đây là một gợi ý nhỏ từ một người đã từng ở đó và quay lại: "Tránh xa the Zone". Trạng thái ý thức này không thực sự siêu năng suất và chắc chắn không mắc sai lầm. Đó thực sự chỉ là một trạng thái thiền định nhẹ nhàng, trong đó một số năng lực lý trí nhất định sẽ bị suy giảm theo hướng có cảm giác về tốc độ.
+Dưới đây là một gợi ý nhỏ từ một người đã từng ở đó và quay lại: "Tránh xa the Zone". Trạng thái ý thức này không thực sự siêu năng suất và chắc chắn cũng có thể mắc sai lầm. Đó thực sự chỉ là một trạng thái thiền định nhẹ nhàng, trong đó một số năng lực lý trí nhất định bị giảm bớt để tạo ra cảm giác về tốc độ.
 
-Để tôi mô tả cho bạn rõ hơn. Bạn _sẽ_ viết nhiều code hơn trong the Zone. Nếu bạn đang luyện tập TDD, bạn sẽ thực hiện vòng lặp đỏ/xanh/tái cấu trúc nhanh hơn. Và bạn sẽ _cảm thấy_ hưng phần nhẹ hoặc cảm giác muốn chinh phục. Vấn đề là bạn sẽ đánh mất cái nhìn toàn cảnh khi ở trong the Zone, vì vậy bạn có thể sẽ đưa ra những quyết định mà sau này bạn sẽ phải quay lại và đảo ngược chúng. Code được viết trong the Zone có thể nhiều hơn, nhưng bạn sẽ quay lại thăm nó nhiều hơn.
+Để tôi mô tả cho bạn rõ hơn. Bạn _sẽ_ viết nhiều code hơn trong the Zone. Nếu bạn đang luyện tập TDD, bạn sẽ thực hiện vòng lặp đỏ/xanh/tái cấu trúc nhanh hơn. Và bạn sẽ _cảm thấy_ hưng phần nhẹ hoặc cảm giác được chinh phục. Vấn đề là bạn sẽ đánh mất cái nhìn toàn cảnh khi ở trong the Zone, vì vậy bạn có thể sẽ đưa ra những quyết định mà sau này bạn sẽ phải quay lại và đảo ngược chúng. Code được viết trong the Zone có thể nhiều hơn, nhưng bạn sẽ quay lại thăm nó nhiều hơn.
 
-Hiện tại, khi tôi cảm thấy mình đang rơi vào the Zone, tôi sẽ đi bộ vài phút. Tôi giải tỏa đầu óc bằng cách trả lời một vài email hoặc xem một số dòng tweet. Nếu gần đến trưa, tôi sẽ nghỉ ăn trưa. Nếu tôi đang làm việc trong một team, tôi sẽ tìm một người để ghép cặp.
+Giờ đây, khi tôi cảm thấy mình đang rơi vào the Zone, tôi sẽ đi bộ vài phút. Tôi giải tỏa đầu óc bằng cách trả lời một vài email hoặc xem một số dòng tweet. Nếu gần đến trưa, tôi sẽ nghỉ ăn trưa. Nếu tôi đang làm việc trong một đội/nhóm, tôi sẽ tìm một người để ghép cặp.
 
-Một trong những lợi ích lớn của lập trình theo cặp là hầu như cả 2 không thể rơi vào trong the Zone. The Zone là một trạng thái đơn độc, trong khi việc ghép nối đòi hỏi giao tiếp liên tục và cường độ cao. Thức tế là, một trong những phàn nàn mà tôi thường nghe về việc ghép nối là nó ngăn chặn sự xuất hiện của the Zone. Tốt! The Zone không phải là nơi bạn nên rơi vào.
+Một trong những lợi ích lớn của lập trình theo cặp là hầu như cả 2 không thể rơi vào trong the Zone. The Zone là một trạng thái đơn độc, trong khi việc ghép nối đòi hỏi giao tiếp liên tục và cường độ cao. Thức tế là, một trong những phàn nàn mà tôi thường nghe về việc ghép nối là nó ngăn chặn sự xuất hiện của the Zone. Tốt! The Zone _không phải_ là nơi bạn nên rơi vào.
 
-Chà, điều đó không hoàn toàn đúng. Có những lúc the Zone chính xác là thứ bạn muốn. Khi bạn đang _luyện tập_. Nhưng chúng ta sẽ nói về điều đó trong một chương khác.
+Chà, điều đó không _hoàn toàn_ đúng. Có những lúc the Zone chính xác là thứ bạn muốn. Khi bạn đang _luyện tập_. Nhưng chúng ta sẽ nói về điều đó trong một chương khác.
 
-## Âm nhạc
+### Âm nhạc
 
-Vào những năm ở Teradyne, tôi có một phòng riêng. Tôi làm ở vị trí quản trị hệ thống với những chiếc PDP 11/60, và vì vậy tôi là một trong số ít lập trình viên có thiết bị đầu cuối riêng. Thiết bị đầu cuối đó là VT100 chạy ở tốc độ 9600 baud và kết nối với chiếu PDP 11 bằng 80 feet cáp RS232 kéo từ phòng máy tính, qua trần nhà đến phòng tôi.
+Khi còn làm ở Teradyne, những năm cuối thập kỷ 70, tôi có một phòng riêng. Tôi làm ở vị trí quản trị hệ thống với những chiếc PDP 11/60, và vì vậy tôi là một trong số ít lập trình viên có thiết bị đầu cuối riêng. Đó là chiếc VT100 chạy ở tốc độ 9600 baud và kết nối với chiếc PDP 11 bằng 80 feet cáp RS232 kéo từ phòng máy tính, qua trần nhà đến phòng tôi.
 
 Tôi có một hệ thống âm thanh nổi trong phòng mình. Đó là một bàn xoay, âm ly, và loa sàn cũ. Tôi có một bộ sưu tập đĩa đáng kể, bao gồm Led Zeppelin, Pink Floyd, và ... Chà, bạn biết rồi đấy.
 
-Tôi sử dụng dàn âm thanh đó và sau đó viết code. Tôi tưởng nó đã giúp tôi tập trung. Nhưng tôi đã nhầm.
+Tôi bật dàn âm thanh đó, sau đó viết code. Tôi tưởng nó giúp tôi tập trung. Nhưng tôi đã nhầm.
 
-Một ngày nọ, tôi quay lại một mo-dun mà tôi chỉnh sửa trong lúc nghe đoạn mở đầu của bài _The Wall_. Các bình luận trong đoạn code đó chứa lời bài hát và các chú thích biên tập về máy bay ném bom bổ nhào và những đứa trẻ đang khóc.
+Một ngày nọ, tôi quay lại một mô-dun mà tôi chỉnh sửa trong lúc nghe đoạn mở đầu của bài _The Wall_. Các bình luận trong đoạn code đó chứa lời bài hát và các chú thích biên tập về máy bay ném bom bổ nhào và những đứa trẻ đang khóc.
 
-Điều đó thực sự gây sock cho tôi. Là một người đọc code, thay vì tìm hiều về vấn đề mà code đang cố gắng giải quyết, tôi lại tìm hiểu về bộ sưu tập âm nhạc của tác giả (là tôi).
+Điều đó thực sự là một cú sốc với tôi. Là một người đọc code, thay vì biết được vấn đề mà code đang cố gắng giải quyết, tôi lại phải tìm hiểu bộ sưu tập âm nhạc của tác giả (là tôi).
 
 Tôi nhận ra rằng tôi code không tốt lắm khi nghe nhạc. Âm nhạc không giúp tôi tập trung. Thực tế là, hành động nghe nhạc dường như tiêu tốn một số tài nguyên quan trọng trong tâm trí tôi, những thứ cần để viết code rõ ràng và có thiết kế tốt.
 
-Có thể điều đó không đúng với bạn. Có thể âm nhạc giúp bạn viết code. Tôi biết rất nhiều người viết code khi đeo tai nghe. Tôi chấp nhận rằng âm nhạc có thể giúp ích cho họ, nhưng tôi nghi ngờ rằng điều thực sự đang xảy ra là âm nhạc đang giúp họ tiến vào the Zone.
+Có thể điều đó không đúng với bạn. Có thể âm nhạc _giúp_ bạn viết code. Tôi biết rất nhiều người viết code khi đeo tai nghe. Tôi chấp nhận rằng âm nhạc có thể giúp ích cho họ, nhưng tôi nghi ngờ rằng điều thực sự đang xảy ra là âm nhạc đang giúp họ tiến vào the Zone.
 
 ## Những gián đoạn
 
