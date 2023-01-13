@@ -96,21 +96,21 @@ Tôi nhận ra rằng tôi code không tốt lắm khi nghe nhạc. Âm nhạc k
 
 Có thể điều đó không đúng với bạn. Có thể âm nhạc _giúp_ bạn viết code. Tôi biết rất nhiều người viết code khi đeo tai nghe. Tôi chấp nhận rằng âm nhạc có thể giúp ích cho họ, nhưng tôi nghi ngờ rằng điều thực sự đang xảy ra là âm nhạc đang giúp họ tiến vào the Zone.
 
-## Những gián đoạn
+### Sự sao nhãng
 
 Hãy hình dung bản thân bạn khi đang viết code tại máy cá nhân. Bạn phản ứng thế nào khi ai đó hỏi bạn một câu hỏi? Bạn có xua tay không? Bạn có trừng mắt không? Ngôn ngữ cơ thể của bạn có bảo họ biến đi vì bạn bận không? Tóm lại, bạn có thô lỗ không?
 
-Hoặc, bạn có dừng việc đang làm và lịch sự giúp đỡ ai đó đang gặp khó khăn? Bạn có đối xử với họ như bạn sẽ đối xử với bạn nêú bạn gặp khó khăn?
+Hoặc, bạn có dừng việc đang làm và lịch sự giúp đỡ ai đó khi đang gặp khó khăn? Bạn có đối xử với họ như cách họ đối xử với bạn khi bạn gặp khó khăn?
 
-Phản ứng thô lỗ thường bắt nguồn từ the Zone. Bạn có thể bực bội khi bị kéo ra khỏi the Zone, hoặc do ai đó ngăn cản bạn đi vào the Zone. Dù bằng cách nào, sự thô lỗ thường xuất phát từ mối quan hệ của bạn với the Zone.
+Phản ứng thô lỗ thường bắt nguồn từ the Zone. Bạn có thể cảm thấy bực bội khi bị kéo ra khỏi the Zone, hoặc bị ngăn cản khi tiến vào the Zone. Dù bằng cách nào, sự thô lỗ thường bắt nguồn từ mối quan hệ của bạn với the Zone.
 
-Tuy nhiên, đôi khi lại không phải là lỗi của the Zone, chỉ đơn giản là bạn đang cố gắng hiểu một vấn đề phức tạp yêu cầu phải tập trung. Có một vài giải pháp cho điều này.
+Tuy nhiên, đôi khi không phải lỗi của the Zone, đơn giản là bạn đang cố gắng hiểu một vấn đề phức tạp yêu cầu phải tập trung. Có một vài giải pháp cho điều này.
 
-Ghép cặp có thể là cách hữu ích để đối phó với sự gián đoạn. Đối tác của bạn có thể nắm được trạng thái của vấn đề trong khi bạn nhận một cuộc điện thoại hoặc một câu hỏi từ đồng nghiệp. Khi bạn quay lại, họ sẽ nhanh chón giúp bạn xây dựng lại trạng thái tinh thần của mình trước khi bị gián đoạn.
+Ghép cặp có thể là cách hữu ích để đối phó với sự xao nhãng. Đối tác của bạn có thể nắm được trạng thái của vấn đề trong khi bạn nhận một cuộc điện thoại hoặc một câu hỏi từ đồng nghiệp. Khi bạn quay lại, họ sẽ giúp bạn nhanh chóng dựng lại trạng thái tinh thần trước khi bị xao nhãng của bạn.
 
-TDD cũng là một trợ giúp. Nếu bạn có kiểm thử không đạt, kiểm thử đó sẽ giữ được trạng thái của bạn đang ở đâu. Bạn có thể quay lại sau khi bị gián đoạn và tiếp tục vượt qua kiểm thử đó.
+TDD cũng là một trợ thủ đắc lực. Nếu bạn có một kiểm thử không đạt, kiểm thử đó sẽ cho bạn biết trạng thái hiện tại đang ở đâu. Bạn có thể quay lại sau khi bị xao nhãng và tiếp tục vượt qua kiểm thử đó.
 
-Cuối cùng, _tất nhiên là sẽ có những gián đoạn_ khiến bạn mất tập trung và mất thời gian. Khi chúng xảy ra, hãy nhớ rằng lần sau, bạn có thể là người cần phải ngắt lời người khác. Vì vậy, thái độ của người chuyên nghiệp là sẵn sàng giúp đỡ.
+Cuối cùng, _tất nhiên là sẽ có những xao nhãng_ khiến bạn mất tập trung và mất thời gian. Khi chúng xảy ra, hãy nhớ rằng lần sau, bạn có thể là người cần phải ngắt lời người khác. Vì vậy, thái độ của người chuyên nghiệp là sẵn sàng giúp đỡ.
 
 ## Write's Block
 
