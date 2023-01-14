@@ -114,27 +114,27 @@ Cuối cùng, _tất nhiên là sẽ có những xao nhãng_ khiến bạn mất
 
 ## Write's Block
 
-Đôi khi code không tự đến với chúng ta. Tôi đã trải nghiệm điều này xảy ra với tôi và những người khác. Bạn ngồi trước máy tính cá nhân và không có gì xảy ra cả.
+Đôi khi code không tự đến với chúng ta. Việc này xảy ra với tôi và những người khác. Bạn ngồi trước máy tính cá nhân nhưng không làm được gì cả.
 
-Thường thì bạn sẽ tìm công việc khác để làm. Bạn sẽ đọc email. Bạn sẽ đọc tweets. Bạn sẽ qua xem sách, lịch trình, hoặc tài liệu. Bạn sẽ tham gia các cuộc họp. Bạn sẽ bắt đầu trò chuyện với những người khác. Bạn sẽ làm bất cứ điều gì để không phải đối mặt với máy tính và cảm nhận việc bất lực khi viết code.
+Thường thì bạn sẽ tìm công việc khác để làm. Bạn sẽ đọc email. Bạn sẽ đọc tweets. Bạn sẽ đọc sách, xem lịch trình, hoặc đọc tài liệu. Bạn tham gia các cuộc họp. Bạn bắt đầu trò chuyện với những người khác. Bạn làm _bất cứ điều gì_ để không phải đối mặt với máy tính và cảm nhận sự bất lực khi viết code.
 
-Nguyên nhân nào gây nên tình trạng tắc nghẽn như vậy? Chúng ta đã nói về rất nhiều nguyên nhân khác nhau. Với tôi, còn một nguyên nhân quan trọng nữa là giấc ngủ. Nếu tôi không ngủ đủ giấc, tôi đơn giản không thể viết code. Tệ hơn là lo lắng, sợ hãi, và trầm cảm.
+Nguyên nhân nào gây nên tình trạng tắc nghẽn như vậy? Chúng ta đã nói về rất nhiều nguyên nhân khác nhau. Với tôi, còn một nguyên nhân quan trọng nữa là giấc ngủ. Nếu tôi không ngủ đủ giấc, tôi đơn giản không thể viết code. Ngoài ra còn lo lắng, sợ hãi, và trầm cảm.
 
 Kỳ lạ hơn nữa là có một giải pháp rất đơn giản. Nó hoạt động hầu như mọi lúc. Việc này rất dễ thực hiện và nó có thể cung cấp cho bạn động lực để viết được nhiều hơn.
 
 Giải pháp là: Tìm một đối tác ghép cặp.
 
-Cách này hoạt động tốt một cách kỳ lạ. Ngay khi bạn ngồi cạnh người khác, những vấn đề cản trở bạn sẽ biến mất. Có một sự thay đổi sinh lý diễn ra khi bạn làm việc cùng với một ai đó. Tôi không biết nó là gì, nhưng tôi chắc chắn có thể cảm nhận được. Có một số loại thay đổi hóa học trong não hoặc cơ thể tôi giúp tôi vượt qua sự tắc nghẽn và giúp tôi tiếp tục làm việc.
+Cách này hoạt động tốt một cách kỳ lạ. Ngay khi bạn ngồi cạnh người khác, những vấn đề cản trở bạn sẽ biến mất. Có một sự thay đổi _sinh lý_ diễn ra khi bạn làm việc cùng với một ai đó. Tôi không biết nó là gì, nhưng chắc chắn tôi có thể cảm nhận được. Có một số loại thay đổi hóa học trong não hoặc cơ thể tôi giúp tôi vượt qua sự tắc nghẽn và giúp tôi tiếp tục làm việc.
 
-Đây không phải giải pháp hoàn hảo. Đôi khi sự thay đổi chỉ kéo dài 1 hoặc 2 giờ, sau đó là kiệt sức nghiêm trọng đến mức tôi phải bỏ lại đồng nghiệp của mình và tìm một khoảng trống để phục hồi. Đôi khi, ngay cả khi ngồi với ai đó, tôi cũng không thể làm gì hơn là đồng ý với những gì người đó làm. Nhưng đối với tôi, phản ứng của việc ghép đôi thường là sự phục hồi động lực bản thân.
+Đây không phải là giải pháp hoàn hảo. Đôi khi sự thay đổi chỉ kéo dài 1 hoặc 2 giờ, sau đó là kiệt sức nghiêm trọng đến mức tôi phải bỏ lại đồng nghiệp của mình và tìm một khoảng trống để phục hồi. Đôi khi, ngay cả khi ngồi với ai đó, tôi cũng không thể làm gì hơn là đồng ý với những gì người đó làm. Nhưng đối với tôi, phản ứng của việc ghép đôi thường là sự phục hồi động lực bản thân.
 
 ### Đầu vào sáng tạo
 
-Có những việc khác tôi làm để ngăn chặn sự tắc nghẽn. Tôi đã học được cách đây rất lâu rằng đầu ra sáng tạo phụ thuộc vào đầu vào sáng tạo.
+Còn một số cách khác để ngăn chặn sự tắc nghẽn. Tôi đã học được cách đây rất lâu rằng đầu ra sáng tạo phụ thuộc vào đầu vào sáng tạo.
 
-Tôi đọc rất nhiều, và tôi đọc tất cả các loại tài liệu. Tôi đọc tài liệu về phần mềm, chính trị, sinh học, thiên văn học, vật lý, hóa học, vô thần học, và hơn thế nữa. Tuy nhiên, tôi thấy rằng điều thúc đẩy sự sáng tạo đầu ra tốt nhất chính là khoa học viễn tưởng.
+Tôi đọc rất nhiều, và tôi đọc tất cả các thể loại tài liệu. Tôi đọc về phần mềm, chính trị, sinh học, thiên văn học, vật lý, hóa học, vô thần học, và hơn thế nữa. Tuy nhiên, tôi thấy rằng điều thúc đẩy sự sáng tạo đầu ra tốt nhất chính là khoa học viễn tưởng.
 
-Với bạn, có thể là một thể loại khác. Có thể là một cuốn tiểu thuyết bí ẩn tuyệt vời, hoặc thơ, hoặc thậm chí là tiểu thuyết lãng mạn. Tôi nghĩ vấn để thực sự là sự sáng tạo sẽ nuôi dưỡng sáng tạo. Ngoài ra còn có một yếu tố nữa là chủ nghĩa thoát ly. Những giờ tôi dành ra để thoát khỏi những vấn đề thưởng ngày của mình, đồng thời được kích thích tích cự bởi những ý tưởng đầy thách thức và sáng tạo, dẫn đến một áp lực gần như không thể cưỡng lại để tự mình tạo ra thứ gì đó.
+Với bạn, có thể là một thể loại khác. Có thể là một cuốn tiểu thuyết bí ẩn tuyệt vời, hoặc thơ, hoặc thậm chí là tiểu thuyết lãng mạn. Tôi nghĩ vấn để thực sự là sự sáng tạo sẽ nuôi dưỡng sáng tạo. Ngoài ra còn có một yếu tố nữa là chủ nghĩa thoát ly. Những giờ tôi dành ra để thoát khỏi những vấn đề thường ngày của mình, đồng thời được kích thích tích cực bởi những ý tưởng đầy thách thức và sáng tạo, dẫn đến một áp lực gần như không thể cưỡng lại để tự mình tạo ra thứ gì đó.
 
 Không phải tất cả các hình thức đầu vào sáng tạo nào cũng phù hợp với tôi. Xem TV thường không giúp tôi sáng tạo. Đi xem phim thì tốt hơn nhưng chỉ một chút. Nghe nhạc không giúp tôi viết code, nhưng giúp tôi tạo bản thuyết trình, bài phát biểu và video. Trong tất cả các hình thức đầu vào sáng tạo, không có gì phù hợp với tôi hơn là một vở opera hay trong một không gian cổ kính.
 
