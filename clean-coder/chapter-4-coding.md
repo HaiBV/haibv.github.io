@@ -162,19 +162,19 @@ Nhưng tại sao bộ đếm lại bị lệch? Tôi quyết tâm tìm hiểu đ
 
 Trình giám sát được viết bởi Richard, đã nghỉ để đi học đại học. Chúng tôi không ai nắm được code trong đó vì Richard chiếm hữu chúng khá kỹ. Code đó của _anh ta_, và chúng thôi không được phép biết về nó. Nhưng giờ Richard đã nghỉ, vì vậy tôi lấy ra danh sách dày hàng inch và bắt đầu xem từng trang một.
 
-Các hàng đợi tròn trong hệ thống chỉ là cấu trúc dữ liệu FIFO, tức là hàng đợi (queue). Các ký tự được đẩy vào một đầu của hàng đợi cho đến khi đầy. Các đầu ngắt xuất hiện các ký tự ở đầu kia của hàng đợi khi máy in sẵn sàng cho chúng. Khi hàng đợi trống, máy in sẽ dừng. Lỗi của chúng tôi là khiến các ứng dụng nghĩ rằng hàng đợi đã đầy, nhưng lại khiến các đầu ngắt nghĩ rằng hàng đợi đang trống.
+Các hàng đợi tròn trong hệ thống chỉ là cấu trúc dữ liệu FIFO, tức là hàng đợi (queue). Ứng dụng đẩy các ký tự vào một đầu của hàng đợi cho đến khi đầy. Các đầu ngắt lấy ra các ký tự ở đầu kia của hàng đợi khi máy in sẵn sàng cho chúng. Khi hàng đợi trống, máy in sẽ dừng. Lỗi của chúng tôi là khiến ứng dụng nghĩ hàng đợi đã đầy, nhưng lại khiến các đầu ngắt nghĩ hàng đợi đang trống.
 
-Các đầu ngắt chạy trong một "luồng (thread)" khác với phần còn lại. Vì vậy bộ đếm và biến được kiểm soát bởi cả đầu ngắt và phần còn lại cần được bảo vệ để tránh tình trạng cập nhật đồng thời. Trong trường hợp của chúng tôi, khi có một thao tác nào với 3 biến này, các thao tác khác với chúng phải dừng lại. Vào thời điểm tôi nghiên cứu đống code đó, tôi biết rằng tôi phải tìm kiếm một chỗ nào đó trong code chỉnh sửa những biến đó nhưng không vô hiệu hoá bộ ngắt trước.
+Các đầu ngắt chạy trong một "luồng (thread)" khác với phần còn lại. Vì vậy các biến và bộ đếm được kiểm soát bởi cả đầu ngắt và phần còn lại phải được bảo vệ để tránh tình trạng cập nhật đồng thời. Trong trường hợp của chúng tôi, khi có một thao tác nào đó với 3 biến này, các thao tác khác với chúng phải dừng lại. Vào thời điểm tôi nghiên cứu đống code đó, tôi biết rằng tôi phải tìm kiếm một chỗ nào đó chỉnh sửa những biến đó nhưng không vô hiệu hoá bộ ngắt trước.
 
-Ngày nay, tất nhiên, chúng ta có rất nhiều công cụ mạnh mẽ để tìm tất cả các vị trí mà biến này được sử dụng. Trong vài giây, chúng tôi sẽ biết mọi dòng code có thể đụng vào biến đó. Trong vòng vài phút, chúng tôi sẽ biết vị trí code không vô hiệu hoá bộ ngắt. Nhưng lúc đó là năm 1972, và tôi không có bất kỳ công cụ nào như vậy. Những gì tôi có chỉ là đôi mắt của mình.
+Ngày nay, tất nhiên, chúng ta có rất nhiều công cụ mạnh mẽ để tìm tất cả các vị trí mà biến này được sử dụng. Trong vài giây, chúng ta sẽ biết được mọi dòng code có thể đụng vào biến đó. Trong vòng vài phút, chúng tôi sẽ biết được vị trí code không vô hiệu hoá bộ ngắt. Nhưng lúc đó là năm 1972, và tôi không có bất kỳ công cụ nào như vậy. Những gì tôi có chỉ là đôi mắt của mình.
 
-Tôi nghiền ngẫm từng trang code, tìm kiếm các biến cần tìm. Không may là, các biến đó sử dụng ở _khắp mọi nơi_. Gần như tất cả mọi trang đều chạm vào chúng theo cách này hay cách khác. Rất nhiều trong số các tham chiều đó không vô hiệu hoá bộ ngắt vì chúng là các tham chiếu chỉ đọc giá trị, do đó chúng vô hại. Vấn đề là, cách duy nhất để biết một tham chiếu có phải chỉ đọc hay không là phải biết được logic của đoạn code đó. Bất cứ khi nào một biến được đọc, nó có thể được cập nhật và lưu lại sau đó. Và nếu điều đó xảy ra trong khi bộ ngắt đang bật, các biến đó có thể gây lỗi.
+Tôi nghiền ngẫm từng trang code, tìm kiếm các biến cần tìm. Không may là, các biến đó sử dụng ở _khắp mọi nơi_. Gần như tất cả mọi trang đều chạm vào chúng theo cách này hay cách khác. Rất nhiều trong số các tham chiều đó không vô hiệu hoá bộ ngắt vì chúng là các tham chiếu chỉ đọc giá trị, nên chúng vô hại. Vấn đề là, để biết một tham chiếu có phải chỉ đọc hay không thì nhất định phải hiểu được logic của đoạn code chứa nó. Bất cứ khi nào một biến được đọc, nó có thể được cập nhật và lưu lại sau đó. Và nếu điều đó xảy ra trong khi bộ ngắt đang bật, các biến đó có thể gây lỗi.
 
-Tôi mất nhiều ngày nghiên cứu căng thẳng, nhưng cuối cùng đã tìm ra nó. Nơi đó, trong một rừng code, có một nơi mà một trong 3 biến được cập nhật trong khi các bộ ngắt đang bật.
+Tôi mất nhiều ngày nghiên cứu căng thẳng, nhưng cuối cùng đã tìm ra nó. Nơi đó, giữa một rừng code, có một nơi mà một trong 3 biến được cập nhật trong khi các bộ ngắt đang bật.
 
-Sau khi tính toán một chút. Thời gian lỗi dài khoảng 2ms. Có một tá thiết bị đầu cuối chạy ở tốc độ 30 cps, vì vậy cứ sau 3s lại đơ một lần. Với kích thước của trình giám sát và tốc độ CPU, chúng tôi dự kiến xử lý looix này trong vòng 1 hoặc 2 lần một ngày. Trúng phóc!
+Sau khi tính toán một chút. Thời gian của lỗ hổng vào khoảng 2ms. Có một tá thiết bị đầu cuối chạy ở tốc độ 30 cps, vì vậy cứ sau 3ms hoặc lâu hơn có thể đóng băng một lần. Với kích thước của trình giám sát và tốc độ CPU, chúng tôi dự kiến xử lý lỗi này trong vòng 1 hoặc 2 lần một ngày. Trúng phóc!
 
-Tôi đã khắc phục lỗi đó, tất nhiên, nhưng không bao giờ có đủ can đảm để tắt tính năng tự động kiểm tra và sửa lại bộ đếm. Cho đến hôm nay, tôi không tin là không có một lỗ hổng khác.
+Tôi đã khắc phục lỗi đó, tất nhiên rồi, nhưng không bao giờ có đủ can đảm để tắt tính năng tự động kiểm tra và sửa lại bộ đếm. Cho đến hôm nay, tôi không tin là không có một lỗ hổng khác.
 
 ### Thời gian gỡ lỗi
 
