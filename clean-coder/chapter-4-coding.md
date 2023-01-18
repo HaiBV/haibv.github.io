@@ -178,9 +178,9 @@ Tôi đã khắc phục lỗi đó, tất nhiên rồi, nhưng không bao giờ 
 
 ### Thời gian gỡ lỗi
 
-Vì một vài lý do nào đó mà các lập trình viên phần mềm không coi thời gian gỡ lỗi là thời gian viết code. Họ coi thời gian gỡ lỗi như tiếng gọi của tự nhiên, một điều gì đó hiển nhiên phải thực hiện. Nhưng thời gian gỡ lỗi cũng tốn kém với doanh nghiệp như thời gian viết code, và do đó bất cứ điều gì làm giảm hoặc loại bỏ thời gian gỡ lỗi đều hữu ích.
+Vì một vài lý do nào đó mà các lập trình viên phần mềm không coi thời gian gỡ lỗi là thời gian viết code. Họ coi thời gian gỡ lỗi như tiếng gọi của tự nhiên, một điều gì đó _hiển nhiên_ phải được hoàn thành. Nhưng thời gian gỡ lỗi cũng tốn kém với doanh nghiệp như thời gian viết code, và do đó bất cứ điều gì làm giảm hoặc loại bỏ thời gian gỡ lỗi đều hữu ích.
 
-Ngày nay, thời gian gỡ lỗi của tôi ít hơn nhiều so với cách đây 10 năm. Tôi chưa đo chính xác sự khác biệt, nhưng tôi tin nó ít hơn khoảng 10 lần. Sử dụng TDD giúp tôi giảm thời gian gỡ lỗi triệt để, chúng ta sẽ thảo luận về nó trong một chương khác.
+Ngày nay, thời gian gỡ lỗi của tôi đã ít hơn nhiều so với cách đây 10 năm. Tôi chưa đo chính xác sự khác biệt, nhưng tôi tin là nó giảm đi khoảng 10 lần. Sử dụng TDD giúp tôi giảm thời gian gỡ lỗi triệt để, chúng ta sẽ thảo luận về nó trong một chương khác.
 
 Dù bạn áp dụng TDD hay một cách khác có hiệu quả tương đương, thì với tư cách một chuyên gia, bạn phải giảm thời gian gỡ lỗi của mình xuống gần đến 0 nhất có thể. Rõ ràng 0 là mục tiêu tiệm cận, nhưng dù sao thì vẫn là mục tiêu.
 
@@ -188,23 +188,23 @@ Các bác sỹ không muốn mở lại cơ thể bệnh nhân để sửa lại
 
 ## Nhịp độ của bản thân
 
-Phát triển phần mềm là một cuộc đua Marathon, không phải đua nước rút. Bạn không thể chiến thắng cuộc đua bằng cách cố gắng chạy nhanh nhất có thể ngay từ đầu. Bạn giành chiến thắng bằng cách bảo toàn tài nguyên của mình và điều chỉnh nhịp độ bản thân. Một vận động viên marathon chăm sóc cơ thể của mình cả trước và trong cuộc đua. Các lập trình viên chuyên nghiệp cũng chăm sóc như vậy để bảo tồn năng lượng và sự sáng tạo của mình.
+Phát triển phần mềm là một cuộc đua Marathon, không phải chạy nước rút. Bạn không thể chiến thắng cuộc đua bằng cách cố gắng chạy nhanh nhất có thể ngay từ đầu. Bạn giành chiến thắng bằng cách bảo toàn tài nguyên của mình và điều chỉnh nhịp độ bản thân. Một vận động viên marathon chăm sóc cơ thể của mình trước và _trong_ cuộc đua. Các lập trình viên chuyên nghiệp cũng cần phải làm như vậy để bảo toàn năng lượng và sự sáng tạo của mình.
 
-### Biết khi nào nên dừng lại
+### Biết khi nào nên từ bỏ
 
-Không về nhà cho đến khi giải quyết được vấn đề? Tất nhiên bạn có thể, và có lẽ bạn nên như vậy! Sáng tạo và thông minh là những trạng thái thoáng qua của tâm trí. Khi bạn mệt mỏi, chúng biến mất. Nếu bạn cố gắng ép bộ não đang tê liệt sau hàng giờ hoạt động lúc đêm khuya để giải quyết vấn đề, bạn sẽ chỉ khiến bản thân mệt mỏi hơn và giảm khả năng tắm hoặc ô tô có thể giúp bạn giải quyết vấn đề.
+Không về nhà cho đến khi giải quyết được vấn đề? Tất nhiên bạn có thể, và có lẽ bạn nên như vậy! Sáng tạo và thông minh là những trạng thái thoáng qua của tâm trí. Khi bạn mệt mỏi, chúng biến mất. Nếu bạn cố gắng ép bộ não - đang tê liệt sau hàng giờ hoạt động - giải quyết vấn đề lúc đêm khuya, bạn sẽ chỉ khiến bản thân mệt mỏi hơn và giảm khả năng tắm hoặc ô tô có thể giúp bạn giải quyết vấn đề.
 
-Khi bạn bế tắc, mệt mỏi, hãy cho bản thân thư giãn một lúc. Cung cấp cho tiềm thức sáng tạo của bạn một ý niệm về vấn đề. Bạn sẽ hoàn thành được nhiều việc hơn trong thời gian ngắn hơn và ít nỗ lực hơn nếu bạn dùng khả năng của bạn thật cẩn thận. Đồng bộ bản thân và đội nhóm của bạn. Tìm hiểu các mô hình sáng tạo và thông minh của bạn, tận dụng chúng hay vì làm việc chống lại chúng.
+Khi bạn bế tắc, mệt mỏi, hãy cho bản thân thảnh thơi một lúc. Cung cấp cho tiềm thức sáng tạo của bạn một ý niệm về vấn đề. Bạn sẽ hoàn thành được nhiều việc hơn trong thời gian ngắn hơn với ít nỗ lực hơn nếu bạn dùng khả năng của bạn thật cẩn thận. Đồng bộ bản thân và đội nhóm của bạn. Tìm hiểu các mô hình sáng tạo và thông minh của bạn, tận dụng chúng hay vì làm việc chống lại chúng.
 
-### Trở về nhà
+### Lái xe về nhà
 
-Một nơi mà tôi đã giải quyết được một số vấn đề là ở trên xe khi đang về nhà. Lái xe đòi hỏi rất nhiều nguồn lực trí óc không sáng tạo. Bạn phải dành đôi mắt, đôi tay và một phần trí óc của mình cho nó. Do đó, bạn phải thoát ra khỏi những rắc rối trong công việc. Có điều gì đó về sự thảnh thơi cho phép tâm trí của bạn tìm kiếm các giải pháp theo một cách khác và sáng tạo hơn.
+Một nơi mà tôi đã giải quyết được một số vấn đề là ở trên xe khi đang về nhà. Lái xe đòi hỏi rất nhiều nguồn lực trí óc không sáng tạo. Bạn phải dành đôi mắt, đôi tay và một phần trí óc của mình cho nó. Do đó, bạn phải thoát ra khỏi những rắc rối trong công việc. Và _sự thảnh thơi_ sẽ cho phép tâm trí của bạn tìm kiếm các giải pháp theo một cách khác và sáng tạo hơn.
 
 ### Tắm
 
 Tôi giải quyết được vô số vấn đề trong phòng tắm. Có lẽ những tia nước vào buổi sáng đã đánh thức tôi và giúp tôi xem lại tất cả các giải pháp mà bộ não của tôi đã nghĩ ra khi tôi đang ngủ.
 
-Khi bạn đang giải quyết một vấn đề, đôi khi bạn đến gần nó đến mức bạn không thể nhìn thấy tất cả các lực chọn. Bạn bỏ lỡ những giải pháp tốt hơn bởi vì phần sáng tạo trong tâm trí bạn bị đè nén bởi cường độ tập trung của bạn. Đôi khi cách tốt nhất để giải quyết vấn đề là về nhà, ăn tối, xem TV, đi ngủ và sáng hôm sau thức dậy đi tắm.
+Khi bạn đang giải quyết một vấn đề, đôi khi bạn đến gần nó đến mức bạn không thể nhìn thấy tất cả các lựa chọn. Bạn bỏ lỡ những giải pháp tốt hơn bởi vì phần sáng tạo trong tâm trí bạn bị đè nén bởi cường độ tập trung của bạn. Đôi khi cách tốt nhất để giải quyết vấn đề là về nhà, ăn tối, xem TV, đi ngủ và sáng hôm sau thức dậy đi tắm.
 
 ## Chậm deadline
 
