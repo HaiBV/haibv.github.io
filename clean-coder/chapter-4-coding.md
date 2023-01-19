@@ -208,25 +208,25 @@ Khi bạn đang giải quyết một vấn đề, đôi khi bạn đến gần n
 
 ## Chậm deadline
 
-Bạn _sẽ_ bị chậm. Nó xảy ra với tất cả chúng ta. Nó xảy đến với những người tận tâm nhất. Đôi khi chúng ta thổi phồng ước lượng của mình và cuối cùng bị chậm.
+Bạn _sẽ_ bị chậm. Điều đó xảy ra với những người giỏi nhất và những người tận tâm nhất. Đôi khi chúng ta thổi phồng ước lượng của mình và cuối cùng bị chậm.
 
-Bí quyết quản lý việc bị chậm deadline là phát hiện sớm và minh bạch. Trường hợp xấu nhất xảy ra khi bạn tiếp tục nói với mọi người, thậm chí đến cuối cùng, rằng bạn sẽ hoàn thành đúng hạn - và sau đó khiến họ thất vọng. _Đừng_ làm như vậy. Thay vào đó, thường xuyên đo lường tiến độ của bạn so với mục tiêu và đưa ra 3 hạn chót dựa trên thực tế: trường hợp lạc quan nhất, trường hợp thực tế và trường hợp xấu nhất. Hãy trung thực nhất có thể về cả 3 hạn chót đó. _Đừng mang hi vọng vào ước lượng của bạn!_ Trình bày tất cả 3 hạn chót cho nhóm của bạn và các bên liên quan. Cập nhật con số đó hằng ngày.
+Bí quyết quản lý việc bị chậm deadline là phát hiện sớm và minh bạch. Trường hợp xấu nhất xảy ra khi bạn tiếp tục nói với mọi người, thậm chí đến phút cuối cùng, rằng bạn sẽ hoàn thành đúng hạn - và sau đó khiến họ thất vọng. _Đừng_ làm như vậy. Thay vào đó, _thường xuyên_ đo lường tiến độ của bạn so với mục tiêu và đưa ra 3 deadline dựa trên thực tế: trường hợp lạc quan nhất, trường hợp thực tế và trường hợp xấu nhất. Hãy trung thực nhất có thể về cả 3 deadline đó. _Đừng mang hi vọng vào ước lượng của bạn!_ Trình bày tất cả 3 deadline cho nhóm của bạn và các bên liên quan. Cập nhật con số đó hằng ngày.
 
 ### Hy vọng
 
-Điều gì sẽ xảy ra nếu những số cho thấy bạn sẽ chậm deadline? Lấy ví dụ, giả sử 10 ngày nữa sẽ có triển lãm thương mai và chúng tôi cần có sản phẩm của mình ở đó. Nhưng cũng giả sửa rằng ước tính 3 hạn chót của bạn cho tính năng đang thực hiện là 8/12/20
+Điều gì sẽ xảy ra nếu những con số cho thấy bạn _có thể_ chậm deadline? Lấy ví dụ, giả sử 10 ngày nữa sẽ có triển lãm thương mại và chúng tôi cần có sản phẩm của mình ở đó. Nhưng cũng giả sử rằng ước tính 3 deadline của bạn cho tính năng đang thực hiện là 8/12/20
 
-_Đừng hy vọng bạn có thể hoàn thành tất cả trong 10 ngày!_ Hy vọng là thứ giết chết dự án. Hy vọng phá hủy lịch trình và hủy hoại danh tiếng. Hy vọng sẽ khiến bạn gặp rắc rối sâu sắc. Nếu triển lãm thương mại diễn ra trong 10 ngày và ước tính thực tế của bạn là 12 ngày, bạn sẽ không kịp để dự triển lãm. Đảm bảo rằng đội của bạn và các bên liên quan hiểu tình hình và không bỏ cuộc cho đến khi có kế hoạch dự phòng. Đừng để bất kỳ ai khác có hy vọng.
+_Đừng hy vọng bạn có thể hoàn thành tất cả trong 10 ngày!_ Hy vọng là thứ giết chết dự án. Hy vọng phá hủy lịch trình và hủy hoại danh tiếng. Hy vọng sẽ khiến bạn gặp rắc rối lớn. Nếu triển lãm thương mại diễn ra trong 10 ngày và ước tính thực tế của bạn là 12 ngày, bạn _sẽ không kịp_ hoàn thành nó. Đảm bảo rằng đội của bạn và các bên liên quan hiểu tình hình và không bỏ cuộc cho đến khi có kế hoạch dự phòng. Đừng để bất kỳ ai khác có hy vọng.
 
 ### Vội vàng
 
-Sẽ ra sao nếu quản lý của bạn yêu cầu bạn cố gắng hoàn thành đúng hạn? Điều gì xảy ra nếu quản lý của bạn khăng khăng rằng bạn phải làm "mọi việc cần phải làm"? _Giữ nguyên ước lượng của bạn!_ Ước tính ban đầu của bạn chính xác hơn bất kỳ thay đổi nào bạn thực hiện trong khi sếp đối đầu với bạn. Nói với sếp rằng bạn đã cân nhắc các lựa chọn (vì bạn có) và cách duy nhất để cải thiện lịch trình là giảm khối lượng công việc. _Đừng để bị sự vội vàng cám dỗ_
+Sẽ ra sao nếu quản lý của bạn yêu cầu bạn cố gắng hoàn thành đúng hạn? Điều gì xảy ra nếu quản lý của bạn khăng khăng rằng bạn phải làm "mọi việc cần phải làm"? _Giữ nguyên ước lượng của bạn!_ Ước tính ban đầu của bạn chính xác hơn bất kỳ thay đổi nào bạn thực hiện khi sếp đối đầu với bạn. Nói với sếp rằng bạn đã cân nhắc tất cả các lựa chọn (vì bạn có chúng) và cách duy nhất để cải thiện lịch trình là giảm khối lượng công việc. _Đừng để sự vội vàng cám dỗ_
 
-Buồn thay cho những lập trình viên kém cỏi, người phải chịu áp lực và đồng ý cố gắng hoàn thành đúng hạn. Họ sẽ bắt đầu sử dụng đường tắt và làm thêm giờ với hy vọng trong vô vọng sẽ tạo ra một điều kỳ diệu. Đây là một công thức cho thảm họa bởi vì nó mang lại cho bạn, nhóm của bạn và các bên liên quan hy vọng sai lầm. Nó khiến mọi người tránh đối mặt với vấn đề và trì hoãn các quyết định khó khăn khi cần thiết.
+Đáng buồn cho những lập trình viên kém cỏi, người phải chịu áp lực và đồng ý cố gắng hoàn thành đúng hạn. Họ sẽ bắt đầu sử dụng đường tắt và làm thêm giờ với hy vọng trong vô vọng sẽ tạo ra một điều kỳ diệu. Đây là một công thức cho thảm họa bởi vì nó mang lại cho bạn, nhóm của bạn và các bên liên quan hy vọng sai lầm. Nó khiến mọi người tránh đối mặt với vấn đề và trì hoãn các quyết định khó khăn khi cần thiết.
 
-Vội vàng không phải là cách. Bạn không thể viết code nhanh hơn. Bạn không thể bắt mình giải quyết vấn đề nhanh hơn. Nếu bạn cố gắng, bạn sẽ chỉ làm chậm bản thân và tạo ra một mớ hỗn độn khiến những người khác cũng phải chậm lại.
+Vội vàng không bao giờ là một giải pháp. Bạn không thể viết code nhanh hơn. Bạn không thể bắt mình giải quyết vấn đề nhanh hơn. Nếu bạn cố gắng, bạn sẽ chỉ làm chậm bản thân và tạo ra một mớ hỗn độn khiến những người khác cũng phải chậm lại.
 
-Vì vậy, bạn cần phải tước đi hi vọng của sếp, nhóm và các bên liên quan bằng câu trả lời của bạn.
+Vì vậy, bạn cần tước đi hi vọng của sếp, nhóm và các bên liên quan bằng câu trả lời của bạn.
 
 ### Làm thêm giờ
 
