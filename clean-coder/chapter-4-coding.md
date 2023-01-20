@@ -230,21 +230,21 @@ Vì vậy, bạn cần tước đi hi vọng của sếp, nhóm và các bên li
 
 ### Làm thêm giờ
 
-Bây giờ sếp của bạn nói "Nếu bạn làm thêm 2h một ngày thì sao? Nếu bạn làm thêm vào thứ 7 thì sao? Thôi nào, phải có cách nào đó để có đủ thời gian hoàn thành tính năng đúng hạn."
+Bây giờ sếp của bạn nói "Nếu bạn làm thêm 2h một ngày thì sao? Nếu bạn làm thêm vào thứ 7 thì sao? Thôi nào, phải có cách nào đó để có đủ thời gian hoàn thành chức năng đúng hạn."
 
-Làm thêm giờ có thể có tác dụng, và đôi khi là cần thiết. Đôi khi bạn ra một ngày bằng cách làm 10 tiếng vào những ngày khác và thêm một hoặc 2 ngày thứ 7. Nhưng điều này rất rủi ro. Bạn không có khả năng hoàn thành thêm 20% công việc bằng cách làm thêm 20% giờ. Hơn nữa, làm thêm giờ chắc chắn sẽ không thành công nếu nó kéo dài hơn 2 hoặc 3 tuần.
+Làm thêm giờ có thể có tác dụng, và đôi khi là cần thiết. Đôi khi bạn sẽ đạt được một hạn chót bất khả thi bằng cách làm 10 tiếng trong vài ngày và thêm một hoặc 2 ngày thứ 7. Nhưng điều đó rất rủi ro. Bạn không có khả năng hoàn thành thêm 20% công việc bằng cách làm thêm 20% giờ. Hơn nữa, làm thêm giờ _chắc chắn_ sẽ không thành công nếu nó kéo dài hơn 2 hoặc 3 tuần.
 
-Vì vậy, bạn không nên đồng ý làm thêm giờ trừ khi (1) bạn có đủ khả năng cá nhân để đáp ứng công việc, (2) trong khoảng thời gian ngắn, chỉ trong 2 tuần hoặc ít hơn, (3) _sếp của bạn có kế hoạch dự phòng_ trong trường hợp nỗ lực làm thêm không thành công
+Vì vậy, bạn _không nên_ đồng ý làm thêm giờ trừ khi (1) bạn có đủ khả năng cá nhân để đáp ứng công việc, (2) trong khoảng thời gian ngắn, chỉ trong 2 tuần hoặc ít hơn, (3) _sếp của bạn có kế hoạch dự phòng_ trong trường hợp nỗ lực làm thêm không thành công.
 
-Tiêu chí cuối cùng đó là thứ sẽ phá vỡ thỏa thuận. Nếu sếp bạn không thể nói rõ cho bạn biết ông ấy sẽ làm gì nếu nỗ lực làm thêm giờ không thành công, thì bạn không nên đồng ý làm thêm giờ.
+Tiêu chí cuối cùng bên trên thường là thứ sẽ phá vỡ thỏa thuận. Nếu sếp bạn không thể nói rõ cho bạn biết ông ấy sẽ làm gì nếu nỗ lực làm thêm giờ không thành công, thì bạn không nên đồng ý làm thêm giờ.
 
 ### Bàn giao sai
 
-Trong tất cả các hành vi thiếu chuyên nghiệp mà một lập trình viên có thể mắc phải, có lẽ điều tồi tệ nhất là nói rằng bạn đã hoàn thành trong khi bạn chưa làm. Đôi khi đây chỉ là một lời nói dối công khai, chỉ riêng điều đó đã đủ tệ. Nhưng hơn hết là một sự lươn lẹo khi khi chúng ta cố gắng hợp lý hóa một định nghĩa mới về "đã hoàn thành”. Chúng ta tự thuyết phục mình rằng mình đã làm đủ và chuyển sang nhiệm vụ tiếp theo. Chúng ta hợp lý hóa rằng bất kỳ công việc nào còn sót lại có thể được giải quyết sau khi chúng ta có nhiều thời gian hơn.
+Trong tất cả các hành vi thiếu chuyên nghiệp mà một lập trình viên có thể mắc phải, có lẽ điều tồi tệ nhất là nói rằng bạn đã hoàn thành, nhưng thực tế thì chưa. Chỉ tính riêng việc đây là một lời nói dối công khai đã đủ tệ. Nhưng hơn hết là một sự lươn lẹo khi chúng ta cố gắng hợp lý hóa một định nghĩa mới về "đã hoàn thành”. Chúng ta tự thuyết phục mình rằng mình đã làm _đủ_ và chuyển sang nhiệm vụ tiếp theo. Chúng ta hợp lý hóa rằng bất kỳ công việc nào còn sót lại có thể được giải quyết sau khi chúng ta có nhiều thời gian hơn.
 
 Đây là một thói quen dễ lây. Nếu một lập trình viên làm điều đó, những người khác sẽ thấy và làm theo. Thậm chí có người sẽ mở rộng định nghĩa "đã hoàn thành" ra hơn nữa, và định nghĩa mới lại sẽ được áp dụng. Tôi đã thấy điều này bị đẩy đến mức cực đoan khủng khiếp. Một trong những khách hàng của tôi thực sự đã định nghĩa "hoàn thành" chỉ là "đăng ký". Code thậm chí không cần phải biên dịch. Rất dễ dàng được "hoàn thành" nếu không có việc gì phải làm!
 
-Khi một đội rơi vào cái bẫy này, các quản lý thấy rằng mọi thứ đang diễn ra tốt đẹp. Tất cả các báo cáo trạng thái cho thấy mọi người đều đang đúng lịch trình. Giống nhu những người mù đang đi dã ngoại trên đường ray: Không ai nhìn thấy đoàn tàu chở hàng mang tên công việc dở dang đang đè nặng họ cho đến khi quá muộn.
+Khi một đội rơi vào cái bẫy này, các quản lý thấy rằng mọi thứ đang diễn ra tốt đẹp. Tất cả các báo cáo trạng thái cho thấy mọi người đều đang đúng lịch trình. Giống như những người mù đang đi dã ngoại trên đường ray: Không ai nhìn thấy đoàn tàu chở hàng mang tên công việc dở dang đang đè nặng họ cho đến khi quá muộn.
 
 ### Định nghĩa "Hoàn Thành"
 
