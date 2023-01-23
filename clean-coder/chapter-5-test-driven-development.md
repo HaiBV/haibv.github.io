@@ -26,7 +26,7 @@ Tuy nhiên chúng ta có Kent, xử lý chương trình Java với chu kỳ 30s 
 
 ## Đưa ra kết luận
 
-Kể từ ngày đó, tôi đã học được rằng TDD không chỉ là một thủ thuật đơn gian để rút ngắn chu trình của tôi. Phương pháp này có rất nhiều lợi ích mà tôi sẽ mô tả ở dưới đây.
+Kể từ ngày đó, tôi đã học được rằng TDD không chỉ là một thủ thuật đơn giản để rút ngắn chu trình của tôi. Phương pháp này có rất nhiều lợi ích mà tôi sẽ mô tả dưới đây.
 
 Nhưng trước đó tôi cần phải nói rằng:
 - The jury is in! (chơi chữ từ câu "The jury is out", ý chỉ quyết định đã được đưa ra)
@@ -34,21 +34,21 @@ Nhưng trước đó tôi cần phải nói rằng:
 - Sử dụng GOTO sẽ gây hại
 - và TDD hoạt động
 
-Vâng, có rất nhiều blog và bài viết gây tranh cãi khi viết về TDD trong những năm qua và vẫn còn đó. Vào những ngày đầu tiên họ nỗ lực và nghiêm túc phê bình và thấu hiểu. Tuy nhiên, bây giờ thì chỉ còn khen ngợi. Mấu chốt ở chỗ TDD hoạt động và mọi người cần phải vượt qua nó.
+Vâng, có rất nhiều blog cùng bài viết về TDD đã gây tranh cãi trong những năm qua và chúng vẫn còn đó. Ban đầu chúng thể hiện những nỗ lực nghiêm túc khi phê bình và tìm hiểu. Tuy nhiên, giờ đây chỉ còn lại sự ngợi khen. Mấu chốt ở chỗ TDD hoạt động và mọi người cần phải làm quen với điều đó.
 
 Tôi biết điều này nghe có vẻ cứng rắn và một chiều. nhưng theo như số liệu đưa ra, tôi không nghĩ bác sĩ phẫu thuật phải bảo về việc rửa tay, và tôi cũng không nghĩ các lập trình viên phải bảo vệ TDD.
 
 Làm sao bạn có thể coi bản thân là một chuyên gia nếu bạn không _biết_ code của mình hoạt động? Làm sao bạn có thể biết code của bạn hoạt động nếu bạn không kiểm thử chúng mỗi khi bạn thực hiện một thay đổi? Làm thế nào bạn có thể kiểm thử chúng mỗi khi bạn thực hiện một thay đổi nếu bạn không có những unit test tự động với độ phủ cao? Làm thế nào bạn viết được những unit test tự động với độ phủ cao mà không thực hành TDD?
 
-Câu cuối cùng đòi hỏi một số nỗ lực. Vậy TDD là gì?
+Câu cuối cùng đòi hỏi sự nỗ lực nhất định. Vậy TDD là gì?
 
 ## 3 quy tắc của TDD
 
 1. Bạn không được viết code thành phẩm cho đến khi bạn viết một unit test chạy thất bại.
-2. Bạn không được viết nhiều hơn 1 unit test chạy thất bại, hãy viết code để unit test đó chạy thành công.
+2. Bạn không được viết nhiều hơn 1 unit test chạy thất bại, hãy viết code để vượt qua unit test đó.
 3. Bạn không được viết code thành phẩm nhiều hơn cần thiết để chạy thành công unit test hiện tại.
 
-3 quy tắc trên sẽ khóa bạn trong một chu kỳ dài khoảng 30s. Bạn bắt đầu viết mọt phần nhỏ của unit test. Nhưng trong vòng vài giây, bạn phải nhắc đến tên của lớp hoặc hàm nào đó bạn chưa viết, nên unit test đó chạy thất bại. Sau đó bạn phải viết code để unit test đó thực thi. Nhưng bạn không thể viết nhiều hơn thế, vì vậy bạn tiếp tục viết thêm unit test.
+3 quy tắc trên sẽ khóa bạn trong một chu kỳ dài khoảng 30s. Bạn bắt đầu viết một phần nhỏ của unit test. Ví dụ trong vòng vài giây, bạn phải nhắc đến tên của lớp hoặc hàm nào đó bạn chưa viết, nên unit test đó chạy thất bại. Sau đó bạn phải viết code để vượt qua unit test đó. Nhưng bạn không thể viết nhiều hơn thế, vì vậy sau đó, bạn cần tiếp tục viết thêm unit test.
 
 Chu kỳ tiếp tục lặp đi lặp lại. Thêm một ít code kiểm thử. Thêm một ít code thành phẩm. Hai phần code phát triển đồng thời và bổ sung cho nhau. Unit test phù hợp với code thành phẩm như kháng thể phù hợp với kháng nguyên.
 
@@ -56,9 +56,9 @@ Chu kỳ tiếp tục lặp đi lặp lại. Thêm một ít code kiểm thử. 
 
 #### Chắc chắn
 
-Nếu bạn áp dụng TDD như một khuôn mẫu chuyên nghiệp, bạn sẽ viết hàng chục unit test mỗi ngày, hàng trăm unit test mỗi tuần và hàng ngàn unit test mỗi năm. Và bạn luôn có tất cả những unit test đó để chạy bất cứ khi nào bạn thực hiện thay đổi code.
+Nếu bạn áp dụng TDD như một khuôn mẫu chuyên nghiệp, bạn sẽ viết hàng chục kiểm thử mỗi ngày, hàng trăm kiểm thử mỗi tuần và hàng ngàn kiểm thử mỗi năm. Và bạn luôn có tất cả những kiểm thử đó để chạy bất cứ khi nào bạn thực hiện thay đổi code.
 
-Tôi là một trong những tác giả và người bảo trì của FitNesse, một công cụ kiểm thử dựa trên Java. Tính đến thời điểm hiện tại, FitNesse có khoảng 64000 dòng code, trong đó 28000 dòng code dành cho 2200 unit test riêng lẻ. Những unit test này phủ ít nhất 90% code thành phẩm và mất khoảng 90s để chạy.
+Tôi là một trong những tác giả và người bảo trì chính của FitNesse, một công cụ kiểm thử dựa trên Java. Tính đến thời điểm hiện tại, FitNesse có khoảng 64000 dòng code, trong đó 28000 dòng code dành cho 2200 unit test riêng biệt. Những unit test này phủ ít nhất 90% code thành phẩm và mất khoảng 90s để chạy.
 
 Mỗi khi tôi thực hiện một thay đổi ở bất kỳ phần nào của FitNesse, tôi chỉ cần chạy những unit test đó. Nếu chúng đạt, tôi gần như chắc chắn rằng sự thay đổi không làm hỏng bất cứ thứ gì. Thế nào là "gần như chắc chắn"? Đủ để bàn giao công việc!
 
@@ -67,9 +67,9 @@ Quy trình QA cho FitNesse là dòng lệnh: ant release. Lệnh đó dựng Fit
 
 ### Giảm tỷ lệ lỗi
 
-FitNesse không phải là một ứng dụng thực sự quan trọng. Nếu có bug thì cũng không có ai phải chết, không ai mất hàng triệu đô la. Nên tôi có thể bàn giao chỉ dựa trên việc unit test chạy thành công. Mặt khác, FitNesse có hàng ngàn người dùng và mặc dù đã bổ sung thêm 20000 dòng code vào năm ngoái, danh sách lỗi của tôi chỉ có 17 lỗi (phần nhiều là của mỹ phầm???). Nên tôi biết tỉ lệ bug của mình là rất thấp.
+FitNesse không phải là một ứng dụng thực sự quan trọng. Nếu có lỗi thì cũng chẳng ai chết cả, chẳng ai mất hàng triệu đô la. Nên tôi có thể bàn giao chỉ dựa trên việc unit test chạy thành công. Mặt khác, FitNesse có hàng ngàn người dùng và mặc dù đã bổ sung thêm 20000 dòng code vào năm ngoái, danh sách lỗi của tôi chỉ có 17 lỗi (phần nhiều là của mỹ phầm???). Nên tôi biết tỉ lệ lỗi của mình là rất thấp.
 
-Đây không phải là một hiện tượng đơn lẻ. Dã có một số báo cáo và nghiên cứu mô tả về việc giảm thiểu đáng kể bug này. Từ IBM, đến Microsoft, từ Sabre đến Symantec, từ công ty này đến công ty khác, từ nhóm này đến nhóm khác đã trải qua việc giảm thiểu lỗi đi 2 lần, 5 lần và thậm chí 10 lần. Đây là những con số mà không chuyên gia nào nên bỏ qua.
+Đây không phải là trường hợp đặc biệt. Đã có một số báo cáo và nghiên cứu mô tả về việc giảm thiểu đáng kể lỗi như trên. Từ IBM, đến Microsoft, từ Sabre đến Symantec, từ công ty này đến công ty khác, từ nhóm này đến nhóm khác đã trải qua việc số lỗi giảm đi 2 lần, 5 lần và thậm chí 10 lần. Đây là những con số mà không chuyên gia nào nên bỏ qua.
 
 ### Lòng can đảm
 
