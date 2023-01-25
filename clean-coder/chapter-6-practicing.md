@@ -4,6 +4,8 @@ layout: default
 
 # Chương 6 Luyện tập
 
+![6-1](images/6-1.png)
+
 Mọi chuyên gia luyện tập kỹ năng của họ bằng cách thực hành các bài tập rèn luyện kỹ năng. Nhạc sỹ luyện tập với các thang âm. Cầu thủ bóng đá chạy đến khi mệt. Bác sỹ luyện tập kỹ thuật khâu và phẫu thuật. Luật sư tập tranh luận. Binh sỹ diễn tập nhiệm vụ. Khi hiệu suất quan trọng, các chuyên gia luyện tập. Toàn bộ chương này nói về những phương pháp luyện tập lập trình viên có thể thực hành kỹ năng của họ.
 
 ## Nền tảng của việc luyện tập
@@ -23,21 +25,21 @@ Khi tôi còn trẻ, một trong những chương trình đầu tiên mà môi v
 
 Trong đầu những năm 80 là thời điểm những chiếc máy tính cá nhân lần đầu tiên được bày bán rộng rãi ngoài cửa hàng. Bất cứ khi nào sở hữu 1 chiếc, như VIC-20, hoặc Commodore-64, hoặc TRS-80, tôi đều viết một chương trình nhỏ in ra một chuỗi vô hạn các ký tự '\' và '/' trên màn hình. Các hình mẫu mà chương trình này tạo ra đẹp mắt và nhìn có vẻ phức tạp hơn nhiều do với chính chương trình tạo ra chúng.
 
-Mặc dù những chương trình nhỏ này chắc chắn là chương trình luyện tập, nhưng nói chung các lập trình viên đã không _luyện tập_. Thực ra thì, ý nghĩ đó chưa bao giờ xảy ra với chúng tôi. Chúng tôi quá bận để viết code để luyện tập kỹ năng của mình. Và ngoài ra, bên ngoài sẽ là gì? Trong những năm đó, lập trình không đòi hỏi phản ứng nhanh hay những đôi tay linh hoạt. Chúng tôi không sử dụng trình chỉnh sửa trên màn hình cho đến cuối những năm 70. Chúng tôi dành phần lớn thời gian để biên dịch hoặc gỡ những đoạn code dài khủng khiếp. Chúng tôi vẫn chưa phát minh ra chu trình thời gian ngắn như TDD, vậy nên chúng tôi không yêu cầu sự tinh chỉnh mà việc luyện tập mang lại.
+Mặc dù những chương trình nhỏ này chắc chắn là chương trình luyện tập, nhưng nói chung các lập trình viên thường không _luyện tập_. Thực ra thì, ý nghĩ về việc luyện tập chưa bao giờ đến với chúng tôi. Chúng tôi quá bận để viết code giúp luyện tập kỹ năng của mình. Và bên cạnh đó, chúng tôi sẽ nhận được gì? Trong những năm đó, lập trình không đòi hỏi tốc độ phản ứng nhanh hay đôi tay linh hoạt. Chúng tôi không sử dụng trình chỉnh sửa trên màn hình cho đến cuối những năm 70. Chúng tôi dành phần lớn thời gian để biên dịch hoặc gỡ những đoạn code dài khủng khiếp. Chúng tôi vẫn chưa phát minh ra chu trình thời gian ngắn như TDD, vậy nên chúng tôi không yêu cầu sự tinh chỉnh mà việc luyện tập mang lại.
 
-### Hai mươi số không
+### Hai mươi hai số không
 
-Nhưng nhiều thứ đã thay đổi so thuở sơ khai của ngành lập trình. Một vài thứ đã thay đổi rất nhiều. Những thứ khác không thay đổi gì cả.
+Nhưng nhiều thứ đã thay đổi so thuở sơ khai của ngành lập trình. Một vài thứ đã thay đổi _rất nhiều_. Những thứ khác không thay đổi gì cả.
 
 Một trong những chiếc máy đầu tiên tôi từng sử dụng để lập trình là PDP-8/I. Chiếc máy này có chu trình 1,5 micro giây. Nó có 4096 12-bit từ trong bộ nhớ. Nó có kích thước bằng một chiếc tủ lạnh và tiêu tốn khá nhiều điện. Nó có một ổ lưu đĩa có thể chứa 32K 12-bit từ, và chúng tôi nói chuyện với nó bằng teletype 10-ký-tự-mỗi-giây. Chúng tôi nghĩ rằng đây là một cỗ máy mạnh mẽ và chúng tôi đã sử dụng nó để làm nên những điều kỳ diệu.
 
-Tôi vừa mua một chiếc laptop Macbook Pro mới. Nó có bộ xử lý 2.8GHz lõi kép, 8GB RAM, 512GB SSD, và màn hình 17-inch 1920x1200 LED. Tôi mang nó trong balo của tôi. Có thể đặt trên đùi và tiêu thụ ít hơn 85w.
+Tôi vừa mua một chiếc laptop Macbook Pro mới. Nó có bộ xử lý 2.8GHz lõi kép, 8GB RAM, 512GB SSD, và màn hình 17-inch 1920x1200 LED. Tôi mang nó trong balo của tôi. Có thể đặt trên đùi và tiêu thụ ít hơn 85w điện năng.
 
 Chiếc laptop của tôi nhanh hơn 8000 lần, có bộ nhớ trong nhiều hơn 2 triệu lần, có bộ nhớ nhiều hơn 16 triệu lần, tiêu thụ 1% điện năng và kích thước chỉ bằng 1%, và giá tiền chỉ bằng 1/25 có với PDP-8/I. Hãy làm một phép tính:
 
-8000 x 2000000 x 16000000 x 100 x 100 x 25 =6.4 x 10^22
+8000 x 2000000 x 16000000 x 100 x 100 x 25 = 6.4 x 10^22
 
-Một con số _lớn_. Chúng ta đang nói về 22 _cấp độ mũ!_ Đó là số Ångström từ đây tới chòm sao Alpha Centauri. Đó là số lượng electron trên một tờ dollar. Đó là khối lượng trái đất theo đơn vị của Michael Moore. Đó là một con số vô cùng lớn. Và nó đang ở trong laptop của tôi, và có thể là của bạn nữa.
+Một con số _lớn_. Chúng ta đang nói về 22 _cấp số mũ!_ Đó là số Ångström từ đây tới chòm sao Alpha Centauri. Đó là số lượng electron trên một tờ dollar. Đó là khối lượng trái đất theo đơn vị của Michael Moore. Đó là một con số vô cùng lớn. Và nó đang ở trong laptop của tôi, và có thể là của bạn nữa.
 
 Và tôi đang làm gì với sức mạnh của 22 cấp số mũ của 10? Tôi đang làm những việc tương tự như tôi đã làm với PDP-8/I. Tôi đang viết những câu lệnh _if_, vòng lặp _while_, và _những việc được giao_.
 
@@ -101,7 +103,7 @@ Cũng như các võ sư, mọt lập trình viên nên biết nhiều bài kata 
 
 ### Wasa
 
-Khi tôi học jujitsu, phần lớn thời gian ở võ đường được dành cho luyện tập theo cặp _wasa_. Wasa giống như một bài tập kata cho 2 người. Các quy trình được ghi nhớ và phát lại chính xác. Một bên đóng vai tấn công, và bên còn lại phòng thủ. Các chuyển động được lặp đi lặp lại đến khi 2 bên hoán đổi vai trò. 
+Khi tôi học jujitsu, phần lớn thời gian ở võ đường được dành cho luyện tập theo cặp _wasa_. Wasa giống như một bài tập kata cho 2 người. Các quy trình được ghi nhớ và phát lại chính xác. Một bên đóng vai tấn công, và bên còn lại phòng thủ. Các chuyển động được lặp đi lặp lại đến khi 2 bên hoán đổi vai trò.
 
 Lập trình viên có thể luyện tập theo cách tương tự bằng trò chơi _bóng bàn (ping-pong)_. Cả 2 chọn một kata, hoặc một vấn đề đơn giản. Một người viết unit test, và người còn lại phải chạy qua được unit test đó. Sau đó họ đổi lại vai trò.
 

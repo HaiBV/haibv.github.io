@@ -107,7 +107,7 @@ Do đó, tuân theo 3 quy tắc và viết các unit test trước sẽ tạo đ
 
 ### Lựa chọn của chuyên gia
 
-Kết quả của tất cả những điều này là TDD là một sự lựa chọn chuyên nghiệp. Đây là một khuôn mẫu nâng cao sự chắc chắn, can đảm, giảm thiểu sai sót, tài liệu và thiết kế. Với tất cả những điều trên, việc không sử dụng nó có thể coi là _không chuyên nghiệp_.
+Kết quả của tất cả những điều này nói lên rằng TDD là một sự lựa chọn chuyên nghiệp. Đây là một khuôn mẫu nâng cao sự chắc chắn, can đảm, giảm thiểu sai sót, tài liệu và thiết kế. Với tất cả những điều trên, việc không sử dụng nó có thể coi là _không chuyên nghiệp_.
 
 ## Khi nào không nên áp dụng TDD
 
