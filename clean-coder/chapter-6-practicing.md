@@ -41,19 +41,19 @@ Chiếc laptop của tôi nhanh hơn 8000 lần, có bộ nhớ trong nhiều h�
 
 Một con số _lớn_. Chúng ta đang nói về 22 _cấp số mũ!_ Đó là số Ångström từ đây tới chòm sao Alpha Centauri. Đó là số lượng electron trên một tờ dollar. Đó là khối lượng trái đất theo đơn vị của Michael Moore. Đó là một con số vô cùng lớn. Và nó đang ở trong laptop của tôi, và có thể là của bạn nữa.
 
-Và tôi đang làm gì với sức mạnh của 22 cấp số mũ của 10? Tôi đang làm những việc tương tự như tôi đã làm với PDP-8/I. Tôi đang viết những câu lệnh _if_, vòng lặp _while_, và _những việc được giao_.
+Và tôi đang làm gì với sức mạnh 22 cấp số mũ của 10? Tôi đang làm những việc tương tự như tôi đã làm với PDP-8/I. Tôi đang viết những câu lệnh _if_, vòng lặp _while_, và _những việc được giao_.
 
 Oh, tôi có những công cụ tốt hơn để viết những câu lệnh đó. Và tôi có những ngôn ngữ tốt hơn để viết những câu lệnh đó. Nhưng bản chất của những câu lệnh đó không hề thay đổi. Code ở năm 2010 sẽ dễ nhận biết với một lập trình viên từ những năm 1960. Đất sét mà chúng tôi chế tác không thay đổi nhiều trong 4 thập kỷ đó.
 
 ### Vòng thời gian
 
-Nhưng cách chúng ta làm việ đã thay đổi đáng kể. Vào những năm 60, tôi có thể phải đợi 1 hoặc 2 ngày để có được kết quả biên dịch. Đến cuối những năm 70, biên dịch một chương trình với 50 nghìn dòng mất 45 phút. Ngay đến những năm 90, thời gian biên dịch vẫn còn rất lâu.
+Nhưng _cách_ chúng ta làm việc đã thay đổi đáng kể. Vào những năm 60, tôi có thể phải đợi 1 hoặc 2 ngày để có được kết quả biên dịch. Đến cuối những năm 70, biên dịch một chương trình với 50 nghìn dòng mất 45 phút. Ngay đến những năm 90, thời gian biên dịch vẫn còn rất lâu.
 
 Lập trình viên ngày nay không đợi biên dịch. Lập trình viên bây giờ có sức mạnh rất lớn dưới những ngón tay và họ có thể quay vòng tái cấu trúc trong chỉ vài giây.
 
 Ví dụ, tôi làm việc với dự án FitNesse với 64 nghìn dòng code Java. Một bản dựng hoàn chỉnh, bao gồm toàn bộ unit test và test tích hợp, mất dưới 4 phút để chạy. Nếu qua được test, tôi sẵn sàng bàn giao sản phẩm. _Nên toàn bộ quy trình QA, từ source code cho đến triển khai, chỉ cần ít hơn 4 phút._ Thời gian biên dịch không đáng kể. Từng unit test chỉ cần vài _giây_. Vì vậy tôi có thể thực hiện quay vòng giữa biên dịch/kiểm thử _10 lần mỗi phút_.
 
-Không phải lúc nào nhanh cũng là khôn ngoan. Thường thì nên chậm lại và nghĩ kỹ sẽ tốt hơn. Nhưng có những lúc những vòng quy lặp lại nhanh nhất có thể được coi là _hiệu quả cao._
+Không phải lúc nào nhanh cũng là khôn ngoan. Thường thì nên chậm lại và nghĩ kỹ sẽ tốt hơn. Nhưng có những lúc những vòng quay lặp lại nhanh nhất có thể được coi là _hiệu quả cao._
 
 Muốn làm nhanh bất kỳ điều gì đều cần luyện tập. Việc xoay vòng code/test nhanh chóng đòi hỏi bạn đưa ra quyết định rất nhanh. Đưa ra quyết định nhanh chóng nghĩa là phải nhận ra rất nhiều tình huống cũng như vấn đề và _biết_ làm thế nào để giải quyết chúng.
 
@@ -69,9 +69,9 @@ Nhưng để đạt được cấp độ đó yêu cầu rất nhiều luyện t
 
 ## Coding Dojo (Võ đường code)
 
-Từ năm 2001, tôi sử dụng một chương trình gọi là _The Bowling Game_ để thuyết trình bài giảng về TDD. Nó là một bài tập nhỏ đáng yêu và cần khoảng 30 phút. Bạn sẽ được trải nghiệm xung đột trong thiết kế, xây dựng cao trào, và kết thúc bằng sự bất ngờ. Tôi đã viết cả một chương về ví dụ này ở [PPP2003]
+Từ năm 2001, tôi sử dụng một chương trình có tên _The Bowling Game_ để thuyết trình bài giảng về TDD. Nó là một bài tập nhỏ đáng yêu và cần khoảng 30 phút. Bạn sẽ được trải nghiệm xung đột trong thiết kế, xây dựng cao trào, và kết thúc bằng sự bất ngờ. Tôi đã viết cả một chương về ví dụ này ở [PPP2003] (Agile Software Development: Principles, Patterns, and Practices)
 
-Qua nhiều năm, tôi đã thuyết trình bài giảng này hàng trăm, thậm chí hàng ngàn lần. Tôi đã học thuộc lòng nó. Tôi có thể làm cả trong khi đang ngủ. Tôi tối thiểu số lần gõ phím, điều chỉnh tên biến và chỉnh sửa cấu trúc thuật tuán cho đến khi vừa ý. Mặc dù tôi không biết bắt đầu từ khi nào, nhưng đó là bài kata đầu tiên của tôi.
+Qua nhiều năm, tôi đã thuyết trình bài giảng này hàng trăm, thậm chí hàng ngàn lần. Tôi đã học thuộc lòng nó. Tôi có thể làm cả trong khi đang ngủ. Tôi tối thiểu số lần gõ phím, điều chỉnh tên biến và chỉnh sửa cấu trúc thuật toán cho đến khi vừa ý. Mặc dù tôi không biết bắt đầu từ khi nào, nhưng đó là bài kata đầu tiên của tôi.
 
 Năm 2005 tôi tham dự hội thảo XP2005 ở Sheffield, Anh. Tôi tham dự một buổi họp có tên là _Coding Dojo_ do Laurent Bossavit và Emmanuel Gaillot trình bày. Họ yêu cầu tất cả mọi người mở laptop của mình và code cùng họ khi họ sử dụng TDD để viết chương trình _Game of Life_ của Conway. Họ gọi nó là một "Kata" và ý tưởng ban đầu là của "Pragmatic" Dave Thomas.
 
@@ -83,9 +83,9 @@ Có một vài hoạt động thường diễn ra ở võ đường. Dưới đ�
 
 ### Kata
 
-Trong võ thuật, kata là một tập hợp những động tác được biên đạo, mô phỏng chính xác một trận chiến. Với mục tiêu, hướng đến tiệm cận, là sự hoàn hảo. Người luyện võ cố gắng dạy cơ thể mình thực hiện từng chuyển động hoàn hảo và tập hợp thành một bài tập trôi chảy. Kata được luyện tập tốt khi trình diễn sẽ rất đẹp mắt.
+Trong võ thuật, _kata_ là tập hợp những động tác được biên đạo, mô phỏng chính xác một bên trong trận chiến. Với mục tiêu, hướng đến tiệm cận, là sự hoàn hảo. Người luyện võ cố gắng dạy cơ thể mình thực hiện từng chuyển động hoàn hảo và tập hợp thành một bài tập trôi chảy. Kata được luyện tập tốt khi trình diễn sẽ rất đẹp mắt.
 
-Mặc dù nhìn rất đẹp, nhưng mục đích luyện tập kata không phải là để trình diễn trên sân khấu. Mục đích là để luyện tập tâm trí và cơ thể bạn cách phản xạ với tình huống nhất định trong trận chiến. Mục tiêu cuối cùng là làm cho các chuyển động đã hoàn thiện trở nên tự động và theo bản năng để chúng có mặt khi bạn cần.
+Mặc dù nhìn rất đẹp, nhưng mục đích luyện tập kata không phải là để trình diễn trên sân khấu. Mục đích là để luyện tập tâm trí và cơ thể bạn cách phản xạ với tình huống nhất định trong trận chiến. Mục tiêu cuối cùng là làm cho các chuyển động đã hoàn thiện trở nên tự động và theo bản năng, để chúng có mặt khi bạn cần.
 
 Kata trong lập trình là một tập hợp những tổ hợp phím và chuyển động chuột được biên đạo, mô phỏng chính xác việc xử lý một vài vấn đề trong lập trình. Bạn không thực sự giải quyết vấn đề bởi vì bạn đã biết cách giải quyết chúng rồi. Thay vào đó, bạn luyện tập chuyển động và quyết định liên quan đến việc giải quyết vấn đề.
 
