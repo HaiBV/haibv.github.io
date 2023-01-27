@@ -103,18 +103,19 @@ Cũng như các võ sư, mọt lập trình viên nên biết nhiều bài kata 
 
 ### Wasa
 
-Khi tôi học jujitsu, phần lớn thời gian ở võ đường được dành cho luyện tập theo cặp _wasa_. Wasa giống như một bài tập kata cho 2 người. Các quy trình được ghi nhớ và phát lại chính xác. Một bên đóng vai tấn công, và bên còn lại phòng thủ. Các chuyển động được lặp đi lặp lại đến khi 2 bên hoán đổi vai trò.
+Khi tôi học nhu thuật (jujitsu), phần lớn thời gian ở võ đường được dành cho luyện tập theo cặp _wasa_. Wasa giống như một bài tập kata cho 2 người. Các quy trình được ghi nhớ và phát lại chính xác. Một bên đóng vai tấn công, và bên còn lại phòng thủ. Các chuyển động được lặp đi lặp lại đến khi 2 bên hoán đổi vai trò.
 
-Lập trình viên có thể luyện tập theo cách tương tự bằng trò chơi _bóng bàn (ping-pong)_. Cả 2 chọn một kata, hoặc một vấn đề đơn giản. Một người viết unit test, và người còn lại phải chạy qua được unit test đó. Sau đó họ đổi lại vai trò.
+Lập trình viên có thể luyện tập theo cách tương tự bằng trò chơi _bóng bàn (ping-pong)_. Cả 2 chọn một kata, hoặc một vấn đề đơn giản. Một người viết unit test, và người còn lại phải vượt qua được unit test đó. Sau đó họ đổi lại vai trò.
 
-Nếu 2 bên chọn một kata thông thường, thì kết quả sẽ được biết trước và các lập trình viên sẽ luyện tập và nhận xét về kỹ thuật gõ phím và di chuyển chuột của nhau cũng như cách họ ghi nhớ kata thế nào. Mặt khác, nếu 2 bên chọn một vấn đề mới để giải quyết, thì trò chơi có thể trở nên thú vị hơn một chút. Lập trình viên sẽ viết unit test có một lượng lớn quyền kiểm soát với cách giải quyết vấn đề. Anh cũng có quyền đáng kể thiết lập các ràng buộc. Ví dụ, nếu các lập trình viên chọn thực hiện một thuật toán sắp xếp, người viết unit test có thể dễ dàng đưa ra các hạn chế về tốc độ và bộ nhớ làm thách thức cho đối tác của anh ta. Điều đó có thể làm trò chơi trở nên cạnh tranh ... và vui vẻ.
+Nếu 2 bên chọn một kata thông thường, khi đó kết quả đã được biết trước, các lập trình viên sẽ luyện tập và nhận xét về kỹ thuật gõ phím, di chuyển chuột cũng như cách họ ghi nhớ kata thế nào. Mặt khác, nếu 2 bên chọn một vấn đề mới để giải quyết, thì trò chơi có thể trở nên thú vị hơn một chút. Lập trình viên viết unit test sẽ có phần lớn quyền kiểm soát với cách giải quyết vấn đề. Anh ta cũng có quyền đáng kể thiết lập các ràng buộc. Ví dụ, nếu các lập trình viên chọn thực hiện một thuật toán sắp xếp, người viết unit test có thể dễ dàng đưa ra các hạn chế về tốc độ và bộ nhớ để thách thức đối tác của mình. Điều đó có thể làm trò chơi trở nên khá cạnh tranh ... và vui vẻ.
+
 ### Randori
 
-_Randori_ là dạng chiến đấu tự do. Trong võ đường jujitsu, chúng tôi sẽ thiết lập nhiều tính huống chiến đấu khác nhau và cùng thực hiện chúng. Đôi khi một người thực hiện phòng thủ, những người còn lại sẽ tấn công anh ta theo trình tự. Đôi khi chúng tôi bố trí hai hoặc nhiều người tấn công một người phòng thủ duy nhất (thường là sensei, hầu như luôn thắng cuộc). Đôi khi chúng tôi thực hiện 2vs2, hoặc 4vs4.
+_Randori_ là dạng chiến đấu tự do. Trong võ đường nhu thuật (jujitsu), chúng tôi sẽ thiết lập nhiều tính huống chiến đấu khác nhau và cùng thực hiện chúng. Đôi khi một người thực hiện phòng thủ, những người còn lại sẽ tấn công anh ta theo trình tự. Đôi khi chúng tôi bố trí hai hoặc nhiều người tấn công một người phòng thủ duy nhất (thường là giáo viên, và hầu như luôn thắng). Đôi khi chúng tôi thực hiện 2vs2, hoặc 4vs4.
 
-Mô phỏng chiến đấu không phù hợp với lập trình. Tuy nhiên, có một trò chơi gọi là randori được chơi rất nhiều ở các võ đường coding. Nó rất giống với luyện tập theo cặp wasa trong trường hợp cùng nhau giải quyết vấn đề. Tuy nhiên, nó được chơi với nhiều người và quy tắc có chút thay đổi. Với màn hình được chiếu trên tường, một người viết unit test và ngồi xuống. Người tiếp theo sẽ chạy qua unit test đó và viết tiếp một unit test khác. Việc này thực hiện theo trình tự bàn tròn, hoặc mọi người chỉ cần xếp hàng khi họ muốn thực hiện. Trong cả hai trường hợp, những bài tập này đều _rất thú vị_.
+Mô phỏng chiến đấu không phù hợp với lập trình. Tuy nhiên, có một trò chơi được chơi rất nhiều ở các võ đường coding, mang tên randori. Nó rất giống với luyện tập theo cặp wasa trong trường hợp cùng nhau giải quyết vấn đề. Tuy nhiên, nó được chơi với nhiều người và quy tắc có chút thay đổi. Với màn hình được chiếu trên tường, một người viết unit test và ngồi xuống. Người tiếp theo sẽ vượt qua unit test đó và viết tiếp một unit test khác. Việc này thực hiện theo trình tự bàn tròn, hoặc mọi người chỉ cần xếp hàng khi họ muốn thực hiện. Trong cả hai trường hợp, những bài tập này đều _rất thú vị_.
 
-Điều cần nhấn mạnh là bạn có thể học được bao nhiêu từ những buổi học anyf. Bạn có thể có được cái nhìn sâu sắc về cách người khác giải quyết vấn đề. Nhưng thông tin này có thể giúp bạn mở rộng cách tiếp cận và cải thiện kỹ năng của mình.
+Điều cần nhấn mạnh ở đây là bạn có thể học được bao nhiêu từ những buổi học này. Bạn có thể có được cái nhìn sâu sắc về cách người khác giải quyết vấn đề. Những thông tin này có thể giúp bạn mở rộng cách tiếp cận và cải thiện kỹ năng của mình.
 
 ## Mở rộng kinh nghiệm của bạn
 
