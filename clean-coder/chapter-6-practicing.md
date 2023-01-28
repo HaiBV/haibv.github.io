@@ -119,7 +119,7 @@ Mô phỏng chiến đấu không phù hợp với lập trình. Tuy nhiên, có
 
 ## Mở rộng kinh nghiệm của bạn
 
-Các lập trình viên chuyên nghiệp thường mắc phải sự thiếu đa dạng trong các loại vấn đề mà họ giải quyết. Các nhà tuyển dụng/chủ doanh nghiệp thường tập trung vào một ngôn ngữ, nền tảng và lĩnh vực duy nhất mà họ muốn lập trình viên của họ phải làm việc. Nếu không mở rộng hiểu biết, nó có thể dấn đến việc hạn chế sơ yếu lý lịch và tư duy của bạn. Không có gì là lạ khi những lập trình viên đó cảm thấy thiếu sự chuẩn bị cho những thay đổi định kỳ của ngành này.
+Các lập trình viên chuyên nghiệp thường mắc phải sự thiếu đa dạng trong các loại vấn đề mà họ giải quyết. Các nhà tuyển dụng/chủ doanh nghiệp thường chỉ tập trung vào một ngôn ngữ, nền tảng và lĩnh vực duy nhất mà họ muốn lập trình viên của họ phải làm việc. Nếu không mở rộng hiểu biết, nó có thể dẫn đến việc hạn chế trong sơ yếu lý lịch và tư duy của bạn. Không có gì là lạ khi những lập trình viên đó cảm thấy thiếu sự chuẩn bị cho những thay đổi định kỳ của ngành này.
 
 ### Mã nguồn mở
 
@@ -129,10 +129,10 @@ Vậy nếu bạn là một lập trình viên Java, hãy đóng góp cho một 
 
 ### Đạo đức của việc luyện tập
 
-Các lập trình viên chuyên nghiệp dùng thời gian của họ để luyện tập. Công việc của nhà tuyển dụng không phải là giúp bạn rèn luyện kỹ năng cũng như điều chỉnh sơ yếu lý lịch của bạn. Bệnh nhân không trả tiền cho bác sĩ để luyện tập kỹ thuật khâu. Người hâm mộ bóng đá (thường) không trả tiền để xem các cầu thủ tập chạy đến khi mệt. Người đi xem hòa nhạc không trả tiền để cho nhạc sĩ lập chỉnh âm. Và nhà tuyển dụng của lập trình viên không trả tiền cho thời gian luyện tập của bạn.
+Các lập trình viên chuyên nghiệp dùng thời gian của họ để luyện tập. Công việc của chủ doanh nghiệp không phải là giúp bạn rèn luyện kỹ năng cũng như điều chỉnh sơ yếu lý lịch của bạn. Bệnh nhân không trả tiền cho bác sĩ để luyện tập kỹ thuật khâu. Người hâm mộ bóng đá (thường) không trả tiền để xem các cầu thủ tập chạy đến khi mệt. Người đi xem hòa nhạc không trả tiền để cho nhạc sĩ tập chỉnh âm. Và chủ doanh nghiệp của lập trình viên không trả tiền cho thời gian luyện tập của bạn.
 
-Vì thời gian luyện tập của bạn là thời gian của riêng bạn, nên bạn không cần phải sử dụng cùng ngôn ngữ hoặc nền tảng bạn sử dụng cho nhà tuyển dụng. Chọn bất kỳ ngôn ngữ nào mà bạn thích và giữ cho kỹ năng đa ngôn ngữ của bạn sắc bén. Nếu bạn làm việc với .NET, hãy luyện tập một chút Java hoặc Ruby vào buổi trưa, hoặc ở nhà.
+Vì thời gian luyện tập của bạn là thời gian của riêng bạn, nên bạn không cần phải sử dụng cùng ngôn ngữ hoặc nền tảng bạn sử dụng cho chủ doanh nghiệp. Chọn bất kỳ ngôn ngữ nào mà bạn thích và giữ cho kỹ năng đa ngôn ngữ của bạn sắc bén. Nếu bạn làm việc với .NET, hãy luyện tập một chút Java hoặc Ruby vào buổi trưa, hoặc ở nhà.
 
 ## Kết luận
 
-Bằng một hay nhiều cách, _tất cả_ lập trình viên chuyên nghiệp đều luyện tập. Họ làm vậy bởi vì họ quan tâm đến việc thực hiện tốt nhất công việc của mình. Hơn thế nữa, họ luyện tập trong thời gian riêng vì họ tự nhận thức được việc rèn luyện kỹ năng là trách nhiệm của họ - chứ không phải của các nhà tuyển dụng. Luyện tập là việc bạn làm khi bạn không được trả công. Bạn làm việc đó để bạn _sẽ_ được trả công, và trả _xứng đáng_.
+Bằng một hay nhiều cách, _tất cả_ lập trình viên chuyên nghiệp đều luyện tập. Họ làm vậy bởi vì họ quan tâm đến việc thực hiện tốt nhất công việc của mình. Hơn thế nữa, họ luyện tập trong thời gian riêng vì họ tự nhận thức được việc rèn luyện kỹ năng là trách nhiệm của họ - chứ không phải của các chủ doanh nghiệp. Luyện tập là việc bạn làm khi bạn không được trả công. Bạn làm việc đó để bạn _sẽ_ được trả xứng đáng hơn, và trả _tốt hơn_.
