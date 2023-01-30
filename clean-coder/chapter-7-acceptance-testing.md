@@ -22,19 +22,19 @@ Vì vậy, chúng tôi đã cùng ngồi với nhau, tôi hỏi anh ấy muốn 
 
 Đây là lần đầu tiên tôi gặp trường hợp này. Đối với tôi, đó là một điều đơn giản để biểu diễn các lệnh của trình soạn thảo một cách tượng trưng. Ví dụ, để biểu diễn lệnh control-B (lệnh đặt con trỏ ở đầu dòng hiện tại), bạn chỉ cần nhập ^ B vào tệp script. Nhưng điều này không có ý nghĩa gì đối với Tom. Anh ấy không thể thực hiện bước nhảy vọt từ việc chỉnh sửa tập tin sang chỉnh sửa một tập tin sẽ chỉnh sửa một tập tin khác.
 
-Tom không ngốc. Tôi nghĩ rằng anh ấy chỉ đơn giản nhận ra rằng điều này sẽ mất nhiều thời gian hơn anh ấy nghĩ lúc đầu và anh ấy không muốn đầu tư thời gian và năng lượng tinh thần cần thiết để học một thứ gì đó quá phức tạp như sử dụng một biên tập viên để chỉ huy một biên tập viên.
+Tom không ngốc. Tôi chắc anh ấy đã nhận ra rằng điều này sẽ mất nhiều thời gian hơn anh ấy nghĩ lúc đầu và anh ấy không muốn đầu tư thời gian cũng như năng lượng tinh thần cần thiết để học một thứ gì đó quá phức tạp như sử dụng một trình soạn thảo để ra lệnh cho một trình soạn thảo khác.
 
-Vì vậy, từng chút một tôi thấy mình phát triển ứng dụng này trong khi anh ấy ngồi đó và xem. Trong vòng hai mươi phút đầu tiên, rõ ràng là sự tập trung của anh ấy đã thay đổi từ việc học cách tự làm điều đó sang việc đảm bảo rằng những gì tôi làm là những gì anh ấy muốn.
+Vì vậy, từng chút một, tôi thấy mình phát triển ứng dụng này trong khi anh ấy ngồi đó và xem. Trong vòng hai mươi phút đầu tiên, rõ ràng là sự tập trung của anh ấy đã thay đổi từ việc học cách tự làm điều đó sang việc đảm bảo rằng những gì _tôi_ làm là những gì _anh ấy_ muốn.
 
-Chúng tôi mất nguyên 1 ngày. Anh ấy mô tả một tính năng và tôi phát triển nó khi anh ấy quan sát. Thời gian cho 1 vòng lặp là năm phút hoặc ít hơn, vì vậy không có lý do gì để anh ta đứng dậy và làm bất cứ điều gì khác. Anh ấy yêu cầu tôi làm X và trong vòng năm phút, tôi đã làm được X.
+Chúng tôi mất nguyên 1 ngày. Anh ấy mô tả một tính năng và tôi phát triển nó trong khi anh ấy quan sát. Thời gian cho 1 vòng lặp là năm phút hoặc ít hơn, vì vậy không có lý do gì để anh ta đứng dậy và làm bất cứ điều gì khác. Anh ấy yêu cầu tôi làm X và trong vòng năm phút, tôi đã làm được X.
 
-Thường thì anh ấy vẽ những gì mình muốn trên một tờ giấy nháp. Một số điều anh ấy muốn khó thực hiện được trong ED-402, vì vậy tôi đề xuất một cách khác. Cuối cùng chúng tôi đưa ra thống nhất và tôi thực hiện chức năng đó.
+Thường thì anh ấy sẽ vẽ những gì mình muốn trên một tờ giấy nháp. Một số điều anh ấy muốn khó có thể thực hiện được trong ED-402, vì vậy tôi đề xuất một cách khác. Cuối cùng chúng tôi đưa ra thống nhất và tôi thực hiện chức năng đó.
 
-Nhưng khi chúng tôi chạy thử, có thể anh ấy sẽ thay đổi quyết định. Anh ấy nói đại loại như: "Vâng, điều đó có vẻ không giống với chu trình mà tôi nghĩ tới. Hãy thử một cách khác."
+Nhưng khi chúng tôi chạy thử, anh ấy có thể sẽ thay đổi quyết định. Anh ấy nói đại loại như: "Đúng thế, điều đó có vẻ không giống với chương trình mà tôi nghĩ tới. Hãy thử một cách khác."
 
 Thời gian trôi qua, chúng tôi mày mò, chọc ngoáy và thúc đẩy ứng dụng đó thành hình. Chúng tôi đã thử cái này, rồi cái khác, rồi lại cái khác. Tôi thấy rất rõ ràng rằng _anh ấy_ là nhà điêu khắc, còn tôi là công cụ đang được sử dụng.
 
-Cuối cùng, anh ấy đã nhận được ứng dụng mà mình cần nhưng không biết làm thế nào để bắt đầu xây dựng ứng dụng tiếp theo cho chính mình. Mặt khác, tôi đã học được một bài học mạnh mẽ về cách khách hàng thực sự khám phá những gì họ cần. Tôi biết được rằng tầm nhìn của họ về các tính năng thường không tồn tại khi tiếp xúc thực tế với máy tính.
+Cuối cùng, anh ấy đã nhận được ứng dụng mà mình cần nhưng không biết làm thế nào để bắt đầu xây dựng ứng dụng tiếp theo cho chính mình. Mặt khác, tôi đã học được một bài học mạnh mẽ về cách khách hàng thực sự khám phá những gì họ cần. Tôi biết được rằng tầm nhìn của họ về các tính năng thường không tồn tại lâu sau khi được tiếp xúc thực tế với máy tính.
 
 ### Chính xác quá sớm
 
@@ -42,19 +42,19 @@ Cả khách hàng và lập trình viên đều dễ bị cám dỗ bởi cái b
 
 #### Nguyên tắc bất định
 
-Vấn đề là mọi thứ xuất hiện trên giấy tờ khác sẽ với lúc hệ thống làm việc. Khi khách hàng thực sự thấy những gì họ chỉ định đang chạy trong một hệ thống, họ nhận ra rằng đó hoàn toàn không phải là những gì họ muốn. Khi họ thấy yêu cầu thực sự đang chạy, họ lại có ý tưởng tốt hơn về những gì họ thực sự muốn — và đó thường không phải là những gì họ đang thấy.
+Vấn đề là mọi thứ xuất hiện trên tài liệu sẽ khác với lúc hệ thống làm việc. Khi khách hàng thực sự thấy những gì họ mô tả đang chạy trong hệ thống, họ nhận ra rằng đó hoàn toàn không phải là những gì họ muốn. Khi họ thấy yêu cầu thực sự đang chạy, họ lại có ý tưởng tốt hơn về những gì họ thực sự muốn — và đó thường không phải là những gì họ đang thấy.
 
 Nó được gọi là hiệu ứng người quan sát, hay nguyên tắc bất định. Khi bạn đưa ra một tính năng cho khách hàng, nó cung cấp cho họ nhiều thông tin hơn so với trước đây và thông tin mới đó sẽ ảnh hưởng đến cách họ nhìn nhận toàn bộ hệ thống.
 
-Cuối cùng, bạn đưa ra các yêu cầu của mình càng chính xác thì chúng càng trở nên ít liên quan hơn khi hệ thống được triển khai.
+Tóm lại, bạn đưa ra các yêu cầu của mình càng chính xác thì chúng càng trở nên ít liên quan hơn khi hệ thống được triển khai.
 
 #### Ước lượng lo lắng
 
 Các lập trình viên cũng có thể mắc vào cái bẫy chính xác. Họ biết rằng họ phải ước lượng hệ thống và thường nghĩ rằng điều này đòi hỏi sự chính xác. Không đúng.
 
-Thứ nhất, ngay cả khi có được thông tin hoàn hảo, ước lượng của bạn vẫn sẽ có một phương sai lớn. Thứ hai, nguyên tắc bất định gây khó khăn cho tính chính xác. Các yêu cầu sẽ thay đổi và làm mâu thuẫn tính chính xác đó.
+Thứ nhất, ngay cả khi có được thông tin hoàn hảo, ước lượng của bạn vẫn sẽ có một phương sai lớn. Thứ hai, nguyên tắc bất định ở trên khiến ước lượng kém chính xác đi nhiều lần. Các yêu cầu _sẽ_ thay đổi và làm ảnh hưởng đến tính chính xác đó.
 
-Các lập trình viên chuyên nghiệp hiểu rằng các ước lượng có thể và nên được thực hiện dựa trên các yêu cầu có độ chính xác thấp và phải xác định rằng ước lượng là ước lượng. Để củng cố điều này, các lập trình viên chuyên nghiệp luôn đưa sai số vào ước lượng của mình để khách hàng hiểu được sự không chắc chắn. (Xem Chương 10, "Ước lượng.")
+Các lập trình viên chuyên nghiệp hiểu rằng các ước lượng có thể và nên được thực hiện dựa trên các yêu cầu có độ chính xác thấp và phải xác định rằng ước lượng _là ước lượng_. Để củng cố điều này, các lập trình viên chuyên nghiệp luôn đưa sai số vào ước lượng của mình để khách hàng hiểu được sự không chắc chắn. (Xem Chương 10, "Ước lượng.")
 
 #### Sự mơ hồ muộn màng
 
