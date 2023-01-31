@@ -58,13 +58,13 @@ Các lập trình viên chuyên nghiệp hiểu rằng các ước lượng có 
 
 #### Sự mơ hồ muộn màng
 
-Giải pháp cho chính xác quá sớm là trì hoãn độ chính xác càng lâu càng tốt. Các lập trình viên chuyên nghiệp không đưa ra yêu cầu cho đến khi họ chuẩn bị phát triển nó. Tuy nhiên, điều đó có thể dẫn đến một tật xấu khác: sự mơ hồ muộn màng.
+Giải pháp cho chính xác quá sớm là trì hoãn độ chính xác càng lâu càng tốt. Các lập trình viên chuyên nghiệp không đưa ra yêu cầu cho đến khi họ chuẩn bị phát triển nó. Tuy nhiên, điều đó có thể dẫn đến một thói xấu khác: sự mơ hồ muộn màng.
 
-Thường thì các bên liên quan sẽ có mâu thuẫn. Khi đó, họ thấy việc sửa tài liệu dễ dàng hơn là giải quyết vấn đề bất đồng. Họ sẽ tìm ra cách diễn đạt yêu cầu mà tất cả họ đồng ý, nhưng không thực sự giải quyết tranh chấp. Tôi từng nghe Tom DeMarco nói, "Tài liệu yêu cầu không rõ ràng thể hiện mâu thuẫn của khách hàng."
+Thường thì các bên liên quan sẽ có mâu thuẫn. Khi đó, họ thấy việc sửa câu chữ trong tài liệu dễ dàng hơn là giải quyết vấn đề bất đồng. Họ sẽ tìm ra cách diễn đạt yêu cầu mà tất cả họ đồng ý, nhưng không thực sự giải quyết tranh chấp. Tôi từng nghe Tom DeMarco nói, "Tài liệu yêu cầu không rõ ràng thể hiện mâu thuẫn của khách hàng."
 
 Tất nhiên, tranh cãi hoặc bất đồng không tạo ra sự mơ hồ. Đôi khi các bên liên quan cho rằng người đọc biết họ muốn nói gì.
 
-Nó có thể hoàn toàn rõ ràng với họ trong ngữ cảnh của họ, nhưng có ý nghĩa hoàn toàn khác đối với lập trình viên khi đọc. Loại mơ hồ về ngữ cảnh này có thể xảy ra khi khách hàng và lập trình viên nói chuyện trực tiếp với nhau.
+Nó có thể hoàn toàn rõ ràng với họ trong ngữ cảnh của họ, nhưng có ý nghĩa hoàn toàn khác đối với lập trình viên khi đọc. Loại mơ hồ về ngữ cảnh này có thể xảy ra ngay cả khi khách hàng và lập trình viên nói chuyện trực tiếp với nhau.
 
 Sam (khách hàng): "OK, bây giờ các tệp nhật ký (log files) cần được sao lưu"
 
@@ -104,7 +104,7 @@ Paula: "Rất hân hạnh"
 
 Sau đó, Paula đang nói với đồng đội của cô ấy là Peter về nhiệm vụ.
 
-Paula: "OK, chúng ta cần sao chép tệp nhật ký vào thư mục con có tên 'backup' mỗi tối vào lúc nửa đêm."
+Paula: "OK, chúng ta cần sao lưu tệp nhật ký vào thư mục con có tên 'backup' mỗi tối vào lúc nửa đêm."
 
 Peter: "OK, chúng ta sẽ đặt tên tệp là gì?"
 
@@ -116,7 +116,7 @@ Peter: "Xong ngay"
 
 Sam: "Đúng, đúng, các tệp nhật ký sẽ được sao lưu."
 
-Carl: "Được, điều quan trọng là chúng ta sẽ không bao giờ mất bất kỳ tệp nhật ký nào. Chúng tôi cần xem lại tất cả các tệp nhật ký đó, vài tháng hoặc thậm chí vài năm sau, bất cứ khi nào có sự cố, sự kiện hoặc tranh chấp."
+Carl: "Được, điều thiết yếu là chúng ta sẽ không bao giờ mất bất kỳ tệp nhật ký nào. Chúng tôi cần xem lại tất cả các tệp nhật ký đó, vài tháng hoặc thậm chí vài năm sau, bất cứ khi nào có sự cố, sự kiện hoặc tranh chấp."
 
 Sam: "Đừng lo, tôi vừa nói chuyện với Paula. Cô ấy sẽ lưu tệp nhật ký vào một thư mục có tên là backup, sao lưu mỗi đêm lúc nửa đêm."
 
@@ -130,7 +130,7 @@ Việc này rất _khó_ và tôi chỉ biết một cách để thực hiện.
 
 ## Kiểm thử chấp nhận
 
-Thuật ngữ _kiểm thử chấp nhận_ đang bị quá tải và sử dụng quá mức. Một số người cho rằng đây là những kiểm thử mà người dùng thực hiện trước khi họ chấp nhận phiên bản mới. Những người khác cho rằng đây là các kiểm thử QA. Trong chương này, chúng ta sẽ định nghĩa kiểm thử chấp nhận là các kiểm thử được viết bởi sự hợp tác của khách hàng và lập trình viên để _xác định khi nào một yêu cầu được hoàn thành_.
+Thuật ngữ _kiểm thử chấp nhận_ đang bị quá tải và sử dụng quá mức. Một số người cho rằng đây là những kiểm thử mà người dùng thực hiện trước khi họ chấp nhận phiên bản mới. Những người khác cho rằng đây là các kiểm thử của QA. Trong chương này, chúng ta sẽ định nghĩa kiểm thử chấp nhận là các kiểm thử được viết bởi sự hợp tác của khách hàng và lập trình viên để _xác định khi nào một yêu cầu được hoàn thành_.
 
 ### Định nghĩa của "hoàn thành" (DoD)
 
@@ -138,9 +138,9 @@ Một trong những mơ hồ phổ biến nhất mà chúng ta phải đối m�
 
 Tôi đã làm việc với các nhóm có định nghĩa khác nhau cho các từ "hoàn thành (done)" và "đầy đủ (complete)". Một nhóm khác sử dụng các từ như "hoàn thành (done)" và "đã hoàn thành (done-done)".
 
-Các lập trình viên chuyên nghiệp có một định nghĩa duy nhất về hoàn thành: Hoàn thành nghĩa là hoàn thành. Hoàn thành nghĩa là tất cả code được viết, tất cả các bài kiểm thử đều vượt qua, QA và khách hàng đã chấp nhận. Hoàn thành.
+Các lập trình viên chuyên nghiệp có một định nghĩa duy nhất về hoàn thành: Hoàn thành nghĩa là _hoàn thành_. Hoàn thành nghĩa là tất cả code được viết, tất cả các bài kiểm thử đều vượt qua, QA và khách hàng đã chấp nhận. Hoàn thành.
 
-Nhưng làm thế nào bạn có thể đạt được mức độ hoàn thành này mà vẫn có tiến độ nhanh chóng lặp đi lặp lại? Bạn tạo một tập hợp các kiểm thử tự động mà khi chúng vượt qua, đáp ứng tất cả các tiêu chí trên! Khi các bài kiểm thử chấp nhận cho tính năng được vượt qua, nghĩa là bạn đã hoàn thành.
+Nhưng làm thế nào bạn có thể đạt được mức độ hoàn thành này mà vẫn có tiến độ nhanh chóng lặp đi lặp lại? Bạn tạo một tập hợp các kiểm thử tự động mà khi vượt qua chúng sẽ đáp ứng tất cả các tiêu chí trên! Khi các kiểm thử chấp nhận cho tính năng được vượt qua, nghĩa là bạn đã hoàn thành.
 
 Các lập trình viên chuyên nghiệp định hướng xác định yêu cầu thành các kiểm thử chấp nhận tự động. Họ làm việc với các bên liên quan và QA để đảm bảo rằng các kiểm thử tự động này là đặc điểm kỹ thuật hoàn chỉnh về việc hoàn thành.
 
