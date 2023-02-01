@@ -4,7 +4,7 @@ layout: default
 
 # Chương 7 Kiểm thử chấp nhận (Acceptance Testing)
 
-![7-1](images/7-1.png)
+![cover](images/7-cover.png)
 
 Vai trò của lập trình viên chuyên nghiệp bao gồm vai trò giao tiếp cùng với vai trò phát triển. Hãy nhớ rằng với các lập trình viên, dữ liệu sai sẽ cho ra quyết định sai, vì vậy các lập trình viên chuyên nghiệp hãy cẩn thận để đảm bảo rằng giao tiếp của họ với các thành viên khác trong nhóm cũng như doanh nghiệp, phải chính xác và lành mạnh.
 
@@ -246,17 +246,19 @@ Sam: "Ý tôi là có quá nhiều việc phải làm với các kiểm thử n�
 
 Tom: "Đúng vậy, nhưng không nhiều hơn việc làm kế hoạch kiểm thử thủ công. Và thực hiện lặp đi lặp lại kiểm thử thủ công còn nhiều việc hơn."
 
-### Giao tiếp thông suốt
+### Kết nối
 
-Mục đích của kiểm thử chấp nhận là thông suốt, rõ ràng và chính xác. Bằng cách đồng ý với họ, các lập trình viên, khách hàng và tester đều nắm được toàn bộ hành vi hệ thống. Để đạt được sự rõ ràng này là trách nhiệm của tất cả các bên. Các lập trình viên chuyên nghiệp sẽ nhận lấy trách nhiệm làm việc với các khách hàng và tester để đảm bảo rằng tất cả các bên đều biết những gì sắp được xây dựng.
+Mục đích của kiểm thử chấp nhận là kết nối, rõ ràng và chính xác. Bằng cách thống nhất qua kiểm thử chấp nhận, các lập trình viên, khách hàng và tester đều nắm được toàn bộ hành vi hệ thống. Để đạt được sự rõ ràng này là trách nhiệm của tất cả các bên. Các lập trình viên chuyên nghiệp sẽ nhận lấy trách nhiệm làm việc với các khách hàng và tester để đảm bảo rằng tất cả các bên đều biết những gì sắp được xây dựng.
 
 ### Tự động hóa
 
-Tất cả các kiểm thử chấp nhận phải _luôn_ được tự động hóa. Có thể có kiểm thử thủ công ở đâu đó trong khi phát triển phần mềm, nhưng những loại kiểm thử này không bao giờ nên là thủ công. Lý do rất đơn giản: chi phí.
+Tất cả các kiểm thử chấp nhận phải _luôn luôn_ được tự động hóa. Có thể có kiểm thử thủ công ở đâu đó trong khi phát triển phần mềm, nhưng _những_ loại kiểm thử này không bao giờ nên là thủ công. Lý do rất đơn giản: chi phí.
 
-Trong hình 7-1. Bàn tay mà bạn thấy trong ảnh thuộc về quản lý đội QA của một công ty Internet lớn. Tài liệu anh ta đang giữ là _mục lục_ cho kế hoạch kiểm thử _thủ công_. Anh ta có một đội quân của những người kiểm thử thủ công ở các địa điểm khác nhau để thực hiện kế hoạch này sáu tuần một lần. Chi phí cho mỗi lần khoảng hơn một triệu đô la. Anh ấy đang giữ nó cho tôi khi vừa trở về sau một cuộc họp, ở đó quản lý của anh ấy đã nói rằng họ cần cắt giảm ngân sách cho việc kiểm thử xuống 50%. Câu hỏi của anh ấy đối với tôi là, "Tôi sẽ bỏ đi 50% kiểm thử nào trong số này?"
+Trong hình 7-1. Bàn tay mà bạn thấy trong ảnh thuộc về quản lý đội QA của một công ty Internet lớn. Tài liệu anh ta đang giữ là _mục lục_ cho kế hoạch kiểm thử _thủ công_. Anh ta có một đội quân kiểm thử thủ công ở các địa điểm khác nhau để thực hiện kế hoạch này sáu tuần một lần. Chi phí cho mỗi lần khoảng hơn một triệu đô la. Anh ấy đang cho tôi xem khi vừa trở về sau một cuộc họp, ở đó quản lý của anh ấy đã nói rằng họ cần cắt giảm ngân sách cho việc kiểm thử xuống 50%. Câu hỏi của anh ấy với tôi là, "Tôi sẽ bỏ đi 50% kiểm thử nào trong số này?"
 
-Nói hơi thô thiển thì đây hẳn là một thảm họa. Chi phí cho kiểm thử thủ công lớn đến mức họ đã quyết định hy sinh nó và chấp nhận với thực tế rằng họ sẽ không biết một nửa sản phẩm của mình có hoạt động hay không!
+![7-1](images/7-1.png)
+
+Nói hơi thô thiển thì đây hẳn là một thảm họa. Chi phí cho kiểm thử thủ công lớn đến mức họ đã quyết định hy sinh nó và chấp nhận với thực tế rằng _họ sẽ không biết một nửa sản phẩm của mình có hoạt động hay không!_
 
 Các lập trình viên chuyên nghiệp không để xảy ra tình trạng này. Chi phí cho việc tự động hóa các bài kiểm thử chấp nhận là quá nhỏ so với chi phí thực hiện kiểm thử thủ công nên việc viết các kịch bản cho con người thực hiện hoàn toàn không có có lợi về mặt kinh tế. Các lập trình viên chuyên nghiệp chịu trách nhiệm về phần của họ trong việc đảm bảo rằng các kiểm thử chấp nhận được tự động hóa.
 
