@@ -264,9 +264,9 @@ Các lập trình viên chuyên nghiệp không để xảy ra tình trạng nà
 
 Có nhiều công cụ mã nguồn mở và thương mại tạo điều kiện thuận lợi cho việc tự động hóa kiểm thử chấp nhận.FitNesse, Cucumber, cuke4duke, robot framework và Selenium, tôi chỉ đề cập một số ở đây. Tất cả các công cụ này cho phép bạn chỉ định các bài kiểm thử tự động trong một biểu mẫu mà những người không phải lập trình viên có thể đọc, hiểu và thậm chí là tự tạo được.
 
-### Công việc bổ sung
+### Công việc thêm vào
 
-Quan điểm của Sam về khối lượng công việc là điều dễ hiểu. Có vẻ sẽ cần rất nhiều việc thêm vào để viết các kiểm thử chấp nhận như vậy. Nhưng với Hình 7-1, chúng ta có thể thấy rằng nó không thực sự là thêm việc chút nào. Viết các kiểm thử này chỉ đơn giản là công việc làm rõ hệ thống. Làm rõ với mức độ chi tiết này là cách duy nhất mà chúng tôi, với tư cách là lập trình viên, có thể biết “đã hoàn thành” nghĩa là gì. Làm rõ ở mức độ chi tiết này là cách duy nhất mà khách hàng có thể đảm bảo rằng hệ thống mà họ đang trả tiền thực sự làm được những gì họ cần. Và làm rõ ở mức độ chi tiết này là cách duy nhất để tự động hóa thành công các kiểm thử. Vì vậy, đừng xem những kiểm thử này là thêm việc. Hãy xem chúng như những người tiết kiệm thời gian và tiền bạc. Những bài kiểm tra này sẽ ngăn bạn phát triển sai hệ thống và cho phép bạn _biết_ khi nào bạn hoàn thành.
+Quan điểm của Sam về khối lượng công việc là điều dễ hiểu. _Cần_ rất nhiều công việc thêm vào để viết các kiểm thử chấp nhận như vậy. Nhưng với Hình 7-1, chúng ta có thể thấy rằng nó không thực sự là thêm việc chút nào. Viết các kiểm thử này chỉ đơn giản là công việc làm rõ hệ thống. Làm rõ với mức độ chi tiết này là cách duy nhất mà chúng tôi, với tư cách là lập trình viên, có thể biết “đã hoàn thành” nghĩa là gì. Làm rõ ở mức độ chi tiết này là cách duy nhất mà khách hàng có thể đảm bảo rằng hệ thống mà họ đang trả tiền thực sự làm được những gì họ cần. Và làm rõ ở mức độ chi tiết này là cách duy nhất để tự động hóa thành công các kiểm thử. Vì vậy, đừng xem những kiểm thử này là thêm việc. Hãy xem chúng như những người tiết kiệm thời gian và tiền bạc. Những bài kiểm tra này sẽ ngăn bạn phát triển sai hệ thống và cho phép bạn _biết_ khi nào bạn hoàn thành.
 
 ### Ai viết kiểm thử chấp nhận, và khi nào?
 
@@ -274,13 +274,13 @@ Trong trường hợp lý tưởng, khách hàng và QA sẽ hợp tác để vi
 
 Thông thường, BA sẽ xác định các "happy path" của kiểm thử, bởi vì các kiểm thử đó mô tả các tính năng có giá trị kinh doanh. QA thường viết các kiểm thử "unhappy path", các điều kiện biên, ngoại lệ và trường hợp phức tạp. Điều này là do công việc của QA là lường trước những sai sót có thể xảy ra.
 
-Theo nguyên tắc "chính xác muộn", các kiểm thử chấp nhận phải được viết càng muộn càng tốt, thường là vài ngày trước khi tính năng được triển khai. Trong các dự án theo mô hình Agile, các kiểm thử được viết _sau khi_ các tính năng đã được chọn cho Phân đoạn hoặc Sprint tiếp theo.
+Theo nguyên tắc "chính xác muộn", các kiểm thử chấp nhận phải được viết càng muộn càng tốt, thường là vài ngày trước khi tính năng được triển khai. Trong các dự án theo mô hình Agile, các kiểm thử được viết _sau khi_ các tính năng đã được chọn cho Phân đoạn (Iteration) hoặc Sprint tiếp theo.
 
 Một vài kiểm thử chấp nhận đầu tiên sẽ sẵn sàng vào ngày đầu tiên của Phân đoạn. Chúng sẽ được viết liên tục, mỗi ngày một ít và tất cả sẽ sẵn sàng khi đến giai đoạn giữa của Phân đoạn. Nếu tất cả các kiểm thử chấp nhận chưa sẵn sàng vào thời điểm đó, thì phải cần thêm lập trình viên tham gia để hoàn thành chúng. Nếu điều này xảy ra thường xuyên, thì nên thêm nhiều BA và / hoặc QA vào nhóm.
 
 ### Vai trò của lập trình viên
 
-Công việc triển khai trên một tính năng bắt đầu khi các kiểm thử chấp nhận cho tính năng đó đã sẵn sàng. Các lập trình viên chạy các kiểm thử chấp nhận cho tính năng mới và xem chúng thất bại như thế nào. Sau đó, họ làm việc để kết nối kiểm thử chấp nhận với hệ thống và sau đó bắt đầu vượt qua chúng bằng cách triển khai tính năng mong muốn.
+Công việc triển khai một tính năng bắt đầu khi các kiểm thử chấp nhận cho tính năng đó đã sẵn sàng. Các lập trình viên chạy các kiểm thử chấp nhận cho tính năng mới và xem chúng thất bại như thế nào. Sau đó, họ làm việc để kết nối kiểm thử chấp nhận với hệ thống và sau đó bắt đầu vượt qua chúng bằng cách triển khai tính năng mong muốn.
 
 Paula: "Peter, giúp tôi một chút được không?"
 
@@ -312,7 +312,7 @@ Paula: "OK, chạy lại kiểm thử nào"
 
 Peter: (chạy kiểm thử) "Tuyệt, dòng đầu tiên đã chuyển xanh, hãy tiếp tục với dòng tiếp theo"
 
-Đừng bận tâm quá nhiều về `Scenarios` và `Fixtures`. Đó chỉ là một tác vụ bạn phải viết để kết nối các kiểm thử với hệ thống đang được kiểm tra.
+Đừng bận tâm quá nhiều về `Scenarios` và `Fixtures` ở trên. Đó chỉ là một tác vụ bạn phải viết để kết nối các kiểm thử với hệ thống đang được kiểm tra.
 
 Nói tóm lại thì tất cả các công cụ đều cung cấp một số cách để sử dụng đối sánh mẫu có thể nhận biết và phân tích cú pháp các câu lệnh của kiểm thử, sau đó gọi các hàm cung cấp dữ liệu trong kiểm thử vào hệ thống đang được kiểm tra. Công sức bỏ ra khá nhỏ, `Scenarios` và `Fixtures` có thể được sử dụng lại qua nhiều kiểm thử khác nhau.
 
@@ -320,11 +320,11 @@ Nói tóm lại thì tất cả các công cụ đều cung cấp một số cá
 
 ### Thương lượng kiểm thử và tích cực thụ động (Passive-Aggression)
 
-Người viết kiểm thử là con người nên hoàn toàn có thể mắc sai lầm. Đôi khi các kiểm thử không có nhiều ý nghĩa khi bạn bắt đầu phát triển chức năng. Chúng có thể quá phức tạp. Hoặc có thể kỳ lạ. Chúng có thể chứa những giả định ngớ ngẩn. Thậm chí có thể sai. Điều này rất khó chịu nếu bạn là lập trình viên phải vượt qua kiểm thử đó.
+Người viết kiểm thử là con người nên hoàn toàn có thể mắc sai lầm. Đôi khi các kiểm thử có vẻ khó hiểu khi bạn bắt đầu phát triển chức năng. Chúng có thể quá phức tạp. Hoặc có thể kỳ lạ. Chúng có thể chứa những giả định ngớ ngẩn. Thậm chí có thể sai. Điều này rất khó chịu nếu bạn là lập trình viên phải vượt qua kiểm thử đó.
 
 Là một lập trình viên chuyên nghiệp, nhiệm vụ của bạn là thương lượng với người viết kiểm thử để có những kiểm thử tốt hơn. Điều bạn _không bao giờ_ nên làm là chọn phương án tích cực-thụ động và tự nói với bản thân, "Chà, đó là những gì mà kiểm thử muốn, vậy đó là những điều tôi sẽ làm".
 
-Hãy nhớ rằng, với tư cách là một chuyên gia, nhiệm vụ của bạn là giúp nhóm của bạn tạo ra phần mềm tốt nhất mà họ có thể. Điều đó có nghĩa là mọi người cần đề phòng những sai sót và sơ suất, đồng thời làm việc cùng nhau để sửa chúng.
+Hãy nhớ rằng, với tư cách là một chuyên gia, nhiệm vụ của bạn là giúp nhóm của bạn tạo ra những phần mềm tốt nhất có thể. Điều đó có nghĩa là mọi người cần đề phòng những sai sót và sơ suất, đồng thời làm việc cùng nhau để sửa chúng.
 
 Paula: "Tom, kiểm thử này không đúng lắm"
 
@@ -372,11 +372,11 @@ Paula: "Tôi sẽ đảm bảo hiển thị tất cả các phép tính trung gi
 
 Tom: "OK, hoàn toàn đồng ý."
 
-### Kiểm thử chấp nhận và Kiểm thử riêng lẻ
+### Kiểm thử chấp nhận và Kiểm thử đơn vị
 
-Kiểm thử chấp nhận không phải là kiểm thử _riêng lẻ_. Kiểm thử riêng lẻ viết _bởi_ lập trình viên _cho_ lập trình viên. Chúng là các tài liệu thiết kế chính thức mô tả cấu trúc và hành vi cấp thấp nhất của code. Đối tượng là các lập trình viên, không phải khách hàng.
+Kiểm thử chấp nhận không phải là kiểm thử _đơn vị_. Kiểm thử đơn vị viết _bởi_ lập trình viên _cho_ lập trình viên. Chúng là các tài liệu thiết kế chính thức mô tả cấu trúc và hành vi cấp thấp nhất của code. Đối tượng là các lập trình viên, không phải khách hàng.
 
-Các kiểm thử chấp nhận được khách hàng viết cho khách hàng (ngay cả khi bạn, nhà phát triển, kết thúc việc viết chúng). Chúng là các tài liệu yêu cầu chính thức chỉ rõ cách hệ thống sẽ hoạt động theo quan điểm của khách hàng. Đối tượng là các khách hàng và các lập trình viên.
+Các kiểm thử chấp nhận được viết _bởi_ khách hàng _cho_ khách hàng (ngay cả khi bạn, nhà phát triển, đang phải viết chúng). Chúng là các tài liệu yêu cầu chính thức chỉ rõ cách hệ thống sẽ hoạt động theo quan điểm của khách hàng. Đối tượng là các khách hàng _và_ các lập trình viên.
 
 Bạn có thể bị hấp dẫn khi cố gắng loại bỏ sự "thêm việc" bằng cách giả định rằng hai loại kiểm thử là dư thừa. Mặc dù đúng là các kiểm thử đơn vị và kiểm thử chấp nhận thường kiểm tra những thứ giống nhau, nhưng chúng không hề thừa chút nào.
 
