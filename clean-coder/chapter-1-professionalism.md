@@ -5,7 +5,7 @@ layout: default
 # Chương 1 Sự chuyên nghiệp
 
 
-![1-1](images/1-1.png)
+![1-cover](images/1-cover.png)
 _Nụ cười ư, Curtin, ông bạn già. Đó là một trò đùa với chúng ta của chúa trời, hoặc của số phận, hoặc của thiên nhiên, hoặc bất cứ điều gì bạn thích. Nhưng bất cứ ai hay điều gì làm nên nó thì chắc chắn phải có khiếu hài hước! Ha!_
 
 -- Howard, Kho báu của Sierra Madre

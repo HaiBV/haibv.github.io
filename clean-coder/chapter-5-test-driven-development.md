@@ -4,7 +4,7 @@ layout: default
 
 # Chương 5 Test Driven Development
 
-![5-1](images/5-1.png)
+![5-cover](images/5-cover.png)
 
 Đã hơn 10 năm từ khi TDD xuất hiện lần đầu tiên. Nó đến từ một phần của làn sóng Extreme Programming (XP), nhưng kể từ đó đã được mô hình Scrum và hầu như tất cả các mô hình Agile khác áp dụng. Ngay cả các đội không phải Agile cũng thực hành TDD.
 

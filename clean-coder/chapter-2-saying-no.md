@@ -4,7 +4,7 @@ layout: default
 
 # Chương 2 Phản đối (Saying No)
 
-![2-1](images/2-1.png)
+![2-cover](images/2-cover.png)
 Làm, hoặc không làm. Không có cố gắng (Do; or do not. There is no trying) - Yoda
 
 Những năm đầu thập kỷ 70, tôi cùng với 2 người bạn lúc đó 19 tuổi, đang làm việc tại một hệ thống kế toán thời gian thực của hiệp hội Teamster ở Chicago, tên công ty là ASC. Nếu điều này gợi nhớ đến cái tên Jimmy Hoffa, thì đúng vậy. Bạn không nên đùa với teamsters vào năm 1971.
