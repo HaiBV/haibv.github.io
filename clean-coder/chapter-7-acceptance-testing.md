@@ -386,29 +386,29 @@ Nhưng lý do thực sự mà các kiểm thử này không thừa là chức n�
 
 ### Giao diện người dùng (GUIs) và những biến thể khác
 
-Thật khó để xác định GUI trước. Có thể làm được, nhưng hiếm khi được làm tốt. Nguyên nhân là thẩm mỹ mang tính chủ quan nên dễ thay đổi. Mọi người muốn _thử_ với GUI. Họ muốn xoa bóp và thao túng chúng. Họ muốn thử các phông chữ, màu sắc, bố cục trang và quy trình làm việc khác nhau. GUI liên tục thay đổi.
+Thật khó để xác định GUI trước. Có thể làm được, nhưng hiếm khi được làm tốt. Nguyên nhân là thẩm mỹ mang tính chủ quan nên dễ thay đổi. Mọi người muốn _thử_ với GUI. Họ muốn nhào nặn và thao túng chúng. Họ muốn thử các phông chữ, màu sắc, bố cục trang và quy trình làm việc khác nhau. GUI liên tục thay đổi.
 
 Điều này làm cho việc viết kiểm thử chấp nhận cho GUI trở nên khó khăn. Bí quyết là thiết kế hệ thống để bạn có thể coi GUI như thể nó là một API hơn là một tập hợp các nút, thanh trượt, lưới và menu. Điều này nghe có vẻ lạ, nhưng đó thực sự là một thiết kế tốt.
 
-Có một nguyên tắc thiết kế được gọi là Nguyên tắc Trách nhiệm Đơn lẻ (Single Responsibility Principle - SRP). Nguyên tắc này nói rằng bạn nên tách những thứ thay đổi vì lý do khác nhau và nhóm những thứ thay đổi vì lý do giống nhau lại với nhau. GUI cũng không ngoại lệ.
+Có một nguyên tắc thiết kế được gọi là Nguyên tắc Trách nhiệm Đơn lẻ (Single Responsibility Principle - SRP). Nguyên tắc này nói rằng bạn nên tách riêng những thứ thay đổi vì lý do khác nhau ra và nhóm những thứ thay đổi vì lý do giống nhau lại với nhau. GUI cũng không ngoại lệ.
 
 Bố cục, định dạng và quy trình làm việc của GUI sẽ thay đổi vì lý do thẩm mỹ và hiệu quả, nhưng khả năng cơ bản của GUI sẽ vẫn như cũ bất chấp những thay đổi này. Do đó, khi viết kiểm thử chấp nhận cho GUI, bạn cần tận dụng lợi thế của các phần tóm tắt cơ bản không thay đổi thường xuyên.
 
-Ví dụ, có thể có nhiều nút trên một trang. Thay vì tạo các kiểm thử ấn vào các nút đó dựa trên vị trí của chúng trên trang, bạn có thể ấn vào chúng dựa trên tên của chúng. Tốt hơn, có thể chúng đều có một ID duy nhất mà bạn có thể sử dụng. Sẽ tốt hơn nhiều nếu bạn viết kiểmthử chọn nút có ID là `ok_button` hơn là chọn nút ở cột 3 hàng 4 trong lưới điều khiển.
+Ví dụ, có thể có nhiều nút trên một trang. Thay vì tạo các kiểm thử ấn vào các nút đó dựa trên vị trí của chúng trên trang, bạn có thể ấn vào chúng dựa trên tên của chúng. Tốt hơn, có thể chúng đều có một ID duy nhất mà bạn có thể sử dụng. Sẽ tốt hơn nhiều nếu bạn viết kiểm thử chọn nút có ID là `ok_button` hơn là chọn nút ở cột 3 hàng 4 trong lưới điều khiển.
 
 ### Kiểm thử qua giao diện phù hợp
 
-Tốt hơn vẫn là viết kiểm thử gọi các tính năng của hệ thống cơ bản thông qua một API thực thay vì thông qua GUI. API này phải là cùng một API được GUI sử dụng. Điều này không có gì mới. Các chuyên gia thiết kế đã nói với chúng tôi trong nhiều thập kỷ rằng cần tách GUI ra khỏi các quy tắc nghiệp vụ.
+Viết kiểm thử gọi các tính năng cơ bản của hệ thống thông qua một API thực sẽ tốt hơn nhiều khi thông qua GUI. API này cũng phải được GUI sử dụng. Điều này không có gì mới. Các chuyên gia thiết kế đã nói với chúng tôi trong nhiều thập kỷ rằng cần tách GUI ra khỏi các quy tắc nghiệp vụ.
 
 Kiểm thử thông qua GUI luôn có vấn đề trừ khi bạn _chỉ_ đang kiểm tra GUI. Nguyên nhân là do GUI có thể sẽ thay đổi, khiến các kiểm thử trở nên rất mong manh. Khi mỗi thay đổi về GUI phá vỡ khoảng 1000 kiểm thử, bạn sẽ phải lựa chọn giữa viết lại kiểm thử hoặc ngừng thay đổi GUI. Cả hai đều không phải là lựa chọn tốt. Vì vậy, hãy viết các kiểm thử quy tắc nghiệp vụ của bạn đi qua một API ngay bên dưới GUI.
 
-Một số kiểm thử chấp nhận chỉ định hành vi của chính GUI. Các kiểm thử này phải thông qua GUI. Tuy nhiên, các kiểm thử này không kiểm tra các quy tắc nghiệp vụ và do đó không yêu cầu các quy tắc nghiệp vụ phải được kết nối với GUI. Do đó, bạn nên tách GUI và các quy tắc nghiệp vụ ra và thay thế các quy tắc nghiệp vụ bằng các quy tắc sơ khai trong khi kiểm thử GUI.
+Một số kiểm thử chấp nhận chỉ định hành vi của chính GUI. Các kiểm thử này phải thông qua GUI. Tuy nhiên, các kiểm thử này không kiểm tra các quy tắc nghiệp vụ và do đó không yêu cầu các quy tắc nghiệp vụ phải được kết nối với GUI. Do đó, bạn nên tách riêng GUI và các quy tắc nghiệp vụ ra, sau đó thay thế các quy tắc nghiệp vụ bằng các quy tắc sơ khai trong khi kiểm thử GUI.
 
 Giữ các thử nghiệm GUI ít nhất có thể. Chúng rất mỏng manh, bởi vì GUI dễ bay hơi. Bạn càng có nhiều thử nghiệm GUI thì khả năng bạn giữ chúng càng ít.
 
 ### CI (Continuous Integration)
 
-Đảm bảo rằng tất cả kiểm thử đơn vị và kiểm thử chấp nhận được chạy nhiều lần mỗi ngày trong một hệ thống CI. Hệ thống này phải được kích hoạt bởi hệ thống kiểm soát source code của bạn. Mỗi khi ai đó commit một mô-đun, hệ thống CI sẽ khởi động một bản dựng, và sau đó chạy tất cả các kiểm thử trong hệ thống. Kết quả của lần chạy đó phải được gửi qua email cho mọi người trong nhóm.
+Đảm bảo rằng tất cả kiểm thử đơn vị và kiểm thử chấp nhận được chạy nhiều lần mỗi ngày trong một hệ thống CI. Hệ thống này phải được kích hoạt bởi hệ thống kiểm soát mã nguồn của bạn. Mỗi khi ai đó commit một mô-đun, hệ thống CI sẽ khởi động một bản dựng, và sau đó chạy tất cả các kiểm thử trong hệ thống. Kết quả của lần chạy đó phải được gửi qua email cho mọi người trong nhóm.
 
 #### Dừng chạy
 
@@ -418,6 +418,6 @@ Tôi đã tham khảo ý kiến cho các team không thực hiện nghiêm túc 
 
 ## Kết luận
 
-Giao tiếp về chi tiết là khó. Điều này đặc biệt đúng đối với lập trình viên và bên liên quan đang trao đổi về chi tiết của một ứng dụng. Quá dễ dàng để mỗi bên xua tay và _giả định_ rằng bên kia đã hiểu. Thông thường, cả hai bên đều đồng ý rằng họ hiểu và rời đi với những ý kiến hoàn toàn khác nhau.
+Giao tiếp càng chi tiết càng khó. Điều này đặc biệt đúng đối với lập trình viên và bên liên quan khi đang trao đổi về chi tiết của một ứng dụng. Quá dễ dàng để mỗi bên xua tay và _giả định_ rằng bên kia đã hiểu. Thông thường, cả hai bên đều đồng ý rằng họ hiểu và rời đi với những ý kiến hoàn toàn khác nhau.
 
 Cách duy nhất tôi biết để loại bỏ lỗi giao tiếp giữa lập trình viên và bên liên quan là viết kiểm thử chấp nhận tự động. Những kiểm thử phải chính thống như cách chúng thực hiện. Chúng phải hoàn toàn rõ ràng và đồng bộ với ứng dụng. Chúng là tài liệu yêu cầu hoàn hảo.
