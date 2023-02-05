@@ -30,29 +30,35 @@ Vai trò khác của QA là sử dụng kỷ luật của kiểm thử khám ph�
 
 ## Tháp kiểm thử tự động
 
-Các lập trình viên chuyên nghiệp sử dụng TDD để tạo kiểm thử đơn vị. Các nhóm phát triển chuyên nghiệp sử dụng các kiểm thử chấp nhận để xác định rõ hệ thống và CI để ngăn chặn lặp lại lỗi. Nhưng những kiểm thử này chỉ là một phần của câu chuyện. Ngoài kiểm thử đơn vị và kiểm thử chấp nhận, chúng ta cũng cần các bài kiểm thử cấp cao hơn để đảm bảo rằng QA sẽ không tìm lỗi nào. Hình 8-1 cho thấy Kim tự tháp kiểm thử tự động (Test Automation Pyramid), mô tả về các loại kiểm thử mà một tổ chức phát triển chuyên nghiệp cần.
+Các lập trình viên chuyên nghiệp sử dụng nguyên tắc TDD để tạo nên các kiểm thử đơn vị. Các nhóm phát triển chuyên nghiệp sử dụng các kiểm thử chấp nhận để xác định rõ hệ thống và CI (xem chương 7) để ngăn chặn lặp lại lỗi. Nhưng những kiểm thử này chỉ là một phần của câu chuyện. Ngoài kiểm thử đơn vị và kiểm thử chấp nhận, chúng ta cũng cần các bài kiểm thử cấp cao hơn để đảm bảo rằng QA sẽ không tìm ra lỗi nào. Hình 8-1 cho thấy Kim tự tháp kiểm thử tự động (Test Automation Pyramid), mô tả về các loại kiểm thử mà một tổ chức lập trình viên chuyên nghiệp cần.
 
-### Unit Tests
+![8-1](images/8-1.png)
 
-Ở tầng dưới cùng của kim tự tháp là unit test. Các kiểm thử này được viết bởi các lập trình viên, dành cho các lập trình viên, bằng ngôn ngữ lập trình của hệ thống. Mục đích của các kiểm thử này là xác định rõ hệ thống ở mức thấp nhất. Các lập trình viên viết các kiểm thử này trước khi viết code sản phẩm như một cách để xác định rõ những gì họ sắp viết. Chúng được thực thi như một phần của CI để đảm bảo rằng ý định của lập trình viên được duy trì.
+### Kiểm thử đơn vị
 
-Trong thực tế, unit test có mức độ bao phủ càng gần 100% càng tốt. Nhìn chung cần lớn hơn 90. Và nó phải _thực sự_ phủ thay vì chỉ vượt qua kiểm thử sai của code mà không xác nhận hành vi của nó.
+Ở tầng dưới cùng của kim tự tháp là kiểm thử đơn vị. Các kiểm thử này được viết bởi các lập trình viên, dành cho các lập trình viên, bằng ngôn ngữ lập trình của hệ thống. Mục đích của các kiểm thử này là đặc tả hệ thống ở mức thấp nhất. Các lập trình viên viết các kiểm thử này trước khi viết code sản phẩm như một cách để đặc tả những gì họ sắp viết. Chúng được thực thi như một phần của CI để đảm bảo rằng ý định của lập trình viên luôn được duy trì.
+
+Trong thực tế, kiểm thử đơn vị có mức độ bao phủ càng gần 100% càng tốt. Nhìn chung cần lớn hơn 90. Và nó phải _thực sự_ phủ thay vì chỉ vượt qua kiểm thử sai của code mà không xác nhận hành vi của nó.
 
 ### Kiểm thử từng phần
 
 Đây là một số kiểm thử chấp nhận được đề cập trong chương trước. Nói chung chúng được viết dựa trên các thành phần riêng lẻ của hệ thống. Các thành phần của hệ thống đóng gói các quy tắc nghiệp vụ, vì vậy các kiểm thử cho các thành phần đó là các kiểm thử chấp nhận cho các quy tắc nghiệp vụ đó.
 
-Như được mô tả trong Hình 8-2, kiểm thử từng phần chỉ kiểm tra một thành phần. Nó truyền dữ liệu đầu vào vào thành phần và thu thập dữ liệu đầu ra. Nó kiểm tra xem đầu ra có khớp với đầu vào hay không. Bất kỳ thành phần hệ thống nào khác được tách ra khỏi kiểm thử bằng cách sử dụng các kỹ thuật mô phỏng và nhân đôi kiểm thử thích hợp.
+Như được mô tả trong Hình 8-2, kiểm thử từng phần chỉ kiểm tra một thành phần. Nó truyền dữ liệu đầu vào vào thành phần và thu thập dữ liệu đầu ra. Nó kiểm tra xem đầu ra có khớp với đầu vào hay không. Bất kỳ thành phần nào khác của hệ thống được tách ra để kiểm thử đều phải sử dụng các kỹ thuật mô phỏng và kiểm thử kép thích hợp.
 
-Kiểm thử từng phần được viết bởi QA và nghiệp vụ với sự hỗ trợ từ team dev. Chúng được tạo ra trong các môi trường kiểm thử từng phần như FitNesse, JBehave hoặc Cucumber. (Các thành phần GUI được thử nghiệm với các môi trường thử nghiệm GUI như Selenium hoặc Watir.) Mục đích là bộ phận nghiệp vụ có thể đọc và diễn giải các kiểm thử này, ngay cả khi không phải là tác giả của chúng.
+![8-2](images/8-2.png)
+
+Kiểm thử từng phần được viết bởi QA và Nghiệp vụ với sự hỗ trợ từ lập trình viên. Chúng được tạo ra trong các môi trường kiểm thử từng phần như FitNesse, JBehave hoặc Cucumber. (Các thành phần GUI được thử nghiệm với các môi trường thử nghiệm GUI như Selenium hoặc Watir.) Mục đích là bộ phận nghiệp vụ có thể đọc và diễn giải các kiểm thử này, ngay cả khi không phải là tác giả của chúng.
 
 Kiểm thử từng phần phủ gần một nửa hệ thống. Chúng hướng nhiều hơn đến các tình huống happy path và các trường hợp phức tạp, biên và thay thế rõ ràng. Phần lớn các trường hợp un-happy path được phủ bởi unit test và vô nghĩa ở cấp độ kiểm thử từng phần.
 
 ### Kiểm thử tích hợp
 
-Các kiểm thử này chỉ có ý nghĩa đối với các hệ thống lớn, có nhiều thành phần. Như trong Hình 8-3, các kiểm thử này tập hợp các thành phần lại thành các nhóm và kiểm tra xem chúng có giao tiếp tốt với nhau không. Các thành phần khác của hệ thống được tách rời như bình thường bằng các mô-đun và bộ đôi kiểm thử thích hợp.
+Các kiểm thử này chỉ có ý nghĩa đối với các hệ thống lớn, có nhiều thành phần. Như trong Hình 8-3, các kiểm thử này tập hợp các thành phần lại thành các nhóm và kiểm tra xem chúng có giao tiếp tốt với nhau không. Các thành phần khác của hệ thống được tách rời như bình thường bằng các mô phỏng và kiểm thử kép thích hợp.
 
 Kiểm tra tích hợp là bài kiểm tra _vũ đạo_. Chúng không kiểm tra các quy tắc nghiệp vụ. Thay vào đó, chúng kiểm tra xem việc ghép các thành phần lại và xem chúng kết hợp với nhau tốt như thế nào. Chúng là các kiểm thử hệ thống _ống nước_ để đảm bảo rằng các bộ phận được kết nối đúng cách và có thể giao tiếp rõ ràng với nhau.
+
+![8-3](images/8-3.png)
 
 Kiểm thử tích hợp thường được viết bởi kiến trúc sư hệ thống hoặc thiết kế chính của hệ thống. Các kiểm thử này đảm bảo rằng cấu trúc và kiến trúc của hệ thống thực sự khỏe mạnh. Ở cấp độ này, chúng ta có thể thấy các kiểm thử hiệu suất và lưu lượng.
 
