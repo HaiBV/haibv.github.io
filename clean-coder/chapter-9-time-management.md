@@ -4,9 +4,11 @@ layout: default
 
 # Chương 9 Quản lý thời gian
 
-8 tiếng là một khoảng thời gian khá ngắn. Nó chỉ là 480 phút hoặc 28800 giây. Là một chuyên gia, bạn muốn sử dụng những giây phút quý giá đó hiệu quả và hữu ích nhất có thể. Chiến thuật nào sẽ đảm bảo cho bạn không lãng phí thời gian ít ỏi của mình? Làm thế nào để bạn quản lý hiệu quả thời gian của mình? 
+![9-cover](images/9-cover.png)
 
-Năm 1986 tôi đang sống ở Little Sandhurst, Surrey, nước Anh. Tôi quản lý bộ phận phát triển phần mềm gồm 15 người cho Teradyne ở Bracknell. Một ngày của tôi thường bị lấp đầy bởi các cuộc gọi, những cuộc họp ngẫu hứng, các vấn đề thực địa và sự gián đoạn. Vì vậy, để hoàn thành công việc, tôi phải áp dụng một số kỷ luật quản lý thời gian khá quyết liệt.
+8 tiếng là một khoảng thời gian thực sự ngắn. Nó chỉ là 480 phút hoặc 28800 giây. Là một chuyên gia, bạn muốn sử dụng những giây phút quý giá đó hiệu quả và hữu ích nhất có thể. Chiến thuật nào sẽ đảm bảo cho bạn không lãng phí thời gian ít ỏi của mình? Làm thế nào để bạn quản lý hiệu quả thời gian của mình?
+
+Năm 1986 tôi đang sống ở Little Sandhurst, Surrey, Anh. Tôi quản lý bộ phận phát triển phần mềm gồm 15 người cho Teradyne ở Bracknell. Một ngày của tôi thường bị lấp đầy bởi các cuộc gọi, những cuộc họp ngẫu hứng, các vấn đề thực địa và sự gián đoạn. Vì vậy, để hoàn thành công việc, tôi phải áp dụng một số kỷ luật quản lý thời gian khá quyết liệt.
 
 - Tôi thức dậy lúc 5h sáng mỗi ngày và đạp xe đến văn phòng ở Bracknell lúc 6h. Việc này cho tôi 2,5h yên tĩnh trước khi sự hỗn loạn của ngày mới bắt đầu.
 - Khi đến nơi, tôi sẽ viết một lịch trình lên bảng. Tôi chia thời gian thành những khoảng 15 phút và điền hoạt động tôi sẽ làm trong khoảng thời gian đó.
@@ -65,7 +67,7 @@ Nếu bạn tham dự một buổi họp và bạn thấy rằng lịch trình �
 Những cuộc họp này là một phần của phát triển Agile. Tên của chúng đến từ thực tế, người tham gia sẽ đứng trong suốt thời gian họp. Mỗi người lần lượt trả lời 3 câu hỏi:
 1. Tôi đã làm gì ngày hôm qua?
 2. Tôi sẽ làm gì hôm nay?
-3. Điều gì đang cản trở tôi? 
+3. Điều gì đang cản trở tôi?
 
 Đó là tất cả. Mỗi câu hỏi trả lời _không quá_ 20 giây, nên mỗi người không được trả lời quá 1 phút. Ngay cả với một nhóm 10 người, cuộc họp này nên kết thúc tốt đẹp trước 10 phút.
 
@@ -81,7 +83,7 @@ Theo kinh nghiệm của tôi thì cuộc họp này không nên kéo dài quá 
 
 ### Các cuộc họp tổng kết (restrospective) và demo
 
-Những cuộc họp này tiến hành vào mỗi cuối giai đoạn. Các thành viên thảo luận điều gì đúng và điều gì sai. Các bên liên quan xem bản demo các tính mới hoạt động. Các cuộc họp này có thể bị nhiều lạm dụng và có thể làm mất rất nhiều thời gian, vì vậy hãy lên lịch cho chúng vào 45 phút trước khi hết giờ và vào ngày cuối cùng của giai đoạn. Phân bổ không quá 20 phút cho tổng kết và 25 phút cho demo. Hãy nhớ rằng, chỉ mới 1 hoặc 2 tuần nên không có nhiều điều để nói. 
+Những cuộc họp này tiến hành vào mỗi cuối giai đoạn. Các thành viên thảo luận điều gì đúng và điều gì sai. Các bên liên quan xem bản demo các tính mới hoạt động. Các cuộc họp này có thể bị nhiều lạm dụng và có thể làm mất rất nhiều thời gian, vì vậy hãy lên lịch cho chúng vào 45 phút trước khi hết giờ và vào ngày cuối cùng của giai đoạn. Phân bổ không quá 20 phút cho tổng kết và 25 phút cho demo. Hãy nhớ rằng, chỉ mới 1 hoặc 2 tuần nên không có nhiều điều để nói.
 
 ### Tranh cãi / Bất đồng
 
@@ -93,7 +95,7 @@ Một số người cố gắng giành chiến thắng trong một cuộc tranh 
 
 Một số người sẽ chọn xử lý hung hăng một cách bị động. Họ sẽ đồng ý để kết thúc tranh cãi, nhưng sau đó họ phá hoại kết quả bằng cách từ chối tham gia vào giải pháp. Họ sẽ nói với chính mình, "Đây là cách họ muốn và bây giờ họ sẽ đạt được những gì họ muốn". Đây có lẽ là loại hành vi thiếu chuyên nghiệp tồi tệ nhất. Không bao giờ, đừng bao giờ làm thế. Nếu bạn đồng ý, bạn phải tham gia.
 
-Làm thế nào để có được dữ liệu bạn cần cho việc dàn xếp bất đồng? Đôi khi bạn có thể chạy thử nghiệm hoặc thực hiện một số mô phỏng. Nhưng đôi khi giải pháp thay thế tốt nhất là tung đồng xu để chọn 1 trong 2 cách được đề cập. 
+Làm thế nào để có được dữ liệu bạn cần cho việc dàn xếp bất đồng? Đôi khi bạn có thể chạy thử nghiệm hoặc thực hiện một số mô phỏng. Nhưng đôi khi giải pháp thay thế tốt nhất là tung đồng xu để chọn 1 trong 2 cách được đề cập.
 
 Nếu mọi thứ suôn sẻ, thì cách đó khả thi. Nếu bạn gặp phải rắc rối, bạn có thể lùi lại và làm theo cách còn lại. Sẽ khôn ngoan hơn nếu bạn thống nhất về thời gian cũng như các tiêu chí xác định khi nào nên từ bỏ cách đã chọn.
 
@@ -117,7 +119,7 @@ Lo lắng và mất tập trung cũng làm hao phí manna tập trung. Cuộc tr
 
 Có lẽ tôi không cần phải nhấn mạnh việc này nữa. Tôi có đầy đủ manna tập trung nhất sau một đêm ngon giấc. Một giấc ngủ 7h trường giúp tôi có đủ 8h tập trung. Các lập trình viên chuyên nghiệp quản lý lịch trình ngủ của họ để đảm bảo rằng họ sẽ có hầu hết manna tập trung vào lúc đi làm buổi sáng.
 
-### Caffeine 
+### Caffeine
 
 Không có gì khó hiểu khi vài người trong chúng ta sử dụng manna tập trung hiệu quả hơn khi uống một lượng vừa phải caffeine. Nhưng hãy cẩn thận. Caffeine cũng mang lại cảm giác "bồn chồn" cho sự tập trung của bạn. Quá nhiều caffeine có thể khiến sự tập trung của bạn đi theo những hướng rất lạ. Một lượng caffeine mạnh có thể khiến bạn lãng phí cả ngày tập trung cao độ vào những việc không đâu.
 
@@ -129,11 +131,11 @@ Manna tập trung có thể nạp lại một phần bằng sự không tập tr
 
 Một số người thiền định. Vài người ngủ một giấc ngắn. Một số khác sẽ nghe padcast hoặc lướt qua vài tờ tạp chí.
 
-Tôi nhận thấy rằng một khi manna đã cạn, bạn không thể ép mình phải tập trung. Bạn có thể vẫn viết được code, nhưng gần như chắc chắn bạn sẽ phải viết lại vào hôm sau, hoặc sống với một đống rác trong hàng tuần cho đến hàng tháng sau. Vậy nên tốt hơn là dành ra 30, thậm chí 60 phút để không tập trung. 
+Tôi nhận thấy rằng một khi manna đã cạn, bạn không thể ép mình phải tập trung. Bạn có thể vẫn viết được code, nhưng gần như chắc chắn bạn sẽ phải viết lại vào hôm sau, hoặc sống với một đống rác trong hàng tuần cho đến hàng tháng sau. Vậy nên tốt hơn là dành ra 30, thậm chí 60 phút để không tập trung.
 
 ### Tập trung thể chất
 
-Có một số điều đặc biệt ở những hoạt động thể chất có tính kỷ luật như võ thuật, thái cực quyền hoặc yoga. Mặc dù những hoạt động này đòi hỏi sự tập trung đáng kể, nhưng vẫn là một loại tập trung khác so với coding. Nó không mang nhiều tính trí tuệ, nó là thể chất. Và bằng cách nào đó, sự tập trung thể chất giúp nạp lại tập trung tinh thần. Nó không chỉ là sự hồi phục thông thường. Tôi nhận thấy rằng với một chế độ tập trung thể chất hợp lý có thể tăng khả năng tập trung tinh thần. 
+Có một số điều đặc biệt ở những hoạt động thể chất có tính kỷ luật như võ thuật, thái cực quyền hoặc yoga. Mặc dù những hoạt động này đòi hỏi sự tập trung đáng kể, nhưng vẫn là một loại tập trung khác so với coding. Nó không mang nhiều tính trí tuệ, nó là thể chất. Và bằng cách nào đó, sự tập trung thể chất giúp nạp lại tập trung tinh thần. Nó không chỉ là sự hồi phục thông thường. Tôi nhận thấy rằng với một chế độ tập trung thể chất hợp lý có thể tăng khả năng tập trung tinh thần.
 
 Loại hình tập trung thể chất tôi lựa chọn là đạp xe. Tôi sẽ đạp xe từ một đến 2 giờ, đôi khi đi được khoảng 20 hoặc 30 dặm. Tôi đạp xe trên một con đường mòn song song với sông Des Plaines, nên tôi không cần lo đến những chiếc xe ô tô.
 
@@ -155,7 +157,7 @@ Có khá nhiều bài viết về kỹ thuật này, và tôi mong bạn nên đ
 
 Sử dụng kỹ thuật này, thời gian của bạn sẽ được chia ra thành thời gian cà chua và ngoài cà chua. Khoảng thời gian cà chua là khoảng thời gian năng suất. Trong thời gian này bạn hoàn thành những công việc thực sự. Thời gian ngoài cà chua ngược lại dành cho sự xao nhãng, họp hành, giải lao, và thời gian không dành cho công việc của bạn.
 
-Bao nhiêu khoảng thời gian cà chua bạn có thể thực hiện được trong 1 ngày? Vào một ngày đẹp trời, bạn có thể thực hiện 12 hoặc thậm chí 14. Vào một ngày tệ hại, bạn có thể chỉ thực hiện được 2 hoặc 3. Nếu bạn đếm và theo dõi chúng theo biểu đồ, rất nhanh, bạn sẽ biết được thời gian hàng ngày bạn dành cho sự năng suất là bao nhiêu và thời gian dành cho những _việc khác_ là bao nhiêu. 
+Bao nhiêu khoảng thời gian cà chua bạn có thể thực hiện được trong 1 ngày? Vào một ngày đẹp trời, bạn có thể thực hiện 12 hoặc thậm chí 14. Vào một ngày tệ hại, bạn có thể chỉ thực hiện được 2 hoặc 3. Nếu bạn đếm và theo dõi chúng theo biểu đồ, rất nhanh, bạn sẽ biết được thời gian hàng ngày bạn dành cho sự năng suất là bao nhiêu và thời gian dành cho những _việc khác_ là bao nhiêu.
 
 Một vài người sẽ rất quen thuộc với kỹ thuật này đến mức họ ước tính nhiệm vụ của họ bằng cà chua và sau đó đánh giá bằng tốc độ/số lượng cà chua hàng tuần. Nhưng đây chỉ là một ứng dụng rất đơn giản. Lợi ích thực sự của kỹ thuật Pomodoro là trong khoảng thời gian 25 phút làm việc hiệu quả đó bạn tích cực bảo vệ sự năng suất trước mọi sự gián đoạn.
 
