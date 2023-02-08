@@ -19,7 +19,7 @@ Kế hoạch trên không phải lúc nào cũng thành công. Thức dậy vào
 
 ## Các cuộc họp
 
-Các cuộc họp tiêu tốn 200$ mỗi giờ với mỗi người tham dự. Điều này tính đến tiền lương, phúc lợi, chi phí cơ sở vật chất .v.v. Lần khi bạn tham gia một cuộc họp, hãy tính toàn chi phí của nó. Bạn sẽ ngạc nhiên đấy.
+Các cuộc họp tiêu tốn 200$ mỗi giờ với mỗi người tham dự. Điều này tính đến tiền lương, phúc lợi, chi phí cơ sở vật chất .v.v. Lần tới khi bạn tham gia một cuộc họp, hãy tính toàn chi phí của nó. Bạn sẽ ngạc nhiên đấy.
 
 Có 2 sự thật về các cuộc họp.
 
@@ -28,25 +28,25 @@ Có 2 sự thật về các cuộc họp.
 
 Thường thì 2 sự thật này mô tả về cùng một cuộc họp. Một số người sẽ cảm thấy chúng vô giá; những người còn lại sẽ thấy chúng dư thừa và vô dụng.
 
-Những chuyên gia nhận thức được chi phí cao của các cuộc họp. Họ cũng nhận thức được rằng thời gian của mình rất quý giá; họ còn code cần phải viết và kế hoạch cần hoàn thành. Do đó, họ tích cực chống lại việc tham dự các cuộc họp không mang lại lợi ích tức thì và đáng kể.
+Những chuyên gia nhận thức được chi phí cao của các cuộc họp. Họ cũng nhận thức được rằng thời gian của mình rất quý giá; họ còn code cần phải viết và kế hoạch cần hoàn thành. Do đó, họ tích cực phản đối việc tham dự các cuộc họp không mang lại lợi ích đáng kể và ngay lập tức.
 
 ### Từ chối
 
 Bạn không cần phải tham gia tất cả các cuộc họp bạn được mời. Thực tế là, tham gia quá nhiều cuộc họp thể hiện sự thiếu chuyên nghiệp. Bạn cần sử dụng thời gian của mình thật thông minh. Vậy nên hãy thật cẩn thận lựa chọn cuộc họp nào nên tham gia và cuộc họp nào nên lịch sự từ chối.
 
-Người mời bạn tham gia cuộc họp không có trách nhiệm quản lý thời gian của bạn. Chỉ có _bạn_ mới làm được điều đó. Vì vậy, khi nhận được một lời mời họp, đừng chấp nhận trừ khi sự tham gia của bạn là cần thiết ngay lập tức và quan trọng đáng kể cho công việc bạn đang làm.
+Người mời bạn tham gia cuộc họp không có trách nhiệm quản lý thời gian của bạn. Chỉ có _bạn_ mới làm được điều đó. Vì vậy, khi nhận được một lời mời họp, đừng chấp nhận trừ khi sự tham gia của bạn là cần thiết ngay lập tức và có tầm quan trọng đáng kể với công việc bạn đang làm.
 
 Đôi khi cuộc họp sẽ có vài thứ mà bạn quan tâm, nhưng nó không cần thiết ngay lập tức. Bạn sẽ phải cân nhắc xem bạn có đủ thời gian hay không. Hãy cẩn thận - có thể nó sẽ tiêu tốn cả ngày của bạn.
 
-Đôi khi cuộc họp sẽ có thứ gì đó bạn đóng góp được những không có ý nghĩa ngay lập tức với những gì bạn đang làm. Bạn phải cân nhắc xem liệu tổn thất đối với dự án của bạn có xứng đáng với lợi ích của họ hay không. Nghe có vẻ ích kỷ, nhưng trách nhiệm của bạn cần phải dành cho dự án _của bạn_ trước. Tuy nhiên, thường thì việc giúp đỡ này sẽ mang lại kết quả tốt, do đó, bạn có thể muốn thảo luận về sự tham gia của mình với nhóm và PM.
+Đôi khi cuộc họp sẽ có thứ gì đó bạn đóng góp được nhưng không có ý nghĩa ngay lập tức với những gì bạn đang làm. Bạn phải cân nhắc xem liệu tổn thất đối với dự án của bạn có xứng đáng với lợi ích của họ hay không. Nghe có vẻ ích kỷ, nhưng trách nhiệm của bạn cần phải dành cho dự án _của bạn_ trước. Tuy nhiên, thường thì việc giúp đỡ này sẽ mang lại kết quả tốt, do đó, bạn có thể muốn thảo luận về sự tham gia của mình với nhóm và PM.
 
 Đôi khi sự hiện diện của bạn trong cuộc họp được yêu cầu bởi người có thẩm quyền, chẳng hạn như một kỹ sư cấp rất cao trong một dự án khác hoặc PM của dự án khác. Bạn sẽ phải cân nhắc xem quyền hạn đó có vượt qua được lịch trình làm việc của bạn hay không. Một lần nữa, nhóm của bạn và người giám sát của bạn có thể giúp đỡ trong việc đưa ra quyết định.
 
-Một trong những nghĩa vụ quan trọng nhất của người quản lý của bạn là không cho bạn đi họp. Một người quản lý giỏi sẽ sẵn sàng bảo vệ quyết định từ chối tham dự của bạn vì người đó cũng quan tâm đến thời gian của bạn như bạn.
+Một trong những nghĩa vụ quan trọng nhất của người quản lý của bạn là giúp bạn _tránh khỏi_ những cuộc họp. Một người quản lý giỏi sẽ sẵn sàng bảo vệ quyết định từ chối tham dự của bạn vì người đó cũng quan tâm đến thời gian của bạn như chính bạn.
 
-### Bỏ đi
+### Rời khỏi cuộc họp
 
-Các cuộc họp không phải lúc nào cũng theo kế hoạch. Đôi khi trong cuộc họp bạn nhận ra rằng bạn nên từ chối từ đầu nếu biết thêm thông tin. Đôi khi các chủ đề mới được thêm vào, hoặc thú cưng của ai đó chiếm ưu thế trong các cuộc thảo luận. Trong nhiều năm, tôi đặt ra một quy tắc đơn giản: Khi một cuộc họp trở nên nhàm chán, hãy bỏ đi.
+Các cuộc họp không phải lúc nào cũng theo kế hoạch. Đôi khi trong cuộc họp bạn nhận ra rằng bạn nên từ chối từ đầu nếu biết thêm thông tin. Đôi khi các chủ đề mới được thêm vào, hoặc thú cưng của ai đó chiếm ưu thế trong các cuộc thảo luận. Trong nhiều năm, tôi đặt ra một quy tắc đơn giản: Khi một cuộc họp trở nên nhàm chán, hãy rời khỏi nó.
 
 Một lần nữa, bạn có nghĩa vụ quản lý tốt thời gian của mình. Nếu bạn thấy mình bị mắc kẹt trong một cuộc họp không sử dụng tốt thời gian của mình. bạn cần tìm cách thoát khỏi cuộc họp đó một cách lịch sự.
 
@@ -64,7 +64,7 @@ Nếu bạn tham dự một buổi họp và bạn thấy rằng lịch trình �
 
 ### Các cuộc họp đứng
 
-Những cuộc họp này là một phần của phát triển Agile. Tên của chúng đến từ thực tế, người tham gia sẽ đứng trong suốt thời gian họp. Mỗi người lần lượt trả lời 3 câu hỏi:
+Những cuộc họp này là một phần của phương pháp phát triển Agile. Tên của chúng đến từ thực tế, người tham gia sẽ đứng trong suốt thời gian họp. Mỗi người lần lượt trả lời 3 câu hỏi:
 1. Tôi đã làm gì ngày hôm qua?
 2. Tôi sẽ làm gì hôm nay?
 3. Điều gì đang cản trở tôi?
