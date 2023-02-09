@@ -83,11 +83,11 @@ Theo kinh nghiệm của tôi thì cuộc họp này không nên kéo dài quá 
 
 ### Các cuộc họp tổng kết (restrospective) và demo
 
-Những cuộc họp này tiến hành vào mỗi cuối giai đoạn. Các thành viên thảo luận điều gì đúng và điều gì sai. Các bên liên quan xem bản demo các tính mới hoạt động. Các cuộc họp này có thể bị nhiều lạm dụng và có thể làm mất rất nhiều thời gian, vì vậy hãy lên lịch cho chúng vào 45 phút trước khi hết giờ và vào ngày cuối cùng của giai đoạn. Phân bổ không quá 20 phút cho tổng kết và 25 phút cho demo. Hãy nhớ rằng, chỉ mới 1 hoặc 2 tuần nên không có nhiều điều để nói.
+Những cuộc họp này tiến hành vào mỗi cuối giai đoạn. Các thành viên thảo luận điều gì tốt và điều gì chưa tốt. Các bên liên quan xem bản demo về cách hoạt động của các tính năng mới. Các cuộc họp này có thể bị lạm dụng quá đáng và có thể làm mất rất nhiều thời gian, vì vậy hãy lên lịch cho chúng vào 45 phút trước khi hết giờ và vào ngày cuối cùng của giai đoạn. Phân bổ không quá 20 phút cho tổng kết và 25 phút cho demo. Hãy nhớ rằng, chỉ mới 1 hoặc 2 tuần nên không có nhiều điều để nói.
 
 ### Tranh cãi / Bất đồng
 
-Kent Beck đã từng chia sẻ với tôi một điều sâu sắc như sau: "Bất kỳ cuộc tranh cãi nào không thể giải quyết trong 5 phút sẽ không thể giải quyết được bằng tranh cãi". Lý do nó kéo dài như vậy là do cả 2 bên đều không có bằng chứng rõ ràng. Lập luận có thể dựa trên tôn giáo, trái ngược với thực tế.
+Kent Beck đã từng chia sẻ với tôi một điều sâu sắc như sau: "Bất kỳ cuộc tranh cãi nào không giải quyết được trong 5 phút sẽ không thể giải quyết được bằng tranh cãi". Lý do nó kéo dài như vậy là do cả 2 bên đều không có bằng chứng rõ ràng. Lập luận có thể dựa trên tôn giáo, trái ngược với thực tế.
 
 Những bất đồng về mặt kỹ thuật có xu hướng trôi vào vô tận. Mỗi bên đều có đủ loại biện minh cho lập trường của mình nhưng hiếm khi có bất kỳ dữ liệu nào. Nếu không có dữ liệu, bất kỳ lập luận nào cũng không thể đi đến thỏa thuận trong vài phút (khoảng từ 5 đến 30 phút) và sẽ không được thỏa thuận. Điều duy nhất cần làm là đi xác minh dữ liệu.
 
@@ -103,21 +103,21 @@ Hãy cẩn thận với những cuộc họp thực sự chỉ là nơi trút b�
 
 Nếu một cuộc tranh cãi thực sự được giải quyết, hãy yêu cầu mỗi người tranh luận trình bày trường hợp của họ trước nhóm trong 5 phút hoặc ít hơn. Sau đó cả nhóm sẽ bầu chọn. Toàn bộ cuộc họp sẽ diễn ra trong chưa đầy 15 phút.
 
-## Mana tập trung
+## Ma-na tập trung
 
 Thứ lỗi cho tôi nếu phần này nghe trừu tượng như New Age, hoặc có lẽ là Dungeons & Dragons. Đây chỉ là một cách tôi nghĩ về chủ đề này.
 
-Lập trình là một hoạt động tri thức đòi hỏi kiên trì và tập trung trong một khoảng thời gian dài. Sự tập trung là một nguồn tài nguyên khan hiếm, giống như manna. Sau khi sử dụng hết manna tập trung, bạn cần phải nạp lại bằng cách thực hiện các hoạt động không đòi hỏi sự tập trung trong một giờ hoặc hơn.
+Lập trình là một hoạt động tri thức đòi hỏi kiên trì và tập trung trong một khoảng thời gian dài. Sự tập trung là một nguồn tài nguyên khan hiếm, giống như ma-na. Sau khi sử dụng hết ma-na tập trung, bạn cần phải nạp lại bằng cách thực hiện các hoạt động không đòi hỏi sự tập trung trong một giờ hoặc hơn.
 
-Tôi không biết thứ manna tập trung này là gì, nhưng tôi có thể cảm nhận được nó như là một vật chất vật lý (hoặc sự thiếu hụt của nó) làm ảnh hưởng đến sự thay đổi và sự chú ý. Dù nó là cái gì, bạn có có thể _cảm thấy_ nó ở đó, và bạn có thể cảm thấy khi nó biến mất. Những lập trình viên chuyên nghiệp học cách quản trị thời gian để tận dụng manna tập trung tốt nhất có thể. Chúng ta viết code khi manna tập trung của chúng ta đang cao; và chúng ta làm những việc khác, ít đòi hỏi tập trung hơn khi nó thấp.
+Tôi không biết thứ ma-na tập trung này là gì, nhưng tôi có thể cảm nhận được nó như là một vật chất vật lý (hoặc sự thiếu hụt của nó) làm ảnh hưởng đến sự thay đổi và sự chú ý. Dù nó là cái gì, bạn có có thể _cảm thấy_ nó ở đó, và bạn có thể cảm thấy khi nó biến mất. Những lập trình viên chuyên nghiệp học cách quản trị thời gian để tận dụng ma-na tập trung tốt nhất có thể. Chúng ta viết code khi ma-na tập trung của chúng ta đang cao; và chúng ta làm những việc khác, ít đòi hỏi tập trung hơn khi nó thấp.
 
-Manna tập trung cũng là một nguồn tài nguyên dễ mất đi. Nếu bạn không sử dụng nó khi nó ở đó, bạn có khả năng làm mất nó. Đó là một trong những lý do khiến các cuộc họp mang tính hủy hoại tàn khốc. Nếu bạn dùng toàn bộ manna tập trung cho một cuộc họp, bạn sẽ không còn lại gì để viết code.
+Ma-na tập trung cũng là một nguồn tài nguyên dễ mất đi. Nếu bạn không sử dụng nó khi nó ở đó, bạn có khả năng làm mất nó. Đó là một trong những lý do khiến các cuộc họp mang tính hủy hoại tàn khốc. Nếu bạn dùng toàn bộ ma-na tập trung cho một cuộc họp, bạn sẽ không còn lại gì để viết code.
 
-Lo lắng và mất tập trung cũng làm hao phí manna tập trung. Cuộc tranh cãi với vợ/chồng bạn vào tối qua, vết lõm trên xe bạn gặp sáng nay, hoặc hóa đơn bạn quên trả tuần trước, tất cả sẽ bòn rút manna tập trung của bạn rất nhanh.
+Lo lắng và mất tập trung cũng làm hao phí ma-na tập trung. Cuộc tranh cãi với vợ/chồng bạn vào tối qua, vết lõm trên xe bạn gặp sáng nay, hoặc hóa đơn bạn quên trả tuần trước, tất cả sẽ bòn rút ma-na tập trung của bạn rất nhanh.
 
 ### Ngủ
 
-Có lẽ tôi không cần phải nhấn mạnh việc này nữa. Tôi có đầy đủ manna tập trung nhất sau một đêm ngon giấc. Một giấc ngủ 7h trường giúp tôi có đủ 8h tập trung. Các lập trình viên chuyên nghiệp quản lý lịch trình ngủ của họ để đảm bảo rằng họ sẽ có hầu hết manna tập trung vào lúc đi làm buổi sáng.
+Có lẽ tôi không cần phải nhấn mạnh việc này nữa. Tôi có đầy đủ ma-na tập trung nhất sau một đêm ngon giấc. Một giấc ngủ 7h trường giúp tôi có đủ 8h tập trung. Các lập trình viên chuyên nghiệp quản lý lịch trình ngủ của họ để đảm bảo rằng họ sẽ có hầu hết ma-na tập trung vào lúc đi làm buổi sáng.
 
 ### Caffeine
 
