@@ -121,31 +121,31 @@ Có lẽ tôi không cần phải nhấn mạnh việc này nữa. Tôi có đ�
 
 ### Caffeine
 
-Không có gì khó hiểu khi vài người trong chúng ta sử dụng manna tập trung hiệu quả hơn khi uống một lượng vừa phải caffeine. Nhưng hãy cẩn thận. Caffeine cũng mang lại cảm giác "bồn chồn" cho sự tập trung của bạn. Quá nhiều caffeine có thể khiến sự tập trung của bạn đi theo những hướng rất lạ. Một lượng caffeine mạnh có thể khiến bạn lãng phí cả ngày tập trung cao độ vào những việc không đâu.
+Không có gì khó hiểu khi vài người trong chúng ta sử dụng ma-na tập trung hiệu quả hơn khi uống một lượng vừa phải caffeine. Nhưng hãy cẩn thận. Caffeine cũng mang lại cảm giác "bồn chồn" cho sự tập trung của bạn. Quá nhiều caffeine có thể khiến sự tập trung của bạn đi theo những hướng rất lạ. Một lượng caffeine mạnh có thể khiến bạn lãng phí cả ngày tập trung cao độ vào những việc không đâu.
 
 Sử dụng caffeine là chuyện cá nhân. Cá nhân tôi có sở thích uống một cốc coffee đậm vào buổi sáng và một cốc coke ăn kiêng vào buổi trưa. Đôi khi tôi tăng gấp đôi liều lượng, nhưng hiếm khi nhiều hơn thế.
 
 ### Sạc lại
 
-Manna tập trung có thể nạp lại một phần bằng sự không tập trung. Đi dạo một lúc, trò chuyện với bạn bè, hoặc dành thời gian chỉ nhìn ra ngoài cửa sổ đều có thể giúp bạn phục hồi lại manna tập trung.
+Ma-na tập trung có thể nạp lại một phần bằng sự lơ đãng. Đi dạo một lúc, trò chuyện với bạn bè, hoặc dành thời gian chỉ nhìn ra ngoài cửa sổ đều có thể giúp bạn phục hồi lại ma-na tập trung.
 
-Một số người thiền định. Vài người ngủ một giấc ngắn. Một số khác sẽ nghe padcast hoặc lướt qua vài tờ tạp chí.
+Một số người thiền định. Vài người ngủ một giấc ngắn. Một số khác sẽ nghe podcast hoặc lướt qua vài tờ tạp chí.
 
-Tôi nhận thấy rằng một khi manna đã cạn, bạn không thể ép mình phải tập trung. Bạn có thể vẫn viết được code, nhưng gần như chắc chắn bạn sẽ phải viết lại vào hôm sau, hoặc sống với một đống rác trong hàng tuần cho đến hàng tháng sau. Vậy nên tốt hơn là dành ra 30, thậm chí 60 phút để không tập trung.
+Tôi nhận thấy rằng một khi ma-na đã cạn, bạn không thể ép mình phải tập trung. Bạn có thể vẫn viết được code, nhưng gần như chắc chắn bạn sẽ phải viết lại vào hôm sau, hoặc sống với một đống rác trong hàng tuần cho đến hàng tháng sau. Vậy nên tốt hơn là dành ra 30, thậm chí 60 phút để "lơ đãng".
 
 ### Tập trung thể chất
 
 Có một số điều đặc biệt ở những hoạt động thể chất có tính kỷ luật như võ thuật, thái cực quyền hoặc yoga. Mặc dù những hoạt động này đòi hỏi sự tập trung đáng kể, nhưng vẫn là một loại tập trung khác so với coding. Nó không mang nhiều tính trí tuệ, nó là thể chất. Và bằng cách nào đó, sự tập trung thể chất giúp nạp lại tập trung tinh thần. Nó không chỉ là sự hồi phục thông thường. Tôi nhận thấy rằng với một chế độ tập trung thể chất hợp lý có thể tăng khả năng tập trung tinh thần.
 
-Loại hình tập trung thể chất tôi lựa chọn là đạp xe. Tôi sẽ đạp xe từ một đến 2 giờ, đôi khi đi được khoảng 20 hoặc 30 dặm. Tôi đạp xe trên một con đường mòn song song với sông Des Plaines, nên tôi không cần lo đến những chiếc xe ô tô.
+Loại hình tập trung thể chất tôi lựa chọn là đạp xe. Tôi sẽ đạp xe từ một đến 2 giờ, đôi khi đi được khoảng 20 hoặc 30 dặm. Tôi đạp xe trên một con đường mòn song song với sông Des Plaines, nơi tôi không cần lo đến những chiếc xe ô tô.
 
-Trong khi đạp xe tôi thường nghe podcast về thiên văn học hoặc chính trị. Đôi khi tôi chỉ nghe những bài hát ưa thích. Và đôi khi tôi tắt tai nghe đi để lắng nghe thiên nhiên.
+Trong khi đạp xe tôi thường nghe podcast về thiên văn học hoặc chính trị. Đôi khi tôi chỉ nghe những bài hát ưa thích. Và đôi khi tôi chỉ lắng nghe thiên nhiên.
 
-Vài người sử dụng thời gian để thực hiện những công việc thủ công. Họ có thể tận hưởng nghề mộc, xây dựng những mô hình, hoặc làm vườn. Dù là hoạt động nào, những hoạt động tập trung vào thể chất đều có thể nâng cao khả năng làm việc với trí óc của bạn.
+Có người dành thời gian để thực hiện những công việc thủ công. Họ có thể tận hưởng nghề mộc, xây dựng những mô hình, hoặc làm vườn. Dù là hoạt động nào, những hoạt động tập trung vào thể chất đều có thể nâng cao khả năng làm việc với trí óc của bạn.
 
-### Đầu vào so với đầu ra
+### Đầu vào và đầu ra
 
-Một điều khác tôi cần thiết cho sự tập trung là cân bằng phù hợp giữa đầu ra và đầu vào. Viết phần mềm là một hoạt động _sáng tạo_. Tôi nhận thấy rằng tôi sáng tạo nhất khi tôi tiếp xúc với sự sáng tạo của người khác. Do đó, tôi đọc rất nhiều tiểu thuyết khoa học viễn tưởng. Sự sáng tạo của những tác giả phần nào đó kích thích sự sáng tạo của tôi dành cho phần mềm.
+Một điều khác tôi thấy cần thiết cho sự tập trung là cân bằng phù hợp giữa đầu ra và đầu vào. Viết phần mềm là một hoạt động _sáng tạo_. Tôi nhận thấy rằng tôi sáng tạo nhất khi tôi tiếp xúc với sự sáng tạo của người khác. Do đó, tôi đọc rất nhiều tiểu thuyết khoa học viễn tưởng. Sự sáng tạo của những tác giả đó phần nào kích thích sự sáng tạo của tôi dành cho phần mềm.
 
 ## Hộp thời gian và Quả cà chua
 
