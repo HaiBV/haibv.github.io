@@ -127,11 +127,11 @@ Sử dụng caffeine là chuyện cá nhân. Cá nhân tôi có sở thích uố
 
 ### Sạc lại
 
-Ma-na tập trung có thể nạp lại một phần bằng sự lơ đãng. Đi dạo một lúc, trò chuyện với bạn bè, hoặc dành thời gian chỉ nhìn ra ngoài cửa sổ đều có thể giúp bạn phục hồi lại ma-na tập trung.
+Ma-na tập trung có thể nạp lại một phần bằng sự xao nhãng. Đi dạo một lúc, trò chuyện với bạn bè, hoặc dành thời gian chỉ nhìn ra ngoài cửa sổ đều có thể giúp bạn phục hồi lại ma-na tập trung.
 
 Một số người thiền định. Vài người ngủ một giấc ngắn. Một số khác sẽ nghe podcast hoặc lướt qua vài tờ tạp chí.
 
-Tôi nhận thấy rằng một khi ma-na đã cạn, bạn không thể ép mình phải tập trung. Bạn có thể vẫn viết được code, nhưng gần như chắc chắn bạn sẽ phải viết lại vào hôm sau, hoặc sống với một đống rác trong hàng tuần cho đến hàng tháng sau. Vậy nên tốt hơn là dành ra 30, thậm chí 60 phút để "lơ đãng".
+Tôi nhận thấy rằng một khi ma-na đã cạn, bạn không thể ép mình phải tập trung. Bạn có thể vẫn viết được code, nhưng gần như chắc chắn bạn sẽ phải viết lại vào hôm sau, hoặc sống với một đống rác trong hàng tuần cho đến hàng tháng sau. Vậy nên tốt hơn là dành ra 30, thậm chí 60 phút để "xao nhãng".
 
 ### Tập trung thể chất
 
@@ -149,21 +149,21 @@ Một điều khác tôi thấy cần thiết cho sự tập trung là cân bằ
 
 ## Hộp thời gian và Quả cà chua
 
-Một cách rất hiệu quả tôi sử dụng để quản lý thời gian và tập trung là sử dụng Pomodoro - một kỹ thuật rất phổ biến, hay còn được biết đến với cái tên quả cà chua. Ý tưởng căn bản rất đơn giản. Bạn sử dụng đồng hồ hẹn giờ nhà bếp tiêu chuẩn (thường có hình dạng giống quả cả chua) trong 25 phút. Trong thời gian đồng hồ chạy, bạn không để bất cứ điều gì cản trở công việc bạn đang làm. Nếu điện thoại đổ chuông, bạn nhấc máy và lịch sự hỏi xem bạn có thể gọi lại trong khoảng 25 phút được không. Nếu giữa chừng ai đó hỏi bạn một câu hỏi, bạn lịch sự hỏi xem bạn có thể trả lời sau khoảng 25 phút được không. Bất kể sự gián đoạn là gì, bạn đơn giản là hoãn chúng lại cho đến khi đồng hồ báo hết giờ. Rốt cuộc, có rất ít sự gián đoạn khẩn cấp đến mức chúng không thể đợi được 25 phút!
+Có một cách rất hiệu quả tôi dùng để quản lý thời gian và tập trung là Pomodoro - một kỹ thuật rất phổ biến, hay còn được biết đến với cái tên _quả cà chua_. Ý tưởng căn bản rất đơn giản. Bạn sử dụng đồng hồ hẹn giờ nhà bếp tiêu chuẩn (thường có hình dạng giống quả cả chua) trong 25 phút. Trong thời gian đồng hồ chạy, bạn không để _bất cứ điều_ gì cản trở công việc bạn đang làm. Nếu điện thoại đổ chuông, bạn nhấc máy và lịch sự hỏi xem liệu bạn có thể gọi lại sau khoảng 25 phút nữa được không. Nếu giữa chừng có ai đó hỏi bạn một câu hỏi, bạn lịch sự hỏi xem bạn có thể trả lời sau khoảng 25 phút được không. Bất kể sự gián đoạn là gì, bạn đơn giản là hoãn chúng lại cho đến khi đồng hồ báo hết giờ. Rốt cuộc, có rất ít gián đoạn khẩn cấp đến mức chúng không thể đợi được 25 phút!
 
-Khi đồng hồ cà chua kêu, bạn dừng công việc đang thực hiện _ngay lập tức_. Bạn xử lý những sự gián đoạn xảy ra trong khoảng thời gian cà chua. Rồi bạn nghỉ ngơi khoảng 5 phút. Sau đó bạn tiếp tục hẹn giờ đồng hồ 25 phút nữa và bắt đầu khoảng thời gian cà chua tiếp theo. Với 4 khoảng thời gian cà chua liên tiếp bạn sẽ nghỉ ngơi lâu hơn khoảng 30 phút.
+Khi đồng hồ cà chua kêu, bạn dừng công việc đang thực hiện _ngay lập tức_. Bạn xử lý những sự gián đoạn xảy ra trong khung thời gian cà chua. Rồi bạn nghỉ ngơi khoảng 5 phút. Sau đó bạn tiếp tục hẹn giờ đồng hồ 25 phút nữa và bắt đầu khung thời gian cà chua tiếp theo. Với 4 khung thời gian cà chua liên tiếp bạn sẽ nghỉ ngơi lâu hơn khoảng 30 phút.
 
-Có khá nhiều bài viết về kỹ thuật này, và tôi mong bạn nên đọc nó. Tuy nhiên, mô tả ở trên sẽ cung cấp cho bạn những ý chính của kỹ thuật này.
+Có khá nhiều bài viết về kỹ thuật này, và tôi khuyên bạn nên đọc nó. Tuy nhiên, mô tả ở trên đã cung cấp cho bạn những ý chính của kỹ thuật này.
 
-Sử dụng kỹ thuật này, thời gian của bạn sẽ được chia ra thành thời gian cà chua và ngoài cà chua. Khoảng thời gian cà chua là khoảng thời gian năng suất. Trong thời gian này bạn hoàn thành những công việc thực sự. Thời gian ngoài cà chua ngược lại dành cho sự xao nhãng, họp hành, giải lao, và thời gian không dành cho công việc của bạn.
+Sử dụng kỹ thuật này, thời gian của bạn sẽ được chia ra thành thời gian cà chua và thời gian ngoài cà chua. Khoảng thời gian cà chua là khoảng thời gian năng suất. Trong thời gian này bạn hoàn thành những công việc thực sự. Thời gian ngoài cà chua ngược lại dành cho sự xao nhãng, họp hành, giải lao, và thời gian không dành cho công việc của bạn.
 
-Bao nhiêu khoảng thời gian cà chua bạn có thể thực hiện được trong 1 ngày? Vào một ngày đẹp trời, bạn có thể thực hiện 12 hoặc thậm chí 14. Vào một ngày tệ hại, bạn có thể chỉ thực hiện được 2 hoặc 3. Nếu bạn đếm và theo dõi chúng theo biểu đồ, rất nhanh, bạn sẽ biết được thời gian hàng ngày bạn dành cho sự năng suất là bao nhiêu và thời gian dành cho những _việc khác_ là bao nhiêu.
+Bạn có thể thực hiện được bao nhiêu khung thời gian cà chua trong 1 ngày? Vào một ngày đẹp trời, bạn có thể thực hiện được 12 hoặc thậm chí là 14. Vào một ngày tệ hại, bạn có thể chỉ thực hiện được 2 hoặc 3. Nếu bạn đếm và theo dõi chúng theo biểu đồ, rất nhanh, bạn sẽ biết được thời gian hàng ngày bạn dành cho sự năng suất là bao nhiêu và thời gian dành cho những _việc khác_ là bao nhiêu.
 
 Một vài người sẽ rất quen thuộc với kỹ thuật này đến mức họ ước tính nhiệm vụ của họ bằng cà chua và sau đó đánh giá bằng tốc độ/số lượng cà chua hàng tuần. Nhưng đây chỉ là một ứng dụng rất đơn giản. Lợi ích thực sự của kỹ thuật Pomodoro là trong khoảng thời gian 25 phút làm việc hiệu quả đó bạn tích cực bảo vệ sự năng suất trước mọi sự gián đoạn.
 
 ## Sự né tránh
 
-Đôi khi bạn không thể đặt tâm trí vào công việc bạn đang làm. Nó có thể cảm thấy điều bạn cần làm là đáng sợ, khó chịu hoặc nhàm chán. Có lẽ bạn nghĩ rằng nó sẽ buộc bạn nhảy vào một cuộc đối đầu hoặc dẫn bạn tới một hố chuột không lối thoát. Hoặc đơn giản là bạn không muốn làm điều đó.
+Đôi khi bạn không thể đặt tâm trí vào công việc bạn đang làm. Có thể do bạn cảm thấy điều mình cần làm thật là đáng sợ, khó chịu hoặc nhàm chán. Có lẽ bạn nghĩ rằng nó sẽ buộc bạn nhảy vào một cuộc đối đầu hoặc dẫn bạn tới một hang chuột không lối thoát. Hoặc đơn giản là bạn không muốn làm điều đó.
 
 ### Đảo ngược ưu tiên
 
