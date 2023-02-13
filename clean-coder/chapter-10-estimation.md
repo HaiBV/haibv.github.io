@@ -4,23 +4,25 @@ layout: default
 
 # Chương 10 Ước lượng (Estimation)
 
-Estimation (ước lượng) là một trong những việc đơn giản nhất và cũng đáng sợ nhất mà một lập trình viên chuyên nghiệp cần phải đối mặt. Rất nhiều việc quan trọng khác phải phụ thuộc vào nó. Rất nhiều danh tiếng sẽ đi theo nó. Và rất nhiều nỗi lo lắng và thất bại là do nó. Đó là điểm kết nối giữa khách hàng/PM và lập trình viên. Đó cũng là nguồn gốc của gần như toàn bộ sự ngờ vực trong mối quan hệ trên.
+![10-cover](images/10-cover.png)
 
-Năm 1978, khi tôi còn là một team lead cho một chương trình Z-80 nhúng 32K viết bằng Assembly. Chương trình sử dụng 32 con chip 1K x 8 EEprom, chia đều cho 3 bảng, mỗi bảng chứa được 12 con chip.
+Estimation (ước lượng) là một trong những việc đơn giản nhất và cũng đáng sợ nhất mà một lập trình viên chuyên nghiệp cần phải đối mặt. Rất nhiều giá trị kinh doanh phụ thuộc vào nó. Rất nhiều danh tiếng sẽ đi theo nó. Và rất nhiều nỗi lo lắng và thất bại là do nó. Đó là điểm kết nối giữa bộ phận kinh doanh và lập trình viên. Đó cũng là nguồn gốc của gần như toàn bộ sự ngờ vực trong mối quan hệ trên.
 
-Chúng tôi có hàng trăm thiết bị đang sử dụng, được cài đặt ở văn phòng của các trung tâm điện thoại trên khắp đất nước. Mỗi khi chúng tôi sửa một lỗi hoặc thêm một chức năng mới, chúng tôi sẽ phải gửi giải pháp đến từng đơn vị một và yêu cầu họ thay thế toàn bộ 32 con chip đó!
+Năm 1978, khi tôi còn là một lập trình viên chính cho một chương trình Z-80 nhúng 32K viết bằng Assembly. Chương trình sử dụng 32 con chip 1K x 8 EEprom, chia đều cho 3 bảng, mỗi bảng chứa được 12 con chip.
 
-Đó thực sự là ác mộng. Những con chip và bảng rất mỏng manh. Chốt trên những con chip dễ bị cong và gẫy. Bảng liên tục bị uốn cong dẫn đến hỏng các mối hàn. Nguy cơ bị hỏng và lỗi rất lớn. Do đó đội chi phí cho công ty lên quá cao.
+Chúng tôi có hàng trăm thiết bị ngoài thực địa, được cài đặt ở văn phòng của các trung tâm điện thoại trên khắp đất nước. Mỗi khi chúng tôi sửa một lỗi hoặc thêm một chức năng mới, chúng tôi sẽ phải gửi giải pháp đến từng đơn vị một và yêu cầu họ thay thế toàn bộ 32 con chip đó!
 
-Sếp của tôi lúc đó, Ken Finder, tìm đến tôi và yêu cầu tôi cải thiện việc này. Ông muốn có giải pháp để có thể thay đổi ở 1 con chip mà không cần thay toàn bộ số chip còn lại. Nếu bạn đã đọc sách của tôi, hoặc nghe phát biểu của tôi, bạn sẽ biết rằng tôi đề cập rất nhiều đến việc triển khai độc lập. Và đây là lúc tôi học được bài học đầu tiên.
+Đó là một cơn ác mộng. Những con chip và bảng rất mỏng manh. Chốt trên những con chip dễ bị cong và gẫy. Bảng liên tục bị uốn cong dẫn đến hỏng các mối hàn. Nguy cơ bị hỏng và lỗi rất lớn. Do đó đội chi phí cho công ty lên quá cao.
+
+Sếp của tôi lúc đó, Ken Finder, tìm đến tôi và yêu cầu tôi cải thiện việc này. Ông muốn có giải pháp để khi có thay đổi ở 1 con chip, toàn bộ số chip còn lại không cần phải thay thế. Nếu bạn đã đọc sách của tôi, hoặc nghe phát biểu của tôi, bạn sẽ biết rằng tôi đề cập rất nhiều đến việc triển khai độc lập. Và đó là lúc tôi học được bài học đầu tiên.
 
 Vấn đề của chúng tôi là phần mềm là một tệp thực thi với một liên kết duy nhất. Nếu một dòng code mới được thêm vào chương trình, tất cả địa chỉ của dòng code sau sẽ bị thay đổi. Và vì mỗi chip chỉ chứa được 1K không gian địa chỉ, nên hầu như nội chung của tất cả các chip sẽ thay đổi.
 
 Giải pháp thì khá đơn giản. Mỗi chip cần phải được tách ra khỏi tất cả các con chip khác. Mỗi chip cần trở thành một đơn vị biên dịch độc lập có thể chạy độc lập với tất cả những con chip còn lại.
 
-Tôi đã tính toán kích thước của tất cả các chức năng trong ứng dụng và viết một chương trình đoan giản để phù hợp với chúng, như một trò ghép hình, trong từng con chip một, để trống khoảng 100 bytes để có thể mở rộng. Ở đầu mỗi con chip, tôi đặt một bảng con trỏ sẽ trỏ đến tất cả chức năng trong con ship đó. Khi chương trình khởi động, con trỏ sẽ được chuyển vào RAM. Tất cả code trong hệ thống sẽ được thay đổi để các chức năng không còn gọi trực tiếp nữa mà được gọi qua các con trỏ trong RAM.
+Tôi đã tính toán kích thước của tất cả các chức năng trong ứng dụng và viết một chương trình đơn giản để phù hợp với chúng, như một trò ghép hình, trong từng con chip một, để trống khoảng 100 bytes để có thể mở rộng. Ở đầu mỗi con chip, tôi đặt một bảng con trỏ sẽ trỏ đến tất cả chức năng trong con chip đó. Khi chương trình khởi động, con trỏ sẽ được chuyển vào RAM. Tất cả code trong hệ thống sẽ được thay đổi để các chức năng không còn gọi trực tiếp nữa mà được gọi qua các con trỏ trong RAM.
 
-Vâng, bạn hiểu đúng rồi đấy. Tất cả các con chip là những đối tượng (object), với những vtables (chỉ việc gọi hàm theo liên kết động). Tất cả chức năng được triển khai đa hình. Và, vâng, đây là cách tôi học được một số nguyên tắc của OOD (lập trình hướng đối tượng), rất lâu trước khi tôi biết được đối tượng là gì.
+Vâng, bạn hiểu đúng rồi đấy. Tất cả các con chip là những đối tượng (object), với những vtables (chỉ việc gọi hàm theo liên kết động). Tất cả chức năng được triển khai đa hình. Và, vâng, đây là cách tôi học được một số nguyên tắc của OOD (Object Oriented Development - Lập trình hướng Đối tượng), rất lâu trước khi tôi biết được đối tượng là gì.
 
 Lợi ích đạt được là vô cùng lớn. Không chỉ việc chúng tôi có thể triển khai các con chip độc lập, mà chúng tôi còn có thể tạo các bản vá cập nhật bằng cách chuyển các chức năng vào RAM và định tuyến lại các con trỏ. Cách này giúp việc gỡ lỗi và cập nhật bản vá dễ dàng hơn rất nhiều.
 
