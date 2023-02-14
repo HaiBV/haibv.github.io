@@ -28,31 +28,29 @@ Lợi ích đạt được là vô cùng lớn. Không chỉ việc chúng tôi 
 
 Chà, tôi lạc đề mất rồi. Khi Ken đến gặp tôi và yêu cầu tôi khắc phục sự cố này, anh ấy có gợi ý vài điều về việc sử dụng các con trỏ cho các hàm. Tôi dành một hoặc 2 ngày cụ thể hóa ý tưởng và trình bày với Ken một kế hoạch chi tiết. Ken hỏi tôi việc này mất bao lâu, và tôi trả lời rằng sẽ mất khoảng một tháng.
 
-Nó mất đến 3 (cmn) tháng.
+Nó mất đến _3_ tháng.
 
-Tôi mới chỉ say 2 lần trong đời, và chỉ một lần thực sự say. Đó là vào tiệc giáng sinh năm 1978 tại Teradyne. Năm tôi 26 tuổi.
-
-Bữa tiệc được tổ chức ở văn phòng của Teradyne, chủ yếu là không gian của phòng lab. Tất cả mọi người đều đến sớm, nhưng có một trận bão tuyết lớn nên ban nhạc và thức ăn không thể đến được. Thật may là có rất nhiều rượu.
+Tôi mới chỉ say 2 lần trong đời, và chỉ một lần _thực sự_ say. Đó là vào tiệc giáng sinh năm 1978 tại Teradyne. Năm tôi 26 tuổi.
 
 Bữa tiệc được tổ chức ở văn phòng của Teradyne, chủ yếu là không gian của phòng lab. Tất cả mọi người đều đến sớm, nhưng có một trận bão tuyết lớn nên ban nhạc và thức ăn không thể đến được. Thật may là có rất nhiều rượu.
 
-Tôi không nhớ được gì nhiều vào tối hôm đó. Với những gì nhớ được, tôi ước là mình không làm. Nhưng tôi sẽ chia sẻ một khoảnh khắc thấm thía đó cho bạn.
+Tôi không nhớ được gì nhiều vào tối hôm đó. Với những gì _nhớ_ được, tôi ước là mình có thể quên đi. Nhưng tôi sẽ chia sẻ một trong khoảnh khắc thấm thía đó cho bạn.
 
-Tôi đang ngồi bắt chéo chân trên sàn với Ken (sếp của tôi, lúc đó tất cả đều 29 tuổi và không say) khóc lóc về việc lập trình lại các con chip mất bao nhiêu thời gian. Rượu giải phóng nỗi sợ hãi và bất an dồn nén về estimate của tôi. Tôi không nghĩ rằng tôi gối đầu vào lòng Ken, nhưng tôi không nhớ rõ chi tiết đó lắm.
+Tôi đang ngồi bắt chéo chân trên sàn với Ken (sếp của tôi, lúc đó tất cả đều 29 tuổi và _không_ say) khóc lóc về việc lập trình lại các con chip mất bao nhiêu thời gian. Rượu giải phóng nỗi sợ hãi và bất an dồn nén về ước lượng của tôi. Tôi không _nghĩ_ rằng tôi gối đầu vào lòng Ken, nhưng tôi không nhớ rõ chi tiết đó lắm.
 
-Tôi nhớ tôi đã hỏi Ken rằng anh có phát điên với tôi không, và anh có nghĩ rằng tôi làm mất quá nhiều thời gian không. Mặc dù tối hôm đó rất mơ hồ, nhưng câu trả lời của Ken vẫn rõ ràng cho đến bây giờ. Ken nói, “Có, tôi nghĩ việc đó làm mất của anh rất nhiều thời gian, nhưng tôi thấy anh làm việc chăm chỉ, và có tiến độ tốt. Đó là thứ tôi thực sự cần. Vì vậy, không, tôi không giận anh”
+Tôi nhớ tôi đã hỏi Ken rằng anh có phát điên với tôi không, và anh có nghĩ rằng tôi làm mất quá nhiều thời gian không. Mặc dù ký ức về tối hôm đó đã mờ nhạt, nhưng câu trả lời của Ken vẫn còn rõ ràng cho đến bây giờ. Ken nói, “Có, tôi nghĩ việc đó làm mất của anh rất nhiều thời gian, nhưng tôi thấy anh làm việc chăm chỉ, và có tiến độ tốt. Đó là thứ tôi thực sự cần. Vì vậy, không, tôi không giận anh”
 
 ## Ước lượng (Estimation) là gì?
 
-Vấn đề là chúng ta nhìn nhận estimation theo những cách khác nhau. Khách hàng coi estimation là một cam kết. Trong khi dev coi estimation như một sự phỏng đoán. Sự khác biệt là rất lớn.
+Vấn đề là chúng ta nhìn nhận ước lượng theo những cách khác nhau. Bộ phận kinh doanh coi ước lượng là một cam kết. Trong khi lập trình viên coi ước lượng như một sự phỏng đoán. Sự khác biệt là rất lớn.
 
 ### Một cam kết
 
-Một cam kết là một thứ bạn phải hoàn thành. Nếu bạn cam kết hoàn thành một việc gì đó vào một ngày nhất định, đơn giản nghĩa là bạn cần phải hoàn thành việc đó vào đúng ngày hôm đó. Nếu điều đó đồng nghĩa với việc bạn phải làm 12 tiếng một ngày, kể cả cuối tuần, bỏ qua kỳ nghỉ với gia đình, thì hãy chấp nhận. Bạn đã lập ra cam kết, bạn phải tôn trọng nó.
+Một cam kết là một thứ bạn phải hoàn thành. Nếu bạn cam kết hoàn thành một việc gì đó vào một ngày cụ thể, đơn giản nghĩa là bạn cần _phải_ hoàn thành việc đó vào đúng ngày hôm đó. Nếu điều đó đồng nghĩa với việc bạn phải làm 12 tiếng một ngày, kể cả cuối tuần, bỏ qua kỳ nghỉ với gia đình, thì hãy chấp nhận. Bạn đã lập ra cam kết, bạn phải tôn trọng nó.
 
-Người chuyên nghiệp không cam kết trừ khi họ biết họ có thể hoàn thành chúng. Một sự thật rất đơn giản. Nếu bạn bị yêu cầu phải cam kết thứ gì đó bạn không chắc mình làm được, thì danh dự của bạn chắc chắn sẽ giảm sút. Nếu bạn bị yêu cầu phải cam kết vào một ngày nhất định mà bạn biết mình có thể làm được, nhưng cần phải làm việc nhiều giờ, cuối tuần và bỏ qua kỳ nghỉ với gia đình, thì quyền lựa chọn thuộc về bạn; nhưng tốt hơn bạn nên sẵn sàng làm những gì cần thiết.
+Người chuyên nghiệp không cam kết trừ khi họ _biết_ họ có thể hoàn thành chúng. Một sự thật rất đơn giản. Nếu bạn bị yêu cầu phải cam kết thứ gì đó bạn không _chắc_ mình làm được, thì danh dự của bạn chắc chắn sẽ giảm sút. Nếu bạn bị yêu cầu phải cam kết vào một ngày nhất định mà bạn biết mình _có thể_ làm được, nhưng cần phải làm việc nhiều giờ, cuối tuần và bỏ qua kỳ nghỉ với gia đình, thì quyền lựa chọn thuộc về bạn; nhưng tốt hơn bạn nên sẵn sàng làm những gì cần thiết.
 
-Can kết cần một sự chắc chắn. Mọi người sẽ chấp nhận những cam kết của bạn và lập kế hoạch dựa trên nó. Cái giá của việc bỏ lỡ những cam kết đó, với họ, và với uy tín của bạn, là vô cùng lớn. Bỏ lỡ cam kết là một hành vi không trung thực chỉ nhẹ hơn một chút so với nói dối công khai.
+Can kết cần một _sự chắc chắn_. Mọi người sẽ chấp nhận những cam kết của bạn và lập kế hoạch dựa trên nó. Cái giá của việc bỏ lỡ những cam kết đó, với họ, và với uy tín của bạn, là vô cùng lớn. Bỏ lỡ cam kết là một hành vi không trung thực chỉ thiếu một chút là ngang với nói dối công khai.
 
 ### Một ước lượng
 
