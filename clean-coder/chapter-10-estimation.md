@@ -54,29 +54,38 @@ Can kết cần một _sự chắc chắn_. Mọi người sẽ chấp nhận nh
 
 ### Một ước lượng
 
-Ước lượng là một phỏng đoán. Không có sự cam kết nào trong đó. Không lời hứa nào được đưa ra. Bỏ lỡ ước lượng không phải là một việc đáng chê trách. Lý do chúng ta đưa ra ước lượng là bởi vì chúng ta không thể biết được một việc có thể làm trong bao lâu.
+Ước lượng là một phỏng đoán. Không có sự cam kết nào trong đó. Không lời hứa nào được đưa ra. Bỏ lỡ ước lượng không phải là một việc đáng chê trách. Lý do chúng ta đưa ra ước lượng là bởi vì _chúng ta không biết_ việc này có thể mất bao nhiêu thời gian.
 
-Không may là, phần lớn lập trình viên phần mềm đều rất tệ trong việc ước lượng. Không phải bởi vì việc ước lượng cần có kỹ năng bí mật nào đó – thực ra là không. Lý do mà chúng ta thường rất kém trong việc ước lượng là vì chúng ta không thực sự hiểu được ý nghĩa thật sự của nó.
+Thật không may, phần lớn lập trình viên phần mềm đều rất tệ trong việc ước lượng. Không phải vì nó cần có kỹ năng bí mật nào đó – thực tế là không. Lý do mà chúng ta thường rất kém trong việc ước lượng là vì chúng ta không thực sự hiểu được ý nghĩa thật sự của nó.
 
-Ước lượng không phải là một con số. Ước lượng là sự phân phối (distribution). Ví dụ:
+Ước lượng không phải là một con số. Ước lượng là _sự phân phối (distribution)_. Ví dụ:
 
-Mike: Anh estimate mất bao lâu để hoàn thành task Frazzle?
+Mike: Anh ước lượng mất bao lâu để hoàn thành tác vụ Frazzle?
 Peter: 3 ngày
 
-Liệu Peter có hoàng thành công việc trong 3 ngày? Có thể, nhưng có bao nhiêu khả năng? Câu trả lời là: Chúng tôi không biết. Ý của Peter là gì, và Mike sẽ biết được thêm điều gì? Nếu Mike quay lại sau 3 ngày, liệu anh ta có ngạc nhiên nếu Peter chưa xong? Tại sao lại vậy? Peter không hoàn thành cam kết. Peter không nói với Mike là có khả năng là 3 ngày, hay 4 ngày hoặc 5 ngày.
+Liệu Peter có thực sự hoàn thành công việc trong 3 ngày? Có thể, nhưng có bao nhiêu khả năng? Câu trả lời là: Chúng tôi không biết. Ý của Peter là gì, và Mike sẽ biết được thêm điều gì? Nếu Mike quay lại sau 3 ngày, liệu anh ta có ngạc nhiên nếu Peter chưa xong? Tại sao lại vậy? Peter không hoàn thành cam kết. Peter không nói với Mike là có khả năng là 3 ngày, hay 4 ngày hoặc 5 ngày.
 
 Điều gì sẽ xảy ra nếu Mike hỏi Peter về sự khả thi của ước lượng 3 ngày?
 
-Mike: Khả năng anh hoàn thành trong 3 ngày là bao nhiêu?
-Peter: Rất có thể
-Mike: Cụ thể là chắc chắn đến mức nào?
-Peter: 50 ~ 60%
-Mike: Vậy là có khả năng cao anh sẽ hoàn thành trong 4 ngày
-Peter: Đúng thế, thực ra nó có thể mất đến 5 hoặc 6, mặc dù tôi không chắc lắm
-Mike: Không chắc bao nhiêu?
-Peter: Oh, tôi cũng không biết nữa… khoảng 95% tôi sẽ hoàn thành công việc trước 6 ngày.
-Mike: Tức là công việc có thể mất 7 ngày?
-Peter: Chà, chỉ khi mọi thứ đều hỏng bét. Khỉ thật, nếu mọi thứ hỏng bét, nó có thể mất đến 10 hoặc 11 ngày. Nhưng có vẻ mọi thứ sẽ ổn.
+Mike: "Có bao nhiêu khả năng anh sẽ hoàn thành trong 3 ngày?"
+
+Peter: "Rất có thể"
+
+Mike: "Có thể đưa ra một con số được không"
+
+Peter: "50 ~ 60%"
+
+Mike: "Vậy là có khả năng cao anh sẽ hoàn thành trong 4 ngày"
+
+Peter: "Đúng thế, thực ra nó có thể mất đến 5 hoặc 6 ngày, mặc dù tôi không chắc lắm"
+
+Mike: "Có bao nhiêu khả năng?"
+
+Peter: "Ồ, tôi cũng không biết nữa… khoảng 95% tôi sẽ hoàn thành công việc trước 6 ngày."
+
+Mike: "Ý anh là công việc có thể mất 7 ngày?"
+
+Peter: "Chà, chỉ khi mọi thứ đều hỏng bét. Khỉ thật, nếu _mọi thứ_ hỏng bét, tôi có thể mất đến 10 hoặc 11 ngày. Nhưng có vẻ mọi thứ sẽ ổn."
 
 Bây giờ, chúng ta đã có thêm hiểu biết về sự thật. Ước lượng của Peter là sự phân phối xác suất. Trong ý nghĩ của Peter, anh ta thấy khả năng hoàn thành giống như những gì mô tả trong hình 10-1 dưới đây
 
