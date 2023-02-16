@@ -87,14 +87,14 @@ Mike: "Ý anh là công việc có thể mất 7 ngày?"
 
 Peter: "Chà, chỉ khi mọi thứ đều hỏng bét. Khỉ thật, nếu _mọi thứ_ hỏng bét, tôi có thể mất đến 10 hoặc 11 ngày. Nhưng có vẻ mọi thứ sẽ ổn."
 
-Bây giờ, chúng ta đã có thêm hiểu biết về sự thật. Ước lượng của Peter là sự phân phối xác suất. Trong ý nghĩ của Peter, anh ta thấy khả năng hoàn thành giống như những gì mô tả trong hình 10-1 dưới đây
+Bây giờ, chúng ta đã có thêm hiểu biết về sự thật. Ước lượng của Peter là _sự phân phối xác suất_. Trong ý nghĩ của Peter, anh ta thấy khả năng hoàn thành giống như những gì mô tả trong hình 10-1 dưới đây
+
+Bạn có thể thấy lý do Peter đưa ra ước lượng ban đầu là 3 ngày. Đó là thanh cao nhất trong biểu đồ. Nên trong ý nghĩ của Peter, đó là khoảng thời gian hợp lý nhất để hoàn thành công việc. Nhưng Mike lại có một góc nhìn khác. Anh ta nhìn về phía phải của biểu đồ và lo rằng Peter có thể mất đến 11 ngày để hoàn thành công việc.
 
 ![10-1](images/10-1.png)
 <p style="text-align: center; font-weight: 700">
 Hình 10-1 Phân phối xác suất
 </p>
-
-Bạn có thể thấy lý do Peter đưa ra ước lượng ban đầu là 3 ngày. Đó là thanh cao nhất trong biểu đồ. Nên trong ý nghĩ của Peter, đó là khoảng thời gian hợp lý nhất để hoàn thành công việc. Nhưng Mike lại có một góc nhìn khác. Anh ta nhìn về phía phải của biểu đồ và lo rằng Peter có thể mất đến 11 ngày để hoàn thành công việc.
 
 Mike có nên lo lắng về điều đó? Tất nhiên rồi! Murphy sẽ có cách của anh ta với Peter, vậy nên một vài thứ có thể sẽ hỏng bét.
 
@@ -102,11 +102,16 @@ Mike có nên lo lắng về điều đó? Tất nhiên rồi! Murphy sẽ có c
 
 Bây giờ thì Mike có một vấn đề. Anh ta không biết chắc chắn thời gian mà Peter cần để hoàn thành công việc. Để tối thiểu hóa rủi ro Mike cần Peter đưa ra một cam kết. Đó là điều Peter sẽ không muốn đưa ra.
 
-Mike: Peter, anh có thể đưa ra số ngày cụ thể anh cần để làm xong không?
-Peter: Không, Mike. Tôi nói rồi, nó có thể được hoàn thành trong 3 hoặc 4 ngày.
-Mike: Vậy chốt là 4 ngày?
-Peter: Không, có thể là 5 hoặc 6
-Cho đến giờ, mọi người đều cư xử đúng mực. Mike cầm một cam kết và Peter cẩn thận từ chối. Nên Mike thử một cách khác:
+Mike: "Peter, anh có thể đưa ra số ngày cụ thể anh cần để làm xong không?"
+
+Peter: "Không, Mike. Tôi nói rồi, nó có thể được hoàn thành trong 3 hoặc 4 ngày."
+
+Mike: "Vậy chốt là 4 ngày?"
+
+Peter: "Không, _có thể_ là 5 hoặc 6"
+
+Cho đến giờ, mọi người đều cư xử đúng mực. Mike cần một cam kết và Peter cẩn thận từ chối. Nên Mike thử một cách khác:
+
 Mike: OK, Peter, nhưng anh có thể cố gắng không vượt quá 6 ngày không?
 
 Lời cầu khẩn của Mike nghe có vẻ vô tội, và Mike chắc chắn không có ý định xấu. Nhưng chính xác thì Mike đang yêu cầu Peter làm gì? “Cố gắng” sẽ được hiểu thế nào?
