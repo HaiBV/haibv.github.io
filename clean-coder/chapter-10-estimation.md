@@ -112,38 +112,39 @@ Peter: "Không, _có thể_ là 5 hoặc 6"
 
 Cho đến giờ, mọi người đều cư xử đúng mực. Mike cần một cam kết và Peter cẩn thận từ chối. Nên Mike thử một cách khác:
 
-Mike: OK, Peter, nhưng anh có thể cố gắng không vượt quá 6 ngày không?
+Mike: "OK, Peter, nhưng anh có thể _cố gắng_ không vượt quá 6 ngày không?"
 
 Lời cầu khẩn của Mike nghe có vẻ vô tội, và Mike chắc chắn không có ý định xấu. Nhưng chính xác thì Mike đang yêu cầu Peter làm gì? “Cố gắng” sẽ được hiểu thế nào?
 
-Như chúng ta đã nỏi trước đây, trong chương 2. Từ cố gắng (try) là một thuật ngữ nặng nề. Peter đồng ý để “cố gắng” và cam kết hoàn thành trong 6 ngày. Đó là cách hiểu duy nhất. Đồng ý “cố gắng” là đồng ý thành công.
+Như chúng ta đã nói trước đây, trong chương 2. Từ _cố gắng (try)_ là một thuật ngữ nặng nề. Peter đồng ý để “cố gắng” và cam kết hoàn thành trong 6 ngày. Đó là cách hiểu duy nhất. Đồng ý “cố gắng” là đồng ý thành công.
 
 Còn cách giải thích nào khác nữa không? Chính xác thì Peter sẽ làm gì để “cố gắng”? Anh ta sẽ làm việc nhiều hơn 8 tiếng? Rõ ràng nó ám chỉ điều đó. Anh ta sẽ làm việc vào cuối tuần? Có, nó cũng ám chỉ điều đó. Anh ta sẽ bỏ qua kỳ nghỉ với gia đình? Có luôn, cũng là một phần của sự ám chỉ. Tất cả đều chỉ sự “cố gắng”. Nếu Peter không làm những việc trên, Mike có thể đổ lỗi cho Peter vì không cố gắng hết sức.
 
-Người chuyên nghiệp có một sự phân biệt rõ ràng giữa ước lượng và cam kết. Họ sẽ không cam kết trừ khi họ biết rõ rằng họ có thể hoàn thành. Họ cẩn thận để tránh những cam kết ám chỉ. Họ truyền đạt phân phối xác suất các ước tính rõ ràng nhất có thể, để các quản lý có thể lập một kế hoạch thích hợp.
+Người chuyên nghiệp có một sự phân biệt rõ ràng giữa ước lượng và cam kết. Họ sẽ không cam kết trừ khi họ biết rõ rằng họ có thể hoàn thành. Họ cẩn thận để tránh những cam kết _ám chỉ_. Họ truyền đạt phân phối xác suất các ước tính rõ ràng nhất có thể, để các quản lý có thể lập một kế hoạch thích hợp.
 
 ## PERT
 
-Vào năm 1957, PERT (Program Evaluation and Review Technique, tạm dịch: Kỹ thuật đánh giá và xem xét chương trình) được tạo ra nhằm hỗ trợ dự án tàu ngầm Polaris của hải quân Mỹ. Một trong những tác dụng của PERT là phương pháp tính toán sự ước lượng. Công thức rất đơn giản, nhưng là cách rất hiệu quả để chuyển từ ước lượng thành phân phối xác suất phù hợp cho quản lý.
+Vào năm 1957, PERT (Program Evaluation and Review Technique, tạm dịch: Chương trình đánh giá và xét duyệt kỹ thuật) được tạo ra nhằm hỗ trợ dự án tàu ngầm Polaris của hải quân Mỹ. Một trong những tác dụng của PERT là phương pháp tính toán sự ước lượng. Công thức rất đơn giản, nhưng là cách rất hiệu quả để chuyển từ ước lượng thành phân phối xác suất phù hợp cho quản lý.
 
-Khi bạn ước lượng một công việc, bạn cần cung cấp 3 biến số. Còn được gọi là phân tích tam điểm:
+Khi bạn ước lượng một công việc, bạn cung cấp 3 biến số. Còn được gọi là _phân tích tam điểm_:
 
-O: Ước lượng lạc quan (Optimistic Estimate). Đây là con số cực kỳ lạc quan. Bạn chỉ có thể hoàn thành công việc trong thời gian này nếu tất cả mọi thứ tuyệt đối chính xác. Và để công thức chính xác thì xác suất đạt được con số này phải nhỏ hơn 1% cơ hội. Trong trường hợp của Peter, nó sẽ là 1 ngày, như trong hình 10-1.
-N: Ước lượng danh nghĩa (Nominal Estimate). Đây là con số ước lượng có khả năng thành công cao nhất. Nếu bạn sử dụng một biểu đồ cột, nó sẽ là cột cao nhất, như trong hình 10-1 là 3 ngày.
-P: Ước lượng bi quan (Pessimistic Estimate). Đây lại là con số cực kỳ bi quan. Nó sẽ bao gồm mọi thứ trừ siêu bão, chiến tranh hạt nhân, lỗ đen, và những thảm họa khủng khiếp khác. Tương tự, công thức sẽ chính xác khi xác suất đạt được phải nhỏ hơn 1%. Trong trường hợp của Peter, con số này nằm về phía phải của biểu đồ, là 12 ngày.
+- O: Ước lượng lạc quan (Optimistic Estimate). Đây là con số _cực kỳ_ lạc quan. Bạn chỉ có thể hoàn thành công việc trong thời gian này nếu tất cả mọi thứ tuyệt đối chính xác. Và để công thức chính xác thì xác suất đạt được con số này phải nhỏ hơn 1% cơ hội. Trong trường hợp của Peter, nó sẽ là 1 ngày, như trong hình 10-1.
+- N: Ước lượng danh nghĩa (Nominal Estimate). Đây là con số ước lượng có khả năng thành công cao nhất. Nếu bạn sử dụng một biểu đồ cột, nó sẽ là cột cao nhất, như trong hình 10-1 là 3 ngày.
+- P: Ước lượng bi quan (Pessimistic Estimate). Đây lại là con số _cực kỳ_ bi quan. Nó sẽ bao gồm mọi thứ trừ siêu bão, chiến tranh hạt nhân, lỗ đen, và những thảm họa khủng khiếp khác. Tương tự, công thức sẽ chính xác khi xác suất đạt được phải nhỏ hơn 1%. Trong trường hợp của Peter, con số này nằm về phía phải của biểu đồ, là 12 ngày.
+
 Với 3 tham số ước lượng này, chúng ta có thể mô tả phân phối xác suất như sau:
 
 <p style="text-align: center;">
 <img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\mu&space;=&space;\frac{O&space;&plus;&space;4N&space;&plus;&space;P}{6}" title="\LARGE \mu = \frac{O + 4N + P}{6}" />
 </p>
 
-μ là khoảng thời gian kỳ vọng của công việc. Với trường hợp của Peter, μ = (1+12+12)/6 = 4,2 ngày. Đối với hầu hết nhiệm vụ, đây là một con số hơi bi quan vì phần bên phải của đồ thị phân phối dài hơn phần bên trái.
+μ là khoảng thời gian kỳ vọng của công việc. Với trường hợp của Peter, μ = (1+12+12)/6, hay khoảng 4,2 ngày. Đối với hầu hết nhiệm vụ, đây là một con số hơi bi quan vì phần bên phải của đồ thị phân phối dài hơn phần bên trái.
 
 <p style="text-align: center;">
 <img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\sigma&space;=&space;\frac{P&space;-&space;O}{6}" title="\LARGE \sigma = \frac{P - O}{6}" />
 </p>
 
-σ là độ lệch chuẩn của phân phối xác suất cho công việc. Nó là thước đo độ không chắc chắn của công việc. Khi con số này lớn, sự không chắc chắn cũng lớn theo. Trong trường hợp của Peter, nó có giá trị (12 -1 )/ 6 = 1,8 ngày.
+σ là độ lệch chuẩn của phân phối xác suất cho công việc. Nó là thước đo độ không chắc chắn của công việc. Khi con số này lớn, sự không chắc chắn cũng lớn theo. Trong trường hợp của Peter, nó có giá trị (12 -1 )/ 6, hay khoảng 1,8 ngày.
 
 Với ước lượng của Peter là 4.2/1.8, Mike hiểu rằng tác vụ này sẽ làm xong trong vòng 5 ngày nhưng có thể mất đến 6 hoặc thậm chí là 9 ngày để hoàn thành.
 
