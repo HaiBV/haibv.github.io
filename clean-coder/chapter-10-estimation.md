@@ -155,15 +155,15 @@ Nhưng Mike không chỉ quản lý 1 tác vụ. Anh ta quản lý một dự á
 Bảng 10-2 Các tác vụ của Peter
 </p>
 
-Như trên bảng, có thể thấy Peter khác tự tin với tác vụ “Beta”, nhưng nếu có sai sót, nó có thể làm mất khá nhiều thời gian. Mike sẽ phải hiểu điều này như thế nào? Mike sẽ kế hoạch ra sao để Peter đủ thời gian hoàn thành cả 3 tác vụ trên.
+Có chuyện gì với tác vụ “beta” vậy? Có thể thấy Peter khá tự tin với nó, nhưng nếu có sai sót, nó có thể làm mất khá nhiều thời gian. Mike sẽ phải hiểu điều này như thế nào? Mike sẽ lên kế hoạch ra sao để Peter đủ thời gian hoàn thành cả 3 tác vụ trên.
 
-Điều này thực ra là những phép toán khá dễ dàng, Mike có thể kết hợp tất cả các tác vụ của Peter và đưa ra phân phối xác suất cho toàn bộ những tác vụ đó. Công thức khá đơn giản:
+Thực ra chỉ cần những phép toán khá đơn giản, Mike có thể kết hợp tất cả các tác vụ của Peter và đưa ra phân phối xác suất cho toàn bộ những tác vụ đó. Công thức khá rõ ràng:
 
 <p style="text-align: center;">
 <img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\mu&space;_{sequence}=&space;\sum&space;\mu&space;_{task}" title="\LARGE \mu _{sequence}= \sum \mu _{task}" />
 </p>
 
-Với bất kỳ chuỗi tác vụ nào, thời gian kỳ vọng sẽ là tổng thời gian kỳ vọng của tất cả các tác vụ của chuỗi. Để Peter hoàn thành cả 3 tác vụ với ước lượng từng tác vụ là 4.2/1.8, 3.5/2.2 và 6.5/1.3, thì Peter cần khoảng 14 ngày để hoàn thành (4.2 + 3.5 + 6.5)
+Với bất kỳ chuỗi tác vụ nào, thời gian kỳ vọng sẽ là tổng thời gian kỳ vọng của tất cả các tác vụ trong đó. Để Peter hoàn thành cả 3 tác vụ với ước lượng từng tác vụ là 4.2/1.8, 3.5/2.2 và 6.5/1.3, thì Peter cần khoảng 14 ngày để hoàn thành (4.2 + 3.5 + 6.5)
 
 <p style="text-align: center;">
 <img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\sigma&space;_{sequence}=&space;\sqrt{\sum&space;{\sigma_{task}}^{2}}" title="\LARGE \sigma _{sequence}= \sqrt{\sum {\sigma_{task}}^{2}}" />
@@ -181,17 +181,17 @@ Với bất kỳ chuỗi tác vụ nào, thời gian kỳ vọng sẽ là tổng
 <img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\sqrt{9.77}&space;=&space;\sim&space;3.13" title="\LARGE \sqrt{9.77} = \sim 3.13" />
 </p>
 
-Vậy có thể nói với Mike rằng Peter sẽ hết khoảng 14 ngày, nhưng cũng có thể hết 17 ngày (1σ) và cũng có thể hết đến 20 ngày (2σ). Thậm chí có thể mất nhiều thời gian hơn, nhưng điều đó khó có thể xảy ra.
+Vậy có thể nói với Mike rằng Peter sẽ hoàn thành trong khoảng 14 ngày, nhưng cũng có thể hết 17 ngày (1σ) và cũng có thể hết đến 20 ngày (2σ). Thậm chí có thể mất nhiều thời gian hơn, nhưng điều đó khó có thể xảy ra.
 
-Trở lại với bảng ước lượng 10-2. Bạn có cảm thấy áp lực khi cần phải hoàn thành toàn bộ 3 tác vụ trong vòng 5 ngày? Rốt cuộc thì, ước lượng trong trường hợp tốt nhất là 1, 1, và 3. Ngay cả những ước tính danh nghĩa cũng chỉ lên đến tối đa 10 ngày. Vậy tại sao chúng ta lại có được con số 14, và có khả năng lên đến 17 hoặc 20? Câu trả lời là sự không chắc chắn trong các tác vụ kết hợp với tính thực tế khi thực hiện kế hoạch.
+Trở lại với bảng ước lượng 10-2. Bạn có cảm thấy áp lực khi cần phải hoàn thành toàn bộ 3 tác vụ trong vòng 5 ngày? Rốt cuộc thì, ước lượng trong trường hợp tốt nhất là 1, 1, và 3. Ngay cả những ước tính danh nghĩa cũng chỉ lên đến tối đa 10 ngày. Vậy tại sao chúng ta lại có được con số 14, và có khả năng lên đến 17 hoặc 20? Câu trả lời là sự không chắc chắn trong các tác vụ kết hợp với _tính thực tế_ khi thực hiện kế hoạch.
 
-Nếu bạn là một programmer có nhiều hơn vài năm kinh nghiệm, bạn có thể đã thấy vài dự án ước tính quá lạc quan và mất đến 3 hoặc 5 lần so với kỳ vọng. Công thức PERT đơn giản nhưng hợp lý và hiệu quả để giúp ngăn chặn những ước tính lạc quan. Các chuyên gia phần mềm rất cẩn thận khi đặt ra những kỳ vọng hợp lý bất chấp sự ép phải cố gắng đi nhanh.
+Nếu bạn là một lập trình viên có nhiều hơn vài năm kinh nghiệm, bạn có thể đã thấy vài dự án ước tính quá lạc quan và mất đến 3 hoặc 5 lần so với kỳ vọng. Công thức PERT đơn giản nhưng hợp lý và hiệu quả để giúp ngăn chặn những ước tính lạc quan. Các chuyên gia phần mềm rất cẩn thận khi đặt ra những kỳ vọng hợp lý bất chấp sự ép phải _cố gắng_ đi nhanh.
 
-## Estimate công việc
+## Ước lượng công việc
 
-Mike và Peter mặc một sai lầm tồi tệ. Mike hỏi Peter hết bao lâu để hoàn thành công việc. Peter đã đưa ra câu trả lời thành thật, nhưng còn ý kiến của các thành viên khác? Liệu họ có ý kiến khác?
+Mike và Peter đang mắc phải một sai lầm tồi tệ. Mike hỏi Peter hết bao lâu để hoàn thành công việc. Peter đã đưa ra câu trả lời thành thật, nhưng còn ý kiến của các thành viên khác? Liệu họ có ý kiến khác?
 
-Những người xung quanh bạn là giúp ích rất nhiều trong việc ước lượng. Họ có thể thấy những thứ mà bạn không thấy. Họ có thể giúp bạn ước lượng công việc của bạn chính xác hơn bạn tự làm.
+Nguồn lực quan trọng nhất trợ giúp cho ước lượng của bạn là những người xung quanh bạn. Họ có thể thấy những thứ mà bạn không thấy. Họ có thể giúp bạn ước lượng công việc của bạn chính xác hơn bạn tự làm.
 
 ### Wideband Delphi
 
