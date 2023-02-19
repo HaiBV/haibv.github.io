@@ -195,13 +195,13 @@ Nguồn lực quan trọng nhất trợ giúp cho ước lượng của bạn l�
 
 ### Wideband Delphi
 
-Vào những năm 1970, Barry Boehm giới thiệu với chúng ta một kỹ thuật ước lượng được gọi là “wideband delphi”. Từ đó đã có rất nhiều biến thể được tạo ra. Dù là chính thống hay không chính thống; tất cả đều có một điểm chung: sự thống nhất.
+Vào những năm 1970, Barry Boehm giới thiệu cho chúng ta một kỹ thuật ước lượng được gọi là “wideband delphi”. Từ đó đã có rất nhiều biến thể được tạo ra. Dù là chính thống hay không chính thống; nhưng tất cả đều có một điểm chung: sự thống nhất.
 
-Chiến lược rất đơn giản. Một đội tập hợp lại, thảo luận về một tác vụ, ước lượng tác vụ đó, và lặp lại thảo luận và ước lượng cho đén khi đạt đến thống nhất. Cách tiếp cận bạn đầu do Boehm khởi xướng đặt ra quá nhiều cuộc họp, tài liệu kéo theo quá nhiều nghi lễ và chi phí không phù hợp với tôi. Tôi thích những cách tiếp cận đơn giản và chi phí thấp dưới đây.
+Chiến lược rất đơn giản. Một đội tập hợp lại, thảo luận về một tác vụ, ước lượng tác vụ đó, tiếp tục lặp lại thảo luận và ước lượng cho đến khi đi đến thống nhất. Cách tiếp cận bạn đầu do Boehm khởi xướng đặt ra quá nhiều cuộc họp, tài liệu kéo theo quá nhiều nghi lễ và chi phí không phù hợp với tôi. Tôi thích những cách tiếp cận đơn giản và chi phí thấp dưới đây.
 
 ### Flying Fingers
 
-Tất cả mọi người ngồi xung quanh cái bàn. Từng tác vụ một được thảo luận. Với mỗi tác vụ, vấn đề đưa ra thảo luận gồm những gì nó liên quan, những gì có thể gây cản trở hoặc phức tạp hóa, và cách thực hiện. Sau đó, người tham gia đặt bàn tay của mình xuống dưới bàn và xòe ra từ 0 đến 5 ngón tay dựa trên thời gian mà họ nghĩ sẽ cần cho tác vụ. Người điều hành sẽ đếm 1-2-3, và tất cả sẽ cùng giơ tay lên.
+Tất cả mọi người ngồi xung quanh một cái bàn. Từng tác vụ một được thảo luận. Với mỗi tác vụ, vấn đề đưa ra thảo luận gồm những gì nó liên quan, những gì có thể gây cản trở hoặc phức tạp hóa, và cách thực hiện. Sau đó, người tham gia đặt bàn tay của mình xuống dưới bàn và xòe ra từ 0 đến 5 ngón tay dựa trên thời gian mà họ nghĩ sẽ cần cho tác vụ. Người điều hành sẽ đếm 1-2-3, và tất cả sẽ cùng giơ tay lên.
 
 Nếu mọi người đều tán thành, họ sẽ chuyển sang tác vụ tiếp theo. Nếu không thì họ tiếp tục thảo luận lý do tại sao họ không tán thành. Việc này lặp lại cho đến khi mọi người đều tán thành.
 
@@ -209,13 +209,13 @@ Sự thống nhất không cần quá tuyệt đối. Chỉ cần các ước l�
 
 Thang đo của ước lượng được quyết định vào đầu cuộc họp. Nó có thể là số ngày cho một tác vụ, hoặc có thể là một số thang đo thú vị hơn như “ngón tay nhân 3” hoặc “ngón tay bình phương”
 
-Việc giơ tay đồng thời rất quan trọng. Người tham gia có thể thay đổi ước lượng của họ dựa trên ước lượng của người khác.
+Việc giơ tay đồng thời rất quan trọng. Chúng ta không muốn người tham gia thay đổi ước lượng của mình dựa trên ước lượng của người khác.
 
 ### Planning Poker
 
-Vào năm 2002 James Grenning đã viết một báo mô tả “Planning Poker”. Biến thể này của wideban delphi trở nên rất phổ biến đến mức có vài công ty sử dụng ý tưởng này để tặng quà tiếp thị dưới hình thức những bộ bài lập kế hoạch poker. Thậm chí có một trang web có tên planningpoker.com giúp bạn lên kế hoạch poker trực tuyến.
+Vào năm 2002 James Grenning đã viết một báo thú vị mô tả “Planning Poker”. Biến thể này của wideban delphi trở nên rất phổ biến, đến mức có vài công ty sử dụng ý tưởng này để tặng quà tiếp thị dưới hình thức những bộ bài lập kế hoạch poker. Thậm chí có một trang web có tên planningpoker.com giúp bạn lên kế hoạch poker trực tuyến với những đội nhóm phân tán.
 
-Ý tưởng rất đơn giản. Mỗi thành viên trong đội ước lượng, chọn một lá bài với số khác nhau. Có thể từ 0 đến 5, và làm tương tự như với flying fingers.
+Ý tưởng rất đơn giản. Mỗi thành viên trong đội ước lượng, chọn một lá bài với số khác nhau. Có thể từ 0 đến 5, và làm tương tự như với _flying fingers_.
 
 Chọn 1 tác vụ và thảo luận về nó. Sau đó, người chủ trì yêu cầu mọi người chọn một lá bài. Các thành viên trong đội chọn một lá bài phù hợp với ước lượng của họ và úp xuống để không ai nhìn thấy. Cuối cùng mọi người mở bài của mình theo hiệu lệnh người chủ trì.
 
@@ -239,9 +239,9 @@ Bước tiếp theo là vẽ vài đường ở giữa những thẻ bài để 
 
 Những kỹ thuật wideband delphi trên rất tốt để chọn một ước lượng danh nghĩa cho một tác vụ. Nhưng như chúng ta đã nói ở trên, chúng ta cần có 3 ước lượng để thiết lập phân phối xác suất. Giá trị lạc quan và bi quan cho mỗi tác vụ có thể thu được nhanh chóng khi sử dụng bất kỳ biến thể nào ở trên. Ví dụ, nếu bạn sử dụng planing poker, bạn chỉ cần hỏi cả đội lựa chọn lá bài cho ước lượng bi quan sau đó chọn giá trị lớn nhất. Tương tự với ước lượng khách quan và chọn giá trị nhỏ nhất.
 
-## Luật của số lớn
+## Quy luật số lớn
 
-Các ước lượng thường có rất nhiều sai sót. Đó là lý do chúng ta gọi chúng là ước lượng. Có một cách để quản lý lỗi là tận dụng Luật của Số lớn. Hàm ý của luật này là nếu bạn chia nhỏ một tác vụ lớn thành nhiều tác vụ nhỏ hơn và ước lượng chúng độc lập, tổng ước lượng của những tác vụ nhỏ sẽ chính xác hơn so với ước lượng một tác vụ lớn. Việc này chính xác hơn vì những lỗi trong các nhiệm vụ nhỏ có xu hướng biểu hiện rõ rệt.
+Các ước lượng thường có rất nhiều sai sót. Đó là lý do chúng ta gọi chúng là ước lượng. Có một cách để quản lý lỗi là tận dụng _Quy luật Số lớn_. Hàm ý của luật này là nếu bạn chia nhỏ một tác vụ lớn thành nhiều tác vụ nhỏ hơn và ước lượng chúng độc lập, tổng ước lượng của những tác vụ nhỏ sẽ chính xác hơn so với ước lượng một tác vụ lớn. Việc này chính xác hơn vì những lỗi trong các nhiệm vụ nhỏ có xu hướng biểu hiện rõ rệt.
 
 Thành thật mà nói, điều này khá lạc quan. Sai sót trong việc ước lượng thường có xu hướng đánh giá thấp tác vụ hơn là đánh giá cao, nên việc tích hợp gần như không bao giờ hoàn hảo. Tuy nhiên, chia nhỏ tác vụ lớn thành những tác vụ nhỏ hơn và ước lượng độc lập những tác vụ nhỏ vẫn là một kỹ thuật tốt. Một số lỗi sẽ dễ dàng đc nhìn thấy, và chia nhỏ tác vụ là một cách tốt để hiểu hơn về nó và loại bỏ bất ngờ.
 
@@ -249,8 +249,8 @@ Thành thật mà nói, điều này khá lạc quan. Sai sót trong việc ư�
 
 Lập trình viên phần mềm chuyên nghiệp biết làm thế nào để cung cấp cho khách hàng ước lượng thực dụng nhất để khách hàng có thể sử dụng để lập kế hoạch. Họ không hứa nếu họ không thể giữ lời, và họ sẽ không cam kết nếu họ không thể hoàn thành.
 
-Khi người chuyên nghiệp cam kết, họ đưa ra một con số cụ thể, và hiện thực con số đó. Tuy nhiên, trong phần lớn trường họp, họ sẽ không đưa ra những cam kết đó. Thay vào đó, họ đưa ra ước lượng xác suất mô tả thời gian kỳ vọng và phương sai.
+Khi người chuyên nghiệp cam kết, họ đưa ra một con số _cụ thể_, và hiện thực con số đó. Tuy nhiên, trong phần lớn trường họp, họ sẽ không đưa ra những cam kết đó. Thay vào đó, họ đưa ra ước lượng xác suất mô tả thời gian kỳ vọng và phương sai.
 
 Lập trình viên chuyên nghiệp làm việc với các thành viên khác trong team, đi đến thống nhất việc ước lượng trước khi đưa cho quản lý.
 
-Những kỹ thuật được mô tả trong chương này là những ví dụ của một số cách khác nhau mà lập trình viên chuyên nghiệp dùng. Đây không phải là những kỹ thuật duy nhất và cũng không phải tốt nhất. Chúng đơn giản là những kỹ thuật tôi biết và có hiệu quả với tôi.
+Những kỹ thuật được mô tả trong chương này là những _ví dụ_ của một số cách khác nhau mà lập trình viên chuyên nghiệp dùng. Đây không phải là những kỹ thuật duy nhất và cũng không phải tốt nhất. Chúng đơn giản là những kỹ thuật tôi biết và có hiệu quả với tôi.
