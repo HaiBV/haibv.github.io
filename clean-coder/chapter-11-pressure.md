@@ -50,15 +50,15 @@ Nói thì rất dễ. Nhưng khi bộ phận kinh doanh của công ty thất b�
 
 ### Giữ sạch sẽ
 
-Cách để đi nhanh, và giữ đúng hạn chót, là giữ sạch sẽ. Những người chuyên nghiệp không khuất phục trước sự cám dỗ của việc tạo ra mớ lộn xộn để hoàn thành công việc nhanh chóng. Những người chuyên nghiệp nhận ra rằng "nhanh và _bẩn_" là một nghịch lý. _Bẩn_ luôn đi cùng với chậm!
+Cách để đi nhanh, và giữ đúng hạn chót, là giữ sạch sẽ. Những người chuyên nghiệp không khuất phục trước sự cám dỗ của việc tạo ra mớ hỗn độn để hoàn thành công việc nhanh chóng. Những người chuyên nghiệp nhận ra rằng "nhanh và cẩu thả (quick and dirty)" là một nghịch lý. Cẩu thả luôn đi cùng với chậm!
 
-Chúng ta có thể tránh được áp lực bằng cách giữ cho hệ thống, source code và thiết kế sạch nhất có thể. Điều đó không có nghĩa là chúng ta dành hàng giờ để chăm chút cho code. Nó đơn giản là chúng ta không thỏa hiệp với sự lộn xộn. Chúng ta nhận ra rằng lộn xộn sẽ làm ta chậm lại, khiến chúng ta lỡ hạn chót và phá vỡ cam kết. Vì vậy chúng ta cần làm hết sức mình để giữ cho đầu ra sạch nhất có thể.
+Chúng ta có thể tránh được áp lực bằng cách giữ cho hệ thống, code và thiết kế sạch nhất có thể. Điều đó không có nghĩa là chúng ta dành hàng giờ để chăm chút cho code. Nó đơn giản là chúng ta không thỏa hiệp với sự lộn xộn. Chúng ta nhận ra rằng lộn xộn sẽ làm ta chậm lại, khiến chúng ta lỡ hạn chót và phá vỡ cam kết. Vì vậy chúng ta cần làm hết sức mình để giữ cho sản phẩm đầu ra sạch nhất có thể.
 
 ### Kỷ luật trong khủng hoảng
 
-Bạn biết mình tin vào điều gì khi quan sát bản thân trong cơn khủng hoảng. Nếu trong cơn khủng hoảng bạn tuân thủ những kỷ luật của mình, thì bạn thực sự tin tưởng vào những kỷ luật đó. Mặt khác, nếu bạn thay đổi hành vi của mình khi trong cơn khủng hoảng, thì bạn không thực sự tin vào những hành vi thông thường của mình.
+Bạn biết mình tin vào điều gì khi quan sát bản thân trong một cơn khủng hoảng. Nếu trong cơn khủng hoảng bạn tuân thủ những kỷ luật của mình, thì bạn thực sự tin tưởng vào những kỷ luật đó. Mặt khác, nếu bạn thay đổi hành vi của mình khi trong cơn khủng hoảng, thì bạn không thực sự tin vào những hành vi thông thường của mình.
 
-Nếu bình thường bạn tuân theo kỷ luật của TDD nhưng từ bỏ nó trong cơn khủng hoảng, thì bạn không thực sự tin tưởng rằng TDD là hữu ích. Nếu bình thường bạn giữ cho code sạch sẽ nhưng tạo ra sự lộn xộn trong cơn khủng hoảng, thì bạn không thực sự tin rằng lộn xộn sẽ làm bạn chậm lại. Nếu bạn bắt cặp trong cơn khủng hoảng nhưng bình thường thì không, thì bạn tin rằng bắt cặp sẽ hiệu quả hơn so với không bắt cặp.
+Nếu bình thường bạn tuân theo kỷ luật của TDD nhưng từ bỏ chúng trong cơn khủng hoảng, thì bạn không thực sự tin tưởng rằng TDD là hữu ích. Nếu bình thường bạn giữ cho code sạch sẽ nhưng lại tạo ra sự lộn xộn trong cơn khủng hoảng, thì bạn không thực sự tin rằng lộn xộn sẽ làm bạn chậm lại. Nếu bạn bắt cặp trong cơn khủng hoảng nhưng bình thường thì không, thì bạn tin rằng bắt cặp sẽ hiệu quả hơn so với không bắt cặp.
 
 Chọn những kỷ luật bạn thấy thoải mái khi tuân theo trong cơn khủng hoảng. _Và luôn luôn tuân chủ chúng mọi lúc_. Tuân thủ những kỷ luật đó là cách tốt nhất để tránh rơi vào một cuộc khủng hoảng.
 
@@ -66,7 +66,7 @@ Chọn những kỷ luật bạn thấy thoải mái khi tuân theo trong cơn k
 
 ## Xử lý áp lực
 
-Ngăn chặn, giảm nhẹ và loại bỏ áp lực là việc tốt, nhưng đôi khi áp lực sẽ đến bất chấp mọi ý định và biện pháp phòng ngừa tốt nhất của bạn. Đôi khi dự án mất nhiều thời gian hơn so với dự đoán của bất kỳ ai. Thỉnh thoảng thiết kế ban đầu sai hướng và phải làm lại. Đôi khi bạn đánh mất một thành viên hoặc một khách hàng quan trọng. Đôi khi bạn đưa ra một cam kết mà bạn không thể đáp ứng. Sau đó thì sao?
+Ngăn chặn, giảm nhẹ và loại bỏ áp lực là việc tốt, nhưng đôi khi áp lực sẽ đến bất chấp mọi ý định và biện pháp phòng ngừa tốt nhất của bạn. Đôi khi dự án mất nhiều thời gian hơn so với dự đoán của bất kỳ ai. Thỉnh thoảng thiết kế ban đầu sai hướng và phải làm lại. Đôi khi bạn đánh mất một thành viên cốt cán hoặc một khách hàng quan trọng. Đôi khi bạn đưa ra một cam kết mà bạn không thể đáp ứng. Sau đó thì sao?
 
 ### Đừng hoảng sợ
 
@@ -76,7 +76,7 @@ Thay vào đó, hãy chậm lại. Suy nghĩ về vấn đề gặp phải một
 
 ### Giao tiếp
 
-Hãy để đội của bạn và cấp trên của bạn biết bạn đang gặp rắc rối. Nói với họ kế hoạch tốt nhất của bạn để thoát khỏi rắc rối này. Yêu cầu họ đóng góp ý kiến và hướng dẫn. Tránh tạo ra sự bất ngờ. Không gì khiến con người ta tức giận và kém lý trí hơn những điều bất ngờ. Ngạc nhiên/bất ngờ làm áp lực nặng hơn gấp 10 lần.
+Hãy để đội của bạn và cấp trên của bạn biết bạn đang gặp rắc rối. Nói cho họ biết kế hoạch tốt nhất của bạn để thoát khỏi rắc rối này. Yêu cầu họ đóng góp ý kiến và hướng dẫn. Tránh tạo ra sự bất ngờ. Không gì khiến con người ta tức giận và kém lý trí hơn những điều bất ngờ. Ngạc nhiên/bất ngờ làm áp lực nhân lên gấp 10 lần.
 
 ### Tin tưởng kỷ luật của bạn
 
