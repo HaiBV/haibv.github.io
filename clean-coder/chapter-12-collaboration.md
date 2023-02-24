@@ -26,7 +26,7 @@ Lý do nó chậm như vậy là vì chúng tôi giữ bảng ký hiệu khá l�
 
 Tim và tôi không phải chuyên gia về cấu trúc dữ liệu và giải thuật. Chúng tôi chưa bao giờ được nghe về bảng băm hoặc tìm kiếm nhị phân. Chúng tôi không biết làm thế nào để tạo ra một thuật toán nhanh hơn. Chúng tôi chỉ biết rằng những gì chúng tôi làm là quá chậm.
 
-Vậy là chúng tôi thử hết cách này đến cách khác. Chúng tôi thử đặt tham chiếu vào trong linked list. Chúng tôi thử để những khoảng trống trong mảng và chỉ phát triển bộ đệm khi các khoảng trống được lấp đầy. Chúng tôi thử tạo linked list của những khoảng trống. Chúng tôi thử mọi ý tưởng điền rồ nhất.
+Vậy là chúng tôi thử hết cách này đến cách khác. Chúng tôi thử đặt tham chiếu vào trong danh sách liên kết (linked list). Chúng tôi thử để những khoảng trống trong mảng và chỉ mở rộng bộ đệm khi các khoảng trống được lấp đầy. Chúng tôi thử tạo những danh sách liên kết những khoảng trống. Chúng tôi thử mọi ý tưởng điền rồ nhất.
 
 Chúng tôi đứng trước bảng trắng trong văn phòng, vẽ mô hình về cấu trúc dữ liệu của mình và thực hiện tính toán để dự đoán về hiệu suất. Chúng tôi đến văn phòng mỗi ngày với một ý tưởng mới. Chúng tôi hợp tác với nhau như những "con yêu tinh"
 
@@ -36,9 +36,9 @@ Cuối cùng chúng tôi đã rút ngắn thời gian xuống dưới 15 phút, 
 
 # Lập trình viên và mọi người
 
-Chúng ta không trở thành lập trình viên bởi vì chúng ta thích làm việc với mọi người. Như một quy luật, chúng ta thấy các mối quan hệ giữa cá nhân với nhau thật lộn xộn và khó đoán. Chúng tôi thích những hành vi rõ ràng và dự đoán được của những chiếc máy mà chúng tôi lập trình. Chúng ta hành phúc nhất khi ở một mình trong phòng hàng giờ tập trung sâu vào một vấn đề thực sự thú vị nào đó.
+Chúng ta trở thành lập trình viên không phải vì thích làm việc với con người. Như một quy luật, chúng ta thấy các mối quan hệ giữa cá nhân với nhau thật lộn xộn và khó đoán. Chúng ta thích những hành vi rõ ràng và dự đoán được của những chiếc máy mà ta lập trình. Chúng ta hành phúc nhất khi ở một mình trong phòng hàng giờ tập trung sâu vào một vấn đề thực sự thú vị nào đó.
 
-OK, đó là sự tổng quá hóa quá mức và có vô số những ngoại lệ. Có rất nhiều lập trình viên giỏi làm việc với mọi người và thích thử thách. Nhưng điểm trung bình của nhóm vẫn có xu hướng theo như tôi đã nêu. Chúng tôi, những lập trình viên, tận hưởng cảm giác một mình và đắm chìm vào sự tập trung.
+OK, đó là sự tổng quá hóa quá mức và có vô số những ngoại lệ. Có rất nhiều lập trình viên giỏi làm việc với con người và thích thử thách. Nhưng điểm trung bình của nhóm vẫn có xu hướng theo như tôi đã nêu. Chúng tôi, những lập trình viên, tận hưởng cảm giác một mình và đắm chìm vào sự _tập trung_.
 
 ## Lập trình viên với sếp
 
@@ -48,11 +48,11 @@ Khi tôi xử lý được 1 lỗi, nó giống như giành được chiến th�
 
 Tôi học được vài thứ ngày hôm đó. Làm việc với đam mê là một điều tuyệt vời. Nhưng đồng thời cũng nên để mắt đến mục tiêu của người đang trả lương cho bạn.
 
-Trách nhiệm đầu tiên của một lập trình viên chuyên nghiệp là hoàn thành các yêu cầu của người sử dụng lao động. Tức là kết hợp với các quản lý, phân tích nghiệp vụ , tester, và các thành viên khác trong team để có được sự _thấu hiểu_ về mục tiêu nghiệp vụ. Điều đó không có nghĩa là bạn cần trở thành một người làm nghiệp vụ kinh doanh. Nó có nghĩa là bạn cần hiểu những dòng code bạn viết ra để làm gì, và làm cách nào công ty/người sử dụng lao động được hưởng lợi từ nó.
+Trách nhiệm đầu tiên của một lập trình viên chuyên nghiệp là hoàn thành các yêu cầu của người sử dụng lao động. Tức là kết hợp với các quản lý, phân tích nghiệp vụ, tester, và các thành viên khác trong nhóm để có được sự _thấu hiểu_ về mục tiêu nghiệp vụ. Điều đó không có nghĩa là bạn cần trở thành một người làm nghiệp vụ kinh doanh. Nó _có nghĩa_ là bạn cần hiểu những dòng code bạn viết ra để làm gì, và làm cách nào công ty/người sử dụng lao động được hưởng lợi từ nó.
 
-Điều tệ nhất một lập trình viên chuyên nghiệp có thể làm là hạnh phúc vùi mình trong ngôi mộ công nghệ khi xung quanh anh/cô ta công việc kinh doanh sụp đổ và bùng cháy. _Việc_ của bạn là giữ cho doanh nghiệp phát triển.
+Điều tệ nhất một lập trình viên chuyên nghiệp có thể làm là hạnh phúc vùi mình trong ngôi mộ công nghệ khi xung quanh họ công việc kinh doanh sụp đổ và bùng cháy. _Việc_ của bạn là giữ cho doanh nghiệp phát triển.
 
-Vậy nên, lập trình viên chuyên nghiệp dành thời gian để tìm hiểu về nghiệp vụ. Trò chuyện với người dùng về phần mềm mà họ đang sử dụng. Trò chuyện với quản lý để hiểu được mục tiêu ngắn hạn và dài hạn của team.
+Vậy nên, lập trình viên chuyên nghiệp dành thời gian để tìm hiểu về nghiệp vụ. Trò chuyện với người dùng về phần mềm mà họ đang sử dụng. Trò chuyện với sale và maketing về những vấn đề và khó khăn họ gặp phải. Trò chuyện với quản lý để hiểu được mục tiêu ngắn hạn và dài hạn của team.
 
 Tóm lại, họ quan tâm đến con tàu mà họ đang chèo lái.
 
@@ -60,7 +60,7 @@ Lần duy nhất tôi bị sa thải khỏi công việc lập trình vào năm 
 
 Về lý thuyết, đây là một công việc đầy thử thách và thú vị. Kiến trúc của System/7 rất hấp dẫn, và bản thân hệ thống tự động hóa của nhà máy cũng rất thú vị.
 
-Chúng tôi cũng có một team rất tốt. Trưởng nhóm, John, có năng lực và cầu tiến. Hai thành viên khác trong team cũng rất vui vẻ và đắc lực. Chúng tôi có một phòng thí nghiệm dành riêng cho dự án và tất cả làm việc trong phòng thí nghiệm đó. Đối tác kinh doanh cũng tham gia và làm việc ở đó với chúng tôi. Quản lý của chúng tôi, Ralph, người có năng lực, tập trung và có trách nhiệm.
+Chúng tôi cũng có một nhóm rất tốt. Trưởng nhóm, John, có năng lực và cầu tiến. Hai thành viên khác trong nhóm cũng rất vui vẻ và đắc lực. Chúng tôi có một phòng thí nghiệm dành riêng cho dự án và tất cả làm việc trong phòng thí nghiệm đó. Đối tác kinh doanh cũng tham gia và làm việc ở đó với chúng tôi. Quản lý của chúng tôi, Ralph, người có năng lực, tập trung và có trách nhiệm.
 
 Mọi thứ lẽ ra phải tuyệt vời. Vấn đề là ở tôi. Tôi hoàn toàn đủ tâm huyết với dự án, với công nghệ đang sử dụng, nhưng ở tuổi 24, tôi đơn giản là không quan tâm đến doanh nghiệp hoặc cấu trúc chính sách nội bộ của nó.
 
@@ -68,9 +68,9 @@ Tôi mắc lỗi ngay ngày đầu tiên. Tôi xuất hiện mà không đeo cà
 
 Tôi không thể nói cho bạn biết tôi khó chịu đến mức nào. Nó thực sự làm tôi thấy phiền. Tôi đeo cà vạt hằng ngày, và tôi ghét nó. Nhưng tại sao? Tôi biết tôi đang ở đâu. Tôi biết những quy tắc đã được thông qua. Tại sao tôi lại khó chịu như vậy? Bởi vì tôi là một đứa trẻ ích kỷ và tự ái.
 
-Tôi thường xuyên không đi làm đúng giờ. Và tôi nghĩ nó không quan trọng. Rút cục, tôi đang _làm tốt_ công việc. Và đó là sự thật, tôi đã làm rất tốt việc viết các chương trình của mình. Tôi dễ dàng trở thành lập trình viên có kỹ thuật giỏi nhất trong nhóm. Tôi có thể viết code nhanh hơn và tốt hơn những người khác. Tôi có thể chuẩn đoán và giải quyết vấn đề nhanh hơn. Tôi _biết_ tôi có giá trị. Vì vậy, thời gian và ngày tháng không quan trọng với tôi.
+Tôi thường xuyên không đi làm đúng giờ. Và tôi nghĩ nó không quan trọng. Rút cục, tôi đang "làm tốt công việc". Và đó là sự thật, tôi đã làm rất tốt việc viết các chương trình của mình. Tôi dễ dàng trở thành lập trình viên có khả năng kỹ thuật giỏi nhất trong nhóm. Tôi có thể viết code nhanh hơn và tốt hơn những người khác. Tôi có thể chuẩn đoán và giải quyết vấn đề nhanh hơn. Tôi _biết_ tôi có giá trị. Vì vậy, thời gian và ngày tháng không quan trọng với tôi.
 
-Quyết định sa thải tôi được đưa ra vào ngày tôi không đến đúng giờ cho một cột mốc quan trọng. Rõ ràng là John đã nói với chúng tôi rằng anh ta cần bản demo những chức năng hoạt động vào thứ 2 tuần sau. Chắc chắn là tôi biết điều đó, nhưng đơn giản là ngày tháng không quan trọng với tôi.
+Quyết định sa thải tôi được đưa ra vào ngày tôi không đến đúng giờ cho một cột mốc quan trọng. Rõ ràng là John đã nói với chúng tôi rằng anh ta cần bản thử nghiệm cho những chức năng đang hoạt động vào thứ 2 tuần sau. Chắc chắn là tôi biết điều đó, nhưng đơn giản là ngày tháng không quan trọng với tôi.
 
 Chúng tôi đang trong giai đoạn phát triển tích cực. Hệ thống không ở trạng thái đưa vào sử dụng. Không có lý do gì để hệ thống chạy khi không có ai ở phòng thí nghiệm. Tôi phải là người cuối cùng rời khỏi đó vào thứ 6, và rõ ràng là tôi đã để hệ thống ở trạng thái không hoạt động. Thực tế thứ 2 là ngày quan trọng không hề lưu lại trong não của tôi.
 
