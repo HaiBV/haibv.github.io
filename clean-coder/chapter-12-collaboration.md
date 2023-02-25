@@ -72,23 +72,23 @@ Tôi thường xuyên không đi làm đúng giờ. Và tôi nghĩ nó không qu
 
 Quyết định sa thải tôi được đưa ra vào ngày tôi không đến đúng giờ cho một cột mốc quan trọng. Rõ ràng là John đã nói với chúng tôi rằng anh ta cần bản thử nghiệm cho những chức năng đang hoạt động vào thứ 2 tuần sau. Chắc chắn là tôi biết điều đó, nhưng đơn giản là ngày tháng không quan trọng với tôi.
 
-Chúng tôi đang trong giai đoạn phát triển tích cực. Hệ thống không ở trạng thái đưa vào sử dụng. Không có lý do gì để hệ thống chạy khi không có ai ở phòng thí nghiệm. Tôi phải là người cuối cùng rời khỏi đó vào thứ 6, và rõ ràng là tôi đã để hệ thống ở trạng thái không hoạt động. Thực tế thứ 2 là ngày quan trọng không hề lưu lại trong não của tôi.
+Chúng tôi đang trong giai đoạn phát triển. Hệ thống không ở trạng thái sản phẩm. Không có lý do gì để hệ thống chạy khi không có ai ở phòng thí nghiệm. Tôi phải là người cuối cùng rời khỏi đó vào thứ 6, và rõ ràng là tôi đã để hệ thống ở trạng thái không hoạt động. Thực tế rằng thứ 2 là ngày quan trọng không hề lưu lại trong não của tôi.
 
-Tôi đến muộn 1h vào thứ 2, và thấy mọi người đang ủ rũ tụ tập quanh hệ thống đang không hoạt động. John hỏi tôi: "Tại sao hôm nay hệ thống không hoạt động, Bob?" Tôi trả lời: "Tôi không biết". Và tôi ngồi xuống để debug nó. Tôi vẫn không nhờ gì về bản demo ngày thứ 2, nhưng với ngôn ngữ cơ thể thì mọi người đều biết rằng có điều gì đó không ổn. Sau đó, John đến và nói nhỏ với tôi: "Điều gì sẽ xảy ra nếu Stenberg quyết định đến thăm?" và bỏ đi trong sự chán ghét.
+Tôi đến muộn 1h vào thứ 2, và thấy mọi người đang ủ rũ tụ tập quanh hệ thống không hoạt động. John hỏi tôi: "Tại sao hôm nay hệ thống không hoạt động, Bob?" Tôi trả lời: "Tôi không biết". Và tôi ngồi xuống để gỡ lỗi cho nó. Tôi vẫn không nhớ gì về bản thử nghiệm ngày thứ 2, nhưng với ngôn ngữ cơ thể của mọi người thì tôi biết rằng có điều gì đó không ổn. Sau đó, John đến và nói nhỏ với tôi: "Điều gì sẽ xảy ra nếu Stenberg quyết định đến thăm?" và bỏ đi trong sự chán ghét.
 
-Stenberg là phó giám đốc phụ trách mảng tự động hóa. Bây giờ gọi là CIO (Giám đốc thông tin - Chief Information Officer). Câu hỏi không có ý nghĩa gì với tôi cả. "Thì sao chứ?" Tôi nghĩ. "Hệ thống chưa đưa vào sử dụng, có vấn đề gì to tát đâu?"
+Stenberg là phó giám đốc phụ trách mảng tự động hóa. Ngày nay chúng ta gọi là CIO (Giám đốc thông tin - Chief Information Officer). Câu hỏi đó không có ý nghĩa gì với tôi cả. "Thì sao chứ?" Tôi nghĩ. "Hệ thống chưa đưa vào sử dụng, có vấn đề gì to tát đâu?"
 
-Tôi nhận bức thư cảnh cáo đầu tiên ngay ngày hôm đó. Yêu cầu tôi phải thay đổi thái độ làm việc ngay lập tức hoặc "thôi việc sớm". Tôi thức sự hốt hoảng!
+Tôi nhận thư cảnh cáo đầu tiên ngay ngày hôm đó. Yêu cầu tôi phải thay đổi thái độ làm việc ngay lập tức hoặc "sẽ sớm bị thôi việc". Tôi thức sự hốt hoảng!
 
 Tôi dành thời gian xem xét lại hành động của mình và bắt đầu nhận ra những gì mình đã làm sai. Tôi nói chuyện với John và Ralph về điều đó. Tôi quyết tâm thay đổi bản thân và công việc của mình.
 
-Và tôi đã làm được! Tôi không đi làm muộn nữa. Tôi bắt đầu chú ý đến chính sách nội bộ. Tôi bắt đầu hiểu tại sao John lại lo lắng về Stenberg. TÔi nhận ra tình huống tồi tệ mà tôi đã đưa anh ta vào khi hệ thống không hoạt động vào thứ Hai.
+Và tôi đã làm được! Tôi không đi làm muộn nữa. Tôi bắt đầu chú ý đến chính sách nội bộ. Tôi bắt đầu hiểu tại sao John lại lo lắng về Stenberg. Tôi nhận ra tình huống tồi tệ mà tôi đã đưa anh ta vào khi hệ thống không hoạt động vào thứ Hai.
 
-Nhưng đã quá trễ. Mọi thứ đã an bài. Tôi nhận được thư cảnh cáo thứ 2 một tháng sau đó cho một lỗi nhỏ tôi mắc phải. Thời điểm đó, tôi lẽ ra phải nhận ra rằng những lá thư chỉ là vấn đề hình thức và quyết định chấm dứt hợp đồng với tôi đã được đưa ra. Nhưng tôi vấn quyết tâm giải cứu tình hình. Vì vậy, tôi đã làm việc chăm chỉ hơn nữa.
+Nhưng đã quá trễ. Mọi thứ đã an bài. Tôi nhận được thư cảnh cáo thứ 2 một tháng sau đó cho một lỗi không quan trọng mà tôi mắc phải. Thời điểm đó, tôi lẽ ra phải nhận ra rằng những lá thư chỉ là vấn đề hình thức và quyết định chấm dứt hợp đồng với tôi đã được đưa ra. Nhưng tôi vẫn quyết tâm giải cứu tình hình. Vì vậy, tôi đã làm việc chăm chỉ hơn nữa.
 
 Tôi bị cho nghỉ việc vài tuần sau đó.
 
-Ngày hôm đó, tôi trở về nhà nói với người vợ 22 tuổi đang mang thai của mình rằng tôi đã bị sa thải. Đó là trải nghiệm tôi không bao giờ muốn lặp lại.
+Ngày hôm đó, tôi trở về nhà với người vợ 22 tuổi đang mang thai của mình và phải nói với cô ấy rằng tôi đã bị sa thải. Đó là trải nghiệm tôi không bao giờ muốn lặp lại.
 
 ## Lập trình viên với lập trình viên
 
@@ -96,13 +96,13 @@ Các lập trình viên thường gặp khó khăn khi làm việc cùng với n
 
 ### Cá nhân sở hữu code
 
-Một trong những dấu hiệu tồi tệ nhất của một team rối loạn là khi mỗi lập trình viên xây dựng một bức tường xung quanh code của mình và từ chối để các lập trình viên khác động vào nó. Tôi đã gặp những team nơi mà các lập trình viên thậm chí còn không cho xem mã của nhau. Đây là công thức dẫn đến thảm họa.
+Một trong những dấu hiệu tồi tệ nhất của một nhóm rối loạn là khi mỗi lập trình viên xây dựng một bức tường xung quanh code của _chính mình_ và từ chối để các lập trình viên khác động vào nó. Tôi đã gặp những nhóm nơi mà các lập trình viên thậm chí còn không cho xem code của nhau. Đây là công thức dẫn đến thảm họa.
 
 Trong một lần tư vấn cho một công ty chế tạo máy in cao cấp. Những chiếc máy đó có nhiều thành phần khác nhau như là bộ nạp, máy in, xếp chồng, kim bấm, máy cắt .v.v. Những thiết bị này có giá trị thị trường khác nhau. Bộ nạp giấy quan trọng hơn bộ xếp giấy và không có gì quan trọng hơn máy in.
 
-Mỗi lập trình viên sẽ làm việc trên thiết bị của mình. Một người sẽ viết code cho bộ nạp, một người khác sẽ viết code cho kim bấm. Mỗi người trong số họ giữ công nghệ của riêng mình và ngăn không có bất kỳ ai khác chạm vào code của họ. Mức độ quan trọng của thiết bị gây nên những ảnh hưởng trực tiếp đến lập trình viên. Lập trình viên làm việc với máy in là không thể thay thế.
+Mỗi lập trình viên sẽ làm việc trên thiết bị của _chính mình_. Một người sẽ viết code cho bộ nạp, một người khác sẽ viết code cho kim bấm. Mỗi người trong số họ giữ công nghệ của riêng mình và ngăn không có bất kỳ ai khác chạm vào code của nhau. Mức độ quan trọng của thiết bị gây nên những ảnh hưởng trực tiếp đến lập trình viên. Lập trình viên làm việc với máy in là không thể thay thế.
 
-Đây là một thảm họa công nghê. Với tư cách là một nhà tư vấn, tôi có thể thấy có một sự trùng lặp lớn trong code và giao diện giữa các mô đun hoàn toàn bị lệch. Nhưng tôi không có lý lẽ nào để thuyết phục các lập trình viên (hoặc doanh nghiệp) thay đổi cách làm của họ. Rốt cuộc, đánh giá lương của họ gắn liền với tầm quan trọng của các thiết bị mà họ đang nắm giữ.
+Đây là một thảm họa về công nghệ. Với tư cách là một nhà tư vấn, tôi có thể thấy có một sự trùng lặp lớn trong code và giao diện giữa các mô đun hoàn toàn bị lệch. Nhưng tôi không có lý lẽ nào để thuyết phục các lập trình viên (hoặc doanh nghiệp) thay đổi cách làm của họ. Rốt cuộc, đánh giá lương của họ gắn liền với tầm quan trọng của các thiết bị mà họ đang nắm giữ.
 
 ### Sở hữu tập thể
 
