@@ -38,27 +38,27 @@ Một trong các thành viên trong nhóm có thể đóng vai trò huấn luy�
 
 ### Sôi nổi
 
-Cần có thời gian để một nhóm như vậy tìm ra sự khác biệt giữa họ, thống nhất với nhau và thực sự gắn kết. Có thể mất đến 6 tháng, thậm chí 1 năm. Nhưng một khi nó xảy ra, đó là một điều kỳ diệu. Một team gắn kết sẽ cùng nhau lập kế hoạch, cùng nhau giải quyết vấn đề, cùng nhau đối mặt với khó khăn và khiến _mọi thứ hoạt động_.
+Cần có thời gian để một nhóm như vậy tìm ra sự khác biệt giữa họ, thống nhất với nhau và thực sự gắn kết. Có thể mất đến 6 tháng, thậm chí 1 năm. Nhưng một khi nó xảy ra, đó là một điều kỳ diệu. Một nhóm gắn kết sẽ cùng nhau lập kế hoạch, cùng nhau giải quyết vấn đề, cùng nhau đối mặt với khó khăn và khiến _mọi thứ hoạt động_.
 
-Một khi nó xảy ra, thật là lố bịch khi phá vỡ team chỉ vì dự án kết thúc. Tốt nhất là giữ team đó lại với nhau và tiếp tục giao những dự án khác.
+Một khi nó xảy ra, thật là lố bịch khi phá vỡ nhóm chỉ vì dự án kết thúc. Tốt nhất là giữ nhóm đó lại và tiếp tục giao những dự án khác.
 
-### Điều gì sẽ có trước, Team hay Dự án?
+### Điều gì sẽ có trước, Nhóm hay Dự án?
 
-Ngân hàng và các công ty bảo hiểm cố gắng thành lập các nhóm xung quanh dự án. Đó là một cách làm ngốc nghếch. Những team đó không thể gắn kết. Các cá nhân chỉ tham gia dự án trong một thời gian ngắn, và chỉ trong 1% thời gian của họ, và do đó không bao giờ học được cách làm việc với nhau.
+Ngân hàng và các công ty bảo hiểm cố gắng thành lập các nhóm xung quanh dự án. Đó là một cách làm ngốc nghếch. Những nhóm đó không thể gắn kết. Các cá nhân chỉ tham gia dự án trong một thời gian ngắn, và chỉ trong 1% thời gian của họ, và do đó sẽ không bao giờ học được cách làm việc với nhau.
 
 Các tổ chức phát triển chuyên nghiệp phân bổ dự án cho các nhóm đã gắn kết hiện có, họ không thành lập nhóm xung quanh các dự án. Một nhóm gắn kết có thể chấp nhận nhiều dự án đồng thời và sẽ phân chia công việc theo ý kiến, kỹ năng của riêng họ. Nhóm gắn kết sẽ hoàn thành các dự án.
 
 ### Nhưng làm thế nào bạn quản lý được việc đó?
 
-Các team đều có vận tốc. Vận tốc của một team hiểu đơn giản là khối lượng công việc đọi đó có thể hoàn thành trong một khoảng thời gian cố định. Một số team đo vận tốc của họ bằng _point_ mỗi tuần, với _point_ là đơn vị cho mức độ phức tạp. Họ chi nhỏ các chức năng của những dự án họ thực hiện và ước tính chúng theo point. Sau đó, họ đo xem họ hoàn thành được bao nhiêu point mỗi tuần.
+Các nhóm đều có vận tốc (velocites) riêng. Vận tốc của một nhóm hiểu đơn giản là khối lượng công việc có thể hoàn thành trong một khoảng thời gian cố định. Một số nhóm đo vận tốc của họ bằng _điểm (point)_ mỗi tuần, với điểm là đơn vị cho mức độ phức tạp. Họ chia nhỏ các chức năng của những dự án họ thực hiện và ước tính chúng theo điểm. Sau đó, họ đo xem họ hoàn thành được bao nhiêu điểm mỗi tuần.
 
-Vận tốc là một thước đo thống kê. Một team có thể hoàn thành 38 point một tuần, 42 point trong tuần tiếp theo, và 25 point trong tuần kế tiếp. Giá trị này sẽ được tính trung bình theo thời gian.
+Vận tốc là một thước đo thống kê. Một nhóm có thể hoàn thành 38 điểm một tuần, 42 điểm trong tuần tiếp theo, và 25 điểm trong tuần kế tiếp. Giá trị này sẽ được tính trung bình theo thời gian.
 
-Ban quản lý có thể đặt mục tiêu cho từng dự án được giao cho team. Ví dụ, nếu vận tốc trung bình của team là 50 và họ đang làm việc trên 3 dự án, ban quản lý có thể yêu cầu team chia công sức của họ thành 15, 15 và 20.
+Ban quản lý có thể đặt mục tiêu cho từng dự án được giao cho nhóm. Ví dụ, nếu vận tốc trung bình của nhóm là 50 và họ đang làm việc trên 3 dự án, ban quản lý có thể yêu cầu nhóm chia công sức của họ thành 15, 15 và 20.
 
-Bên cạnh việc có một team gắn kết làm việc với những dự án của bạn, lợi thế của việc lên kế hoạch này là trong trường hợp khẩn cấp, khách hàng có thể nói: "Dự án B đang rơi vào khủng hoảng; dành 100% công sức của bạn cho dự án đó trong 3 tuần tới"
+Bên cạnh việc có một nhóm gắn kết làm việc với những dự án của bạn, lợi thế của việc lên kế hoạch này là trong trường hợp khẩn cấp, khách hàng có thể nói: "Dự án B đang rơi vào khủng hoảng; dành 100% công sức của bạn cho dự án đó trong 3 tuần tới"
 
-Việc phân bổ lại mức ưu tiên một cách nhanh chóng hầu như không thể với các team xuất phát từ máy xay sinh tốt, nhưng với team gắn kết đang thực hiện 2 hoặc 3 dự án đồng thời có thể giúp ích rất nhiều.
+Việc phân bổ lại mức ưu tiên một cách nhanh chóng gần như là không thể với các nhóm xuất phát từ cái máy xay sinh tố, nhưng với nhóm gắn kết đang thực hiện 2 hoặc 3 dự án đồng thời có thể giúp ích rất nhiều.
 
 ### Sự khó xử của chủ dự án
 
