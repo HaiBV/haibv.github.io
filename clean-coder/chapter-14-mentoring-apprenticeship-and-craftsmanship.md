@@ -28,17 +28,17 @@ Và có một vấn đề khác. Ngay cả những tấm bằng của chương t
 
 ## Cố vấn
 
-Cách chúng ta học lập trình như thế nào? Hãy để tôi kể cho bạn nghe câu chuyện của tôi về việc được cố vấn.
+Làm thế nào để chúng ta học lập trình? Hãy để tôi kể cho bạn nghe câu chuyện về những cố vấn đầu tiên tôi nhận được.
 
-### Digi-Comp 1, Máy tính đầu tiên
+### Digi-Comp 1, Máy tính đầu tiên của tôi
 
-Năm 1964, mẹ tôi tặng tôi một chiếc máy tính nhỏ bằng nhựa vào sinh nhật thứ 12 của tôi. Tôi gọi nó là Digi-Comp 1. Nó có 3 flip-flops bằng nhựa và sáu chân kết nối nhựa. Bạn có thể kết nối đầu ra của flip-flops với đầu vào của chân kết nối. Bạn cũng có thể kết nối đâu ra của chân kết nối với đầu vào của flip-flops. Nói tóm lại, điều này cho phép bạn tạo một máy trạng thái hữu hạn ba bit.
+Năm 1964, mẹ tôi tặng tôi một chiếc máy tính nhỏ bằng nhựa vào sinh nhật thứ 12 của tôi. Nó được gọi là Digi-Comp 1. Nó có 3 flip-flops và sáu cổng kết nối đều bằng nhựa. Bạn có thể kết nối đầu ra của flip-flops với đầu vào của cổng kết nối. Bạn cũng có thể kết nối đâu ra của cổng kết nối với đầu vào của flip-flops. Nói tóm lại, nó cho phép bạn tạo một máy trạng thái hữu hạn ba bit.
 
-Bộ dụng cụ đi kèm với hướng dẫn cung cấp cho bạn một số chương trình để chạy. Bạn lập trình bằng cách đẩy các ống nhỏ (các đoạn ống hút ngắn) lên cách chốt nhỏ nhô ra từ đầu flip-flops. Hướng dẫn cho bạn biết chính xác vị trí đặt mỗi ống, nhưng không phải những gì chúng _làm_. Tôi thấy khá là bực bội!
+Bộ dụng cụ đi kèm với hướng dẫn cung cấp cho bạn một số chương trình để chạy. Bạn lập trình chiếc máy bằng cách đẩy các ống nhỏ (các đoạn ống hút ngắn) vào các chốt nhỏ nhô ra từ đầu flip-flops. Sách hướng dẫn cho bạn biết chính xác vị trí đặt mỗi ống, nhưng không phải những gì chúng _làm_. Tôi thấy khá là bực bội!
 
-Tôi nhìn chằm chằm vào cỗ máy hàng giờ liên và tìm hiểu chúng làm những việc đơn giản nhất như thế nào; nhưng tôi không làm được, trong cả cuộc đời mình, tìm cách để nó có thể làm được việc tôi muốn nó làm. Trang cuối cùng của hướng dẫn yêu cầu tôi gửi cho họ 1$ và họ sẽ gửi lại một hướng dẫn về cách trình cỗ máy.
+Tôi quan sát kỹ cỗ máy hàng giờ liền và tìm hiểu chúng làm những việc đơn giản nhất như thế nào; nhưng tôi không thể, kể cả cho đến bây giờ, tìm cách để nó có thể làm được việc tôi muốn nó làm. Trang cuối cùng của hướng dẫn yêu cầu tôi gửi cho họ 1$ và họ sẽ gửi lại một hướng dẫn về cách lập trình cỗ máy.
 
-Tôi gửi tiền đi và chờ đợi với sự thấp thỏm của tuổi 12. Ngày hướng dẫn được gửi đến tôi đã ngấu nghiến nó. Nó là một lý thuyết đơn giản về đại số nhị phân bao gồm tính toán cơ bản của các phương trình nhị phân, luật liên kết và phân phối, và định lý DeMorgan. Hướng dẫn chỉ ra cách diễn đạt một vấn đề dưới dạng một chuỗi các phương trình nhị phân. Nó cũng mô tả làm thế nào để giảm các phương trình đó để phù hợp với 6 đầu ra.
+Tôi gửi tiền đi và chờ đợi với sự thấp thỏm của tuổi 12. Ngày mà sách hướng dẫn được gửi đến tôi đã ngấu nghiến nó. Nó là một lý thuyết đơn giản về đại số nhị phân bao gồm tính toán cơ bản của các phương trình nhị phân, luật liên kết và phân phối, và định lý DeMorgan. Sách hướng dẫn chỉ ra cách diễn đạt một vấn đề dưới dạng một chuỗi các phương trình nhị phân. Nó cũng mô tả làm thế nào để giảm các phương trình đó để phù hợp với 6 cổng kết nối.
 
 Tôi đã hoàn thành chương trình đầu tiên của mình. Tôi vẫn còn nhớ tên của nó: Mr. Patternson's Computerized Gate. Tôi viết những phương trình, rút gọn chúng và ghép chúng vào các ống và chốt của máy. _Và nó đã hoạt động!_
 
@@ -48,15 +48,15 @@ Bạn có nhớ được khoảnh khắc chương trình đầu tiên của bạ
 
 Tôi không tự khám phá ra khoảnh khắc đó. Tôi đã được cố vấn. Một số người rất tốt bụng và rất lão luyện (người tôi mang một món nợ ân tình lớn) đã dành thời gian để viết lý thuyết về đại số nhị phân cho một đứa trẻ 12 tuổi có thể hiểu được. Họ kết nối lý thuyết toán học với một chiếc máy tính nhỏ bằng nhựa và trao quyền cho tôi để làm cho chiếc máy tính đó làm những gì tôi muốn.
 
-Tôi vừa mở bản sao của cuốn sổ tay định mệnh đó. Tôi giữ nó trong một chiếc túi khóa zip. Tuy năm tháng đã khiến giấy bị ố vàng và trở nên giòn. Nhưng sức mạnh từ lời nói vẫn tỏa ra từ chúng. Sự thanh lịch của những dòng mô tả về đại số nhị phân đã tiêu tốn 3 trang thưa thớt. Việc xem qua từng bước của họ về các phương trình cho mỗi phương trình vẫn còn hấp dẫn như lần đầu tiên. Đó là một công việc bậc thầy. Đó là một tác phẩm đã thay đổi cuộc đời của ít nhất một người đàn ông trẻ tuổi. Tuy nhiên, tôi nghi nhờ rằng tôi sẽ khong bao giờ biết đến tên của tác giả.
+Tôi vừa mở bản sao của cuốn sổ tay định mệnh đó. Tôi giữ nó trong một chiếc túi khóa zip. Tuy năm tháng đã khiến giấy bị ố vàng và trở nên giòn. Nhưng sức mạnh của những lời nói vẫn tỏa ra từ chúng. Sự thanh lịch của những dòng mô tả về đại số nhị phân đã nằm trong 3 trang thưa thớt. Việc xem qua từng bước của họ về các phương trình cho mỗi chương trình vẫn còn hấp dẫn như lần đầu tiên. Đó là một công việc bậc thầy. Đó là một tác phẩm đã thay đổi cuộc đời của ít nhất một người đàn ông trẻ tuổi. Tuy nhiên, tôi nghi nhờ rằng tôi sẽ khong bao giờ biết đến tên của các tác giả.
 
 ### Chiếc ECP-18 năm trung học
 
-Năm tôi 15 tuổi, là học sinh năm đầu trung học, tôi thích chơi ở khoa toán. (Ngạc nhiên chưa!) Một ngày nọ, họ nhận được một cỗ máy có kích thước băng một chiếc bàn cưa. Đó là một máy tính giáo dục dành cho các trường trung học, được gọi là ECP-18. Trường tôi nhận được một bản demo trong 2 tuần.
+Năm tôi 15 tuổi, là học sinh năm đầu trung học, tôi thích chơi ở khoa toán. (Ngạc nhiên chưa!) Một ngày nọ, họ nhận được một cỗ máy có kích thước bằng một chiếc bàn cưa. Đó là một máy tính giáo dục dành cho các trường trung học, được gọi là ECP-18. Trường tôi được dùng thử nghiệm trong 2 tuần.
 
 Tôi đứng ở hậu trường khi các giáo viên và kỹ thuật viên nói chuyện. Máy tính có một bộ nhớ 15-bit từ (là gì nhỉ?) và 1024-từ trống. (Lúc đó tôi biết bộ nhớ trống là gì, nhưng chỉ trên khái niệm.)
 
-Khi họ bật nguồn, nó tạo ra âm thanh giống như máy bay phản lực đang cất cánh. Tôi đoán rằng đó là bộ nhớ trống đang xoay. Một khi đạt đến tốc độ nhất định, nó khá là yên tĩnh.
+Khi họ bật nguồn, nó tạo ra âm thanh rền rĩ giống như máy bay phản lực đang cất cánh. Tôi đoán rằng đó là bộ nhớ trống đang xoay. Một khi đạt đến tốc độ nhất định, nó khá là yên tĩnh.
 
 Chiếc máy tính rất _đáng yêu_. Về cơ bản, nó là một chiếc bàn văn phòng với một bảng điều khiển kỳ diệu nhô ra từ phía trên như cầu của một con tàu chiến. Bảng điều khiển được tô điểm bởi các dãy đèn cũng là nút bấm. Ngồi ở bàn đó giống như ngồi trên ghế của thuyền trường Kirk.
 
