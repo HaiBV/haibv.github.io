@@ -54,15 +54,15 @@ Tôi vừa mở bản sao của cuốn sổ tay định mệnh đó. Tôi giữ 
 
 Năm tôi 15 tuổi, là học sinh năm đầu trung học, tôi thích chơi ở khoa toán. (Ngạc nhiên chưa!) Một ngày nọ, họ nhận được một cỗ máy có kích thước bằng một chiếc bàn cưa. Đó là một máy tính giáo dục dành cho các trường trung học, được gọi là ECP-18. Trường tôi được dùng thử nghiệm trong 2 tuần.
 
-Tôi đứng ở hậu trường khi các giáo viên và kỹ thuật viên nói chuyện. Máy tính có một bộ nhớ 15-bit từ (là gì nhỉ?) và 1024-từ trống. (Lúc đó tôi biết bộ nhớ trống là gì, nhưng chỉ trên khái niệm.)
+Tôi đứng ở hậu trường khi các giáo viên và kỹ thuật viên nói chuyện. Máy tính có một bộ nhớ 15-bit từ (_từ là gì nhỉ?_) và 1024-từ trống. (Lúc đó tôi biết bộ nhớ trống là gì, nhưng chỉ trên khái niệm.)
 
 Khi họ bật nguồn, nó tạo ra âm thanh rền rĩ giống như máy bay phản lực đang cất cánh. Tôi đoán rằng đó là bộ nhớ trống đang xoay. Một khi đạt đến tốc độ nhất định, nó khá là yên tĩnh.
 
 Chiếc máy tính rất _đáng yêu_. Về cơ bản, nó là một chiếc bàn văn phòng với một bảng điều khiển kỳ diệu nhô ra từ phía trên như cầu của một con tàu chiến. Bảng điều khiển được tô điểm bởi các dãy đèn cũng là nút bấm. Ngồi ở bàn đó giống như ngồi trên ghế của thuyền trường Kirk.
 
-Tôi quan sát kỹ thuật viên ấn những cái nút. Tôi nhận thấy chúng sáng lên khi họ ấn xuống, và họ bấm lần nữa để tắt đi. Tôi cũng nhận thấy rằng một số nút khác họ bấm có tên như _nhập vào (deposit)_ và _chạy (run)_.
+Tôi quan sát kỹ thuật viên ấn những cái nút. Tôi nhận thấy chúng nhô lên khi được ấn, và có thể bấm lần nữa để chúng tắt đi. Tôi cũng nhận thấy rằng một số nút khác họ bấm có tên như _nhập vào (deposit)_ và _chạy (run)_.
 
-Các nút được nhóm lại trên từng hàng, mỗi hàng có 5 cụm, mỗi cụm 3 nút. Máy Digi-Comp của tôi cũng có 3 bit, vì vậy tôi có thế đọc dược chứ số bát phân khi biểu thị dưới dạng nhị phân. Không khó khi nhận ra rằng đay chỉ là 5 chữ số bát phân.
+Các nút được nhóm lại trên từng hàng, mỗi hàng có 5 cụm, mỗi cụm 3 nút. Máy Digi-Comp của tôi cũng có 3 bit, vì vậy tôi có thế đọc dược chứ số bát phân khi biểu thị dưới dạng nhị phân. Không khó khi nhận ra rằng đây chỉ là 5 chữ số bát phân.
 
 Mỗi khi kỹ thuật viên bấm nút tôi có thể nghe thấy họ đang tự lẩm bẩm. Họ sẽ bấm 1,5,2,0,4 trên hàng _bộ nhớ đếm_ khi thầm nói "lưu vào 204". Họ sẽ bấm 1,0,2,1,3 và lẩm bẩm "nạp 213 vào _bộ tích lũy_". Có một hàng nút có tên _bộ tích lũy!_
 
@@ -74,19 +74,19 @@ Chiều hôm đó, trong giờ học, tôi lẻn vào trong phòng thực hành 
 
 Tôi thử với một vài chương trình đơn giản khác tương tự và tất cả đều hoạt động theo kế hoạch. Tôi thấy mình như chủ nhân của vũ trụ!
 
-Những ngày sau đó tôi mới nhận ra mình thật ngốc nghếch, và may mắn biết bao. Tôi tìm thấy một tờ hướng dẫn nằm đâu đó trong phòng thực hành toán. Nó chứa tất cả hướng dẫn và mã lựa chọn khác nhau, cùng với rất nhiều hướng dẫn tôi không học được bằng cách quan sát kỹ thuật viên. Tôi đã rất hài lòng khi tôi giải thích được những điều mà tôi đã biết chính xác và xúc động bởi những thứ khác. Tuy nhiên, một trong những hướng dẫn đó viết bằng HLT. Nó chỉ xảy ra với lệnh tạm dừng là một từ với tất cả số 0. Và điều xảy ra là tôi đã đã đặt một từ với tất cả là số 0 và cuối mỗi chương trình của tôi để tôi có thể tải nó vào bộ tích lũy và xóa nó. Khái niệm tạm dừng đơn giản là không xảy ra với tôi. Tôi chỉ nghĩ rằng chương trình sẽ dừng lại khi nó được thực hiện!
+Những ngày sau đó tôi mới nhận ra mình thật ngốc nghếch, và may mắn biết bao. Tôi tìm thấy một tờ hướng dẫn nằm đâu đó trong phòng thực hành toán. Nó chứa tất cả hướng dẫn và mã lựa chọn khác nhau, cùng với rất nhiều hướng dẫn tôi không học được bằng cách quan sát kỹ thuật viên. Tôi rất hài lòng khi tôi giải thích được những điều mà tôi đã biết chính xác và xúc động bởi những thứ khác. Tuy nhiên, một trong những hướng dẫn đó viết bằng HLT. Nó chỉ xảy ra với lệnh _tạm dừng_ là một từ với tất cả số 0. Và điều xảy ra là tôi đã đã đặt một từ với tất cả là số 0 và cuối mỗi chương trình của tôi để tôi có thể tải nó vào bộ tích lũy và xóa nó. Khái niệm tạm dừng đơn giản là không xảy ra với tôi. Tôi chỉ nghĩ rằng chương trình sẽ dừng lại khi nó được thực hiện!
 
-Tôi nhớ có lần tôi đang ngồi trong phòng thực hành toán quan sát một trong những giáo viên vật lộn để chương trình hoạt động. Ông cố nhập vào 2 số thập phân và in ra tổng của 2 số đó. Bất kỳ ai đã từng viết một chương trình như vậy bằng ngôn ngữ máy trên một máy tính mini đều biết rằng nó không hề tầm thường. Bạn phải đọc các ký tự, chuyển đổi chúng thành số, sau dó sang hệ nhị phân, tính tổng, chuyển đổi ngược lại thành thập phân và mã hóa lại thành ký tự. Và, tin tôi đi, sẽ tệ hơn rất nhiều khi bạn nhập chương trình ở dạng nhị phân thông qua bảng điều khiển.
+Tôi nhớ có lần tôi đang ngồi trong phòng thực hành toán quan sát một trong những giáo viên vật lộn để chương trình hoạt động. Ông cố nhập vào 2 số thập phân và in ra tổng của 2 số đó. Bất kỳ ai đã từng viết một chương trình như vậy bằng ngôn ngữ máy trên một máy tính mini đều biết rằng nó không hề tầm thường. Bạn phải đọc các ký tự, chuyển đổi chúng thành số, rồi sang hệ nhị phân, tính tổng, chuyển đổi ngược lại thành thập phân và mã hóa lại thành ký tự. Và, tin tôi đi, sẽ khó hơn _rất nhiều_ khi bạn nhập chương trình ở dạng nhị phân thông qua bảng điều khiển.
 
-Tôi quan sát giáo viên tạm dừng chương trình của mình và sau đó chạy nó cho đến khi nó dừng lại. (Ồ! Đó là một ý tưởng hay) Điểm ngắt ban đầu này cho phép ông kiểm tra nội dung của các số nhập vào xem chương trình đã làm gì. Tôi nhớ ông đã lẩm bẩm, "Chà, nhanh quá!" Chàng trai, tôi có tin mới cho anh đây.
+Tôi quan sát giáo viên đặt một lệnh nghỉ vào chương trình của anh ta và sau đó chạy cho đến khi chương trình dừng lại. (Ồ! Đó là một ý tưởng hay) Điểm ngắt ban đầu này cho phép ông kiểm tra nội dung của các số nhập vào xem chương trình đã làm gì. Tôi nhớ ông đã lẩm bẩm, "Chà, nhanh quá!" Chàng trai, tôi có tin mới cho anh đây.
 
-Tôi không biết thuật toán của anh ta là gì. Kiểu lập trình đó vẫn còn là điều kỳ diệu với tôi. Và ông không bao giờ nói chuyện với tôi khi tôi quan sát ông. Thực sự, _không ai_ nói chuyện máy tính với tôi. Tôi nghĩ rằng họ coi tôi là một đứa nhóc phiền toái có thể làm ngơ, loanh quanh trong phòng thực hành toán như con thiêu thân. Cần phải nói rằng cả học sinh và giáo viên đều không phát triển được kỹ năng xã hội ở mức độ cao.
+Tôi không biết thuật toán của anh ta là gì. Kiểu lập trình đó vẫn còn là điều kỳ diệu với tôi. Và ông không bao giờ nói chuyện với tôi khi tôi quan sát ông. Thực sự, _không ai_ nói chuyện với tôi về chiếc máy tính đó. Tôi nghĩ rằng họ coi tôi là một đứa nhóc phiền toái có thể làm ngơ, loanh quanh trong phòng thực hành toán như con thiêu thân. Cần phải nói rằng cả học sinh và giáo viên đều không phát triển được kỹ năng xã hội ở mức độ cao.
 
-Đến cuối cùng chương trình cũng hoạt động. Thực kinh ngạc khi quan sát. Thầy chậm chạp đánh vào 2 số bởi vì chiếc máy tính đó không được nhanh lắm, mặc dù đã phản đối trước đó (hãy nghĩ đến việc đọc các từ liên tiếp từ một cái trống quay vào năm 1967). Khi thầy nhập xong số thứ 2 và bấm enter, máy tính nhấp nháy dữ dội 1 chút và in ra kết quả sau đó. Nó mất khoảng 1s cho mỗi chữ số. Nó in ra tất cả trừ chữ số cuối cùng, nhấp nháy dữ dội hơn trong 5s, sau đó in chữ số cuối cùng và dừng lại.
+Đến cuối cùng chương trình cũng hoạt động. Thực kinh ngạc khi quan sát. Thầy chậm chạp đánh vào 2 số bởi vì chiếc máy tính đó _không được_ nhanh lắm, mặc dù đã phản đối trước đó (hãy nghĩ đến việc đọc các từ liên tiếp từ một cái trống quay vào năm 1967). Khi thầy nhập xong số thứ 2 và bấm enter, máy tính nhấp nháy dữ dội 1 chút và in ra kết quả sau đó. Nó mất khoảng 1s cho mỗi chữ số. Nó in ra tất cả trừ chữ số cuối cùng, nhấp nháy dữ dội hơn trong 5s, sau đó in chữ số cuối cùng và dừng lại.
 
-Tại sao lại tạm dừng trước chữ số cuối cùng? Tôi không bao giờ biết được. Nhưng nó khiến tôi nhận ra rằng cách tiếp cận một vấn đề có thể ảnh hưởng sâu sắc đến người dùng. Ngay cả khi chương trình đưa ra câu trả lời chính xác, nhưng vẫn có điều gì đó không ổn với nó.
+Tại sao lại tạm dừng trước chữ số cuối cùng? Tôi không bao giờ biết được. Nhưng nó khiến tôi nhận ra rằng cách tiếp cận một vấn đề có thể ảnh hưởng sâu sắc đến người dùng. Ngay cả khi chương trình đưa ra câu trả lời chính xác, nhưng _vẫn_ có điều gì đó không ổn với nó.
 
-Đó chính là cố vấn. Chắc chắn đó không phải là kiểu cố vấn mà tôi có thể hy vọng. Sẽ thật tuyệt nếu một trong những giáo viên đó đã dẫn dắt tôi và làm việc với tôi. Nhưng điều đó không thành vấn đề, bởi vì tôi đã quan sát họ và học với một tốc độ điên cuồng.
+Đó chính là cố vấn. Chắc chắn đó không phải là kiểu cố vấn mà tôi có thể hy vọng. Sẽ thật tuyệt nếu một trong những giáo viên đó có thể dẫn dắt tôi và làm việc với tôi. Nhưng điều đó không thành vấn đề, bởi vì tôi đã _quan sát_ họ và học với một tốc độ điên cuồng.
 
 ## Sự cố vấn độc đáo
 
