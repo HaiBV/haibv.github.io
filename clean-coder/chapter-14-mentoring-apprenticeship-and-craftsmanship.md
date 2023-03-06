@@ -112,29 +112,29 @@ Cuối cùng, tôi đã sống sót và có thành tựu. Nhưng sẽ phải có
 
 ## Học việc
 
-Các bác sỹ làm việc gì? Bạn có nghĩ rằng các bệnh viện thuê sinh viên mới tốt nghiệp y khoa rồi ném họ vào phòng phẫu thuật tim trong ngày đầu tiên đi làm? Tất nhiên là không.
+Công việc của bác sỹ là gì? Bạn có nghĩ rằng các bệnh viện thuê sinh viên Y khoa mới tốt nghiệp rồi ném họ vào phòng phẫu thuật tim trong ngày đầu tiên đi làm? Tất nhiên là không.
 
-Ngành y đã phát triển một kỹ luật cố vấn căng thẳng tuân theo nghi lễ và bôi trơn bằng truyền thống. Ngành y tế giám sát các trường đại học và đảm bảo sinh viên tốt nghiệp có nền giáo dục tốt nhất. Việc giáo dục liên quan đến khối lượng học tập trên lớp và hoạt động lâm sàng tương đương khi làm việc với các chuyên gia trong các bệnh viện.
+Ngành y phát triển kỷ luật về cố vấn đầy căng thẳng bên dưới những lễ nghi và truyền thống. Họ giám sát các trường đại học và đảm bảo sinh viên tốt nghiệp có được sự đào tạo tốt nhất. Việc đào tạo bao gồm khối lượng tương đương giữa kiến thức học tập trên lớp và hoạt động lâm sàng ở bệnh viện khi làm việc cùng các chuyên gia.
 
-Khi tốt nghiệp, và trước khi họ có chứng chỉ, các bác sỹ mới toanh được yêu cầu dành 1 năm trong thực tế có giám sát và đào tạo được gọi là thực tập. Đây là quá trình đào tạo theo công việc căng thẳng. Sinh viên thực tập được bao quanh bởi giáo viên và các hình mẫu.
+Khi tốt nghiệp, và trước khi họ có chứng chỉ, các bác sỹ mới toanh bắt buộc phải dành 1 năm thực tế được giám sát và đào tạo, gọi là thực tập sinh. Đây là quá trình đào tạo theo công việc căng thẳng. Thực tập sinh được bao quanh bởi giáo viên và các hình mẫu.
 
-Sau khi thời gian thực tập sinh kết thúc, mỗi chuyên ngành y tế yêu cầu thêm từ 3 đến 5 năm thực hành và đào tạo có giám sát được gọi là nội trú. Bác sỹ nội trú có được sự tự tin bằng cách đảm nhận những trách nhiệm lớn hơn bao giờ hết trong khi vẫn được bao quanh và giám sát bởi các bác sỹ nhiều kinh nghiệm.
+Sau khi thời gian thực tập sinh kết thúc, mỗi chuyên ngành y tế yêu cầu thêm từ 3 đến 5 năm thực hành và đào tạo được giám sát, gọi là nội trú. Bác sỹ nội trú có được sự tự tin bằng cách đảm nhận những trách nhiệm lớn hơn bao giờ hết trong khi vẫn được bao quanh và giám sát bởi các bác sỹ cấp cao nhiều kinh nghiệm.
 
-Rất nhiều chuyên ngành yêu cầu thêm 1 đến 3 năm nghiên cứu sinh trong đó sinh viên tiếp tục đào tạo chuyên ngành và thực hành có giám sát.
+Rất nhiều chuyên ngành yêu cầu thêm 1 đến 3 năm nghiên cứu sinh trong đó sinh viên tiếp tục được đào tạo chuyên ngành và thực hành có giám sát.
 
-Và _sau đó_ họ đủ điều kiện tham gia các kỳ thi của họ và được chứng nhận bởi hội đồng thi.
+Và _sau đó_ họ đủ điều kiện tham gia các kỳ thi và được chứng nhận bởi hội đồng thi.
 
-Mô tả này về nghề y hơi được lý tưởng hóa, và có lẽ không hoàn toàn chính xác. Nhưng thực tế vẫn là khi mức độ rủi ro cao, chúng ta không đưa sinh viên mới tốt nghiệp vào một phòng, thỉnh thoảng ném thịt vào, và mong điều tốt đẹp sẽ xuất hiện. Vậy tại sao chúng ta làm việc này với phần mềm?
+Mô tả trên về nghề Y phần nào đã được lý tưởng hóa, và có lẽ không hoàn toàn chính xác. Nhưng thực tế vẫn là với mức độ rủi ro cao, chúng ta không đưa sinh viên mới tốt nghiệp vào một phòng, thỉnh thoảng ném thịt vào, và mong điều tốt đẹp xảy ra. Vậy tại sao chúng ta làm việc này với ngành phần mềm?
 
-Đúng là có tương đối ít trường hợp tử vong do lỗi phần mềm. Nhưng nó gây ra những thiệt hại đáng kể về tiền. Các công ty mất một số tiền lớn do đào tạo không đầy đủ các lập trình viên của họ.
+Đúng là có tương đối ít trường hợp tử vong do lỗi phần mềm. Nhưng nó _gây ra_ những thiệt hại tài chính đáng kể. Các công ty mất những số tiền lớn do đào tạo không đầy đủ lập trình viên của họ.
 
-Bằng một cách nào đó, ngành phát triển phần mềm có ý tưởng rằng lập trình viên là lập trình viên, và một khi bạn tốt nghiệp, bạn có thể code. Thực vậy, nó không phải là chuyện hiếm gặp khi các công ty tuyển những đứa nhóc mới rời ghế nhà trường, xây dựng họ thành một "team", và yêu cầu xây dựng những hệ thống quan trọng nhất. Thật điên rồ!
+Bằng một cách nào đó, ngành phát triển phần mềm có ý tưởng rằng lập trình viên là lập trình viên, và một khi bạn tốt nghiệp, bạn có thể code. Trên thực tế, đó không phải chuyện hiếm gặp khi các công ty tuyển những đứa nhóc mới rời ghế nhà trường, xây dựng họ thành những "nhóm", và yêu cầu chúng xây dựng những hệ thống quan trọng nhất. Thật điên rồ!
 
-Họa sỹ không làm vậy. Thợ sửa ống nước không làm vậy. Thợ điện không. Chết tiệt, tôi thậm chí không nghĩ rằng những người nấu món ăn nhanh có thể làm vậy. Đối với tôi, các công ty thuê sinh viên tốt nghiệp khoa học máy tính phải đầu tư nhiều hơn vào việc đào tạo của họ hơn là McDonalds đầu tư vào máy chủ của họ.
+Họa sỹ không làm vậy. Thợ sửa ống nước không làm vậy. Thợ điện cũng không. Chết tiệt, tôi thậm chí không nghĩ rằng những người nấu món ăn nhanh có thể làm vậy. Đối với tôi, các công ty thuê sinh viên tốt nghiệp khoa học máy tính phải đầu tư nhiều hơn vào việc đào tạo của họ hơn là McDonalds đầu tư vào máy chủ.
 
-Đừng tự đùa rằng việc này không quan trọng. Có rất nhiều thứ rủi ro. Nền văn minh của chúng ta dựa vào phần mềm. Đó là phần mềm di chuyển và điều khiển thông tin tràn ngập cuộc sống hàng ngày của chúng ta. Phần mềm điều khiển động cơ, hộp số và phanh của ô tô. Chúng duy trì số dư trong tài khoản ngân hàng, gửi hóa đơn và chấp nhận thanh toán cho chúng ta. Phần mềm giặt quần áo và cho ta biết thời gian. Chúng đưa ảnh vào TV, gửi tin nhắn, thực hiện cuộc gọi, và giải trí khi ta buồn chán. Chúng ở mọi nơi.
+Đừng tự đùa rằng việc này không quan trọng. Có rất nhiều nguy cơ tiềm tàng. Nền văn minh của chúng ta dựa vào phần mềm. Phần mềm vận chuyển và điều khiển những thông tin tràn ngập đang cuộc sống hàng ngày của chúng ta. Phần mềm điều khiển động cơ, hộp số và phanh của ô tô. Chúng duy trì số dư trong tài khoản ngân hàng, gửi hóa đơn và chấp nhận thanh toán cho chúng ta. Phần mềm giặt quần áo và cho ta biết thời gian. Chúng đưa ảnh vào TV, gửi tin nhắn, thực hiện cuộc gọi, và giải trí khi ta buồn chán. Chúng ở mọi nơi.
 
-Và khi chúng ta đang giao phó cho các lập trình viên phần mềm mọi khía cạnh của cuộc sống của chúng ta, từ những điều vụn vặt đến quan trọng, tôi đề nghị một thời gian đào tạo và thực hành có giám sát hợp lý là không phù hợp.
+Và khi chúng ta đang giao phó cho các lập trình viên phần mềm mọi khía cạnh trong cuộc sống của chúng ta, từ những điều vụn vặt đến quan trọng, tôi đề nghị phải có một thời gian đào tạo và thực hành được giám sát hợp lý là hoàn toàn hợp lý.
 
 ### Học việc trong nghề lập trình viên
 
