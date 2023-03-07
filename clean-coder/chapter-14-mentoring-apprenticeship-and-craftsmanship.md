@@ -136,35 +136,35 @@ Họa sỹ không làm vậy. Thợ sửa ống nước không làm vậy. Thợ
 
 Và khi chúng ta đang giao phó cho các lập trình viên phần mềm mọi khía cạnh trong cuộc sống của chúng ta, từ những điều vụn vặt đến quan trọng, tôi đề nghị phải có một thời gian đào tạo và thực hành được giám sát hợp lý là hoàn toàn hợp lý.
 
-### Học việc trong nghề lập trình viên
+### Học việc trong ngành lập trình
 
-Vậy làm thế nào để chỉ dạy cho những sinh viên trẻ mới ra trường về các cấp độ trong ngành lập trình? Họ nên làm theo những bước nào? Họ nên gặp những thách thức nào? Họ nên đạt được mục tiêu gì? Hãy bắt đầu từ cấp độ cao nhất.
+Vậy _làm thế nào_ để giới thiệu cho những sinh viên trẻ mới ra trường về các cấp độ trong ngành lập trình? Họ nên làm theo những bước nào? Họ nên vượt qua những thách thức nào? Họ nên đạt được mục tiêu gì? Hãy bắt đầu từ cấp độ cao nhất.
 
 #### Bậc thầy
 
-Đây là những lập trình viên đã chịu trách nhiệm dẫn dất nhiều hơn một dự án quan trọng. Thường thì họ sẽ có hơn 10 năm kinh nghiệp và đã từng làm việc qua nhiều hệ thống, ngôn ngữ, và hệ điều hành khác nhau. Họ biết cách dẫn dẵn và điều phối nhiều team, là những nhà thiết kế và kiến trúc sư thành thạo, đồng thời có thể viết code quay vòng với tất cả mọi người mà không đổ một giọt mồ hôi. Họ đã được đề nghị vị trí quản lý, nhưng đã từ chối, hoặc quay lại sau khi nhận lời, hoặc tích hợp quản lý với vai trò kỹ thuật là chính. Họ duy trì vị trí kỹ thuật bằng cách đọc, nghiên cứu, thực hành, thực hiện và giảng dạy. Đó là người mà công ty sẽ giao trách nhiệm kỹ thuật cho một dự án. Nghĩ đi, "Scotty".
+Đây là những lập trình viên chịu trách nhiệm dẫn đầu nhiều hơn một dự án quan trọng. Thường thì họ sẽ có hơn 10 năm kinh nghiệp đồng thời từng làm việc qua nhiều hệ thống, ngôn ngữ, và hệ điều hành khác nhau. Họ biết cách lãnh đạo và điều phối nhiều nhóm, thành thạo thiết kế và kiến trúc hệ thống, đồng thời có thể viết code quay vòng với tất cả mọi người mà không đổ một giọt mồ hôi. Họ đã được đề nghị vị trí quản lý, nhưng đã từ chối, hoặc quay lại sau khi nhận lời, hoặc tích hợp quản lý với vai trò kỹ thuật là chính. Họ duy trì vị trí kỹ thuật bằng cách đọc, nghiên cứu, thực hành, thực hiện và _giảng dạy_. Đó là người mà công ty sẽ giao trách nhiệm kỹ thuật cho một dự án. Nghĩ đi, "Scotty".
 
 #### Thạo việc
 
-Đây là những lập trình viên đã được đào tạo, có năng lực và năng động. Trong giai đoạn này của sự nghiệp, họ sẽ học hỏi để làm việc hiệu qua trong team và trở thành trưởng nhóm. Họ am hiểu về công nghệ hiện tại nhưng thường thiếu kinh nghiệm với nhiều hệ thống đa dạng. Họ có xu hướng biết một ngôn ngữ, một hệ thống, một nền tảng; nhưng họ đang học hỏi nhiều hơn. Mức độ kinh nghiệp rất khác nhau giữa các cấp bậc của họ, nhưng mức trung bình khoảng năm năm. Ở phía xa của mức trung bình đó, chúng ta có được những bậc thầy, ở phía gần, chúng ta có những người học việc.
+Đây là những lập trình viên đã được đào tạo, có năng lực và đầy năng lượng. Trong giai đoạn này của sự nghiệp, họ sẽ học hỏi để làm việc hiệu quả trong một nhóm và định hướng thành trưởng nhóm. Họ am hiểu về công nghệ hiện tại nhưng thường thiếu kinh nghiệm với nhiều hệ thống đa dạng. Họ có xu hướng biết một ngôn ngữ, một hệ thống, một nền tảng; nhưng họ đang học hỏi nhiều hơn. Mức độ kinh nghiệp rất khác nhau giữa các cấp bậc của họ, nhưng mức trung bình khoảng năm năm. Ở phía xa của mức trung bình đó, chúng ta có được những người sắp thành bậc thầy, ở phía gần, chúng ta có những người học việc.
 
-Người thạo việc được giám sát bởi các bậc thầy, hoặc những người thạo việc cao cấp hơn. Những người trẻ tuổi hiếm khi có quyền tự chủ. Công việc của họ được giám sát chặt chẽ. Code của họ được xem xét kỹ lưỡng. Khi họ tích lũy được kinh nghiệm, quyền tự chủ sẽ tăng lên. Ít bị giám sát trực tiếp hơn và nhiều quyền hạn hơn. Cuối cùng, nó chuyển thành đánh giá ngang hàng.
+Người thạo việc được giám sát bởi các bậc thầy, hoặc những người thạo việc cấp cao hơn. Những người học việc trẻ tuổi hiếm khi có quyền tự chủ. Công việc của họ được giám sát chặt chẽ. Code của họ được xem xét kỹ lưỡng. Khi họ tích lũy được kinh nghiệm, quyền tự chủ sẽ tăng lên. Ít bị giám sát trực tiếp hơn và nhiều quyền hạn hơn. Cuối cùng, nó chuyển thành đánh giá ngang hàng.
 
 #### Học việc
 
-Sinh viên mới tốt nghiệp bắt đầu sự nghiệp của mình từ vị trí học việc. Người học việc không có quyền tự chủ. Họ được giám sát chặt chẽ bởi người thạo việc. Bạn đầu họ không nhận được nhiệm vụ gì cả, họ chỉ hỗ trợ những người thạo việc. Đây sẽ là thời điểm căng thẳng của làm việc theo cặp. Đây là lúc các kỷ luật được học hỏi và củng cố. Đây là lúc nền tảng của các giá trị được tạo ra.
+Sinh viên mới tốt nghiệp bắt đầu sự nghiệp của mình từ vị trí học việc. Người học việc không có quyền tự chủ. Họ được giám sát chặt chẽ bởi những người thạo việc. Bạn đầu họ không nhận được nhiệm vụ gì cả, họ chỉ hỗ trợ những người thạo việc. Đây sẽ là thời điểm căng thẳng của làm việc theo cặp. Đây là lúc các kỷ luật được học hỏi và củng cố. Đây là lúc nền tảng của các giá trị được tạo ra.
 
-Người thạo việc sẽ là những người hướng dẫn. Họ cần chắc chắn rằng người học việc biết được các nguyên tắc thiết kế, khuôn mẫu thiết kế, kỷ luật, và các nghi thức. Người tạo việc sẽ dạy TDD, tái cấu trúc code, ước lượng và những thứ khác. Họ sẽ giao cho người học việc đọc, luyện tập và thực hành, họ là người kiểm tra sự tiến bộ.
+Người thạo việc sẽ là những người hướng dẫn. Họ cần chắc chắn rằng người học việc biết được các nguyên tắc thiết kế, khuôn mẫu thiết kế, kỷ luật, và các nghi thức. Người tạo việc sẽ dạy TDD, tái cấu trúc, ước lượng và những thứ khác. Họ sẽ giao cho người học việc đọc, luyện tập và thực hành, họ là người kiểm tra sự tiến bộ.
 
-Thời gian học việc có thể kéo dài 1 năm. Trong thời gian đó, nếu người thạo việc có thể chấp nhận người học việc vào hàng ngũ của họ, họ sẽ đề nghị với bậc thầy. Các bậc thầy sẽ kiểm tra người học việc bằng phỏng vấn và đánh giá những thành tích. Nếu bậc thầy đồng ý, người học việc sẽ trở thành người thạo việc.
+Thời gian học việc có thể kéo dài 1 năm. Trong thời gian đó, nếu người thạo việc có thể chấp nhận người học việc vào hàng ngũ của họ, họ sẽ đề nghị với bậc thầy. Các bậc thầy sẽ kiểm tra người học việc bằng phỏng vấn và đánh giá những thành tích. Nếu họ đồng ý, người học việc sẽ trở thành người thạo việc.
 
 #### Thực tế
 
-Một lần nữa, mọi thứ ở trên chỉ là lý tưởng và giả định. Tuy nhiên, nếu bạn thay đổi tên và để ý từ ngữ, bạn sẽ nhận ra rằng nó không hoàn toàn khác với cách chúng ta _mong đợi_ mọi thứ hoạt động như hiện tại. Sinh viên mới tốt nghiệp được giám sát bởi các trường nhóm trẻ, những người được giám sát bởi trưởng dự án, v.v. Vấn đề là, trong hầu hết các trường hợp, sự giám sát này _không phải về kỹ thuật_! Ở hầu hết các công ty, không có sự  giám sát kỹ thuật nào cả. Các lập trình viên được tăng lương và cuối cùng thăng chức bởi vì, chà, đó những gì bạn làm với lập trình viên.
+Một lần nữa, mọi thứ ở trên chỉ là lý tưởng và giả định. Tuy nhiên, nếu bạn thay đổi tên và để ý từ ngữ, bạn sẽ nhận ra rằng nó không hoàn toàn khác với cách chúng ta _mong đợi_ mọi thứ hoạt động như hiện tại. Sinh viên mới tốt nghiệp được giám sát bởi các trưởng nhóm trẻ, những người được giám sát bởi trưởng dự án, v.v. Vấn đề là, trong hầu hết các trường hợp, sự giám sát này _không phải về kỹ thuật!_ Ở hầu hết các công ty, không có sự  giám sát kỹ thuật nào cả. Các lập trình viên được tăng lương và cuối cùng thăng chức bởi vì, chà, đó những gì bạn làm với lập trình viên.
 
-Sự khác biệt giữa việc chúng ta làm bây giờ và lý tưởng của tôi về học việc lập trình là sự tập trung vào giảng dạy, rèn luyện, giám sát và đánh giá về kỹ thuật.
+Sự khác biệt giữa việc chúng ta làm bây giờ và lý tưởng của tôi về học việc lập trình là tập trung nhiều hơn vào giảng dạy, rèn luyện, giám sát và đánh giá về kỹ thuật.
 
-Sự khác biệt là quan điểm cho rằng cách giá trị nghề nghiệp và sự nhạy bén về kỹ thuật phải được dạy dỗ, nuôi dưỡng, vun đắp, uốn nắn, rèn luyện và phát triển. Điều còn thiếu trong phương pháp tiếp cận vô trùng hiện tại của chúng ta là trách nhiệm của những người lớn tuổi trong việc dạy dỗ những người trẻ hơn.
+Sự khác biệt về quan điểm cho rằng giá trị nghề nghiệp và sự nhạy bén về kỹ thuật phải được dạy dỗ, nuôi dưỡng, vun đắp, uốn nắn, rèn luyện và phát triển. Điều còn thiếu trong phương pháp tiếp cận vô trùng hiện tại của chúng ta là trách nhiệm của những người nhiều kinh nghiệm trong việc dạy dỗ những người ít kinh nghiệm hơn.
 
 ## Nghề thủ công
 
