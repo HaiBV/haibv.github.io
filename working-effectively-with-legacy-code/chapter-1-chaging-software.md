@@ -30,3 +30,35 @@ Quay lại ví dụ về logo của công ty, chúng ta có thêm hành vi khôn
 Hãy xem xét một tình huống khó hơn. Giả sử một khách hàng muốn thêm một logo vào phía bên phải của trang nhưng ban đầu không có biểu tượng nào ở phía bên trái. Có, chúng tôi đang thêm hành vi, nhưng chúng tôi có xóa bất kỳ hành vi nào không? Có bất cứ thứ gì được hiển thị ở nơi sắp hiển thị logo không?
 
 Chúng ta đang thay đổi hành vi, thêm nó hay cả hai?
+
+Hóa ra, đối với chúng ta, có thể nhận một sự khác biệt hữu ích hơn cho chúng ta với tư cách là các lập trình viên. Nếu chúng ta phải sửa đổi code (kể cả HTML cũng được tính là code), chúng ta có thể thay đổi hành vi. Nếu chúng ta chỉ thêm code và gọi nó, chúng ta thường thêm hành vi. Hãy xem một ví dụ khác. Đây là một phương thức trên một lớp Java:
+
+```
+public class CDPlayer
+{
+	public void addTrackListing(Track track) {
+    ...
+  }
+  ...
+}
+```
+
+Lớp này có một phương thức cho phép chúng ta thêm danh sách bản nhạc. Hãy thêm một phương thức khác cho phép chúng ta thay thế danh sách bản nhạc.
+
+```
+public class CDPlayer
+{
+  public void addTrackListing(Track track) {
+    ...
+  }
+
+  public void replaceTrackListing(String name, Track track) {
+    ...
+  }
+  ...
+}
+```
+
+Khi chúng ta thêm phương thức đó, chúng ta đã thêm hành vi mới vào ứng dụng của mình hay thay đổi nó? Câu trả lời là: không. Việc thêm một phương thức không thay đổi hành vi trừ khi phương thức đó được gọi bằng cách nào đó.
+
+Hãy thực hiện một thay đổi code khác. Hãy đặt một nút mới trên giao diện người dùng cho đầu đĩa CD. Nút này cho phép người dùng thay thế danh sách bản nhạc. Với động thái đó, chúng tôi sẽ thêm hành vi mà chúng tôi đã chỉ định trong phương thức `replaceTrackListing`, nhưng chúng tôi cũng đang thay đổi hành vi một cách tinh vi. Giao diện người dùng sẽ hiển thị khác với nút mới đó. Rất có thể, giao diện người dùng sẽ mất khoảng một phần triệu giây để hiển thị. Có vẻ như gần như không thể thêm hành vi mà không thay đổi nó ở một mức độ nào đó.
