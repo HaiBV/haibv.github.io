@@ -72,3 +72,19 @@ Việc cải thiện thiết kế mà không thay đổi hành vi được gọi
 ### Tối ưu hóa
 
 Tối ưu hóa cũng giống như tái cấu trúc, nhưng khi thực hiện, chúng ta có một mục tiêu khác. Đối với cả tái cấu trúc và tối ưu hóa, chúng ta đều nói, "Chúng ta sẽ giữ nguyên chức năng khi chúng ta thực hiện các thay đổi, nhưng chúng ta sẽ thay đổi một thứ khác." Trong tái cấu trúc, "cái gì khác" là cấu trúc chương trình; chúng tôi muốn làm cho nó dễ bảo trì hơn. Trong tối ưu hóa, "cái gì khác" là một số tài nguyên được chương trình sử dụng, thường là thời gian hoặc bộ nhớ.
+
+### Khi gộp tất cả lại
+
+Có vẻ lạ khi tái cấu trúc và tối ưu hóa lại giống nhau. Chúng có vẻ gần gũi với nhau hơn là thêm tính năng hoặc sửa lỗi. Nhưng điều này có thực sự đúng? Điểm chung giữa tái cấu trúc và tối ưu hóa là chúng ta giữ chức năng bất biến trong khi chúng ta để thứ khác thay đổi.
+
+Nhìn chung, có ba thứ có thể thay đổi khi chúng ta làm việc trong một hệ thống: cấu trúc, chức năng và sử dụng tài nguyên.
+
+Hãy xem điều gì thường thay đổi và điều gì ít nhiều được giữ nguyên khi chúng ta thực hiện bốn loại thay đổi khác nhau (thường thì cả ba sẽ thay đổi, nhưng hãy xem xét những gì điển hình):
+
+|             | Thêm chức năng | Sửa lỗi | Tái cấu trúc | Tối ưu hóa |
+| ----------- | -------------- | ------- | ------------ | ---------- |
+| Tái cấu trúc| Thay đổi       |Thay đổi | Thay đổi     |            |
+| Chức năng   | Thay đổi       |Thay đổi |              |            |
+| Sử dụng tài nguyên |         |         |              | Thay  đổi  |
+
+
