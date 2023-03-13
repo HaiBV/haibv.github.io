@@ -83,8 +83,21 @@ Hãy xem điều gì thường thay đổi và điều gì ít nhiều được 
 
 |             | Thêm chức năng | Sửa lỗi | Tái cấu trúc | Tối ưu hóa |
 | ----------- | -------------- | ------- | ------------ | ---------- |
-| Tái cấu trúc| Thay đổi       |Thay đổi | Thay đổi     |            |
+| Cấu trúc    | Thay đổi       |Thay đổi | Thay đổi     |            |
 | Chức năng   | Thay đổi       |Thay đổi |              |            |
 | Sử dụng tài nguyên |         |         |              | Thay  đổi  |
 
+Thoạt nhìn, tái cấu trúc và tối ưu hóa trông rất giống nhau. Chúng không làm thay đổi chức năng. Nhưng điều gì sẽ xảy ra khi chúng ta tách riêng chức năng mới ra? Khi chúng ta thêm một tính năng, chúng ta thường thêm chức năng mới, nhưng không thay đổi chức năng hiện có.
 
+|               | Thêm chức năng | Sửa lỗi | Tái cấu trúc | Tối ưu hóa |
+| ------------- | -------------- | ------- | ------------ | ---------- |
+| Cấu trúc      | Thay đổi       |Thay đổi | Thay đổi     |            |
+| Chức năng mới | Thay đổi       |         |              |            |
+| Chức năng     |                |Thay đổi |              |            |
+| Sử dụng tài nguyên |           |         |              | Thay  đổi  |
+
+Việc thêm các tính năng, tái cấu trúc và tối ưu hóa đều giữ chức năng hiện có không đổi. Trên thực tế, nếu chúng ta xem xét kỹ lưỡng việc sửa lỗi, đúng, nó có thay đổi chức năng, nhưng những thay đổi đó thường rất nhỏ so với số lượng chức năng không bị thay đổi hiện có.
+
+Bổ sung tính năng và sửa lỗi rất giống với tái cấu trúc và tối ưu hóa. Trong cả bốn trường hợp, chúng ta muốn thay đổi một số chức năng, một số hành vi, nhưng chúng ta muốn bảo tồn nhiều hơn nữa (xem Hình 1.1).
+
+![1.1](images/1.1.png)
