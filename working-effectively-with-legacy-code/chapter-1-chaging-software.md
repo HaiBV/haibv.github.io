@@ -103,3 +103,16 @@ Bổ sung tính năng và sửa lỗi rất giống với tái cấu trúc và t
 ![1.1](images/1.1.png)
 
 Đó là một góc nhìn khá hay về những gì sẽ xảy ra khi chúng ta thực hiện các thay đổi, nhưng thực tế thì nó có ý nghĩa gì với chúng ta? Về mặt tích cực, nó dường như cho chúng ta biết chúng ta phải tập trung vào điều gì. Chúng ta phải đảm bảo rằng một số lượng nhỏ những thứ mà chúng ta thay đổi phải được thay đổi chính xác. Về mặt tiêu cực, đó không phải là điều duy nhất chúng ta phải tập trung vào. Chúng ta phải tìm ra cách giữ nguyên phần hành vi còn lại. Thật không may, việc giữ nguyên hành vi liên quan đến nhiều thứ hơn là chỉ để nguyên code. Chúng ta phải biết rằng hành vi không thay đổi và điều đó có thể khó khăn. Lượng hành vi mà chúng ta phải giữ gìn thường rất lớn, nhưng đó không phải là vấn đề lớn. Vấn đề lớn là chúng ta thường không biết mức độ nguy hiểm của hành vi đó khi chúng ta thực hiện các thay đổi của mình. Nếu chúng tôi biết, chúng tôi có thể tập trung vào hành vi đó và không quan tâm đến phần còn lại. Hiểu biết là điều quan trọng mà chúng ta cần thực hiện thay đổi một cách an toàn
+
+Duy trì hành vi hiện có là một trong những thách thức lớn nhất trong phát triển phần mềm. Ngay cả khi chúng ta đang thay đổi các tính năng chính, chúng ta thường có một lượng hành vi rất lớn cần phải phải bảo tồn.
+
+## Rủi ro khi thay đổi
+
+Giữ gìn hành vi là một thách thức lớn. Khi chúng ta cần thực hiện các thay đổi và duy trì hành vi, nó có thể dẫn đến những rủi ro đáng kể.
+
+Để giảm thiểu rủi ro, chúng ta phải đặt ra ba câu hỏi:
+1. Chúng ta phải thực hiện những thay đổi nào?
+2. Làm thế nào biết rằng chúng ta đã thực hiện chúng một cách chính xác?
+3. Làm sao biết rằng chúng ta không làm hỏng bất cứ thứ gì?
+
+Bạn đủ khả năng thực hiện bao nhiêu thay đổi nếu chúng có rủi ro?
