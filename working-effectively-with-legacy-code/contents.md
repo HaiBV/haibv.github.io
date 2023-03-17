@@ -11,3 +11,5 @@ layout: default
 ## Phần 1 - Nguyên lý của sự thay đổi
 
 [Chương 1 - Thay đổi phần mềm](./chapter-1-chaging-software.html).
+
+[Chương 2 - Làm việc với phản hồi](./chapter-2-working-with-feedback.html).
