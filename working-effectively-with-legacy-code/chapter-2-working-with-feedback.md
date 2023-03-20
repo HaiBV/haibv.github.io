@@ -41,3 +41,8 @@ Chúng tôi bắt đầu tái cấu trúc một chút. Chúng tôi trích xuất
 Bạn muốn có phản hồi trong một phút hay qua đêm? Kịch bản nào hiệu quả hơn?
 
 Kiểm thử đơn vị là một trong những thành phần quan trọng nhất trong công việc code kế thừa. Hệ thống phân cấp mà các kiểm thử hồi quy cung cấp rất tuyệt vời, nhưng các kiểm thử nhỏ, cục bộ là vô giá. Chúng có thể cung cấp cho bạn thông tin phản hồi khi bạn phát triển và cho phép bạn tái cấu trúc an toàn hơn nhiều.
+
+## Kiểm thử đơn vị là gì?
+
+Thuật ngữ kiểm thử đơn vị có một lịch sử lâu dài trong phát triển phần mềm. Khái niệm phổ biến nhất về kiểm thử đơn vị là ý tưởng cho rằng chúng là các kiểm thử tách biệt các thành phần riêng lẻ trong phần mềm. Các thành phần là gì? Có nhiều định nghĩa khác nhau, nhưng trong kiểm thử đơn vị, chúng ta thường quan tâm đến các đơn vị hành vi nhỏ nhất của một hệ thống. Trong lập trình thủ tục, các đơn vị thường là hàm. Trong lập trình hướng đối tượng, các đơn vị là các lớp
+
