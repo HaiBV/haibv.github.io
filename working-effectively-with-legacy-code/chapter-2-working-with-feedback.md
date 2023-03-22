@@ -46,12 +46,28 @@ Kiểm thử đơn vị là một trong những thành phần quan trọng nhấ
 
 Thuật ngữ kiểm thử đơn vị có một lịch sử lâu dài trong phát triển phần mềm. Khái niệm phổ biến nhất về kiểm thử đơn vị là ý tưởng cho rằng chúng là các kiểm thử tách biệt các thành phần riêng lẻ trong phần mềm. Các thành phần là gì? Có nhiều định nghĩa khác nhau, nhưng trong kiểm thử đơn vị, chúng ta thường quan tâm đến các đơn vị hành vi nhỏ nhất của một hệ thống. Trong lập trình thủ tục, các đơn vị thường là hàm. Trong lập trình hướng đối tượng, các đơn vị là các lớp
 
+> Khai thác kiểm thử
+> Trong cuốn sách này, tôi sử dụng thuật ngữ _khai thác kiểm thử_ như một thuật ngữ chung cho code kiểm thử chúng tôi viết dùng trong một số phần mềm và code cần thiết để chạy chúng. Chúng tôi có thể sử dụng nhiều loại khai thác kiểm thử khác nhau trong code của mình. Trong Chương 5, _Công cụ_, tôi thảo luận về framework kiểm thử xUnit và framework FIT. Cả hai đều có thể được sử dụng để thực hiện kiểm thử mà tôi mô tả trong cuốn sách này.
+
 Chúng ta có thể chỉ kiểm thử một hàm hoặc một lớp được không? Trong các hệ thống thủ tục, thường khó để kiểm thử được hàm một cách độc lập. Các hàm cấp cao nhất gọi các hàm thấp hơn, các hàm này lại gọi các hàm khác, tiếp tục như vậy cho đến cấp thấp nhất. Trong các hệ thống hướng đối tượng, việc kiểm thử các lớp một cách cô lập sẽ dễ dàng hơn một chút, nhưng thực tế là các lớp thường không tồn tại trong sự cô lập. Thử nhớ lại tất cả các lớp mà bạn đã từng viết mà không sử dụng các lớp khác. Chúng khá hiếm phải không? Thông thường chúng là các lớp dữ liệu nhỏ hoặc các lớp cấu trúc dữ liệu như ngăn xếp (stacks) và hàng đợi (queue) (và thậm chí chúng vẫn có thể sử dụng các lớp khác).
 
 Kiểm thử độc lập là một phần quan trọng trong định nghĩa của kiểm thử đơn vị, nhưng tại sao nó lại quan trọng? Rốt cuộc, nhiều lỗi có thể xảy ra khi các thành phần được tích hợp lại với nhau. Không phải các kiểm thử lớn gồm nhiều chức năng của code quan trọng hơn sao? Chà, chúng rất quan trọng, tôi không phủ nhận điều đó, nhưng có một vài vấn đề với các kiểm thử lớn:
 
-- **Xác định lỗi** — Khi các kiểm thử tiến xa hơn so với những gì chúng kiểm tra, sẽ khó xác định ý nghĩa của một kiểm thử thất bại. Thông thường, phải mất nhiều công sức để xác định nguồn gốc của kiểm thử lỗi. Bạn phải xem xét các đầu vào của kiểm thử, xem xét lỗi và xác định vị trí xảy ra lỗi trên đường dẫn từ đầu vào đến đầu ra. Vâng, chúng tôi cũng phải làm điều đó với kiểm thử đơn vị, nhưng thường thì công việc này rất vặt vãnh.
+- **Khoanh vùng lỗi** — Khi các kiểm thử tiến xa hơn so với những gì chúng kiểm tra, sẽ khó xác định ý nghĩa của một kiểm thử thất bại. Thông thường, phải mất nhiều công sức để xác định nguồn gốc của kiểm thử lỗi. Bạn phải xem xét các đầu vào của kiểm thử, xem xét lỗi và xác định vị trí xảy ra lỗi trên đường dẫn từ đầu vào đến đầu ra. Vâng, chúng tôi cũng phải làm điều đó với kiểm thử đơn vị, nhưng thường thì công việc này rất vặt vãnh.
 
 - **Thời gian chạy** — Các kiểm thử lớn có xu hướng mất nhiều thời gian hơn để chạy. Điều này có xu hướng làm nản lòng mỗi lần chạy kiểm thử. Các kiểm thử mất quá nhiều thời gian để chạy thường sẽ không được chạy.
 
 - **Độ phủ** — Thật khó để thấy mối liên hệ giữa một đoạn code và các giá trị nó thực hiện. Chúng ta thường có thể tìm hiểu xem một đoạn code có được thực thi hay không bằng cách sử dụng các công cụ kiểm tra độ phủ phù hợp, nhưng khi chúng ta thêm code mới, chúng ta có thể phải thực hiện nhiều công việc để tạo các kiểm thử cấp cao thực hiện code mới.
+
+> Một trong những điều khó chịu nhất về các kiểm thử lớn là chúng ta có thể khoanh vùng lỗi nếu chạy kiểm thử thường xuyên hơn, nhưng điều này rất khó thực hiện. Nếu chúng ta chạy kiểm thử và chúng vượt qua, sau đó chúng ta thực hiện một thay đổi nhỏ và chúng không vượt qua, thì chúng ta biết chính xác vấn đề đã xảy ra ở đâu. Đó là điều chúng ta đã làm trong lần thay đổi nhỏ cuối cùng đó. Chúng ta có thể khôi phục thay đổi và thử lại. Nhưng nếu các thử nghiệm lớn, thời gian thực hiện có thể quá dài; xu hướng thường gặp là tránh chạy thử nghiệm quá thường xuyên chỉ để khoanh vùng lỗi.
+
+Các kiểm thử đơn vị bù đắp những khiếm khuyết mà các kiểm thử lớn không làm được. Chúng ta có thể kiểm thử các đoạn code một cách độc lập; chúng ta có thể nhóm các kiểm thử lại để có thể chạy một số kiểm thử trong các điều kiện này và một số khác trong những điều kiện khác. Với chúng, chúng ta có thể khoanh vùng lỗi một cách nhanh chóng. Nếu chúng ta nghĩ rằng có lỗi trong một số đoạn code cụ thể và chúng ta có thể sử dụng nó trong khai thác kiểm thử, chúng tôi thường có thể nhanh chóng viết code kiểm thử để xem liệu có thực sự có lỗi hay không.
+
+Dưới đây là những phẩm chất của bài kiểm thử đơn vị tốt:
+
+1. Chúng chạy nhanh.
+2. Chúng giúp chúng ta khoanh vùng các vấn đề.
+
+Trong ngành này, mọi người thường nói đi nói lại về việc liệu các kiểm thử cụ thể có phải là kiểm thử đơn vị hay không. Một kiểm thử có thực sự là kiểm thử đơn vị không nếu nó sử dụng một lớp sản phẩm khác? Tôi nhắc lại hai phẩm chất: Kiểm thử đó có chạy nhanh không? Nó có giúp chúng ta khoanh vùng lỗi một cách nhanh chóng không? Đương nhiên, có một số ngoại lệ. Một số kiểm thử có thể lớn và sử dụng nhiều lớp cùng lúc. Trên thực tế, chúng có thể là những kiểm thử tích hợp nhỏ. Bản thân chúng có vẻ chạy nhanh, nhưng điều gì xảy ra khi bạn chạy tất cả chúng cùng nhau? Khi bạn có một kiểm thử chạy trên một lớp cùng với một số cộng tác viên của nó, nó có xu hướng nở to ra. Nếu bạn chưa dành thời gian để tạo một lớp có thể khởi tạo riêng biệt trong khai thác kiểm thử, thì sẽ dễ dàng như thế nào khi bạn thêm nhiều code hơn? Nó không bao giờ dễ dàng hơn. Mọi người sẽ tắt nó đi. Theo thời gian, kiểm thử có thể mất tới 1/10 giây để thực hiện.
+
+> Một kiểm thử đơn vị mất 1/10 giây để thực hiện là một kiểm thử đơn vị chậm
