@@ -71,3 +71,18 @@ Dưới đây là những phẩm chất của bài kiểm thử đơn vị tốt
 Trong ngành này, mọi người thường nói đi nói lại về việc liệu các kiểm thử cụ thể có phải là kiểm thử đơn vị hay không. Một kiểm thử có thực sự là kiểm thử đơn vị không nếu nó sử dụng một lớp sản phẩm khác? Tôi nhắc lại hai phẩm chất: Kiểm thử đó có chạy nhanh không? Nó có giúp chúng ta khoanh vùng lỗi một cách nhanh chóng không? Đương nhiên, có một số ngoại lệ. Một số kiểm thử có thể lớn và sử dụng nhiều lớp cùng lúc. Trên thực tế, chúng có thể là những kiểm thử tích hợp nhỏ. Bản thân chúng có vẻ chạy nhanh, nhưng điều gì xảy ra khi bạn chạy tất cả chúng cùng nhau? Khi bạn có một kiểm thử chạy trên một lớp cùng với một số cộng tác viên của nó, nó có xu hướng nở to ra. Nếu bạn chưa dành thời gian để tạo một lớp có thể khởi tạo riêng biệt trong khai thác kiểm thử, thì sẽ dễ dàng như thế nào khi bạn thêm nhiều code hơn? Nó không bao giờ dễ dàng hơn. Mọi người sẽ tắt nó đi. Theo thời gian, kiểm thử có thể mất tới 1/10 giây để thực hiện.
 
 > Một kiểm thử đơn vị mất 1/10 giây để thực hiện là một kiểm thử đơn vị chậm
+
+Đúng vậy, tôi rất nghiêm túc. Tại thời điểm viết cuốn sách này, 1/10 giây là một kỷ nguyên cho một kiểm thử đơn vị. Hãy làm một phép toán. Nếu bạn có một dự án với 3.000 lớp và có khoảng 10 kiểm thử cho mỗi lớp, thì sẽ có 30.000 kiểm thử. Sẽ mất bao lâu để chạy tất cả các kiểm thử đó nếu mỗi thử nghiệm mất 1/10 giây? Gần một giờ. Đó là một thời gian dài để chờ đợi phản hồi. Bạn không có 3.000 lớp? Hãy chia đôi ra. Vẫn còn nửa tiếng. Mặt khác, nếu mỗi kiểm thử mất 1/100 giây thì sao? Bây giờ chúng ta đang nói về 5 đến 10 phút. Khi chúng mất nhiều thời gian như vậy, tôi đảm bảo rằng tôi sẽ sử dụng một tập con trong đó để làm việc, nhưng tôi không ngại chạy tất cả chúng sau mỗi vài giờ.
+
+Với sự trợ giúp của Định luật Moore, tôi hy vọng sẽ thấy phản hồi thử nghiệm gần như ngay lập tức đối với cả những hệ thống lớn nhất trong đời tôi. Tôi nghi ngờ rằng làm việc trong những hệ thống đó sẽ giống như làm việc với code có thể cắn trả. Nó sẽ có khả năng cho chúng ta biết khi nào nó đang bị thay đổi theo chiều hướng xấu.
+
+> Kiểm thử đơn vị chạy nhanh. Nếu chúng không chạy nhanh, chúng không phải là kiểm thử đơn vị.
+>
+> Một số loại kiểm thử khác thường bị nhầm lẫn là kiểm thử đơn vị. Một kiểm thử không phải là một kiểm thử đơn vị khi:
+> 1. Chúng giao tiếp với cơ sở dữ liệu.
+> 2. Chúng giao tiếp qua mạng.
+> 3. Chúng chạm vào hệ thống tập tin.
+> 4. Bạn phải thực hiện những điều đặc biệt đối với môi trường của mình (chẳng hạn như chỉnh sửa tệp cấu hình) để chạy chúng.
+>
+> Những kiểm thử làm những điều này không phải là xấu. Thường thì chúng đáng để viết và bạn thường sẽ viết chúng trong các khai thác kiểm thử đơn vị. Tuy nhiên, điều quan trọng là có thể tách chúng ra khỏi các kiểm thử đơn vị thật sự, để bạn có thể giữ một tập hợp các kiểm thử mà bạn có thể chạy _nhanh_ bất cứ khi nào bạn thực hiện các thay đổi.
+
