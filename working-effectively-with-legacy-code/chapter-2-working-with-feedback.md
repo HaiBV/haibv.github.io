@@ -86,3 +86,16 @@ Với sự trợ giúp của Định luật Moore, tôi hy vọng sẽ thấy ph
 >
 > Những kiểm thử làm những điều này không phải là xấu. Thường thì chúng đáng để viết và bạn thường sẽ viết chúng trong các khai thác kiểm thử đơn vị. Tuy nhiên, điều quan trọng là có thể tách chúng ra khỏi các kiểm thử đơn vị thật sự, để bạn có thể giữ một tập hợp các kiểm thử mà bạn có thể chạy _nhanh_ bất cứ khi nào bạn thực hiện các thay đổi.
 
+## Kiểm thử cấp cao
+
+Các kiểm thử đơn vị rất tuyệt, nhưng vẫn có chỗ dành cho các kiểm thử cấp cao, chúng bao gồm các kịch bản và tương tác trong một ứng dụng. Các kiểm thử cấp cao có thể được sử dụng để xác định hành vi cho một tập hợp các lớp tại một thời điểm. Khi bạn có thể làm điều đó, thường thì bạn có thể viết kiểm thử cho các lớp riêng lẻ dễ dàng hơn.
+
+## Độ phủ kiểm thử
+
+Vậy làm thế nào để tiến hành các thay đổi với dự án được kế thừa? Điều đầu tiên cần lưu ý là, nếu được lựa chọn, sẽ luôn an toàn hơn nếu có các kiểm thử xung quanh những thay đổi mà chúng ta thực hiện. Khi chúng ta thay đổi code, chúng có thể gây ra lỗi; xét cho cùng, tất cả chúng ta đều là con người. Nhưng khi chúng ta phủ code của mình bằng kiểm thử trước khi thay đổi code, chúng ta có nhiều khả năng phát hiện được mọi lỗi nào mà chúng ta có thể mắc phải.
+
+Hình 2.1 cho chúng ta thấy một tập hợp nhỏ các lớp. Chúng ta muốn thay đổi phương thức `getResponseText` của `InvoiceUpdateResponder` và phương thức `getValue` của `Invoice`. Những phương thức đó là điểm thay đổi của chúng ta. Chúng ta có thể bao phủ chúng bằng cách viết kiểm thử cho các lớp chứa chúng.
+
+Để viết và chạy kiểm thử, chúng ta phải có khả năng tạo các thực thể của `InvoiceUpdateResponder` và `Invoice` trong khai thác kiểm thử. Chúng ta có thể làm điều đó? Chà, có vẻ khá dễ dàng để tạo ra `Invoice`; nó có một hàm khởi tạo không có tham số. Tuy nhiên, `InvoiceUpdateResponder` có thể khá phức tạp. Nó nhận `DBConnection`, một kết nối thực tế với cơ sở dữ liệu. Làm thế nào chúng ta sẽ xử lý điều đó trong một kiểm thử? Chúng ta có phải thiết lập cơ sở dữ liệu với dữ liệu cho các kiểm thử của mình không? Đó là rất nhiều việc. Kiểm thử thông qua cơ sở dữ liệu có bị chậm không? Hiện tại chúng tôi không đặc biệt quan tâm đến cơ sở dữ liệu; chúng tôi chỉ muốn đề cập đến các thay đổi của mình trong `InvoiceUpdateResponder` và `Invoice`. Chúng tôi còn có một vấn đề lớn hơn. Hàm khởi tạo cho của `InvoiceUpdateResponder` cần có `InvoiceUpdateServlet` làm tham số. Liệu có dễ để tạo được chúng? Chúng ta có thể thay đổi code để chúng không sử dụng servlet đó nữa. Nếu `InvoiceUpdateResponder` chỉ cần một chút thông tin từ `InvoiceUpdateServlet`, chúng ta có thể truyền thông tin đó thay vì truyền toàn bộ servlet vào, nhưng chúng ta có nên kiểm thử tại chỗ để đảm bảo rằng chúng ta đã thực hiện thay đổi đó một cách chính xác không?
+
+![2.1](images/2-1.png)
