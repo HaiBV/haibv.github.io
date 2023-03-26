@@ -109,3 +109,11 @@ bất kỳ giao diện có lập trình nào. Logic có thể được gắn nga
 
 > Song đề của code kế thừa
 > Khi chúng ta thay đổi code, chúng ta nên có các kiểm thử tại đó. Để thực hiện các kiểm thử, chúng ta thường phải thay đổi code.
+
+Trong ví dụ về lớp `Invoice`, chúng ta có thể thử kiểm thử ở cấp độ cao hơn. Nếu quá khó để viết kiểm thử mà không thay đổi một lớp cụ thể, thì đôi khi việc kiểm thử một lớp sử dụng nó sẽ dễ dàng hơn; chưa kể, chúng ta thường phải phá vỡ sự phụ thuộc giữa các lớp ở đâu đó. Trong trường hợp này, chúng ta có thể phá vỡ sự phụ thuộc vào `InvoiceUpdateServlet` bằng cách truyền cho `InvoiceUpdateResponder` tham số nó thực sự cần. Đó là tập hợp ID của các hóa đơn mà `InvoiceUpdateServlet` nắm giữ. Chúng tôi cũng có thể phá vỡ sự phụ thuộc của `InvoiceUpdateResponder` với `DBConnection` bằng cách sử dụng một lớp giao diện (`IDBConnection`) và thay đổi `InvoiceUpdateResponder` để nó sử dụng lớp giao diện này thay vì `DBConnection`. Hình 2.2 cho thấy trạng thái của các lớp trong ví dụ trên sau khi thay đổi.
+
+![2.2](images/2-2.png)
+
+Liệu có an toàn để thực hiện tái cấu trúc như trên mà không cần kiểm thử không? Có thể. Việc tái cấu trúc như vậy được đặt tên lần lượt là _Ưu tiên hóa tham số (Primitivize Parameter)_ (385) và _Trích xuất giao diện (Extract Interface)_ (362). Chúng được mô tả trong danh mục các kỹ thuật phá vỡ sự phụ thuộc ở cuối cuốn sách. Khi chúng ta phá vỡ các quan hệ phụ thuộc, chúng ta thường có thể viết kiểm thử giúp thực hiện các thay đổi mang tính xâm lấn cao một cách an toàn hơn. Bí quyết là thực hiện những lần tái cấu trúc ban đầu này một cách thận trọng.
+
+Trở nên bảo thủ là điều nên làm khi chúng ta có khả năng gây ra lỗi, nhưng có những lúc, khi chúng ta phá vỡ các thành phần phụ thuộc để bao phủ code, thì kết quả không tốt như những gì chúng ta đã làm trong ví dụ trước. Chúng ta có thể sử dụng các tham số với các phương thức không thực sự cần thiết trong code sản phẩm hoặc có thể chia nhỏ các lớp theo những cách kỳ quặc chỉ để có thể viết được kiểm thử. Khi chúng ta làm điều đó, cuối cùng có thể làm cho code trông kém hơn một chút trong khu vực đó. Nếu ít bảo thủ hơn, chúng ta sẽ sửa nó ngay lập tức. Chúng ta có thể làm điều đó, nhưng nó phụ thuộc vào mức độ rủi ro có liên quan. Khi sai sót là một vấn đề lớn, và thường là như vậy, bạn nên thận trọng.
