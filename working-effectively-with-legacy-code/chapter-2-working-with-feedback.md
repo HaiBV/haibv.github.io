@@ -116,4 +116,21 @@ Trong ví dụ về lớp `Invoice`, chúng ta có thể thử kiểm thử ở 
 
 Liệu có an toàn để thực hiện tái cấu trúc như trên mà không cần kiểm thử không? Có thể. Việc tái cấu trúc như vậy được đặt tên lần lượt là _Ưu tiên hóa tham số (Primitivize Parameter)_ (385) và _Trích xuất giao diện (Extract Interface)_ (362). Chúng được mô tả trong danh mục các kỹ thuật phá vỡ sự phụ thuộc ở cuối cuốn sách. Khi chúng ta phá vỡ các quan hệ phụ thuộc, chúng ta thường có thể viết kiểm thử giúp thực hiện các thay đổi mang tính xâm lấn cao một cách an toàn hơn. Bí quyết là thực hiện những lần tái cấu trúc ban đầu này một cách thận trọng.
 
-Trở nên bảo thủ là điều nên làm khi chúng ta có khả năng gây ra lỗi, nhưng có những lúc, khi chúng ta phá vỡ các thành phần phụ thuộc để bao phủ code, thì kết quả không tốt như những gì chúng ta đã làm trong ví dụ trước. Chúng ta có thể sử dụng các tham số với các phương thức không thực sự cần thiết trong code sản phẩm hoặc có thể chia nhỏ các lớp theo những cách kỳ quặc chỉ để có thể viết được kiểm thử. Khi chúng ta làm điều đó, cuối cùng có thể làm cho code trông kém hơn một chút trong khu vực đó. Nếu ít bảo thủ hơn, chúng ta sẽ sửa nó ngay lập tức. Chúng ta có thể làm điều đó, nhưng nó phụ thuộc vào mức độ rủi ro có liên quan. Khi sai sót là một vấn đề lớn, và thường là như vậy, bạn nên thận trọng.
+Trở nên bảo thủ là điều nên làm khi chúng ta có khả năng gây ra lỗi, nhưng có những lúc, khi chúng ta phá vỡ các thành phần phụ thuộc để bao phủ code, thì kết quả không tốt như những gì chúng ta đã làm trong ví dụ trước. Chúng ta có thể sử dụng các tham số với các phương thức không thực sự cần thiết trong code sản phẩm hoặc có thể chia nhỏ các lớp theo những cách kỳ quặc chỉ để có thể viết được kiểm thử. Khi chúng ta làm điều đó, cuối cùng có thể làm cho code trông kém hơn một chút trong khu vực đó. Nếu ít bảo thủ hơn, chúng ta sẽ sửa nó ngay lập tức. Chúng ta có thể làm điều đó, nhưng nó phụ thuộc vào mức độ rủi ro có liên quan. Khi sai sót gây ra hậu quả lớn, và thường là như vậy, thì bạn nên thận trọng.
+
+> Khi bạn phá vỡ sự phụ thuộc trong code kế thừa, bạn thường phải ngăn cảm giác thẩm mỹ của mình lại một chút. Một số phụ thuộc được loại bỏ sạch sẽ; một số khác cuối cùng trông kém lý tưởng hơn khi nhìn nhận từ quan điểm thiết kế. Chúng giống như những vệt khâu trong phẫu thuật: Có thể để lại vết sẹo trong code của bạn, nhưng mọi thứ bên dưới có thể trở nên tốt hơn.
+> Nếu sau này bạn có thể bao phủ code xung quanh vị trí bạn đã phá vỡ các phụ thuộc, thì bạn cũng có thể chữa lành vết sẹo đó.
+
+## Thuật toán thay đổi với code kế thừa
+
+Khi bạn cần phải thực hiện một thay đổi với code kế thừa, đây là một thuật toán bạn có thể sử dụng.
+
+1. Xác định vị trí thay đổi
+2. Tìm vị trí kiểm thử
+3. Phá vỡ sự phụ thuộc
+4. Viết kiểm thử
+5. Thực hiện thay đổi và tái cấu trúc
+
+Mục tiêu hàng ngày trong code kế thừa là tạo ra các thay đổi, nhưng không phải bất kỳ thay đổi nào cũng được. Chúng ta muốn thực hiện các thay đổi chức năng mang lại giá trị đồng thời bao phủ hệ thống nhiều hơn bởi kiểm thử. Vào cuối mỗi đợt phát triển, không những chúng ta có thể cung cấp một số tính năng mới mà còn cả các kiểm thử của nó. Theo thời gian, các khu vực được kiểm thử của hệ thống giống như những hòn đảo nhô lên khỏi đại dương. Công việc trên những hòn đảo này trở nên dễ dàng hơn nhiều. Theo thời gian, các hòn đảo trở thành những vùng đất rộng lớn. Cuối cùng, bạn sẽ có thể làm việc ở các lục địa có code được kiểm thử.
+
+Hãy xem xét từng bước của thuật toán trên và cách cuốn sách sẽ giúp bạn thực hiện chúng.
