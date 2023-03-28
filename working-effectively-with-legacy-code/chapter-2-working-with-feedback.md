@@ -125,8 +125,8 @@ Trở nên bảo thủ là điều nên làm khi chúng ta có khả năng gây 
 
 Khi bạn cần phải thực hiện một thay đổi với code kế thừa, đây là một thuật toán bạn có thể sử dụng.
 
-1. Xác định vị trí thay đổi
-2. Tìm vị trí kiểm thử
+1. Xác định điểm thay đổi
+2. Tìm vị trí viết kiểm thử
 3. Phá vỡ sự phụ thuộc
 4. Viết kiểm thử
 5. Thực hiện thay đổi và tái cấu trúc
@@ -134,3 +134,17 @@ Khi bạn cần phải thực hiện một thay đổi với code kế thừa, �
 Mục tiêu hàng ngày trong code kế thừa là tạo ra các thay đổi, nhưng không phải bất kỳ thay đổi nào cũng được. Chúng ta muốn thực hiện các thay đổi chức năng mang lại giá trị đồng thời bao phủ hệ thống nhiều hơn bởi kiểm thử. Vào cuối mỗi đợt phát triển, không những chúng ta có thể cung cấp một số tính năng mới mà còn cả các kiểm thử của nó. Theo thời gian, các khu vực được kiểm thử của hệ thống giống như những hòn đảo nhô lên khỏi đại dương. Công việc trên những hòn đảo này trở nên dễ dàng hơn nhiều. Theo thời gian, các hòn đảo trở thành những vùng đất rộng lớn. Cuối cùng, bạn sẽ có thể làm việc ở các lục địa có code được kiểm thử.
 
 Hãy xem xét từng bước của thuật toán trên và cách cuốn sách sẽ giúp bạn thực hiện chúng.
+
+### Xác định điểm thay đổi
+
+Những nơi cần thực hiện thay đổi phụ thuộc rất nhiều vào cách chúng ta thiết kế chương trình. Nếu bạn không hiểu rõ thiết kế của mình tốt đến mức cảm thấy các thay đổi đang được thực hiện đúng chỗ, thì hãy xem _Chương 16, Tôi không hiểu code đủ rõ để thay đổi nó_ và _Chương 17, Ứng dụng của tôi không có kiến trúc_.
+
+### Tìm vị trí viết kiểm thử
+
+Trong một số trường hợp, việc tìm vị trí để viết kiểm thử rất dễ dàng, nhưng với code kế thừa, điều đó thường khá khó khăn. Hãy xem _Chương 11, Tôi Cần Thực Hiện Thay Đổi. Tôi nên kiểm thử những phương thức nào?_, và _Chương 12, Tôi cần thực hiện nhiều thay đổi trong một khu vực. Tôi có phải phá vỡ các phụ thuộc cho tất cả các lớp liên quan không?_ Các chương này cung cấp cho bạn các kỹ thuật có thể sử dụng để xác định nơi bạn cần viết kiểm thử cho những thay đổi cụ thể.
+
+### Phá vỡ sự phụ thuộc
+
+
+### Viết kiểm thử
+### Thực hiện thay đổi và tái cấu trúc
