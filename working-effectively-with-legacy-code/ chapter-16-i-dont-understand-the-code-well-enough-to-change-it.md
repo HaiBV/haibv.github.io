@@ -10,4 +10,14 @@ Bước vào những dòng code không quen thuộc, đặc biệt là code kế
 
 Có nhiều cách khác nhau để có được sự hiểu biết, nhưng rất nhiều người không sử dụng chúng vì họ bị cuốn vào việc cố gắng hiểu code theo cách tức thì nhất mà họ có thể. Cuối cùng, việc dành thời gian để cố gắng hiểu một thứ khó hiểu có vẻ không hiệu quả. Nếu chúng ta có thể hiểu rất nhanh, chúng ta thực sự có thể bắt đầu kiếm được tiền. Điều đó nghe có vẻ ngớ ngẩn? Tôi cũng vậy, nhưng mọi người thường hành động theo cách đó—và thật không may vì chúng ta có thể làm một số việc đơn giản, công nghệ thấp để bắt đầu công việc trên một nền tảng vững chắc hơn.
 
+## Ghi chú/Phác thảo
 
+Khi việc đọc code trở nên khó hiểu, bạn nên bắt đầu vẽ tranh và ghi chú. Viết tên của thứ quan trọng cuối cùng bạn vừa nhìn thấy, và sau đó viết tên của thứ tiếp theo. Nếu bạn thấy mối quan hệ giữa chúng, hãy vẽ một đường thẳng. Những bản phác thảo này không nhất thiết phải là sơ đồ UML đầy đủ hoặc đồ thị gọi hàm sử dụng một số ký hiệu đặc biệt—mặc dù, nếu mọi thứ trở nên khó hiểu hơn, bạn có thể muốn sắp xếp suy nghĩ của mình trang trọng hơn hoặc gọn gàng hơn. Phác thảo mọi thứ thường giúp chúng ta nhìn mọi thứ theo một cách khác. Đó cũng là một cách tuyệt vời để duy trì trạng thái tinh thần của chúng ta khi đang cố gắng hiểu điều gì đó đặc biệt phức tạp.
+
+Hình 16.1 là bản dựng lại của phác thảo mà tôi cùng với một lập trình viên khác vẽ vào ngày hôm trước khi chúng tôi tìm hiểu code. Chúng tôi đã vẽ nó ở mặt sau của một bản ghi nhớ (tên trong bản phác thảo đã được thay đổi để bảo vệ những người vô tội).
+
+Bản phác thảo lúc đó (như trong ảnh) không dễ hiểu lắm, nhưng nó vẫn ổn với cuộc trò chuyện của chúng tôi. Chúng tôi đã học được thêm một chút và bắt đầu tiếp cận công việc của mình.
+
+Không phải tất cả mọi người làm điều này sao? Đúng thế, có và không. Ít người sử dụng nó thường xuyên. Tôi nghi ngờ lý do thực sự là vì không có bất kỳ hướng dẫn nào cho cách này và thật cám dỗ khi nghĩ rằng mỗi khi đặt bút viết, chúng ta nên viết một đoạn code hoặc sử dụng cú pháp UML. UML cũng tốt, nhưng các đốm màu, đường kẻ và hình dạng cũng vậy,chúng giống nhau ở chỗ bất kỳ ai không có mặt ở đó khi chúng tôi vẽ chúng cũng không thể hiểu được. Độ chính xác không cần phải quá cao. Đó chỉ là một công cụ giúp cuộc trò chuyện trở nên dễ dàng hơn và giúp chúng ta ghi nhớ các khái niệm đang được thảo luận và học hỏi.
+
+![16.1](images/16-1.png)
