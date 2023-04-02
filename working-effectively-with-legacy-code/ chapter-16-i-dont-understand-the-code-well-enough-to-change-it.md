@@ -21,3 +21,23 @@ Bản phác thảo lúc đó (như trong ảnh) không dễ hiểu lắm, nhưng
 Không phải tất cả mọi người làm điều này sao? Đúng thế, có và không. Ít người sử dụng nó thường xuyên. Tôi nghi ngờ lý do thực sự là vì không có bất kỳ hướng dẫn nào cho cách này và thật cám dỗ khi nghĩ rằng mỗi khi đặt bút viết, chúng ta nên viết một đoạn code hoặc sử dụng cú pháp UML. UML cũng tốt, nhưng các đốm màu, đường kẻ và hình dạng cũng vậy,chúng giống nhau ở chỗ bất kỳ ai không có mặt ở đó khi chúng tôi vẽ chúng cũng không thể hiểu được. Độ chính xác không cần phải quá cao. Đó chỉ là một công cụ giúp cuộc trò chuyện trở nên dễ dàng hơn và giúp chúng ta ghi nhớ các khái niệm đang được thảo luận và học hỏi.
 
 ![16.1](images/16-1.png)
+
+Điều thực sự tuyệt vời của việc phác thảo các thành phần của thiết kế khi bạn đang cố gắng hiểu hệ thống là chúng không chính thống và dễ lan tỏa. Nếu bạn thấy kỹ thuật này hữu ích, bạn không cần phải thúc đẩy nhóm của mình biến nó thành một phần trong quy trình của nhóm. Tất cả những gì bạn phải làm là: Chờ cho đến khi bạn đang làm việc với một người đang cố gắng hiểu đoạn code bất kỳ, sau đó phác thảo về những gì bạn đang xem khi cố gắng giải thích nó. Nếu đối tác của bạn cũng thực sự tham gia vào việc học phần đó của hệ thống, họ sẽ xem bản phác thảo và trao đổi thêm với bạn.
+
+Khi bạn bắt đầu thực hiện các bản phác thảo cục bộ của một hệ thống, bạn sẽ muốn dành thời gian để tìm hiểu bức tranh toàn cảnh. Hãy xem _Chương 17, Ứng dụng của tôi không có cấu trúc_, để biết một tập hợp các kỹ thuật giúp dễ hiểu hơn và hướng tới một cơ sở code lớn.
+
+## Danh sách đánh dấu
+
+Phác thảo không phải là thứ duy nhất hỗ trợ việc tìm hiểu. Một kỹ thuật khác mà tôi thường sử dụng là _danh sách đánh dấu_. Nó đặc biệt hữu ích với các phương thức vô cùng dài. Ý tưởng rất đơn giản và hầu như ai cũng đã sử dụng nó lúc này hay lúc khác, nhưng thành thật mà nói, tôi nghĩ nó chưa được đánh giá đúng mức.
+
+Cách đánh dấu một danh sách phụ thuộc vào những gì bạn muốn hiểu. Bước đầu tiên là in code mà bạn muốn làm việc. Sau đó, bạn sử dụng danh sách đánh dấu để thực hiện bất kỳ hoạt động nào dưới đây.
+
+### Phân tách trách nhiệm
+
+Nếu bạn muốn phân tách các trách nhiệm, sử dụng một dấu để nhóm chúng với nhau. Nếu một số thứ thuộc về nhau, hãy đặt một ký hiệu đặc biệt bên cạnh chúng để bạn có thể xác định chúng. Sử dụng nhiều màu, nếu bạn có thể.
+
+### Hiểu cấu trúc phương thức
+
+Nếu bạn muốn hiểu một phương thức lớn, hãy sắp xếp các khối. Thông thường việc thụt lề trong các phương thức dài có thể khiến chúng không thể đọc được. Bạn có thể sắp xếp chúng bằng cách vẽ các đường từ đầu khối đến cuối hoặc ghi chú phần cuối của khối bằng phần mở đầu của vòng lặp hoặc điều kiện bắt đầu chúng.
+
+Cách dễ nhất để sắp xếp các khối là từ trong ra ngoài. Ví dụ: khi bạn đang làm việc với một trong các ngôn ngữ thuộc họ C, chỉ cần bắt đầu đọc từ đầu danh sách qua mỗi dấu ngoặc nhọn mở cho đến khi bạn gặp được dấu ngoặc nhọn đóng đầu tiên. Đánh dấu nó, sau đó quay lại và đánh dấu đoạn mở tương ứng. Tiếp tục đọc cho đến khi bạn đến dấu ngoặc nhọn tiếp theo và làm điều tương tự. Quay lại cho đến khi bạn thấy dấu ngoặc nhọn mở phù hợp với nó.
