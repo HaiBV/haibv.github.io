@@ -41,3 +41,14 @@ Nếu bạn muốn phân tách các trách nhiệm, sử dụng một dấu đ�
 Nếu bạn muốn hiểu một phương thức lớn, hãy sắp xếp các khối. Thông thường việc thụt lề trong các phương thức dài có thể khiến chúng không thể đọc được. Bạn có thể sắp xếp chúng bằng cách vẽ các đường từ đầu khối đến cuối hoặc ghi chú phần cuối của khối bằng phần mở đầu của vòng lặp hoặc điều kiện bắt đầu chúng.
 
 Cách dễ nhất để sắp xếp các khối là từ trong ra ngoài. Ví dụ: khi bạn đang làm việc với một trong các ngôn ngữ thuộc họ C, chỉ cần bắt đầu đọc từ đầu danh sách qua mỗi dấu ngoặc nhọn mở cho đến khi bạn gặp được dấu ngoặc nhọn đóng đầu tiên. Đánh dấu nó, sau đó quay lại và đánh dấu đoạn mở tương ứng. Tiếp tục đọc cho đến khi bạn đến dấu ngoặc nhọn tiếp theo và làm điều tương tự. Quay lại cho đến khi bạn thấy dấu ngoặc nhọn mở phù hợp với nó.
+
+### Trích xuất phương thức
+
+Nếu bạn muốn chia nhỏ một phương thức lớn, hãy khoanh vùng code bạn muốn trích xuất. Chú thích nó với số lượng khớp nối của nó (xem _Chương 22, Tôi Cần Thay đổi một Phương thức "Quái vật" và Tôi Không thể Viết Kiểm thử cho Nó_)
+
+### Hiểu tác động của sự thay đổi
+
+Nếu bạn muốn hiểu được tác động của các thay đổi sắp thực hiện, thay vì tạo một bản _phác thảo hiệu ứng_ (155), hãy đánh dấu các dòng code mà bạn sẽ thay đổi. Sau đó, đánh dấu các biến có thể thay đổi giá trị do sự thay đổi đó và mọi lệnh gọi phương thức có thể bị ảnh hưởng. Tiếp theo, hãy đánh dấu bên các biến và phương thức bị ảnh hưởng bởi những thứ bạn vừa đánh dấu. Làm điều này nhiều lần nếu bạn cần để xem hiệu ứng lan truyền từ thay đổi như thế nào. Khi bạn làm điều này, bạn sẽ hiểu rõ hơn về những gì bạn phải kiểm thử.
+
+## Tái cấu trúc từ đầu
+
