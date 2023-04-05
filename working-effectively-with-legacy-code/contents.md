@@ -18,4 +18,6 @@ layout: default
 
 [Chương 16 - Tôi không hiểu code đủ rõ để thay đổi nó](./chapter-16-i-dont-understand-the-code-well-enough-to-change-it.html).
 
+[Chương 17 - Ứng dụng của tôi không có kiến trúc](./chapter-17-my-application-has-no-strucute.html).
+
 ## Phần 3 - Phá vỡ sự phụ thuộc
