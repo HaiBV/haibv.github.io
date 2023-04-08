@@ -33,3 +33,26 @@ Các nhóm chỉ lạc lối khi hệ thống đang làm việc là một bí �
 Trong nhóm của bạn, hãy thường xuyên kể câu chuyện về hệ thống, qua đó bạn chia sẻ quan điểm. Kể nó theo những cách khác nhau. Đánh giá xem khái niệm này có quan trọng hơn khái niệm khác hay không. Khi xem xét các thay đổi đối với hệ thống, bạn sẽ nhận thấy rằng một số thay đổi phù hợp hơn với câu chuyện. Qua đó, họ làm cho câu chuyện ngắn gọn ít giống lời nói dối hơn. Nếu bạn phải chọn giữa hai cách để làm một việc gì đó, thì câu chuyện có thể là một cách hay để xem cách nào sẽ dẫn đến một hệ thống dễ hiểu hơn.
 
 Dưới đây là một ví dụ về cách kể chuyện này trong thực tế. Đây là một phiên thảo luận về JUnit. Nó giả định rằng bạn biết một chút về kiến trúc của JUnit. Nếu không, hãy dành một chút thời gian để xem mã nguồn của JUnit. Bạn có thể tải xuống từ www.junit.org
+
+> ###### Kiến trúc của JUnit là gì?
+> JUnit có hai lớp chính. Lớp đầu tiên gọi là `Test` và lớp còn lại gọi là `TestResult`. Người dùng tạo kiểm thử và chạy chúng, truyền vào một `TestResult`. Khi một kiểm thử không vượt qua, nó sẽ báo cho `TestResult` về điều đó. Sau đó, mọi người có thể hỏi `TestResult` về tất cả các lỗi đã xảy ra.
+>
+> Hãy liệt kê các đơn giản hóa:
+> 1. Có nhiều lớp khác trong JUnit. Tôi đang nói rằng `Test` và `TestResult` chỉ là chính bởi vì tôi nghĩ vậy. Đối với tôi, tương tác của chúng là tương tác cốt lõi trong hệ thống. Những người khác cũng có thể có cách nhìn khác về kiến trúc hệ thống.
+> 2. Người dùng không tạo đối tượng kiểm thử. Các đối tượng kiểm thử được tạo từ các lớp trường hợp kiểm thử thông qua tương phản.
+> 3. Kiểm thử không phải là một lớp; mà là một giao diện. Các kiểm thử chạy trong `JUnit` thường được viết trong các lớp con của lớp có tên `TestCase`, lớp này thực thi lớp `Test`.
+> 4. Mọi người thường không hỏi `TestResults` về lỗi khi chạy kiểm thử. `TestResults` có một trình lắng nghe, nó được thông báo bất cứ khi nào `TestResult` nhận được thông tin từ một kiểm thử.
+> 5. Báo cáo kiểm thử không chỉ có lỗi: Chúng báo cáo số lần chạy kiểm thử và số lỗi. (Lỗi là sự cố xảy ra trong quá trình kiểm thử mà không được kiểm tra rõ ràng. Chạy lỗi là kiểm tra không thành công.)
+>
+> Những đơn giản hóa này có cung cấp cho chúng ta bất kỳ thông tin chi tiết nào về cách JUnit có thể đơn giản hơn không? Một chút. Một số framework kiểm thử `xUnit` đơn giản hơn biến `Test` thành một lớp và loại bỏ hoàn toàn `TestCase`. Các framework khác hợp nhất các lỗi và chạy lỗi để chúng được báo cáo theo cùng một cách
+>
+> Quay trở lại câu chuyện của chúng ta
+> _Đó đã là tất cả chưa?_
+>
+> Chưa. Các kiểm thử có thể được nhóm thành các đối tượng được gọi là bộ (suites). Chúng ta có thể chạy một bộ kiểm thử với kết quả giống như một kiểm thử đơn lẻ. Tất cả các kiểm thử bên trong nó đều chạy và cho biết kết quả kiểm thử khi chúng không thành công.
+>
+> Chúng ta có những đơn giản hóa nào ở đây?
+> 1. `TestSuites` làm được nhiều việc hơn là chỉ nhóm và chạy một tập hợp các kiểm thử. Chúng cũng tạo các thực thể của các lớp có nguồn gốc từ `TestCase` thông qua tương phản.
+> 2. Có một cách đơn giản hóa khác, phần còn lại của đơn giản hóa đầu tiên. Các kiểm thử không thực sự tự chạy. Chúng tự chuyển đến lớp `TestResult`, đến lượt nó, gọi lại phương thức thực hiện kiểm thử trên chính kiểm thử đó. Việc qua lại này diễn ra ở mức độ khá thấp. Nghĩ một cách đơn giản sẽ thuật tiện hơn. Nó hơi dối trá, nhưng nó thực sự là cách `JUnit` đã từng sử dụng khi nó đơn giản hơn một chút.
+> Đó là tất cả?
+> Không. Trên thực tế, `Test` là một giao diện. Có một lớp gọi là `TestCase` thực thi `Test`. Người dùng phân lớp `TestCase` và sau đó viết các bài kiểm tra của họ dưới dạng các phương thức void công khai bắt đầu bằng từ kiểm tra trong lớp con của họ. Lớp `TestSuite` sử dụng tương phản để xây dựng một nhóm các bài kiểm tra có thể chạy trong một lần gọi phương thức chạy của `TestSuite`.
