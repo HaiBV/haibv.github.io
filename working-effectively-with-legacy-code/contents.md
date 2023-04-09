@@ -11,3 +11,13 @@ layout: default
 ## Phần 1 - Nguyên lý của sự thay đổi
 
 [Chương 1 - Thay đổi phần mềm](./chapter-1-chaging-software.html).
+
+[Chương 2 - Làm việc với phản hồi](./chapter-2-working-with-feedback.html).
+
+## Phần 2 - Thay đổi phần mềm
+
+[Chương 16 - Tôi không hiểu code đủ rõ để thay đổi nó](./chapter-16-i-dont-understand-the-code-well-enough-to-change-it.html).
+
+[Chương 17 - Ứng dụng của tôi không có kiến trúc](./chapter-17-my-application-has-no-strucute.html).
+
+## Phần 3 - Phá vỡ sự phụ thuộc
