@@ -42,9 +42,9 @@ Dưới đây là một ví dụ về cách kể chuyện này trong thực tế
 > 2. Người dùng không tạo đối tượng kiểm thử. Các đối tượng kiểm thử được tạo từ các lớp trường hợp kiểm thử thông qua tương phản.
 > 3. Kiểm thử không phải là một lớp; mà là một giao diện. Các kiểm thử chạy trong `JUnit` thường được viết trong các lớp con của lớp có tên `TestCase`, lớp này thực thi lớp `Test`.
 > 4. Mọi người thường không hỏi `TestResults` về lỗi khi chạy kiểm thử. `TestResults` có một trình lắng nghe, nó được thông báo bất cứ khi nào `TestResult` nhận được thông tin từ một kiểm thử.
-> 5. Báo cáo kiểm thử không chỉ có lỗi: Chúng báo cáo số lần chạy kiểm thử và số lỗi. (Lỗi là sự cố xảy ra trong quá trình kiểm thử mà không được kiểm tra rõ ràng. Chạy lỗi là kiểm tra không thành công.)
+> 5. Báo cáo kiểm thử không chỉ có lỗi: Chúng báo cáo số lần chạy kiểm thử và số lỗi. (Lỗi là sự cố xảy ra trong quá trình kiểm thử mà không được kiểm tra rõ ràng. Thất bại là kiểm tra không thành công.)
 >
-> Những đơn giản hóa này có cung cấp cho chúng ta bất kỳ thông tin chi tiết nào về cách JUnit có thể đơn giản hơn không? Một chút. Một số framework kiểm thử `xUnit` đơn giản hơn biến `Test` thành một lớp và loại bỏ hoàn toàn `TestCase`. Các framework khác hợp nhất các lỗi và chạy lỗi để chúng được báo cáo theo cùng một cách
+> Những đơn giản hóa này có cung cấp cho chúng ta bất kỳ thông tin chi tiết nào về cách JUnit có thể đơn giản hơn không? Một chút. Một số framework kiểm thử `xUnit` đơn giản hơn biến `Test` thành một lớp và loại bỏ hoàn toàn `TestCase`. Các framework khác hợp nhất các lỗi và thất bại để chúng được báo cáo theo cùng một cách
 >
 > Quay trở lại câu chuyện của chúng ta
 > _Đó đã là tất cả chưa?_
@@ -56,3 +56,19 @@ Dưới đây là một ví dụ về cách kể chuyện này trong thực tế
 > 2. Có một cách đơn giản hóa khác, phần còn lại của đơn giản hóa đầu tiên. Các kiểm thử không thực sự tự chạy. Chúng tự chuyển đến lớp `TestResult`, đến lượt nó, gọi lại phương thức thực hiện kiểm thử trên chính kiểm thử đó. Việc qua lại này diễn ra ở mức độ khá thấp. Nghĩ một cách đơn giản sẽ thuật tiện hơn. Nó hơi dối trá, nhưng nó thực sự là cách `JUnit` đã từng sử dụng khi nó đơn giản hơn một chút.
 > Đó là tất cả?
 > Không. Trên thực tế, `Test` là một giao diện. Có một lớp gọi là `TestCase` thực thi `Test`. Người dùng phân lớp `TestCase` và sau đó viết các bài kiểm tra của họ dưới dạng các phương thức void công khai bắt đầu bằng từ kiểm tra trong lớp con của họ. Lớp `TestSuite` sử dụng tương phản để xây dựng một nhóm các bài kiểm tra có thể chạy trong một lần gọi phương thức chạy của `TestSuite`.
+
+Chúng ta có đi sâu hơn, nhưng những gì tôi đã trình bày cho đến giờ đã giúp bạn có được cảm giác về kỹ thuật này. Chúng tôi bắt đầu bằng một mô tả ngắn gọn. Khi chúng ta đơn giản hóa và loại bỏ sự chi tiết để mô tả một hệ thống, chúng ta đang thực sự trừu tượng hóa. Thông thường, khi chúng ta buộc mình phải truyền đạt một quan điểm rất đơn giản về một hệ thống, chúng ta có thể tìm thấy những khái niệm trừu tượng mới.
+
+Nếu một hệ thống không đơn giản như câu chuyện đơn giản nhất mà chúng ta có thể kể về nó, thì điều đó có nghĩa là nó tệ không? Không. Lúc nào cũng vậy, khi các hệ thống phát triển, chúng trở nên phức tạp hơn. Câu chuyện góp phần hướng dẫn cho chúng ta.
+
+Giả sử rằng chúng ta sẽ thêm một tính năng mới vào `JUnit`. Chúng tôi muốn tạo một báo cáo về tất cả các kiểm thử mà không gọi bất kỳ xác nhận nào khi chúng tôi chạy chúng. Những lựa chọn nào chúng ta đã đưa ra những gì đã được mô tả trong `JUnit`?
+
+Một lựa chọn là thêm một phương thức vào lớp `TestCase` có tên là `buildUsageReport` chạy từng phương thức và sau đó xây dựng một báo cáo về tất cả các phương thức không gọi phương thức `asser (xác nhận)`. Đó có phải là một cách hay để thêm tính năng này không? Nó sẽ làm gì với câu chuyện của chúng ta? Chà, nó sẽ thêm một “lời nói dối thiếu sót” nhỏ khác từ mô tả ngắn gọn nhất của chúng tôi về hệ thống:
+
+> JUnit có hai lớp chính. Lớp đầu tiên gọi là `Test` và lớp còn lại gọi là `TestResult`. Người dùng tạo kiểm thử và chạy chúng, truyền vào một `TestResult`. Khi một kiểm thử không vượt qua, nó sẽ báo cho `TestResult` về điều đó. Sau đó, mọi người có thể hỏi `TestResult` về tất cả các thất bại đã xảy ra.
+
+Có vẻ như `Test` hiện có trách nhiệm hoàn toàn khác: tạo báo cáo, điều mà chúng tôi chưa bao giờ đề cập đến.
+
+Điều gì sẽ xảy ra nếu chúng ta thêm tính năng này theo một cách khác? Chúng tôi có thể thay đổi sự tương tác giữa `TestCase` và `TestResult` để `TestResult` nhận được số lượng xác nhận chạy bất cứ khi nào chạy kiểm thử. Sau đó, chúng ta có thể tạo một lớp xây dựng báo cáo và đăng ký nó với `TestResult` với tư cách là người nghe. Điều đó ảnh hưởng đến câu chuyện của hệ thống như thế nào? Nó có thể là một lý do tốt để khái quát hóa nó một chút. Các kiểm thử không chỉ cho `TestResults` biết về số lần thất bại; nó cũng cho biết về số lỗi, số lần chạy kiểm thử và số lần chạy xác nhận. Chúng ta có thể thay đổi câu chuyện ngắn gọn thành thế này:
+
+> JUnit có hai lớp chính. Lớp đầu tiên gọi là `Test` và lớp còn lại gọi là `TestResult`. Người dùng tạo kiểm thử và chạy chúng, truyền vào một `TestResult`. Khi một kiểm thử không vượt qua, nó sẽ báo cho `TestResult` về điều đó. Sau đó, mọi người có thể hỏi `TestResult` về tất cả các **thông tin** về tất cả các kiểm thử đã chạy.
