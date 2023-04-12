@@ -87,4 +87,40 @@ Mặc dù CRC đã trở nên khá phổ biến trong một thời gian, nhưng 
 
 Vài năm trước, tôi gặp Ron Jeffries tại một hội nghị. Anh ấy hứa sẽ chỉ cho tôi cách anh ấy dùng để giải thích kiến trúc hệ thống qua việc sử dụng các tấm thẻ, khiến cho chúng tương tác với nhau một cách sinh động và đáng nhớ. Và chắc chắn là anh ấy đã giữ lời hứa. Đây là cách mà nó hoạt động. Người mô tả hệ thống sử dụng một tập hợp các thẻ chỉ mục trống và đặt từng thẻ một lên bàn. Anh ấy hoặc cô ấy có thể di chuyển các thẻ, chỉ vào chúng hoặc làm bất cứ điều gì khác cần thiết để truyền đạt các đối tượng điển hình trong hệ thống và cách chúng tương tác.
 
-Dưới đây là một ví dụ, mô tả về hệ thống bỏ phiếu trực tuyến:
+Dưới đây là một ví dụ, mô tả về một hệ thống bỏ phiếu trực tuyến:
+
+“Đây là cách hệ thống bỏ phiếu thời gian thực hoạt động. Đây là phiên khách hàng” (chỉ vào thẻ).
+
+![17-1](images/17-1.png)
+
+“Mỗi phiên có hai kết nối, một kết nối đến và một kết nối đi” (đặt từng thẻ trên thẻ ban đầu và lần lượt chỉ vào từng thẻ).
+
+![17-2](images/17-2.png)
+
+“Khi hệ thống khởi động, một phiên sẽ được tạo trên máy chủ ở đây” (đặt thẻ bên phải xuống).
+
+![17-3](images/17-3.png)
+
+“Mỗi phiên máy chủ cũng có hai kết nối” (đặt hai thẻ biểu thị các kết nối trên thẻ bên phải xuống)
+
+![17-4](images/17-4.png)
+
+“Khi một phiên máy chủ xuất hiện, nó sẽ đăng ký với người quản lý phiếu bầu (đặt thẻ cho người quản lý phiếu bầu phía trên phiên máy chủ)
+
+![17-5](images/17-5.png)
+
+“Chúng ta có thể có nhiều phiên ở phía máy chủ” (đặt một bộ thẻ khác cho phiên máy chủ mới và các kết nối của nó)
+
+![17-6](images/17-6.png)
+
+“Khi khách hàng bỏ phiếu, phiếu bầu sẽ được gửi đến phiên ở phía máy chủ” (chuyển động bằng tay từ một trong các kết nối ở phiên phía máy khách đến kết nối ở phiên phía máy chủ).
+
+“Phiên máy chủ trả lời bằng một xác nhận và sau đó ghi lại phiếu bầu với trình quản lý phiếu bầu” (trỏ từ phiên máy chủ trở lại phiên máy khách, sau đó trỏ từ phiên máy chủ đó đến trình quản lý phiếu bầu).
+
+“Sau đó, trình quản lý phiếu bầu yêu cầu mỗi phiên máy chủ thông báo cho phiên máy khách của mình số lượng phiếu bầu mới là bao nhiêu” (lần lượt chỉ từ thẻ trình quản lý phiếu bầu cho từng phiên máy chủ).
+
+Tôi chắc chắn rằng phần mô tả này còn thiếu điều gì đó vì tôi không thể di chuyển các quân bài trên bàn hoặc chỉ vào chúng theo cách mà tôi sẽ làm nếu chúng tôi ngồi cùng bàn với nhau. Tuy nhiên, kỹ thuật này là khá mạnh mẽ. Nó làm cho các phần của một hệ thống thành những thứ hữu hình. Bạn không cần phải sử dụng thẻ; bất cứ thứ gì tiện dụng đều được. Điều quan trọng là bạn có thể sử dụng chuyển động và vị trí để chỉ ra cách các bộ phận của hệ thống tương tác với nhau. Thường thì hai điều đó có thể làm cho các tình huống liên quan dễ nắm bắt hơn. Vì một số lý do, những phiên thảo luận này cũng làm cho thiết kế hệ thống trở nên dễ nhớ hơn.
+
+Chỉ có hai hướng dẫn trong CRC trần:
+1. Các thẻ đại diện cho các thực thể, không phải các lớp.
+2. Các thẻ xếp chồng lên nhau để hiển thị bộ sưu tập của chúng
