@@ -4,7 +4,7 @@ layout: default
 
 # Chương 17 Ứng dụng của tôi không có kiến trúc
 
-Các ứng dụng tồn tại quá lâu có xu hướng trở nên lộn xộn. Họ có thể đã bắt đầu với một kiến trúc được-cân-nhắc-kỹ-lưỡng, nhưng qua nhiều năm, dưới áp lực về tiến độ, họ có thể đi đến giai đoạn không một ai thực sự hiểu được toàn bộ cấu trúc. Người ta có thể làm việc nhiều năm trong một dự án và không biết các tính năng mới sẽ đi đến đâu; họ chỉ biết những đoạn hack đã được đặt trong hệ thống gần đây. Khi họ thêm các tính năng mới, họ sẽ chuyển đến “điểm hack” vì đó là nơi mà họ hiểu rõ nhất.
+Các ứng dụng tồn tại quá lâu có xu hướng trở nên lộn xộn. Họ có thể đã bắt đầu với một kiến trúc được-cân-nhắc-kỹ-lưỡng, nhưng qua nhiều năm, dưới áp lực về tiến độ, họ có thể đi đến giai đoạn không một ai thực sự hiểu được toàn bộ cấu trúc. Người ta có thể làm việc nhiều năm trong một dự án và không biết các tính năng mới sẽ đi đến đâu; họ chỉ biết những đoạn hack đã được đặt trong hệ thống gần đây. Khi họ thêm các tính năng mới, họ sẽ chuyển đến "điểm hack" vì đó là nơi mà họ hiểu rõ nhất.
 
 Không có biện pháp nào có thể khắc phục dễ dàng tình trạng này và mức độ khẩn cấp của mỗi tình huống rất khác nhau. Trong một số trường hợp, các lập trình viên như đụng phải một bức tường. Rất khó để thêm tính năng mới và điều đó khiến toàn bộ tổ chức rơi vào khủng hoảng. Mọi người được giao nhiệm vụ tìm hiểu xem liệu giữa thiết kế lại hoặc viết lại hệ thống thì cách nào sẽ tốt hơn. Trong các tổ chức khác, hệ thống hoạt động khập khiễng trong nhiều năm. Vâng, phải mất nhiều thời gian hơn mức cần thiết để thêm tính năng mới, nhưng đó chỉ được coi là cái giá của việc kinh doanh. Không ai biết nó có thể tốt hơn bao nhiêu hoặc mất bao nhiêu tiền vì cấu trúc kém.
 
@@ -22,9 +22,9 @@ Làm thế nào chúng ta có được bức tranh toàn cảnh về một hệ 
 
 ## Kể câu chuyện về hệ thống
 
-Khi làm việc theo nhóm, tôi thường sử dụng một kỹ thuật mà tôi gọi là “kể câu chuyện về hệ thống”. Để làm tốt, bạn cần ít nhất hai người. Một người bắt đầu bằng cách hỏi người kia, “Cấu trúc của hệ thống là gì?” Sau đó, người kia cố gắng giải thích kiến trúc của hệ thống chỉ bằng một vài khái niệm, có thể chỉ là hai hoặc ba khái niệm. Nếu bạn là người giải thích, bạn phải giả vờ rằng người kia không biết gì về hệ thống. Chỉ trong một vài câu, bạn phải giải thích các phần của thiết kế là gì và chúng tương tác với nhau như thế nào. Sau đó, bạn nên nói rõ những gì bạn cảm thấy là thiết yếu nhất của hệ thống. Tiếp theo, bạn chọn những điều quan trọng nhất tiếp theo. Bạn tiếp tục cho đến khi trình bày mọi thứ quan trọng về thiết kế lõi của hệ thống.
+Khi làm việc theo nhóm, tôi thường sử dụng một kỹ thuật mà tôi gọi là "kể câu chuyện về hệ thống". Để làm tốt, bạn cần ít nhất hai người. Một người bắt đầu bằng cách hỏi người kia, "Cấu trúc của hệ thống là gì?" Sau đó, người kia cố gắng giải thích kiến trúc của hệ thống chỉ bằng một vài khái niệm, có thể chỉ là hai hoặc ba khái niệm. Nếu bạn là người giải thích, bạn phải giả vờ rằng người kia không biết gì về hệ thống. Chỉ trong một vài câu, bạn phải giải thích các phần của thiết kế là gì và chúng tương tác với nhau như thế nào. Sau đó, bạn nên nói rõ những gì bạn cảm thấy là thiết yếu nhất của hệ thống. Tiếp theo, bạn chọn những điều quan trọng nhất tiếp theo. Bạn tiếp tục cho đến khi trình bày mọi thứ quan trọng về thiết kế lõi của hệ thống.
 
-Khi bạn bắt đầu làm việc này, bạn sẽ nhận thấy một cảm giác kỳ lạ. Để thực sự truyền đạt kiến trúc hệ thống một cách ngắn gọn, trước hết bạn phải đơn giản hóa chúng. Bạn có thể nói, “Cổng lấy các bộ quy tắc từ cơ sở dữ liệu đang hoạt động,” nhưng khi bạn nói vậy, một phần trong bạn có thể hét lên, “Không! Cổng lấy các bộ quy tắc từ cơ sở dữ liệu đang hoạt động, nhưng nó cũng lấy chúng từ bộ đang hoạt động hiện tại.” Khi bạn nói điều đơn giản hơn, có vẻ như bạn đang nói dối; bạn chỉ không kể toàn bộ câu chuyện. Nhưng bạn đang kể một câu chuyện đơn giản hơn mô tả một kiến trúc dễ-hiểu-hơn. Chẳng hạn, tại sao cổng phải lấy các bộ quy tắc từ nhiều nơi? Sẽ không đơn giản hơn nếu nó được thống nhất?
+Khi bạn bắt đầu làm việc này, bạn sẽ nhận thấy một cảm giác kỳ lạ. Để thực sự truyền đạt kiến trúc hệ thống một cách ngắn gọn, trước hết bạn phải đơn giản hóa chúng. Bạn có thể nói, "Cổng lấy các bộ quy tắc từ cơ sở dữ liệu đang hoạt động," nhưng khi bạn nói vậy, một phần trong bạn có thể hét lên, "Không! Cổng lấy các bộ quy tắc từ cơ sở dữ liệu đang hoạt động, nhưng nó cũng lấy chúng từ bộ đang hoạt động hiện tại." Khi bạn nói điều đơn giản hơn, có vẻ như bạn đang nói dối; bạn chỉ không kể toàn bộ câu chuyện. Nhưng bạn đang kể một câu chuyện đơn giản hơn mô tả một kiến trúc dễ-hiểu-hơn. Chẳng hạn, tại sao cổng phải lấy các bộ quy tắc từ nhiều nơi? Sẽ không đơn giản hơn nếu nó được thống nhất?
 
 Tính thực dụng thường giữ lại mọi thứ thay vì khiến chúng trở nên đơn giản, nhưng việc trình bày rõ ràng quan điểm đơn giản cũng có giá trị không nhỏ. Ít nhất, nó giúp mọi người hiểu điều gì là lý tưởng và điều gì là thiết thực. Điều quan trọng khác về kỹ thuật này là nó thực sự buộc bạn phải suy nghĩ về điều gì là quan trọng trong hệ thống. Những điều quan trọng nhất để giao tiếp là gì?
 
@@ -63,7 +63,7 @@ Nếu một hệ thống không đơn giản như câu chuyện đơn giản nh�
 
 Giả sử rằng chúng ta sẽ thêm một tính năng mới vào `JUnit`. Chúng tôi muốn tạo một báo cáo về tất cả các kiểm thử mà không gọi bất kỳ xác nhận nào khi chúng tôi chạy chúng. Những lựa chọn nào chúng ta đã đưa ra những gì đã được mô tả trong `JUnit`?
 
-Một lựa chọn là thêm một phương thức vào lớp `TestCase` có tên là `buildUsageReport` chạy từng phương thức và sau đó xây dựng một báo cáo về tất cả các phương thức không gọi phương thức `asser (xác nhận)`. Đó có phải là một cách hay để thêm tính năng này không? Nó sẽ làm gì với câu chuyện của chúng ta? Chà, nó sẽ thêm một “lời nói dối thiếu sót” nhỏ khác từ mô tả ngắn gọn nhất của chúng tôi về hệ thống:
+Một lựa chọn là thêm một phương thức vào lớp `TestCase` có tên là `buildUsageReport` chạy từng phương thức và sau đó xây dựng một báo cáo về tất cả các phương thức không gọi phương thức `asser (xác nhận)`. Đó có phải là một cách hay để thêm tính năng này không? Nó sẽ làm gì với câu chuyện của chúng ta? Chà, nó sẽ thêm một "lời nói dối thiếu sót" nhỏ khác từ mô tả ngắn gọn nhất của chúng tôi về hệ thống:
 
 > JUnit có hai lớp chính. Lớp đầu tiên gọi là `Test` và lớp còn lại gọi là `TestResult`. Người dùng tạo kiểm thử và chạy chúng, truyền vào một `TestResult`. Khi một kiểm thử không vượt qua, nó sẽ báo cho `TestResult` về điều đó. Sau đó, mọi người có thể hỏi `TestResult` về tất cả các thất bại đã xảy ra.
 
@@ -89,38 +89,50 @@ Vài năm trước, tôi gặp Ron Jeffries tại một hội nghị. Anh ấy h
 
 Dưới đây là một ví dụ, mô tả về một hệ thống bỏ phiếu trực tuyến:
 
-“Đây là cách hệ thống bỏ phiếu thời gian thực hoạt động. Đây là phiên khách hàng” (chỉ vào thẻ).
+"Đây là cách hệ thống bỏ phiếu thời gian thực hoạt động. Đây là phiên khách hàng" (chỉ vào thẻ).
 
 ![17-1](images/17-1.png)
 
-“Mỗi phiên có hai kết nối, một kết nối đến và một kết nối đi” (đặt từng thẻ trên thẻ ban đầu và lần lượt chỉ vào từng thẻ).
+"Mỗi phiên có hai kết nối, một kết nối đến và một kết nối đi" (đặt từng thẻ trên thẻ ban đầu và lần lượt chỉ vào từng thẻ).
 
 ![17-2](images/17-2.png)
 
-“Khi hệ thống khởi động, một phiên sẽ được tạo trên máy chủ ở đây” (đặt thẻ bên phải xuống).
+"Khi hệ thống khởi động, một phiên sẽ được tạo trên máy chủ ở đây" (đặt thẻ bên phải xuống).
 
 ![17-3](images/17-3.png)
 
-“Mỗi phiên máy chủ cũng có hai kết nối” (đặt hai thẻ biểu thị các kết nối trên thẻ bên phải xuống)
+"Mỗi phiên máy chủ cũng có hai kết nối" (đặt hai thẻ biểu thị các kết nối trên thẻ bên phải xuống)
 
 ![17-4](images/17-4.png)
 
-“Khi một phiên máy chủ xuất hiện, nó sẽ đăng ký với người quản lý phiếu bầu (đặt thẻ cho người quản lý phiếu bầu phía trên phiên máy chủ)
+"Khi một phiên máy chủ xuất hiện, nó sẽ đăng ký với người quản lý phiếu bầu (đặt thẻ cho người quản lý phiếu bầu phía trên phiên máy chủ)
 
 ![17-5](images/17-5.png)
 
-“Chúng ta có thể có nhiều phiên ở phía máy chủ” (đặt một bộ thẻ khác cho phiên máy chủ mới và các kết nối của nó)
+"Chúng ta có thể có nhiều phiên ở phía máy chủ" (đặt một bộ thẻ khác cho phiên máy chủ mới và các kết nối của nó)
 
 ![17-6](images/17-6.png)
 
-“Khi khách hàng bỏ phiếu, phiếu bầu sẽ được gửi đến phiên ở phía máy chủ” (chuyển động bằng tay từ một trong các kết nối ở phiên phía máy khách đến kết nối ở phiên phía máy chủ).
+"Khi khách hàng bỏ phiếu, phiếu bầu sẽ được gửi đến phiên ở phía máy chủ" (chuyển động bằng tay từ một trong các kết nối ở phiên phía máy khách đến kết nối ở phiên phía máy chủ).
 
-“Phiên máy chủ trả lời bằng một xác nhận và sau đó ghi lại phiếu bầu với trình quản lý phiếu bầu” (trỏ từ phiên máy chủ trở lại phiên máy khách, sau đó trỏ từ phiên máy chủ đó đến trình quản lý phiếu bầu).
+"Phiên máy chủ trả lời bằng một xác nhận và sau đó ghi lại phiếu bầu với trình quản lý phiếu bầu" (trỏ từ phiên máy chủ trở lại phiên máy khách, sau đó trỏ từ phiên máy chủ đó đến trình quản lý phiếu bầu).
 
-“Sau đó, trình quản lý phiếu bầu yêu cầu mỗi phiên máy chủ thông báo cho phiên máy khách của mình số lượng phiếu bầu mới là bao nhiêu” (lần lượt chỉ từ thẻ trình quản lý phiếu bầu cho từng phiên máy chủ).
+"Sau đó, trình quản lý phiếu bầu yêu cầu mỗi phiên máy chủ thông báo cho phiên máy khách của mình số lượng phiếu bầu mới là bao nhiêu" (lần lượt chỉ từ thẻ trình quản lý phiếu bầu cho từng phiên máy chủ).
 
 Tôi chắc chắn rằng phần mô tả này còn thiếu điều gì đó vì tôi không thể di chuyển các quân bài trên bàn hoặc chỉ vào chúng theo cách mà tôi sẽ làm nếu chúng tôi ngồi cùng bàn với nhau. Tuy nhiên, kỹ thuật này là khá mạnh mẽ. Nó làm cho các phần của một hệ thống thành những thứ hữu hình. Bạn không cần phải sử dụng thẻ; bất cứ thứ gì tiện dụng đều được. Điều quan trọng là bạn có thể sử dụng chuyển động và vị trí để chỉ ra cách các bộ phận của hệ thống tương tác với nhau. Thường thì hai điều đó có thể làm cho các tình huống liên quan dễ nắm bắt hơn. Vì một số lý do, những phiên thảo luận này cũng làm cho thiết kế hệ thống trở nên dễ nhớ hơn.
 
 Chỉ có hai hướng dẫn trong CRC trần:
 1. Các thẻ đại diện cho các thực thể, không phải các lớp.
 2. Các thẻ xếp chồng lên nhau để hiển thị bộ sưu tập của chúng
+
+## Giám sát cuộc hội thoại
+
+Trong code kế thừa, thật hấp dẫn để bỏ qua sự trừu tượng. Khi tôi xem xét bốn hoặc năm lớp với khoảng một nghìn dòng code cho mỗi lớp, tôi sẽ cố gắng tìm ra điều gì phải thay đổi thay vì nghĩ đến việc thêm các lớp mới.
+
+Bởi vì chúng ta quá phân tâm khi cố gắng tìm ra điều đó, và thường bỏ lỡ những điều có thể cho chúng ta thêm ý tưởng. Đây là một ví dụ. Tôi đã từng làm việc với một số thành viên trong nhóm và họ đang thực hiện bài tập tạo ra một đoạn code lớn có thể thực thi được từ nhiều luồng. Đoạn code này khá phức tạp và có nhiều khả năng dẫn đến bế tắc. Chúng tôi nhận ra rằng nếu có thể đảm bảo rằng các tài nguyên được khóa và mở khóa theo một thứ tự cụ thể, thì có thể tránh được bế tắc. Chúng tôi bắt đầu xem xét cách chúng tôi có thể sửa đổi code để kích hoạt tính năng này. Trong suốt khoảng thời gian đó, chúng tôi đã nói về kế hoạch mới về khóa này và tìm cách duy trì số đếm trong các mảng để kích hoạt nó. Khi một trong những lập trình viên khác bắt đầu viết code, tôi nói: "Đợi đã, chúng ta đang nói về chính sách khóa phải không? Tại sao chúng ta không tạo một lớp có tên là `LockingPolicy` và duy trì số đếm trong đó? Chúng ta có thể sử dụng các tên phương thức thực sự mô tả những gì chúng ta đang cố gắng thực hiện và điều đó sẽ rõ ràng hơn so với dùng một mảng."
+
+Điều tệ hại là nhóm đó không hề thiếu kinh nghiệm. Có một số thành viên còn nắm rất rõ về cơ sở code, nhưng có điều gì đó mê hoặc về những khối code thủ tục lớn: Chúng dường như cầu xin nhiều hơn nữa.
+
+Lắng nghe các cuộc trò chuyện về thiết kế của bạn. Các khái niệm bạn đang sử dụng trong cuộc trò chuyện có giống với các khái niệm dùng trong code không? Tôi không mong đợi chúng được áp dụng toàn bộ. Phần mềm phải đáp ứng các ràng buộc mạnh mẽ hơn là chỉ dễ nói về nó, nhưng nếu không có sự giao thoa mạnh mẽ giữa các cuộc trò chuyện và code, thì bạn phải tự đặt câu hỏi tại sao, điều đó rất quan trọng. Câu trả lời thường là sự kết hợp của hai điều: Code không thích ứng với cách hiểu của nhóm hoặc nhóm cần hiểu nó theo cách khác. Trong mọi trường hợp, việc điều chỉnh theo các khái niệm mà mọi người đang sử dụng một cách tự nhiên để mô tả thiết kế là rất hiệu quả. Khi mọi người nói về thiết kế, họ đang cố gắng làm cho người khác hiểu họ. Hãy đưa những hiểu biết đó vào code.
+
+Trong chương này, tôi đã mô tả một số kỹ thuật để khám phá và truyền đạt kiến trúc của hệ thống lớn hiện có. Nhiều kỹ thuật cũng là những cách hoàn toàn tốt để thiết kế các hệ thống mới. Thiết kế là thiết kế, bất kể nó diễn ra khi nào trong chu kỳ phát triển. Một trong những sai lầm tồi tệ nhất mà một nhóm có thể mắc phải là cảm thấy việc thiết kế đã kết thúc tại một thời điểm nào đó trong quá trình phát triển. Nếu thiết kế đã “kết thúc” và mọi người vẫn đang tiếp tục thực hiện các thay đổi, thì rất có thể code mới sẽ xuất hiện ở những chỗ khó hiểu và các lớp sẽ phình to vì không ai cảm thấy thoải mái khi phát triển khái niệm trừu tượng mới. Đó chắc chắn là cách khiến một hệ thống cũ trở nên tồi tệ hơn.
