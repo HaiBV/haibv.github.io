@@ -68,3 +68,34 @@ public class CppClass {
 	}
 }
 ```
+
+Danh sách đó sẽ giống như thế này:
+
+1. Ai đó có thể thêm các phần tử bổ sung vào danh sách khai báo sau khi chuyển nó tới hàm khởi tạo. Vì danh sách được giữ theo tham chiếu nên những thay đổi được thực hiện đối với danh sách có thể thay đổi kết quả của `getInterface`, `getDeclaration` và `getDeclarationCount`.
+2. Ai đó có thể thay đổi một trong các đối tượng được giữ trong danh sách khai báo hoặc thay thế một trong các phần tử của nó, ảnh hưởng đến các phương thức tương tự.
+
+> Một số người nhìn vào phương thức `getName` và nghi ngờ rằng nó có thể trả về một giá trị khác nếu bất kỳ ai thay đổi chuỗi `name`, nhưng trong Java, các đối tượng `String` là bất biến. Bạn không thể thay đổi giá trị của chúng sau khi chúng được tạo. Sau khi một đối tượng `CppClass` được tạo, `getName` luôn trả về cùng một giá trị chuỗi.
+
+Chúng ta tạo một bản phác thảo cho thấy những thay đổi trong `declarations` có ảnh hưởng đến `getDeclarationCount()` (xem Hình 11.1)
+
+![11.1](images/11-1.png)
+Hình 11.1 `declarations` tác động đến `getDeclarationCount`.
+
+Bản phác thảo này cho thấy rằng nếu `declarations` thay đổi theo một cách nào đó - ví dụ: nếu kích thước của nó tăng lên - `getDeclarationCount()` có thể trả về một giá trị khác.
+
+Chúng ta cũng có thể tạo một bản phác thảo cho cho `getDeclaration(int index)` (xem Hình 11.2).
+
+Các giá trị trả về của lệnh gọi `getDeclaration(int index)` có thể thay đổi nếu có điều gì đó khiến `declarations` thay đổi hoặc nếu các khai báo bên trong nó thay đổi.
+
+Hình 11.3 cho thấy những điều tương tự cũng ảnh hưởng đến phương thức `getInterface`.
+
+Chúng ta có thể gộp tất cả các bản phác thảo này lại với nhau thành một bản phác thảo lớn hơn (xem Hình 11.4)
+
+![11.2](images/11-2.png)
+Hình 11.2 `declarations` và các đối tượng mà nó nắm giữ tác động đến `getDeclarationCount`
+
+![11.3](images/11-3.png)
+Hình 11.3 Những thứ ảnh hưởng đến `getInterface`
+
+![11.4](images/11-4.png)
+Hình 11.4 Tổng hợp các bản phác thảo
