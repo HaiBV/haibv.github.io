@@ -99,3 +99,39 @@ Hình 11.3 Những thứ ảnh hưởng đến `getInterface`
 
 ![11.4](images/11-4.png)
 Hình 11.4 Tổng hợp các bản phác thảo
+
+Không có nhiều cú pháp trong các sơ đồ này. Tôi chỉ gọi chúng là _các bản phác thảo hiệu ứng_. Điều quan trọng là có một thành phần riêng cho từng biến có thể bị ảnh hưởng và từng phương thức có giá trị trả về có thể thay đổi. Đôi khi các biến nằm trên cùng một đối tượng và đôi khi chúng nằm trên các đối tượng khác nhau. Điều đó không thành vấn đề: Chúng tôi chỉ tạo thành phần cho những thứ sẽ thay đổi và vẽ một mũi tên tới mọi thứ có giá trị có thể thay đổi trong thời gian chạy bởi vì chúng.
+
+> Nếu code của bạn được cấu trúc tốt, hầu hết các phương thức trong ứng dụng của bạn đều có cấu trúc hiệu ứng đơn giản. Trên thực tế, một thước đo mức độ tốt của ứng dụng là các hiệu ứng khá phức tạp đối với thế giới bên ngoài là tổng của một tập hợp các hiệu ứng đơn giản hơn nhiều bên trong code. Hầu như bất cứ điều gì bạn có thể làm khiến cho bản phác thảo hiệu ứng đơn giản hơn cho một đoạn code đều khiến nó trở nên dễ hiểu và dễ bảo trì hơn.
+
+Hãy mở rộng bức tranh của chúng ta về hệ thống mà lớp trước hình thành và nhìn vào một bức tranh hiệu ứng lớn hơn. Các đối tượng `CppClass` được tạo trong một lớp có tên là `ClassReader`. Trên thực tế, chúng tôi có thể xác định rằng chúng chỉ được tạo trong `ClassReader`.
+
+```Java
+public class ClassReader {
+	private boolean inPublicSection = false;
+	private CppClass parsedClass;
+	private List declarations = new ArrayList();
+	private Reader reader;
+
+	public ClassReader(Reader reader) {
+		this.reader = reader;
+	}
+
+	public void parse() throws Exception {
+		TokenReader source = new TokenReader(reader);
+		Token classToken = source.readToken();
+		Token className = source.readToken();
+
+		Token lbrace = source.readToken();
+		matchBody(source);
+		Token rbrace = source.readToken();
+
+		Token semicolon = source.readToken();
+
+		if (classToken.getType() == Token.CLASS && className.getType() == Token.IDENT && lbrace.getType() == Token.LBRACE && rbrace.getType() == Token.RBRACE && semicolon.getType() == Token.SEMIC) {
+				parsedClass = new CppClass(className.getText(),declarations);
+		}
+	}
+	...
+}
+```
