@@ -135,3 +135,31 @@ public class ClassReader {
 	...
 }
 ```
+
+Hãy nhớ những gì chúng ta đã học về `CppClass`? Chúng ta có biết rằng danh sách khai báo sẽ không bao giờ thay đổi sau khi `CppClass` được tạo không? Chúng ta không thực sự khẳng định được với những gì đã biết. Chúng ta cần tìm ra cách danh sách khai báo được điền. Nếu chúng ta xem xét nhiều hơn về lớp, chúng ta có thể thấy rằng các khai báo chỉ được thêm vào một vị trí trong `CppClass`, một phương thức có tên là `matchVirtualDeclaration` được gọi bởi `matchBody`.
+
+```Java
+private void matchVirtualDeclaration(TokenReader source)
+throws IOException {
+	if (!source.peekToken().getType() == Token.VIRTUAL)
+		return;
+	List declarationTokens = new ArrayList();
+	declarationTokens.add(source.readToken());
+	while(source.peekToken().getType() != Token.SEMIC) {
+		declarationTokens.add(source.readToken());
+	}
+	declarationTokens.add(source.readToken());
+	if (inPublicSection)
+		declarations.add(new Declaration(declarationTokens));
+}
+```
+
+Có vẻ như tất cả các thay đổi xảy ra với danh sách này xảy ra trước khi đối tượng `CppClass` được tạo. Bởi vì chúng ta thêm các khai báo mới vào danh sách và không giữ bất kỳ tham chiếu nào đến chúng, nên các khai báo cũng sẽ không thay đổi.
+
+Hãy nghĩ về những thứ nằm trong danh sách khai báo. Phương thức `readToken` của `TokenReader` trả về các đối tượng `token` chỉ chứa một chuỗi và một số nguyên không bao giờ thay đổi. Tôi không trình bày nó ở đây, nhưng nhìn lướt qua lớp `Declaration` cho thấy rằng không có gì khác có thể thay đổi trạng thái của nó sau khi được tạo, vì vậy chúng ta có thể cảm thấy khá thoải mái khi nói rằng khi một đối tượng `CppClass` được tạo, danh sách khai báo và danh sách nội dung của nó sẽ không thay đổi.
+
+Điều này sẽ giúp chúng ta thế nào? Nếu chúng ta nhận được các giá trị không mong muốn từ `CppClass`, chúng ta biết rằng chỉ cần xem xét một vài điều. Nhìn chung, chúng ta có thể bắt đầu thực sự nhìn lại những nơi mà các đối tượng con của `CppClass` được tạo ra để tìm ra điều gì đang xảy ra. Chúng ta cũng có thể làm cho code rõ ràng hơn bằng cách bắt đầu đánh dấu một số tham chiếu trong hằng số `CppClass` bằng cách sử dụng từ khóa `final` của Java.
+
+Trong các chương trình không được viết tốt, chúng ta thường thấy rất khó hiểu tại sao kết quả mà chúng ta đang xem xét lại như vậy. Khi chúng ta đang ở vào hoàn cảnh đó, chúng ta có một vấn đề cần gỡ lỗi và phải suy luận ngược từ vấn đề đến nguồn gốc của nó. Khi làm việc với code kế thừa, chúng ta thường phải đặt một câu hỏi khác: Nếu chúng ta thực hiện một thay đổi cụ thể, nó có thể ảnh hưởng đến phần kết quả còn lại của chương trình như thế nào?
+
+Điều này liên quan đến suy luận về phía trước từ các điểm thay đổi. Khi bạn xử lý tốt kiểu lập luận này, bạn sẽ bắt đầu có một kỹ thuật để tìm ra những chỗ hợp lý để viết kiểm thử.
