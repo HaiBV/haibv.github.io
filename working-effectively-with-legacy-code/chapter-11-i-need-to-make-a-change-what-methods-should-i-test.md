@@ -162,4 +162,49 @@ Hãy nghĩ về những thứ nằm trong danh sách khai báo. Phương thức 
 
 Trong các chương trình không được viết tốt, chúng ta thường thấy rất khó hiểu tại sao kết quả mà chúng ta đang xem xét lại như vậy. Khi chúng ta đang ở vào hoàn cảnh đó, chúng ta có một vấn đề cần gỡ lỗi và phải suy luận ngược từ vấn đề đến nguồn gốc của nó. Khi làm việc với code kế thừa, chúng ta thường phải đặt một câu hỏi khác: Nếu chúng ta thực hiện một thay đổi cụ thể, nó có thể ảnh hưởng đến phần kết quả còn lại của chương trình như thế nào?
 
-Điều này liên quan đến suy luận về phía trước từ các điểm thay đổi. Khi bạn xử lý tốt kiểu lập luận này, bạn sẽ bắt đầu có một kỹ thuật để tìm ra những chỗ hợp lý để viết kiểm thử.
+Điều này liên quan đến suy luận tịnh tiến từ các điểm thay đổi. Khi bạn xử lý tốt kiểu lập luận này, bạn sẽ bắt đầu có một kỹ thuật để tìm ra những chỗ hợp lý để viết kiểm thử.
+
+## Suy luận tịnh tiến
+
+Trong ví dụ trước, chúng ta đã cố gắng tìm ra tập hợp các đối tượng ảnh hưởng đến các giá trị tại một vị trí cụ thể trong code. Khi viết các _kiểm thử đặc tính_ (186), chúng ta sẽ đảo ngược quá trình này. Chúng ta xem xét một tập hợp các đối tượng và cố gắng tìm ra điều gì sẽ thay đổi sau khi chúng ngừng hoạt động. Đây là một ví dụ. Lớp sau đây là một phần của hệ thống tệp trong bộ nhớ. Chúng ta không có bất kỳ kiểm thử nào cho nó, nhưng chúng ta muốn thực hiện một số thay đổi.
+
+```Java
+public class InMemoryDirectory {
+	private List elements = new ArrayList();
+
+	public void addElement(Element newElement) {
+		elements.add(newElement);
+	}
+
+	public void generateIndex() {
+		Element index = new Element("index");
+		for (Iterator it = elements.iterator(); it.hasNext(); ) {
+			Element current = (Element)it.next();
+			index.addText(current.getName() + "\n");
+		}
+		addElement(index);
+	}
+
+	public int getElementCount() {
+		return elements.size();
+	}
+
+	public Element getElement(String name) {
+		for (Iterator it = elements.iterator(); it.hasNext(); ) {
+			Element current = (Element)it.next();
+			if (current.getName().equals(name)) {
+				return current;
+			}
+		}
+		return null;
+	}
+}
+```
+
+`InMemoryDirectory` là một lớp Java nhỏ. Chúng ta có thể tạo một đối tượng `InMemoryDirectory`, thêm các phần tử vào đó, tạo một chỉ mục (index) và sau đó truy cập các phần tử. `Elements` là các đối tượng chứa văn bản, giống như các tệp. Khi chúng tôi tạo một chỉ mục, chúng tôi tạo một phần tử có tên là `index` và nối thêm tên của tất cả các phần tử khác vào nội dung của nó.
+
+Một tính năng kỳ lạ của `InMemoryDirectory` là chúng ta không thể gọi `generateIndex` hai lần mà không làm hỏng mọi thứ. Nếu chúng ta gọi `generateIndex` hai lần, chúng ta sẽ có hai phần tử chỉ mục (phần tử thứ hai được tạo sẽ liệt kê phần tử đầu tiên là một phần tử của thư mục).
+
+May mắn thay, ứng dụng sử dụng `InMemoryDirectory` theo một cách rất hạn chế. Nó tạo ra các thư mục, lấp đầy chúng bằng các phần tử, gọi `generateIndex`, sau đó chuyển thư mục đi khắp nơi để các phần khác của ứng dụng có thể truy cập các phần tử của nó. Tất cả đều hoạt động tốt ngay bây giờ, nhưng chúng ta cần phải thay đổi. Chúng ta cần sửa đổi phần mềm để cho phép mọi người thêm các phần tử vào bất kỳ lúc nào trong thời gian tồn tại của thư mục.
+
+Lý tưởng nhất là chúng ta muốn việc tạo và bảo trì chỉ mục diễn ra như một tác dụng phụ của việc thêm các phần tử. Lần đầu tiên thêm một phần tử, phần tử chỉ mục sẽ được tạo và nó phải chứa tên của phần tử đã được thêm vào. Lần thứ hai, phần tử chỉ mục đó sẽ được cập nhật với tên của phần tử được thêm vào. Sẽ dễ dàng để viết các kiểm thử cho hành vi mới và code thỏa mãn chúng, nhưng chúng tôi không có bất kỳ kiểm thử nào cho hành vi hiện tại. Làm thế nào để chúng ta tìm ra nơi để đặt chúng?
