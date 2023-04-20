@@ -208,3 +208,17 @@ Một tính năng kỳ lạ của `InMemoryDirectory` là chúng ta không thể
 May mắn thay, ứng dụng sử dụng `InMemoryDirectory` theo một cách rất hạn chế. Nó tạo ra các thư mục, lấp đầy chúng bằng các phần tử, gọi `generateIndex`, sau đó chuyển thư mục đi khắp nơi để các phần khác của ứng dụng có thể truy cập các phần tử của nó. Tất cả đều hoạt động tốt ngay bây giờ, nhưng chúng ta cần phải thay đổi. Chúng ta cần sửa đổi phần mềm để cho phép mọi người thêm các phần tử vào bất kỳ lúc nào trong thời gian tồn tại của thư mục.
 
 Lý tưởng nhất là chúng ta muốn việc tạo và bảo trì chỉ mục diễn ra như một tác dụng phụ của việc thêm các phần tử. Lần đầu tiên thêm một phần tử, phần tử chỉ mục sẽ được tạo và nó phải chứa tên của phần tử đã được thêm vào. Lần thứ hai, phần tử chỉ mục đó sẽ được cập nhật với tên của phần tử được thêm vào. Sẽ dễ dàng để viết các kiểm thử cho hành vi mới và code thỏa mãn chúng, nhưng chúng tôi không có bất kỳ kiểm thử nào cho hành vi hiện tại. Làm thế nào để chúng ta tìm ra nơi để đặt chúng?
+
+Trong ví dụ này, câu trả lời đã đủ rõ ràng: Chúng ta cần một loạt kiểm thử gọi `addElement` theo nhiều cách khác nhau, tạo chỉ mục và sau đó lấy các phần tử khác nhau để xem chúng có đúng không. Làm thế nào chúng ta biết những phương pháp nào là phù hợp để sử dụng? Trong trường hợp này, vấn đề rất đơn giản. Các kiểm thử chỉ là mô tả về cách chúng ta muốn sử dụng thư mục. Chúng ta có thể viết chúng mà không cần nhìn vào code thư mục vì chúng ta biết rõ thư mục phải làm gì. Thật không may, việc tìm ra vị trí viết kiểm thử không phải lúc nào cũng đơn giản như vậy. Tôi có thể sử dụng một lớp lớn phức tạp để làm ví dụ, một lớp giống như những lớp thường ẩn trong các hệ thống cũ, nhưng bạn sẽ cảm thấy nhàm chán và đóng cuốn sách lại. Vì vậy, hãy giả sử rằng đây là một vấn đề khó và xem cách chúng ta có thể tìm ra những gì cần kiểm thử bằng cách xem code. Cách lập luận tương tự cũng áp dụng cho những vấn đề hóc búa hơn.
+
+Trong ví dụ này, điều đầu tiên chúng ta cần làm là tìm ra nơi chúng ta sẽ thực hiện các thay đổi của mình. Chúng ta cần xóa chức năng khỏi `generateIndex` và thêm chức năng vào `addElement`. Khi chúng ta đã xác định đó là những điểm thay đổi, chúng ta có thể bắt đầu phác thảo các hiệu ứng.
+
+Hãy bắt đầu với `generateIndex`. Cái gì sẽ gọi nó? Không có phương pháp nào khác trong lớp làm việc đó. Phương thức này chỉ được gọi bởi các lớp khác. Chúng ta có sửa đổi bất cứ điều gì trong `generateIndex` không? Chúng ta tạo một phần tử mới và thêm nó vào thư mục, vì vậy, `generateIndex` có thể có ảnh hưởng đến tập hợp các `elements` trong lớp (xem Hình 11.5).
+
+Bây giờ chúng ta có thể xem xét tập hợp `elements` và xem nó có thể ảnh hưởng đến những gì. Những nơi nó được sử dụng? Có vẻ như nó được sử dụng trong `getElementCount` và `getElement`. Tập hợp `elements` cũng được sử dụng trong `addElement`, nhưng chúng ta không cần tính đến điều đó vì `addElement` hoạt động theo cùng một cách, bất kể chúng ta làm gì với tập hợp `elements`: Không người dùng `addElements` nào có thể bị ảnh hưởng bởi bất kỳ điều gì chúng ta làm với tập hợp `elements` (xem Hình 11.6).
+
+![11.5](images/11-5.png)
+Hình 11.5 `generateIndex` ảnh hưởng đến `elements`
+
+![11.6](images/11-6.png)
+Hình 11.6 Các tác động khác của các thay đổi trong `generateIndex`.
