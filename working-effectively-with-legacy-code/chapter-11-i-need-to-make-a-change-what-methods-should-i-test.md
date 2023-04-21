@@ -222,3 +222,58 @@ Hình 11.5 `generateIndex` ảnh hưởng đến `elements`
 
 ![11.6](images/11-6.png)
 Hình 11.6 Các tác động khác của các thay đổi trong `generateIndex`.
+
+Như thế đã đủ chưa? Chưa, điểm thay đổi của chúng ta là phương thức `generateIndex` và phương thức `addElement`, vì vậy chúng ta cần xem xét ảnh hưởng của `addElement` đến xung quanh. Có vẻ như `addElement` ảnh hưởng đến tập hợp `elements` (xem Hình 11.7).
+
+Chúng ta có thể xem điều gì ảnh hướng đến những phần tử, nhưng chúng ta đã làm điều đó rồi vì `generateIndex` ảnh hưởng đến `elements`.
+
+Hình 11.8. gồm toàn bộ phác thảo
+
+![11.7](images/11-7.png)
+Hình 11.7 `addElement` ảnh hưởng đến `elements`
+
+Khi sử dụng của lớp `InMemoryDirectory`, cách duy nhất để cảm nhận được sự ảnh hưởng là thông qua các phương thức `getElementCount` và `getElement`. Nếu chúng ta có thể viết kiểm thử cho các phương thức đó, có lẽ chúng ta sẽ có thể bao phủ được tất cả các tác động tạo ra từ sự thay đổi của chúng ta.
+
+![11.8](images/11-8.png)
+Hình 11.8 Phác thảo ảnh hưởng của lớp `InMemoryDirectory`
+
+Nhưng có khả năng chúng ta bỏ lỡ điều gì đó không? Còn các lớp cha và lớp con thì sao? Nếu bất kỳ dữ liệu nào trong `InMemoryDirectory` là công khai, bảo vệ hoặc nằm trong phạm vi gói, thì một phương thức của lớp con có thể sửa đổi dữ liệu đó theo cách chúng ta không thể biết. Trong ví dụ này, các biến thể hiện trong `InMemoryDirectory` là riêng tư, vì vậy chúng ta không phải lo lắng về điều đó.
+
+> Khi bạn đang phác thảo các hiệu ứng, hãy đảm bảo rằng bạn đã tìm thấy tất cả vị trí sử dụng của lớp bạn đang kiểm tra. Nếu lớp của bạn có một lớp cha hoặc các lớp con, thì có thể có vị trí khác mà bạn chưa xem xét.
+
+Bây giờ thì sao? Chà, có một điều mà chúng tôi đã che đậy hoàn toàn. Chúng tôi đang sử dụng lớp `Element` trong thư mục, nhưng nó không nằm trong bản phác thảo hiệu ứng của chúng tôi. Hãy xem xét nó kỹ hơn.
+
+Khi chúng ta gọi `generateIndex`, chúng ta tạo một `Element` và liên tục gọi `addText` trên đó. Hãy xem code của `Element`:
+
+```Java
+public class Element {
+	private String name;
+	private String text = "";
+
+	public Element(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void addText(String newText) {
+		text += newText;
+	}
+
+	public String getText() {
+		return text;
+	}
+}
+```
+
+Thật may mắn, nó rất đơn giản. Hãy tạo một hình ảnh cho một phần tử mới mà `generateIndex` tạo ra (xem Hình 11.9).
+
+Khi chúng ta có một phần tử mới và nó chứa đầy văn bản, `generateIndex` sẽ thêm phần tử đó vào tập hợp, vì vậy phần tử mới sẽ ảnh hưởng đến tập hợp (xem Hình 11.10)
+
+![11.9](images/11-9.png)
+Hình 11.9 Các tác động tới lớp `Element`
+
+![11.10](images/11-10.png)
+Hình 11.10 `generateIndex` tác động tới tập hợp `elements`.
