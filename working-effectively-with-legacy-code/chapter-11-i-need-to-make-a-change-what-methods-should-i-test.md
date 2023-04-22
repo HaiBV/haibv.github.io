@@ -277,3 +277,59 @@ Hình 11.9 Các tác động tới lớp `Element`
 
 ![11.10](images/11-10.png)
 Hình 11.10 `generateIndex` tác động tới tập hợp `elements`.
+
+Chúng ta đã biết rằng phương thức `addText` ảnh hưởng đến tập hợp `elements`, do đó, ảnh hưởng đến các giá trị trả về của `getElement` và `getElementCount`. Nếu chúng ta muốn thấy văn bản được tạo chính xác, chúng ta có thể gọi `getText` trên một phần tử được trả về bởi `getElement`. Đó là nơi duy nhất phải viết kiểm thử để phát hiện tác động từ những thay đổi của chúng ta.
+
+Như tôi đã đề cập trước đó, đây là một ví dụ khá nhỏ, nhưng nó rất tiêu biểu cho cách lập luận chúng ta cần thực hiện khi đánh giá tác động của những thay đổi trong code kế thừa. Chúng ta cần tìm những nơi viết kiểm thử và bước đầu tiên là tìm ra nơi có thể phát hiện ra sự thay đổi: tác động của sự thay đổi là gì. Khi chúng ta biết nơi có thể phát hiện các ảnh hưởng, chúng tôi có thể chọn ở trong số chúng nơi chúng ta viết kiểm thử của mình.
+
+## Hiệu ứng lan truyền
+
+Có một số cách lan truyền hiệu ứng dễ nhận thấy hơn những cách khác. Trong ví dụ về `InMemoryDirectory` ở phần trước, cuối cùng chúng ta cùng tìm thấy các phương thức trả về giá trị cho trình gọi. Mặc dù bắt đầu bằng cách theo dõi các hiệu ứng từ các điểm thay đổi, những nơi đang thực hiện thay đổi, nhưng tôi cũng thường chú ý đến các phương thức có giá trị trả về trước tiên. Trừ khi các giá trị trả về của chúng không được sử dụng, chúng sẽ truyền các hiệu ứng tới code gọi chúng.
+
+Các hiệu ứng cũng có thể lan truyền theo những cách thầm lặng, lén lút. Nếu chúng ta có một đối tượng nhận một số đối tượng khác làm tham số, nó có thể sửa đổi trạng thái của nó và thay đổi sẽ phản ánh trở lại phần còn lại của ứng dụng.
+
+> Mỗi ngôn ngữ có các quy tắc riêng về cách xử lý tham số cho các phương thức. Mặc định trong nhiều trường hợp là truyền các tham chiếu đến các đối tượng theo giá trị. Đây là mặc định trong Java và C#. Các đối tượng không được truyền cho các phương thức; thay vào đó, chúng cho phép truyền vào các đối tượng đã qua "xử lý". Kết quả là bất kỳ phương thức nào cũng có thể thay đổi trạng thái của đối tượng thông "đã qua xử lý" truyền vào. Một số ngôn ngữ này có các từ khóa mà bạn có thể sử dụng để không thể sửa đổi trạng thái của một đối tượng được truyền cho chúng. Trong C++, từ khóa `const` thực hiện điều này khi bạn sử dụng nó trong phần khai báo tham số phương thức.
+
+Cách lén lút nhất mà một đoạn code có thể ảnh hưởng đến code khác là thông qua dữ liệu tĩnh hoặc toàn cục. Đây là một ví dụ:
+
+```Java
+public class Element {
+	private String name;
+	private String text = "";
+
+	public Element(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void addText(String newText) {
+		text += newText;
+		View.getCurrentDisplay().addText(newText);
+	}
+
+	public String getText() {
+		return text;
+	}
+}
+```
+
+Lớp này gần giống như lớp `Element` mà chúng ta đã sử dụng trong ví dụ `InMemoryDirectory`. Trên thực tế, chỉ có một dòng code là khác: dòng thứ hai trong `addText`. Nhìn vào đặc trưng của các phương thức trong `Element` sẽ không giúp chúng ta tìm ra tác động của các phần tử. Ẩn thông tin là rất tốt, trừ khi đó là thông tin mà chúng ta cần biết.
+
+> Các hiệu ứng lan truyền trong code theo ba cách cơ bản:
+> 1. Qua các giá trị trả về
+> 2. Thay đổi các đối tượng được truyền dưới dạng tham số được
+> 3. Thay đổi dữ liệu tĩnh hoặc toàn cục
+
+> Một số ngôn ngữ cung cấp các cơ chế bổ sung. Chẳng hạn, trong các ngôn ngữ hướng khía cạnh, lập trình viên có thể viết các cấu trúc được gọi là các khía cạnh ảnh hưởng đến hành vi của code trong các khu vực khác của hệ thống
+
+Đây là kinh nghiệm tôi sử dụng khi tìm kiếm các hiệu ứng:
+
+1. Xác định một phương thức sẽ thay đổi.
+2. Nếu phương thức đó có giá trị trả về, hãy xem xét những nơi gọi nó.
+3. Xem phương thức có sửa đổi bất kỳ giá trị nào không. Nếu có, hãy xem các phương thức sử dụng các giá trị đó và các phương thức sử dụng các phương thức đó.
+4. Đảm bảo rằng bạn tìm kiếm các lớp cha và lớp con có thể là người dùng của các biến thể hiện và phương thức này.
+5. Xem các tham số của các phương thức. Xem liệu chúng hoặc bất kỳ đối tượng nào mà phương thức của chúng trả về có được code mà bạn muốn thay đổi sử dụng hay không.
+6. Tìm kiếm các biến toàn cục và dữ liệu tĩnh được sửa đổi theo bất kỳ phương pháp nào bạn đã xác định.
