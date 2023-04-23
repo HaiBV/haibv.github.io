@@ -333,3 +333,70 @@ Lớp này gần giống như lớp `Element` mà chúng ta đã sử dụng tro
 4. Đảm bảo rằng bạn tìm kiếm các lớp cha và lớp con có thể là người dùng của các biến thể hiện và phương thức này.
 5. Xem các tham số của các phương thức. Xem liệu chúng hoặc bất kỳ đối tượng nào mà phương thức của chúng trả về có được code mà bạn muốn thay đổi sử dụng hay không.
 6. Tìm kiếm các biến toàn cục và dữ liệu tĩnh được sửa đổi theo bất kỳ phương pháp nào bạn đã xác định.
+
+## Công cụ xác định ảnh hưởng
+
+Công cụ quan trọng nhất mà chúng ta cần có là kiến thức về ngôn ngữ lập trình. Trong mọi ngôn ngữ, đều có những "tường lửa" nhỏ, những thứ ngăn cản sự lan truyền ảnh hưởng. Nếu biết được chúng là gì, chúng ta sẽ biết không cần phải bỏ qua chúng.
+
+Giả sử rằng chúng ta sắp thay đổi cách biểu diễn của lớp tọa độ sau đây. Chúng ta muốn chuyển sang sử dụng một vectơ để giữ các giá trị x và y vì muốn khái quát hóa lớp `Coordinate` giúp nó có thể biểu diễn các tọa độ ba và bốn chiều. Trong đoạn code Java sau, chúng ta không cần phải xem xét kỹ hơn lớp này để hiểu tác động của sự thay đổi:
+
+```Java
+public class Coordinate {
+	private double x = 0;
+	private double y = 0;
+
+	public Coordinate() {}
+
+	public Coordinate(double x, double y) {
+		this.x = x; this.y = x;
+	}
+
+	public double distance(Coordinate other) {
+		return Math.sqrt(Math.pow(other.x - x, 2.0) + Math.pow(other.y - y, 2.0));
+	}
+}
+```
+
+Đây là đoạn mà chúng ta phải xem xét kỹ hơn:
+
+```Java
+public class Coordinate {
+	double x = 0;
+	double y = 0;
+
+	public Coordinate() {}
+	public Coordinate(double x, double y) {
+		this.x = x; this.y = x;
+	}
+
+	public double distance(Coordinate other) {
+		return Math.sqrt(Math.pow(other.x - x, 2.0) + Math.pow(other.y - y, 2.0));
+	}
+}
+```
+
+Sự khác biệt là gì? Nó tinh tế. Trong phiên bản đầu tiên, các biến x và y là riêng tư. Trong phiên bản thứ 2, chúng có phạm vi gói. Trong phiên bản đầu tiên, nếu chúng ta làm bất cứ điều gì thay đổi biến x và y, thì nó chỉ tác động đến bên ngoài thông qua hàm `distance`, bất kể sử dụng `Coordinate` hay một lớp con của `Coordinate`. Trong phiên bản thứ hai, từ bên ngoài có thể truy cập trực tiếp vào các biến. Chúng ta nên tìm kiếm điều này hoặc thử đặt chúng ở chế độ riêng tư để đảm bảo rằng chúng ảnh hưởng đến bên ngoài. Các lớp con của `Coordinate` cũng có thể sử dụng các biến thể hiện, vì vậy chúng ta phải xem xét chúng và xem liệu chúng có đang được sử dụng trong các phương thức của bất kỳ lớp con nào không.
+
+Việc hiểu biết ngôn ngữ của chúng ta rất quan trọng bởi vì các quy tắc tinh vi thường có thể khiến chúng ta mắc sai lầm. Hãy xem một ví dụ về C++:
+
+```Cpp
+class PolarCoordinate : public Coordinate {
+public:
+	PolarCoordinate();
+	double getRho() const;
+	double getTheta() const;
+};
+```
+
+Trong C++, khi từ khóa `const` xuất hiện sau một phương thức khai báo, thì phương thức đó không thể sửa đổi các biến thể hiện của đối tượng. Hay nó có thể? Giả sử rằng lớp cha của `PolarCoordin` trông như thế này:
+
+```Cpp
+class Coordinate {
+protected:
+	mutable double first, second;
+};
+```
+
+Trong C++, khi từ khóa `mutable` được sử dụng trong khai báo, điều đó có nghĩa là các biến đó có thể được sửa đổi trong các phương thức `const`. Phải thừa nhận rằng việc sử dụng khả năng thay đổi này đặc biệt kỳ lạ, nhưng khi cần tìm ra những gì có thể và không thể thay đổi trong một chương trình mà chúng ta không biết rõ, chúng ta phải tìm kiếm các ảnh hưởng bất kể chúng có thể kỳ lạ đến mức nào. Lấy `const` có nghĩa là `const` trong C++ mà không thực sự kiểm tra có thể nguy hiểm. Điều này cũng đúng với các cấu trúc ngôn ngữ khác có thể bị phá vỡ.
+
+> Hiểu ngôn ngữ của bạn.
