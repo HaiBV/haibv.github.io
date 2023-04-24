@@ -400,3 +400,26 @@ protected:
 Trong C++, khi từ khóa `mutable` được sử dụng trong khai báo, điều đó có nghĩa là các biến đó có thể được sửa đổi trong các phương thức `const`. Phải thừa nhận rằng việc sử dụng khả năng thay đổi này đặc biệt kỳ lạ, nhưng khi cần tìm ra những gì có thể và không thể thay đổi trong một chương trình mà chúng ta không biết rõ, chúng ta phải tìm kiếm các ảnh hưởng bất kể chúng có thể kỳ lạ đến mức nào. Lấy `const` có nghĩa là `const` trong C++ mà không thực sự kiểm tra có thể nguy hiểm. Điều này cũng đúng với các cấu trúc ngôn ngữ khác có thể bị phá vỡ.
 
 > Hiểu ngôn ngữ của bạn.
+
+## Học hỏi từ phân tích hiệu ứng
+
+Cố gắng phân tích các hiệu ứng trong code bất cứ khi nào bạn có cơ hội. Đôi lúc bạn sẽ cảm thấy khi đã rất quen thuộc với code base, bạn không cần phải tìm kiếm một số thứ nhất định. Khi bạn có cảm giác này, bạn đã có được một số "điều tốt cơ bản" trong code base của mình. Trong code tốt nhất, không có nhiều điều ngạc nhiên. Một số "quy tắc" được thể hiện trong code base, cho dù chúng có được nêu rõ hay không, giúp bạn không bị hoang tưởng khi tìm kiếm các hiệu ứng có thể xảy ra. Cách tốt nhất để tìm ra các quy tắc này là nghĩ ra cách mà một phần mềm có thể ảnh hưởng đến phần mềm khác, một cách mà bạn chưa từng thấy trong code base. Sau đó, hãy nói với chính mình, "Nhưng, không, điều đó thật ngu ngốc." Khi code base của bạn có nhiều quy tắc như vậy, việc xử lý sẽ dễ dàng hơn nhiều. Trong code xấu, mọi người không biết "các quy tắc" là gì hoặc "các quy tắc" chứa đầy ngoại lệ.
+
+"Các quy tắc" cho một code base không nhất thiết phải là những tuyên bố lớn về phong cách lập trình, những thứ như "Không bao giờ sử dụng các biến được bảo vệ". Thay vào đó, chúng thường là những thứ theo ngữ cảnh. Trong ví dụ về `CppClass` ở đầu chương, chúng ta đã thực hiện một bài tập nhỏ để cố gắng tìm ra điều gì sẽ ảnh hưởng đến người dùng của một đối tượng `CppClass` sau khi chúng ta tạo nó. Đây là một đoạn trích của code đó:
+
+```Java
+public class CppClass {
+	private String name;
+	private List declarations;
+
+	public CppClass(String name, List declarations) {
+		this.name = name;
+		this.declarations = declarations;
+	}
+	...
+}
+```
+
+Chúng tôi đã liệt kê thực tế là ai đó có thể sửa đổi danh sách khai báo sau khi chuyển nó tới hàm tạo. Đây là một ví dụ điển hình cho quy tắc "nhưng đó sẽ là điều ngu ngốc". Nếu chúng ta biết khi chúng ta bắt đầu xem `CppClass` rằng chúng ta đã được cung cấp một danh sách sẽ không thay đổi, thì lập luận của chúng ta sẽ dễ dàng hơn nhiều.
+
+Nói chung, việc lập trình trở nên dễ dàng hơn khi chúng ta thu hẹp các hiệu ứng trong một chương trình. Chúng ta cần biết ít hơn để hiểu một đoạn code. Cuối cùng, chúng ta kết thúc với lập trình chức năng bằng các ngôn ngữ như Scheme và Haskell. Các chương trình thực sự có thể rất dễ hiểu bằng những ngôn ngữ đó, nhưng những ngôn ngữ đó không được sử dụng rộng rãi. Bất chấp điều đó, trong các ngôn ngữ OO, việc hạn chế các hiệu ứng có thể giúp việc kiểm thử dễ dàng hơn nhiều và không có bất kỳ trở ngại nào khi thực hiện.
