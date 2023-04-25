@@ -420,6 +420,39 @@ public class CppClass {
 }
 ```
 
-Chúng tôi đã liệt kê thực tế là ai đó có thể sửa đổi danh sách khai báo sau khi chuyển nó tới hàm tạo. Đây là một ví dụ điển hình cho quy tắc "nhưng đó sẽ là điều ngu ngốc". Nếu chúng ta biết khi chúng ta bắt đầu xem `CppClass` rằng chúng ta đã được cung cấp một danh sách sẽ không thay đổi, thì lập luận của chúng ta sẽ dễ dàng hơn nhiều.
+Chúng ta thấy rằng ai cũng có thể sửa đổi danh sách khai báo sau khi truyền nó vào hàm khởi tạo. Đây là một ví dụ điển hình cho quy tắc "nhưng đó sẽ là điều ngu ngốc". Nếu biết rằng chúng ta đã được cung cấp một danh sách không thay đổi khi bắt đầu xem xét lớp `CppClass`, thì chúng ta sẽ dễ suy luận hơn rất nhiều.
 
-Nói chung, việc lập trình trở nên dễ dàng hơn khi chúng ta thu hẹp các hiệu ứng trong một chương trình. Chúng ta cần biết ít hơn để hiểu một đoạn code. Cuối cùng, chúng ta kết thúc với lập trình chức năng bằng các ngôn ngữ như Scheme và Haskell. Các chương trình thực sự có thể rất dễ hiểu bằng những ngôn ngữ đó, nhưng những ngôn ngữ đó không được sử dụng rộng rãi. Bất chấp điều đó, trong các ngôn ngữ OO, việc hạn chế các hiệu ứng có thể giúp việc kiểm thử dễ dàng hơn nhiều và không có bất kỳ trở ngại nào khi thực hiện.
+Nói chung, việc lập trình trở nên dễ dàng hơn khi chúng ta thu hẹp các hiệu ứng trong một chương trình. Chúng ta cần biết ít hơn để hiểu một đoạn code. Cuối cùng, chúng ta kết thúc với lập trình chức năng bằng các ngôn ngữ như Scheme và Haskell. Các chương trình thực sự có thể rất dễ hiểu bằng những ngôn ngữ đó, nhưng chúng không được sử dụng rộng rãi. Trong khi đó, trong các ngôn ngữ OO, việc hạn chế các hiệu ứng có thể giúp việc kiểm thử dễ dàng hơn nhiều và không có bất kỳ trở ngại nào khi thực hiện.
+
+## Đơn giản hóa bản phác thảo hiệu ứng
+
+Cuốn sách này nói về cách làm cho code kế thừa dễ làm việc hơn, do đó, có một loại chất lượng "vắt sữa" đối với rất nhiều ví dụ. Tuy nhiên, tôi muốn nhân cơ hội này để cho bạn thấy một thứ rất hữu ích mà bạn có thể thấy qua các bản phác thảo hiệu ứng. Điều này có thể ảnh hưởng đến cách bạn viết code khi bạn tiến về phía trước.
+
+Bạn còn nhớ bản phác thảo hiệu ứng cho lớp `CppClass` không? (Xem Hình 11.11.)
+
+![11.11](images/11-4.png)
+Hình 11.11 Bản phác thảo cho lớp `CppCLass`
+
+Nhìn có vẻ hơi quá tải. Hai phần dữ liệu, một khai báo và tập hợp `declarations`, có tác dụng đối với nhiều phương thức khác nhau. Chúng ta có thể lựa chọn cái nào chúng ta muốn sử dụng cho các kiểm thử của mình. Cách tốt nhất để sử dụng là `getInterface` vì nó thực hiện khai báo nhiều hơn một chút. Một số điều chúng ta có thể cảm nhận được thông qua phương thức `getInterface` mà chúng ta không thể dễ dàng thông qua `getDeclaration` và `getDeclarationCount`. Tôi sẽ không phiền khi chỉ viết các kiểm thử cho `getInterface` nếu tôi đang mô tả `CppClass`, nhưng sẽ thật đáng tiếc nếu `getDeclaration` và `getDeclarationCount` không được đề cập. Nhưng nếu `getInterface` trông như thế này thì sao?
+
+```Java
+public String getInterface(String interfaceName, int [] indices) {
+	String result = "class " + interfaceName + " {\npublic:\n";
+	for (int n = 0; n < indices.length; n++) {
+		Declaration virtualFunction = getDeclaration(indices[n]);
+		result += "\t" + virtualFunction.asAbstract() + "\n";
+	}
+	result += "};\n";
+	return result;
+}
+```
+
+Có sự khác biệt rất nhỏ ở đây; code hiện sử dụng `getDeclaration` trong nội bộ. Vì vậy, bản phác thảo của chúng ta thay đổi từ Hình 11.12 sang Hình 11.13.
+
+![11.12](images/11-4.png)
+Hình 11.12 Bản phác thảo cho lớp `CppCLass`
+
+![11.13](images/11-13.png)
+Hình 11.13 Bản phác thảo được thay đổi cho lớp `CppCLass`
+
+Chỉ là một thay đổi nhỏ, nhưng là một thay đổi khá quan trọng. Phương thức `getInterface` hiện sử dụng `getDeclaration` trong nội bộ. Cuối cùng, chúng tôi thực hiện `getDeclaration` bất cứ khi nào chúng tôi kiểm thử `getInterface`.
