@@ -456,3 +456,15 @@ Hình 11.12 Bản phác thảo cho lớp `CppCLass`
 Hình 11.13 Bản phác thảo được thay đổi cho lớp `CppCLass`
 
 Chỉ là một thay đổi nhỏ, nhưng là một thay đổi khá quan trọng. Phương thức `getInterface` hiện sử dụng `getDeclaration` trong nội bộ. Cuối cùng, chúng tôi thực hiện `getDeclaration` bất cứ khi nào chúng tôi kiểm thử `getInterface`.
+
+Khi chúng ta loại bỏ các phần trùng lặp nhỏ, chúng ta thường thu được bản phác thảo hiệu ứng với tập hợp các điểm cuối nhỏ hơn. Điều này thường giúp quyết định kiểm thử dễ dàng hơn.
+
+> Hiệu ứng và tính đóng gói
+
+> Một trong những lợi ích thường được đề cập của hướng đối tượng là tính đóng gói. Có nhiều lần, khi tôi hướng dẫn cho mọi người các kỹ thuật phá vỡ sự phụ thuộc trong cuốn sách này, họ chỉ ra rằng nhiều kỹ thuật trong số đó phá vỡ tính đóng gói. Đúng, phần nhiều trong số chúng phá vỡ tính đóng gói.
+
+> Tính đóng gói quan trọng, nhưng lý do tại sao nó quan trọng còn quan trọng _hơn_. Tính đóng gói giúp chúng ta suy luận về code của chúng ta. Trong code được đóng gói tốt, sẽ có ít đường dẫn hơn để bạn cố gắng hiểu nó. Chẳng hạn, nếu chúng ta thêm một tham số khác vào hàm tạo để ngắt một phụ thuộc như chúng ta làm trong quá trình tái cấu trúc _Tham số hóa hàm tạo_ (379), thì chúng ta có thêm một đường dẫn để đi theo khi suy luận về các hiệu ứng. Phá vỡ tính đóng gói có thể làm cho việc lập luận về code của chúng ta trở nên khó khăn hơn, nhưng nó có thể dễ dàng hơn nếu chúng ta kết thúc bằng các kiểm thử giải thích tốt sau đó. Khi chúng ta có các trường hợp kiểm thử cho một lớp, chúng ta có thể sử dụng chúng để suy luận trực tiếp hơn về code của chúng ta. Chúng ta cũng có thể viết các kiểm thử mới cho bất kỳ câu hỏi nào mà chúng ta có thể có về hành vi của code.
+
+> Phạm vi đóng gói và phạm vi kiểm tra không phải lúc nào cũng trái ngược nhau, nhưng khi chúng xảy ra, tôi thiên về phạm vi kiểm tra. Thường thì nó có thể giúp tôi có được nhiều sự đóng gói hơn sau này. Bản thân việc đóng gói không phải là mục đích cuối cùng; nó là một công cụ để hiểu biết.
+
+Khi chúng ta cần tìm nơi để viết các kiểm thử của mình, điều quan trọng là phải biết điều gì có thể bị ảnh hưởng bởi những thay đổi mà chúng ta đang thực hiện. Chúng ta phải lập luận về các hiệu ứng. Chúng ta có thể thực hiện kiểu lập luận này một cách không chính thức hoặc theo một cách chặt chẽ hơn với những bản phác thảo nhỏ, nhưng việc thực hành nó sẽ đáng giá. Trong code đặc biệt rắc rối, đó là một trong những kỹ năng duy nhất chúng ta có thể dựa vào trong quá trình viết các kiểm thử.
