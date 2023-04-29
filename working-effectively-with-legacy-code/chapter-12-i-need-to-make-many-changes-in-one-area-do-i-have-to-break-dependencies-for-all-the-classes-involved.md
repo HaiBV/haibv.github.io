@@ -46,20 +46,37 @@ public class Invoice
 }
 ```
 
-Chúng ta cần thay đổi cách tính chi phí vận chuyển cho New York. Cơ quan lập pháp vừa thêm một loại thuế ảnh hưởng đến hoạt động vận chuyển của chúng ta ở đó, và thật không may, chúng ta phải chuyển chi phí cho người tiêu dùng. Trong quá trình này, chúng ta sẽ trích xuất logic tính chi phí vận chuyển vào một lớp mới có tên là `ShippingPricer`. Khi hoàn thành, code sẽ trông như thế này:
+Chúng ta cần thay đổi cách tính chi phí vận chuyển cho New York. Cơ quan lập pháp vừa thêm một loại thuế ảnh hưởng đến hoạt động vận chuyển của chúng ta ở đó, và thật không may, chúng ta phải chuyển chi phí cho người tiêu dùng. Trong quá trình này, chúng ta sẽ trích xuất logic tính chi phí vận chuyển vào một lớp mới có tên là ``ShippingPricer``. Khi hoàn thành, code sẽ trông như thế này:
 
 ```Java
 public class Invoice
 {
 	public Money getValue() {
 		Money total = itemsSum();
-		total.add(shippingPricer.getPrice());
+		total.add(`shippingPricer`.getPrice());
 		total.add(getTax());
 		return total;
 	}
 }
 ```
 
-Tất cả công việc được thực hiện trong `getValue` đều do `Shippingpricer` thực hiện. Chúng ta cũng sẽ phải thay đổi hàm tạo cho `Invoice` để tạo một `ShippingPricer` biết về ngày lập hóa đơn.
+Tất cả công việc được thực hiện trong `getValue` đều do ``Shippingpricer`` thực hiện. Chúng ta cũng sẽ phải thay đổi hàm tạo cho `Invoice` để tạo một ``ShippingPricer`` biết về ngày lập hóa đơn.
 
 Để tìm các điểm chặn, chúng ta phải bắt đầu theo dõi các tác động chuyển tiếp từ các điểm thay đổi. Phương thức `getValue` sẽ có kết quả khác. Hóa ra là không có phương thức nào trong `Invoice` sử dụng `getValue`, nhưng `getValue` được sử dụng trong một lớp khác: Phương thức `makeStatement` của một lớp có tên `BillingStatement` sử dụng nó. Điều này được thể hiện trong Hình 12.1.
+
+![12.1](images/12/12-1.png)
+Hình 12.1 `getValue` tác động đến `BillingStatement.makeStatement`
+
+Chúng ta cũng sẽ sửa đổi hàm khởi tạo, vì vậy chúng tôi phải xem phần code phụ thuộc vào nó. Trong trường hợp này, chúng ta sẽ tạo một đối tượng mới trong hàm khởi tạo, một ``ShippingPricer``. Nó sẽ không ảnh hưởng đến bất cứ điều gì khác ngoại trừ các phương thức sử dụng nó và phương thức duy nhất sẽ sử dụng nó là phương thức `getValue`. Hình 12.2 cho thấy tác động này.
+
+![12.2](images/12/12-2.png)
+Hình 12.2 Các tác động lên `getValue`
+
+Chúng ta có thể ghép các bản phác thảo lại với nhau như trong Hình 12.3.
+
+![12.3](images/12/12-3.png)
+Hình 12.3 Chuỗi tác động
+
+Vì vậy, đâu là điểm chặn của chúng ta? Thực sự thì, chúng ta có thể sử dụng bất kỳ bong bóng nào trong sơ đồ trên làm _điểm chặn_, miễn là chúng ta có quyền truy cập vào bất kỳ thứ gì chúng đại diện. Chúng ta có thể thử kiểm thử thông qua biến `shippingPricer`, nhưng nó là một biến riêng tư (private) trong lớp `Invoice` nên chúng ta không có quyền truy cập vào nó. Ngay cả khi nó có thể truy cập được để kiểm tra, `shippingPricer` là một _điểm chặn_ khá hẹp. Chúng ta có thể cảm nhận được những gì đã làm với hàm khởi tạo (tạo `shippingPricer`) và đảm bảo rằng `shippingPricer` thực hiện những gì nó phải làm, nhưng chúng ta không thể sử dụng nó để đảm bảo rằng `getValue` không thay đổi theo chiều hướng xấu .
+
+Chúng ta có thể viết kiểm thử thực thi phương thức `makeStatement` của `BillingStatement` và kiểm tra giá trị trả về của nó để đảm bảo rằng chúng ta đã thực hiện các thay đổi của mình một cách chính xác. Nhưng tốt hơn hết, chúng ta nên viết kiểm thử thực thi `getValue` trong `Invoice` và kiểm tra ở đó. Thậm chí có thể ít việc hơn. Chắc chắn, sẽ rất tuyệt nếu kiểm thử `BillingStatement`, nhưng điều đó không cần thiết vào lúc này. Nếu chúng tôi phải thực hiện thay đổi đối với `BillingStatement` sau này, chúng tôi có thể kiểm tra nó sau đó.
