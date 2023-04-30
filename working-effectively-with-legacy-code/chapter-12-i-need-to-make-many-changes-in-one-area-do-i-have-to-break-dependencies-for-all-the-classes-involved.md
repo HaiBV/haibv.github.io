@@ -80,3 +80,17 @@ Hình 12.3 Chuỗi tác động
 Vì vậy, đâu là điểm chặn của chúng ta? Thực sự thì, chúng ta có thể sử dụng bất kỳ bong bóng nào trong sơ đồ trên làm _điểm chặn_, miễn là chúng ta có quyền truy cập vào bất kỳ thứ gì chúng đại diện. Chúng ta có thể thử kiểm thử thông qua biến `shippingPricer`, nhưng nó là một biến riêng tư (private) trong lớp `Invoice` nên chúng ta không có quyền truy cập vào nó. Ngay cả khi nó có thể truy cập được để kiểm tra, `shippingPricer` là một _điểm chặn_ khá hẹp. Chúng ta có thể cảm nhận được những gì đã làm với hàm khởi tạo (tạo `shippingPricer`) và đảm bảo rằng `shippingPricer` thực hiện những gì nó phải làm, nhưng chúng ta không thể sử dụng nó để đảm bảo rằng `getValue` không thay đổi theo chiều hướng xấu .
 
 Chúng ta có thể viết kiểm thử thực thi phương thức `makeStatement` của `BillingStatement` và kiểm tra giá trị trả về của nó để đảm bảo rằng chúng ta đã thực hiện các thay đổi của mình một cách chính xác. Nhưng tốt hơn hết, chúng ta nên viết kiểm thử thực thi `getValue` trong `Invoice` và kiểm tra ở đó. Thậm chí có thể ít việc hơn. Chắc chắn, sẽ rất tuyệt nếu kiểm thử `BillingStatement`, nhưng điều đó không cần thiết vào lúc này. Nếu chúng tôi phải thực hiện thay đổi đối với `BillingStatement` sau này, chúng tôi có thể kiểm tra nó sau đó.
+
+Nói chung, bạn nên chọn _điểm chặn_ càng gần với các điểm thay đổi của mình càng tốt, vì một vài lý do sau. Lý do đầu tiên là sự an toàn. Mỗi bước giữa điểm thay đổi và điểm chặn giống như một bước trong lập luận logic. Về cơ bản, chúng ta đang nói, "Chúng tôi có thể kiểm thử ở đây vì điều này tác động đến điều này và điều kia tác động đến điều khác, do đó tác động đến điều mà chúng tôi đang kiểm thử." Bạn càng có nhiều bước như vậy, thì càng khó có thể biết rằng bạn đúng hay không. Đôi khi, cách duy nhất bạn có thể chắc chắn là viết kiểm thử tại _điểm chặn_ và sau đó quay lại điểm thay đổi để thay đổi code một chút và xem liệu kiểm thử có thất bại hay không. Đôi khi bạn phải sử dụng lại kỹ thuật đó, nhưng bạn không cần phải làm điều đó mọi lúc. Một lý do khác khiến các điểm chặn xa trở nên kém hơn là việc thiết lập các kiểm thử tại chúng thường khó hơn. Điều này không phải lúc nào cũng đúng; nó phụ thuộc vào code. Một lần nữa, điều có thể làm cho nó khó hơn là số bước giữa sự thay đổi và điểm chặn. Thường thì bạn phải "tưởng tượng" trong đầu để biết rằng một kiểm thử bao gồm một số chức năng xa vời.
+
+Trong ví dụ này, những thay đổi mà chúng ta muốn thực hiện đối với `Invoice` có thể được kiểm thử tốt nhất ở đó. Chúng tôi có thể tạo `Invoice` trong kiểm thử khai thác, thiết lập nó theo nhiều cách khác nhau và gọi `getValue` để xác định hành vi của nó trong khi chúng ta thực hiện các thay đổi của mình.
+
+### Điểm chặn cấp cao hơn
+
+Trong hầu hết các trường hợp, _điểm chặn_ tốt nhất chúng ta có thể có cho một thay đổi là một phương thức công khai trong lớp đang thay đổi. Những điểm chặn này rất dễ tìm và dễ sử dụng, nhưng đôi khi chúng không phải là lựa chọn tốt nhất. Chúng ta có thể thấy điều này nếu chúng ta mở rộng ví dụ về `Invoice` thêm một chút.
+
+Giả sử rằng, ngoài việc thay đổi cách tính chi phí vận chuyển cho `Invoice`, chúng ta phải sửa đổi một lớp có tên `Item` để lớp này chứa một trường mới để lưu giữ hãng vận chuyển. Chúng ta cũng cần tách riêng từng người gửi hàng trong `BillingStatement`. Hình 12.4 cho thấy thiết kế hiện tại của chúng ta trông như thế nào trong UML.
+
+
+![12.4](images/12/12-4.png)
+Hình 12.4 Mở rộng hệ thống thanh toán.
