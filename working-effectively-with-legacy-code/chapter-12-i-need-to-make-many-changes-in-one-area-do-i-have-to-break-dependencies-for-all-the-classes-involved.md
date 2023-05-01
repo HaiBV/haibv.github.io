@@ -94,3 +94,19 @@ Giả sử rằng, ngoài việc thay đổi cách tính chi phí vận chuyển
 
 ![12.4](images/12/12-4.png)
 Hình 12.4 Mở rộng hệ thống thanh toán.
+
+Nếu không có lớp nào trong số này có kiểm thử, chúng ta có thể bắt đầu bằng cách viết kiểm thử cho từng lớp riêng lẻ và thực hiện các thay đổi mà chúng ta cần. Điều đó sẽ hiệu quả, nhưng sẽ hiệu quả hơn nếu bắt đầu bằng cách cố gắng tìm một _điểm chặn_ cấp cao hơn mà chúng ta có thể sử dụng để mô tả vùng code này. Việc này mang lại lợi ích kép: Chúng ta ít phải phá vỡ sự phụ thuộc hơn và chúng ta cũng đang nắm giữ một phần lớn hơn trong ê tô(?). Với các kiểm thử đặc trưng trong nhóm lớp này, chúng ta có nhiều cơ hội tái cấu trúc hơn. Chúng ta có thể thay đổi cấu trúc của `Invoice` và `Item` bằng cách sử dụng các kiểm thử đã có tại `BillingStatement` như một bất biến. Đây là một kiểm thử khởi đầu tốt để mô tả `BillingStatement`, `Invoice` và `Item` cùng nhau:
+
+```Java
+void testSimpleStatement() {
+	Invoice invoice = new Invoice();
+	invoice.addItem(new Item(0,new Money(10));
+	BillingStatement statement = new BillingStatement();
+	statement.addInvoice(invoice);
+	assertEquals("", statement.makeStatement());
+}
+```
+
+Chúng ta có thể tìm hiểu những gì `BillingStatement` tạo ra cho hóa đơn của một mặt hàng và thay đổi kiểm thử để sử dụng giá trị đó. Sau đó, chúng ta có thể thêm nhiều kiểm thử hơn để xem cách định dạng câu lệnh diễn ra như thế nào đối với các kết hợp hóa đơn và mặt hàng khác nhau. Chúng ta nên đặc biệt cẩn thận khi viết các trường hợp thực hiện các vùng code mà chúng ta sẽ giới thiệu các đường nối. 
+
+Điều gì làm cho `BillingStatement` trở thành một điểm chặn lý tưởng ở đây? Đó là một điểm duy nhất mà chúng ta có thể sử dụng để phát hiện các tác động từ những thay đổi trong một cụm lớp. Hình 12.5 cho thấy bản phác thảo tác động cho những thay đổi mà chúng ta sẽ thực hiện.
