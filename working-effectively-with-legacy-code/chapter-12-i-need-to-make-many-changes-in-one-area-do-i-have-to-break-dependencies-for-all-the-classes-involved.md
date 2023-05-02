@@ -107,6 +107,22 @@ void testSimpleStatement() {
 }
 ```
 
-Chúng ta có thể tìm hiểu những gì `BillingStatement` tạo ra cho hóa đơn của một mặt hàng và thay đổi kiểm thử để sử dụng giá trị đó. Sau đó, chúng ta có thể thêm nhiều kiểm thử hơn để xem cách định dạng câu lệnh diễn ra như thế nào đối với các kết hợp hóa đơn và mặt hàng khác nhau. Chúng ta nên đặc biệt cẩn thận khi viết các trường hợp thực hiện các vùng code mà chúng ta sẽ giới thiệu các đường nối. 
+Chúng ta có thể tìm hiểu những gì `BillingStatement` tạo ra cho hóa đơn của một mặt hàng và thay đổi kiểm thử để sử dụng giá trị đó. Sau đó, chúng ta có thể thêm nhiều kiểm thử hơn để xem cách định dạng câu lệnh diễn ra như thế nào đối với các kết hợp hóa đơn và mặt hàng khác nhau. Chúng ta nên đặc biệt cẩn thận khi viết các trường hợp thực hiện các vùng code mà chúng ta sẽ giới thiệu các đường nối.
 
 Điều gì làm cho `BillingStatement` trở thành một điểm chặn lý tưởng ở đây? Đó là một điểm duy nhất mà chúng ta có thể sử dụng để phát hiện các tác động từ những thay đổi trong một cụm lớp. Hình 12.5 cho thấy bản phác thảo tác động cho những thay đổi mà chúng ta sẽ thực hiện.
+
+![12.5](images/12/12-5.png)
+Hình 12.5 Phác thảo hệ thống thanh toán
+
+Lưu ý rằng tất cả các tác động đều được phát hiện thông qua `makeStatement`. Chúng có thể không dễ phát hiện thông qua `makeStatement`, nhưng ít nhất, đây là một nơi có thể phát hiện ra tất cả chúng. Thuật ngữ tôi sử dụng cho một nơi như thế này trong một thiết kế là _điểm mấu chốt_. Một _điểm mấu chốt_ là một điểm thu hẹp trong _bản phác thảo tác động_ (155), một nơi có thể viết các kiểm thử bao quát một loạt các thay đổi. Nếu bạn có thể tìm thấy một _điểm mấu chốt_ trong một thiết kế, nó có thể giúp công việc của bạn dễ dàng hơn rất nhiều.
+
+Tuy nhiên, điều quan trọng cần nhớ về các _điểm mấu chốt_ là chúng được xác định bởi các điểm thay đổi. Một tập hợp các thay đổi đối với một lớp có thể có điểm mấu chốt tốt ngay cả khi lớp đó có nhiều chỗ gọi. Để thấy điều này, chúng ta hãy xem xét hệ thống hóa đơn một cách rộng hơn như trong Hình 12.6.
+
+![12.6](images/12/12-6.png)
+Hình 12.6 Hệ thống thanh toán với kho.
+
+Chúng tôi đã không nhận thấy điều này sớm hơn, nhưng `Item` cũng có một phương thức có tên là `needReorder`. Lớp `InventoryControl` gọi nó bất cứ khi nào cần tìm hiểu xem có cần đặt hàng hay không. Điều này có thay đổi bản phác thảo tác động của chúng ta cho những thay đổi mà cần thực hiện không? Không một chút nào. Việc thêm trường `shippingCarrier` vào `Item` hoàn toàn không ảnh hưởng đến phương thức `needsReorder`, vì vậy `BillingStatement` vẫn là `điểm mấu chốt` của chúng ta, một vị trí hẹp mà chúng ta có thể kiểm tra.
+
+Hãy thay đổi kịch bản thêm một chút. Giả sử rằng chúng ta có một thay đổi khác cần thực hiện. Chúng ta phải thêm các phương thức vào `Item` cho phép chúng ta lấy và gán nhà cung cấp cho một `Item`. Lớp `InventoryControl` và `BillingStatement` sẽ sử dụng tên của nhà cung cấp đó. Hình 12.7 cho thấy điều này có tác dụng gì với bản phác thảo tác động của chúng ta.
+
+Mọi thứ bây giờ trông không tốt lắm. Tác động bởi các thay đổi của chúng ta được phát hiện thông qua phương thức `makeStatement` trong `BillingStatement` và thông qua các biến bị ảnh hưởng bởi phương thức `run` của `InventoryControl`, nhưng không còn một điểm chặn nào nữa. Tuy nhiên, khi kết hợp với nhau, phương thức `run` và phương thức `makeStatement` có thể được coi là điểm mấu chốt; cùng nhau, chúng chỉ là hai phương thức và đó là nơi hẹp hơn để phát hiện vấn đề so với tám phương thức và các biến phải được động chạm để thực hiện các thay đổi. Nếu chúng ta có các kiểm thử ở đó, chúng ta sẽ bao phủ được rất nhiều sự thay đổi.
