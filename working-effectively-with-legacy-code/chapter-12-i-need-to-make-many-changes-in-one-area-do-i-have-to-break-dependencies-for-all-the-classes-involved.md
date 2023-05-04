@@ -143,3 +143,27 @@ Trong phần trước, chúng ta đã nói về sự hữu ích của _điểm m
 
 Thực sự thì _điểm mấu chốt_ là gì? Đó là một ranh giới đóng gói tự nhiên. Khi bạn tìm thấy một _điểm mấu chốt_, bạn đã tìm thấy một cái phễu hẹp chứa tất cả các tác động của một đoạn code lớn. Nếu phương thức `BillingStatement.makeStatement` là điểm mấu chốt đối với một loạt invoice và item, thì chúng ta biết phải tìm ở đâu khi xác nhận kiểm thử không như mong đợi. Vấn đề phải là do lớp `BillingStatement` hoặc invoice và item. Tương tự, chúng ta không cần biết về invoice và item để gọi `makeStatement`. Đây gần như là định nghĩa của sự đóng gói: Chúng ta không cần quan tâm đến phần bên trong, nhưng khi cần, chúng ta không cần phải nhìn vào phần bên ngoài để hiểu chúng. Thông thường, khi tôi tìm kiếm các điểm mấu chốt, tôi có thể thấy được cách phân bổ lại trách nhiệm giữa các lớp như thế nào để đóng gói tốt hơn.
 
+> Sử dụng bản phác thảo tác động để tìm các lớp ẩn
+>
+> Đôi khi, khi bạn có một lớp lớn, bạn có thể sử dụng bản phác thảo tác động để tìm cách cách chia lớp đó thành nhiều lớp nhỏ hơn. Đây là một ví dụ nhỏ trong Java. Chúng ta có một lớp gọi là `Parser` có phương thức công khai `parseExpression`.
+>
+>```Java
+>public class Parser
+>{
+>	private Node root;
+>	private int currentPosition;
+>	private String stringToParse;
+>	public void parseExpression(String expression) { .. }
+>	private Token getToken() { .. }
+>	private boolean hasMoreTokens() { .. }
+>}
+>```
+>	Nếu chúng ta vẽ một bản phác thảo tác động cho lớp này, chúng ta sẽ thấy rằng `parseExpression` phụ thuộc vào `getToken` và `hasMoreTokens`, nhưng nó không phụ thuộc trực tiếp vào `stringToParse` hoặc `currentPosition`, mặc dù `getToken` và `hasMoreTokens` có phụ thuộc. Những gì chúng ta có ở đây là một ranh giới đóng gói tự nhiên, mặc dù nó không thực sự hẹp (hai phương pháp ẩn hai mẩu thông tin). Chúng ta có thể trích xuất các phương thức và trường đó thành một lớp có tên là `Tokenizer` và cuối cùng lớp `Parser` trở nên đơn giản hơn.
+>
+> Đây không phải là cách duy nhất để tìm ra cách phân chia trách nhiệm cho một lớp; đôi khi những cái tên sẽ gợi ý cho bạn, như trong trường hợp này (chúng ta có hai phương thức với từ `Token` trong tên của chúng). Điều này có thể giúp bạn nhìn một lớp lớn theo một cách khác và điều đó có thể dẫn giúp việc trích xuất lớp tốt hơn.
+>
+> Như một bài tập, hãy tạo bản phác thảo tác động cho những thay đổi trong một lớp lớn và quên tên của các bong bóng. Chỉ cần nhìn cách chúng được nhóm lại. Có bất kỳ ranh giới đóng gói tự nhiên nào không? Nếu có, hãy nhìn vào các bong bóng bên trong ranh giới. Hãy suy nghĩ về tên mà bạn sẽ sử dụng cho cụm phương thức và biến đó: Tên đó có thể trở thành tên của lớp mới. Hãy suy nghĩ về việc thay đổi bất kỳ tên nào sẽ giúp ích.
+>
+> Khi bạn làm điều này, hãy làm điều đó với đồng nghiệp của bạn. Những cuộc thảo luận về việc đặt tên có lợi ích vượt xa công việc mà bạn hiện đang làm. Chúng giúp bạn và nhóm của bạn phát triển một quan điểm chung về hệ thống là gì và nó có thể trở thành gì.
+
+Viết kiểm thử tại các _điểm mấu chốt_ là một cách lý tưởng để bắt đầu một số công việc xâm lấn trong một phần của chương trình. Bạn đầu tư bằng cách tạo ra một tập hợp các lớp và đưa chúng đến điểm mà bạn có thể khởi tạo chúng cùng nhau trong kiểm thử khai thác. Sau khi bạn viết các _kiểm thử đặc tính_ của mình (186), bạn có thể thực hiện các thay đổi mà không cảm thấy tội lỗi. Bạn đã tạo ra một ốc đảo nhỏ trong ứng dụng của mình, nơi công việc trở nên dễ dàng hơn. Nhưng hãy cẩn thận - nó có thể là một cái bẫy.
