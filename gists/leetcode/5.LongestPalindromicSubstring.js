@@ -22,7 +22,7 @@ const findLongestPalindrome = (str, i, j) => {
  * @param {string} s
  * @return {string}
  */
-var longestPalindrome = function (s) {
+const longestPalindrome = function (s) {
   let longest = '';
 
   for (let i = 0; i < s.length; i++) {

@@ -141,7 +141,7 @@ Những nơi cần thực hiện thay đổi phụ thuộc rất nhiều vào c�
 
 ### Tìm vị trí viết kiểm thử
 
-Trong một số trường hợp, việc tìm vị trí để viết kiểm thử rất dễ dàng, nhưng với code kế thừa, điều đó thường khá khó khăn. Hãy xem _Chương 11, Tôi Cần Thực Hiện Thay Đổi. Tôi nên kiểm thử những phương thức nào?_, và _Chương 12, Tôi cần thực hiện nhiều thay đổi trong một khu vực. Tôi có phải phá vỡ các phụ thuộc cho tất cả các lớp liên quan không?_ Các chương này cung cấp cho bạn các kỹ thuật có thể sử dụng để xác định nơi bạn cần viết kiểm thử cho những thay đổi cụ thể.
+Trong một số trường hợp, việc tìm vị trí để viết kiểm thử rất dễ dàng, nhưng với code kế thừa, điều đó thường khá khó khăn. Hãy xem _Chương 11, Tôi Cần Thực Hiện Thay Đổi. Tôi nên kiểm thử những phương thức nào?_, và _Chương 12, Tôi cần thực hiện nhiều thay đổi trong một khu vực. Tôi có phải phá vỡ các phụ thuộc của tất cả các lớp liên quan không?_ Các chương này cung cấp cho bạn các kỹ thuật có thể sử dụng để xác định nơi bạn cần viết kiểm thử cho những thay đổi cụ thể.
 
 ### Phá vỡ sự phụ thuộc
 
