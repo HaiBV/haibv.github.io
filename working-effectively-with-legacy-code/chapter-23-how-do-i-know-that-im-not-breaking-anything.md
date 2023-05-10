@@ -40,8 +40,101 @@ Bạn cần thực hiện thay đổi với một phương thức. Bạn đã c�
 
 Tôi có một câu thần chú nhỏ mà tôi lặp đi lặp lại với chính mình khi làm việc: "Lập trình là nghệ thuật làm từng việc một". Khi tôi ghép cặp, tôi luôn yêu cầu đối tác của mình thử thách tôi về điều đó, hỏi tôi "Bạn đang làm gì vậy?" Nếu tôi trả lời nhiều hơn một điều, chúng tôi chọn một điều. Tôi làm như vậy cho đối tác của tôi. Thành thật mà nói, nó chỉ nhanh hơn. Khi bạn đang lập trình, khá dễ dàng để loại bỏ một đoạn quá lớn tại một thời điểm. Nếu bạn làm như vậy, bạn sẽ kết thúc việc cố gắng và chỉ thử mọi thứ để làm cho mọi thứ hoạt động hơn là làm việc rất có chủ ý và thực sự biết code của bạn làm gì.
 
-## Giữ chữ ký
+## Bảo toàn bản gốc
 
 Khi chúng ta chỉnh sửa code, có nhiều cách khiến chúng ta mắc lỗi. Chúng ta có thể viết sai chính tả, có thể sử dụng sai kiểu dữ liệu, có thể sử dụng biến này nhưng lại nghĩ là biến khác - danh sách này dài vô tận. Tái cấu trúc đặc biệt dễ bị lỗi. Thường thì nó liên quan đến chỉnh sửa xâm lấn. Chúng ta sao chép mọi thứ xung quanh và tạo các lớp và phương thức mới; quy mô lớn hơn nhiều so với việc chỉ thêm một dòng code mới.
 
 Nói chung, cách để xử lý tình huống này là viết các kiểm thử. Khi chúng ta có các kiểm thử tại chỗ, chúng ta có thể phát hiện ra nhiều lỗi mắc phải khi thay đổi code. Thật không may, trong nhiều hệ thống, chúng ta phải cấu trúc lại một chút chỉ để làm cho hệ thống đủ khả năng để kiểm thử, sau đó tiếp tục tái cấu trúc lại. Những lần tái cấu trúc ban đầu này (các kỹ thuật phá vỡ sự phụ thuộc trong danh mục ở Chương 25) được thực hiện mà không cần kiểm thử và chúng phải được thực hiện đặc biệt thận trọng.
+
+Khi bắt đầu sử dụng những kỹ thuật này, chúng ta rất dễ bị cám dỗ và muốn làm thật nhiều việc. Khi cần trích xuất toàn bộ nội dung của một phương thức, thay vì chỉ sao chép và dán các đối số khi khai báo, chúng ta lại thực hiện các công việc dọn dẹp khác. Ví dụ: khi phải trích xuất nội dung của một phương thức và làm cho nó tĩnh (_Expose Static Method (345)_), như sau:
+
+```java
+public void process(List orders,
+	int dailyTarget,
+	double interestRate,
+	int compensationPercent) {
+		...
+		// complicated code here
+		...
+}
+```
+
+Tôi đã trích xuất nó như thế này, tạo ra một vài lớp trợ giúp.
+
+```java
+public void process(List orders,
+	int dailyTarget,
+	double interestRate,
+	int compensationPercent) {
+		processOrders(new OrderBatch(orders),
+		new CompensationTarget(dailyTarget,
+			interestRate * 100,
+			compensationPercent));
+}
+```
+
+Đó là một ý định tốt. Tôi muốn làm cho thiết kế hệ thống tốt hơn khi tôi phá vỡ các phụ thuộc, nhưng nó hoạt động không tốt lắm. Cuối cùng, tôi mắc phải những sai lầm ngớ ngẩn và không có kiểm thử nào để phát hiện ra chúng, chúng thường được phát hiện muộn hơn rất nhiều so với cần thiết.
+
+Khi bạn phá vỡ các phụ thuộc để kiểm thử, bạn cần phải thật cẩn thận. Một điều tôi hay làm là _Bảo toàn bản gốc_ bất cứ khi nào có thể. Khi bạn cần tránh thay đổi bản gốc hoàn toàn, bạn có thể cắt/sao chép và dán toàn bộ bản gốc của phương thức từ nơi này sang nơi khác và giảm thiểu mọi khả năng xảy ra lỗi.
+
+Trong ví dụ trước, cuối cùng code sẽ như thế này:
+
+```java
+public void process(List orders,
+	int dailyTarget,
+	double interestRate,
+	int compensationPercent) {
+		processOrders(orders, dailyTarget, interestRate,
+			compensationPercent);
+}
+
+private static void processOrders(List orders,
+	int dailyTarget,
+	double interestRate,
+	int compensationPercent) {
+		...
+}
+```
+
+Việc chỉnh sửa tham số mà rất dễ dàng. Về cơ bản, chỉ có một vài bước có như sau:
+
+1. Tôi cắt/sao chép toàn bộ danh sách tham số:
+```java
+List orders,
+int dailyTarget,
+double interestRate,
+int compensationPercent
+```
+2. Sau đó, tôi khai báo phương thức mới:
+```java
+private void processOrders() {
+}
+```
+3. Tôi dán danh sách tham số vào phần khai báo phương thức mới:
+```java
+private void processOrders(List orders,
+	int dailyTarget,
+	double interestRate,
+	int compensationPercent) {
+}
+```
+4. Sau đó tôi lời gọi sang phương thức mới:
+```java
+processOrders();
+```
+5. Tôi dán danh sách tham số vào lời gọi:
+```java
+processOrders(List orders,
+	int dailyTarget,
+	double interestRate,
+	int compensationPercent);
+```
+6. Cuối cùng, tôi bỏ kiểu dữ liệu đi, để lại tên của các tham số:
+```java
+processOrders(orders,
+	dailyTarget,
+	interestRate,
+	compensationPercent);
+```
+
+
