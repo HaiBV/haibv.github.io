@@ -137,4 +137,6 @@ processOrders(orders,
 	compensationPercent);
 ```
 
+Khi bạn làm đi làm lại những động tác này, chúng sẽ trở nên tự động và bạn có thể cảm thấy tự tin hơn với những thay đổi của mình. Bạn có thể tập trung vào các vấn đề khác có thể gây ra lỗi khi bạn phá vỡ phụ thuộc. Chẳng hạn, phương thức mới của bạn có ẩn một phương thức có bản gốc của lớp cơ sở không?
 
+Có số ứng dụng khác của _Bảo toàn bản gốc_. Bạn có thể dùng để khai báo phương thức mới. Bạn cũng có thể tạo một tập hợp các phương thức thể hiện cho tất cả các đối số của một phương thức khi bạn đang thực hiện phương pháp tái cấu trúc _Chia nhỏ phương thức đối tượng_. Xem _Chia nhỏ phương thức đối tượng (330)_ để biết chi tiết.
