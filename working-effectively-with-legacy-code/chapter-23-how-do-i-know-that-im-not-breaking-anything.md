@@ -140,3 +140,43 @@ processOrders(orders,
 Khi bạn làm đi làm lại những động tác này, chúng sẽ trở nên tự động và bạn có thể cảm thấy tự tin hơn với những thay đổi của mình. Bạn có thể tập trung vào các vấn đề khác có thể gây ra lỗi khi bạn phá vỡ phụ thuộc. Chẳng hạn, phương thức mới của bạn có ẩn một phương thức có bản gốc của lớp cơ sở không?
 
 Có số ứng dụng khác của _Bảo toàn bản gốc_. Bạn có thể dùng để khai báo phương thức mới. Bạn cũng có thể tạo một tập hợp các phương thức thể hiện cho tất cả các đối số của một phương thức khi bạn đang thực hiện phương pháp tái cấu trúc _Chia nhỏ phương thức đối tượng_. Xem _Chia nhỏ phương thức đối tượng (330)_ để biết chi tiết.
+
+## Tận dụng trình biên dịch
+
+Mục đích chính của trình biên dịch là dịch code nguồn sang một số dạng khác, nhưng trong các ngôn ngữ có kiểu dữ liệu tĩnh, bạn có thể làm được nhiều hơn thế. Bạn có thể tận dụng tính năng kiểm tra kiểu dữ liệu và sử dụng để xác định những thay đổi bạn cần thực hiện. Tôi gọi cách làm này là _tận dụng trình biên dịch_. Đây là một ví dụ về cách thực hiện.
+
+Với ngôn ngữ lập trình C++, tôi có một số biến toàn cục như sau
+
+```Cpp
+double domestic_exchange_rate;
+double foreign_exchange_rate;
+```
+
+Một nhóm phương thức trong cùng tệp sử dụng các biến đó, nhưng tôi muốn tìm một số cách để thay đổi chúng khi kiểm thử nên tôi sử dụng kỹ thuật _Đóng gói tham chiếu toàn cục_ (339) cho phần danh mục.
+
+Để làm điều này, tôi viết một lớp xung quanh các khai báo và khai báo một biến của lớp đó.
+
+```Cpp
+class Exchange
+{
+public:
+	double domestic_exchange_rate;
+	double foreign_exchange_rate;
+};
+
+Exchange exchange;
+```
+
+Bây giờ tôi biên dịch để tìm tất cả những nơi mà trình biên dịch không thể tìm thấy `local_exchange_rate` và `foreign_exchange_rate`, đồng thời thay đổi để chúng được truy cập từ đối tượng `exchange` ở trên. Dưới đây là trước và sau của một trong những thay đổi đó:
+
+```Cpp
+total = domestic_exchange_rate * instrument_shares;
+```
+
+trở thành:
+
+```Cpp
+total = exchange.domestic_exchange_rate * instrument_shares;
+```
+
+Điều cốt lõi của kỹ thuật này là bạn để trình biên dịch giúp bạn tìm tới những thay đổi cần thực hiện. Điều này không có nghĩa là bạn ngừng suy nghĩ về những gì cần thay đổi; nó chỉ có nghĩa là bạn để trình biên dịch thực hiện công việc chân tay cho bạn, trong một số trường hợp. Quan trọng là phải biết trình biên dịch sẽ tìm cái gì và không tìm cái gì để chúng ta không bị ru ngủ trong niềm tin sai lầm.
