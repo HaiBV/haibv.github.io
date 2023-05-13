@@ -152,7 +152,7 @@ double domestic_exchange_rate;
 double foreign_exchange_rate;
 ```
 
-Một nhóm phương thức trong cùng tệp sử dụng các biến đó, nhưng tôi muốn tìm một số cách để thay đổi chúng khi kiểm thử nên tôi sử dụng kỹ thuật _Đóng gói tham chiếu toàn cục_ (339) cho phần danh mục.
+Một nhóm phương thức trong cùng tệp sử dụng các biến đó, nhưng tôi muốn tìm một số cách để thay đổi chúng khi kiểm thử nên tôi sử dụng kỹ thuật _Đóng gói tham chiếu toàn cục (339)_ cho phần danh mục.
 
 Để làm điều này, tôi viết một lớp xung quanh các khai báo và khai báo một biến của lớp đó.
 
@@ -180,3 +180,37 @@ total = exchange.domestic_exchange_rate * instrument_shares;
 ```
 
 Điều cốt lõi của kỹ thuật này là bạn để trình biên dịch giúp bạn tìm tới những thay đổi cần thực hiện. Điều này không có nghĩa là bạn ngừng suy nghĩ về những gì cần thay đổi; nó chỉ có nghĩa là bạn để trình biên dịch thực hiện công việc chân tay cho bạn, trong một số trường hợp. Quan trọng là phải biết trình biên dịch sẽ tìm cái gì và không tìm cái gì để chúng ta không bị ru ngủ trong niềm tin sai lầm.
+
+_Tận dụng Trình biên dịch_ gồm hai bước:
+1. Thay đổi khai báo gây lỗi biên dịch
+2. Điều hướng đến những lỗi đó và thực hiện thay đổi
+
+Bạn có thể tận dụng trình biên dịch để thực hiện các thay đổi cấu trúc cho chương trình của mình, như chúng tôi đã làm trong ví dụ _Đóng gói tham chiếu toàn cục (339)_. Bạn cũng có thể sử dụng nó với thay đổi kiểu ban đầu. Một trường hợp phổ biến là thay đổi kiểu khai báo biến từ lớp thành giao diện (interface) và sử dụng các lỗi để xác định phương thức nào cần có trên giao diện.
+
+Tận dụng trình biên dịch không phải lúc nào cũng mang tính thực tế. Nếu quá trình dựng mất nhiều thời gian, thì thực tế hơn là tìm kiếm những nơi bạn cần thực hiện thay đổi. Xem _Chương 7, Mất nhiều thời gian để tạo ra sự thay đổi_, để biết cách vượt qua vấn đề đó. Nhưng khi bạn có thể làm được, _Tận dụng Trình biên dịch_ là một cách hữu ích. Nhưng hãy cẩn thận; bạn có thể gây ra các lỗi tinh vi nếu bạn thực hiện nó một cách mù quáng.
+
+Tính năng của ngôn ngữ mang lại cho chúng ta nhiều khả năng mắc lỗi nhất khi chúng ta dựa vào là tính kế thừa. Đây là một ví dụ:
+
+Chúng ta có một phương thức tên `getX()` trong một lớp Java:
+
+```java
+public int getX() {
+	return x;
+}
+```
+
+
+Chúng ta muốn tìm tất cả các vị trí xuất hiện của nó nên sẽ đưa nó vào nhận xét:
+
+```java
+/*
+public int getX() {
+	return x;
+} */
+```
+
+Bây giờ hãy biên dịch lại.
+
+Đoán xem? Chúng ta không nhận được bất kỳ lỗi nào. Điều này có nghĩa là `getX()` là một phương thức không được sử dụng? Không hẳn. Nếu `getX()` được khai báo là một phương thức cụ thể trong một lớp cha, thì việc đưa `getX` vào nhận xét trong lớp hiện tại chỉ ảnh hưởng đến phương thức trong lớp cha được sử dụng. Một tình huống tương tự có thể xảy ra với các biến và kế thừa.
+
+_Tận dụng Trình biên dịch_ là một kỹ thuật mạnh mẽ, nhưng bạn phải biết giới hạn của nó là gì; nếu không, bạn có thể sẽ mắc phải một số sai lầm nghiêm trọng.
