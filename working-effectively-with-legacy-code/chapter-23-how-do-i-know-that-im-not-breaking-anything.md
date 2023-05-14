@@ -214,3 +214,13 @@ Bây giờ hãy biên dịch lại.
 Đoán xem? Chúng ta không nhận được bất kỳ lỗi nào. Điều này có nghĩa là `getX()` là một phương thức không được sử dụng? Không hẳn. Nếu `getX()` được khai báo là một phương thức cụ thể trong một lớp cha, thì việc đưa `getX` vào nhận xét trong lớp hiện tại chỉ ảnh hưởng đến phương thức trong lớp cha được sử dụng. Một tình huống tương tự có thể xảy ra với các biến và kế thừa.
 
 _Tận dụng Trình biên dịch_ là một kỹ thuật mạnh mẽ, nhưng bạn phải biết giới hạn của nó là gì; nếu không, bạn có thể sẽ mắc phải một số sai lầm nghiêm trọng.
+
+### Lập trình theo cặp
+
+Có thể bạn đã từng được nghe về _Lập trình theo cặp_. Nếu bạn đang sử dụng quy trình Extreme Programming (XP) thì có lẽ bạn đang sử dụng nó. Tốt. Đó là một cách rất tốt để nâng cao chất lượng và phổ biến kiến thức trong nhóm.
+
+Nếu bạn chưa từng lập trình theo cặp, tôi khuyên bạn nên thử nó. Đặc biệt là khi sử dụng các kỹ thuật phá vỡ sự phụ thuộc mà tôi đã mô tả trong cuốn sách này.
+
+Rất dễ mắc lỗi và không biết rằng mình đã làm hỏng phần mềm. Một cặp mắt thứ hai chắc chắn sẽ có ích. Hãy đối mặt với nó, làm việc với code kế thừa giống như ca phẫu thuật và các bác sĩ không bao giờ phẫu thuật một mình.
+
+Để có thêm thông tin về lập trình theo cặp, hãy xem _Pair Programming Illuminated_ bởi Laurie Williams và Robert Kessler (Addison-Wesley 2002) và truy cập www.pairprogramming.com.
