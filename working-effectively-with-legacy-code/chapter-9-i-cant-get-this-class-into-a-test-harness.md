@@ -103,3 +103,51 @@ Trong trường hợp này, cách tốt nhất để tạo một đối tượng
 
 ![9.1](images/9/9-1.png)
 Hình 9.1 `RGHConnection`.
+
+Sau khi thực hiện _Trích xuất Giao diện (362)_, chúng ta có một cấu trúc giống như trong Hình 9.2.
+
+Chúng ta có thể bắt đầu viết các kiểm thử bằng cách tạo một lớp giả nhỏ cung cấp các báo cáo mà chúng ta cần:
+
+```java
+public class FakeConnection implements IRGHConnection
+{
+	public RFDIReport report;
+	public void connect() {}
+	public void disconnect() {}
+	public RFDIReport RFDIReportFor(int id) { return report; }
+	public ACTIOReport ACTIOReportFor(int customerID) { return null; }
+}
+```
+
+Với lớp này, chúng ta có thể bắt đầu viết kiểm thử như sau:
+
+```java
+void testNoSuccess() throws Exception {
+	CreditMaster master = new CreditMaster("crm2.mas", true);
+	IRGHConnection connection = new FakeConnection();
+	CreditValidator validator = new CreditValidator(
+	connection, master, "a");
+	connection.report = new RFDIReport(...);
+	Certificate result = validator.validateCustomer(new Customer(...));
+	assertEquals(Certificate.VALID, result.getStatus());
+}
+```
+
+![9.2](images/9/9-2.png)
+Hình 9.2 `RGHConnection` sau khi trích xuất giao diện
+
+Lớp `FakeConnection` có vẻ hơi lạ. Chúng ta có thường xuyên viết các phương thức không có gì bên trong nào hoặc chỉ trả về giá trị rỗng cho lệnh gọi không? Tệ hơn nữa, nó có một biến công khai mà bất kỳ ai cũng có thể đặt giá trị vào bất cứ khi nào họ muốn. Có vẻ như lớp này vi phạm tất cả các quy tắc. Chà, không hẳn. Các quy tắc có chút khác đối với các lớp mà chúng ta sử dụng để có thể viết được kiểm thử. Code trong `FakeConnection` không dùng cho sản phẩm. Nó sẽ không bao giờ chạy trong ứng dụng đang hoạt động đầy đủ - chỉ trong kiểm thử khai thác.
+
+Bây giờ chúng ta có thể tạo trình xác thực, chúng ta có thể viết phương thức `getValidationPercent` của mình. Đây là một kiểm thử cho nó.
+
+```java
+void testAllPassed100Percent() throws Exception {
+	CreditMaster master = new CreditMaster("crm2.mas", true);
+	IRGHConnection connection = new FakeConnection("admin", "rii8ii9s");
+	CreditValidator validator = new CreditValidator(
+	connection, master, "a");
+	connection.report = new RFDIReport(...);
+	Certificate result = validator.validateCustomer(new Customer(...));
+	assertEquals(100.0, validator.getValidationPercent(), THRESHOLD);
+}
+```
