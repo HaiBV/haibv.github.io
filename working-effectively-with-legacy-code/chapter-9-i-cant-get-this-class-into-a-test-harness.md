@@ -168,3 +168,17 @@ Bạn còn theo kịp không?
 
 Cách mọi người phản ứng với những dòng code như vậy thường nói lên rất nhiều điều về loại hệ thống mà họ làm việc. Nếu bạn nhìn vào nó và nói, "Ồ, tốt thôi, vậy là anh ta đang truyền một giá trị null vào hàm khởi tạo — chúng tôi vẫn thường làm điều đó trong hệ thống của mình," thì rất có thể, bạn đang làm việc với một hệ thống khá tệ hại. Bạn có thể phải kiểm tra null ở khắp mọi nơi và cần sử dụng rất nhiều lệnh điều kiện chỉ để tìm ra những gì bạn có và những gì bạn có thể làm. Mặt khác, nếu bạn nhìn vào nó và nói, "Anh chàng này bị sao vậy?! Truyền null xung quanh trong một hệ thống?
 Anh ấy có biết gì không vậy?", Chà, đối với những bạn thuộc nhóm sau (ít nhất là những người vẫn đang đọc và chưa đóng sầm cuốn sách trong hiệu sách), tôi chỉ có điều này để nói: Hãy nhớ rằng, chúng ta chỉ làm điều này trong các kiểm thử. Điều tồi tệ nhất có thể xảy ra là một số code sẽ cố gắng sử dụng biến này. Trong trường hợp đó, Java sẽ trả về một ngoại lệ khi chạy. Bởi vì khai thác nắm bắt tất cả các ngoại lệ được đưa ra trong các kiểm thử, rất nhanh, chúng ta sẽ biết được liệu tham số đó có đang được sử dụng hay không.
+
+> Truyền Null
+> Khi bạn đang viết kiểm thử và một đối tượng yêu cầu một tham số khó khởi tạo, thay vì cố tạo ra tham số đó, hãy xem xét chỉ truyền vào giá trị null. Nếu tham số được sử dụng trong quá trình thực hiện kiểm thử, code sẽ đưa ra một ngoại lệ và kiểm thử khai thác sẽ bắt được ngoại lệ đó. Nếu hành vi bạn cần thực sự phải có đối tượng đó, bạn có thể xây dựng nó và truyền nó dưới dạng tham số tại thời điểm đó.
+> Pass Null là một kỹ thuật rất tiện dụng trong một số ngôn ngữ. Nó hoạt động tốt trong Java, C# và trong mọi ngôn ngữ trả ra ngoại lệ khi tham chiếu null được sử dụng trong khi chạy. Tuy nhiên đó không phải là một ý tưởng hay khi làm điều này với C và C++ trừ khi bạn biết bộ thực thi sẽ phát hiện lỗi con trỏ null. Nếu không, bạn sẽ kết thúc với các kiểm thử sẽ gặp sự cố một cách bí ẩn, đó là nếu bạn may mắn. Còn nếu bạn không may mắn, các kiểm thử của bạn sẽ chỉ sai một cách thầm lặng và vô vọng. Chúng sẽ làm hỏng bộ nhớ khi chúng chạy và bạn sẽ không bao giờ biết được.
+
+Khi tôi làm việc với Java, tôi thường bắt đầu với một kiểm thử như thế này ngay từ đầu và điền các tham số khi tôi cần.
+
+```java
+public void testCreate() {
+	CreditValidator validator = new CreditValidator(null, null, "a");
+}
+```
+
+Điều quan trọng cần nhớ là: Không truyền null vào code sản phẩm trừ khi bạn không có lựa chọn nào khác. Tôi biết có một số thư viện muốn bạn làm như vậy, nhưng khi bạn viết code mới, sẽ có những lựa chọn thay thế tốt hơn. Nếu bạn muốn sử dụng null trong code sản phẩm, hãy tìm những nơi bạn đang trả về null và truyền vào null, đồng thời xem xét một giao thức khác. Thay vào đó, hãy cân nhắc sử dụng _Mẫu đối tượng Null (Null Object Pattern)_.
