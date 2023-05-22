@@ -181,4 +181,37 @@ public void testCreate() {
 }
 ```
 
-Điều quan trọng cần nhớ là: Không truyền null vào code sản phẩm trừ khi bạn không có lựa chọn nào khác. Tôi biết có một số thư viện muốn bạn làm như vậy, nhưng khi bạn viết code mới, sẽ có những lựa chọn thay thế tốt hơn. Nếu bạn muốn sử dụng null trong code sản phẩm, hãy tìm những nơi bạn đang trả về null và truyền vào null, đồng thời xem xét một giao thức khác. Thay vào đó, hãy cân nhắc sử dụng _Mẫu đối tượng Null (Null Object Pattern)_.
+Điều quan trọng cần nhớ là: Không truyền null vào code sản phẩm trừ khi bạn không có lựa chọn nào khác. Tôi biết có một số thư viện muốn bạn làm như vậy, nhưng khi bạn viết code mới, sẽ có những lựa chọn thay thế tốt hơn. Nếu bạn muốn sử dụng null trong code sản phẩm, hãy tìm những nơi bạn đang trả về null và truyền vào null, đồng thời xem xét một giao thức khác. Thay vào đó, hãy cân nhắc sử dụng _Kiểu mẫu đối tượng Null (Null Object Pattern)_.
+
+> Kiểu mẫu đối tượng Null
+> Kiểu mẫu đối tượng Null là một cách để tránh sử dụng null trong chương trình. Ví dụ: nếu chúng ta có một phương thức trả về một nhân viên với tham số đầu vào là ID nhân viên, thì chúng ta nên trả ra gì nếu không có nhân viên nào tương ứng ID đó?
+>
+> ```java
+> for(Iterator it = idList.iterator(); it.hasNext(); ) {
+> 	EmployeeID id = (EmployeeID)it.next();
+> 	Employee e = finder.getEmployeeForID(id);
+> 	e.pay();
+> }
+> ```
+>
+> Chúng ta có một vài sự lựa chọn. Chúng ta chỉ cần trả ra một ngoại lệ để không phải trả ra bất kỳ thứ gì sau đó, nhưng điều đó buộc nơi thực hiện lệnh gọi phải xử lý lỗi một cách rõ ràng. Chúng ta cũng có thể trả về null, nhưng sau đó nơi thực hiện lệnh gọi sẽ phải kiểm tra null một cách rõ ràng.
+>
+> Còn một lựa chọn thứ ba. Code phía trên có thực sự quan tâm xem liệu có nhân viên phải trả tiền không? Nó có bắt buộc phải biết không? Điều gì sẽ xảy ra nếu chúng ta có một lớp tên là `NullEmployee`? Một thực thể của `NullEmployee` không có tên và không có địa chỉ, và khi bạn yêu cầu nó trả tiền, nó sẽ không làm gì cả.
+>
+> Các đối tượng null có thể hữu ích trong các ngữ cảnh như thế này; chúng có thể bảo vệ nơi gọi khỏi việc kiểm tra lỗi rõ ràng. Tuy các đối tượng null hữu dụng, nhưng bạn phải thận trọng khi sử dụng chúng. Chẳng hạn, đây là một cách rất tệ để đếm số lượng nhân viên được trả lương:
+>
+> ```java
+> int employeesPaid = 0;
+> for(Iterator it = idList.iterator(); it.hasNext(); ) {
+> 	EmployeeID id = (EmployeeID)it.next();
+> 	Employee e = finder.getEmployeeForID(id);
+> 	e.pay();
+> 	mployeesPaid++; // bug!
+> }
+> ```
+>
+> Nếu có nhân viên nào được trả ta là nhân viên rỗng, số lượng sẽ sai.
+>
+> Các đối tượng null đặc biệt hữu ích khi khách hàng không cần quan tâm liệu một thao tác có thành công hay không. Trong nhiều trường hợp, chúng ta có thể tinh chỉnh thiết kế của mình để đạt được điều này.
+
+_Truyền Null_ và _Trích xuất giao diện (362)_ là hai cách tiếp cận khi gặp các tham số khó chịu. Nhưng vẫn còn lựa chọn khác đôi khi được sử dụng. Nếu phần phụ thuộc có vấn đề trong một tham số không được code cứng vào hàm khởi tạo của nó, chúng ta có thể sử dụng _Lớp con và Phương thức ghi đè (Subclass and Override Method) (401)_ để loại bỏ phần phụ thuộc. Điều đó có thể xảy ra trong trường hợp này. Nếu hàm tạo của `RGHConnection` sử dụng phương thức `connect` của nó để tạo kết nối, chúng ta có thể phá vỡ sự phụ thuộc bằng cách ghi đè `connect()` trong một lớp kiểm thử con. _Lớp con và Phương thức ghi đè (401)_ có thể là một cách rất hữu ích để phá vỡ các phụ thuộc, nhưng chúng ta phải chắc chắn rằng chúng ta không thay đổi hành vi mà chúng ta muốn kiểm thử khi sử dụng nó.
