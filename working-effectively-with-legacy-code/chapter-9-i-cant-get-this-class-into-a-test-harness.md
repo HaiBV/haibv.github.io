@@ -252,3 +252,27 @@ mailing_list_dispatcher::mailing_list_dispatcher()
 	...
 }
 ```
+
+Chúng ta có thể tạo một thực thể của lớp này trong một kiểm thử, nhưng có thể sẽ không mang lại nhiều lợi ích cho chúng ta. Trước hết, chúng ta phải liên kết với các thư viện mail và cấu hình hệ thống mail để xử lý các đăng ký. Và nếu chúng ta sử dụng chức năng `send_message` trong các kiểm thử của mình, chúng ta sẽ thực sự gửi mail cho mọi người. Sẽ khó kiểm thử chức năng đó theo cách tự động trừ khi chúng ta thiết lập một hộp thư đặc biệt và kết nối với hộp thư đó nhiều lần, rồi chờ thư đến. Điều đó có thể tuyệt vời với một kiểm thử hệ thống tổng thể, nhưng nếu tất cả những gì chúng ta muốn bây giờ là thêm một số chức năng đã được kiểm thử mới vào lớp, thì điều đó có thể là quá mức cần thiết. Làm thế nào chúng ta có thể tạo một đối tượng đơn giản để thêm một số chức năng mới?
+
+Vấn đề cơ bản ở đây là sự phụ thuộc vào `mail_service` ẩn bên trong hàm khởi tạo `mailing_list_dispatcher`. Nếu có một số cách để thay thế đối tượng `mail_service` bằng một đối tượng giả khác, chúng ta có thể sử dụng đối tượng giả mạo này và nhận được một số phản hồi khi thay đổi lớp.
+
+Một trong những kỹ thuật chúng ta có thể sử dụng là _Tham số hóa hàm khởi tạo (Parameterize Constructor) (379)_. Với kỹ thuật này, chúng ta đưa ra ngoài phụ thuộc có trong hàm khởi tạo bằng cách truyền nó vào hàm khởi tạo.
+Đây là code của hàm khởi tạo sau khi áp dụng _Tham số hóa hàm khởi tạo_(379)
+
+```cpp
+mailing_list_dispatcher::mailing_list_dispatcher(mail_service *service) : status(MAIL_OKAY)
+{
+	const int client_type = 12;
+	service->connect();
+	if (service->get_status() == MS_AVAILABLE) {
+		service->register(this, client_type, MARK_MESSAGES_OFF);
+		service->set_param(client_type, ML_NOBOUNCE | ML_REPEATOFF);
+	}
+	else
+	status = MAIL_OFFLINE;
+	...
+}
+```
+
+Sự khác biệt thực sự và duy nhất ở đây là đối tượng `mail_service` được tạo bên ngoài lớp và được truyền vào. Điều đó trông có vẻ là không cải tiến nhiều, nhưng nó mang lại lợi ích đáng kinh ngạc. Chúng ta có thể sử dụng _Trích xuất Giao diện (362)_ để tạo giao diện cho `mail_service`. Triển khai giao diện có thể là lớp sản phẩm thực sự gửi mail. Một lớp khác có thể là một lớp giả mạo dành cho những điều chúng ta làm với nó khi kiểm thử và cho phép chúng ta đảm bảo rằng chúng đã xảy ra.
