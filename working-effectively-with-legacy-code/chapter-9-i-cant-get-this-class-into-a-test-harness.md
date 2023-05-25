@@ -276,3 +276,50 @@ mailing_list_dispatcher::mailing_list_dispatcher(mail_service *service) : status
 ```
 
 Sự khác biệt thực sự và duy nhất ở đây là đối tượng `mail_service` được tạo bên ngoài lớp và được truyền vào. Điều đó trông có vẻ là không cải tiến nhiều, nhưng nó mang lại lợi ích đáng kinh ngạc. Chúng ta có thể sử dụng _Trích xuất Giao diện (362)_ để tạo giao diện cho `mail_service`. Triển khai giao diện có thể là lớp sản phẩm thực sự gửi mail. Một lớp khác có thể là một lớp giả mạo dành cho những điều chúng ta làm với nó khi kiểm thử và cho phép chúng ta đảm bảo rằng chúng đã xảy ra.
+
+_Tham số hóa hàm khởi tạo (379)_ là một cách rất thuận tiện để loại bỏ các phụ thuộc của hàm khởi tạo, nhưng thường xuyên bị bỏ qua. Một trong những trở ngại là có thể tất cả các lời gọi của lớp sẽ bị thay đổi để truyền tham số mới, nhưng điều đó không đúng. Chúng ta có thể xử lý nó như thế này. Trước tiên, chúng ta trích xuất phần thân của hàm khởi tạo thành một phương thức mới gọi là `initialize`. Không giống như hầu hết các phương pháp trích xuất, phương pháp này khá an toàn để thử mà không cần kiểm thử vì chúng ta có thể _Bảo toàn Chữ ký (312)_ khi thực hiện.
+
+```cpp
+void mailing_list_dispatcher::initialize(mail_service *service)
+{
+	status = MAIL_OKAY;
+	const int client_type = 12;
+	service.connect();
+	if (service->get_status() == MS_AVAILABLE) {
+		service->register(this, client_type, MARK_MESSAGES_OFF);
+		service->set_param(client_type, ML_NOBOUNCE | ML_REPEATOFF);
+	}
+	else
+		status = MAIL_OFFLINE;
+	...
+}
+mailing_list_dispatcher::mailing_list_dispatcher(mail_service *service)
+{
+	initialize(service);
+}
+```
+
+Bây giờ chúng ta có thể cung cấp một hàm khởi tạo có chữ ký ban đầu. Các kiểm thử có thể gọi hàm khởi tạo đã được tham số hóa bởi `mail_service` và các nơi gọi có thể gọi hàm này. Không cần biết rằng mọi thứ đã thay đổi.
+
+```cpp
+mailing_list_dispatcher::mailing_list_dispatcher()
+{
+	initialize(new mail_service);
+}
+```
+
+Việc tái cấu trúc này thậm chí còn dễ dàng hơn trong các ngôn ngữ như C# và Java vì chúng ta có thể gọi các hàm khởi tạo từ các hàm khởi tạo khác trong các ngôn ngữ này.
+
+Chẳng hạn, nếu chúng ta đang làm điều gì đó tương tự trong C#, kết quả sẽ như sau:
+
+```cpp
+public class MailingListDispatcher
+{
+	public MailingListDispatcher(): this(new MailService()) {}
+	public MailingListDispatcher(MailService service) {
+		...
+	}
+}
+```
+
+Các phụ thuộc ẩn trong hàm khởi tạo có thể được giải quyết bằng nhiều kỹ thuật. Thường thì chúng ta có thể sử dụng _Extract and Override Getter (352)_, _Extract and Override Factory Method (350)_, và _Supersede Instance Variable (404)_, nhưng tôi thích sử dụng _Parameterize Constructor (379)_ thường xuyên nhất có thể. Khi một đối tượng được tạo trong một hàm khởi tạo và bản thân nó không có bất kỳ phụ thuộc cấu trúc nào, _Tham số hóa hàm khởi tạo_ là một kỹ thuật rất dễ áp dụng.
