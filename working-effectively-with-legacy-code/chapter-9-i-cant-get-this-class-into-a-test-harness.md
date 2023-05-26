@@ -323,3 +323,30 @@ public class MailingListDispatcher
 ```
 
 Các phụ thuộc ẩn trong hàm khởi tạo có thể được giải quyết bằng nhiều kỹ thuật. Thường thì chúng ta có thể sử dụng _Extract and Override Getter (352)_, _Extract and Override Factory Method (350)_, và _Supersede Instance Variable (404)_, nhưng tôi thích sử dụng _Parameterize Constructor (379)_ thường xuyên nhất có thể. Khi một đối tượng được tạo trong một hàm khởi tạo và bản thân nó không có bất kỳ phụ thuộc cấu trúc nào, _Tham số hóa hàm khởi tạo_ là một kỹ thuật rất dễ áp dụng.
+
+## Trường hợp khối khởi tạo
+
+_Tham số hóa hàm khởi tạo (379)_ là một trong những kỹ thuật đơn giản nhất chúng ta có thể sử dụng để phá vỡ các phụ thuộc ẩn trong hàm khởi tạo và đó là kỹ thuật mà tôi thường nghĩ đến đầu tiên. Thật không may, nó không phải lúc nào cũng là sự lựa chọn tốt nhất. Nếu một hàm khởi tạo xây dựng một số lượng lớn các đối tượng bên trong hoặc truy cập một số lượng lớn các đối tượng toàn cục, chúng ta có thể đối mặt với một danh sách tham số rất lớn. Trong những tình huống tồi tệ hơn, hàm khởi tạo sẽ tạo một vài đối tượng rồi sử dụng chúng để tạo các đối tượng khác, như ví dụ sau:
+
+```cpp
+class WatercolorPane
+{
+public:
+	WatercolorPane(Form *border, WashBrush *brush, Pattern *backdrop)
+	{
+		...
+		anteriorPanel = new Panel(border);
+		anteriorPanel->setBorderColor(brush->getForeColor());
+		backgroundPanel = new Panel(border, backdrop);
+		cursor = new FocusWidget(brush, backgroundPanel);
+		...
+	}
+	...
+}
+```
+
+Nếu muốn phán đoán thông qua biến `cursor`, chúng ta sẽ gặp rắc rối. Đối tượng `cursor` được nhúng trong một khối khởi tạo đối tượng. Chúng ta có thể cố gắng chuyển tất cả code sử dụng để tạo `cursor` ra bên ngoài. Sau đó, nơi thực hiện lệnh gọi có thể tạo `cursor` và chuyển nó thành tham số. Nhưng điều đó không an toàn lắm nếu chúng ta không có các kiểm thử tại chỗ và có thể trở thành gánh nặng lớn đối với nơi gọi lớp này.
+
+Nếu có một công cụ tái cấu trúc giúp trích xuất các phương thức một cách an toàn, thì chúng ta có thể sử dụng _Trích xuất và Ghi đè Phương thức (350)_ với code trong hàm khởi tạo, nhưng điều đó không hoạt động ở tất cả các ngôn ngữ. Trong Java và C#, chúng ta có thể làm được, nhưng C++ không cho phép gọi các hàm ảo trong các hàm khởi tạo để giải quyết các hàm ảo được định nghĩa trong các lớp dẫn xuất. Và nói chung, đó không phải là một ý kiến hay. Các hàm trong lớp dẫn xuất thường giả định rằng chúng có thể sử dụng các biến từ lớp cơ sở của chúng. Cho đến khi hàm khởi tạo của lớp cơ sở thực thi hoàn toàn, có khả năng một hàm bị ghi đè mà nó gọi có thể truy cập vào biến chưa được khởi tạo.
+
+
