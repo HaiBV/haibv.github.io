@@ -338,6 +338,7 @@ public:
 		anteriorPanel = new Panel(border);
 		anteriorPanel->setBorderColor(brush->getForeColor());
 		backgroundPanel = new Panel(border, backdrop);
+
 		cursor = new FocusWidget(brush, backgroundPanel);
 		...
 	}
@@ -349,4 +350,41 @@ Nếu muốn phán đoán thông qua biến `cursor`, chúng ta sẽ gặp rắc
 
 Nếu có một công cụ tái cấu trúc giúp trích xuất các phương thức một cách an toàn, thì chúng ta có thể sử dụng _Trích xuất và Ghi đè Phương thức (350)_ với code trong hàm khởi tạo, nhưng điều đó không hoạt động ở tất cả các ngôn ngữ. Trong Java và C#, chúng ta có thể làm được, nhưng C++ không cho phép gọi các hàm ảo trong các hàm khởi tạo để giải quyết các hàm ảo được định nghĩa trong các lớp dẫn xuất. Và nói chung, đó không phải là một ý kiến hay. Các hàm trong lớp dẫn xuất thường giả định rằng chúng có thể sử dụng các biến từ lớp cơ sở của chúng. Cho đến khi hàm khởi tạo của lớp cơ sở thực thi hoàn toàn, có khả năng một hàm bị ghi đè mà nó gọi có thể truy cập vào biến chưa được khởi tạo.
 
+Một lựa chọn khác là _Thay thế biến thực thể (404)_. Chúng ta viết một `setter` trên lớp cho phép hoán đổi trong một thự thể khác sau khi xây dựng đối tượng.
 
+```cpp
+class WatercolorPane
+{
+public:
+	WatercolorPane(Form *border, WashBrush *brush, Pattern *backdrop)
+	{
+		...
+		anteriorPanel = new Panel(border);
+		anteriorPanel->setBorderColor(brush->getForeColor());
+		backgroundPanel = new Panel(border, backdrop);
+
+		cursor = new FocusWidget(brush, backgroundPanel);
+		...
+	}
+
+	void supersedeCursor(FocusWidget *newCursor)
+	{
+		delete cursor;
+		cursor = newCursor;
+	}
+}
+```
+
+Trong C++, chúng ta phải rất cẩn thận với cách tái cấu trúc này. Khi chúng ta thay thế một đối tượng, chúng ta phải loại bỏ đối tượng cũ. Điều đó thường có nghĩa là chúng ta phải sử dụng toán tử xóa để gọi hàm hủy của nó và hủy bộ nhớ của nó. Khi làm điều vậy, chúng ta phải hiểu hàm hủy làm gì và liệu nó có phá hủy bất kỳ thứ gì được truyền cho hàm khởi tạo của đối tượng hay không. Nếu chúng ta không cẩn thận khi dọn dẹp bộ nhớ, chúng có thể đưa ra một số lỗi khó nhận biết.
+
+Trong hầu hết các ngôn ngữ khác, _Thay thế biến thực thể (404)_ khá đơn giản. Đây là kết quả được thu được với Java. Chúng ta không phải làm bất cứ điều gì đặc biệt để loại bỏ đối tượng mà `cursor` đề cập đến; cuối cùng bộ thu gom rác sẽ loại bỏ nó. Nhưng chúng ta cần rất cẩn thận để không sử dụng phương pháp thay thế trong code sản phẩm. Nếu các đối tượng thay thế quản lý các tài nguyên khác, chúng ta có thể gây ra một số vấn đề nghiêm trọng về tài nguyên.
+
+```java
+void supersedeCursor(FocusWidget newCursor) {
+	cursor = newCursor;
+}
+```
+
+Bây giờ chúng ta có một phương thức thay thế, chúng ta có thể thử tạo một `FocusWidget` bên ngoài và sau đó truyền nó vào đối tượng sau khi khởi tạo. Vì cần phải điều tra nên chúng ta có thể sử dụng _Trích xuất Giao diện (Extract Interface) (362)_ hoặc _Trích xuất Triển khai (Extract Deployer) (356)) trên lớp `FocusWidget` và tạo một đối tượng giả để truyền vào. Chắc chắn sẽ dễ tạo hơn so với `FocusWidget` tạo trong hàm khởi tạo.
+
+Tôi không thích sử dụng _Thay thế biến thực thể (404)_ trừ khi bắt buộc. Khả năng xảy ra các vấn đề về quản lý tài nguyên là quá lớn. Tuy nhiên, đôi khi tôi sử dụng nó trong C++. Thường thì tôi muốn sử dụng _Trích xuất và Ghi đè Phương thức (350)_ và không thể làm điều đó trong các hàm tạo C++. Vì lý do đó, thỉnh thoảng tôi vẫn sử dụng _Thay thế biến thực thể (404)_
