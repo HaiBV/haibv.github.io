@@ -388,3 +388,33 @@ void supersedeCursor(FocusWidget newCursor) {
 Bây giờ chúng ta có một phương thức thay thế, chúng ta có thể thử tạo một `FocusWidget` bên ngoài và sau đó truyền nó vào đối tượng sau khi khởi tạo. Vì cần phải điều tra nên chúng ta có thể sử dụng _Trích xuất Giao diện (Extract Interface) (362)_ hoặc _Trích xuất Triển khai (Extract Deployer) (356)) trên lớp `FocusWidget` và tạo một đối tượng giả để truyền vào. Chắc chắn sẽ dễ tạo hơn so với `FocusWidget` tạo trong hàm khởi tạo.
 
 Tôi không thích sử dụng _Thay thế biến thực thể (404)_ trừ khi bắt buộc. Khả năng xảy ra các vấn đề về quản lý tài nguyên là quá lớn. Tuy nhiên, đôi khi tôi sử dụng nó trong C++. Thường thì tôi muốn sử dụng _Trích xuất và Ghi đè Phương thức (350)_ và không thể làm điều đó trong các hàm tạo C++. Vì lý do đó, thỉnh thoảng tôi vẫn sử dụng _Thay thế biến thực thể (404)_
+
+## Trường hợp phụ thuộc toàn chương trình khó chịu
+
+Nhiều năm trong ngành công nghiệp phần mềm, rất nhiều người phàn nàn về một thực tế là trên thị trường không có nhiều thành phần hệ thống có thể tái sử dụng. Điều này đang trở nên tốt hơn theo thời gian; có rất nhiều framework mã nguồn mở và thương mại, nhưng nhìn chung, phần lớn không thực sự là thứ mà chúng ta muốn sử dụng; chúng là những thứ sử dụng code của chúng ta. Các framework thường quản lý vòng đời của một ứng dụng và chúng ta viết code để lấp vào các lỗ hổng. Chúng ta có thể thấy điều này trong tất cả các loại framework, từ ASP.NET đến Java Struts. Ngay cả các framework xUnit cũng hoạt động theo cách này. Chúng ta viết các lớp kiểm thử; xUnit gọi và hiển thị kết quả của chúng.
+
+Các framework giải quyết nhiều vấn đề, đặc biệt là đẩy nhanh tiến độ ở giai đoạn đầu của các dự án, nhưng đây không phải là kiểu tái sử dụng mà nhiều người thực sự mong đợi từ rất sớm trong quá trình phát triển phần mềm. Tái sử dụng kiểu cũ xảy ra khi chúng ta tìm thấy một số lớp hoặc tập hợp các lớp mà chúng ta muốn sử dụng trong ứng dụng của mình và chúng ta chỉ cần thêm chúng vào một dự án và sử dụng chúng. Sẽ rất tuyệt nếu có thể làm điều này thường xuyên, nhưng thành thật mà nói, tôi nghĩ rằng chúng ta đang đùa giỡn với chính mình thậm chí nghĩ về kiểu tái sử dụng đó nếu chúng ta không thể lấy một lớp ngẫu nhiên ra khỏi một ứng dụng trung bình và biên dịch nó một cách độc lập trong một kiểm thử khai thác mà không phải làm nhiều việc khác (càu nhàu, càu nhàu).
+
+Nhiều loại phụ thuộc khác nhau có thể gây khó khăn cho việc tạo và sử dụng các lớp trong framework kiểm thử, nhưng một trong những vấn đề khó giải quyết nhất là việc sử dụng biến toàn cục. Trong các trường hợp đơn giản, chúng ta có thể sử dụng _Tham số hóa hàm khởi tạo (379)_, _Tham số hóa Phương thức (383)_ và _Trích xuất và Ghi đè Lệnh gọi (348)_ để loại bỏ các phụ thuộc này, nhưng đôi khi các phụ thuộc toàn cục quá rộng nên việc giải quyết vấn đề sẽ trở nên dễ dàng hơn tại nguồn. Chúng ta gặp tình huống này trong ví dụ tiếp theo đây, một lớp trong ứng dụng Java ghi lại giấy phép xây dựng cho một cơ quan chính phủ. Đây là một trong những lớp chính:
+
+```java
+public class Facility
+{
+	private Permit basePermit;
+
+	public Facility(int facilityCode, String owner, PermitNotice notice) throws PermitViolation {
+		Permit associatedPermit = PermitRepository.getInstance().findAssociatedPermit(notice);
+		if (associatedPermit.isValid() && !notice.isValid()) {
+			basePermit = associatedPermit;
+		}
+		else if (!notice.isValid()) {
+			Permit permit = new Permit(notice);
+			permit.validate();
+			basePermit = permit;
+		}
+		else
+			throw new PermitViolation(permit);
+		}
+	...
+}
+```
