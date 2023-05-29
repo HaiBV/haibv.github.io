@@ -20,7 +20,9 @@ Trong chương này, chúng ta sẽ đi qua một loạt các ví dụ làm nổ
 
 ## Trường hợp tham số khó chịu
 
-Khi tôi cần thực hiện thay đổi trong một hệ thống kế thừa, tôi thường bắt đầu với tinh thần lạc quan phấn chấn. Tôi không biết tại sao lại như vậy. Tôi cố gắng trở thành một người thực tế nhất có thể, nhưng sự lạc quan luôn ở đó. "Này," tôi nói với chính mình (hoặc một đối tác), "điều này nghe có vẻ dễ dàng. Chúng ta chỉ cần làm _Floogle flumoux_ một chút là xong." Tất cả nghe có vẻ dễ dàng qua lời nói cho đến khi gặp lớp _Floogle_ (bất kể đó là gì) và xem xét nó một chút. "Được rồi, vậy là chúng ta cần thêm một phương thức ở đây và thay đổi các phương thức khác, và tất nhiên chúng ta sẽ cần đưa nó vào một kiểm thử khai thác." Lúc này, tôi bắt đầu nghi ngờ một chút. "Trời, có vẻ như hàm tạo đơn giản nhất trong lớp này chấp nhận ba tham số. Nhưng," tôi nói một cách lạc quan, "có lẽ sẽ không quá khó để xây dựng nó."
+Khi tôi cần thực hiện thay đổi trong một hệ thống kế thừa, tôi thường bắt đầu với tinh thần lạc quan phấn chấn. Tôi không biết tại sao lại như vậy. Tôi cố gắng trở thành một người thực tế nhất có thể, nhưng sự lạc quan luôn ở đó. "Này," tôi nói với chính mình (hoặc một đối tác), "điều này nghe có vẻ dễ dàng. Chúng ta chỉ cần làm _Floogle flumoux_ một chút là xong." Tất cả nghe có vẻ dễ dàng qua lời nói cho đến khi gặp lớp _Floogle_ (bất kể đó là gì) và xem xét nó một chút. "Được rồi, vậy là chúng ta cần thêm một phương thức ở đây và thay đổi các phương thức khác, và tất nhiên chúng ta sẽ cần đưa nó vào một kiểm thử khai thác." Lúc này, tôi bắt đầu nghi ngờ một chút. "Trời, có vẻ như hàm khởi tạo đơn giản nhất trong lớp này chấp nhận ba tham số. Nhưng," tôi về một số lượng lớn lạc qu chỉan, "có lẽ sẽ không quá khó để code
+
+xây dựng"
 
 Hãy cùng xem một ví dụ và xem liệu sự lạc quan của tôi sẽ phù hợp hay chỉ là một cơ chế phòng thủ.
 
@@ -214,7 +216,9 @@ public void testCreate() {
 >
 > Các đối tượng null đặc biệt hữu ích khi khách hàng không cần quan tâm liệu một thao tác có thành công hay không. Trong nhiều trường hợp, chúng ta có thể tinh chỉnh thiết kế của mình để đạt được điều này.
 
-_Truyền Null_ và _Trích xuất giao diện (362)_ là hai cách tiếp cận khi gặp các tham số khó chịu. Nhưng vẫn còn lựa chọn khác đôi khi được sử dụng. Nếu phần phụ thuộc có vấn đề trong một tham số không được code cứng vào hàm khởi tạo của nó, chúng ta có thể sử dụng _Lớp con và Phương thức ghi đè (Subclass and Override Method) (401)_ để loại bỏ phần phụ thuộc. Điều đó có thể xảy ra trong trường hợp này. Nếu hàm tạo của `RGHConnection` sử dụng phương thức `connect` của nó để tạo kết nối, chúng ta có thể phá vỡ sự phụ thuộc bằng cách ghi đè `connect()` trong một lớp kiểm thử con. _Lớp con và Phương thức ghi đè (401)_ có thể là một cách rất hữu ích để phá vỡ các phụ thuộc, nhưng chúng ta phải chắc chắn rằng chúng ta không thay đổi hành vi mà chúng ta muốn kiểm thử khi sử dụng nó.
+_Truyền Null_ và _Trích xuất giao diện (362)_ là hai cách tiếp cận khi gặp các tham số khó chịu. Nhưng vẫn còn lựa chọn khác đôi khi được sử dụng. Nếu phần phụ thuộc có vấn đề trong một tham số không được code cứng vào hàm khởi tạo của nó, chúng ta có thể sử dụng _Lớp con và Phương thức ghi đè (Subclass and Override Method) (401)_ để loại bỏ phần phụ thuộc. Điều đó có thể xảy ra trong trường hợp này. Nếu hàm khởi tạo của `RGHConnection` sử dụng phương thức `connect` của nó để tạo kết nối, chúng ta có thể phá vỡ sự phụ về một số lượng lớn ghi đè ` chỉconnect()` trong một lớp kiểm code
+
+thử. _Lcode con và Phương thức ghi đè (401)_ có thể là một cách rất hữu ích để phá vỡ các phụ thuộc, nhưng chúng ta phải chắc chắn rằng chúng ta không thay đổi hành vi mà chúng ta muốn kiểm thử khi sử dụng nó.
 
 ## Trường hợp của sự phụ thuộc tiềm ẩn
 
@@ -387,7 +391,7 @@ void supersedeCursor(FocusWidget newCursor) {
 
 Bây giờ chúng ta có một phương thức thay thế, chúng ta có thể thử tạo một `FocusWidget` bên ngoài và sau đó truyền nó vào đối tượng sau khi khởi tạo. Vì cần phải điều tra nên chúng ta có thể sử dụng _Trích xuất Giao diện (Extract Interface) (362)_ hoặc _Trích xuất Triển khai (Extract Deployer) (356)) trên lớp `FocusWidget` và tạo một đối tượng giả để truyền vào. Chắc chắn sẽ dễ tạo hơn so với `FocusWidget` tạo trong hàm khởi tạo.
 
-Tôi không thích sử dụng _Thay thế biến thực thể (404)_ trừ khi bắt buộc. Khả năng xảy ra các vấn đề về quản lý tài nguyên là quá lớn. Tuy nhiên, đôi khi tôi sử dụng nó trong C++. Thường thì tôi muốn sử dụng _Trích xuất và Ghi đè Phương thức (350)_ và không thể làm điều đó trong các hàm tạo C++. Vì lý do đó, thỉnh thoảng tôi vẫn sử dụng _Thay thế biến thực thể (404)_
+Tôi không thích sử dụng _Thay thế biến thực thể (404)_ trừ khi bắt buộc. Khả năng xảy ra các vấn đề về quản lý tài nguyên là quá lớn. Tuy nhiên, đôi khi tôi sử dụng nó trong C++. Thường thì tôi muốn sử dụng _Trích xuất và Ghi đè Phương thức (350)_ và không thể làm điều đó trong các hàm khởi tạo C++. Vì lý do đó, thỉnh thoảng tôi vẫn sử dụng _Thay thế biến thực thể (404)_
 
 ## Trường hợp phụ thuộc toàn chương trình khó chịu
 
@@ -418,3 +422,36 @@ public class Facility
 	...
 }
 ```
+
+Để tạo lớp `Facility` trong kiểm thử khai thác, chúng ta sẽ bắt đầu bằng việc tạo một đối tượng trong kiểm thử khai thác:
+
+```java
+public void testCreate() {
+	PermitNotice notice = new PermitNotice(0, "a");
+	Facility facility = new Facility(Facility.RESIDENCE, "b", notice);
+}
+```
+
+Kiểm thử biên dịch ổn, nhưng khi bắt đầu viết thêm các kiểm thử bổ sung, chúng ta sẽ nhận thấy một vấn đề. Hàm khởi tạo sử dụng một lớp có tên `PermitRepository` và nó cần được khởi tạo với một bộ giấy phép cụ thể để thiết lập các kiểm thử đúng cách. Lén lút lén lút. Đây là tuyên bố vi phạm trong hàm khởi tạo:
+
+```java
+Permit associatedPermit = PermitRepository.getInstance().findAssociatedPermit(notice);
+```
+
+Chúng ta có thể khắc phục điều này bằng cách tham số hóa hàm khởi tạo, nhưng trong ứng dụng này, đây không phải là trường hợp cá biệt. Có 10 lớp khác có cùng một dòng code. Nó nằm trong các hàm khởi tạo, các phương thức thông thường và các phương thức tĩnh. Chúng ta có thể tưởng tượng về một số lượng lớn thời gian chỉ để giải quyết vấn đề này trong code cơ sở.
+
+Nếu bạn đã từng biết về các design pattern, bạn sẽ nhận ra đây là một ví dụ về _Singleton (372)_. Phương thức _getInstance_ của _PermitRepository_ là một phương thức tĩnh có nhiệm vụ trả về phiên bản duy nhất của _PermitRepository_ có thể tồn tại trong ứng dụng của chúng ta. Trường chứa thực thể đó cũng là trường tĩnh và nó nằm trong lớp _PermitRepository_.
+
+Trong Java, singleton là một trong những cơ chế thường được sử dụng để tạo các biến toàn cục. Nói chung, các biến toàn cục là một ý tưởng tồi vì một vài lý do. Một trong số đó là thiếu minh bạch. Khi chúng ta xem xét một đoạn code, thật tuyệt khi có thể biết nó có thể ảnh hưởng đến điều gì. Ví dụ, trong Java, khi chúng ta muốn hiểu đoạn code này có thể ảnh hưởng đến mọi thứ như thế nào, chúng ta chỉ cần xem xét một vài chỗ:
+
+```java
+	Account example = new Account();
+	example.deposit(1);
+	int balance = example.getBalance();
+```
+
+Chúng ta biết rằng một đối tượng `account` có thể ảnh hưởng đến những thứ mà chúng ta truyền vào hàm khởi tạo `Account`, nhưng chúng ta không truyền bất kỳ thứ gì vào nó. Các đối tượng `account` cũng có thể ảnh hưởng đến các đối tượng mà chúng ta truyền dưới dạng tham số cho các phương thức, nhưng trong trường hợp này, chúng ta không truyền bất kỳ thứ gì có thể thay đổi vào đó — nó chỉ là một `int`. Ở đây, chúng ta đang gán giá trị trả về của `getBalance` cho một biến và đó thực sự là giá trị duy nhất sẽ bị ảnh hưởng bởi tập hợp các câu lệnh này.
+
+Khi chúng ta sử dụng các biến toàn cục, tình huống này bị đảo lộn. Chúng ta có thể xem xét việc sử dụng một lớp chẳng hạn như `Account` và không biết liệu nó có đang truy cập hoặc sửa đổi các biến được khai báo ở một nơi khác trong chương trình hay không. Không cần phải nói, điều này có thể khiến chương trình khó hiểu hơn.
+
+Phần khó khăn trong một tình huống kiểm thử là chúng ta phải tìm ra biến toàn cục nào đang được sử dụng bởi một lớp và thiết lập chúng với trạng thái thích hợp cho một kiểm thử. Và chúng ta phải làm điều đó trước mỗi lần kiểm thử nếu thiết lập khác. Nó khá tẻ nhạt; Tôi đã thực hiện nó trên hàng chục hệ thống để kiểm thử chúng và không có gì thú vị hơn thế.
