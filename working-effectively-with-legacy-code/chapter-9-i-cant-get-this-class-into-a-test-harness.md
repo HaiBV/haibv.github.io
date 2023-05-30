@@ -455,3 +455,50 @@ Chúng ta biết rằng một đối tượng `account` có thể ảnh hưởng
 Khi chúng ta sử dụng các biến toàn cục, tình huống này bị đảo lộn. Chúng ta có thể xem xét việc sử dụng một lớp chẳng hạn như `Account` và không biết liệu nó có đang truy cập hoặc sửa đổi các biến được khai báo ở một nơi khác trong chương trình hay không. Không cần phải nói, điều này có thể khiến chương trình khó hiểu hơn.
 
 Phần khó khăn trong một tình huống kiểm thử là chúng ta phải tìm ra biến toàn cục nào đang được sử dụng bởi một lớp và thiết lập chúng với trạng thái thích hợp cho một kiểm thử. Và chúng ta phải làm điều đó trước mỗi lần kiểm thử nếu thiết lập khác. Nó khá tẻ nhạt; Tôi đã thực hiện nó trên hàng chục hệ thống để kiểm thử chúng và không có gì thú vị hơn thế.
+
+Quay lại ví dụ trên:
+
+`PermitRepository` là một singleton. Do đó, nó đặc biệt khó làm giả. Toàn bộ ý tưởng của singleton là không thể tạo nhiều hơn một phiên bản của một singleton trong một ứng dụng. Điều đó có thể tốt trong code sản phẩm, nhưng khi kiểm thử, mỗi kiểm thử trong một bộ kiểm thử phải là một ứng dụng nhỏ, chúng cần phải hoàn toàn tách biệt với các kiểm thử khác. Vì vậy, để chạy code chứa các singleton trong kiểm thử khai thác, chúng ta phải nới lỏng thuộc tính singleton.
+
+Đây là cách chúng ta thực hiện.
+
+Bước đầu tiên là thêm một phương thức tĩnh mới vào trong lớp singleton. Phương thức này cho phép chúng ta thay thế thực thể tĩnh trong singleton. Chúng ta gọi nó là `setTestingInstance`.
+
+```java
+public class PermitRepository
+	{
+	private static PermitRepository instance = null;
+
+	private PermitRepository() {}
+
+	public static void setTestingInstance(PermitRepository newInstance)
+	{
+		instance = newInstance;
+	}
+
+	public static PermitRepository getInstance()
+	{
+		if (instance == null) {
+			instance = new PermitRepository();
+		}
+		return instance;
+	}
+
+	public Permit findAssociatedPermit(PermitNotice notice) {
+		...
+	}
+	...
+}
+```
+
+Khi chúng ta đã có bộ thiết lập đó, chúng ta có thể tạo một phiên bản dành cho kiểm thử của `PermitRepository` và thiết lập nó. Chúng ta sẽ viết như thế này trong thiết lập kiểm thử của mình:
+
+```java
+public void setUp() {
+	PermitRepository repository = new PermitRepository();
+	...
+	// add permits to the repository here
+	...
+	PermitRepository.setTestingInstance(repository);
+}
+```
