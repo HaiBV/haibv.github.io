@@ -502,3 +502,30 @@ public void setUp() {
 	PermitRepository.setTestingInstance(repository);
 }
 ```
+
+> _Chèn gán biến tĩnh (Introduce Static Setter - 372)_ không phải là cách duy nhất để xử lý tình huống này. Dưới đây là một cách tiếp cận khác. Chúng ta có thể thêm phương thức `resetForTesting()` vào singleton như sau:
+>
+> ```java
+> public class PermitRepository
+> {
+> 	...
+> 	public void resetForTesting() {
+>			instance = null;
+> 	}
+> 	...
+> }
+> ```
+>
+> Nếu gọi phương thức này trong `setUp` kiểm thử (bạn cũng nên gọi nó trong `tearDown`), chúng ta có thể tạo các singleton mới cho mọi kiểm thử. Singleton sẽ tự khởi động lại cho mọi kiểm thử. Lược đồ này hoạt động tốt khi các phương thức công khai trên singleton cho phép bạn thiết lập trạng thái của singleton theo mọi cách bạn cần trong quá trình kiểm thử. Nếu singleton không có các phương thức công khai đó hoặc sử dụng một số tài nguyên bên ngoài ảnh hưởng đến trạng thái của nó, thì _Chèn gán biến tĩnh (Introduce Static Setter - 372)_ là lựa chọn tốt hơn. Bạn có thể phân lớp đơn, ghi đè các phương thức để phá vỡ các phụ thuộc và thêm các phương thức công khai vào lớp con để thiết lập trạng thái đúng cách.
+
+Liệu nó sẽ hoạt động chứ? Chưa đâu. Khi sử dụng _Singleton Design Pattern (372)_, người ta thường đặt hàm khởi tạo của lớp singleton ở chế độ riêng tư (private) và điều đó có lý do chính đáng. Đó là cách rõ ràng nhất để đảm bảo không có gì bên ngoài lớp có thể tạo một phiên bản khác của singleton.
+
+Lúc này, chúng ta có một sự xung đột giữa hai mục tiêu thiết kế. Trong một hệ thống, chúng ta muốn đảm bảo rằng chỉ có một phiên bản `PermitRepository` và cũng muốn các lớp có thể thực hiện kiểm thử độc lập. Liệu chúng ta có thể có cả hai?
+
+Hãy nhìn lại trong chút. Tại sao chúng ta chỉ muốn một thực thể của một lớp trong một hệ thống? Có rất nhiều câu trả lời, và còn tùy thuộc vào hệ thống, nhưng dưới đây là một số câu trả lời phổ biến nhất:
+
+1. **Chúng ta đang mô hình hóa thế giới thực và ở đó chúng chỉ tồn tại duy nhất một thực thể.** Một số hệ thống kiểm soát phần cứng cũng giống như vậy. Người ta tạo một lớp cho mỗi bảng mạch mà họ cần điều khiển; họ hình dung rằng nếu chúng chỉ có một, thì phải là singleton. Điều này cũng đúng với cơ sở dữ liệu. Chỉ có một tập hợp giấy phép cho cơ quan của chúng ta, vì vậy thứ cung cấp quyền truy cập vào nó phải là một singleton.
+
+2. **Nếu hai trong số chúng được tạo ra, chúng ta có thể gặp vấn đề nghiêm trọng.** Điều này thường xảy ra, một lần nữa, trong nghiệp vụ kiểm soát phần cứng. Hãy tưởng tượng việc vô tình tạo ra hai bộ điều khiển thanh điều khiển hạt nhân và có hai phần khác nhau của một chương trình vận hành cùng một thanh điều khiển không biết về sự tồn tại của nhau.
+
+3. **Nếu ai đó tạo ra hai trong số chúng, sẽ tốn quá nhiều tài nguyên.** Điều này xảy ra thường xuyên. Tài nguyên có thể là những thứ vật lý như dung lượng đĩa hoặc mức tiêu thụ bộ nhớ hoặc chúng có thể là những thứ trừu tượng như số lượng giấy phép phần mềm.
