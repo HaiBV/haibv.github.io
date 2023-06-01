@@ -529,3 +529,45 @@ Hãy nhìn lại trong chút. Tại sao chúng ta chỉ muốn một thực th�
 2. **Nếu hai trong số chúng được tạo ra, chúng ta có thể gặp vấn đề nghiêm trọng.** Điều này thường xảy ra, một lần nữa, trong nghiệp vụ kiểm soát phần cứng. Hãy tưởng tượng việc vô tình tạo ra hai bộ điều khiển thanh điều khiển hạt nhân và có hai phần khác nhau của một chương trình vận hành cùng một thanh điều khiển không biết về sự tồn tại của nhau.
 
 3. **Nếu ai đó tạo ra hai trong số chúng, sẽ tốn quá nhiều tài nguyên.** Điều này xảy ra thường xuyên. Tài nguyên có thể là những thứ vật lý như dung lượng đĩa hoặc mức tiêu thụ bộ nhớ hoặc chúng có thể là những thứ trừu tượng như số lượng giấy phép phần mềm.
+
+Đó là những lý do chính khiến mọi người chỉ muốn có một thực thể duy nhất, nhưng không phải là lý do chính khiến mọi người sử dụng singleton. Mọi người thường tạo các singleton vì họ muốn có một biến toàn cục. Họ cảm thấy rằng sẽ rất vất vả nếu truyền biến số đó đến những nơi cần thiết.
+
+Nếu chúng ta có một singleton vì một lý do nào khác, thì thực sự không có lý do gì để giữ các tính chất của singleton. Chúng ta có thể làm cho hàm khởi tạo ở phạm vi riêng tư (protectd), công khai (public), hoặc nằm trong phạm vi gói mà vẫn có một hệ thống tốt, có thể kiểm thử được. Trong các trường hợp khác, vẫn đáng để tìm kiếm một giải pháp thay thế khác. Chúng ta có thể sự dụng biện pháp bảo vệ khác nếu cần. Chúng ta có thể thêm kiểm tra vào hệ thống dựng, trong đó chúng ta tìm kiếm tất cả các tệp nguồn để đảm bảo rằng `setTestingInstance` không được gọi bởi code không được kiểm thử. Chúng ta có thể làm điều tương tự với kiểm thử vào thời điểm chạy. Nếu `setTestingInstance` được gọi trong thời điểm chạy, chúng ta có thể đưa ra cảnh báo hoặc tạm dừng hệ thống và chờ sự can thiệp của người vận hành. Sự thật là, không thể thực thi tính chất của singleton trong nhiều ngôn ngữ có trước OO và mọi người đã cố gắng tạo ra nhiều hệ thống an toàn. Cuối cùng, nó phụ thuộc vào thiết kế và viết code có trách nhiệm.
+
+Nếu vi phạm thuộc tính singleton không phải là vấn đề nghiêm trọng, chúng ta có thể dựa vào quy tắc của nhóm. Chẳng hạn, mọi người trong nhóm nên hiểu rằng chúng ta có một phiên bản cơ sở dữ liệu trong ứng dụng và chúng ta không nên có phiên bản khác.
+
+Để nới lỏng thuộc tính singleton trên `PermitRepository`, chúng ta có thể công khai hàm khởi tạo. Và cách đó sẽ hoạt động tốt miễn là các phương thức công khai trên `PermitRepository` cho phép chúng ta thực hiện mọi thứ cần thiết để thiết lập kho lưu trữ cho các kiểm thử của mình. Ví dụ: nếu `PermitRepository` có một phương thức có tên `addPermit` cho phép điền vào đó bất kỳ giấy phép nào cần cho các kiểm thử, thì có thể chỉ cần cho phép chúng ta tạo các kho lưu trữ và sử dụng chúng trong các kiểm thử của mình. Vào những thời điểm khác, chúng ta có thể không có quyền truy cập mà chúng ta cần, hoặc tệ hơn, singleton có thể đang làm những việc mà chúng ta không muốn xảy ra trong kiểm thử khai thác, chẳng hạn như giao tiếp với cơ sở dữ liệu ở chế độ ngầm. Trong những trường hợp này, chúng ta có thể _Phân lớp và Ghi đè Phương thức (401)_ và tạo các lớp dẫn xuất giúp dễ dàng kiểm thử hơn.
+
+Đây là một ví dụ trong hệ thống giấy phép của chúng tôi. Ngoài phương thức và các biến làm cho `PermitRepository` trở thành một singleton, chúng ta có phương thức sau:
+
+```java
+{
+	...
+	public Permit findAssociatedPermit(PermitNotice notice) {
+		// open permit database
+		...
+		// select using values in notice
+		...
+		// verify we have only one matching permit, if not report error
+		...
+		// return the matching permit
+		...
+	}
+}
+```
+
+Nếu chúng ta muốn tránh giao tiếp với cơ sở dữ liệu, chúng ta có thể phân lớp `PermitRepository` như sau:
+
+```java
+public class TestingPermitRepository extends PermitRepository
+{
+	private Map permits = new HashMap();
+	public void addAssociatedPermit(PermitNotice notice, permit) {
+		permits.put(notice, permit);
+	}
+
+	public Permit findAssociatedPermit(PermitNotice notice) {
+		return (Permit)permits.get(notice);
+	}
+}
+```
