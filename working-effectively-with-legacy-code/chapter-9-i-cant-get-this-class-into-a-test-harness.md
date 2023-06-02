@@ -571,3 +571,73 @@ public class TestingPermitRepository extends PermitRepository
 	}
 }
 ```
+
+Khi làm điều này, chúng ta có thể bảo toàn một phần thuộc tính của singleton. Bởi vì chúng ta đang sử dụng một lớp con của `PermitRepository`, chúng ta có thể làm cho hàm khởi tạo của `PermitRepository` được bảo vệ thay vì công khai. Điều đó sẽ ngăn việc tạo nhiều hơn một `PermitRepository`, mặc dù nó cho phép chúng ta tạo các lớp con.
+
+```java
+public class PermitRepository
+{
+	private static PermitRepository instance = null;
+
+	protected PermitRepository() {}
+
+	public static void setTestingInstance(PermitRepository newInstance)
+	{
+		instance = newInstance;
+	}
+
+	public static PermitRepository getInstance()
+	{
+		if (instance == null) {
+			instance = new PermitRepository();
+		}
+		return instance;
+	}
+
+	public Permit findAssociatedPermit(PermitNotice notice)
+	{
+		...
+	}
+	...
+}
+```
+
+Trong nhiều trường hợp, chúng ta có thể sử dụng _Subclass và Override Method (401)_ như dưới đây để tạo một singleton giả. Vào những trường hợp khác, các phần phụ thuộc quá rộng nên việc sử dụng _Giao diện trích xuất (362)_ trên singleton sẽ dễ dàng hơn và thay đổi tất cả các tham chiếu trong ứng dụng để chúng sử dụng tên giao diện. Điều này có thể tốn nhiều công sức, nhưng chúng ta có thể _Dựa vào Trình biên dịch (315)_ để thực hiện thay đổi. Đây là giao diện của lớp `PermitRepository` sau khi trích xuất:
+
+```java
+public class PermitRepository implements IPermitRepository
+{
+	private static IPermitRepository instance = null;
+
+	protected PermitRepository() {}
+
+	public static void setTestingInstance(IPermitRepository newInstance)
+	{
+		instance = newInstance;
+	}
+
+	public static IPermitRepository getInstance()
+	{
+		if (instance == null) {
+			instance = new PermitRepository();
+		}
+		return instance;
+	}
+
+	public Permit findAssociatedPermit(PermitNotice notice)
+	{
+		...
+	}
+	...
+}
+```
+
+Giao diện `IPermitRepository` sẽ giữ chữ ký cho tất cả các phương thức không tĩnh công khai trên `PermitRepository`.
+
+```java
+public interface IPermitRepository
+{
+	Permit findAssociatedPermit(PermitNotice notice);
+	...
+}
+```
