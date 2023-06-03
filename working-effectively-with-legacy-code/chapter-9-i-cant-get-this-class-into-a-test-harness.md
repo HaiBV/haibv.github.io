@@ -602,7 +602,7 @@ public class PermitRepository
 }
 ```
 
-Trong nhiều trường hợp, chúng ta có thể sử dụng _Subclass và Override Method (401)_ như dưới đây để tạo một singleton giả. Vào những trường hợp khác, các phần phụ thuộc quá rộng nên việc sử dụng _Giao diện trích xuất (362)_ trên singleton sẽ dễ dàng hơn và thay đổi tất cả các tham chiếu trong ứng dụng để chúng sử dụng tên giao diện. Điều này có thể tốn nhiều công sức, nhưng chúng ta có thể _Dựa vào Trình biên dịch (315)_ để thực hiện thay đổi. Đây là giao diện của lớp `PermitRepository` sau khi trích xuất:
+Trong nhiều trường hợp, chúng ta có thể sử dụng _Subclass và Override Method (401)_ như dưới đây để tạo một singleton giả. Vào những trường hợp khác, các phần phụ thuộc quá rộng nên việc sử dụng _Trích xuất Giao diện (362)_ trên singleton sẽ dễ dàng hơn và thay đổi tất cả các tham chiếu trong ứng dụng để chúng sử dụng tên giao diện. Điều này có thể tốn nhiều công sức, nhưng chúng ta có thể _Tận dụng trình biên dịch (315)_ để thực hiện thay đổi. Đây là giao diện của lớp `PermitRepository` sau khi trích xuất:
 
 ```java
 public class PermitRepository implements IPermitRepository
@@ -641,3 +641,13 @@ public interface IPermitRepository
 	...
 }
 ```
+
+Nếu bạn đang sử dụng ngôn ngữ có công cụ tái cấu trúc, bạn có thể tự động trích xuất giao diện như trên. Nếu bạn đang sử dụng một ngôn ngữ không có công cụ đó, thì sẽ dễ dàng hơn nếu sử dụng _Trích xuất Trình triển khai (356)_ thay cho cách trên.
+
+Tên của toàn bộ quá trình tái cấu trúc này là _Chèn gán biến tĩnh (372)_. Đây là một kỹ thuật mà chúng ta có thể sử dụng để viết các kiểm thử bất chấp sự phụ thuộc rất lớn của biến toàn cục. Thật không may, nó không giúp được gì nhiều để vượt qua sự phụ thuộc toàn cục. Nếu bạn chọn giải quyết vấn đề đó, bạn có thể làm như vậy bằng cách sử dụng _Tham số hóa Phương thức (383)_ và _Tham số hóa Hàm khởi tạo (379)_. Với những phương pháp tái cấu trúc đó, thay vì sử dụng một tham chiếu toàn cục, bạn sử dụng một biến tạm thời trong một phương thức hoặc một trường trong một đối tượng. Nhược điểm của _Tham số hóa Phương thức (383)_ là bạn có thể kết thúc với nhiều phương thức bổ sung khiến mọi người mất tập trung khi họ cố gắng hiểu các lớp. Nhược điểm của _Tham số hóa Hàm khởi tạo (379)_ là mỗi đối tượng hiện đang sử dụng biến toàn cục sẽ kết thúc bằng một trường bổ sung. Trường đó sẽ phải được truyền đến hàm khởi tạo của nó, vì vậy lớp tạo đối tượng cũng cần có quyền truy cập vào thực thể. Nếu có quá nhiều đối tượng cần trường bổ sung này, nó có thể ảnh hưởng đáng kể đến dung lượng bộ nhớ mà ứng dụng sử dụng, nhưng điều đó thường chỉ ra các vấn đề thiết kế khác.
+
+Hãy xem xét trường hợp xấu nhất. Chúng tôi có một ứng dụng với hàng trăm lớp tạo ra hàng nghìn đối tượng trong thời gian chạy và mỗi đối tượng đều cần truy cập vào cơ sở dữ liệu. Thậm chí không cần nhìn vào ứng dụng, câu hỏi đầu tiên xuất hiện trong đầu tôi là, tại sao? Nếu hệ thống làm bất cứ điều gì khác ngoài truy cập cơ sở dữ liệu, nó có thể được tái cấu trúc để một số lớp làm những việc khác còn lớp khác lưu trữ và truy xuất dữ liệu. Khi chúng ta nỗ lực phối hợp để phân tách trách nhiệm trong một ứng dụng, các phụ thuộc sẽ trở nên cục bộ; chúng ta có thể không cần tham chiếu đến cơ sở dữ liệu trong mọi đối tượng. Một số đối tượng lấy dữ liệu từ cơ sở dữ liệu. Những đối tượng khác thực hiện tính toán trên dữ liệu được cung cấp thông qua các hàm khởi tạo của chúng.
+
+Như một bài tập, hãy chọn một biến toàn cục trong một ứng dụng lớn và tìm kiếm nó. Trong hầu hết các trường hợp, các biến toàn cục có thể truy cập được trên toàn bộ hệ thống, nhưng chúng không thực sự được sử dụng trong toàn bộ hệ thống. Thực tế là phạm vi sử dụng của chúng tương đối nhỏ. Hãy tưởng tượng làm thế nào chúng ta có thể đưa nó đến các vị trí cần nó nếu nó không thể là một biến toàn cục. Chúng ta sẽ cấu trúc lại ứng dụng như thế nào? Có trách nhiệm nào mà chúng ta có thể tách ra khỏi tập hợp các lớp để giảm phạm vi toàn cầu không?
+
+Nếu bạn tìm thấy một biến toàn cục thực sự đang được sử dụng ở mọi nơi, điều đó có nghĩa là code của bạn không có bất kỳ phân lớp nào. Hãy xem _Chương 15, Toàn bộ ứng dụng của tôi chỉ gồm các lệnh gọi API_ và _Chương 17, Ứng dụng của tôi không có cấu trúc_.
