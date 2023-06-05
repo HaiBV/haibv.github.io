@@ -660,4 +660,51 @@ Mặc dù C++ đã rất phổ biến được một thời gian, nhưng cuối 
 
 Một phần di sản C của C++ đặc biệt có vấn đề với cách nó cho phép một phần của chương trình biết về phần khác. Trong Java và C#, nếu một lớp trong một tệp cần sử dụng một lớp trong một tệp khác, chúng tôi sử dụng lệnh import hoặc sử dụng khai báo để khiến chúng khả dụng. Trình biên dịch tìm lớp đó và kiểm tra xem nó đã được biên dịch chưa. Nếu không, nó sẽ biên dịch nó. Nếu nó đã được biên dịch, trình biên dịch sẽ đọc một đoạn thông tin ngắn từ tệp đã biên dịch, chỉ nhận đủ thông tin cần thiết để đảm bảo rằng tất cả các phương thức mà lớp ban đầu cần đều có trên lớp đó.
 
-Trình biên dịch C++ thường không có tối ưu hóa này. Trong C++, nếu một lớp cần biết về một lớp khác, thì phần khai báo của lớp (trong một tệp khác) được đưa vào văn bản trong tệp cần sử dụng nó. Đây có thể là một quá trình khá chậm. Trình biên dịch phải phân tích lại khai báo và xây dựng khai báo bên trong mỗi khi nó thấy khai báo đó. Tồi tệ hơn, cơ chế include dễ bị lạm dụng. Một tệp có thể include một tệp include một tệp khác, v.v. Trong các dự án mà mọi người không tránh được điều này, không có gì lạ khi tìm thấy các tệp nhỏ có thể include bao gồm hàng chục nghìn dòng code. Mọi người sẽ thắc mắc tại sao quá trình dựng của ứng dụng lại mất nhiều thời gian như vậy, nhưng vì các tệp include trải rộng khắp hệ thống nên khó có thể xác định bất kỳ tệp cụ thể nào và hiểu tại sao quá trình biên dịch lại mất nhiều thời gian như vậy.
+Trình biên dịch C++ thường không có tối ưu hóa này. Trong C++, nếu một lớp cần biết về một lớp khác, thì phần khai báo của lớp (trong một tệp khác) được đưa vào văn bản trong tệp cần sử dụng nó. Đây có thể là một quá trình khá chậm. Trình biên dịch phải phân tích lại khai báo và xây dựng khai báo bên trong mỗi khi nó thấy khai báo đó. Tồi tệ hơn, cơ chế include dễ bị lạm dụng. Một tệp có thể include một tệp include một tệp khác, v.v. Trong các dự án mà mọi người không tránh được điều này, không có gì lạ khi tìm thấy các tệp nhỏ có thể include bao gồm hàng chục nghìn dòng code. Mọi người sẽ thắc mắc tại sao quá trình dựng của ứng dụng lại mất nhiều thời gian như vậy, nhưng vì các tệp include trải rộng khắp hệ thống nên khó có thể xác định cụ thể tệp nào và hiểu được tại sao quá trình biên dịch lại mất nhiều thời gian như vậy.
+
+Có vẻ như tôi đang thất vọng với C++, thực tế thì không. Nó là một ngôn ngữ quan trọng, và có một lượng code C++ đáng kinh ngạc ngoài kia - nhưng cần hết sức cẩn thận nếu muốn làm việc tốt với nó.
+
+Trong code kế thừa, có thể khó khởi tạo một lớp C++ trong kiểm thử khai thác. Một trong những vấn đề trực tiếp nhất mà chúng ta gặp phải là sự phụ thuộc vào header. Chúng ta cần những tệp header nào để tự tạo một lớp trong kiểm thử khai thác?
+
+Đây là phần khai báo của một lớp C++ khổng lồ có tên `Scheduler`. Nó có hơn 200 phương thức, nhưng tôi chỉ trình bày khoảng 5 trong số chúng trong phần khai báo. Ngoài việc là một lớp lớn, nó còn phụ thuộc rất chặt chẽ và phức tạp vào nhiều lớp khác. Làm cách nào chúng ta có thể tạo ra `Scheduler` trong kiểm thử?
+
+```cpp
+#ifndef SCHEDULER_H
+#define SCHEDULER_H
+
+#include "Meeting.h"
+#include "MailDaemon.h"
+...
+#include "SchedulerDisplay.h"
+#include "DayTime.h"
+
+class Scheduler
+{
+public:
+		Scheduler(const string& owner);
+		~Scheduler();
+
+	void addEvent(Event *event);
+	bool hasEvents(Date date);
+	bool performConsistencyCheck(string& message);
+	...
+};
+#endif
+```
+
+Ngoài ra, lớp `Scheduler` còn sử dụng `Meetings`, `MailDaemon`, `Events`, `SchedulerDisplays` và `Dates`. Nếu muốn tạo kiểm thử cho `Schedulers`, điều dễ dàng nhất mà có thể làm là cố gắng tạo kiểm thử cùng thư mục với một tệp khác có tên là `SchedulerTests`. Tại sao chúng ta muốn các kiểm thử ở trong cùng một thư mục? Với sự hiện diện của bộ tiền xử lý, nó thường dễ dàng hơn. Nếu dự án không sử dụng các đường dẫn để include các tệp theo những cách nhất quán, chúng ta có thể có rất nhiều việc phải làm nếu cố gắng tạo các kiểm thử trong các thư mục khác.
+
+```cpp
+#include "TestHarness.h"
+#include "Scheduler.h"
+TEST(create,Scheduler)
+{
+	Scheduler scheduler("fred");
+}
+```
+
+Nếu chúng ta tạo một tệp và chỉ nhập khai báo đối tượng vào kiểm thử, chúng ta sẽ gặp vấn đề với include. Để biên dịch `Scheduler`, chúng ta phải đảm bảo rằng trình biên dịch và trình liên kết biết về tất cả những thứ `Scheduler` cần và tất cả những thứ mà những thứ đó cần, v.v. May mắn thay, hệ thống dựng cung cấp cho chúng ta một số lượng lớn thông báo lỗi và cho chúng ta biết chi tiết về những điều này.
+
+Trong các trường hợp đơn giản, tệp `Scheduler.h` include mọi thứ chúng ta cần để có thể tạo `Scheduler`, nhưng trong một số trường hợp, tệp header không include mọi thứ. Chúng ta phải cung cấp một số include bổ sung để tạo và sử dụng một số đối tượng.
+
+Chúng ta có thể chỉ cần sao chép tất cả các lệnh `#include` từ tệp nguồn của lớp `Scheduler`, nhưng thực tế là chúng ta có thể không cần tất cả chúng. Cách tốt nhất để thực hiện là thêm từng cái một và quyết định xem chúng ta có thực sự cần những phụ thuộc cụ thể đó hay không.
