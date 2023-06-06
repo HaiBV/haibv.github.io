@@ -708,3 +708,38 @@ Nếu chúng ta tạo một tệp và chỉ nhập khai báo đối tượng và
 Trong các trường hợp đơn giản, tệp `Scheduler.h` include mọi thứ chúng ta cần để có thể tạo `Scheduler`, nhưng trong một số trường hợp, tệp header không include mọi thứ. Chúng ta phải cung cấp một số include bổ sung để tạo và sử dụng một số đối tượng.
 
 Chúng ta có thể chỉ cần sao chép tất cả các lệnh `#include` từ tệp nguồn của lớp `Scheduler`, nhưng thực tế là chúng ta có thể không cần tất cả chúng. Cách tốt nhất để thực hiện là thêm từng cái một và quyết định xem chúng ta có thực sự cần những phụ thuộc cụ thể đó hay không.
+
+Trong trường hợp lý tưởng, cách dễ nhất là include tất cả các tệp mà chúng ta cần cho đến khi không còn bất kỳ lỗi dựng nào nữa, nhưng điều đó có thể khiến chúng ta rơi vào tình trạng lộn xộn. Nếu có một hàng dài các phụ thuộc chuyển tiếp, cuối cùng chúng ta có thể include nhiều hơn những gì chúng ta thực sự cần. Ngay cả khi các phụ thuộc không quá dài, cuối cùng chúng ta vẫn có thể phụ thuộc vào những thứ rất khó xử lý trong kiểm thử khai . Trong ví dụ này, lớp `SchedulerDisplay` là một trong những phụ thuộc đó. Tôi không hiển thị nó ở đây, nhưng nó thực sự được truy cập trong hàm khởi tạo của `Scheduler`. Chúng ta có thể thoát khỏi sự phụ thuộc như sau:
+
+```cpp
+#include "TestHarness.h"
+#include "Scheduler.h"
+
+void SchedulerDisplay::displayEntry(const string& entyDescription)
+{
+
+}
+TEST(create,Scheduler)
+{
+	Scheduler scheduler("fred");
+}
+```
+
+Ở đây chúng ta đã giới thiệu một định nghĩa thay thế cho `SchedulerDisplay::displayEntry`. Không may là khi làm điều này, chúng ta cần phải có một bản dựng riêng cho các trường hợp kiểm thử trong tệp này. Chúng ta chỉ có thể có một định nghĩa cho mỗi phương thức trong `SchedulerDisplay` trong một chương trình, vì vậy chúng ta cần có một chương trình riêng cho các kiểm thử `scheduler`.
+
+May mắn thay, chúng ta có thể tái sử dụng một số đồ giả mà chúng ta tạo ra theo cách này. Thay vì đặt các định nghĩa của các lớp như `SchedulerDisplay` nội tuyến trong tệp kiểm thử, chúng ta có thể đặt chúng trong một tệp include riêng biệt có thể được sử dụng trên một tập hợp các tệp kiểm thử:
+
+```cpp
+#include "TestHarness.h"
+#include "Scheduler.h"
+#include “Fakes.h“
+
+TEST(create,Scheduler)
+{
+	Scheduler scheduler("fred");
+}
+```
+
+Sau khi làm điều này vài lần, việc có được một lớp C++ có thể khởi tạo trong kiểm thử khai thác là khá dễ dàng và tự động. Có một vài nhược điểm rất nghiêm trọng. Chúng ta phải tạo ra chương trình riêng biệt và thực sự không phá vỡ các phụ thuộc ở cấp độ ngôn ngữ, vì vậy chúng ta không làm cho code sạch hơn khi phá vỡ các phụ thuộc. Tồi tệ hơn, những định nghĩa trùng lặp mà chúng tôi đặt trong tệp kiểm thử (trong ví dụ này là `SchedulerDisplay::displayEntry`) phải được duy trì miễn là chúng ta giữ nguyên bộ kiểm thử này.
+
+Tôi dành kỹ thuật này cho các trường hợp mà tôi có một lớp rất lớn với các vấn đề phụ thuộc rất nghiêm trọng. Nó không phải là một kỹ thuật để sử dụng thường xuyên hoặc nhẹ nhàng. Nếu lớp đó sẽ được chia thành một số lượng lớn các lớp nhỏ hơn theo thời gian, thì việc tạo một chương trình kiểm thử riêng cho một lớp có thể hữu ích. Nó có thể hoạt động như một điểm kiểm thử cho rất nhiều quá trình tái cấu trúc. Theo thời gian, chương trình kiểm thử riêng biệt này có thể biến mất khi bạn trích xuất nhiều lớp hơn và đưa chúng vào kiểm thử.
