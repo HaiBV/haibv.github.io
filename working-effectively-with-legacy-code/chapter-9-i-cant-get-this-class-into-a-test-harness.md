@@ -743,3 +743,67 @@ TEST(create,Scheduler)
 Sau khi làm điều này vài lần, việc có được một lớp C++ có thể khởi tạo trong kiểm thử khai thác là khá dễ dàng và tự động. Có một vài nhược điểm rất nghiêm trọng. Chúng ta phải tạo ra chương trình riêng biệt và thực sự không phá vỡ các phụ thuộc ở cấp độ ngôn ngữ, vì vậy chúng ta không làm cho code sạch hơn khi phá vỡ các phụ thuộc. Tồi tệ hơn, những định nghĩa trùng lặp mà chúng tôi đặt trong tệp kiểm thử (trong ví dụ này là `SchedulerDisplay::displayEntry`) phải được duy trì miễn là chúng ta giữ nguyên bộ kiểm thử này.
 
 Tôi dành kỹ thuật này cho các trường hợp mà tôi có một lớp rất lớn với các vấn đề phụ thuộc rất nghiêm trọng. Nó không phải là một kỹ thuật để sử dụng thường xuyên hoặc nhẹ nhàng. Nếu lớp đó sẽ được chia thành một số lượng lớn các lớp nhỏ hơn theo thời gian, thì việc tạo một chương trình kiểm thử riêng cho một lớp có thể hữu ích. Nó có thể hoạt động như một điểm kiểm thử cho rất nhiều quá trình tái cấu trúc. Theo thời gian, chương trình kiểm thử riêng biệt này có thể biến mất khi bạn trích xuất nhiều lớp hơn và đưa chúng vào kiểm thử.
+
+## Trường hợp tham số củ hành (nhiều lớp)
+
+Tôi thích các hàm khởi tạo đơn giản. Tôi thực sự thích. Thật tuyệt khi quyết định tạo một lớp, sau đó chỉ cần nhập lệnh gọi hàm khởi tạo và chúng ta đã có một đối tượng hoạt động tốt để sẵn sàng sử dụng. Nhưng trong nhiều trường hợp, việc tạo đối tượng có thể khá khó. Mọi đối tượng cần được thiết lập ở trạng thái tốt, trạng thái giúp nó sẵn sàng cho những công việc sau này. Trong nhiều trường hợp, điều đó có nghĩa là chúng ta phải cung cấp cho nó các đối tượng được thiết lập đúng cách. Các đối tượng đó có thể yêu cầu các đối tượng khác để chúng cũng có thể được thiết lập, vì vậy cuối cùng chúng ta phải tạo đối tượng để tạo đối tượng để tạo đối tượng để làm tham số cho hàm khởi tạo của lớp mà chúng ta muốn kiểm thử. Các đối tượng bên trong các đối tượng khác — giống như một củ hành lớn. Đây là một ví dụ về loại vấn đề này.
+
+Chúng tôi có một lớp hiển thị `SchedulingTask`
+
+```java
+public class SchedulingTaskPane extends SchedulerPane
+{
+	public SchedulingTaskPane(SchedulingTask task) {
+		...
+	}
+}
+```
+
+Để tạo nó, chúng ta cần truyền cho nó một `SchedulingTask`, nhưng để tạo một `SchedulingTask`, chúng ta phải sử dụng một và chỉ một hàm khởi tạo:
+
+```java
+public class SchedulingTask extends SerialTask
+{
+	public SchedulingTask(Scheduler scheduler, MeetingResolver resolver)
+	{
+		...
+	}
+}
+```
+
+Chắc hẳn bạn sẽ vò đầu bứt tai nếu biết rằng còn cần nhiều đối tượng hơn để tạo `Schedulers` và `MeetingResolver`. Điều duy nhất giúp chúng ta không hoàn toàn tuyệt vọng là thực tế phải có ít nhất một lớp không yêu cầu các đối tượng của lớp khác làm tham số. Nếu không thì hệ thống không thể nào biên dịch được.
+
+Cách để xử lý tình huống này là xem xét kỹ những gì chúng ta muốn làm. Chúng ta cần viết các kiểm thử, nhưng chúng ta thực sự cần gì ở các tham số được truyền vào hàm khởi tạo? Nếu chúng ta không cần bất cứ thứ gì từ chúng trong các kiểm thử, chúng ta có thể _Truyền vào Null (111)_. Nếu chúng ta chỉ cần một số hành vi thô sơ, chúng ta có thể sử dụng _Trích xuất Giao diện (362)_ hoặc _Trích xuất Trình triển khai (356)_ trên phần phụ thuộc trực tiếp nhất và sử dụng giao diện (interface) để tạo đối tượng giả. Trong trường hợp này, phần phụ thuộc trực tiếp nhất của `SchedulingTaskPane` là `SchedulingTask`. Nếu chúng ta có thể tạo một `SchedulingTask` giả, chúng ta có thể tạo một `SchedulingTaskPane`.
+
+Thật không may, `SchedulingTask` kế thừa từ một lớp có tên là `SerialTask` và tất cả những gì nó làm là ghi đè lên một số phương thức bảo vệ (protected). Tất cả các phương thức công khai (public) đều có trong `SerialTask`. Chúng ta sẽ chỉ sử dụng _Trích xuất Giao diện (362)_ trên `SchedulingTask` hay cả cho `SerialTask`? Trong Java, chúng ta không làm vậy. Chúng ta có thể tạo một giao diện cho `SchedulingTask` cũng bao gồm các phương thức từ `SerialTask`.
+
+Hệ thống phân cấp kết quả sẽ giống như Hình 9.3
+
+![9.3](images/9/9-3.png)
+Hình 9.3 `SchedulingTask`
+
+Trong trường hợp này, thật may mắn là chúng ta sử dụng Java. Với C++ thì không như vậy, chúng ta không thể xử lý trường hợp này với cách tương tự. Không có cấu trúc giao diện riêng biệt. Các giao diện thường được triển khai dưới dạng các lớp chỉ chứa các hàm ảo thuần túy. Nếu ví dụ này được chuyển sang C++, thì `SchedulingTask` sẽ trở nên trừu tượng vì nó kế thừa một hàm ảo thuần túy từ `SchedulingTask`. Để khởi tạo một `SchedulingTask`, chúng ta cần cung cấp phần thân cho `run()` trong `SchedulingTask`, phần thân này ủy quyền cho `run()` từ `SerialTask`. May mắn thay, điều đó vẫn dễ dàng để thêm vào. Nó sẽ như sau:
+
+```cpp
+class SerialTask
+{
+public:
+	virtual void run();
+	...
+};
+
+class ISchedulingTask
+{
+public:
+	virtual void run() = 0;
+	...
+};
+
+class SchedulingTask : public SerialTask, public ISchedulingTask
+{
+public:
+	virtual void run() { SerialTask::run(); }
+};
+```
+
+Trong bất kỳ ngôn ngữ nào chúng ta có thể tạo giao diện hoặc lớp hoạt động giống như giao diện, chúng ta có thể sử dụng chúng một cách có hệ thống để phá vỡ các phụ thuộc.
