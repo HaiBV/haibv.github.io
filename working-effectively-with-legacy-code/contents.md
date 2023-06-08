@@ -16,6 +16,8 @@ layout: default
 
 ## Phần 2 - Thay đổi phần mềm
 
+[Chương 9, Tôi không thể đưa lớp này vào kiểm thử khai thác](./chapter-9-i-cant-get-this-class-into-a-test-harness.html).
+
 [Chương 11 - Tôi Cần Thực Hiện Thay Đổi. Tôi nên kiểm thử những phương thức nào?](./chapter-11-i-need-to-make-a-change-what-methods-should-i-test.html).
 
 [Chương 12 - Tôi cần thực hiện nhiều thay đổi trong một khu vực. Tôi có phải phá vỡ các phụ thuộc của tất cả các lớp liên quan không?](./chapter-12-i-need-to-make-many-changes-in-one-area-do-i-have-to-break-dependencies-for-all-the-classes-involved.html).
