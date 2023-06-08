@@ -393,7 +393,7 @@ Bây giờ chúng ta có một phương thức thay thế, chúng ta có thể t
 
 Tôi không thích sử dụng _Thay thế biến thực thể (404)_ trừ khi bắt buộc. Khả năng xảy ra các vấn đề về quản lý tài nguyên là quá lớn. Tuy nhiên, đôi khi tôi sử dụng nó trong C++. Thường thì tôi muốn sử dụng _Trích xuất và Ghi đè Phương thức (350)_ và không thể làm điều đó trong các hàm khởi tạo C++. Vì lý do đó, thỉnh thoảng tôi vẫn sử dụng _Thay thế biến thực thể (404)_
 
-## Trường hợp phụ thuộc toàn chương trình khó chịu
+## Trường hợp phụ thuộc toàn cục khó chịu
 
 Nhiều năm trong ngành công nghiệp phần mềm, rất nhiều người phàn nàn về một thực tế là trên thị trường không có nhiều thành phần hệ thống có thể tái sử dụng. Điều này đang trở nên tốt hơn theo thời gian; có rất nhiều framework mã nguồn mở và thương mại, nhưng nhìn chung, phần lớn không thực sự là thứ mà chúng ta muốn sử dụng; chúng là những thứ sử dụng code của chúng ta. Các framework thường quản lý vòng đời của một ứng dụng và chúng ta viết code để lấp vào các lỗ hổng. Chúng ta có thể thấy điều này trong tất cả các loại framework, từ ASP.NET đến Java Struts. Ngay cả các framework xUnit cũng hoạt động theo cách này. Chúng ta viết các lớp kiểm thử; xUnit gọi và hiển thị kết quả của chúng.
 
@@ -807,3 +807,34 @@ public:
 ```
 
 Trong bất kỳ ngôn ngữ nào chúng ta có thể tạo giao diện hoặc lớp hoạt động giống như giao diện, chúng ta có thể sử dụng chúng một cách có hệ thống để phá vỡ các phụ thuộc.
+
+## Trường hợp của tham số bí danh (alias)
+
+Thông thường khi bị cản trở bởi các tham số của hàm khởi, chúng ta có thể khắc phục bằng _Trích xuất Giao diện (362)_ hoặc _Trích xuất trình triển khai (356)_. Nhưng đôi khi những cách này không thực tế. Hãy xem xét một lớp khác trong hệ thống giấy phép xây dựng đã xét trong phần trước:
+
+```java
+public class IndustrialFacility extends Facility
+{
+	Permit basePermit;
+
+	public IndustrialFacility(int facilityCode, String owner,	OriginationPermit permit) throws PermitViolation {
+		Permit associatedPermit = PermitRepository.GetInstance().findAssociatedFromOrigination(permit);
+
+		if (associatedPermit.isValid() && !permit.isValid()) {
+			basePermit = associatedPermit;
+		}
+		else if (!permit.isValid()) {
+			permit.validate();
+			basePermit = permit;
+		}
+		else
+			throw new PermitViolation(permit);
+	}
+	...
+}
+```
+
+Chúng ta muốn khởi tạo lớp này trong kiểm thử khai thác, nhưng có một số vấn đề. Một là chúng ta lại truy cập vào một `singleton`, `PermitRepository`. Chúng ta có thể vượt qua vấn đề đó với các kỹ thuật đã đề cập trong phần trước "Trường hợp phụ thuộc toàn cục khó chịu". Nhưng trước khi giải quyết vấn đề đó, chúng ta có một vấn đề khác. Thật khó để tạo giấy phép gốc cần để truyền vào hàm khởi tạo. `OriginationPermits` có các phụ thuộc tồi tệ. Ý nghĩ ngay lập tức mà tôi có là "Ồ, mình có thể sử dụng _Trích xuất Giao diện_ với lớp `OriginationPermit` để vượt qua sự phụ thuộc này," nhưng điều đó không dễ dàng như vậy. Hình 9.4 cho thấy cấu trúc của hệ thống phân cấp `Permit`.
+
+![9.4](images/9/9-4.png)
+Hình 9.3 Phân cấp của `Permit`
