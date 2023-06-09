@@ -837,4 +837,13 @@ public class IndustrialFacility extends Facility
 Chúng ta muốn khởi tạo lớp này trong kiểm thử khai thác, nhưng có một số vấn đề. Một là chúng ta lại truy cập vào một `singleton`, `PermitRepository`. Chúng ta có thể vượt qua vấn đề đó với các kỹ thuật đã đề cập trong phần trước "Trường hợp phụ thuộc toàn cục khó chịu". Nhưng trước khi giải quyết vấn đề đó, chúng ta có một vấn đề khác. Thật khó để tạo giấy phép gốc cần để truyền vào hàm khởi tạo. `OriginationPermits` có các phụ thuộc tồi tệ. Ý nghĩ ngay lập tức mà tôi có là "Ồ, mình có thể sử dụng _Trích xuất Giao diện_ với lớp `OriginationPermit` để vượt qua sự phụ thuộc này," nhưng điều đó không dễ dàng như vậy. Hình 9.4 cho thấy cấu trúc của hệ thống phân cấp `Permit`.
 
 ![9.4](images/9/9-4.png)
-Hình 9.3 Phân cấp của `Permit`
+Hình 9.4 Phân cấp của `Permit`
+
+Hàm khởi tạo của `IndustrialFacility` nhận `OriginationPermit` làm tham số và truyền vào `PermitRepository` để lấy được `permit` liên quan; chúng ta sử dụng một phương thức trên `PermitRepository` tiếp nhận `OriginationPermit` và trả về `Permit`. Nếu kho lưu trữ tìm thấy `permit` liên quan, nó sẽ lưu chúng vào trường `permit`. Nếu không, nó sẽ lưu `OriginationPermit` vào trường `permit`. Chúng ta có thể tạo một giao diện cho `OriginationPermit`, nhưng điều đó sẽ không giúp ích gì cả. Chúng ta sẽ phải gán một `IOriginationPermit` cho trường `Permit` và điều đó sẽ không hoạt động. Trong Java, các giao diện không thể kế thừa từ các lớp. Giải pháp rõ ràng nhất là tạo tất cả các giao diện và biến trường `Permit` thành trường `IPermit`. Hình 9.5 cho thấy điều này sẽ trông như thế nào.
+
+Thật đáng sợ. Đó là một khối lượng công việc lố bịch và tôi đặc biệt không thích kết cục của các đoạn code. Các giao diện rất hữu dụng để phá vỡ sự phụ thuộc, nhưng khi liên hệ giữa lớp và giao diện đạt đến mức gần như một đối một, thì sẽ làm thiết kế trở nên lộn xộn. Đừng hiểu sai ý tôi: Nếu không còn lựa chọn nào khác, sẽ tốt hơn nếu tiến tới thiết kế này, nhưng nếu có những khả năng khác, chúng ta nên khám phá chúng. May mắn thay, chúng ta có.
+
+![9.5](images/9/9-5.png)
+Hình 9.5 Phân cấp của `Permit` với các lớp giao diện
+
+_Trích xuất Giao diện (362)_ chỉ là một cách để phá vỡ sự phụ thuộc vào một tham số. Đôi khi sẽ tốt hơn nếu tự hỏi tại sao sự phụ thuộc là xấu. Đôi khi sáng tạo lại là một nỗi đau. Vào những thời điểm khác, tham số lại có tác dụng phụ xấu. Có thể nó giao tiếp với hệ thống tệp hoặc cơ sở dữ liệu. Vào những thời điểm khác nữa, có thể mất quá nhiều thời gian để code của nó chạy. Khi chúng ta sử dụng _Trích xuất Giao diện (362)_, chúng ta có thể vượt qua tất cả các vấn đề này, nhưng chúng ta thực hiện điều đó bằng cách cắt đứt kết nối với một lớp một cách thô bạo. Nếu chỉ có các phần của một lớp là vấn đề, chúng ta có thể thực hiện một cách tiếp cận khác và chỉ cắt đứt kết nối với chúng.
