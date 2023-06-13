@@ -31,3 +31,25 @@ Vì vậy, làm thế nào để chúng ta viết kiểm thử cho một phươn
 2. Nếu khách hàng sử dụng phương thức này, chúng có thể ảnh hưởng xấu đến kết quả từ các phương thức khác trong lớp.
 
 Lý do đầu tiên không quá nghiêm trọng. Có thể chấp nhận bổ sung một phương thức công khai trong giao diện của một lớp, mặc dù chúng ta nên cố gắng tìm hiểu xem liệu việc đặt phương thức đó trong một lớp khác có tốt hơn không. Lý do thứ hai nghiêm trọng hơn một chút, nhưng may mắn thay có một biện pháp khắc phục: Các phương thức riêng tư có thể được chuyển sang một lớp mới. Chúng có thể công khai trên lớp đó và lớp của chúng ta có thể tạo một thực thể bên trong của nó. Điều đó làm cho các phương thức có thể kiểm thử được và giúp thiết kế tốt hơn.
+
+Vâng, tôi biết lời khuyên này nghe có vẻ gay gắt, nhưng nó có những tác động rất tích cực. Sự thực là: Thiết kế tốt là thiết kế có thể kiểm thử được và ngược lại thiết kế không thể kiểm thử được là thiết kế kém. Câu trả lời trong những trường hợp này là bắt đầu sử dụng các kỹ thuật trong _Chương 20, Lớp này quá lớn và tôi không muốn nó lớn hơn nữa_. Tuy nhiên, khi không có nhiều kiểm thử, chúng ta có thể phải làm việc cẩn thận và thực hiện một số việc khác cho đến khi có thể phá vỡ mọi thứ.
+
+Hãy xem cách vượt qua vấn đề này trong một trường hợp thực tế. Đây là một phần khai báo lớp trong C++:
+
+```cpp
+class CCAImage
+{
+private:
+	void setSnapRegion(int x, int y, int dx, int dy);
+	...
+public:
+	void snap();
+	...
+};
+```
+
+Lớp `CCAImage` được sử dụng để chụp ảnh trong hệ thống bảo mật. Nếu bạn thắc mắc tại sao một lớp hình ảnh lại sử dụng để chụp ảnh, thì hãy nhớ rằng đây là code kế thừa. Lớp này có phương thức `snap()` sử dụng API C cấp thấp để điều khiển máy ảnh và "chụp" ảnh, nhưng đây là một loại ảnh rất đặc biệt. Một lệnh gọi `snap()` duy nhất có thể dẫn đến vài hành động khác nhau của máy ảnh, mỗi hành động sẽ chụp một bức ảnh và đặt nó vào một phần khác nhau của bộ đệm hình ảnh được giữ trong lớp. Logic sử dụng để quyết định vị trí đặt của mỗi bức ảnh là linh động. Nó phụ thuộc vào chuyển động của đối tượng, thứ chúng ta đang chụp ảnh. Tùy thuộc vào cách đối tượng di chuyển, phương thức `snap()` có thể thực hiện một số lệnh gọi lặp lại tới `setSnapRegion` để xác định vị trí ảnh hiện tại đặt trong bộ đệm. Không may là API cho máy ảnh đã thay đổi, vì vậy chúng tôi cần thực hiện thay đổi đối với `setSnapRegion`. Chúng ta nên làm gì?
+
+Một điều chúng ta có thể thực hiện là công khai nó. Thật không may, việc này có thể gây ra một số hậu quả rất tiêu cực. Lớp `CCAImage` giữ một số biến xác định vị trí hiện tại của vùng chụp. Nếu ở đâu đó bên ngoài phương thức `snap()` trong code sản phẩm gọi `setSnapRegion`, có thể gây ra sự cố nghiêm trọng với hệ thống theo dõi của máy ảnh.
+
+Vâng, đó là vấn đề. Trước khi chúng ta xem xét một số giải pháp, hãy nói về cách chúng ta vướng vào mớ hỗn độn này. Lý do thực sự khiến chúng ta không thể kiểm thử tốt lớp `CCAImage` là nó có quá nhiều trách nhiệm. Lý tưởng nhất là chia nó thành các lớp nhỏ hơn bằng cách sử dụng các kỹ thuật được đề cập trong Chương 20, nhưng chúng ta phải cân nhắc cẩn thận liệu chúng ta có muốn thực hiện quá nhiều tái cấu trúc ngay bây giờ hay không. Sẽ thật tuyệt nếu có thể thực hiện điều đó, nhưng liệu chúng ta có thể làm được hay không còn phụ thuộc vào thời điểm hiện tại của chu kỳ phát hành, chúng ta có bao nhiêu thời gian và tất cả các rủi ro liên quan.
