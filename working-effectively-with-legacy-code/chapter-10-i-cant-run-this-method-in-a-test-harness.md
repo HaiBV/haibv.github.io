@@ -53,3 +53,52 @@ Lớp `CCAImage` được sử dụng để chụp ảnh trong hệ thống bả
 Một điều chúng ta có thể thực hiện là công khai nó. Thật không may, việc này có thể gây ra một số hậu quả rất tiêu cực. Lớp `CCAImage` giữ một số biến xác định vị trí hiện tại của vùng chụp. Nếu ở đâu đó bên ngoài phương thức `snap()` trong code sản phẩm gọi `setSnapRegion`, có thể gây ra sự cố nghiêm trọng với hệ thống theo dõi của máy ảnh.
 
 Vâng, đó là vấn đề. Trước khi chúng ta xem xét một số giải pháp, hãy nói về cách chúng ta vướng vào mớ hỗn độn này. Lý do thực sự khiến chúng ta không thể kiểm thử tốt lớp `CCAImage` là nó có quá nhiều trách nhiệm. Lý tưởng nhất là chia nó thành các lớp nhỏ hơn bằng cách sử dụng các kỹ thuật được đề cập trong Chương 20, nhưng chúng ta phải cân nhắc cẩn thận liệu chúng ta có muốn thực hiện quá nhiều tái cấu trúc ngay bây giờ hay không. Sẽ thật tuyệt nếu có thể thực hiện điều đó, nhưng liệu chúng ta có thể làm được hay không còn phụ thuộc vào thời điểm hiện tại của chu kỳ phát hành, chúng ta có bao nhiêu thời gian và tất cả các rủi ro liên quan.
+
+Nếu hiện tại chúng ta không đủ khả năng để phân tách trách nhiệm, liệu có thể viết kiểm thử cho phương thức chúng ta đang thay đổi không? May mắn thay, có thể. Đây là cách chúng ta có thể làm điều đó.
+
+Bước đầu tiên là thay đổi `setSnapRegion` từ riêng tư sang được bảo vệ (protected).
+
+```cpp
+class CCAImage
+{
+protected:
+	void setSnapRegion(int x, int y, int dx, int dy);
+	...
+public:
+	void snap();
+	...
+};
+```
+
+Tiếp theo, chúng ta tạo lớp con của `CCAImage` để truy cập vào phương thức đó:
+
+```cpp
+class TestingCCAImage : public CCAImage
+{
+public:
+	void setSnapRegion(int x, int y, int dx, int dy)
+	{
+		// call the setSnapRegion of the superclass
+		CCAImage::setSnapRegion(x, y, dx, dy);
+	}
+};
+```
+
+Trong hầu hết trình biên dịch C++ hiện đại, chúng ta có thể sử dụng khai báo `using` trong lớp con kiểm thử để thực hiện ủy nhiệm tự động:
+
+```cpp
+class TestingCCAImage : public CCAImage
+{
+public:
+	// Expose all CCAImage implementations of setSnapRegion
+	// as part of my public interface. Delegate all calls to CCAImage.
+	using CCAImage::setSnapRegion;
+}
+```
+
+Sau khi hoàn thành, chúng ta có thể gọi `setSnapRegion` trên `CCAImage` trong kiểm thử, mặc dù chỉ là gián tiếp. Nhưng đây có phải là một ý tưởng tốt? Trước đó, chúng ta không muốn công khai phương thức này, nhưng chúng ta đang làm điều gì đó tương tự. Chúng ta đang làm cho nó được bảo vệ và làm cho phương thức này dễ tiếp cận hơn.
+
+Thành thật mà nói, tôi không ngại làm điều này. Đối với tôi, có được các kiểm thử tại chỗ là sự trao đổi công bằng. Đúng, thay đổi này khiến chúng tôi vi phạm tính đóng gói. Khi chúng ta suy luận về cách hoạt động của code, chúng ta phải xem xét rằng `setSnapRegion` có thể được gọi trong các lớp con ngay bây giờ, nhưng điều đó tương đối nhỏ. Có lẽ phần nhỏ đó sẽ đủ để khiến chúng ta thực hiện tái cấu trúc toàn bộ vào lần tới khi chúng ta tiếp tục chạm vào lớp. Chúng ta có thể tách các trách nhiệm trong `CCAImage` thành các lớp khác nhau và làm cho chúng có thể kiểm thử được.
+
+> ##### Subverting Access Protection
+> Trong nhiều ngôn ngữ OO mới hơn C++, chúng ta có thể sử dụng sự phản chiếu và các quyền đặc biệt để truy cập các biến riêng tư trong thời gian chạy. Mặc dù điều đó có thể hữu ích, nhưng nó thực sự là một trò gian lận. Nó rất hữu ích khi phá vỡ các phụ thuộc, nhưng sẽ rất khó chịu nếu để kiểm thử truy cập các biến riêng tư mà ko có sự kiểm soát. Kiểu hoạt động ngầm này thực sự ngăn cản một nhóm nhận thấy code đang trở nên tồi tệ như thế nào. Nghe có vẻ khó khăn, nhưng nỗi đau mà chúng tôi cảm thấy khi làm việc trong một cơ sở code kế thừa có thể là một động lực đáng kinh ngạc để thay đổi. Chúng ta có thể nhắm mắt bỏ qua bây giờ, nhưng trừ khi giải quyết được nguyên nhân gốc rễ, các lớp chịu trách nhiệm quá mức và sự phụ thuộc rối rắm, nếu không chúng ta chỉ đang trì hoãn trả giá. Khi mọi người phát hiện ra code trở nên quá tồi tệ, chi phí để làm cho nó tốt hơn sẽ trở nên quá lố bịch.
