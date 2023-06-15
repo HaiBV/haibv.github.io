@@ -102,3 +102,31 @@ Thành thật mà nói, tôi không ngại làm điều này. Đối với tôi,
 
 > ##### Subverting Access Protection
 > Trong nhiều ngôn ngữ OO mới hơn C++, chúng ta có thể sử dụng sự phản chiếu và các quyền đặc biệt để truy cập các biến riêng tư trong thời gian chạy. Mặc dù điều đó có thể hữu ích, nhưng nó thực sự là một trò gian lận. Nó rất hữu ích khi phá vỡ các phụ thuộc, nhưng sẽ rất khó chịu nếu để kiểm thử truy cập các biến riêng tư mà ko có sự kiểm soát. Kiểu hoạt động ngầm này thực sự ngăn cản một nhóm nhận thấy code đang trở nên tồi tệ như thế nào. Nghe có vẻ khó khăn, nhưng nỗi đau mà chúng tôi cảm thấy khi làm việc trong một cơ sở code kế thừa có thể là một động lực đáng kinh ngạc để thay đổi. Chúng ta có thể nhắm mắt bỏ qua bây giờ, nhưng trừ khi giải quyết được nguyên nhân gốc rễ, các lớp chịu trách nhiệm quá mức và sự phụ thuộc rối rắm, nếu không chúng ta chỉ đang trì hoãn trả giá. Khi mọi người phát hiện ra code trở nên quá tồi tệ, chi phí để làm cho nó tốt hơn sẽ trở nên quá lố bịch.
+
+## Trường hợp tính năng ngôn ngữ “hữu ích”
+
+Đội ngũ thiết kế ngôn ngữ lập trình luôn cố gắng làm cho cuộc sống của chúng ta dễ dàng hơn, nhưng đó là một công việc khó khăn. Họ phải cân bằng giữa việc dễ lập trình với các lo ngại về bảo mật và an toàn. Một số tính năng ban đầu giống như một "chiến thắng" rõ ràng, cân bằng tốt tất cả những mối quan tâm trên, nhưng khi thử kiểm thử code sử dụng chúng, chúng ta sẽ phát hiện ra một thực tế phũ phàng.
+
+Đây là một đoạn code C# nhận một tập hợp các tệp tải lên từ ứng dụng web. Code lặp qua từng luồng và trả về danh sách các luồng được liên kết với các tệp có các đặc điểm cụ thể.
+
+```cpp
+public void IList getKSRStreams(HttpFileCollection files) {
+	ArrayList list = new ArrayList();
+	foreach(string name in files) {
+		HttpPostedFile file = files[name];
+		if (file.FileName.EndsWith(".ksr") || (file.FileName.EndsWith(".txt") && file.ContentLength > MIN_LEN)) {
+			...
+			list.Add(file.InputStream);
+		}
+	}
+	return list;
+}
+```
+
+Chúng ta muốn thực hiện một số thay đổi đối với đoạn code này và có thể tái cấu trúc một chút, nhưng việc viết kiểm thử có vẻ khó khăn. Chúng ta muốn khởi tạo một đối tượng `HttpFileCollection` và điền vào đó các đối tượng `HttpPostedFile`, nhưng điều đó là không thể. Trước hết, lớp `HttpPostedFile` không có hàm khởi tạo công khai. Thứ hai, lớp đó đã được `sealed`. Trong C#, điều này có nghĩa là chúng ta không thể tạo thực thể của lớp `HttpPostedFile` và chúng ta không thể phân lớp nó. `HttpPostedFile` là một phần của thư viện .NET. Trong thời gian chạy, một số lớp khác tạo các thực thể của lớp này, nhưng chúng ta không có quyền truy cập vào nó. Nhìn qua lớp `HttpFileCollection` cho chúng ta thấy rằng nó có cùng một vấn đề: không có hàm khởi tạo công khai và không có cách nào để tạo các lớp dẫn xuất.
+
+Tại sao Bill Gates lại làm như vậy? Rốt cuộc, chúng ta đã cập nhật giấy phép của mình và mọi thứ khác. Tôi không nghĩ anh ấy ghét chúng tôi. Nhưng nếu điều đó đúng, thì có lẽ Scott McNealy cũng vậy, bởi vì vấn đề này không chỉ có ở ngôn ngữ của Microsoft. Sun có một cú pháp song song để ngăn chặn phân lớp. Họ sử dụng từ khóa `final` trong Java dành cho các lớp đặc biệt nhạy cảm liên quan đến bảo mật. Nếu bất kỳ ai cũng có thể tạo một lớp con của `HttpPostedFile` hoặc thậm chí là một lớp như `String`, thì họ có thể viết một số code độc hại và truyền chúng đến nơi sử dụng các lớp đó. Đó là một mối nguy hiểm thực sự, nhưng `sealed` và `final` là những công cụ khá quyết liệt; họ để chúng tôi trong một ràng buộc ở đây.
+
+Chúng ta có thể làm gì để viết kiểm thử cho phương thức `getKSRStreams`? Chúng ta không thể sử dụng _Trích xuất Giao diện (362)_ hoặc _Trích xuất Trình triển khai (356)_; các lớp `HttpPostedFile` và `HttpFileCollection` không thuộc quyền kiểm soát của chúng ta, chúng là các lớp thư viện và chúng ta không thể thay đổi chúng. Kỹ thuật duy nhất mà chúng ta có thể sử dụng ở đây là _Tham số tương thích (326)_.
+
+Trong trường hợp này, chúng ta may mắn vì điều duy nhất chúng ta thực hiện với bộ sưu tập là lặp lại nó. May mắn thay, lớp `HttpFileCollection` được `sealed` mà code của chúng ta sử dụng có một siêu lớp chưa được `sealed` có tên là `NameObjectCollectionBase`. Chúng ta có thể phân lớp nó và truyền một đối tượng của lớp con đó cho phương thức `getKSRStreams`. Việc thay đổi sẽ an toàn và dễ dàng nếu chúng ta _Tận dụng Trình biên dịch (315)_
