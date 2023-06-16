@@ -130,3 +130,50 @@ Tại sao Bill Gates lại làm như vậy? Rốt cuộc, chúng ta đã cập n
 Chúng ta có thể làm gì để viết kiểm thử cho phương thức `getKSRStreams`? Chúng ta không thể sử dụng _Trích xuất Giao diện (362)_ hoặc _Trích xuất Trình triển khai (356)_; các lớp `HttpPostedFile` và `HttpFileCollection` không thuộc quyền kiểm soát của chúng ta, chúng là các lớp thư viện và chúng ta không thể thay đổi chúng. Kỹ thuật duy nhất mà chúng ta có thể sử dụng ở đây là _Tham số tương thích (326)_.
 
 Trong trường hợp này, chúng ta may mắn vì điều duy nhất chúng ta thực hiện với bộ sưu tập là lặp lại nó. May mắn thay, lớp `HttpFileCollection` được `sealed` mà code của chúng ta sử dụng có một siêu lớp chưa được `sealed` có tên là `NameObjectCollectionBase`. Chúng ta có thể phân lớp nó và truyền một đối tượng của lớp con đó cho phương thức `getKSRStreams`. Việc thay đổi sẽ an toàn và dễ dàng nếu chúng ta _Tận dụng Trình biên dịch (315)_
+
+```java
+public void IList getKSRStreams(HttpFileCollection files) {
+	ArrayList list = new ArrayList();
+	foreach(string name in files) {
+		HttpPostedFile file = files[name];
+		if (file.FileName.EndsWith(".ksr") ||
+				(file.FileName.EndsWith(".txt")
+					&& file.ContentLength > MIN_LEN)) {
+			...
+			list.Add(file.InputStream);
+		}
+	}
+	return list;
+}
+```
+
+`OurHttpFileCollection` là lớp con của `NameObjectCollectionBase` và `NameObjectCollectionBase` là một lớp trừu tượng liên kết `string` với các đối tượng.
+
+Điều đó giúp chúng ta vượt qua được một vấn đề. Vấn đề tiếp theo sẽ khó khăn hơn. Chúng ta cần `HttpPostedFiles` để chạy `getKSRStreams` trong kiểm thử, nhưng chúng ta không thể tạo chúng. Chúng ta cần gì ở chúng? Có vẻ như chúng ta cần một lớp cung cấp một số thuộc tính: `FileName` và `ContentLength`. Chúng ta có thể sử dụng _Skin and Wrap API (205)_ để tách biệt giữa chúng và lớp `HttpPostedFile`. Để làm điều đó, chúng ta trích xuất một giao diện `(IHttpPostedFile)` và viết một trình bao bọc `(HttpPostedFileWrapper)`:
+
+```java
+public class HttpPostedFileWrapper : IHttpPostedFile
+{
+	public HttpPostedFileWrapper(HttpPostedFile file) {
+		this.file = file;
+	}
+
+	public int ContentLength {
+		get { return file.ContentLength; }
+	}
+	...
+}
+```
+
+Bởi vì có một giao diện, nên chúng ta cũng có thể tạo một lớp để kiểm thử:
+
+```java
+public class FakeHttpPostedFile : IHttpPostedFile
+{
+	public FakeHttpPostedFile(int length, Stream stream, ...) { ... }
+
+	public int ContentLength {
+		get { return length; }
+	}
+}
+```
