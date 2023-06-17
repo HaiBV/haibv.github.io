@@ -177,3 +177,27 @@ public class FakeHttpPostedFile : IHttpPostedFile
 	}
 }
 ```
+
+Bây giờ, nếu chúng ta _Tận dụng Trình biên dịch (315)_ và thay đổi code sản phẩm, chúng ta có thể sử dụng các đối tượng `HttpPostedFileWrapper` hoặc `FakeHttpPostedFile` thông qua giao diện `IHttpPostedFile` mà không cần biết cái nào đang được sử dụng.
+
+```java
+public IList getKSRStreams(OurHttpFileCollection) {
+	ArrayList list = new ArrayList();
+	foreach(string name in files) {
+		IHttpPostedFile file = files[name];
+		if (file.FileName.EndsWith(".ksr") ||
+				(file.FileName.EndsWith(".txt")) &&
+						file.ContentLength > MAX_LEN)) {
+			...
+			list.Add(file.InputStream);
+		}
+	}
+	return list;
+}
+```
+
+Điều khó chịu duy nhất là phải lặp lại `HttpFileCollection` ban đầu trong code sản phẩm, bọc từng `HttpPostedFile` chứa trong đó, sau đó thêm nó vào một danh sách mới sẽ truyền vào phương thức `getKSRStreams`. Đó là cái giá của sự an toàn.
+
+Nghiêm túc mà nói, thật dễ dàng để tin rằng `sealed` và `final` là một sai lầm ngớ ngẩn, rằng chúng không bao giờ nên được thêm vào ngôn ngữ lập trình. Nhưng lỗi thực sự nằm ở chúng ta. Khi phụ thuộc trực tiếp vào các thư viện nằm ngoài tầm kiểm soát của mình, chúng ta chỉ chuốc lấy rắc rối.
+
+Một ngày nào đó, các ngôn ngữ lập trình chính thống có thể cung cấp quyền truy cập đặc biệt cho các kiểm thử, nhưng trong thời gian chờ đợi, sẽ tốt hơn nếu sử dụng các cơ chế như `sealed` và `final` một cách tiết kiệm. Và khi cần sử dụng các lớp thư viện sử dụng chúng, bạn nên tách riêng chúng đằng sau một số trình bao bọc để có một số khoảng trống khi thực hiện các thay đổi của mình. Xem _Chương 14 Sự phụ thuộc vào thư viện đang giết chết tôi._ và _Chương 15 Toàn bộ ứng dụng của tôi chỉ gồm các lệnh gọi API_, để thảo luận thêm về các kỹ thuật giải quyết vấn đề này.
