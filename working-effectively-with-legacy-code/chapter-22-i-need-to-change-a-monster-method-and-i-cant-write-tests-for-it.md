@@ -11,3 +11,61 @@ Phương thức lớn là một nỗi đau, nhưng phương thức "quái vật"
 Một lần, tôi đang trên đường tham dự một cuộc họp, và khi đang đi bộ về phòng khách sạn, một người bạn của tôi nói: "Này, anh phải xem cái này." Anh ấy đi vào phòng, lôi máy tính xách tay ra và chỉ cho tôi một phương thức dài hơn một nghìn dòng. Bạn tôi biết tôi đang nghiên cứu về tái cấu trúc và nói, "Làm thế quái nào anh có thể tái cấu trúc thứ này?" Chúng tôi bắt đầu suy nghĩ về nó. Chúng tôi biết rằng kiểm thử là chìa khóa, nhưng bạn sẽ phải bắt đầu từ đâu với một phương thức lớn như vậy?
 
 Chương này phác thảo những gì tôi đã học được kể từ đó.
+
+## Các loại "quái vật"
+Phương thức "quái vật" có nhiều loại. Không nhất thiết phải là các loại khác biệt rõ rệt. Các phương thức này giống như thú mỏ vịt — là sự kết hợp của nhiều loại.
+
+### Phương thức gạch đầu dòng
+Phương thức gạch đầu dòng là phương thức gần như không có dấu thụt đầu dòng. Nó chỉ là một chuỗi các đoạn code khiến bạn nghĩ về một danh sách có dấu đầu dòng. Có một số đoạn code trong các khối có thể được thụt vào, nhưng bản thân phương thức không có nhiều đoạn thụt đầu dòng. Khi bạn nhìn vào một phương thức gạch đầu dòng và nheo mắt lại, bạn sẽ thấy giống như Ví dụ 22.1.
+
+Đây là dạng chung của phương thức gạch đầu dòng. Nếu bạn may mắn, ai đó sẽ đặt thêm dòng trống giữa các phần hoặc nhận xét để cho bạn thấy rằng họ làm điều gì đó khác biệt ở đây. Trong một thế giới lý tưởng, bạn có thể chỉ cần trích xuất từng phần thành cách phương thức khác nhau, nhưng thường thì chúng không dễ dàng tái cấu trúc theo cách đó. Khoảng cách giữa các phần cũng dễ gây nhầm lẫn vì các biến tạm thời thường được khai báo ở phần này và được sử dụng trong phần tiếp theo. Chia nhỏ phương thức thường không dễ dàng như chỉ cần sao chép và dán code. Mặc dù vậy, các phương thức gạch đầu dòng ít đáng sợ hơn một chút so với các phương thức khác, chủ yếu là do việc không có dấu thụt đầu dòng cho phép chúng ta giữ vững phương hướng của mình.
+
+```java
+void Reservation::extend(int additionalDays)
+{
+	int status = RIXInterface::checkAvailable(type, location, startingDate);
+
+	int identCookie = -1;
+	switch(status) {
+		case NOT_AVAILABLE_UPGRADE_LUXURY:
+			identCookie = RIXInterface::holdReservation(Luxury,location,startingDate,
+			additionalDays +dditionalDays);
+			break;
+		case NOT_AVAILABLE_UPGRADE_SUV:
+		{
+			int theDays = additionalDays + additionalDays;
+			if (RIXInterface::getOpCode(customerID) != 0)
+			theDays++;
+			identCookie = RIXInterface::holdReservation(SUV,location,startingDate, theDays);
+		}
+		break;
+		case NOT_AVAILABLE_UPGRADE_VAN:
+			identCookie = RIXInterface::holdReservation(Van,
+			location,startingDate, additionalDays + additionalDays);
+			break;
+		case AVAILABLE:
+		default:
+			RIXInterface::holdReservation(type,location,startingDate);
+			break;
+	}
+
+	if (identCookie != -1 && state == Initial) {
+		RIXInterface::waitlistReservation(type,location,startingDate);
+	}
+
+	Customer c = res_db.getCustomer(customerID);
+
+	if (c.vipProgramStatus == VIP_DIAMOND) {
+		upgradeQuery = true;
+	}
+
+	if (!upgradeQuery)
+		RIXInterface::extend(lastCookie, days + additionalDays);
+	else {
+		RIXInterface::waitlistReservation(type,location,startingDate);
+		RIXInterface::extend(lastCookie, days + additionalDays +1);
+	}
+	...
+}
+```
+Ví dụ 22.1 Phương thức gạch đầu dòng
