@@ -69,3 +69,111 @@ void Reservation::extend(int additionalDays)
 }
 ```
 Ví dụ 22.1 Phương thức gạch đầu dòng
+
+### Phương thức hỗn loạn
+
+Một phương thức hỗn loạn là một phương thức chỉ có một đoạn thụt đầu dòng lớn duy nhất. Trường hợp đơn giản nhất là một phương thức có một câu lệnh điều kiện lớn, như trong ví dụ 22.2.
+
+```java
+Reservation::Reservation(VehicleType type, int customerID, long startingDate, int days, XLocation l)
+: type(type), customerID(customerID), startingDate(startingDate), days(days), lastCookie(-1),
+state(Initial), tempTotal(0)
+{
+	location = l;
+	upgradeQuery = false;
+
+	if (!RIXInterface::available()) {
+		RIXInterface::doEvents(100);
+		PostLogMessage(0, 0, "delay on reservation creation");
+		int holdCookie = -1;
+		switch(status) {
+			case NOT_AVAILABLE_UPGRADE_LUXURY:
+				holdCookie = RIXInterface::holdReservation(Luxury,l,startingDate);
+				if (holdCookie != -1) {
+					holdCookie |= 9;
+				}
+				break;
+			case NOT_AVAILABLE_UPGRADE_SUV:
+				holdCookie = RIXInterface::holdReservation(SUV,l,startingDate);
+				break;
+			case NOT_AVAILABLE_UPGRADE_VAN:
+				holdCookie = RIXInterface::holdReservation(Van,l,startingDate);
+				break;
+			case AVAILABLE:
+			default:
+				RIXInterface::holdReservation;
+				state = Held;
+				break;
+		}
+	}
+	...
+}
+```
+Ví dụ 22.2 Phương thức hỗn loạn đơn giản
+
+Nhưng kiểu hỗn loạn trên gần giống như phương thức gạch đầu dòng. Những kiểu hỗn loạn đòi hỏi yêu cầu cao là những phương thức có dạng như trong Ví dụ 22.3.
+
+Cách tốt nhất để biết liệu phương thức có hỗn loạn hay không là cố gắng sắp xếp các khối theo một phương thức dài. Nếu bạn bắt đầu cảm thấy chóng mặt, bạn đã gặp phải một phương thức hỗn loạn.
+
+```java
+Reservation::Reservation(VehicleType type, int customerID, long startingDate, int days, XLocation l)
+: type(type), customerID(customerID), startingDate(startingDate), days(days), lastCookie(-1),
+state(Initial), tempTotal(0)
+{
+	location = l;
+	upgradeQuery = false;
+
+	while(!RIXInterface::available()) {
+		RIXInterface::doEvents(100);
+		PostLogMessage(0, 0, "delay on reservation creation");
+		int holdCookie = -1;
+		switch(status) {
+			case NOT_AVAILABLE_UPGRADE_LUXURY:
+			holdCookie = RIXInterface::holdReservation(Luxury,l,startingDate);
+			if (holdCookie != -1) {
+				if (l == GIG && customerID == 45) {
+					// Special #1222
+					while (RIXInterface::notBusy()) {
+						int code =
+						RIXInterface::getOpCode(customerID);
+						if (code == 1 || customerID > 0)) {
+							PostLogMessage(1, 0, "QEX PID");
+							for (int n = 0; n < 12; n++) {
+								int total = 2000;
+								if (state == Initial || state == Held)
+								{
+									total += getTotalByLocation(location);
+									tempTotal = total;
+									if (location == GIG && days > 2)
+									{
+										if (state == Held)
+											total += 30;
+									}
+								}
+								RIXInterface::serveIDCode(n, total);
+							}
+						} else {
+							RIXInterface::serveCode(customerID);
+						}
+					}
+				}
+			}
+			break;
+				case NOT_AVAILABLE_UPGRADE_SUV:
+				holdCookie =
+				RIXInterface::holdReservation(SUV,l,startingDate);
+				break;
+			case NOT_AVAILABLE_UPGRADE_VAN:
+				holdCookie =
+				RIXInterface::holdReservation(Van,l,startingDate);
+				break;
+			case AVAILABLE:
+			default:
+				RIXInterface::holdReservation(type,l,startingDate);
+				state = Held;
+				break;
+		}
+	}
+	...
+}
+```
