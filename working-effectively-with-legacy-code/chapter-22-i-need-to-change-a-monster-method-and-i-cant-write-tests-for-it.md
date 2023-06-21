@@ -177,3 +177,19 @@ state(Initial), tempTotal(0)
 	...
 }
 ```
+
+Hầu hết các phương thức không hoàn toàn là gạch đầu dòng hoặc hỗn loạn, mà là một cái gì đó ở giữa. Nhiều phương thức hỗn loạn có các phần dấu đầu dòng dài ẩn sâu bên trong chúng, nhưng vì chúng được lồng vào nhau nên khó có thể viết kiểm thử xác định hành vi của chúng. Hỗn loạn đưa ra những thách thức riêng biệt.
+
+Khi tái cấu trúc các phương thức dài, việc có hay không có công cụ tái cấu trúc sẽ tạo nên sự khác biệt. Gần như mọi công cụ tái cấu trúc đều hỗ trợ tái cấu trúc trích xuất phương thức vì có một lượng đòn bẩy đáng kinh ngạc trong sự hỗ trợ đó. Nếu một công cụ có thể trích xuất các phương thức cho bạn một cách an toàn, thì bạn không cần kiểm thử để xác minh việc trích xuất của mình. Công cụ này thực hiện phân tích cho bạn và tất cả những gì còn lại là học cách sử dụng các trích xuất để đưa một phương thức vào dạng phù hợp cho công việc tiếp theo.
+
+Khi bạn không có hỗ trợ trích xuất phương thức, việc dọn dẹp các phương thức "quái vật" sẽ khó khăn hơn. Bạn thường phải thận trọng hơn vì công việc của bạn bị giới hạn bởi các kiểm thử mà bạn có thể đạt được.
+
+## Xử lý Phương thức Quái vật với Hỗ trợ Tái cấu trúc Tự động
+
+Khi bạn có một công cụ trích xuất các phương thức, bạn phải hiểu rõ những gì nó có thể và không thể. Hầu hết các công cụ tái cấu trúc ngày nay đều thực hiện các phương thức trích xuất đơn giản và một loạt các phép tái cấu trúc khác, nhưng chúng không xử lý tất cả các phép tái cấu trúc phụ trợ mà mọi người thường muốn thực hiện khi chia nhỏ các phương thức lớn. Chẳng hạn, chúng ta thường muốn sắp xếp lại các câu lệnh để nhóm chúng lại khi trích xuất. Không có công cụ hiện tại nào thực hiện phân tích cần thiết để xem liệu việc sắp xếp lại có thể được thực hiện một cách an toàn hay không. Đó là một nỗi hổ thẹn vì nó có thể là một nguồn lỗi.
+
+Để sử dụng các công cụ tái cấu trúc một cách hiệu quả với các phương thức lớn, bạn nên thực hiện một loạt thay đổi chỉ với công cụ đó và tránh tất cả các chỉnh sửa khác đối với nguồn. Điều này có thể giống như tự hạn chế công cụ tái cấu trúc, nhưng nó mang lại cho bạn sự tách biệt rõ ràng giữa những thay đổi an toàn và những thay đổi không an toàn. Khi bạn tái cấu trúc như vậy, bạn nên tránh ngay cả những điều đơn giản, chẳng hạn như sắp xếp lại các câu lệnh và tách rời các biểu thức. Nếu công cụ của bạn hỗ trợ đổi tên biến, điều đó thật tuyệt, nhưng nếu không, hãy tạm dừng việc đó lại sau.
+
+> Khi thực hiện tái cấu trúc tự động mà không có kiểm thử, hãy sử dụng riêng công cụ này. Sau một loạt các lần tái cấu trúc tự động, bạn thường có thể có được một số kiểm thử tại chỗ mà bạn có thể sử dụng để xác minh bất kỳ chỉnh sửa thủ công nào mà bạn thực hiện.
+
+
