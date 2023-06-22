@@ -837,4 +837,56 @@ public class IndustrialFacility extends Facility
 Chúng ta muốn khởi tạo lớp này trong kiểm thử khai thác, nhưng có một số vấn đề. Một là chúng ta lại truy cập vào một `singleton`, `PermitRepository`. Chúng ta có thể vượt qua vấn đề đó với các kỹ thuật đã đề cập trong phần trước "Trường hợp phụ thuộc toàn cục khó chịu". Nhưng trước khi giải quyết vấn đề đó, chúng ta có một vấn đề khác. Thật khó để tạo giấy phép gốc cần để truyền vào hàm khởi tạo. `OriginationPermits` có các phụ thuộc tồi tệ. Ý nghĩ ngay lập tức mà tôi có là "Ồ, mình có thể sử dụng _Trích xuất Giao diện_ với lớp `OriginationPermit` để vượt qua sự phụ thuộc này," nhưng điều đó không dễ dàng như vậy. Hình 9.4 cho thấy cấu trúc của hệ thống phân cấp `Permit`.
 
 ![9.4](images/9/9-4.png)
-Hình 9.3 Phân cấp của `Permit`
+Hình 9.4 Phân cấp của `Permit`
+
+Hàm khởi tạo của `IndustrialFacility` nhận `OriginationPermit` làm tham số và truyền vào `PermitRepository` để lấy được `permit` liên quan; chúng ta sử dụng một phương thức trên `PermitRepository` tiếp nhận `OriginationPermit` và trả về `Permit`. Nếu kho lưu trữ tìm thấy `permit` liên quan, nó sẽ lưu chúng vào trường `permit`. Nếu không, nó sẽ lưu `OriginationPermit` vào trường `permit`. Chúng ta có thể tạo một giao diện cho `OriginationPermit`, nhưng điều đó sẽ không giúp ích gì cả. Chúng ta sẽ phải gán một `IOriginationPermit` cho trường `Permit` và điều đó sẽ không hoạt động. Trong Java, các giao diện không thể kế thừa từ các lớp. Giải pháp rõ ràng nhất là tạo tất cả các giao diện và biến trường `Permit` thành trường `IPermit`. Hình 9.5 cho thấy điều này sẽ trông như thế nào.
+
+Thật đáng sợ. Đó là một khối lượng công việc lố bịch và tôi đặc biệt không thích kết cục của các đoạn code. Các giao diện rất hữu dụng để phá vỡ sự phụ thuộc, nhưng khi liên hệ giữa lớp và giao diện đạt đến mức gần như một đối một, thì sẽ làm thiết kế trở nên lộn xộn. Đừng hiểu sai ý tôi: Nếu không còn lựa chọn nào khác, sẽ tốt hơn nếu tiến tới thiết kế này, nhưng nếu có những khả năng khác, chúng ta nên khám phá chúng. May mắn thay, chúng ta có.
+
+![9.5](images/9/9-5.png)
+Hình 9.5 Phân cấp của `Permit` với các lớp giao diện
+
+_Trích xuất Giao diện (362)_ chỉ là một cách để phá vỡ sự phụ thuộc vào một tham số. Đôi khi sẽ tốt hơn nếu tự hỏi tại sao sự phụ thuộc là xấu. Đôi khi sáng tạo lại là một nỗi đau. Vào những thời điểm khác, tham số lại có tác dụng phụ xấu. Có thể nó giao tiếp với hệ thống tệp hoặc cơ sở dữ liệu. Vào những thời điểm khác nữa, có thể mất quá nhiều thời gian để code của nó chạy. Khi chúng ta sử dụng _Trích xuất Giao diện (362)_, chúng ta có thể vượt qua tất cả các vấn đề này, nhưng chúng ta thực hiện điều đó bằng cách cắt đứt kết nối với một lớp một cách thô bạo. Nếu chỉ có các phần của một lớp là vấn đề, chúng ta có thể thực hiện một cách tiếp cận khác và chỉ cắt đứt kết nối với chúng.
+
+Hãy xem xét kỹ hơn về lớp `OriginationPermit`. Chúng ta không muốn sử dụng nó trong kiểm thử vì nó âm thầm truy cập cơ sở dữ liệu khi chúng ta yêu cầu nó tự xác thực:
+
+```java
+public class OriginationPermit extends FacilityPermit
+{
+	...
+	public void validate() {
+		// form connection to database
+		...
+		// query for validation information
+		...
+		// set the validation flag
+		...
+		// close database
+		...
+	}
+}
+```
+
+Chúng ta không muốn làm điều này trong một kiểm thử: Chúng ta phải tạo một số bản ghi giả trong cơ sở dữ liệu và khiến DBA trở nên khó chịu. Chúng ta sẽ phải đưa anh ấy đi ăn trưa khi bị phát hiện ra, và thậm chí sau đó anh ấy vẫn khó chịu. Công việc của anh ấy đủ vất vả rồi.
+
+Một chiến lược khác có thể sử dụng là _Lớp con và Phương thức ghi đè (401)_. Chúng ta có thể tạo một lớp có tên `FakeOriginationPermit` cung cấp các phương thức giúp dễ dàng thay đổi cờ xác thực. Sau đó, trong các lớp con, chúng tôi có thể ghi đè phương thức xác thực và đặt cờ xác thực theo bất kỳ cách nào mà chúng tôi cần trong khi kiểm thử lớp `IndustrialFacility`. Đây là một kiểm tra đầu tiên tốt:
+
+```java
+public void testHasPermits() {
+	class AlwaysValidPermit extends FakeOriginationPermit
+	{
+		public void validate() {
+			// set the validation flag
+			becomeValid();
+		}
+	};
+
+	Facility facility = new IndustrialFacility(Facility.HT_1, "b", new AlwaysValidPermit());
+
+	assertTrue(facility.hasPermits());
+}
+```
+
+Trong nhiều ngôn ngữ, chúng ta có thể tạo các lớp "nhanh chóng" như thế này trong các phương thức. Mặc dù tôi không thích làm điều đó thường xuyên trong code sản phẩm, nhưng nó rất thuận tiện khi đang kiểm thử. Chúng ta có thể thực hiện các trường hợp đặc biệt rất dễ dàng.
+
+_Lớp con và Phương thức ghi đè (401)_ giúp chúng tôi phá vỡ sự phụ thuộc vào các tham số, nhưng đôi khi việc tính toán các phương thức trong một lớp không phải là lý tưởng cho nó. Chúng ta thật may mắn khi các phần phụ thuộc không được ưa thích đã bị tách biệt trong phương thức xác thực đó. Trong trường hợp xấu hơn, khi trộn lẫn với logic mà chúng ta cần và chúng ta phải trích xuất các phương thức trước. Nếu chúng ta có một công cụ tái cấu trúc, điều đó có thể dễ dàng. Nếu không, một số kỹ thuật trong _Chương 22, Tôi Cần Thay đổi một Phương thức "Quái vật" và Tôi Không thể Viết Kiểm thử cho Nó_, có thể hữu ích.
