@@ -192,4 +192,80 @@ Khi bạn có một công cụ trích xuất các phương thức, bạn phải 
 
 > Khi thực hiện tái cấu trúc tự động mà không có kiểm thử, hãy sử dụng riêng công cụ này. Sau một loạt các lần tái cấu trúc tự động, bạn thường có thể có được một số kiểm thử tại chỗ mà bạn có thể sử dụng để xác minh bất kỳ chỉnh sửa thủ công nào mà bạn thực hiện.
 
+Khi bạn thực hiện trích xuất, bạn cần thực hiện được những mục tiêu chính sau:
+1. Tách logic ra khỏi những phụ thuộc khó xử lý
+2. Giới thiệu các liên kết giúp dễ dàng viết kiểm thử tại chỗ để tái cấu trúc nhiều hơn
+
+Đây là một ví dụ:
+
+```java
+class CommoditySelectionPanel
+{
+	...
+	public void update() {
+		if (commodities.size() > 0 && commodities.GetSource().equals("local")) {
+			listbox.clear();
+			for (Iterator it = commodities.iterator(); it.hasNext(); ) {
+				Commodity current = (Commodity)it.next();
+				if (commodity.isTwilight() && !commodity.match(broker))
+					listbox.add(commodity.getView());
+			}
+		}
+		...
+	}
+	...
+}
+```
+
+Trong phương thức này, rất nhiều thứ có thể cải thiện được. Một trong những điều kỳ lạ là kiểu công việc lọc này lại diễn ra trong một lớp bảng điều khiển, trong khi lý tưởng nhất là chúng chỉ chịu trách nhiệm hiển thị. Gỡ rối code này chắc chắn là khó khăn. Nếu muốn viết kiểm thử cho phương thức hiện tại, chúng ta có thể viết theo danh sách trạng thái, nhưng điều đó sẽ không giúp được nhiều trong việc làm cho thiết kế tốt hơn.
+
+Với sự hỗ trợ tái cấu trúc, chúng ta có thể bắt đầu đặt tên cho các phần cấp cao của phương thức và phá vỡ các phụ thuộc cùng một lúc. Đây là code sẽ trông như thế này sau một loạt các lần trích xuất.
+
+```java
+class CommoditySelectionPanel
+{
+	...
+	public void update() {
+		if (commoditiesAreReadyForUpdate()) {
+			clearDisplay();
+			updateCommodities();
+		}
+		...
+	}
+
+	private boolean commoditiesAreReadyForUpdate() {
+		return commodities.size() > 0 && commodities.GetSource().equals("local");
+	}
+
+	private void clearDisplay() {
+		listbox.clear();
+	}
+
+	private void updateCommodities() {
+		for (Iterator it = commodities.iterator(); it.hasNext();) {
+			Commodity current = (Commodity)it.next();
+			if (singleBrokerCommodity(commodity)) {
+				displayCommodity(current.getView());
+			}
+		}
+	}
+
+	private boolean singleBrokerCommodity(Commodity commodity) {
+		return commodity.isTwilight() && !commodity.match(broker);
+	}
+
+	private void displayCommodity(CommodityView view) {
+		listbox.add(view);
+	}
+	...
+}
+```
+
+Thành thật mà nói, bản cập nhật trông không khác lắm về cấu trúc; nó vẫn chỉ là một câu điều kiện `if` với một số công việc bên trong. Nhưng giờ công việc đã được giao cho các phương thức. Phương thức `update` trông giống như một bộ khung để code thực thi. Còn cách đặt tên thì sao? Chúng có vẻ hơi giả tạo, phải không? Nhưng đó là một điểm khởi đầu tốt. Ít nhất, chúng cho phép code giao tiếp ở cấp độ cao hơn và chúng giới thiệu các liên kết cho phép chúng ta phá vỡ các phụ thuộc. Chúng ta có thể _Chia class con và Ghi đè Phương thức (401)_ để hiểu được `displayCommodity` và `clearDisplay`. Sau đó, có thể xem xét khả năng tạo một lớp hiển thị và di chuyển các phương thức hiển thị vào trong nó, sử dụng các kiểm thử đó làm đòn bẩy. Tuy nhiên, trong trường hợp này, sẽ phù hợp hơn nếu chúng ta có thể chuyển `update` và `updateCommodities` sang một lớp khác và để `ClearDisplay` và `displayCommodity` ở đây để có thể tận dụng thực tế rằng lớp này là một bảng điều khiển, một màn hình. Chúng ta có thể đổi tên các phương thức sau này khi chúng ổn định. Sau khi tái cấu trúc bổ sung, thiết kế của chúng ta có thể trông giống như Hình 22.4.
+
+![22.4](images/22/22-4.png)
+Hình 22.4 Logig trích xuất lớp `CommoditySelectionPanel`.
+
+Điều quan trọng cần nhớ khi sử dụng một công cụ tự động để trích xuất các phương thức là bạn có thể thực hiện nhiều công việc thô một cách an toàn và xử lý các chi tiết sau khi bạn thực hiện các thử nghiệm khác. Đừng quá lo lắng về các phương thức có vẻ như chúng không phù hợp với lớp. Thường thì họ chỉ ra nhu cầu trích xuất một lớp mới sau này. Xem _Chương 20 Lớp này quá lớn và tôi không muốn nó lớn hơn nữa_, để biết thêm ý tưởng về cách thực hiện điều này.
+
 
