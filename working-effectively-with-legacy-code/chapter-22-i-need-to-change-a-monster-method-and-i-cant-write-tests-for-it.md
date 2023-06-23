@@ -184,7 +184,7 @@ Khi tái cấu trúc các phương thức dài, việc có hay không có công 
 
 Khi bạn không có hỗ trợ trích xuất phương thức, việc dọn dẹp các phương thức "quái vật" sẽ khó khăn hơn. Bạn thường phải thận trọng hơn vì công việc của bạn bị giới hạn bởi các kiểm thử mà bạn có thể đạt được.
 
-## Xử lý Phương thức Quái vật với Hỗ trợ Tái cấu trúc Tự động
+## Xử lý Phương thức Quái vật với Công cụ Hỗ trợ Tái cấu trúc Tự động
 
 Khi bạn có một công cụ trích xuất các phương thức, bạn phải hiểu rõ những gì nó có thể và không thể. Hầu hết các công cụ tái cấu trúc ngày nay đều thực hiện các phương thức trích xuất đơn giản và một loạt các phép tái cấu trúc khác, nhưng chúng không xử lý tất cả các phép tái cấu trúc phụ trợ mà mọi người thường muốn thực hiện khi chia nhỏ các phương thức lớn. Chẳng hạn, chúng ta thường muốn sắp xếp lại các câu lệnh để nhóm chúng lại khi trích xuất. Không có công cụ hiện tại nào thực hiện phân tích cần thiết để xem liệu việc sắp xếp lại có thể được thực hiện một cách an toàn hay không. Đó là một nỗi hổ thẹn vì nó có thể là một nguồn lỗi.
 
@@ -268,4 +268,18 @@ Hình 22.4 Logig trích xuất lớp `CommoditySelectionPanel`.
 
 Điều quan trọng cần nhớ khi sử dụng một công cụ tự động để trích xuất các phương thức là bạn có thể thực hiện nhiều công việc thô một cách an toàn và xử lý các chi tiết sau khi bạn thực hiện các thử nghiệm khác. Đừng quá lo lắng về các phương thức có vẻ như chúng không phù hợp với lớp. Thường thì họ chỉ ra nhu cầu trích xuất một lớp mới sau này. Xem _Chương 20 Lớp này quá lớn và tôi không muốn nó lớn hơn nữa_, để biết thêm ý tưởng về cách thực hiện điều này.
 
+## Thử thách tái cấu trúc thủ công
 
+Khi bạn có công cụ hỗ trợ tái cấu trúc tự động, bạn không cần phải làm gì đặc biệt để bắt đầu chia nhỏ các phương thức lớn. Các công cụ tái cấu trúc tốt sẽ kiểm tra từng lần tái cấu trúc mà bạn thực hiện và không cho phép việc tái cấu trúc không an toàn. Nhưng khi bạn không có công cụ tái cấu trúc, tính chính xác là thứ bạn phải nỗ lực duy trì và các kiểm thử là công cụ mạnh nhất của bạn.
+
+Các phương thức "quái vật" làm cho việc kiểm thử, tái cấu trúc và bổ sung tính năng trở nên rất khó khăn. Nếu bạn có thể tạo các thực thể của lớp chứa phương thức trong kiểm thử khai thác, bạn có thể cố gắng tạo ra một số trường hợp kiểm thử sẽ mang lại cho bạn sự tự tin khi thực hiện chia nhỏ phương thức. Nếu logic trong phương thức đặc biệt phức tạp, đây có thể là một cơn ác mộng. May mắn thay, trong những trường hợp đó, chúng ta có thể sử dụng một số kỹ thuật. Tuy nhiên, trước khi xem xét chúng, hãy xem điều gì có thể đi sai hướng khi chúng ta trích xuất các phương thức.
+
+Xem xét danh sách ngắn gọn dưới đây. Nó không chứa mọi lỗi có thể xảy ra, nhưng nó có những lỗi phổ biến nhất:
+
+1. Chúng ta có thể quên truyền một biến vào phương thức được trích xuất. Thông thường, trình biên dịch sẽ cho chúng ta biết về biến bị thiếu (trừ khi nó có cùng tên với một biến thể hiện), nhưng chúng ta có thể nghĩ rằng nó cần phải là một biến cục bộ và khai báo nó trong phương thức mới.
+   
+2. Chúng ta có thể đặt tên cho phương thức được trích xuất để ẩn hoặc ghi đè phương thức có cùng tên trong lớp cơ sở.
+   
+3. Chúng ta có thể mắc lỗi khi truyền tham số hoặc gán giá trị trả về. Chúng ta có thể làm điều gì đó thực sự ngớ ngẩn, chẳng hạn như trả về giá trị sai. Tinh vi hơn, chúng ta có thể trả lại hoặc chấp nhận các kiểu biến sai trong phương thức mới.
+   
+Khá nhiều điều có thể gây ra sai sót. Các kỹ thuật trong phần này có thể giúp việc trích xuất ít rủi ro hơn khi chúng ta không có sẵn các kiểm thử.
