@@ -277,9 +277,73 @@ Các phương thức "quái vật" làm cho việc kiểm thử, tái cấu trú
 Xem xét danh sách ngắn gọn dưới đây. Nó không chứa mọi lỗi có thể xảy ra, nhưng nó có những lỗi phổ biến nhất:
 
 1. Chúng ta có thể quên truyền một biến vào phương thức được trích xuất. Thông thường, trình biên dịch sẽ cho chúng ta biết về biến bị thiếu (trừ khi nó có cùng tên với một biến thể hiện), nhưng chúng ta có thể nghĩ rằng nó cần phải là một biến cục bộ và khai báo nó trong phương thức mới.
-   
+
 2. Chúng ta có thể đặt tên cho phương thức được trích xuất để ẩn hoặc ghi đè phương thức có cùng tên trong lớp cơ sở.
-   
+
 3. Chúng ta có thể mắc lỗi khi truyền tham số hoặc gán giá trị trả về. Chúng ta có thể làm điều gì đó thực sự ngớ ngẩn, chẳng hạn như trả về giá trị sai. Tinh vi hơn, chúng ta có thể trả lại hoặc chấp nhận các kiểu biến sai trong phương thức mới.
-   
+
 Khá nhiều điều có thể gây ra sai sót. Các kỹ thuật trong phần này có thể giúp việc trích xuất ít rủi ro hơn khi chúng ta không có sẵn các kiểm thử.
+
+## Sử dụng Biến số cảm biến
+
+Chúng ta không muốn thêm các tính năng vào code sản phẩm khi thực hiện tái cấu trúc, nhưng không có nghĩa là không thể viết thêm bất kỳ code nào. Đôi khi, sẽ rất hữu ích nếu thêm biến vào một lớp và sử dụng nó để cảm nhận các điều kiện trong phương thức đang được tái cấu trúc. Khi thực hiện xong việc tái cấu trúc, chúng ta có thể loại bỏ biến đó và code sẽ lại ở trạng thái sạch. Kỹ thuật này được gọi là _Sử dụng biến số cảm biến_. Dưới đây là một ví dụ. Chúng ta bắt đầu với một phương thức trong lớp Java có tên là `DOMBuilder`. Chúng ta muốn dọn dẹp nó, nhưng thật không may là chúng ta không có công cụ tái cấu trúc:
+
+```java
+public class DOMBuilder
+{
+	...
+	void processNode(XDOMNSnippet root, List childNodes)
+	{
+		if (root != null) {
+			if (childNodes != null)
+				root.addNode(new XDOMNSnippet(childNodes));
+			root.addChild(XDOMNSnippet.NullSnippet);
+		}
+		List paraList = new ArrayList();
+		XDOMNSnippet snippet = new XDOMNReSnippet();
+		snippet.setSource(m_state);
+		for (Iterator it = childNodes.iterator(); it.hasNext();) {
+			XDOMNNode node = (XDOMNNode)it.next();
+			if (node.type() == TF_G || node.type() == TF_H || (node.type() == TF_GLOT && node.isChild())) {
+				paraList.addNode(node);
+			}
+			...
+		}
+		...
+	}
+	...
+}
+```
+
+Trong ví dụ trên, có vẻ như rất nhiều công việc trong phương thức thực thi bởi `XDOMNSnippet`. Điều đó có nghĩa là chúng ta có thể viết bất kỳ kiểm thử nào chúng ta cần bằng cách chuyển các giá trị khác nhau làm đối số cho phương thức này. Tuy nhiên, trên thực tế, rất nhiều công việc xảy ra một cách gián tiếp, chúng chỉ có thể được cảm nhận theo một cách rất gián tiếp. Trong tình huống như thế này, chúng ta có thể sử dụng các biến số cảm biến để hỗ trợ công việc của mình; chúng ta có thể sử dụng một biến thực thể để thấy rằng một nút được thêm vào `paraList` khi nó có loại nút phù hợp
+
+```java
+public class DOMBuilder
+{
+	public boolean nodeAdded = false;
+	...
+	void processNode(XDOMNSnippet root, List childNodes)
+	{
+	if (root != null) {
+		if (childNodes != null)
+			root.addNode(new XDOMNSnippet(childNodes));
+		root.addChild(XDOMNSnippet.NullSnippet);
+	}
+	List paraList = new ArrayList();
+	XDOMNSnippet snippet = new XDOMNReSnippet();
+	snippet.setSource(m_state);
+	for (Iterator it = childNodes.iterator(); it.hasNext(); ) {
+		XDOMNNode node = (XDOMNNode)it.next();
+		if (node.type() == TF_G || node.type() == TF_H || (node.type() == TF_GLOT && node.isChild())) {
+			paraList.add(node);
+			nodeAdded = true;
+			}
+			...
+		}
+		...
+	}
+	...
+}
+```
+
+Khi có biến đó, chúng ta vẫn thiết kế đầu vào để tạo ra một trường hợp bao gồm điều kiện đó. Khi làm như vậy, chúng ta có thể trích xuất đoạn logic đó và các kiểm thử của vẫn sẽ vượt qua.
