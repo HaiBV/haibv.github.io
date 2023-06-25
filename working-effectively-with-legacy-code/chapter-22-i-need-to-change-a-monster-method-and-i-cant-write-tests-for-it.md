@@ -347,3 +347,66 @@ public class DOMBuilder
 ```
 
 Khi có biến đó, chúng ta vẫn thiết kế đầu vào để tạo ra một trường hợp bao gồm điều kiện đó. Khi làm như vậy, chúng ta có thể trích xuất đoạn logic đó và các kiểm thử của vẫn sẽ vượt qua.
+
+Đây là một kiểm thử cho thấy rằng chúng ta thêm một nút khi loại nút là `TF_G`:
+
+```java
+void testAddNodeOnBasicChild()
+{
+	DOMBuilder builder = new DomBuilder();
+	List children = new ArrayList();
+	children.add(new XDOMNNode(XDOMNNode.TF_G));
+	Builder.processNode(new XDOMNSnippet(), children);
+
+	assertTrue(builder.nodeAdded);
+}
+```
+
+Đây là một kiểm thử cho thấy không được thêm một nút khi loại nút sai:
+
+```java
+void testNoAddNodeOnNonBasicChild()
+{
+	DOMBuilder builder = new DomBuilder();
+	List children = new ArrayList();
+	children.add(new XDOMNNode(XDOMNNode.TF_A));
+	Builder.processNode(new XDOMNSnippet(), children);
+
+	assertTrue(!builder.nodeAdded);
+}
+```
+
+Với những kiểm thử này, chúng ta sẽ cảm thấy đỡ lo lắng hơn khi trích xuất phần thân của điều kiện xác định xem các nút có được thêm vào hay không. Chúng ta đang sao chép toàn bộ điều kiện và kiểm thử cho thấy rằng nút đã được thêm vào khi điều kiện thỏa mãn.
+
+```java
+public class DOMBuilder
+{
+	void processNode(XDOMNSnippet root, List childNodes)
+	{
+		if (root != null) {
+			if (childNodes != null)
+				root.addNode(new XDOMNSnippet(childNodes));
+			root.addChild(XDOMNSnippet.NullSnippet);
+		}
+		List paraList = new ArrayList();
+		XDOMNSnippet snippet = new XDOMNReSnippet();
+		snippet.setSource(m_state);
+		for (Iterator it = childNodes.iterator(); it.hasNext();) {
+			XDOMNNode node = (XDOMNNode)it.next();
+			if (isBasicChild(node)) {
+				paraList.addNode(node);
+				nodeAdded = true;
+			}
+			...
+		}
+		...
+	}
+	private boolean isBasicChild(XDOMNNode node) {
+		return node.type() == TF_G
+			|| node.type() == TF_H
+			|| node.type() == TF_GLOT && node.isChild());
+	}
+	...
+}
+```
+
