@@ -266,7 +266,7 @@ Thành thật mà nói, bản cập nhật trông không khác lắm về cấu 
 ![22.4](images/22/22-4.png)
 Hình 22.4 Logig trích xuất lớp `CommoditySelectionPanel`.
 
-Điều quan trọng cần nhớ khi sử dụng một công cụ tự động để trích xuất các phương thức là bạn có thể thực hiện nhiều công việc thô một cách an toàn và xử lý các chi tiết sau khi bạn thực hiện các thử nghiệm khác. Đừng quá lo lắng về các phương thức có vẻ như chúng không phù hợp với lớp. Thường thì họ chỉ ra nhu cầu trích xuất một lớp mới sau này. Xem _Chương 20 Lớp này quá lớn và tôi không muốn nó lớn hơn nữa_, để biết thêm ý tưởng về cách thực hiện điều này.
+Điều quan trọng cần nhớ khi sử dụng một công cụ tự động để trích xuất các phương thức là bạn có thể thực hiện nhiều công việc thô một cách an toàn và xử lý các chi tiết sau khi bạn thực hiện các kiểm thử khác. Đừng quá lo lắng về các phương thức có vẻ như chúng không phù hợp với lớp. Thường thì họ chỉ ra nhu cầu trích xuất một lớp mới sau này. Xem _Chương 20 Lớp này quá lớn và tôi không muốn nó lớn hơn nữa_, để biết thêm ý tưởng về cách thực hiện điều này.
 
 ## Thử thách tái cấu trúc thủ công
 
@@ -410,3 +410,34 @@ public class DOMBuilder
 }
 ```
 
+Sau đó, chúng ta có thể xóa cờ và kiểm thử.
+
+Trong trường hợp này, tôi đã sử dụng một biến boolean. Tôi chỉ muốn xem liệu nút đó có còn được thêm vào sau khi trích xuất điều kiện hay không. Tôi cảm thấy khá tự tin rằng mình có thể trích xuất toàn bộ nội dung của điều kiện mà không gây ra lỗi, vì vậy tôi không kiểm thử tất cả logic của điều kiện. Các kiểm thử này chỉ cung cấp một cách kiểm tra nhanh để đảm bảo rằng điều kiện vẫn là một phần của code sau khi trích xuất. Để có thêm hướng dẫn về số lượng kiểm thử cần thực hiện trong quá trình trích xuất phương thức, hãy xem _Kiểm Thử nhắm mục tiêu (189)_ trong _Chương 13, Tôi cần thực hiện thay đổi nhưng tôi không biết kiểm thử nào phải viết_.
+
+Khi bạn đang sử dụng _biến số cảm biến_, bạn nên giữ chúng trong lớp khi đang thực hiện tái cấu trúc và chỉ xóa chúng sau đó. Tôi thường làm điều này để có thể xem tất cả các kiểm thử tôi viết khi thực hiện trích xuất và hoàn tác chúng dễ dàng nếu thấy rằng tôi muốn trích xuất theo một cách khác. Khi tôi hoàn thành, tôi sẽ xóa các kiểm thử này hoặc tái cấu trúc để chúng kiểm tra các phương thức tôi trích xuất thay vì phương thức ban đầu.
+
+Các biến số cảm biến là một công cụ quan trọng để chia nhỏ các phương thức quái vật. Bạn có thể dùng để tái cấu trúc sâu bên trong các phương thức hỗn loạn, và bạn cũng có thể dùng để loại bỏ dần dần các phương thức hỗn loạn. Ví dụ: nếu chúng ta có một phương thức lồng hầu hết code của nó vào sâu bên trong một tập hợp các câu lệnh có điều kiện, chúng ta có thể sử dụng các biến số cảm biến để trích xuất các câu lệnh có điều kiện hoặc trích xuất nội dung của các câu lệnh có điều kiện vào các phương thức mới. Chúng ta cũng có thể sử dụng các biến số cảm biến để làm việc trên các phương thức mới đó cho đến khi loại bỏ hoàn toàn sự hỗn loạn.
+
+### Trích xuất những gì bạn biết
+
+Một chiến lược khác có thể sử dụng khi làm việc với các phương thức "quái vật" là bắt đầu từ quy mô nhỏ và tìm những đoạn code ngắn có thể trích xuất một cách tự tin mà không cần kiểm thử, sau đó thêm các kiểm thử để bao phủ chúng. OK, tôi sẽ nói điều này theo một cách khác bởi vì khái niệm "ngắn" với mỗi người có sự khác nhau. Khi tôi nói "ngắn", ý tôi là hai hoặc ba dòng - nhiều nhất là năm dòng, một đoạn code mà bạn có thể dễ dàng gọi tên. Điều quan trọng cần chú ý khi bạn thực hiện các thao tác trích xuất ngắn này là _số khớp nối_ của quá trình trích xuất. _Số khớp nối_ là số lượng giá trị truyền vào và trả về từ phương thức mà bạn đang trích xuất. Ví dụ: nếu chúng ta trích xuất một phương thức `max` từ phương thức sau, số lượng của nó sẽ là `3`:
+
+```cpp
+void process(int a, int b, int c) {
+	int maximum;
+	if (a > b)
+		maximum = a;
+	else
+		maximum = b;
+	...
+}
+```
+
+Đây là code sau khi trích xuất:
+
+```cpp
+void process(int a, int b, int c) {
+	int maximum = max(a,b);
+	...
+}
+```
