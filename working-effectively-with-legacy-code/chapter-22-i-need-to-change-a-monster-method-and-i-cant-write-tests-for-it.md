@@ -420,7 +420,7 @@ Các biến số cảm biến là một công cụ quan trọng để chia nhỏ
 
 ### Trích xuất những gì bạn biết
 
-Một chiến lược khác có thể sử dụng khi làm việc với các phương thức "quái vật" là bắt đầu từ quy mô nhỏ và tìm những đoạn code ngắn có thể trích xuất một cách tự tin mà không cần kiểm thử, sau đó thêm các kiểm thử để bao phủ chúng. OK, tôi sẽ nói điều này theo một cách khác bởi vì khái niệm "ngắn" với mỗi người có sự khác nhau. Khi tôi nói "ngắn", ý tôi là hai hoặc ba dòng - nhiều nhất là năm dòng, một đoạn code mà bạn có thể dễ dàng gọi tên. Điều quan trọng cần chú ý khi bạn thực hiện các thao tác trích xuất ngắn này là _số khớp nối_ của quá trình trích xuất. _Số khớp nối_ là số lượng giá trị truyền vào và trả về từ phương thức mà bạn đang trích xuất. Ví dụ: nếu chúng ta trích xuất một phương thức `max` từ phương thức sau, số lượng của nó sẽ là `3`:
+Một chiến lược khác có thể sử dụng khi làm việc với các phương thức "quái vật" là bắt đầu từ quy mô nhỏ và tìm những đoạn code ngắn có thể trích xuất một cách tự tin mà không cần kiểm thử, sau đó thêm các kiểm thử để bao phủ chúng. OK, tôi sẽ nói điều này theo một cách khác bởi vì khái niệm "ngắn" với mỗi người có sự khác nhau. Khi tôi nói "ngắn", ý tôi là hai hoặc ba dòng - nhiều nhất là năm dòng, một đoạn code mà bạn có thể dễ dàng gọi tên. Điều quan trọng cần chú ý khi bạn thực hiện các thao tác trích xuất ngắn này là _số liên kết_ của quá trình trích xuất. _Số liên kết_ là số lượng giá trị truyền vào và trả về từ phương thức mà bạn đang trích xuất. Ví dụ: nếu chúng ta trích xuất một phương thức `max` từ phương thức sau, số lượng của nó sẽ là `3`:
 
 ```cpp
 void process(int a, int b, int c) {
@@ -441,3 +441,17 @@ void process(int a, int b, int c) {
 	...
 }
 ```
+
+`Số liên kết` của phương thức là 3: hai biến đầu vào và một biến đầu ra. Sẽ tốt hơn khi ưu tiên việc trích xuất với số lượng nhỏ vì chúng không dễ mắc lỗi. Khi bạn đang cần chọn đoạn code để trích xuất, hãy tìm một vài dòng với số lượng nhỏ và đếm các biến vào/ra. Không tính quyền truy cập biến thực thể vì chúng ta chỉ cần cắt/sao chép và dán chúng ra ngoài; chúng không đi qua giao diện của phương thức mà chúng ta đang trích xuất.
+
+Điều đáng lo nhất trong việc trích xuất phương thức là lỗi chuyển đổi kiểu. Chúng ta có thể nâng cao khả năng tránh những lỗi đó nếu chỉ trích xuất các phương thức có số lượng liên kết thấp. Khi đã xác định được vị trí trích xuất, chúng ta nên soát lại và tìm vị trí khai báo của từng biến được truyền vào, để đảm bảo rằng chúng ta có được chữ ký phương thức đúng.
+
+Nếu trích xuất có số liên kết càng thấp càng an toàn, thì hẳn là trích xuất có số liên kết bằng 0 là an toàn nhất trong tất cả - và đúng như vậy. Bạn có thể có được nhiều cải thiện trong một phương thức "quái vật" chỉ bằng cách trích xuất các phương thức không chấp nhận bất kỳ tham số nào và không trả về bất kỳ giá trị nào. Các phương pháp này thực sự là các lệnh để làm một cái gì đó. Bạn yêu cầu đối tượng thực hiện điều gì đó với trạng thái của nó, hoặc nói một cách nhếch nhác hơn, bạn yêu cầu đối tượng thực hiện một việc với trạng thái toàn cục nào đó. Bất chấp điều đó, khi bạn cố gắng đặt tên cho các đoạn code như thế này, bạn thường hiểu rõ hơn về nội dung của đoạn code đó và cách nó được cho là ảnh hưởng đến đối tượng. Loại thông tin chi tiết này có thể dẫn đến nhiều thông tin chi tiết hơn và khiến bạn thấy được thiết kế của mình từ những góc độ khác nhau, hiệu quả hơn.
+
+Khi bạn sử dụng _Trích xuất những gì bạn biết_, hãy đảm bảo bạn không chọn các phần quá lớn. Và nếu số lượng liên kết lớn hơn 0, thường thì việc sử dụng một _biến số cảm biến_ là điều nên làm. Sau khi bạn trích xuất, hãy viết một vài kiểm thử cho phương thức bạn vừa trích xuất.
+
+Khi sử dụng kỹ thuật này với những khối nhỏ, thật khó để thấy được cải thiện khi bạn bỏ qua một phương thức "quái vật", nhưng sự cải thiện luôn ẩn nấp quanh bạn. Mỗi khi quay lại và trích xuất một phần nhỏ khác mà bạn biết, bạn sẽ làm rõ phương thức thêm một chút. Theo thời gian, bạn có thể hiểu rõ hơn về phạm vi của phương thức và những hướng bạn muốn thực hiện.
+
+Khi không có công cụ tái cấu trúc, tôi thường bắt đầu trích xuất các phương thức 0 liên kết chỉ để hiểu cấu trúc tổng thể. Thường thì nó là cách dạo đầu tốt để kiểm thử và làm việc tiếp theo.
+
+Nếu bạn có một phương thức có gạch đầu dòng, bạn có thể nghĩ rằng bạn sẽ có thể trích xuất nhiều phương thức 0 liên kết và mỗi đoạn sẽ là một phương thức tốt. Đôi khi bạn sẽ tìm thấy một đoạn giống như vậy, nhưng thường thì các đoạn này sử dụng các biến tạm thời được khai báo trước chúng. Đôi khi, bạn phải bỏ qua "cấu trúc khối" của một phương thức có dấu đầu dòng và tìm kiếm các phương thức có số lượng thấp bên trong các khối và trên các khối.
