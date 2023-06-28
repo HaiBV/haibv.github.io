@@ -455,3 +455,29 @@ Khi sử dụng kỹ thuật này với những khối nhỏ, thật khó để 
 Khi không có công cụ tái cấu trúc, tôi thường bắt đầu trích xuất các phương thức 0 liên kết chỉ để hiểu cấu trúc tổng thể. Thường thì nó là cách dạo đầu tốt để kiểm thử và làm việc tiếp theo.
 
 Nếu bạn có một phương thức có gạch đầu dòng, bạn có thể nghĩ rằng bạn sẽ có thể trích xuất nhiều phương thức 0 liên kết và mỗi đoạn sẽ là một phương thức tốt. Đôi khi bạn sẽ tìm thấy một đoạn giống như vậy, nhưng thường thì các đoạn này sử dụng các biến tạm thời được khai báo trước chúng. Đôi khi, bạn phải bỏ qua "cấu trúc khối" của một phương thức có dấu đầu dòng và tìm kiếm các phương thức có số lượng thấp bên trong các khối và trên các khối.
+
+### Thu thập Phụ thuộc
+
+Đôi khi, có những đoạn code trong phương thức quái vật chỉ là thứ yếu so với mục đích chính của phương thức. Nó là cần thiết, nhưng nó không quá phức tạp và nếu vô tình làm hỏng nó, bạn sẽ thấy rõ hơn. Nhưng mặc dù tất cả những điều đó có thể đúng, nhưng đơn giản là bạn không thể phá vỡ logic chính của phương thức. Trong những trường hợp như thế, bạn có thể sử dụng một kỹ thuật gọi là thu thập phụ thuộc. Bạn viết kiểm thử với logic mà bạn cần giữ. Sau đó, trích xuất phần còn lại kiểm thử không bao phủ. Khi thực hiện việc này, ít nhất bạn có thể tự tin rằng bạn đang giữ được những hành vi quan trọng. Đây là một ví dụ đơn giản:
+
+```cpp
+void addEntry(Entry entry) {
+	if (view != null && DISPLAY == true) {
+		view.show(entry);
+	}
+	...
+	if (entry.category().equals("single") || entry.category("dual")) {
+		entries.add(entry);
+		view.showUpdate(entry, view.GREEN);
+	}
+	else {
+		...
+	}
+}
+```
+
+Nếu chúng ta mắc lỗi với code hiển thị, chúng ta sẽ nhận ra khá nhanh. Tuy nhiên, một lỗi logic trong `add` có thể mất khá nhiều thời gian để tìm ra. Trong trường hợp này, chúng ta có thể viết kiểm thử cho phương thức và xác minh `add` thực hiện với điều kiện phù hợp. Sau đó, khi chắc chắn rằng tất cả các hành vi đó được bao phủ, chúng ta có thể trích xuất code hiển thị và biết rằng việc trích xuất sẽ không ảnh hưởng đến việc bổ sung dữ liệu.
+
+Theo một số cách, "Thu thập Phụ thuộc" giống như một sự loại bỏ. Bạn duy trì một tập hợp các hành vi và làm việc với một tập hợp khác theo cách không được bao phủ. Nhưng không phải tất cả các hành vi đều bình đẳng trong một ứng dụng. Một số quan trọng hơn và chúng ta có thể nhận ra điều đó khi làm việc với chúng.
+
+"Thu thập Phụ thuộc" đặc biệt hiệu quả khi hành vi quan trọng bị vướng bởi hành vi khác. Khi bạn có kiểm thử vững chắc cho hành vi quan trọng, bạn có thể thực hiện nhiều chỉnh sửa mà về mặt kỹ thuật với những hành vi không được bao phủ bởi kiểm thử, nhưng nó giúp bạn duy trì hành vi chính.
