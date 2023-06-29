@@ -481,3 +481,15 @@ Nếu chúng ta mắc lỗi với code hiển thị, chúng ta sẽ nhận ra kh
 Theo một số cách, "Thu thập Phụ thuộc" giống như một sự loại bỏ. Bạn duy trì một tập hợp các hành vi và làm việc với một tập hợp khác theo cách không được bao phủ. Nhưng không phải tất cả các hành vi đều bình đẳng trong một ứng dụng. Một số quan trọng hơn và chúng ta có thể nhận ra điều đó khi làm việc với chúng.
 
 "Thu thập Phụ thuộc" đặc biệt hiệu quả khi hành vi quan trọng bị vướng bởi hành vi khác. Khi bạn có kiểm thử vững chắc cho hành vi quan trọng, bạn có thể thực hiện nhiều chỉnh sửa mà về mặt kỹ thuật với những hành vi không được bao phủ bởi kiểm thử, nhưng nó giúp bạn duy trì hành vi chính.
+
+### Tách đối tượng của phương thứ
+
+_Các biến số cảm biến_ là công cụ rất mạnh trong kho vũ khí của chúng ta, nhưng đôi khi bạn nhận thấy rằng bạn đã có sẵn các biến lý tưởng cho việc cảm biến nhưng đó là biến cục bộ của phương thức. Nếu chúng là các biến thực thể, bạn có thể cảm nhận được chúng sau khi phương thức chạy. Bạn có thể biến các biến cục bộ thành các biến thực thể, nhưng trong nhiều trường hợp, điều đó rất dễ gây nhầm lẫn. Trạng thái mà bạn đặt ở đó sẽ dùng chung cho phương thức "quái vật" và các phương thức được trích xuất từ nó. Mặc dù nó sẽ được khởi tạo lại mỗi khi phương thức "quái vật" được gọi, nhưng có thể khó hiểu các biến sẽ giữ giá trị gì gì nếu bạn muốn gọi các phương thức mà bạn đã trích xuất một cách độc lập.
+
+Một giải pháp thay thế là _Tách đối tượng của phương thức (330)_. Kỹ thuật này lần đầu tiên được mô tả bởi Ward Cunningham, và nó là hình ảnh thu nhỏ của ý tưởng về một sự trừu tượng được phát minh ra. Khi bạn tách một đối tượng của phương thức, bạn tạo một lớp có trách nhiệm duy nhất là thực hiện công việc của phương thức "quái vật". Các tham số của phương thức trở thành tham số cho một hàm tạo trên lớp mới và code của phương thức quái vật có thể đi vào một phương thức có tên "run" hoặc "execute" trên lớp mới. Khi code đã được chuyển sang lớp mới, đây là thời điểm tuyệt vời để chúng ta tái cấu trúc. Chúng ta có thể biến các biến tạm thời trong phương thức thành các biến thực thể và cảm nhận thông qua chúng khi thực hiện chia nhỏ phương thức.
+
+Tách đối tượng trong phương thức là một động thái khá quyết liệt, không giống như _sử dụng biến số cảm biến_, các biến mà bạn đang sử dụng là cần thiết cho quá trình sản xuất. Điều này cho phép xây dựng các kiểm thử mà bạn có thể giữ lại. Xem _Tách Đối tượng trong Phương pháp (330)_ để biết ví dụ chi tiết.
+
+## Chiến lược
+
+Các kỹ thuật mà tôi đã mô tả trong chương này có thể giúp bạn chia nhỏ các phương pháp "quái vật" để tái cấu trúc bổ sung hoặc chỉ bổ sung tính năng. Phần này chứa một số hướng dẫn về cách tạo ra sự đánh đổi trong cấu trúc khi bạn thực hiện công việc này.
