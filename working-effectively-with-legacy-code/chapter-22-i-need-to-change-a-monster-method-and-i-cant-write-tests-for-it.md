@@ -493,3 +493,56 @@ Tách đối tượng trong phương thức là một động thái khá quyết
 ## Chiến lược
 
 Các kỹ thuật mà tôi đã mô tả trong chương này có thể giúp bạn chia nhỏ các phương pháp "quái vật" để tái cấu trúc bổ sung hoặc chỉ bổ sung tính năng. Phần này chứa một số hướng dẫn về cách tạo ra sự đánh đổi trong cấu trúc khi bạn thực hiện công việc này.
+
+### Khung hóa phương thức
+
+Khi bạn có một câu lệnh điều kiện và đang tìm cách trích xuất phương thức, bạn có hai lựa chọn. Bạn có thể trích xuất điều kiện và nội dung cùng nhau hoặc bạn có thể trích xuất chúng riêng biệt. Đây là một ví dụ:
+
+```java
+if (marginalRate() > 2 && order.hasLimit()) {
+	order.readjust(rateCalculator.rateForToday());
+	order.recalculate();
+}
+```
+
+Nếu bạn trích xuất điều kiện và nội dung thành hai phương thức khác nhau, việc tổ chức lại logic của phương thức về sau sẽ tốt hơn:
+
+```java
+if (orderNeedsRecalculation(order)) {
+	recalculateOrder(order, rateCalculator);
+}
+```
+
+Tôi gọi đây là khung vì khi hoàn thành, tất cả những gì còn lại trong phương thức là phần khung: cấu trúc điều khiển và ủy quyền cho các phương thức khác.
+
+### Tìm trình tự
+
+Khi bạn có một câu lệnh điều kiện và đang tìm cách trích xuất phương thức, bạn có hai lựa chọn. Bạn có thể trích xuất điều kiện và nội dung cùng nhau hoặc bạn có thể trích xuất chúng riêng biệt. Đây là một ví dụ khác:
+
+```java
+if (marginalRate() > 2 && order.hasLimit()) {
+	order.readjust(rateCalculator.rateForToday());
+	order.recalculate();
+}
+```
+
+Nếu bạn trích điều kiện và nội dung vào cùng một phương thức, việc xác định một chuỗi các thao tác chung sẽ tốt hơn:
+
+```java
+...
+recalculateOrder(order, rateCalculator);
+...
+
+void recalculateOrder(Order order, RateCalculator rateCalculator) {
+	if (marginalRate() > 2 && order.hasLimit()) {
+		order.readjust(rateCalculator.rateForToday());
+		order.recalculate();
+	}
+}
+```
+
+Rất có thể toàn bộ phương thức chỉ gồm một chuỗi các hoạt động xảy ra lần lượt và sẽ rõ ràng hơn nếu chúng ta có thể nhìn thấy chuỗi đó.
+
+Đợi một chút, có phải tôi vừa đưa ra lời khuyên hoàn toàn trái ngược nhau không? Vâng, đúng vậy. Thực tế là, tôi thường sử dụng qua lại giữa khung hóa phương thức và tìm trình tự. Rất có thể, bạn cũng sẽ như vậy. Tôi khung hóa khi cảm thấy cấu trúc kiểm soát sẽ cần phải được tái cấu trúc sau khi nó được làm rõ. Tôi cố gắng tìm trình tự khi cảm thấy việc xác định một trình tự bao trùm sẽ làm cho code rõ ràng hơn.
+
+Các phương thức gạch đầu dòng hướng tôi đến việc tìm kiếm trình tự và các phương thức hỗn loạn hướng tôi đến việc sắp xếp khung, nhưng lựa chọn chiến lược của bạn thực sự phụ thuộc vào những hiểu biết sâu sắc về thiết kế mà bạn nhận được khi thực hiện trích xuất.
