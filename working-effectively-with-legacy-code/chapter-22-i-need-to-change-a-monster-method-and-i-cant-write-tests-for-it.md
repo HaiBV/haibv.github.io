@@ -446,7 +446,7 @@ void process(int a, int b, int c) {
 
 Điều đáng lo nhất trong việc trích xuất phương thức là lỗi chuyển đổi kiểu. Chúng ta có thể nâng cao khả năng tránh những lỗi đó nếu chỉ trích xuất các phương thức có số lượng liên kết thấp. Khi đã xác định được vị trí trích xuất, chúng ta nên soát lại và tìm vị trí khai báo của từng biến được truyền vào, để đảm bảo rằng chúng ta có được chữ ký phương thức đúng.
 
-Nếu trích xuất có số liên kết càng thấp càng an toàn, thì hẳn là trích xuất có số liên kết bằng 0 là an toàn nhất trong tất cả - và đúng như vậy. Bạn có thể có được nhiều cải thiện trong một phương thức "quái vật" chỉ bằng cách trích xuất các phương thức không chấp nhận bất kỳ tham số nào và không trả về bất kỳ giá trị nào. Các phương pháp này thực sự là các lệnh để làm một cái gì đó. Bạn yêu cầu đối tượng thực hiện điều gì đó với trạng thái của nó, hoặc nói một cách nhếch nhác hơn, bạn yêu cầu đối tượng thực hiện một việc với trạng thái toàn cục nào đó. Bất chấp điều đó, khi bạn cố gắng đặt tên cho các đoạn code như thế này, bạn thường hiểu rõ hơn về nội dung của đoạn code đó và cách nó được cho là ảnh hưởng đến đối tượng. Loại thông tin chi tiết này có thể dẫn đến nhiều thông tin chi tiết hơn và khiến bạn thấy được thiết kế của mình từ những góc độ khác nhau, hiệu quả hơn.
+Nếu trích xuất có số liên kết càng thấp càng an toàn, thì hẳn là trích xuất có số liên kết bằng 0 là an toàn nhất trong tất cả - và đúng như vậy. Bạn có thể có được nhiều cải thiện trong một phương thức "quái vật" chỉ bằng cách trích xuất các phương thức không chấp nhận bất kỳ tham số nào và không trả về bất kỳ giá trị nào. Các phương thức này thực sự là các lệnh để làm một cái gì đó. Bạn yêu cầu đối tượng thực hiện điều gì đó với trạng thái của nó, hoặc nói một cách nhếch nhác hơn, bạn yêu cầu đối tượng thực hiện một việc với trạng thái toàn cục nào đó. Bất chấp điều đó, khi bạn cố gắng đặt tên cho các đoạn code như thế này, bạn thường hiểu rõ hơn về nội dung của đoạn code đó và cách nó được cho là ảnh hưởng đến đối tượng. Loại thông tin chi tiết này có thể dẫn đến nhiều thông tin chi tiết hơn và khiến bạn thấy được thiết kế của mình từ những góc độ khác nhau, hiệu quả hơn.
 
 Khi bạn sử dụng _Trích xuất những gì bạn biết_, hãy đảm bảo bạn không chọn các phần quá lớn. Và nếu số lượng liên kết lớn hơn 0, thường thì việc sử dụng một _biến số cảm biến_ là điều nên làm. Sau khi bạn trích xuất, hãy viết một vài kiểm thử cho phương thức bạn vừa trích xuất.
 
@@ -488,11 +488,11 @@ _Các biến số cảm biến_ là công cụ rất mạnh trong kho vũ khí c
 
 Một giải pháp thay thế là _Tách đối tượng của phương thức (330)_. Kỹ thuật này lần đầu tiên được mô tả bởi Ward Cunningham, và nó là hình ảnh thu nhỏ của ý tưởng về một sự trừu tượng được phát minh ra. Khi bạn tách một đối tượng của phương thức, bạn tạo một lớp có trách nhiệm duy nhất là thực hiện công việc của phương thức "quái vật". Các tham số của phương thức trở thành tham số cho một hàm tạo trên lớp mới và code của phương thức quái vật có thể đi vào một phương thức có tên "run" hoặc "execute" trên lớp mới. Khi code đã được chuyển sang lớp mới, đây là thời điểm tuyệt vời để chúng ta tái cấu trúc. Chúng ta có thể biến các biến tạm thời trong phương thức thành các biến thực thể và cảm nhận thông qua chúng khi thực hiện chia nhỏ phương thức.
 
-Tách đối tượng trong phương thức là một động thái khá quyết liệt, không giống như _sử dụng biến số cảm biến_, các biến mà bạn đang sử dụng là cần thiết cho quá trình sản xuất. Điều này cho phép xây dựng các kiểm thử mà bạn có thể giữ lại. Xem _Tách Đối tượng trong Phương pháp (330)_ để biết ví dụ chi tiết.
+Tách đối tượng trong phương thức là một động thái khá quyết liệt, không giống như _sử dụng biến số cảm biến_, các biến mà bạn đang sử dụng là cần thiết cho quá trình sản xuất. Điều này cho phép xây dựng các kiểm thử mà bạn có thể giữ lại. Xem _Tách Đối tượng trong Phương thức (330)_ để biết ví dụ chi tiết.
 
 ## Chiến lược
 
-Các kỹ thuật mà tôi đã mô tả trong chương này có thể giúp bạn chia nhỏ các phương pháp "quái vật" để tái cấu trúc bổ sung hoặc chỉ bổ sung tính năng. Phần này chứa một số hướng dẫn về cách tạo ra sự đánh đổi trong cấu trúc khi bạn thực hiện công việc này.
+Các kỹ thuật mà tôi đã mô tả trong chương này có thể giúp bạn chia nhỏ các phương thức "quái vật" để tái cấu trúc bổ sung hoặc chỉ bổ sung tính năng. Phần này chứa một số hướng dẫn về cách tạo ra sự đánh đổi trong cấu trúc khi bạn thực hiện công việc này.
 
 ### Khung hóa phương thức
 
@@ -546,3 +546,26 @@ Rất có thể toàn bộ phương thức chỉ gồm một chuỗi các hoạt
 Đợi một chút, có phải tôi vừa đưa ra lời khuyên hoàn toàn trái ngược nhau không? Vâng, đúng vậy. Thực tế là, tôi thường sử dụng qua lại giữa khung hóa phương thức và tìm trình tự. Rất có thể, bạn cũng sẽ như vậy. Tôi khung hóa khi cảm thấy cấu trúc kiểm soát sẽ cần phải được tái cấu trúc sau khi nó được làm rõ. Tôi cố gắng tìm trình tự khi cảm thấy việc xác định một trình tự bao trùm sẽ làm cho code rõ ràng hơn.
 
 Các phương thức gạch đầu dòng hướng tôi đến việc tìm kiếm trình tự và các phương thức hỗn loạn hướng tôi đến việc sắp xếp khung, nhưng lựa chọn chiến lược của bạn thực sự phụ thuộc vào những hiểu biết sâu sắc về thiết kế mà bạn nhận được khi thực hiện trích xuất.
+
+### Trích xuất vào lớp hiện tại trước
+
+Khi bạn bắt đầu trích xuất các phương thức nhỏ hơn từ một phương thức "quái vật", có thể bạn sẽ nhận thấy rằng một số đoạn code đang được trích xuất thực sự thuộc về một lớp khác. Một dấu hiệu rõ ràng là tên lớp mà bạn muốn sử dụng. Nếu bạn nhìn vào một đoạn code và muốn sử dụng tên của một trong các biến đang được sử dụng trong đó, thì rất có thể đoạn code này thuộc về lớp của biến đó. Đó sẽ là trường hợp trong đoạn trích này:
+
+```java
+if (marginalRate() > 2 && order.hasLimit()) {
+	order.readjust(rateCalculator.rateForToday());
+	order.recalculate();
+}
+```
+
+Có vẻ như chúng ta có thể gọi đoạn code này là `recalculateOrder`. Đó sẽ là một cái tên hợp lý, nhưng nếu chúng ta sử dụng từ `order` trong tên phương thức, thì đoạn code này có thể chuyển sang lớp `Order` và được gọi là `recalculate`. Vâng, đã có một phương thức được đặt tên là `recalculate`, vì vậy chúng ta có thể phải tìm hiểu xem điều gì làm cho phép tính toán lại này khác biệt và sử dụng thông tin đó trong tên hoặc đổi tên phương thức `recalculate` đã có sẵn. Xét cho cùng, có vẻ như đoạn code này thuộc về lớp đó.
+
+Mặc dù việc trích xuất trực tiếp sang một lớp khác rất hấp dẫn, nhưng đừng làm vậy. Trước hết hãy đặt cho phương thức mới một cái tên vụng về. `recalculateOrder` hơi vụng về, nhưng nó cho phép chúng ta thực hiện một số thao tác trích xuất dễ dàng hoàn tác và khám phá xem liệu chúng ta đã trích xuất đúng đoạn code để tiếp tục hay chưa. Chúng ta luôn có thể chuyển phương thức sang lớp khác sau khi tìm được hướng tốt nhất cho các thay đổi. Trong khi chờ đợi, việc trích xuất sang lớp hiện tại sẽ giúp chúng ta tiến lên phía trước và ít xảy ra lỗi hơn.
+
+### Trích xuất những phần nhỏ
+
+Như tôi đã đề cập trước đây, giờ tôi muốn nhấn mạnh nó: Trước tiên hãy trích xuất các phần nhỏ. Trước khi bạn trích xuất một phần nhỏ của phương thức "quái vật", có vẻ sẽ không tạo ra bất kỳ sự khác biệt nào. Sau khi bạn trích xuất được nhiều phần hơn, bạn sẽ thấy phương thức ban đầu theo một cách khác. Bạn có thể thấy một trình tự đã bị che khuất trước đó hoặc thấy một cách tốt hơn để sắp xếp phương thức. Khi bạn nhìn thấy những hướng đó, bạn có thể chuyển hướng về phía chúng. Đây là một chiến lược tốt hơn nhiều so với việc cố gắng chia một phương thức thành nhiều phần lớn ngay từ đầu. Quá thường xuyên, điều đó không dễ dàng như vẻ ngoài của nó; nó không an toàn. Sẽ dễ dàng bỏ sót các chi tiết nhỏ và chúng lại chính là thứ làm cho code hoạt động.
+
+### Chuẩn bị cho hoàn tác trích xuất
+
+Có nhiều cách để cắt và phá vỡ một phương thức "quái vật". Sau khi bạn thực hiện một số thao tác trích xuất, thông thường bạn sẽ tìm thấy những cách tốt hơn và phù hợp với các tính năng mới dễ dàng hơn. Đôi khi, cách tốt nhất để tiếp tục là hoàn tác một hoặc hai thao tác trích xuất và trích xuất lại. Khi bạn làm điều này, điều đó không có nghĩa là lần trích xuất đầu tiên là lãng phí công sức. Chúng đã cho bạn một thứ rất quan trọng: cái nhìn sâu sắc về thiết kế cũ và cách tốt hơn để tiến lên phía trước.
