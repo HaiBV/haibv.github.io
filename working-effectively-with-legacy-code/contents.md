@@ -24,7 +24,7 @@ Chương 5 - Công cụ
 
 Chương 6 - Tôi không có nhiều thời gian và tôi phải thay đổi nó
 
-Chương 7 - Mất quá nhiều thời gian để thực hiện thay đổi
+[Chương 7 - Mất quá nhiều thời gian để thực hiện thay đổi](./chapter-7-it-takes-forever-to-make-a-change.html)
 
 Chương 8 - Làm thế nào để tôi thêm một chức năng mới?
 
