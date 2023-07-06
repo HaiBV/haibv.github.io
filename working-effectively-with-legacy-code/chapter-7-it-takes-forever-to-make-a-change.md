@@ -45,3 +45,13 @@ Trong hệ thống hướng đối tượng, nếu bạn muốn xây dựng mộ
 Cách để xử lý việc này là trích xuất các giao diện cho các lớp trong nhóm dựng nhanh được sử dụng bởi các lớp bên ngoài. Trong nhiều IDE, bạn có thể trích xuất giao diện bằng cách chọn một lớp và thực hiện lựa chọn menu hiển thị cho bạn danh sách tất cả các phương thức trong lớp và cho phép bạn chọn phương thức nào bạn muốn trở thành một phần của giao diện mới. Sau đó, công cụ cho phép bạn cung cấp tên của giao diện mới. Chúng cũng cung cấp cho bạn tùy chọn thay thế các tham chiếu đến lớp bằng các tham chiếu đến giao diện ở mọi nơi có thể trong hệ thống. Đó là một tính năng cực kỳ hữu ích. Trong C++, _Trích xuất Trình triển khai (356)_ dễ hơn một chút so với _Trích xuất Giao diện (362)_. Bạn không phải thay đổi tên của các tham chiếu ở mọi nơi, nhưng bạn phải thay đổi những nơi tạo ra các thực thể của lớp cũ (xem _Trích xuất Trình triển khai (356)_ để biết chi tiết).
 
 Khi chúng ta có kiểm thử của nhóm lớp này, chúng ta có khả năng thay đổi cấu trúc vật lý của dự án để giúp việc xây dựng dễ dàng hơn, bằng cách chuyển nhóm này sang một gói hoặc thư viện mới. Các bản dựng trở nên phức tạp hơn khi chúng ta làm điều đó, nhưng đây mới là điểm mấu chốt: Khi chúng ta chia nhỏ các phần phụ thuộc và tách các lớp thành các gói hoặc thư viện mới, tổng chi phí cho việc xây dựng lại toàn bộ hệ thống tăng lên, nhưng thời gian trung bình cho một bản dựng có thể giảm bớt.
+
+
+Cùng xem xét một ví dụ. Hình 7.1 cho thấy một tập hợp nhỏ các lớp cộng tác với nhau, tất cả nằm trong cùng một gói.
+
+![7.1](images/7/7-1.png)
+Hình 7.1 Sơ đồ phân phối lớp Opportunity
+
+Chúng ta muốn thực hiện một số thay đổi với lớp `AddOpportunityFormHandler`, nhưng sẽ tốt hơn rất nhiều nếu chúng ta cũng có thể khiến bản dựng nhanh hơn. Bước đầu tiên là thử tạo một `AddOpportunityFormHandler`. Thật không may, tất cả các lớp mà nó phụ thuộc đều là bị cụ thể hóa. `AddOpportunityFormHandler` cần có `ConsultantSchedulerDB` và `AddOpportunityXMLGenerator`. Rất có thể cả hai lớp đó đều phụ thuộc vào các lớp khác không có trong sơ đồ.
+
+Nếu chúng ta cố gắng khởi tạo một `AddOpportunityFormHandler`, ai mà biết được sẽ phải sử dụng bao nhiêu lớp? Chúng ta có thể vượt qua điều này nếu phá vỡ sự phụ thuộc. Phần phụ thuộc đầu tiên mà chúng tôi gặp phải là `ConsultantSchedulerDB`. Chúng ta cần tạo một thực thể của nó để truyền vào hàm khởi tạo `AddOpportunityFormHandler`. Sẽ rất khó sử dụng lớp đó vì nó kết nối với cơ sở dữ liệu và chúng ta không muốn làm điều đó trong quá trình thử nghiệm. Tuy nhiên, chúng ta có thể sử dụng _Extract Deployer (356)_ và phá vỡ sự phụ thuộc như trong Hình 7.2.
