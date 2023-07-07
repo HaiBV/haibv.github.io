@@ -54,4 +54,19 @@ Hình 7.1 Sơ đồ phân phối lớp Opportunity
 
 Chúng ta muốn thực hiện một số thay đổi với lớp `AddOpportunityFormHandler`, nhưng sẽ tốt hơn rất nhiều nếu chúng ta cũng có thể khiến bản dựng nhanh hơn. Bước đầu tiên là thử tạo một `AddOpportunityFormHandler`. Thật không may, tất cả các lớp mà nó phụ thuộc đều là bị cụ thể hóa. `AddOpportunityFormHandler` cần có `ConsultantSchedulerDB` và `AddOpportunityXMLGenerator`. Rất có thể cả hai lớp đó đều phụ thuộc vào các lớp khác không có trong sơ đồ.
 
-Nếu chúng ta cố gắng khởi tạo một `AddOpportunityFormHandler`, ai mà biết được sẽ phải sử dụng bao nhiêu lớp? Chúng ta có thể vượt qua điều này nếu phá vỡ sự phụ thuộc. Phần phụ thuộc đầu tiên mà chúng tôi gặp phải là `ConsultantSchedulerDB`. Chúng ta cần tạo một thực thể của nó để truyền vào hàm khởi tạo `AddOpportunityFormHandler`. Sẽ rất khó sử dụng lớp đó vì nó kết nối với cơ sở dữ liệu và chúng ta không muốn làm điều đó trong quá trình thử nghiệm. Tuy nhiên, chúng ta có thể sử dụng _Extract Deployer (356)_ và phá vỡ sự phụ thuộc như trong Hình 7.2.
+Nếu chúng ta cố gắng khởi tạo một `AddOpportunityFormHandler`, ai mà biết được sẽ phải sử dụng bao nhiêu lớp? Chúng ta có thể vượt qua điều này nếu phá vỡ sự phụ thuộc. Phần phụ thuộc đầu tiên mà chúng tôi gặp phải là `ConsultantSchedulerDB`. Chúng ta cần tạo một thực thể của nó để truyền vào hàm khởi tạo `AddOpportunityFormHandler`. Sẽ rất khó sử dụng lớp đó vì nó kết nối với cơ sở dữ liệu và chúng ta không muốn làm điều đó trong quá trình thử nghiệm. Tuy nhiên, chúng ta có thể sử dụng _Trích xuất Trình triển khai (356)_ và phá vỡ sự phụ thuộc như trong Hình 7.2.
+
+![7.2](images/7/7-2.png)
+Hình 7.2 Trích xuất triển khai `ConsultantSchedulerDB`
+
+Bây giờ `ConsultantSchedulerDB` là một giao diện, chúng ta có thể tạo một `AddOpportunityFormHandler` bằng cách sử dụng một đối tượng giả của giao diện `ConsultantSchedulerDB`. Thật thú vị, bằng cách phá vỡ sự phụ thuộc này, chúng ta đã làm cho quá trình dựng nhanh hơn trong một số điều kiện. Lần tới khi thực hiện sửa đổi `ConsultantSchedulerDBImpl`, `AddOpportunityFormHandler` sẽ không phải cần biên dịch lại. Tại sao? Chà, nó không còn phụ thuộc trực tiếp vào `ConsultantSchedulerDBImpl` nữa. Chúng ta có thể thực hiện bao nhiêu thay đổi tùy ý đối với tệp `ConsultantSchedulerDBImpl`, mà không phải dựng lại lớp `AddOpportunityFormHandler`, trừ khi điều gì đó buộc chúng ta phải thay đổi giao diện `ConsultantSchedulerDB`,
+
+Nếu muốn, chúng ta có thể tự cô lập mình khỏi việc bắt buộc biên dịch lại, như trong Hình 7.3. Đây là một thiết kế khác cho hệ thống mà chúng ta đạt được bằng cách sử dụng _Trích xuất Trình triển khai (356)_ trên lớp `OpportunityItem`.
+
+![7.3](images/7/7-3.png)
+Hình 7.3 Trích xuất triển khai `OpportunityItem`
+
+Bây giờ `AddOpportunityFormHandler` hoàn toàn không phụ thuộc gì vào `OpportunityItem`. Theo một cách nào đó, chúng ta đã đặt một "tường lửa biên dịch" trong code. Chúng ta có thể thực hiện bao nhiêu thay đổi tùy ý với `ConsultantSchedulerDBImpl` và `OpportunityItemImpl`, nhưng điều đó sẽ không buộc `AddOpportunityFormHandler` phải biên dịch lại và nó sẽ không buộc bất kỳ nơi gọi nào của `AddOpportunityFormHandler` phải biên dịch lại. Nếu muốn làm rõ điều này trong cấu trúc gói của ứng dụng, chúng ta có thể chia thiết kế của mình thành các gói riêng biệt như trong Hình 7.4.
+
+![7.4](images/7/7-4.png)
+Hình 7.4 Tái cấu trúc cấu trúc của gói
