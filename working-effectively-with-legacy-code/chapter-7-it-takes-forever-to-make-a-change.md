@@ -70,3 +70,24 @@ Bây giờ `AddOpportunityFormHandler` hoàn toàn không phụ thuộc gì vào
 
 ![7.4](images/7/7-4.png)
 Hình 7.4 Tái cấu trúc cấu trúc của gói
+
+Bây giờ chúng ta có gói `OpportunityProcessing` hoàn toàn không phụ thuộc vào việc triển khai cơ sở dữ liệu. Bất kỳ kiểm thử nào chúng ta viết và đặt trong gói sẽ được biên dịch nhanh chóng và bản thân gói đó không phải biên dịch lại khi thay đổi code trong các lớp triển khai cơ sở dữ liệu.
+
+> Nguyên tắc đảo ngược phụ thuộc
+>
+> Khi code của bạn phụ thuộc vào một giao diện, sự phụ thuộc đó thường rất nhỏ và khó nhận biết. Code của bạn không cần thay đổi trừ khi giao diện thay đổi và các giao diện thường ít thay đổi hơn nhiều so với code đằng sau chúng. Khi bạn có một giao diện, bạn có thể chỉnh sửa các lớp đang triển khai giao diện đó hoặc thêm các lớp mới triển khai giao diện mà không ảnh hưởng đến code sử dụng giao diện.
+>
+> Vì lý do này, tốt hơn là phụ thuộc vào các giao diện hoặc các lớp trừu tượng hơn là phụ thuộc vào các lớp cụ thể. Khi bạn phụ thuộc vào những thứ ít biến động hơn, bạn giảm thiểu khả năng những thay đổi cụ thể sẽ kích hoạt quá trình biên dịch lại lớn.
+
+Cho đến giờ, chúng ta đã thực hiện một số cách để ngăn không cho `AddOpportunityFormHandler` biên dịch lại khi sửa đổi các lớp mà nó phụ thuộc vào. Điều đó làm cho việc dựng nhanh hơn, nhưng nó chỉ là một nửa của vấn đề. Chúng ta cũng có thể tạo bản dựng nhanh hơn cho code phụ thuộc vào `AddOpportunityFormHandler`. Hãy xem lại thiết kế gói trong Hình 7.5.
+
+![7.5](images/7/7-5.png)
+Hình 7.5 Cấu trúc của gói
+
+`AddOpportunityFormHandler` là lớp sản phẩm công khai duy nhất (không kiểm thử) trong `OpportunityProcessing`. Bất kỳ lớp nào trong các gói khác phụ thuộc vào nó đều phải biên dịch lại khi nó thay đổi. Chúng ta có thể phá vỡ sự phụ thuộc đó bằng cách sử dụng _Trích xuất Giao diện (362)_ hoặc _Trích xuất Trình triển khai (356)_ trên `AddOpportunityFormHandler`. Sau đó, các lớp trong các gói khác có thể phụ thuộc vào các giao diện. Khi làm điều này, chúng ta đã bảo vệ hiệu quả tất cả lời của gói này khỏi việc biên dịch lại khi thực hiện hầu hết các thay đổi.
+
+Chúng ta có thể phá vỡ các phụ thuộc và phân bổ chúng vào các gói khác nhau để giúp thời gian dựng nhanh hơ, việc này rất đáng giá. Khi bạn có thể dựng lại và chạy kiểm thử của mình thật nhanh, bạn có thể nhận được nhiều phản hồi hơn khi phát triển. Trong hầu hết các trường hợp, điều đó đồng nghĩa với ít lỗi hơn và lỗi ít trầm trọng hơn. Nhưng nó vẫn có cái giá của nó. Có một số khái niệm về chi phí chung trong việc số giao diện và gói tăng lên. Đó có phải là một mức giá hợp lý để trả so với giải pháp thay thế? Đúng. Đôi khi, có thể mất nhiều thời gian hơn để tìm kiếm hơn khi bạn có nhiều gói và giao diện hơn, nhưng khi tìm thấy, bạn sẽ dễ dàng làm việc với chúng hơn.
+
+> Khi bạn sử dụng nhiều giao diện và gói hơn vào thiết kế của mình để phá vỡ các phụ thuộc, lượng thời gian cần thiết để dựng lại toàn bộ hệ thống sẽ tăng lên một chút. Có nhiều tập tin để biên dịch. Nhưng thời gian trung bình để tạo một bản dựng dựa trên những gì cần được biên dịch lại có thể giảm đáng kể
+
+Khi bạn tối ưu hóa thời gian dựng trung bình, bạn sẽ có được những vùng code rất dễ làm việc. Có thể hơi khó khăn khi yêu cầu một tập hợp nhỏ các lớp biên dịch riêng biệt và được kiểm thử, nhưng điều quan trọng cần nhớ là bạn chỉ phải thực hiện một lần cho tập hợp các lớp đó; sau đó, bạn có thể gặt hái những lợi ích mãi mãi.
