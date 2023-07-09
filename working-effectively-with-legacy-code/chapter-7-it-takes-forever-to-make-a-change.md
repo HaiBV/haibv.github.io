@@ -91,3 +91,7 @@ Chúng ta có thể phá vỡ các phụ thuộc và phân bổ chúng vào các
 > Khi bạn sử dụng nhiều giao diện và gói hơn vào thiết kế của mình để phá vỡ các phụ thuộc, lượng thời gian cần thiết để dựng lại toàn bộ hệ thống sẽ tăng lên một chút. Có nhiều tập tin để biên dịch. Nhưng thời gian trung bình để tạo một bản dựng dựa trên những gì cần được biên dịch lại có thể giảm đáng kể
 
 Khi bạn tối ưu hóa thời gian dựng trung bình, bạn sẽ có được những vùng code rất dễ làm việc. Có thể hơi khó khăn khi yêu cầu một tập hợp nhỏ các lớp biên dịch riêng biệt và được kiểm thử, nhưng điều quan trọng cần nhớ là bạn chỉ phải thực hiện một lần cho tập hợp các lớp đó; sau đó, bạn có thể gặt hái những lợi ích mãi mãi.
+
+## Tóm tắt
+
+Các kỹ thuật tôi trình bày trong chương này có thể được sử dụng để giảm thời gian dựng cho các cụm lớp nhỏ, nhưng đây chỉ là một phần nhỏ trong những gì bạn có thể làm với việc sử dụng các giao diện và gói để quản lý các phụ thuộc. Cuốn sách của Robert C. Martin _Phát triển phần mềm linh hoạt: Nguyên tắc, Khuôn mẫu và Thực tiễn_ (Pearson Education, 2002) trình bày nhiều kỹ thuật hơn và tôi cho là mọi chuyên gia phát triển phần mềm nên biết.

@@ -36,7 +36,7 @@ Chương 8 - Làm thế nào để tôi thêm một chức năng mới?
 
 [Chương 12 - Tôi cần thực hiện nhiều thay đổi trong một khu vực. Tôi có phải phá vỡ các phụ thuộc của tất cả các lớp liên quan không?](./chapter-12-i-need-to-make-many-changes-in-one-area-do-i-have-to-break-dependencies-for-all-the-classes-involved.html).
 
-Chương 13 - Tôi cần thực hiện thay đổi nhưng tôi không biết kiểm thử nào phải viết
+[Chương 13 - Tôi cần thực hiện thay đổi nhưng tôi không biết kiểm thử nào phải viết](./chapter-13-i-need-to-make-a-change-but-i-dont-know-what-tests-to-write.html)
 
 Chương 14 - Sự phụ thuộc vào thư viện đang giết chết tôi.
 
