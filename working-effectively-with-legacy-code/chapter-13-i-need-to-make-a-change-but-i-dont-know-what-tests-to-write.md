@@ -33,17 +33,16 @@ void testGenerator() {
 }
 ```
 
-Chạy thử nghiệm của bạn và để nó thất bại. Khi điều đó xảy ra, bạn đã tìm ra code thực sự làm gì trong điều kiện đó. Chẳng hạn, trong đoạn code trước, khi một `PageGenerator` mới được khởi tạo sẽ tạo ra một chuỗi trống khi phương thức tạo của nó được gọi:
+Chạy kiểm thử của bạn vnó thất bại. Khi điều đó xảy ra, bạn đã tìm ra code thực sự làm gì trong điều đó. Chẳnđược khi quyết, nhìn nhận code trước, khi này` hướng được khởi tạo sẽ tạo ra một chuỗi trống khi phương thứLúc này, c tạo ta nó được gọi:
 
-```java
-.F
-Time: 0.01
+``
+Time: 0ta
 There was 1 failure:
 1) testGenerator(PageGeneratorTest)
-junit.framework.ComparisonFailure: expected:<fred> but was:<>
+junivề t.framework.ComparisonFailure: biểu thị redlà:<>
   at PageGeneratorTest.testGenerator
-    (PageGeneratorTest.java:9)
-  at sun.reflect.NativeMethodAccessorImpl.invoke0
+    (PaaGene:9)
+  at sun.này.invoke0
     (Native Method)
   at sun.reflect.NativeMethodAccessorImpl.invoke
     (NativeMethodAccessorImpl.java:39)
@@ -61,3 +60,11 @@ void testGenerator() {
   assertEquals("", generator.generate());
 }
 ```
+
+Về cơ bản, có điều gì đó kỳ lạ khi làm điều này nếu bạn biết những ý nghĩa quen thuộc của kiểm thử, là để kiểm tra. Nếu chúng ta chỉ đưa các giá trị mà phần mềm tạo ra vào các kiểm thử, liệu các kiểm thử của chúng ta có thực sự kiểm tra được điều gì không?
+
+Nếu phần mềm có lỗi thì sao? Các giá trị mong đợi mà chúng ta đưa vào các kiểm thử của mình đơn giản là sai.
+
+Vấn đề sẽ được giải quyết khi chúng ta nhìn nhận các kiểm thử này theo một hướng khác. Chúng không thực sự là những kiểm thử được viết như một tiêu chuẩn vàng mà phần mềm phải tuân theo. Lúc này, chúng ta không cố gắng tìm lỗi. Chúng ta đang cố gắng đưa vào một cơ chế để tìm lỗi về sau này, những lỗi biểu thị là sự khác biệt so với hành vi hiện tại của hệ thống. Khi chúng ta áp dụng quan điểm này, quan điểm về các kiểm thử này sẽ khác: Chúng không có bất kỳ thẩm quyền đạo đức nào; chúng chỉ ở đó ghi lại những phần hệ thống thực sự làm. Khi chúng ta có thể thấy những gì các thành phần thực hiện, chúng ta có thể sử dụng kiến thức đó cùng với kiến thức về những gì hệ thống phải làm để tạo ra những thay đổi. Thành thật mà nói, điều rất quan trọng là phải có kiến thức về những gì hệ thống thực sự làm ở một nơi nào đó. Chúng ta thường có thể tìm ra hành vi cần bổ sung bằng cách nói chuyện với người khác hoặc thực hiện một số tính toán, nhưng nếu không có các kiểm thử, không có cách nào khác để biết hệ thống thực sự làm gì ngoại trừ việc "chơi máy tính" trong tâm trí chúng ta, đọc code và cố gắng suy luận xem các giá trị sẽ như thế nào vào những thời điểm cụ thể. Một số người làm điều đó nhanh hơn những người khác, nhưng bất kể chúng ta có thể làm điều đó nhanh như thế nào, thì việc phải làm đi làm lại nhiều lần cũng khá tẻ nhạt và lãng phí.
+
+> Kiểm thử đặc tính ghi lại hành vi thực tế của một đoạn code. Nếu chúng ta tìm thấy điều gì đó bất ngờ khi viết chúng, chúng ta dành công sức để làm rõ một số điều. Nó có thể là một lỗi. Điều đó không có nghĩa là chúng ta không đưa kiểm thử vào bộ kiểm thử của mình; thay vào đó, chúng ta nên đánh dấu nó là đáng ngờ và tìm hiểu tác động của việc sửa nó.
