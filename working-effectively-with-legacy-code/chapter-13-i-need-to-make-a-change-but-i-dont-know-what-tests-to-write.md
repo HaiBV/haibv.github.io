@@ -91,3 +91,59 @@ Các kiểm thử mà chúng ta viết để đặc tả code rất quan trọng
 > Khi bạn đặc tả code kế thừa, bạn sẽ tìm thấy một số lỗi trong toàn bộ quá trình. Tất cả các code kế thừa đều có lỗi, thường tỷ lệ thuận với mức độ hiểu biết về nó. Bạn nên làm gì khi tìm thấy một lỗi?
 > Câu trả lời tùy thuộc vào tình hình hiện tại. Nếu hệ thống chưa bao giờ được triển khai, câu trả lời rất đơn giản: Bạn nên sửa lỗi. Nếu hệ thống đã được triển khai, bạn cần kiểm tra khả năng ai đó đang phụ thuộc vào hành vi đó, ngay cả khi bạn coi đó là lỗi. Thông thường, phải mất một chút phân tích để tìm ra cách sửa lỗi mà không gây ra hiệu ứng sóng lan truyền.
 > Cách làm ưa thích của tôi là sửa lỗi ngay khi chúng được tìm thấy. Khi hành vi rõ ràng là có lỗi, nó cần được sửa chữa. Nếu bạn nghi ngờ rằng một số hành vi là sai, hãy đánh dấu hành vi đó trong code kiểm thử là đáng ngờ và sau đó báo cáo thêm. Tìm hiểu nhanh nhất có thể xem đó có phải là lỗi hay không và cách tốt nhất để đối phó với nó.
+
+## Kiểm thử mục tiêu
+
+Sau khi viết các kiểm thử để hiểu một phần code, chúng ta phải xem xét những thứ mà chúng ta muốn thay đổi và xem liệu các kiểm thử đó có thực sự bao phủ được chúng hay không. Đây là một ví dụ, một phương thức trên một lớp Java tính toán giá trị của nhiên liệu trong các thùng thuê:
+
+```java
+public class FuelShare
+{
+	private long cost = 0;
+	private double corpBase = 12.0;
+	private ZonedHawthorneLease lease;
+	...
+	public void addReading(int gallons, Date readingDate){
+		if (lease.isMonthly()) {
+			if (gallons < Lease.CORP_MIN)
+				cost += corpBase;
+			else
+				cost += 1.2 * priceForGallons(gallons);
+		}
+		...
+		lease.postReading(readingDate, gallons);
+	}
+	...
+}
+```
+
+Chúng ta muốn thực hiện một thay đổi rất trực tiếp với lớp `FuelShare`. Chúng ta đã viết một số kiểm thử cho nó, vì vậy mọi thứ đã sẵn sàng. Đây là sự thay đổi: Chúng ta muốn trích xuất câu lệnh if cấp cao nhất sang một phương thức mới và sau đó chuyển phương thức đó sang lớp `ZonedHawthorneLease`. Biến `lease` trong code là một thực thể của lớp đó.
+
+Chúng ta có thể tưởng tượng code sẽ trông như thế này sau khi được cấu trúc lại:
+
+```java
+public class FuelShare
+{
+	public void addReading(int gallons, Date readingDate){
+		cost += lease.computeValue(gallons, priceForGallons(gallons));
+		...
+		lease.postReading(readingDate, gallons);
+	}
+	...
+}
+
+public class ZonedHawthorneLease extends Lease
+{
+	public long computeValue(int gallons, long totalPrice) {
+		long cost = 0;
+		if (lease.isMonthly()) {
+			if (gallons < Lease.CORP_MIN)
+				cost += corpBase;
+			else
+				cost += 1.2 * totalPrice;
+		}
+		return cost;
+	}
+	...
+}
+```
