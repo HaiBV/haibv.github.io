@@ -147,3 +147,57 @@ public class ZonedHawthorneLease extends Lease
 	...
 }
 ```
+
+Chúng ta cần loại kiểm thử nào để đảm bảo rằng các phép tái cấu trúc này được thực hiện chính xác? Có một điều chắc chắn: Chúng ta biết rằng chúng ta sẽ không sửa đổi phần logic này:
+
+```java
+	if (gallons < Lease.CORP_MIN)
+		cost += corpBase;
+```				
+
+Có một kiểm thử ở đây để xem cách giá trị được tính toán khi ở dưới giới hạn Lease.CORP_MIN rất tốt, nhưng điều đó không thực sự cần thiết. Mặt khác, câu lệnh else trong code ban đầu sẽ thay đổi:
+
+```java
+	else
+		valueInCents += 1.2 * priceForGallons(gallons);
+```
+
+Khi được chuyển sang phương thức mới, nó sẽ trở thành thế này:
+
+```java
+	else
+		valueInCents += 1.2 * totalPrice;
+```
+
+Đó là một thay đổi nhỏ, nhưng dù sao thì nó cũng là một thay đổi. Sẽ tốt hơn nếu chúng ta có thể đảm bảo rằng câu lệnh else được thực thi trong một các kiểm thử nào đó. Hãy xem lại phương thức ban đầu:
+
+```java
+public class FuelShare
+{
+	public void addReading(int gallons, Date readingDate){
+		if (lease.isMonthly()) {
+			if (gallons < CORP_MIN)
+				cost += corpBase;
+			else
+				cost += 1.2 * priceForGallons(gallons);
+		}
+		...
+		lease.postReading(readingDate, gallons);
+	}
+	...
+}
+```
+
+Nếu chúng ta có thể cho `lease` trong `FuelShare` là hợp đồng hàng tháng (`isMonthly()`) và truyền vào `addReading` một số gallon lớn hơn `Lease.CORP_MIN`, thì chúng ta sẽ đi vào nhánh else:
+
+```java
+public void testValueForGallonsMoreThanCorpMin() {
+	StandardLease lease = new StandardLease(Lease.MONTHLY);
+	FuelShare share = new FuelShare(lease);
+
+	share.addReading(FuelShare.CORP_MIN +1, new Date());
+	assertEquals(12, share.getCost());
+}
+```
+
+> Khi bạn viết kiểm thử cho một nhánh câu điều kiện, hãy tự hỏi liệu có cách nào khác để kiểm thử có thể vượt qua ngoài việc thực thi nhánh đó hay không. Nếu bạn không chắc chắn, hãy sử dụng một biến cảm biến (301) hoặc trình gỡ lỗi để tìm hiểu xem liệu kiểm thử có thành công hay không.
