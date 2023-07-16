@@ -200,4 +200,57 @@ public void testValueForGallonsMoreThanCorpMin() {
 }
 ```
 
-> Khi bạn viết kiểm thử cho một nhánh câu điều kiện, hãy tự hỏi liệu có cách nào khác để kiểm thử có thể vượt qua ngoài việc thực thi nhánh đó hay không. Nếu bạn không chắc chắn, hãy sử dụng một biến cảm biến (301) hoặc trình gỡ lỗi để tìm hiểu xem liệu kiểm thử có thành công hay không.
+> Khi bạn viết kiểm thử cho một nhánh câu điều kiện, hãy tự hỏi liệu có cách nào khác để kiểm thử có thể vượt qua ngoài việc thực thi nhánh đó hay không. Nếu bạn không chắc chắn, hãy sử dụng một _biến số cảm biến (301)_ hoặc trình gỡ lỗi để tìm hiểu xem liệu kiểm thử có thành công hay không.
+
+Một điều quan trọng cần tìm hiểu khi bạn đặc tả các nhánh như thế này là liệu đầu vào bạn truyền vào có hành vi đặc biệt nào có thể dẫn đến kiểm thử thành công trong khi nó phải thất bại hay không. Đây là một ví dụ. Giả sử rằng code được sử dụng `doubles` thay vì `ints` để đại diện cho tiền:
+
+```java
+public class FuelShare
+{
+	private double cost = 0.0;
+	...
+	public void addReading(int gallons, Date readingDate){
+		if (lease.isMonthly()) {
+			if (gallons < CORP_MIN)
+				cost += corpBase;
+			else
+				cost += 1.2 * priceForGallons(gallons);
+		}
+		...
+		lease.postReading(readingDate, gallons);
+	}
+	...
+}
+```
+
+Ở đây chúng ta có thể gặp rắc rối nghiêm trọng. Và, không, tôi không đề cập đến thực tế là ứng dụng có thể bị rò rỉ giá trị xu bằng phân số khắp nơi do lỗi làm tròn dấu phẩy động. Trừ khi chúng ta chọn đầu vào tốt, nếu không chúng ta có thể mắc lỗi khi trích xuất một phương thức và không bao giờ biết điều đó. Một sai lầm có thể xảy ra nếu chúng ta trích xuất một phương thức và biến một trong các đối số của nó thành `int` thay vì `double`. Trong Java và nhiều ngôn ngữ khác, có một bộ chuyển đổi tự động từ `double` sang `ints`; thời gian chạy chỉ cắt bớt giá trị. Trừ khi chúng ta cẩn thận nghĩ ra các đầu vào sẽ buộc chúng ta nhìn thấy lỗi đó, nếu không nó sẽ bị bỏ qua.
+
+Hãy xem một ví dụ. Điều gì sẽ ảnh hưởng đến code trước đó nếu giá trị của `Lease.CORP_MIN` là 10 và giá trị của `corpBase` là 12.0 khi chúng ta chạy kiểm thử này?
+
+```java
+public void testValue () {
+	StandardLease lease = new StandardLease(Lease.MONTHLY);
+	FuelShare share = new FuelShare(lease);
+
+	share.addReading(1, new Date());
+	assertEquals(12, share.getCost());
+}
+```
+
+Bởi vì 1 nhỏ hơn 10, chúng ta chỉ cần thêm 12,0 vào giá trị ban đầu của `cost`, bằng 0. Khi kết thúc phép tính, giá trị của `cost` là 12,0. Điều đó hoàn toàn ổn, nhưng điều gì sẽ xảy ra nếu chúng ta trích xuất phương thức như thế này và khai báo giá trị của `cost` là `long` thay vì `double`?
+
+```java
+public class ZonedHawthorneLease
+{
+	public long computeValue(int gallons, long totalPrice) {
+		long cost = 0;
+		if (lease.isMonthly()) {
+			if (gallons < CORP_MIN)
+				cost += corpBase;
+			else
+				cost += 1.2 * totalPrice;
+		}
+		return cost;
+	}
+}
+```
