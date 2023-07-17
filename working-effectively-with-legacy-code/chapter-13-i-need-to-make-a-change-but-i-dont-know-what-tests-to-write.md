@@ -254,3 +254,30 @@ public class ZonedHawthorneLease
 	}
 }
 ```
+
+Kiểm thử mà chúng ta đã viết vẫn được thông qua, mặc dù chúng ta âm thầm cắt bớt giá trị `cost` khi trả về. Một chuyển đổi từ `double` sang `int` được thực hiện, nhưng nó không thực sự được thực hiện đầy đủ. Nó thực hiện điều tương tự nếu không có chuyển đổi, nếu chúng ta chỉ gán một `int` cho một `int`.
+
+> Khi thực hiện tái cấu trúc, chúng ta thường phải kiểm tra hai điều: Hành vi còn tồn tại sau khi tái cấu trúc không và nó có được kết nối chính xác không?
+> Nhiều kiểm thử đặc tính trông giống như kiểm thử "ngày nắng". Chúng không kiểm thử nhiều điều kiện đặc biệt; chúng chỉ xác minh rằng các hành vi cụ thể có mặt. Từ sự hiện diện của chúng, chúng ta có thể suy ra rằng các phép tái cấu trúc mà chúng ta đã thực hiện để di chuyển hoặc trích xuất code bảo toàn được hành vi.
+
+Chúng ta có thể xử lý vấn đề này thế nào? Có một vài chiến lược chung. Một là tính toán thủ công các giá trị dự kiến cho một đoạn code. Tại mỗi lần chuyển đổi, chúng ta sẽ xem liệu có vấn đề về việc cắt ngắn hay không. Một kỹ thuật khác là sử dụng trình gỡ lỗi và thực hiện từng bước các tác vụ để có thể xem những chuyển đổi nào mà một nhóm đầu vào cụ thể kích hoạt. Kỹ thuật thứ ba là sử dụng các _biến số cảm biến (301)_ để xác minh rằng một đường dẫn cụ thể đang được bao phủ và các chuyển đổi được thực hiện.
+
+> Các kiểm thử đặc tính có giá trị nhất sẽ thực hiện theo một đường dẫn cụ thể và thực hiện từng chuyển đổi dọc theo đường dẫn.
+
+Còn có một lựa chọn thứ tư. Chúng ta chỉ cần đặc tả một đoạn code nhỏ hơn. Nếu chúng ta có một công cụ tái cấu trúc giúp trích xuất các phương thức một cách an toàn, thì chúng ta có thể chia nhỏ phương thức `computeValue` và viết các kiểm thử cho các phần của nó. Thật không may, không phải tất cả các ngôn ngữ đều có công cụ tái cấu trúc—và đôi khi, ngay cả những công cụ có sẵn cũng không trích xuất các phương thức theo cách bạn muốn.
+
+> Công cụ tái cấu trúc Quirks
+> Một công cụ tái cấu trúc tốt là vô giá, nhưng thường thì những người có những công cụ này phải dùng đến việc tái cấu trúc bằng tay. Đây là một trường hợp phổ biến. Chúng ta có một lớp `A` với một số code muốn trích xuất trong phương thức `b()` của nó:
+> 
+> ```
+> public class A
+> {
+> 	int x = 1;
+> 	public void b() {
+> 		int y = 0;
+> 		int c = x + y;
+> 	}
+> };
+> ```
+> 
+> Nếu chúng ta muốn trích xuất biểu thức `x + y` trong phương thức `b` và tạo một phương thức gọi là `add`, ít nhất một công cụ trên thị trường sẽ trích xuất nó dưới dạng `add(y)` thay vì `add(x,y)`. Tại sao? Bởi vì `x` là một biến thể hiện và nó có sẵn cho bất kỳ phương thức nào chúng tôi trích xuất.
