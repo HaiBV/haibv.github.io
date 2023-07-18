@@ -281,3 +281,8 @@ Còn có một lựa chọn thứ tư. Chúng ta chỉ cần đặc tả một �
 > ```
 > 
 > Nếu chúng ta muốn trích xuất biểu thức `x + y` trong phương thức `b` và tạo một phương thức gọi là `add`, ít nhất một công cụ trên thị trường sẽ trích xuất nó dưới dạng `add(y)` thay vì `add(x,y)`. Tại sao? Bởi vì `x` là một biến thể hiện và nó có sẵn cho bất kỳ phương thức nào chúng tôi trích xuất.
+
+## Kinh nghiệm viết kiểm thử đặc tính
+1. Viết kiểm thử cho khu vực mà bạn sẽ thực hiện các thay đổi của mình. Viết số lượng trường hợp đủ để bạn cảm thấy hiểu hành vi của code.
+2. Sau khi thực hiện việc này, hãy xem xét những điều cụ thể mà bạn sẽ thay đổi và cố gắng viết kiểm thử cho những điều đó.
+3. Nếu bạn đang cố trích xuất hoặc di chuyển một số chức năng, hãy viết các kiểm thử xác minh sự tồn tại và mối liên hệ của các hành vi đó trên cơ sở từng trường hợp một. Xác minh rằng bạn đang thực hiện code mà bạn sẽ di chuyển và code đó được kết nối đúng cách. Bài tập chuyển đổi.
