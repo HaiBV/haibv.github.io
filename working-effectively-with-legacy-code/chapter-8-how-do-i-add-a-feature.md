@@ -16,9 +16,9 @@ Kỹ thuật bổ sung tính năng mạnh mẽ nhất mà tôi biết là phát 
 
 Phát triển dựa trên thử nghiệm sử dụng một thuật toán nhỏ như sau:
 1. Viết một trường hợp kiểm thử thất bại.
-2. Nhận nó để biên dịch.
-3. Làm cho nó vượt qua.
-4. Loại bỏ trùng lặp.
+2. Viết code để biên dịch kiểm thử.
+3. Viết code để vượt qua kiểm thử.
+4. Tái cấu trúc.
 5. Lặp lại
 
 Đây là một ví dụ. Chúng ta đang làm việc với một ứng dụng tài chính và cần một lớp sử dụng các phép toán mạnh mẽ để xác định có nên giao dịch một số mặt hàng nhất định hay không. Chúng ta cần một lớp Java tính toán một thứ gọi là thời điểm thống kê đầu tiên về một điểm. Chúng ta chưa có một phương thức nào làm được điều đó, nhưng chúng ta biết rằng có thể viết một trường hợp kiểm thử cho phương thức đó. Chúng ta biết toán học, vì vậy chúng ta biết rằng câu trả lời phải là -0,5 đối với dữ liệu chúng tôi mã hóa trong kiểm thử.
@@ -36,7 +36,7 @@ public void testFirstMoment() {
 }
 ```
 
-### Nhận nó để biên dịch
+### Viết code để biên dịch kiểm thử
 Kiểm thử chúng ta vừa viết rất tốt, nhưng nó không biên dịch được. Chúng ta không có phương thức có tên `firstMomentAbout` trong `InstrumentCalculator`. Nhưng chúng ta thêm nó như một phương thức rỗng. Chúng ta muốn thử nghiệm thất bại, vì vậy chúng ta yêu cầu nó trả về giá trị `double` là `NaN` (chắc chắn không phải là giá trị mong đợi là -0,5).
 
 ```java
@@ -49,7 +49,7 @@ public class InstrumentCalculator
 }
 ```
 
-### Làm cho nó vượt qua
+### Viết code để vượt qua kiểm thử
 Với kiểm thử được viết, chúng ta viết code để nó vượt qua.
 
 ```java
@@ -65,6 +65,69 @@ public double firstMomentAbout(double point) {
 
 > Đây là một lượng code lớn bất thường cần viết để đáp ứng với kiểm thử trong TDD. Thông thường, các bước nhỏ hơn nhiều, mặc dù chúng có thể lớn như vậy nếu bạn chắc chắn về thuật toán bạn cần sử dụng.
 
-### Loại bỏ trùng lặp
+### Tái cấu trúc
 Có bất kỳ sự trùng lặp nào ở đây không? Không. Chúng ta có thể chuyển sang trường hợp tiếp theo.
 
+### Viết một trường hợp kiểm thử thất bại.
+
+Code chúng ta vừa viết đã vượt qua được kiểm thử, nhưng nó chắc chắn không đúng cho mọi trường hợp. Trong câu lệnh `return`, chúng ta có thể vô tình chia cho 0. Trong trường hợp đó, chúng ta nên làm gì? Chúng ta trả về cái gì khi không có phần tử nào? Trong trường hợp này, chúng ta muốn trả về một ngoại lệ. Kết quả sẽ vô nghĩa đối với chúng ta trừ khi chúng ta có dữ liệu trong danh sách thành phần của mình.
+
+Kiểm thử tiếp theo sẽ đặc biệt hơn. Nó sẽ không vượt qua nếu một `UnlimitedBasisException` không được trả ra và nó sẽ vượt qua nếu không có ngoại lệ nào được trả ra hoặc bất kỳ ngoại lệ nào khác được trả ra. Khi chúng ta chạy nó, nó không thành công vì `ArithmeticException` bị trả ra khi chúng ta chia cho 0 trong `FirstMomentAbout`.
+
+```java
+public void testFirstMoment() {
+  try {
+    new InstrumentCalculator().firstMomentAbout(0.0);
+    fail("expected InvalidBasisException");
+  }
+  catch (InvalidBasisException e) {
+  }
+}
+```
+
+### Viết code để biên dịch kiểm thử.
+
+Để làm điều này, chúng ta phải thay đổi khai báo của `firstMomentAbout` để nó trả ra một `UnlimitedBasisException`.
+
+```java
+public double firstMomentAbout(double point)
+    throws InvalidBasisException {
+
+  double numerator = 0.0;
+  for (Iterator it = elements.iterator(); it.hasNext(); ) {
+    double element = ((Double)(it.next())).doubleValue();
+    numerator += element - point;
+  }
+  return numerator / elements.size();
+}
+```
+
+Nhưng nó vẫn chưa biên dịch được. Các lỗi trình biên dịch cho biết rằng chúng ta phải thực sự trả ra ngoại lệ nếu nó được liệt kê trong phần khai báo, vì vậy cần tiếp tục viết thêm code.
+
+```java
+public double firstMomentAbout(double point)
+    throws InvalidBasisException {
+
+  if (element.size() == 0)
+    throw new InvalidBasisException("no elements");
+
+  double numerator = 0.0;
+  for (Iterator it = elements.iterator(); it.hasNext(); ) {
+    double element = ((Double)(it.next())).doubleValue();
+    numerator += element - point;
+  }
+  return numerator / elements.size();
+}
+```
+
+### Viết code để vượt qua kiểm thử.
+Kiểm thử đã vượt qua
+
+### Tái cấu trúc.
+
+Không có trùng lặp nào.
+
+### Viết một trường hợp kiểm thử thất bại
+### Viết code để biên dịch kiểm thử
+### Viết code để vượt qua kiểm thử
+### Tái cấu trúc
