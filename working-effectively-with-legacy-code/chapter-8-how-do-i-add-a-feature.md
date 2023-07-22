@@ -128,6 +128,120 @@ Kiểm thử đã vượt qua
 Không có trùng lặp nào.
 
 ### Viết một trường hợp kiểm thử thất bại
+
+Đoạn code tiếp theo mà chúng ta phải viết là một phương thức tính toán thời điểm thống kê thứ hai về một điểm. Trên thực tế, nó chỉ là một biến thể của cái đầu tiên. Đây là một kiểm thử giúp chúng ta viết code đó. Trong trường hợp này, giá trị kỳ vọng là 0,5 thay vì -0,5. Chúng ta viết một kiểm thử mới cho một phương thức chưa tồn tại: `secondMomentAbout`.
+
+```java
+public void testSecondMoment() throws Exception {
+  InstrumentCalculator calculator = new InstrumentCalculator();
+  calculator.addElement(1.0);
+  calculator.addElement(2.0);
+
+  assertEquals(0.5, calculator.secondMomentAbout(2.0), TOLERANCE);
+}
+```
+
 ### Viết code để biên dịch kiểm thử
+
+Để biên dịch nó, chúng ta phải định nghĩa phương thức `secondMomentAbout`. Chúng ta có thể sử dụng thủ thuật tương tự với phương thức `FirstMomentAbout`, nhưng hóa ra code cho `second moment` chỉ là một biến thể nhỏ `first moment`.
+
+Dòng này ở `firstMoment`:
+
+```java
+  numerator += element - point;
+```
+
+phải trở thành như thế này trong trường hợp của `secondMoment`:
+
+```java
+  numerator += Math.pow(element – point, 2.0);
+```
+
+Và có một mô hình chung cho loại điều này. Thời điểm thống kê thứ n được tính bằng biểu thức này:
+
+```java
+  numerator += Math.pow(element – point, N);
+```
+
+Code của `firstMomentAbout` chạy được bởi vì `element – point` có cùng giá trị với `Math.pow(element – point, 1.0)`
+
+Giờ đây, chúng ta có một vài lựa chọn. Chúng ta có thể nhận thấy tính tổng quát và viết một phương thức chung chấp nhận một điểm "about" và một giá trị cho `N`. Sau đó, chúng ta có thể thay thế toàn bộ `firstMomentAbout(double)` bằng một lệnh gọi đến phương thức chung đó. Chúng ta có thể làm điều đó, nhưng nó sẽ tạo gánh nặng cho nơi gọi với yêu cầu cung cấp giá trị `N` và chúng ta cũng không muốn cho khách hàng tuỳ ý cung cấp giá trị của `N`. Có vẻ như chúng ta đang suy nghĩ hơi lan man. Chúng ta nên tạm dừng việc này và hoàn thành những gì cần làm trước. Công việc duy nhất bây giờ là biên dịch nó. Chúng ta có thể khái quát hóa sau nếu thấy vẫn cần thiết.
+
+Để biên dịch nó, chúng ta có thể tạo một bản sao của phương thức `firstMomentAbout` và đổi tên nó thành `secondMomentAbout`:
+
+```java
+public double secondMomentAbout(double point)
+    throws InvalidBasisException {
+
+  if (elements.size() == 0)
+    throw new InvalidBasisException("no elements");
+
+  double numerator = 0.0;
+  for (Iterator it = elements.iterator(); it.hasNext(); ) {
+    double element = ((Double)(it.next())).doubleValue();
+    numerator += element - point;
+  }
+
+  return numerator / elements.size();
+}
+```
+
 ### Viết code để vượt qua kiểm thử
+
+Code này thất bại trong kiểm thử. Khi nó không thành công, chúng ta có thể quay lại và vượt qua nó bằng cách thay đổi code thành:
+
+```java
+public double secondMomentAbout(double point)
+    throws InvalidBasisException {
+
+  if (elements.size() == 0)
+    throw new InvalidBasisException("no elements");
+
+  double numerator = 0.0;
+  for (Iterator it = elements.iterator(); it.hasNext(); ) {
+    double element = ((Double)(it.next())).doubleValue();
+    numerator += Math.pow(element – point, 2.0);
+  }
+
+  return numerator / elements.size();
+}
+```
+
+Bạn có thể bị sốc bởi thao tác cắt/sao chép/dán mà chúng ta vừa thực hiện, nhưng trùng lặp sẽ bị xoá sớm thôi. Code đang viết là code mới. Nhưng mẹo sao chép code và sửa đổi code đó cho một phương thức mới khá hiệu quả trong bối cảnh code kế thừa. Thông thường, khi muốn thêm các tính năng vào code đặc biệt tệ hại, các sửa đổi sẽ dễ hiểu hơn nếu đặt chúng ở một vị trí mới và có thể nhìn thấy chúng ở cạnh code cũ. Chúng ta có thể loại bỏ trùng lặp sau này để đưa code mới vào lớp theo cách đẹp hơn hoặc chúng ta có thể loại bỏ sửa đổi và thử theo cách khác, khi biết rằng chúng ta vẫn có code cũ để xem và học hỏi.
+
 ### Tái cấu trúc
+
+Khi đã vượt qua cả hai kiểm thử, chúng ta phải thực hiện bước tiếp theo: xóa trùng lặp/tái cấu trúc. Chúng ta làm điều đó như thế nào?
+
+Có một cách để làm điều đó là trích xuất toàn bộ nội dung của `secondMomentAbout`, gọi nó là `nthMomentAbout` và đặt cho nó một tham số, `N`:
+
+```java
+public double secondMomentAbout(double point)
+    throws InvalidBasisException {
+  return nthMomentAbout(point, 2.0);
+}
+
+private double nthMomentAbout(double point, double n)
+    throws InvalidBasisException {
+  if (elements.size() == 0)
+    throw new InvalidBasisException(“no elements“);
+
+  double numerator = 0.0;
+  for (Iterator it = elements.iterator(); it.hasNext(); ) {
+    double element = ((Double)(it.next())).doubleValue();
+    numerator += Math.pow(element – point, n);
+  }
+  return numerator / elements.size();
+}
+```
+
+Nếu chạy kiểm thử ngay bây giờ, chúng ta sẽ thấy rằng chúng đã vượt qua. Chúng ta có thể quay lại `firstMomentAbout` và thay thế phần thân của nó bằng lệnh gọi `nthMomentAbout`:
+
+```java
+public double firstMomentAbout(double point)
+    throws InvalidBasisException {
+  return nthMomentAbout(point, 1.0);
+}
+```
+
+Bước cuối cùng này rất quan trọng. Chúng ta có thể thêm các tính năng vào code một cách nhanh chóng và thô bạo bằng cách thực hiện những việc như sao chép toàn bộ khối code, nhưng nếu sau đó chúng ta không loại bỏ phần trùng lặp, thì chúng ta sẽ chỉ gây rắc rối và tạo ra gánh nặng bảo trì. Mặt khác, nếu chúng ta có các kiểm thử đúng chỗ, chúng ta có thể loại bỏ trùng lặp một cách dễ dàng. Chúng ta chắc chắn đã thấy điều này ở đây, nhưng lý do duy nhất khiến chúng ta có các kiểm thử là vì chúng ta đã sử dụng TDD ngay từ đầu. Trong code kế thừa, các kiểm thử mà chúng ta viết xung quanh code hiện có khi sử dụng TDD rất quan trọng. Khi có chúng, chúng ta có thể tự do viết bất kỳ code nào chúng ta cần để thêm một tính năng và biết rằng có thể đưa nó vào phần còn lại của code mà không làm mọi thứ trở nên tồi tệ hơn.
