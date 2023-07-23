@@ -245,3 +245,58 @@ public double firstMomentAbout(double point)
 ```
 
 Bước cuối cùng này rất quan trọng. Chúng ta có thể thêm các tính năng vào code một cách nhanh chóng và thô bạo bằng cách thực hiện những việc như sao chép toàn bộ khối code, nhưng nếu sau đó chúng ta không loại bỏ phần trùng lặp, thì chúng ta sẽ chỉ gây rắc rối và tạo ra gánh nặng bảo trì. Mặt khác, nếu chúng ta có các kiểm thử đúng chỗ, chúng ta có thể loại bỏ trùng lặp một cách dễ dàng. Chúng ta chắc chắn đã thấy điều này ở đây, nhưng lý do duy nhất khiến chúng ta có các kiểm thử là vì chúng ta đã sử dụng TDD ngay từ đầu. Trong code kế thừa, các kiểm thử mà chúng ta viết xung quanh code hiện có khi sử dụng TDD rất quan trọng. Khi có chúng, chúng ta có thể tự do viết bất kỳ code nào chúng ta cần để thêm một tính năng và biết rằng có thể đưa nó vào phần còn lại của code mà không làm mọi thứ trở nên tồi tệ hơn.
+
+> ### TDD và code kế thừa
+
+> Một trong những điều giá trị nhất của TDD là nó cho phép chúng ta tập trung vào một việc tại một thời điểm. Chúng ta chỉ có thể viết code hoặc tái cấu trúc; không bao giờ làm cả hai cùng một lúc.
+>
+> Sự tách bạch đó đặc biệt có giá trị với code kế thừa vì nó cho phép chúng ta viết code mới độc lập với code mới.
+>
+> Sau khi viết một số code mới, chúng tôi có thể cấu trúc lại để loại bỏ bất kỳ sự trùng lặp nào giữa nó và code cũ.
+
+Đối với code kế thừa, có thể mở rộng thuật toán TDD như sau:
+1. Viết kiểm thử cho lớp bạn muốn thay đổi.
+2. Viết một trường hợp kiểm thử thất bại.
+3. Viết code để biên dịch kiểm thử.
+4. Viết code để vượt qua kiểm thử. (Cố gắng không thay đổi code hiện có khi bạn thực hiện việc này.)
+5. Tái cấu trúc.
+6. Lặp lại
+
+## Lập trình theo sự khác biệt
+
+_Phát triển dựa trên kiểm thử_ không bị ràng buộc với hướng đối tượng. Trên thực tế, ví dụ trong phần trước thực sự chỉ là một đoạn code thủ tục được bọc trong một lớp. Trong OO, chúng ta có một lựa chọn khác. Chúng ta có thể sử dụng tính kế thừa để thêm vào các tính năng mà không cần sửa đổi trực tiếp một lớp. Sau khi thêm tính năng, chúng ta có thể tìm ra chính xác cách chúng ta thực sự muốn tính năng được tích hợp.
+
+Kỹ thuật quan trọng để làm điều này được gọi là _lập trình theo sự khác biệt_. Đó là một kỹ thuật khá cũ đã được thảo luận và sử dụng khá nhiều vào những năm 1980, nhưng nó không còn được ưa chuộng vào những năm 1990 khi nhiều người trong cộng đồng OO nhận thấy rằng việc thừa kế có thể gây ra nhiều vấn đề nếu nó bị lạm dụng. Nhưng chỉ vì ban đầu chúng ta sử dụng tính kế thừa không có nghĩa là phải giữ nguyên nó. Với sự trợ giúp của các kiểm thử, chúng ta có thể dễ dàng chuyển sang các cấu trúc khác nếu việc kế thừa gặp vấn đề.
+
+Đây là một ví dụ cho thấy nó hoạt động như thế nào. Chúng ta có một lớp Java đã được kiểm thử tên là `MailForwarder`, đây là một phần của chương trình Java quản lý danh sách gửi thư. Nó có một phương thức tên là `getFromAddress`. Đây là những gì bên trong nó:
+
+```java
+private InternetAddress getFromAddress(Message message)
+		throws MessagingException {
+
+	Address [] from = message.getFrom ();
+	if (from != null && from.length > 0)
+		return new InternetAddress (from [0].toString ());
+	return new InternetAddress (getDefaultFrom());
+}
+```
+
+Mục đích của phương thức này là loại bỏ địa chỉ "from" của thư đã nhận và trả lại để có thể sử dụng nó làm địa chỉ "from" của thư được chuyển tiếp đến những người nhận trong danh sách.
+
+Nó chỉ được sử dụng ở một nơi duy nhất, tại những dòng này trong một phương thức có tên là `forwardMessage`:
+
+```java
+	MimeMessage forward = new MimeMessage (session);
+	forward.setFrom (getFromAddress (message));
+```
+
+Bây giờ, chúng ta phải làm gì nếu có yêu cầu mới? Điều gì xảy ra nếu chúng ta phải hỗ trợ các danh sách gửi thư ẩn danh? Các thành viên trong danh sách này có thể gửi thư, nhưng địa chỉ "from" trong thư của họ phải được đặt thành một địa chỉ e-mail cụ thể dựa trên giá trị của `domain` (một biến đối tượng của lớp `MessageFowarder`). Đây là trường hợp kiểm thử thất bại cho thay đổi đó (khi kiểm thử thực thi, biến `expectedMessage` được đặt thành thông báo mà `MessageFowarder` chuyển tiếp):
+
+```java
+public void testAnonymous () throws Exception {
+	MessageForwarder forwarder = new MessageForwarder();
+	forwarder.forwardMessage (makeFakeMessage());
+	assertEquals ("anon-members@" + forwarder.getDomain(),
+		expectedMessage.getFrom ()[0].toString());
+}
+```
