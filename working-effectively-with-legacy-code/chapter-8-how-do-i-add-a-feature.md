@@ -296,7 +296,43 @@ Bây giờ, chúng ta phải làm gì nếu có yêu cầu mới? Điều gì x�
 public void testAnonymous () throws Exception {
 	MessageForwarder forwarder = new MessageForwarder();
 	forwarder.forwardMessage (makeFakeMessage());
-	assertEquals ("anon-members@" + forwarder.getDomain(),
-		expectedMessage.getFrom ()[0].toString());
+	assertEquals ("anon-members@" + forwarder.getDomain(), expectedMessage.getFrom ()[0].toString());
 }
 ```
+
+Chúng ta có phải sửa đổi `MessageForwarder` để thêm chức năng này không? Không hẳn - chúng ta có thể chỉ cần phân lớp `MessageForwarder` và tạo một lớp gọi là `AnonymousMessageForwarder`. Chúng ta có thể sử dụng nó trong kiểm thử để thay cho `MessageForwarder`.
+
+```java
+public void testAnonymous () throws Exception {
+  MessageForwarder forwarder = new AnonymousMessageForwarder();
+  forwarder.forwardMessage (makeFakeMessage());
+  assertEquals ("anon-members@" + forwarder.getDomain(), expectedMessage.getFrom ()[0].toString());
+}
+```
+
+Sau đó chúng ta phân lớp như hình 8.1
+
+![8.1](images/8/8-1.png)
+Hình 8.1 _Phân lớp_ `MessageForwarder`.
+
+Ở đây, chúng ta đặt mức truy cập của phương thức `getFromAddress` trong `MessageForwarder` là protected thay vì private. Sau đó, chúng ta ghi đè lên trong `AnonymousMessageForwarder`. Trong lớp đó, nó trông như thế này:
+
+```java
+protected InternetAddress getFromAddress(Message message)
+		throws MessagingException {
+	String anonymousAddress = "anon-" + listAddress;
+	return new InternetAddress(anonymousAddress);
+}
+```
+
+Điều đó giúp chúng ta điều gì? Chà, chúng ta đã giải quyết được vấn đề, nhưng chúng ta đã thêm một lớp mới vào hệ thống của mình cho một số hành vi rất đơn giản. Có hợp lý không khi phân lớp toàn bộ lớp `message-forwarding` chỉ để thay đổi địa chỉ "from" của nó? Về lâu dài thì không, nhưng điều tốt là nó cho phép chúng ta vượt qua kiểm thử một cách nhanh chóng. Và khi vượt qua kiểm thử đó, chúng ta có thể sử dụng nó để đảm bảo rằng hành vi mới được duy trì khi chúng tôi quyết định muốn thay đổi thiết kế.
+
+```java
+public void testAnonymous () throws Exception {
+	MessageForwarder forwarder = new AnonymousMessageForwarder();
+	forwarder.forwardMessage (makeFakeMessage());
+	assertEquals ("anon-members@" + forwarder.getDomain(), expectedMessage.getFrom ()[0].toString());
+}
+```
+
+
