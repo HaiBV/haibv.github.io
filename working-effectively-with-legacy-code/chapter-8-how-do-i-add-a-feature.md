@@ -335,4 +335,35 @@ public void testAnonymous () throws Exception {
 }
 ```
 
+Điều đó dường như quá dễ dàng. Chúng ta thu lại điều gì? Chà, nó đây: Nếu sử dụng kỹ thuật này nhiều lần mà không chú ý đến một số khía cạnh chính trong thiết kế của mình, nó sẽ bắt đầu xuống cấp nhanh chóng. Hãy lấy một thay đổi khác để xem điều gì có thể xảy ra. Chúng ta muốn chuyển tiếp thư đến những người nhận trong danh sách gửi thư, nhưng chúng ta cũng muốn gửi chúng cho danh sách ẩn (bcc) gồm một số địa chỉ khác không thể hiển thị trong danh sách gửi thư chính thức. Chúng ta có thể gọi họ là những người nhận ngoài danh sách.
+
+Nó có vẻ khá dễ dàng; chúng ta có thể phân lớp `MessageForwarder` một lần nữa và ghi đè phương thức xử lý của nó để gửi tin nhắn đến đích, như trong Hình 8.2.
+
+Điều đó có thể hoạt động tốt ngoại trừ một điều. Sẽ ra sao nếu chúng ta cần một `MessageForwarder` thực hiện cả hai việc: gửi tất cả thư đến những người nhận ngoài danh sách và thực hiện tất cả chuyển tiếp ẩn danh?
+
+Đây là một trong những vấn đề lớn với việc sử dụng thừa kế một cách bừa bãi. Nếu chúng ta đặt các tính năng vào các lớp con riêng biệt, chúng ta chỉ có thể có một trong các tính năng đó tại một thời điểm.
+
+Làm thế nào chúng ta có thể thoát ra khỏi ràng buộc này? Có một cách là dừng lại trước khi thêm tính năng người nhận ngoại tuyến và cấu trúc lại để nó có thể hoạt động trơn tru. May mắn thay, chúng ta có kiểm thử đã viết trước đó. Chúng ta có thể sử dụng nó để xác minh rằng hành vi được bảo toàn khi chuyển sang một kế hoạch khác.
+
+Đối với tính năng chuyển tiếp ẩn danh, có một cách mà chúng ta có thể triển khai tính năng này mà không cần phân lớp con. Chúng ta có thể đã chọn biến chuyển tiếp ẩn danh thành một tùy chọn cấu hình. Một cách để làm điều này là thay đổi hàm tạo của lớp để nó chấp nhận một tập hợp các thuộc tính:
+
+```java
+	Properties configuration = new Properties();
+	configuration.setProperty("anonymous", "true");
+	MessageForwarder forwarder = new MessageForwarder(configuration);
+```
+
+Chúng ta có thể vượt qua kiểm thử khi làm điều đó không? Hãy xem xét lại kiểm thử:
+
+```java
+public void testAnonymous () throws Exception {
+	MessageForwarder forwarder = new AnonymousMessageForwarder();
+	forwarder.forwardMessage (makeFakeMessage());
+	assertEquals ("anon-members@" + forwarder.getDomain(),
+	expectedMessage.getFrom ()[0].toString());
+}
+```
+
+![8.2](images/8/8-2.png)
+Hình 8.2 _Phân lớp cho 2 khác biệt_.
 
