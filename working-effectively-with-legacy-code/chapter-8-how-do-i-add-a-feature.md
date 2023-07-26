@@ -367,3 +367,42 @@ public void testAnonymous () throws Exception {
 ![8.2](images/8/8-2.png)
 Hình 8.2 _Phân lớp cho 2 khác biệt_.
 
+Hiện tại, kiểm thử này đã được vượt qua. `AnonymousMessageForwarder` ghi đè phương thức `getFrom` từ `MessageForwarder`. Điều gì sẽ xảy ra nếu chúng ta thay đổi phương thức `getFrom` trong `MessageForwarder` như thế này?
+
+```java
+private InternetAddress getFromAddress(Message message)
+    throws MessagingException {
+  String fromAddress = getDefaultFrom();
+  if (configuration.getProperty("anonymous").equals("true")) {
+    fromAddress = "anon-members@" + domain;
+  }
+  else {
+    Address [] from = message.getFrom ();
+    if (from != null && from.length > 0) {
+      fromAddress = from [0].toString ();
+    }
+  }
+  return new InternetAddress (fromAddress);
+}
+```
+
+Bây giờ chúng ta có một phương thức `getFrom` trong `MessageFowarder` có thể xử lý trường hợp ẩn danh và trường hợp thông thường. Chúng ta có thể xác minh điều này bằng cách nhận xét ghi đè `getFrom` trong `AnonymousMessageForwarder` và xem liệu có vượt qua được kiểm thử không:
+
+```java
+public class AnonymousMessageForwarder extends MessageForwarder
+{
+/*
+  protected InternetAddress getFromAddress(Message message)
+      throws MessagingException {
+    String anonymousAddress = "anon-" + listAddress;
+    return new InternetAddress(anonymousAddress);
+  }
+*/
+}
+```
+
+Chắc chắn, chúng làm được.
+
+Chúng ta không cần lớp `AnonymousMessageForwarder` nữa, vì vậy chúng ta có thể xóa nó. Sau đó, chúng ta phải tìm từng nơi mà chúng ta tạo một `AnonymousMessageForwarder` và thay thế lời gọi hàm tạo của nó bằng một lời gọi hàm tạo chấp nhận một bộ sưu tập thuộc tính.
+
+Chúng ta cũng có thể sử dụng bộ sưu tập thuộc tính để thêm tính năng mới. Chúng ta có thể có một thuộc tính kích hoạt tính năng người nhận ngoài danh sách.
