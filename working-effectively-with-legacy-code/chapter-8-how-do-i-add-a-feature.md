@@ -406,3 +406,44 @@ Chắc chắn, chúng làm được.
 Chúng ta không cần lớp `AnonymousMessageForwarder` nữa, vì vậy chúng ta có thể xóa nó. Sau đó, chúng ta phải tìm từng nơi mà chúng ta tạo một `AnonymousMessageForwarder` và thay thế lời gọi hàm tạo của nó bằng một lời gọi hàm tạo chấp nhận một bộ sưu tập thuộc tính.
 
 Chúng ta cũng có thể sử dụng bộ sưu tập thuộc tính để thêm tính năng mới. Chúng ta có thể có một thuộc tính kích hoạt tính năng người nhận ngoài danh sách.
+
+Chúng ta đã xong chưa? Chưa hẳn. Chúng ta đã tạo phương thức `getFrom` trong `MessageForwarder` hơi lộn xộn, nhưng vì chúng ta có các kiểm thử nên có thể nhanh chóng thực hiện một phương thức giải nén để dọn dẹp nó một chút. Ngay bây giờ nó trông như thế này:
+
+```java
+private InternetAddress getFromAddress(Message message)
+		throws MessagingException {
+
+	String fromAddress = getDefaultFrom();
+	if (configuration.getProperty("anonymous").equals("true")) {
+		fromAddress = "anon-members@" + domain;
+	}
+	else {
+		Address [] from = message.getFrom ();
+		if (from != null && from.length > 0)
+			fromAddress = from [0].toString ();
+	}
+	return new InternetAddress (fromAddress);
+}
+```
+
+Sau khi tái cấu trúc, nó sẽ trông như thế này:
+
+```java
+private InternetAddress getFromAddress(Message message)
+		throws MessagingException {
+
+	String fromAddress = getDefaultFrom();
+	if (configuration.getProperty("anonymous").equals("true")) {
+		from = getAnonymousFrom();
+	}
+	else {
+		from = getFrom(Message);
+	}
+	return new InternetAddress (from);
+}
+```
+
+Nó trông gọn gàng hơn một chút nhưng các tính năng gửi thư ẩn danh và người nhận ngoài danh sách hiện đã được đưa vào `MessageForwarder`. Điều này có vi phạm _Nguyên tắc Trách nhiệm duy nhất (246)_ không? Có thể. Nó phụ thuộc vào khối lượng của code liên quan đến một trách nhiệm và mức độ phức tạp của nó với phần còn lại của code. Trong trường hợp này, việc xác định xem danh sách có ẩn danh hay không không phải là vấn đề lớn. Cách tiếp cận tài nguyên cho phép chúng ta tiếp tục một cách ổn thỏa. Chúng ta có thể làm gì khi có nhiều thuộc tính và code của `MessageForwarder` bắt đầu bị lấp đầy bởi các câu điều kiện? Một điều chúng ta có thể làm là bắt đầu sử dụng một lớp thay vì một tập hợp các thuộc tính. Điều gì sẽ xảy ra nếu chúng ta tạo một lớp có tên là `Mailing-Configuration` và để nó giữ bộ sưu tập thuộc tính? (Xem Hình 8.3.)
+
+![8.3](images/8/8-3.png)
+Hình 8.3 _Ủy quyền cho_ `MailingConfiguration`.
