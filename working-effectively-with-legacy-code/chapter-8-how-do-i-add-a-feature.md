@@ -447,3 +447,24 @@ Nó trông gọn gàng hơn một chút nhưng các tính năng gửi thư ẩn 
 
 ![8.3](images/8/8-3.png)
 Hình 8.3 _Ủy quyền cho_ `MailingConfiguration`.
+
+Nhìn có vẻ ổn, nhưng có phải quá mức cần thiết không? Có vẻ như `MailingConfiguration` chỉ thực hiện những việc giống như danh sách thuộc tính đã làm.
+
+Điều gì sẽ xảy ra nếu chúng ta chuyển `getFromAddress` sang lớp `MailingConfiguration`? Lớp `MailingConfiguration` có thể chấp nhận thư và quyết định địa chỉ "from" nào sẽ trả về. Nếu cấu hình được thiết lập để ẩn danh, nó sẽ trả về địa chỉ "from" gửi thư ẩn danh. Nếu không, nó có thể trả về địa chỉ đầu tiên từ tin nhắn. Thiết kế sẽ giống như trong Hình 8.4. Lưu ý rằng chúng ta không cần phải có phương thức để nhận và đặt thuộc tính nữa. `MailingConfiguration` bây giờ hỗ trợ chức năng cấp cao hơn.
+
+![8.4](images/8/8-4.png)
+Hình 8.4 _Di chuyển hành vi tơi_ `MailingConfiguration`.
+
+Chúng ta cũng có thể bắt đầu thêm các phương thức khác vào `MailingConfiguration`. Chẳng hạn, nếu muốn triển khai tính năng người nhận ngoài danh sách đó, chúng ta có thể thêm một phương thức có tên `buildRecipientList` trong `MailingConfiguration` và để `MessageForwarder` sử dụng nó, như trong Hình 8.5.
+
+![8.5](images/8/8-5.png)
+Hình 8.5 _Di chuyển thêm hành vi tới_ `MailingConfiguration`.
+
+Với những thay đổi này, tên của lớp không còn đẹp như trước. `Configuration` thường cho những thứ khá thụ động. Lớp này tích cực xây dựng và sửa đổi dữ liệu cho `MessageFowarders` theo yêu cầu của nó. Nếu không có lớp nào khác có cùng tên trong hệ thống, thì tên `MailingList` có thể phù hợp. `MessageForwarders` yêu cầu danh sách gửi thư tính toán từ địa chỉ và xây dựng danh sách người nhận. Chúng ta có thể nói rằng trách nhiệm của một danh sách gửi thư là xác định cách các thư bị thay đổi. Hình 8.6 cho thấy thiết kế của chúng ta sau khi đổi tên.
+
+![8.6](images/8/8-6.png)
+Hình 8.6 `MailingConfiguration` _đổi tên thành_ `MailingList`.
+
+> Có nhiều phép tái cấu trúc mạnh mẽ, nhưng `Đổi tên lớp` là mạnh nhất. Nó thay đổi cách mọi người nhìn code và cho phép họ chú ý đến những khả năng mà họ có thể chưa từng xem xét trước đây.
+
+_Lập trình theo sự khác biệt_ là một kỹ thuật hữu ích. Nó cho phép chúng ta thực hiện thay đổi một cách nhanh chóng và có thể sử dụng các kiểm thử để có một thiết kế sạch hơn. Nhưng để làm tốt điều đó, chúng ta phải chú ý đến một vài “khắc phục”. Một trong số đó là vi phạm _nguyên tắc thay thế Liskov (LSP)_.
