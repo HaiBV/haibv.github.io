@@ -468,3 +468,45 @@ Hình 8.6 `MailingConfiguration` _đổi tên thành_ `MailingList`.
 > Có nhiều phép tái cấu trúc mạnh mẽ, nhưng `Đổi tên lớp` là mạnh nhất. Nó thay đổi cách mọi người nhìn code và cho phép họ chú ý đến những khả năng mà họ có thể chưa từng xem xét trước đây.
 
 _Lập trình theo sự khác biệt_ là một kỹ thuật hữu ích. Nó cho phép chúng ta thực hiện thay đổi một cách nhanh chóng và có thể sử dụng các kiểm thử để có một thiết kế sạch hơn. Nhưng để làm tốt điều đó, chúng ta phải chú ý đến một vài “khắc phục”. Một trong số đó là vi phạm _nguyên tắc thay thế Liskov (LSP)_.
+
+> Nguyên tắc thay thế Liskov
+> Có một số lỗi thầm lặng chúng ta có thể gây ra khi sử dụng kế thừa.
+> Hãy xem xét đoạn mã sau:
+> 
+> ```java
+> public class Rectangle
+> {
+>   ...
+>   public Rectangle(int x, int y, int width, int height) { … }
+>   public void setWidth(int width) { ... }
+>   public void setHeight(int height) { ... }
+>   public int getArea() { ... }
+> }
+> ```
+>
+> Chúng ta có một lớp `Rectangle`. Chúng ta có thể tạo một lớp con có tên là `Square` không?
+>
+> ```java
+> public class Square extends Rectangle
+> {
+>   ...
+>   public Square(int x, int y, int width) { ... }
+>   ...
+> }
+> ```
+>
+> `Square` kế thừa các phương thức `setWidth` và `setHeight` của `Rectangle`. Sẽ thế nào nếu chúng ta thực thi đoạn code dưới đây?
+>
+> ```java
+>   Rectangle r = new Square();
+>   r.setWidth(3);
+>   r.setHeight(4);
+> ```
+>
+> Nếu diện tích là 12, thì Hình vuông thực sự không còn là hình vuông nữa? Chúng ta có thể ghi đè `setWidth` và `setHeight` để chúng có thể giữ Square là "hình vuông". Chúng ta có thể `setWidth` và `setHeight` đều sửa đổi biến chiều rộng theo hình vuông, nhưng điều đó có thể dẫn đến một số kết quả phản trực giác. Bất cứ ai mong đợi rằng tất cả các hình chữ nhật sẽ có diện tích là 12 khi chiều rộng của chúng được đặt thành 3 và chiều cao của chúng được đặt thành 4 đều sẽ ngạc nhiên. Thay vào đó, họ sẽ nhận được 16.
+>
+> Đây là một ví dụ điển hình về việc vi phạm Nguyên tắc thay thế Liskov (LSP). Các đối tượng của các lớp con phải được thay thế cho các đối tượng của các lớp cha của chúng trong toàn bộ code của chúng ta. Nếu không, chúng ta có thể có lỗi thầm lặng trong code của mình.
+
+LSP ngụ ý rằng các lời gọi của một lớp có thể sử dụng đối tượng của một lớp con mà không cần biết rằng chúng là các đối tượng của một lớp con. Không có bất kỳ cách cơ học nào để tránh hoàn toàn vi phạm LSP. Việc một lớp có tuân thủ LSP hay không phụ thuộc vào các lời gọi mà nó có và những gì họ mong đợi. Tuy nhiên, một số quy tắc theo kinh nghiệm như sau:
+1. Bất cứ khi nào có thể, tránh ghi đè các phương pháp cụ thể.
+2. Nếu bạn buộc phải làm như vậy, hãy xem liệu bạn có thể gọi phương thức bạn đang ghi đè trong phương thức ghi đè không
