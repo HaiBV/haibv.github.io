@@ -509,4 +509,21 @@ _Lập trình theo sự khác biệt_ là một kỹ thuật hữu ích. Nó cho
 
 LSP ngụ ý rằng các lời gọi của một lớp có thể sử dụng đối tượng của một lớp con mà không cần biết rằng chúng là các đối tượng của một lớp con. Không có bất kỳ cách cơ học nào để tránh hoàn toàn vi phạm LSP. Việc một lớp có tuân thủ LSP hay không phụ thuộc vào các lời gọi mà nó có và những gì họ mong đợi. Tuy nhiên, một số quy tắc theo kinh nghiệm như sau:
 1. Bất cứ khi nào có thể, tránh ghi đè các phương pháp cụ thể.
-2. Nếu bạn buộc phải làm như vậy, hãy xem liệu bạn có thể gọi phương thức bạn đang ghi đè trong phương thức ghi đè không
+2. Nếu bạn buộc phải làm như vậy, hãy xem liệu bạn có thể gọi phương thức bạn đang ghi đè trong phương thức ghi đè không 
+
+Đợi đã, chúng ta không làm những điều trên với `MessageForwarder`. Trên thực tế, chúng ta lại làm ngược lại. Chúng ta đã ghi đè một phương thức cụ thể trong một lớp con `(AnonymousMessageForwarder)`. Vấn đề ở đây là gì?
+
+Vấn đề là: Khi ghi đè các phương thức cụ thể như chúng ta đã làm khi ghi đè `getFromAddress` của `MessageForwarder` trong `AnonymousMessageForwarder`, chúng ta có thể thay đổi ý nghĩa của đoạn code sử dụng `MessageFowarders`. Nếu có các tham chiếu đến `MessageForwarder` nằm rải rác trong ứng dụng của chúng ta và chúng ta đặt một trong số chúng thành `AnonymousMessageForwarder`, những người đang sử dụng nó có thể nghĩ rằng đó là một `MessageFowarder` đơn giản và nó lấy địa chỉ "from" từ thư mà nó đang xử lý và sử dụng nó khi nó xử lý tin nhắn. Nó có quan trọng đối với những người sử dụng lớp này cho dù nó làm điều đó hay sử dụng một địa chỉ đặc biệt khác làm địa chỉ "from"? Điều đó tuỳ thuộc vào ứng dụng. Nói chung, code trở nên khó hiểu khi chúng ta ghi đè các phương thức cụ thể quá thường xuyên. Ai đó có thể nhận thấy một tham chiếu `MessageForwarder` trong code, hãy xem lớp `MessageFowarder` và nghĩ rằng code đó có cho `getFromAddress` đã được thực thi. Họ có thể không biết rằng tham chiếu đang trỏ đến một `AnonymousMessageForwarder` và phương thức `getFromAddress` của nó là phương thức được sử dụng. Nếu chúng ta thực sự muốn giữ lại tính kế thừa, chúng ta có thể tạo `MessageForwarder` trừu tượng, cung cấp cho nó một phương thức trừu tượng cho `getFromAddress` và để các lớp con cung cấp các nội dung cụ thể. Hình 8.7 cho thấy thiết kế sẽ như thế nào sau những thay đổi này.
+
+Tôi gọi loại phân cấp này là phân cấp chuẩn hóa. Trong một hệ thống phân cấp được chuẩn hóa, không có lớp nào có nhiều hơn một lần triển khai một phương thức. Nói cách khác, không có lớp nào có phương thức ghi đè phương thức cụ thể mà nó kế thừa từ lớp cha. Khi bạn đặt câu hỏi "Lớp này thực hiện tác vụ X như thế nào?" bạn có thể trả lời nó bằng cách đến lớp X và tìm kiếm. Phương thức ở đó hoặc nó trừu tượng và được triển khai ở một trong các lớp con. Trong hệ thống phân cấp được chuẩn hóa, bạn không phải lo lắng về việc các lớp con ghi đè hành vi mà chúng kế thừa từ các lớp cha của chúng.
+
+![8.7](images/8/8-7.png)
+Hình 8.7 Chuẩn hoá phân cấp.
+
+Có đáng để lúc nào cũng thực hiện điều này? Đôi khi, một số ghi đè cụ thể không gây hại gì, miễn là nó không vi phạm _nguyên tắc thay thế Liskov_. Tuy nhiên, thật tốt khi thỉnh thoảng nghĩ về việc các lớp còn cách bao xa so với dạng chuẩn hóa và đôi khi tiến về phía đó khi chúng ta chuẩn bị phân chia trách nhiệm.
+
+_Lập trình theo sự khác biệt_ cho phép chúng ta xây dựng các biến thể một cách nhanh chóng trong hệ thống. Khi thực hiện, chúng ta có thể sử dụng các kiểm thử của mình để xác định hành vi mới và chuyển sang các cấu trúc phù hợp hơn khi cần. Các kiểm thử có thể làm cho việc di chuyển nhanh hơn.
+
+## Tóm tắt
+
+Bạn có thể sử dụng các kỹ thuật trong chương này để thêm các tính năng vào bất kỳ code nào mà bạn có thể kiểm thử. Các tài liệu về _phát triển dựa trên thử nghiệm_ đã phát triển trong những năm gần đây. Đặc biệt, tôi giới thiệu cuốn sách của Kent Beck _Phát triển dựa trên thử nghiệm bằng ví dụ_ (Addison-Wesley, 2002) và _Phát triển dựa trên thử nghiệm của Dave Astel: Hướng dẫn thực hành_ (Tài liệu tham khảo kỹ thuật chuyên nghiệp của Prentice Hall, 2003).
