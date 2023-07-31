@@ -50,7 +50,7 @@ Chương 18 - Code kiểm thử của tôi bị cản trở
 
 Chương 19 - Dự án của tôi không hướng đối tượng. Làm cách nào để thực hiện an toàn các thay đổi?
 
-Chương 20 - Lớp này quá lớn và tôi không muốn nó lớn hơn nữa
+[Chương 20 - Lớp này quá lớn và tôi không muốn nó lớn hơn nữa](./chapter-20-this-class-is-too-big-and-i-dont-want-it-to-get-any-bigger.html)
 
 Chương 21 - Tôi đang thay đổi cùng một đoạn code ở khắp mọi nơi
 
