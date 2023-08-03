@@ -46,3 +46,13 @@ Như vậy có phải là quá mức cần thiết? Có thể. Thông thường,
 Hình 20.2 `Các lớp quy tắc với các trách nhiệm được phân tách`.
 
 Trong trường hợp thực tế của các lớp lớn, điều quan trọng là phải xác định các trách nhiệm khác nhau và sau đó tìm ra cách để dần chuyển sang các trách nhiệm tập trung hơn.
+
+## Xác định trách nhiệm
+
+Trong ví dụ về `RuleParser` ở phần trước, tôi đã chỉ ra sự phân chia cụ thể một lớp thành các lớp nhỏ hơn. Khi tôi thực hiện việc chia tách đó, có cảm giác như tôi đang học vẹt. Tôi liệt kê tất cả các phương thức và bắt đầu nghĩ xem mục đích của chúng là gì. Các câu hỏi tôi đặt ra là "Tại sao phương thức này lại ở đây?" và “Nó đang làm gì cho lớp này?” Sau đó, tôi nhóm chúng thành các danh sách, tập hợp các phương pháp có cùng lý do tồn tại ở đó.
+
+Tôi gọi đây là cách xác định trách nhiệm theo nhóm phương pháp. Đó chỉ là một trong nhiều cách để xác định trách nhiệm trong code hiện có.
+
+Học cách xác định trách nhiệm là một kỹ năng thiết kế quan trọng và cần phải thực hành. Có vẻ kỳ lạ khi nói về kỹ năng thiết kế trong bối cảnh làm việc với code kế thừa này, nhưng thực sự có rất ít sự khác biệt giữa việc khám phá trách nhiệm trong code hiện có và xây dựng chúng cho code mà bạn chưa viết. Điều quan trọng là có thể xác định trách nhiệm và học cách phân chia chúng cho tốt. Thậm chí, code kế thừa còn cung cấp nhiều khả năng áp dụng kỹ năng thiết kế hơn cả các tính năng mới. Sẽ dễ dàng hơn để nói về sự cân bằng trong thiết kế khi bạn có thể thấy code bị ảnh hưởng và cũng dễ dàng hơn để xem liệu cấu trúc có phù hợp trong một ngữ cảnh nhất định hay không vì ngữ cảnh đó là có thật và ở ngay trước mắt chúng ta.
+
+Phần này mô tả tập hợp các kinh nghiệm mà chúng ta có thể sử dụng để xác định trách nhiệm trong code hiện có. Lưu ý rằng chúng ta không phát minh ra trách nhiệm; chúng ta chỉ đang khám phá ra những gì đang ở đó. Bất kể code kế thừa có cấu trúc gì, các thành phần của nó làm những việc có thể nhận dạng được. Đôi khi chúng khó nhìn thấy, nhưng những kỹ thuật này có thể hữu ích. Cố gắng áp dụng chúng ngay cả với code mà bạn không phải thay đổi ngay lập tức. Bạn càng xác định các trách nhiệm vốn có trong code nhiều bao nhiêu, thì bạn càng hiểu hơn về nó bấy nhiêu.
