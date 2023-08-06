@@ -49,9 +49,9 @@ Trong trường hợp thực tế của các lớp lớn, điều quan trọng l
 
 ## Xác định trách nhiệm
 
-Trong ví dụ về `RuleParser` ở phần trước, tôi đã chỉ ra sự phân chia cụ thể một lớp thành các lớp nhỏ hơn. Khi tôi thực hiện việc chia tách đó, có cảm giác như tôi đang học vẹt. Tôi liệt kê tất cả các phương thức và bắt đầu nghĩ xem mục đích của chúng là gì. Các câu hỏi tôi đặt ra là "Tại sao phương thức này lại ở đây?" và “Nó đang làm gì cho lớp này?” Sau đó, tôi nhóm chúng thành các danh sách, tập hợp các phương pháp có cùng lý do tồn tại ở đó.
+Trong ví dụ về `RuleParser` ở phần trước, tôi đã chỉ ra sự phân chia cụ thể một lớp thành các lớp nhỏ hơn. Khi tôi thực hiện việc chia tách đó, có cảm giác như tôi đang học vẹt. Tôi liệt kê tất cả các phương thức và bắt đầu nghĩ xem mục đích của chúng là gì. Các câu hỏi tôi đặt ra là "Tại sao phương thức này lại ở đây?" và “Nó đang làm gì cho lớp này?” Sau đó, tôi nhóm chúng thành các danh sách, tập hợp các phương thức có cùng lý do tồn tại ở đó.
 
-Tôi gọi đây là cách xác định trách nhiệm theo nhóm phương pháp. Đó chỉ là một trong nhiều cách để xác định trách nhiệm trong code hiện có.
+Tôi gọi đây là cách xác định trách nhiệm theo nhóm phương thức. Đó chỉ là một trong nhiều cách để xác định trách nhiệm trong code hiện có.
 
 Học cách xác định trách nhiệm là một kỹ năng thiết kế quan trọng và cần phải thực hành. Có vẻ kỳ lạ khi nói về kỹ năng thiết kế trong bối cảnh làm việc với code kế thừa này, nhưng thực sự có rất ít sự khác biệt giữa việc khám phá trách nhiệm trong code hiện có và xây dựng chúng cho code mà bạn chưa viết. Điều quan trọng là có thể xác định trách nhiệm và học cách phân chia chúng cho tốt. Thậm chí, code kế thừa còn cung cấp nhiều khả năng áp dụng kỹ năng thiết kế hơn cả các tính năng mới. Sẽ dễ dàng hơn để nói về sự cân bằng trong thiết kế khi bạn có thể thấy code bị ảnh hưởng và cũng dễ dàng hơn để xem liệu cấu trúc có phù hợp trong một ngữ cảnh nhất định hay không vì ngữ cảnh đó là có thật và ở ngay trước mắt chúng ta.
 
@@ -80,3 +80,63 @@ Hình 20.3 `RuleParser` và `TermTokenizer`.
 Khi bạn đang cố gắng chia nhỏ một lớp lớn, bạn rất dễ mất nhiều thời gian với tên của các phương thức. Rốt cuộc thì, chúng là một trong những điều đáng chú ý nhất trong một lớp. Nhưng tên của các phương thức không nói lên toàn bộ câu chuyện. Các lớp lớn thường chứa các phương thức thực hiện nhiều việc ở nhiều mức độ trừu tượng khác nhau. Chẳng hạn, một phương thức có tên `updateScreen()` có thể tạo văn bản cho một màn hình, định dạng nó và gửi nó tới một số đối tượng GUI khác nhau. Chỉ nhìn vào tên phương thức, bạn sẽ không biết có bao nhiêu công việc đang diễn ra và bao nhiêu trách nhiệm được đặt trong đó.
 
 Vì lý do này, bạn nên thực hiện đôi chút tái cấu trúc trích xuất phương thức trước khi thực sự giải quyết các lớp để trích xuất. Những phương thức nào bạn nên trích xuất? Tôi xử lý việc này bằng cách tìm kiếm các quyết định. Có bao nhiêu điều được giả định trong code? Là các phương thức được gọi từ một API cụ thể? Có giả định rằng nó sẽ luôn truy cập cùng một cơ sở dữ liệu hay không? Nếu code đang thực hiện những điều này, bạn nên trích xuất các phương thức phản ánh những gì bạn giả định ở mức cao. Nếu bạn đang lấy thông tin cụ thể từ cơ sở dữ liệu, hãy trích xuất một phương thức được đặt tên theo thông tin bạn đang nhận. Khi bạn thực hiện các thao tác trích xuất này, bạn có nhiều phương thức hơn, nhưng bạn cũng có thể thấy rằng việc nhóm các phương thức đó sẽ dễ dàng hơn. Hơn thế nữa, bạn có thể thấy rằng mình đã đóng gói hoàn toàn một số tài nguyên đằng sau một tập hợp các phương thức. Khi bạn trích xuất một lớp cho chúng, bạn sẽ phá vỡ một số phụ thuộc vào các chi tiết cấp thấp.
+
+> Kinh nghiệm #4: Tìm kiếm các liên kết bên trong
+> Tìm các liên kết giữa các biến đối tượng và phương thức. Có phải các biến đối tượng nhất định được sử dụng bởi một số phương thức này chứ không phải các phương thức khác?
+
+Thật khó để tìm thấy các lớp mà trong đó tất cả các phương thức đều sử dụng tất cả các biến đối tượng. Thông thường có một số loại "gộp" trong một lớp. Hai hoặc ba phương thức có thể là những phương thức duy nhất sử dụng bộ ba biến. Thường thì những cái tên sẽ giúp bạn thấy điều này. Chẳng hạn, trong lớp `RulerParser`, có một biến danh sách tên là `variables` và phương thức có tên là `addVariable`. Điều này thấy có một mối quan hệ rõ ràng giữa phương thức và biến đó. Nó không cho chúng ta biết rằng không có phương thức nào khác truy cập vào biến đó, nhưng ít nhất chúng ta có một nơi để bắt đầu tìm kiếm.
+
+Một kỹ thuật khác mà chúng ta có thể sử dụng để tìm những "khối u" này là tạo một bản phác thảo nhỏ về các mối quan hệ bên trong một lớp. Chúng được gọi là bản phác thảo tính năng. Chúng hiển thị các phương thức và biến thể hiện mà mỗi phương thức trong một lớp sử dụng và chúng khá dễ thực hiện. Đây là một ví dụ:
+
+```java
+class Reservation
+{
+  private int duration;
+  private int dailyRate;
+  private Date date;
+  private Customer customer;
+  private List fees = new ArrayList();
+
+  public Reservation(Customer customer, int duration, int dailyRate, Date date) {
+    this.customer = customer;
+    this.duration = duration;
+    this.dailyRate = dailyRate;
+    this.date = date;
+  }
+
+  public void extend(int additionalDays) {
+    duration += additionalDays;
+  }
+
+  public void extendForWeek() {
+    int weekRemainder = RentalCalendar.weekRemainderFor(date);
+    final int DAYS_PER_WEEK = 7;
+    extend(weekRemainder);
+    dailyRate = RateCalculator.computeWeekly(customer.getRateCode()) / DAYS_PER_WEEK;
+  }
+
+  public void addFee(FeeRider rider) {
+    fees.add(rider);
+  }
+
+  int getAdditionalFees() {
+    int total = 0;
+    for(Iterator it = fees.iterator(); it.hasNext(); ) {
+      total += ((FeeRider)(it.next())).getAmount();
+    }
+    return total;
+  }
+  
+  int getPrincipalFee() {
+    return dailyRate * RateCalculator.rateBase(customer) * duration;
+  }
+
+  public int getTotalFee() {
+    return getPrincipalFee() + getAdditionalFees();
+  }
+}
+```
+
+Bước đầu tiên là vẽ các vòng tròn cho từng biến, như trong Hình 20.4.
+
+Tiếp theo, chúng ta xem xét từng phương thức và cho nó một vòng tròn. Sau đó, chúng ta nối vòng tròn phương thức đến các vòng tròn của biến thể hiện mà phương thức đó truy cập hoặc sửa đổi. Có thể bỏ qua các hàm khởi tạo. Nói chung, chúng sửa đổi từng biến thể hiện.
