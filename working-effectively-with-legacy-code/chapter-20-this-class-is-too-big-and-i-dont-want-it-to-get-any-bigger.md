@@ -140,3 +140,27 @@ class Reservation
 Bước đầu tiên là vẽ các vòng tròn cho từng biến, như trong Hình 20.4.
 
 Tiếp theo, chúng ta xem xét từng phương thức và cho nó một vòng tròn. Sau đó, chúng ta nối vòng tròn phương thức đến các vòng tròn của biến thể hiện mà phương thức đó truy cập hoặc sửa đổi. Có thể bỏ qua các hàm khởi tạo. Nói chung, chúng sửa đổi từng biến thể hiện.
+
+![20.4](images/20/20-4.png)
+Hình 20.4 Các biến trong lớp `Reservation`.
+
+Hình 20.5 hiển thị sơ đồ sau khi thêm một vòng tròn cho phương thức `extend`:
+
+![20.5](images/20/20-5.png)
+Hình 20.5 phương thức `extend` sử dụng biến `duration`.
+
+> Nếu bạn đã đọc các chương mô tả về phác thảo hiệu ứng, bạn có thể thấy rằng _phác thảo tính năng_ trông rất giống _phác thảo hiệu ứng (155)_. Về cơ bản, chúng khá giống nhau. Sự khác biệt chính là hướng các mũi tên được đảo ngược. Trong các bản _phác thảo tính năng_, các mũi tên đi theo hướng của một phương thức hoặc biến được sử dụng bởi một phương thức hoặc biến khác. Trong các bản _phác thảo hiệu ứng_, mũi tên chỉ vào các phương thức hoặc biến bị ảnh hưởng bởi các phương thức và biến khác.
+> 
+> Đây là hai cách khác nhau, hoàn toàn hợp lý để xem xét các tương tác trong một hệ thống. Bản _phác thảo tính năng_ là tuyệt vời để lập bản đồ cấu trúc bên trong của các lớp. Bản _phác thảo hiệu ứng (155)_ rất lý tưởng để suy diễn từ một điểm thay đổi.
+> 
+> Có khó hiểu khi chúng trông hơi giống nhau không? Không thực sự. Những bản phác thảo này là những công cụ dùng một lần. Chúng là thứ mà bạn ngồi xuống và thảo luận với một đồng nghiệp trong khoảng 10 phút trước khi bạn thực hiện các thay đổi của mình. Sau đó, bạn ném chúng đi. Có rất ít giá trị trong việc giữ chúng về sau, vì vậy có rất ít khả năng chúng sẽ bị nhầm lẫn với nhau.
+
+Hình 20.6 hiển thị bản phác thảo sau khi thêm các vòng tròn cho từng chức năng và các đường kẻ cho tất cả các đối tượng mà chúng sử dụng:
+
+![20.6](images/20/20-6.png)
+Hình 20.6 Phác thảo tính năng cho lớp `Reservation`.
+
+Chúng ta có thể thấy được gì từ bản phác thảo này? Một điều hiển nhiên là có một chút phân cụm trong lớp này. Các biến `duration`, `dailyRate`, `date` và `customer` được sử dụng chủ yếu bởi `getPrincipalFee`, `extend` và `extendForWeek`. Có bất kỳ phương thức nào trong số này được công khai không? Có, `extend` và `extendForWeek`, nhưng `getPrincipalFee` thì không. Hệ thống của chúng ta sẽ như thế nào nếu chúng ta biến cụm này thành lớp riêng của nó (xem Hình 20.7)?
+
+![20.7](images/20/20-7.png)
+Hình 20.7 Một cụm bên trong lớp `Reservation`.
