@@ -164,3 +164,51 @@ Chúng ta có thể thấy được gì từ bản phác thảo này? Một đi�
 
 ![20.7](images/20/20-7.png)
 Hình 20.7 Một cụm bên trong lớp `Reservation`.
+
+
+Hình tròn lớn trong sơ đồ có thể là một lớp mới. Nó cần phải có phương thức `extend`, `extendForWeek` và `getPrincipalFee` làm phương thức public, nhưng tất cả các phương thức khác có thể là private. Chúng ta có thể giữ `fees`, `addFee`, `getAdditionalFees`, và `getTotalFee` trong lớp `Reservation` và ủy quyền cho lớp mới (xem Hình 20.8)
+
+![20.8](images/20/20-8.png)
+Hình 20.8 `Reservation` sử dụng lớp mới.
+
+Điều quan trọng cần tìm hiểu trước khi thử thực hiện việc này là liệu lớp mới có trách nhiệm rõ ràng và tốt hơn hay không. Chúng ta có thể nghĩ ra một cái tên cho nó không? Nó dường như làm hai việc: gia hạn đặt chỗ và tính phí gốc. Có vẻ như `Reservation` là một cái tên hay, nhưng đã được sử dụng cho lớp ban đầu.
+
+Có một khả năng khác. Chúng ta có thể thử cách khác. Thay vì trích xuất tất cả code trong vòng tròn lớn, chúng ta có thể trích xuất phần khác, như trong Hình 20.9. 
+
+Chúng ta có thể gọi lớp được trích xuất `FeeCalculator`. Điều đó có thể hiệu quả, nhưng phương thức `getTotalFee` cần gọi `getPrincipalFee` trên `Reservation` — phải không nhỉ?
+
+![20.9](images/20/20-9.png)
+Hình 20.9 Nhìn nhập `Reservation` theo một cách khác.
+
+Điều gì sẽ xảy ra nếu chúng ta gọi `getPrincipalFee` trong `Reservation` và sau đó truyền giá trị đó vào `FeeCalculator`? Đây là một bản phác thảo của khác:
+
+```java
+public class Reservation
+{
+  ...
+  private FeeCalculator calculator = new FeeCalculator();
+
+  private int getPrincipalFee() {
+    ...
+  }
+
+  public Reservation(Customer customer, int duration, int dailyRate, Date date) {
+    this.customer = customer;
+    this.duration = duration;
+    this.dailyRate = dailyRate;
+    this.date = date;
+  }
+
+  ...
+
+  public void addFee(FeeRider fee) {
+    calculator.addFee(fee);
+  }
+
+  public getTotalFee() {
+    int baseFee = getPrincipalFee();
+    return calculator.getTotalFee(baseFee);
+  }
+}
+```
+
