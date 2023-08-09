@@ -212,3 +212,15 @@ public class Reservation
 }
 ```
 
+Cuối cùng chúng ta sẽ thu được cấu trúc như Hình 20.10.
+
+Chúng ta thậm chí có thể xem xét việc chuyển `getPrincipalFee` sang `FeeCalculator` để làm cho trách nhiệm phù hợp hơn với tên lớp, nhưng nhận thấy `getPrincipalFee` phụ thuộc vào một số biến trong `Reservation`, nên tốt hơn là giữ nguyên vị trí cho nó.
+
+![20.10](images/20/20-10.png)
+Hình 20.10 `Reservation` sử dụng `FeeCalculator`
+
+Bản phác thảo tính năng là một công cụ tuyệt vời để tìm trách nhiệm riêng biệt của lớp. Chúng ta có thể nhóm các tính năng lại và tìm ra những lớp có thể trích xuất dựa theo tên. Nhưng ngoài việc tìm ra trách nhiệm, các bản phác thảo tính năng còn cho phép chúng ta xác định cấu trúc phụ thuộc bên trong các lớp và điều đó thường quan trọng ngang với trách nhiệm khi quyết định trích xuất lớp con. Trong ví dụ này, có hai cụm biến và phương thức tách biệt rõ ràng. Mối liên hệ duy nhất giữa chúng là lệnh gọi `getPrincipalFee` bên trong `getTotalFee`. Trong các bản phác thảo tính năng, chúng ta thường thấy các kết nối này là một tập hợp nhỏ các đường kết nối các cụm lớn hơn. Tôi gọi đây là _điểm mấu chốt (180)_, và tôi sẽ nói về chúng nhiều hơn trong _Chương 12, Tôi cần thực hiện nhiều thay đổi trong một khu vực. Tôi có phải phá vỡ các phụ thuộc của tất cả các lớp liên quan không?_
+
+Đôi khi sau khi vẽ một bản phác thảo, bạn không tìm thấy bất kỳ điểm mấu chốt nào. Không phải lúc nào chúng cũng tồn tại. Nhưng ít nhất, việc xem tên và sự phụ thuộc giữa các tính năng hoàn toàn hữu ích.
+
+Khi có bản phác thảo, bạn có thể thử các cách chia lớp khác nhau. Để làm điều này, hãy khoanh vùng các nhóm tính năng, các đường giao nhau có thể xác định giao diện của một lớp mới. Khi khoanh vùng, hãy cố gắng nghĩ ra tên lớp cho mỗi nhóm. Thành thật mà nói, ngoài bất cứ điều gì bạn chọn làm hoặc không làm khi trích xuất các lớp con, đây là một cách tuyệt vời để nâng cao kỹ năng đặt tên của bạn. Đó cũng là một cách tốt để khám phá các lựa chọn thay thế thiết kế.
