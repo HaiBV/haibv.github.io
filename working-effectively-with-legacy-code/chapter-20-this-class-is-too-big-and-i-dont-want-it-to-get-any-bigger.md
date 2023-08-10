@@ -224,3 +224,28 @@ Bản phác thảo tính năng là một công cụ tuyệt vời để tìm tr�
 Đôi khi sau khi vẽ một bản phác thảo, bạn không tìm thấy bất kỳ điểm mấu chốt nào. Không phải lúc nào chúng cũng tồn tại. Nhưng ít nhất, việc xem tên và sự phụ thuộc giữa các tính năng hoàn toàn hữu ích.
 
 Khi có bản phác thảo, bạn có thể thử các cách chia lớp khác nhau. Để làm điều này, hãy khoanh vùng các nhóm tính năng, các đường giao nhau có thể xác định giao diện của một lớp mới. Khi khoanh vùng, hãy cố gắng nghĩ ra tên lớp cho mỗi nhóm. Thành thật mà nói, ngoài bất cứ điều gì bạn chọn làm hoặc không làm khi trích xuất các lớp con, đây là một cách tuyệt vời để nâng cao kỹ năng đặt tên của bạn. Đó cũng là một cách tốt để khám phá các lựa chọn thay thế thiết kế.
+
+> Kinh nghiệm #5: Tìm kiếm trách nhiệm chính
+>
+> Cố gắng mô tả trách nhiệm của lớp trong một câu duy nhất.
+
+_Nguyên tắc Trách nhiệm Duy nhất_ quy định rằng các lớp nên có một trách nhiệm duy nhất. Nếu đúng như vậy, sẽ dễ dàng viết ra trong một câu. Hãy thử cách này với một trong những lớp lớn trong hệ thống của bạn. Nghĩ về những gì khách hàng cần và mong đợi từ một lớp, từ đó thêm các mệnh đề vào câu. Lớp đó làm cái này, cái này, cái này, cái kia. Có điều gì trông có vẻ quan trọng hơn bất cứ những điều khác không? Nếu có, bạn có thể đã tìm thấy trách nhiệm chính của lớp. Các trách nhiệm khác có lẽ nên được đưa vào các lớp khác.
+
+Có hai cách khiến _Nguyên tắc Trách nhiệm Duy nhất_ bị vi phạm. Nó có thể bị vi phạm ở cấp độ giao diện và ở cấp độ triển khai. SRP bị vi phạm ở cấp độ giao diện khi một lớp trình bày một giao diện làm cho có vẻ như nó chịu trách nhiệm cho một số lượng rất lớn mọi thứ. Chẳng hạn, giao diện của lớp này (xem Hình 20.11) trông giống như nó có thể được chia thành ba hoặc bốn lớp.
+
+![20.11](images/20/20-11.png)
+Hình 20.11 Lớp `ScheduledJob`
+
+Vi phạm SRP mà chúng ta quan tâm nhất là vi phạm ở cấp độ triển khai. Nói một cách đơn giản, chúng ta quan tâm liệu lớp đó có thực sự triển khai tất cả những việc đó hay không hay nó chỉ ủy quyền cho một vài lớp khác. Nếu nó đại biểu, chúng ta không có một lớp nguyên khối lớn; chúng ta chỉ có một lớp là mặt tiền, giao diện người dùng cho một loạt các lớp nhỏ và điều đó có thể dễ quản lý hơn.
+
+Hình 20.12 cho thấy lớp `ScheduledJob` với các trách nhiệm được giao cho một vài lớp khác.
+
+![20.12](images/20/20-12.png)
+Hình 20.12 `ScheduledJob` với các lớp con được trích xuất.
+
+_Nguyên tắc Trách nhiệm Duy nhất_ vẫn bị vi phạm ở cấp độ giao diện, nhưng ở cấp độ triển khai, mọi thứ đã tốt hơn một chút.
+
+Làm thế nào chúng ta sẽ giải quyết vấn đề ở cấp độ giao diện? Điều này khó hơn một chút. Cách tiếp cận chung là xem liệu các lớp được ủy quyền có thực sự được sử dụng trực tiếp ở lời gọi hay không. Ví dụ: nếu chỉ có một số lời gọi quan tâm đến việc chạy `ScheduledJobs`, chúng ta có thể cấu trúc lại theo hướng như thế này:
+
+![20.13](images/20/20-13.png)
+Hình 20.13 Giao diện dành riêng cho lời gọi của `ScheduledJob`.
