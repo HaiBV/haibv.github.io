@@ -249,3 +249,19 @@ Làm thế nào chúng ta sẽ giải quyết vấn đề ở cấp độ giao d
 
 ![20.13](images/20/20-13.png)
 Hình 20.13 Giao diện dành riêng cho lời gọi của `ScheduledJob`.
+
+Giờ đây, lời gọi chỉ cần quan tâm đến việc kiểm soát `jobs` chấp nhận `ScheduledJobs` như `JobControllers`. Kỹ thuật tạo giao diện cho một nhóm lời gọi cụ thể này giữ cho thiết kế phù hợp với _Nguyên tắc phân chia Giao diện_.
+
+> Nguyên tắc Phân chia Giao diện (ISP)
+> 
+> Với một lớp lớn, hiếm khi tất cả các lời gọi của nó sử dụng tất cả các phương thức của nó. Thông thường chúng ta có thể thấy các nhóm phương pháp khác nhau mà các lời gọi cụ thể sử dụng. Nếu chúng ta tạo một giao diện cho từng nhóm này và yêu cầu lớp lớn triển khai các giao diện đó thì mỗi khách hàng có thể thấy lớp lớn thông qua giao diện cụ thể đó. Điều này giúp chúng ta ẩn thông tin đồng thời giảm sự phụ thuộc vào hệ thống. Các lời gọi không phải biên dịch lại khi lớp lớn triển khai.
+
+Khi có giao diện cho các nhóm lời gọi cụ thể, chúng ta thường có thể bắt đầu chuyển code từ lớp lớn sang lớp mới sử dụng lớp gốc, như bạn có thể thấy trong Hình 20.14.
+
+![20.14](images/20/20-14.png)
+Hình 20.14 Phân chia giao diện của `ScheduledJob`
+
+Thay vì ủy quyền `ScheduledJob` cho `JobController`, chúng ta đã ủy quyền `JobController` cho `ScheduledJob`. Giờ đây, bất cứ khi nào lời gọi muốn chạy một `ScheduledJob`, nó sẽ tạo một `JobController`, truyền nó vào một `ScheduledJob` và sử dụng `JobController` để xử lý việc thực thi của nó.
+
+Kiểu tái cấu trúc này hầu như luôn khó hơn so với mô ta của nó. Thông thường, để làm điều này, bạn phải hiển thị nhiều phương thức hơn trong giao diện chung của lớp ban đầu `(ScheduledJob)` để giao diện mới `(StandardJobController)` có quyền truy cập vào mọi thứ nó cần để thực hiện công việc của mình. Thường thì phải mất khá nhiều công sức để tạo ra sự thay đổi như thế này. Code lời gọi bây giờ phải được thay đổi để sử dụng lớp mới thay vì lớp cũ; để làm điều đó một cách an toàn, bạn cần có các kiểm thử với những lời gọi đó. Tuy nhiên, điểm thú vị về việc tái cấu trúc này là nó cho phép bạn loại bỏ giao diện của một lớp lớn. Lưu ý rằng `ScheduledJob` không còn có các phương thức trong `JobController`.
+
