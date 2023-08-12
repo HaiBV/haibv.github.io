@@ -265,3 +265,21 @@ Thay vì ủy quyền `ScheduledJob` cho `JobController`, chúng ta đã ủy qu
 
 Kiểu tái cấu trúc này hầu như luôn khó hơn so với mô ta của nó. Thông thường, để làm điều này, bạn phải hiển thị nhiều phương thức hơn trong giao diện chung của lớp ban đầu `(ScheduledJob)` để giao diện mới `(StandardJobController)` có quyền truy cập vào mọi thứ nó cần để thực hiện công việc của mình. Thường thì phải mất khá nhiều công sức để tạo ra sự thay đổi như thế này. Code lời gọi bây giờ phải được thay đổi để sử dụng lớp mới thay vì lớp cũ; để làm điều đó một cách an toàn, bạn cần có các kiểm thử với những lời gọi đó. Tuy nhiên, điểm thú vị về việc tái cấu trúc này là nó cho phép bạn loại bỏ giao diện của một lớp lớn. Lưu ý rằng `ScheduledJob` không còn có các phương thức trong `JobController`.
 
+> Kinh nghiệm số 6: Khi tất cả các cách khác đều thất bại, hãy thực tái cấu trúc từ đầu
+> 
+> Nếu bạn gặp nhiều khó khăn khi xem xét trách nhiệm trong một lớp, hãy tái cấu trúc từ đầu
+
+_Tái cấu trúc từ đầu (212)_ là một công cụ mạnh mẽ. Chỉ cần nhớ rằng đó là một bài tập nhân tạo. Những thứ bạn nhìn thấy khi "cào" là
+những thứ bạn sẽ đạt được khi tái cấu trúc.
+
+> Kinh nghiệm #7: Tập trung vào công việc hiện tại
+> 
+> Hãy chú ý đến những gì bạn đang phải làm. Nếu bạn đang đưa ra một cách làm khác, bạn có thể đã xác định được trách nhiệm mà bạn nên trích xuất và sau đó cho phép thay thế.
+
+Rất dễ bị quá tải bởi số lượng trách nhiệm riêng biệt có thể xác định trong một lớp. Hãy nhớ rằng những thay đổi bạn đang thực hiện đang cho biết về một số cách cụ thể mà phần mềm có thể thay đổi. Thông thường chỉ cần nhận ra cách thay đổi đó là đủ để xem đoạn code mới mà bạn viết là một trách nhiệm riêng.
+
+## Các phương pháp khác
+
+Các phương pháp phỏng đoán để xác định trách nhiệm thực sự có thể giúp bạn đào sâu và tìm ra những khái niệm trừu tượng mới trong các lớp cũ, nhưng chúng chỉ là những thủ thuật. Cách để thực sự giỏi hơn trong việc nhận dạng là đọc nhiều hơn. Đọc sách về các mẫu thiết kế. Quan trọng hơn, hãy đọc code của người khác. Hãy xem xét các dự án nguồn mở và dành chút thời gian để duyệt xem người khác thực hiện mọi việc như thế nào. Hãy chú ý đến cách các lớp được đặt tên và sự tương ứng giữa tên lớp và tên của các phương thức. Theo thời gian, bạn sẽ giỏi hơn trong việc xác định các trách nhiệm ẩn giấu và bạn sẽ bắt đầu nhìn thấy chúng khi duyệt qua code lạ.
+
+
