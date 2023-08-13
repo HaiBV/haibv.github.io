@@ -282,4 +282,22 @@ Rất dễ bị quá tải bởi số lượng trách nhiệm riêng biệt có 
 
 Các phương pháp phỏng đoán để xác định trách nhiệm thực sự có thể giúp bạn đào sâu và tìm ra những khái niệm trừu tượng mới trong các lớp cũ, nhưng chúng chỉ là những thủ thuật. Cách để thực sự giỏi hơn trong việc nhận dạng là đọc nhiều hơn. Đọc sách về các mẫu thiết kế. Quan trọng hơn, hãy đọc code của người khác. Hãy xem xét các dự án nguồn mở và dành chút thời gian để duyệt xem người khác thực hiện mọi việc như thế nào. Hãy chú ý đến cách các lớp được đặt tên và sự tương ứng giữa tên lớp và tên của các phương thức. Theo thời gian, bạn sẽ giỏi hơn trong việc xác định các trách nhiệm ẩn giấu và bạn sẽ bắt đầu nhìn thấy chúng khi duyệt qua code lạ.
 
+## Tiến về phía trước
 
+Khi bạn đã xác định được nhiều trách nhiệm khác nhau trong một lớp lớn, vẫn còn hai vấn đề khác cần giải quyết: chiến lược và chiến thuật. Trước tiên hãy nói về chiến lược.
+
+### Chiến lược
+
+Chúng ta nên làm gì khi đã xác định được tất cả những trách nhiệm riêng biệt của lớp? Chúng ta có nên dành một tuần để "tấn công" các lớp lớn trong hệ thống không? Chúng ta có nên chia chúng thành từng phần nhỏ không? Nếu bạn có thời gian để làm điều đó thì thật tuyệt, nhưng hiếm khi có thể. Điều này cũng có thể có rủi ro. Trong hầu hết mọi trường hợp mà tôi đã thấy, khi các nhóm thực hiện quá trình tái cấu trúc lớn, độ ổn định của hệ thống sẽ bị phá vỡ trong một thời gian ngắn, ngay cả khi họ cẩn thận và viết kiểm thử trong toàn bộ quá trình thực hiện. Nếu bạn đang ở giai đoạn đầu của chu kỳ phát hành, sẵn sàng chấp nhận rủi ro và có thời gian, thì việc tái cấu trúc có thể ổn. Chỉ cần đừng để các lỗi ngăn cản bạn thực hiện việc tái cấu trúc khác.
+
+Cách tốt nhất để chia nhỏ các lớp lớn là xác định trách nhiệm, đảm bảo rằng mọi người khác trong nhóm đều hiểu chúng và sau đó chia nhỏ lớp khi cần thiết. Khi làm điều đó, bạn sẽ phân tán rủi ro về những thay đổi và có thể hoàn thành công việc khác khi thực hiện.
+
+### Chiến thuật
+
+Trong hầu hết các hệ thống cũ, điều mà bạn có thể hy vọng nhất lúc ban đầu là bắt đầu áp dụng SRP ở cấp triển khai: Về cơ bản là trích xuất các lớp con từ lớp lớn của bạn và ủy quyền cho chúng. Việc áp dụng SRP ở cấp độ giao diện đòi hỏi khối lượng công việc nhiều hơn. Các lời gọi của lớp phải thay đổi và bạn cần các kiểm thử cho chúng. Thật thú vị, việc áp dụng SRP ở cấp triển khai giúp việc áp dụng nó ở cấp giao diện sau này dễ dàng hơn. Trước tiên hãy xem xét cấp độ triển khai.
+
+Các kỹ thuật mà bạn sử dụng để trích xuất lớp con phụ thuộc vào một số yếu tố. Một là bạn có thể dễ dàng xác định các kiểm thử với các phương thức có thể bị ảnh hưởng. Bạn nên xem qua lớp và liệt kê tất cả các biến thực thể cũng như phương thức sẽ phải di chuyển. Từ đó, bạn sẽ có ý tưởng tốt về những phương thức bạn nên viết kiểm thử. Trong trường hợp lớp `RuleParser` đã xem xét trước đây, nếu chúng ta đang cân nhắc việc tách một lớp `TermTokenizer`, thì chúng ta muốn di chuyển các biến dạng chuỗi có tên là `current` và `currentPosition`, cũng như `hasMoreTerms` và `nextTerm`. Thực tế, `hasMoreTerms` và `nextTerm` là privated có nghĩa là chúng ta thực sự không thể viết kiểm thử trực tiếp cho chúng. Chúng ta có thể công khai chúng (dù sao chúng cũng sẽ bị di chuyển), nhưng việc tạo một `RuleParser` trong kiểm thử khai thác và cung cấp cho nó một tập hợp các chuỗi để đánh giá cũng có thể dễ dàng như vậy. Nếu làm như vậy, chúng ta sẽ có các kiểm thử bao gồm `hasMoreTerms` và `nextTerm`, đồng thời chúng ta sẽ có thể chuyển chúng sang lớp mới một cách an toàn.
+
+Thật không may, nhiều lớp lớn khó khởi tạo trong kiểm thử khai thác. Xem _Chương 9, Tôi không thể đưa lớp này vào kiểm thử khai thác_ để biết một số mẹo có thể sử dụng để tiến về phía trước. Nếu bạn có thể khởi tạo lớp, bạn có thể cần sử dụng đến các mẹo trong _Chương 10 - Tôi không thể đưa lớp này vào kiểm thử khai thác_, để thực hiện các kiểm thử.
+
+Nếu bạn có thể thực hiện các kiểm thử tại chỗ, bạn có thể bắt đầu trích xuất một lớp theo cách rất đơn giản, bằng cách sử dụng phép tái cấu trúc _Trích xuất lớp_ được mô tả trong cuốn sách _Refactoring: Improving the Design of Existing Code (Addison Wesley, 1999)_. Tuy nhiên, nếu bạn không thể thực hiện các kiểm thử tại chỗ, bạn vẫn có thể tiến về phía trước, mặc dù theo cách rủi ro hơn một chút. Đây là một cách tiếp cận rất thận trọng và nó hoạt động bất kể bạn có công cụ tái cấu trúc hay không. Dưới đây là các bước:
