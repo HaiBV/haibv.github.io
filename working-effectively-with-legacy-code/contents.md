@@ -52,9 +52,9 @@ Chương 19 - Dự án của tôi không hướng đối tượng. Làm cách n�
 
 [Chương 20 - Lớp này quá lớn và tôi không muốn nó lớn hơn nữa](./chapter-20-this-class-is-too-big-and-i-dont-want-it-to-get-any-bigger.html)
 
-Chương 21 - Tôi đang thay đổi cùng một đoạn code ở khắp mọi nơi
+[Chương 21 - Tôi đang thay đổi cùng một đoạn code ở khắp mọi nơi](./chapter-21-im-changing-the-same-code-all-over-the-place.html)
 
-Chương 22 - Tôi Cần Thay đổi một Phương thức "Quái vật" và Tôi Không thể Viết Kiểm thử cho Nó
+[Chương 22 - Tôi Cần Thay đổi một Phương thức "Quái vật" và Tôi Không thể Viết Kiểm thử cho Nó](./chapter-22-i-need-to-change-a-monster-method-and-i-cant-write-tests-for-it.html)
 
 [Chương 23 - Làm thế nào để biết rằng tôi không làm phá vỡ bất cứ thứ gì?](./chapter-23-how-do-i-know-that-im-not-breaking-anything.html)
 
