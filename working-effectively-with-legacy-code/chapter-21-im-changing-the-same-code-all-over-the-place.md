@@ -109,3 +109,54 @@ Có vẻ như có rất nhiều sự trùng lặp, nhưng vậy thì sao? Khối
 Hãy thử xác định những phần trùng lặp và loại bỏ nó, rồi xem cuối cùng chúng ta sẽ thu được điều gì. Sau đó, chúng ta có thể quyết định xem việc loại bỏ trùng lặp có thực sự hữu ích hay không.
 
 Điều đầu tiên chúng ta cần là một bộ kiểm thử để chạy sau mỗi lần tái cấu trúc. Để ngắn gọn, chúng ta sẽ không mô tả nhưng hãy nhớ rằng chúng có ở đó.
+
+## Bước thứ nhất
+
+Phản ứng đầu tiên của tôi khi gặp phải sự trùng lặp là lùi lại và tìm hiểu toàn bộ phạm vi của nó. Khi bắt đầu làm điều này, tôi suy nghĩ về loại lớp sẽ thu được và những phần trùng lặp được trích xuất sẽ trông như thế nào. Sau đó tôi nhận ra rằng mình thực sự đã suy nghĩ quá nhiều về chuyện đó. Việc loại bỏ các phần trùng lặp nhỏ sẽ giúp ích và giúp bạn dễ dàng nhìn thấy các phần trùng lặp lớn hơn sau này. Ví dụ: trong phương thức ghi của `loginCommand`, chúng ta có code này:
+
+```java
+  outputStream.write(userName.getBytes());
+  outputStream.write(0x00);
+  outputStream.write(passwd.getBytes());
+  outputStream.write(0x00);
+```
+
+Khi chúng ta viết ra một chuỗi, chúng ta cũng viết một ký tự `null` kết thúc `(0x00)`. Chúng ta có thể trích xuất phần trùng lặp này như thế này. Tạo một phương thức có tên `writeField` có đầu ra và đầu vào dạng chuỗi. Sau đó, phương thức này ghi chuỗi vào đầu ra và kết thúc bằng cách ghi một giá trị rỗng.
+
+```java
+void writeField(OutputStream outputStream, String field) {
+  outputStream.write(field.getBytes());
+  outputStream.write(0x00);
+}
+```
+
+> Chọn vị trí bắt đầu
+> 
+> Khi thực hiện một loạt các phép tái cấu trúc để loại bỏ sự trùng lặp, chúng ta có thể có được các cấu trúc khác nhau, tùy thuộc vào nơi chúng ta bắt đầu. Ví dụ, hãy tưởng tượng rằng chúng ta có một phương thức như thế này:
+>
+> void c() { a(); a(); b(); a(); b(); b(); }
+> 
+> Nó có thể được chia nhỏ như thế này:
+> 
+> void c() { aa(); b(); a(); bb(); }
+> 
+> hoặc như thế này:
+> 
+> void c() { a(); ab(); ab(); b(); }
+> 
+> Vậy chúng ta nên chọn cái nào? Sự thật là nó không tạo ra nhiều khác biệt về mặt cấu trúc. Cả hai đều tốt hơn những gì chúng ta đang có và có thể tiếp tục cấu trúc lại chúng thành nhóm khác nếu cần. Đây không phải là quyết định cuối cùng. Thay vào đó, tôi quyết định sẽ chú ý đến những cái tên được sử dụng. Nếu có thể tìm thấy tên cho hai lệnh gọi lặp lại tới a(), thì trong ngữ cảnh này, điều đó có ý nghĩa hơn là tên cho lệnh gọi đến a() theo sau là lệnh gọi đến b(), và tôi sẽ sử dụng tên đó.
+> 
+> Một phương pháp phỏng đoán khác mà tôi sử dụng là bắt đầu từ việc nhỏ. Nếu tôi có thể loại bỏ những phần trùng lặp nhỏ, tôi sẽ làm những phần đó trước vì nó thường làm cho bức tranh lớn rõ ràng hơn.
+
+Khi có phương thức đó, chúng ta có thể thay thế từng cặp ghi chuỗi/null, chạy kiểm thử định kỳ để đảm bảo rằng chúng ta không làm hỏng bất kỳ điều gì. Đây là phương thức ghi của `loginCommand` sau khi thay đổi:
+
+```java
+public void write(OutputStream outputStream) throws Exception {
+  outputStream.write(header);
+  outputStream.write(getSize());
+  outputStream.write(commandChar);
+  writeField(outputstream, username);
+  writeField(outputStream, passwd);
+  outputStream.write(footer);
+}
+```
