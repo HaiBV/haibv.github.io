@@ -160,3 +160,37 @@ public void write(OutputStream outputStream) throws Exception {
   outputStream.write(footer);
 }
 ```
+
+Cách trên giải quyết được vấn đề cho lớp `loginCommand`, nhưng không giúp ích gì cho lớp `AddEmployeeCmd`. `AddEmployeeCmd` cũng có các chuỗi ghi chuỗi/null lặp lại tương tự trong phương thức `write` của nó. Vì cả hai lớp đều là `Command` nên chúng ta có thể thiết lập một siêu lớp cho chúng có tên là `Command`. Với lớp này, chúng ta có thể kéo `writeField` lên siêu lớp để có thể sử dụng nó trong cả hai lớp `Command` (xem Hình 21.2).
+
+![21.2](images/21/21-2.png)
+Hình 21.2 Hệ thống phân cấp `Command`.
+
+Bây giờ chúng ta có thể quay lại `AddEmployeeCmd` và thay thế việc ghi chuỗi/null của nó bằng lệnh gọi tới `writeField`. Khi chúng ta hoàn tất, phương thức ghi cho `AddEmployeeCmd` sẽ trông như thế này:
+
+```java
+public void write(OutputStream outputStream) throws Exception {
+  outputStream.write(header);
+  outputStream.write(getSize());
+  outputStream.write(commandChar);
+  writeField(outputStream, name);
+  writeField(outputStream, address);
+  writeField(outputStream, city);
+  writeField(outputStream, state);
+  writeField(outputStream, yearlySalary);
+  outputStream.write(footer);
+}
+```
+
+Phương thức `write` của `LoginCommand` sẽ như thế này:
+
+```java
+public void write(OutputStream outputStream) throws Exception {
+  outputStream.write(header);
+  outputStream.write(getSize());
+  outputStream.write(commandChar);
+  writeField(outputstream, userName);
+  writeField(outputStream, passwd);
+  outputStream.write(footer);
+}
+```
