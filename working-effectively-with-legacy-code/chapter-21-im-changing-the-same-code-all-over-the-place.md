@@ -194,3 +194,70 @@ public void write(OutputStream outputStream) throws Exception {
   outputStream.write(footer);
 }
 ```
+
+Code đã sạch hơn một chút nhưng vẫn còn việc phải làm. Các phương thức `write` cho `AddEmployeeCmd` và `loginCommand` có cùng dạng: ghi `header`, `size` và command `char`; sau đó viết một loạt các trường; và cuối cùng là viết phần `footer`. Nếu chúng ta có thể trích xuất sự khác biệt bằng cách viết các trường, thì chúng ta sẽ có một phương thức `write` `loginCommand` trông như thế này:
+
+```java
+public void write(OutputStream outputStream) throws Exception {
+  outputStream.write(header);
+  outputStream.write(getSize());
+  outputStream.write(commandChar);
+  writeBody(outputstream);
+  outputStream.write(footer);
+}
+```
+
+Còn đây là `writeBody` được trích xuất:
+
+```java
+private void writeBody(OutputStream outputStream) throws Exception {
+  writeField(outputstream, userName);
+  writeField(outputStream, passwd);
+}
+```
+
+Phương thức `write` của `AddEmployeeCmd` tương tự như vậy, nhưng `writeBody` của nó trông như thế này:
+
+```java
+private void writeBody(OutputStream outputStream) throws Exception {
+  writeField(outputStream, name);
+  writeField(outputStream, address);
+  writeField(outputStream, city);
+  writeField(outputStream, state);
+  writeField(outputStream, yearlySalary);
+}
+```
+
+> Khi hai phương thức trông gần giống nhau, hãy trích xuất những điểm khác biệt so với các phương thức khác.
+> 
+> Khi bạn làm điều đó, bạn thường có thể làm cho chúng giống hệt nhau và loại bỏ một cái.
+
+Phương thức `write` của cả hai lớp trông giống hệt nhau. Chúng ta có thể chuyển phương thức ghi lên lớp `Command` không? Hiện tại thì chưa. Mặc dù cả hai trông giống nhau nhưng chúng sử dụng dữ liệu từ các lớp của chúng: `header`, `footer` và `commandChar`. Nếu chúng ta cố gắng tạo một phương thức ghi duy nhất, nó sẽ phải gọi các phương thức từ các lớp con để lấy dữ liệu đó. Chúng ta hãy xem các biến trong `AddEmployeeCmd` và `loginCommand`:
+
+```java
+public class AddEmployeeCmd extends Command {
+  String name;
+  String address;
+  String city;
+  String state;
+  String yearlySalary;
+
+  private static final byte[] header = {(byte)0xde, (byte)0xad};
+  private static final byte[] commandChar = {0x02};
+  private static final byte[] footer = {(byte)0xbe, (byte)0xef};
+  private static final int SIZE_LENGTH = 1;
+  private static final int CMD_BYTE_LENGTH = 1;
+  ...
+}
+
+public class LoginCommand extends Command {
+  private String userName;
+  private String passwd;
+  private static final byte[] header = {(byte)0xde, (byte)0xad};
+  private static final byte[] commandChar = {0x01};
+  private static final byte[] footer = {(byte)0xbe, (byte)0xef};
+  private static final int SIZE_LENGTH = 1;
+  private static final int CMD_BYTE_LENGTH = 1;
+  ...
+}
+```
