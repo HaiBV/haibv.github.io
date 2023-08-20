@@ -261,3 +261,72 @@ public class LoginCommand extends Command {
   ...
 }
 ```
+
+Cả hai lớp đều có rất nhiều dữ liệu chung. Chúng ta có thể đưa `header`, `footer`, `SIZE_LENGTH` và `CMD_BYTE_LENGTH` lên lớp `Command` vì tất cả chúng đều có cùng giá trị. Tôi sẽ tạm thời chuyển chúng thành protected để có thể biên dịch lại và kiểm thử:
+
+```java
+public class Command {
+  protected static final byte[] header = {(byte)0xde, (byte)0xad};
+  protected static final byte[] footer = {(byte)0xbe, (byte)0xef};
+  protected static final int SIZE_LENGTH = 1;
+  protected static final int CMD_BYTE_LENGTH = 1;
+  ...
+}
+```
+
+Bây giờ chúng ta chỉ còn lại biến `commandChar` trong cả hai lớp con. Nó có giá trị khác nhau trong mỗi lớp con. Một cách đơn giản để xử lý việc này là sử dụng getter trừu tượng trong lớp `Command`:
+
+```java
+public class Command {
+  protected static final byte[] header = {(byte)0xde, (byte)0xad};
+  protected static final byte[] footer = {(byte)0xbe, (byte)0xef};
+  protected static final int SIZE_LENGTH = 1;
+  protected static final int CMD_BYTE_LENGTH = 1;
+  protected abstract char [] getCommandChar();
+  ...
+}
+```
+
+Bây giờ chúng ta có thể thay thế các biến `commandChar` trên mỗi lớp con bằng phương thức `getCommandChar`:
+
+```java
+public class AddEmployeeCmd extends Command {
+  protected char [] getCommandChar() {
+    return new char [] { 0x02};
+  }
+  ...
+}
+
+public class LoginCommand extends Command {
+  protected char [] getCommandChar() {
+    return new char [] { 0x01};
+  }
+  ...
+}
+```
+
+Được rồi, bây giờ đã an toàn để xác định phương thức `write`. Sau đó, chúng ta sẽ có một lớp `Command` trông như thế này:
+
+```java
+public class Command {
+  protected static final byte[] header = {(byte)0xde, (byte)0xad};
+  protected static final byte[] footer = {(byte)0xbe, (byte)0xef};
+  protected static final int SIZE_LENGTH = 1;
+  protected static final int CMD_BYTE_LENGTH = 1;
+  protected abstract char [] getCommandChar();
+  protected abstract void writeBody(OutputStream outputStream);
+  
+  protected void writeField(OutputStream outputStream, String field) {
+    outputStream.write(field.getBytes());
+    outputStream.write(0x00);
+  }
+
+  public void write(OutputStream outputStream) throws Exception {
+    outputStream.write(header);
+    outputStream.write(getSize());
+    outputStream.write(commandChar);
+    writeBody(outputstream);
+    outputStream.write(footer);
+  }
+}
+```
