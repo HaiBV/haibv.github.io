@@ -330,3 +330,59 @@ public class Command {
   }
 }
 ```
+
+Lưu ý rằng chúng tôi phải xác định một phương thức trừu tượng cho `writeBody` và đưa nó vào `Command` (xem Hình 21.3)
+
+![21.2](images/21/21-2.png)
+Hình 21.2 Đưa `writeField` lên
+
+Sau khi chúng ta đưa phương thức `write` lên lớp cha, những thứ duy nhất còn lại trong mỗi lớp con là các phương thức `getSize`, phương thức `getCommandChar` và các hàm khởi tạo. Đây là lớp `loginCommand`:
+
+```java
+public class LoginCommand extends Command {
+  private String userName;
+  private String passwd;
+
+  public LoginCommand(String userName, String passwd) {
+    this.userName = userName;
+    this.passwd = passwd;
+  }
+
+  protected char [] getCommandChar() {
+    return new char [] { 0x01};
+  }
+
+  protected int getSize() {
+    return header.length + SIZE_LENGTH + CMD_BYTE_LENGTH + footer.length + userName.getBytes().length + 1 + passwd.getBytes().length + 1;
+  }
+}
+```
+
+Đó là một lớp khá ngắn. `AddEmployeeCmd` cũng tương tự, có phương thức `getSize` và `getCommandChar`, và không có gì khác. Hãy xem xét các phương thức `getSize` kỹ hơn một chút:
+
+Đây là phương thức của `loginCommand`:
+
+```java
+protected int getSize() {
+  return header.length +
+    SIZE_LENGTH +
+    CMD_BYTE_LENGTH +
+    footer.length +
+    userName.getBytes().length + 1 +
+    passwd.getBytes().length + 1;
+}
+```
+
+Còn đây là của `AddEmployeeCmd`
+
+```java
+private int getSize() {
+  return header.length + SIZE_LENGTH +
+    CMD_BYTE_LENGTH + footer.length +
+    name.getBytes().length + 1 +
+    address.getBytes().length + 1 +
+    city.getBytes().length + 1 +
+    state.getBytes().length + 1 +
+    yearlySalary.getBytes().length + 1;
+}
+```
