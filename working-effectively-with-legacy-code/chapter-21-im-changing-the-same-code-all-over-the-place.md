@@ -333,8 +333,8 @@ public class Command {
 
 Lưu ý rằng chúng tôi phải xác định một phương thức trừu tượng cho `writeBody` và đưa nó vào `Command` (xem Hình 21.3)
 
-![21.2](images/21/21-2.png)
-Hình 21.2 Đưa `writeField` lên
+![21.3](images/21/21-3.png)
+Hình 21.3 Đưa `writeField` lên
 
 Sau khi chúng ta đưa phương thức `write` lên lớp cha, những thứ duy nhất còn lại trong mỗi lớp con là các phương thức `getSize`, phương thức `getCommandChar` và các hàm khởi tạo. Đây là lớp `loginCommand`:
 
@@ -365,11 +365,11 @@ public class LoginCommand extends Command {
 ```java
 protected int getSize() {
   return header.length +
-    SIZE_LENGTH +
-    CMD_BYTE_LENGTH +
-    footer.length +
-    userName.getBytes().length + 1 +
-    passwd.getBytes().length + 1;
+      SIZE_LENGTH +
+      CMD_BYTE_LENGTH +
+      footer.length +
+      userName.getBytes().length + 1 +
+      passwd.getBytes().length + 1;
 }
 ```
 
@@ -378,11 +378,60 @@ Còn đây là của `AddEmployeeCmd`
 ```java
 private int getSize() {
   return header.length + SIZE_LENGTH +
-    CMD_BYTE_LENGTH + footer.length +
-    name.getBytes().length + 1 +
-    address.getBytes().length + 1 +
-    city.getBytes().length + 1 +
-    state.getBytes().length + 1 +
-    yearlySalary.getBytes().length + 1;
+      CMD_BYTE_LENGTH + footer.length +
+      name.getBytes().length + 1 +
+      address.getBytes().length + 1 +
+      city.getBytes().length + 1 +
+      state.getBytes().length + 1 +
+      yearlySalary.getBytes().length + 1;
+}
+```
+
+Vậy có cái gì giống nhau và khác nhau? Có vẻ như cả hai đều thêm `header`, độ dài của kích thước, độ dài của byte lệnh và độ dài `footer`. Sau đó, chúng thêm kích thước của từng trường của chúng. Điều gì sẽ xảy ra nếu chúng ta trích xuất những gì được tính toán khác nhau: kích thước của các trường? Chúng tôi gọi phương thức kết quả là `getBodySize()`.
+
+```java
+private int getSize() {
+  return header.length + SIZE_LENGTH + CMD_BYTE_LENGTH + footer.length + getBodySize();
+}
+```
+
+Nếu làm như vậy, chúng ta sẽ có cùng một đoạn code trong mỗi phương thức. Chúng ta cộng kích thước của tất cả dữ liệu kế toán, sau đó chúng ta cộng kích thước của phần nội dung, là tổng kích thước của tất cả các trường. Sau khi thực hiện việc này, chúng ta có thể chuyển `getSize` lên lớp `Command` và có các cách triển khai khác nhau cho `getBodySize` trong mỗi lớp con (xem Hình 21.4)
+
+![21.4](images/21/21-4.png)
+Hình 21.4 Đưa `getSize` lên
+
+Hãy nhìn vào vị trí hiện tại của chúng ta. Chúng ta có triển khai `getBody` này trong `AddEmployeeCmd`:
+
+```java
+protected int getBodySize() {
+  return name.getBytes().length + 1 +
+      address.getBytes().length + 1 +
+      city.getBytes().length + 1 +
+      state.getBytes().length + 1 +
+      yearlySalary.getBytes().length + 1;
+}
+```
+
+Chúng ta đã bỏ qua một số sự trùng lặp khá rõ ràng ở đây. Chúng hơi nhỏ nhưng các bạn hãy nhiệt tình loại bỏ nó hoàn toàn nhé:
+
+```java
+protected int getFieldSize(String field) {
+  return field.getBytes().length + 1;
+}
+
+protected int getBodySize() {
+  return getFieldSize(name) +
+      getFieldSize(address) +
+      getFieldSize(city) +
+      getFieldSize(state) +
+      getFieldSize(yearlySalary);
+}
+```
+
+Nếu chúng ta di chuyển phương thức `getFieldSize` lên lớp `Command`, chúng ta cũng có thể sử dụng nó trong phương thức `getBodySize` của `loginCommand`:
+
+```java
+protected int getBodySize() {
+  return getFieldSize(name) + getFieldSize(password);
 }
 ```
