@@ -336,7 +336,7 @@ Lưu ý rằng chúng tôi phải xác định một phương thức trừu tư�
 ![21.3](images/21/21-3.png)
 Hình 21.3 Đưa `writeField` lên
 
-Sau khi chúng ta đưa phương thức `write` lên lớp cha, những thứ duy nhất còn lại trong mỗi lớp con là các phương thức `getSize`, phương thức `getCommandChar` và các hàm khởi tạo. Đây là lớp `loginCommand`:
+Sau khi chúng ta đưa phương thức `write` lên lớp cơ sở, những thứ duy nhất còn lại trong mỗi lớp con là các phương thức `getSize`, phương thức `getCommandChar` và các hàm khởi tạo. Đây là lớp `loginCommand`:
 
 ```java
 public class LoginCommand extends Command {
@@ -435,3 +435,130 @@ protected int getBodySize() {
   return getFieldSize(name) + getFieldSize(password);
 }
 ```
+
+Còn sự trùng lặp nào nữa không? Thực ra là có, nhưng chỉ một ít thôi. Cả `loginCommand` và `AddEmployeeCmd` đều chấp nhận một danh sách các tham số, lấy kích thước của chúng và ghi nó ra. Ngoại trừ biến `commandChar`, biến này giải thích cho tất cả những khác biệt còn lại giữa hai lớp: Điều gì sẽ xảy ra nếu chúng ta loại bỏ sự trùng lặp bằng cách khái quát hóa nó một chút? Nếu chúng ta khai báo một danh sách trong lớp cơ sở, chúng ta có thể thêm vào danh sách đó trong mỗi hàm khởi tạo của lớp con như sau:
+
+```java
+class LoginCommand extends Command
+{
+  ...
+  public AddEmployeeCmd(String name, String password) {
+    fields.add(name);
+    fields.add(password);
+  }
+  ...
+}
+```
+
+Khi chúng ta thêm vào danh sách `fields` trong mỗi lớp con, chúng ta có thể sử dụng cùng một đoạn code để lấy kích thước nội dung:
+
+```java
+int getBodySize() {
+  int result = 0;
+  for(Iterator it = fields.iterator(); it.hasNext(); ) {
+    String field = (String)it.next();
+    result += getFieldSize(field);
+  } 
+  return result;
+}
+```
+
+Tương tự, phương thức `writeBody` có thể sẽ như thế này:
+
+```java
+void writeBody(Outputstream outputstream) {
+  for(Iterator it = fields.iterator(); it.hasNext(); ) {
+    String field = (String)it.next();
+    writeField(outputStream, field);
+  }
+}
+```
+
+Chúng ta có thể đưa các phương thức đó lên siêu lớp. Khi thực hiện xong, chúng ta thực sự đã loại bỏ tất cả sự trùng lặp. Lớp `Command` sẽ trông như thế này. Để làm cho mọi thứ trở nên hợp lý hơn, chúng ta đặt tất cả các phương thức không còn được truy cập trong các lớp con ở chế độ privated:
+
+```java
+public class Command {
+  private static final byte[] header = {(byte)0xde, (byte)0xad};
+  private static final byte[] footer = {(byte)0xbe, (byte)0xef};
+  private static final int SIZE_LENGTH = 1;
+  private static final int CMD_BYTE_LENGTH = 1;
+  protected List fields = new ArrayList();
+  protected abstract char [] getCommandChar();
+
+  private void writeBody(Outputstream outputstream) {
+    for(Iterator it = fields.iterator(); it.hasNext(); ) {
+      String field = (String)it.next();
+      writeField(outputStream, field);
+    }
+  }
+
+  private int getFieldSize(String field) {
+    return field.getBytes().length + 1;
+  }
+
+  private int getBodySize() {
+    int result = 0;
+    for(Iterator it = fields.iterator(); it.hasNext(); ) {
+      String field = (String)it.next();
+      result += getFieldSize(field);
+    }
+    return result;
+  }
+
+  private int getSize() {
+  return header.length + 
+    SIZE_LENGTH + 
+    CMD_BYTE_LENGTH + 
+    footer.length + 
+    getBodySize();
+  }
+
+  private void writeField(OutputStream outputStream, String field) {
+    outputStream.write(field.getBytes());
+    outputStream.write(0x00);
+  }
+
+  public void write(OutputStream outputStream) throws Exception {
+    outputStream.write(header);
+    outputStream.write(getSize());
+    outputStream.write(commandChar);
+    writeBody(outputstream);
+    outputStream.write(footer);
+  }
+}
+```
+
+Các lớp `loginCommand` và `AddEmployeeCmd` trở nên cực kỳ ngắn:
+
+```java
+public class LoginCommand extends Command {
+  public LoginCommand(String userName, String passwd) {
+    fields.add(username);
+    fields.add(passwd);
+  }
+
+  protected char [] getCommandChar() {
+    return new char [] { 0x01};
+  }
+}
+
+public class AddEmployeeCmd extends Command {
+  public AddEmployeeCmd(String name, String address, String city, String state, int yearlySalary) {
+    fields.add(name);
+    fields.add(address);
+    fields.add(city);
+    fields.add(state);
+    fields.add(Integer.toString(yearlySalary));
+  }
+
+  protected char [] getCommandChar() {
+    return new char [] { 0x02 };
+  }
+}
+```
+
+Hình 21.5 là sơ đồ UML cho thấy những gì chúng ta sẽ thu được.
+
+![21.5](images/21/21-5.png)
+Hình 21.5 Hệ thống phân cấp `Command` sau khi sự trùng lặp được đưa lên lớp cơ sở
+
