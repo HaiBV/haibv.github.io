@@ -562,3 +562,34 @@ Hình 21.5 là sơ đồ UML cho thấy những gì chúng ta sẽ thu được.
 ![21.5](images/21/21-5.png)
 Hình 21.5 Hệ thống phân cấp `Command` sau khi sự trùng lặp được đưa lên lớp cơ sở
 
+Được rồi, vậy bây giờ chúng ta đang ở đâu? Chúng ta đã loại bỏ rất nhiều sự trùng lặp đến mức một số lớp chỉ còn lại vỏ. Tất cả các chức năng đều nằm trong lớp `Command`. Trên thực tế, thật hợp lý khi tự hỏi liệu chúng ta có thực sự cần các lớp riêng biệt cho hai lớp `Command` này hay không. Có lựa chọn nào thay thế không?
+
+Chúng ta có thể loại bỏ các lớp con và thêm một phương thức tĩnh vào lớp `Command` cho phép chúng ta gửi `command`:
+
+```java
+  List arguments = new ArrayList();
+  arguments.add("Mike");
+  arguments.add("asdsad");
+  Command.send(stream, 0x01, arguments);
+```
+
+Nhưng sẽ phát sinh rất nhiều công việc khi thực hiện gọi. Một điều chắc chắn là: Chúng ta phải truyền vào hai ký tự command khác nhau và chúng ta không muốn nơi thực hiện lời gọi phải để ý đến chúng.
+
+Thay vào đó, chúng ta có thể thêm một phương thức tĩnh khác cho mỗi `command` mà chúng ta muốn gọi:
+
+```java
+  Command.SendAddEmployee(stream, "Mike", "122 Elm St", "Miami", "FL", 10000);
+  Command.SendLogin(stream, "Mike", "asdsad");
+```
+
+Nhưng điều đó sẽ buộc tất cả code gọi đến `Command` phải thay đổi. Hiện tại, có nhiều vị trí trong code sử dụng các đối tượng `AddEmployeeCmd` và `loginCommand`.
+
+Có lẽ tốt hơn hết là chúng ta nên để các lớp như hiện tại. Có thể các lớp con khá nhỏ, nhưng điều đó có thực sự gây tổn hại gì không? Gần như không.
+
+Chúng ta làm xong chưa? Chưa, vẫn có một việc nhỏ mà chúng ta cần phải làm ngay bây giờ, một việc mà lẽ ra chúng ta nên làm sớm hơn. Chúng ta có thể đổi tên `AddEmployeeCmd` thành `AddEmployeeCommand`. Điều đó sẽ làm cho tên của hai lớp con nhất quán. Chúng ta ít có khả năng mắc sai lầm khi sử dụng tên một cách nhất quán.
+
+> Viết tắt
+> 
+> Chữ viết tắt trong tên lớp và phương thức thường có vấn đề. Chúng có thể ổn khi được sử dụng một cách nhất quán, nhưng nói chung, tôi không thích sử dụng chúng.
+> 
+> Một nhóm mà tôi làm việc cùng cố gắng sử dụng từ `manager` và `management` trong hầu hết mọi tên lớp trong hệ thống. Cách đặt tên đó không giúp được gì nhiều, nhưng điều khiến nó tệ hơn là họ viết tắt `manager` và `management` theo nhiều cách khác nhau. Ví dụ: một số lớp được đặt tên là `XXXXMgr` và các lớp khác được đặt tên là `XXXXMngr`. Khi muốn sử dụng một lớp, bạn thực sự phải dành hầu hết thời gian để tra cứu xem liệu tên bạn có đúng hay không. Hơn 50% thời gian, tôi đã sai khi cố đoán hậu tố nào được sử dụng cho một lớp cụ thể.
