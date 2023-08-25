@@ -6,11 +6,11 @@ layout: default
 
 Đây có thể là một trong những điều khó chịu nhất trong các hệ thống cũ. Bạn cần thực hiện một sự thay đổi và bạn nghĩ, "Ồ, chỉ thế thôi." Sau đó, bạn phát hiện ra rằng bạn phải thực hiện đi thực hiện lại cùng một thay đổi vì có khoảng chục địa điểm có code tương tự như vậy trong hệ thống. Bạn có cảm giác rằng nếu bạn tái thiết kế hoặc tái cấu trúc hệ thống, có thể không gặp phải vấn đề này nữa, nhưng làm gì có thời gian cho việc đó? Vì vậy, bạn còn lại một điểm nhức nhối khác trong hệ thống, một điều gì đó nhìn chung làm tăng thêm sự tồi tệ.
 
-Nếu bạn biết về tái cấu trúc, bạn sẽ có nhiều lợi thế hơn. Bạn biết rằng việc loại bỏ sự trùng lặp không nhất thiết phải đòi hỏi nỗ lực lớn lao chẳng hạn như tái thiết kế hoặc tái cấu trúc. Bạn hoàn toàn có thể cải thiện từng phần nhỏ trong khi thực hiện công việc của mình. Theo thời gian, hệ thống sẽ trở nên tốt hơn miễn là mọi người không tạo nên sự trùng lặp sau lưng bạn. Nếu là như vậy, bạn có thể thực hiện các bước với chúng mà không cần đến bạo lực, nhưng đó lại là một vấn đề khác. Câu hỏi quan trọng là nó có đáng không? Chúng ta nhận được gì khi nhiệt tình loại bỏ sự trùng lặp khỏi một vùng code? Kết quả thật đáng ngạc nhiên. Chúng ta hãy xem một ví dụ.
+Nếu bạn biết về tái cấu trúc, bạn sẽ có nhiều lợi thế hơn. Bạn biết rằng việc loại bỏ trùng lặp không nhất thiết phải đòi hỏi nỗ lực lớn lao chẳng hạn như tái thiết kế hoặc tái cấu trúc. Bạn hoàn toàn có thể cải thiện từng phần nhỏ trong khi thực hiện công việc của mình. Theo thời gian, hệ thống sẽ trở nên tốt hơn miễn là mọi người không tạo nên trùng lặp sau lưng bạn. Nếu là như vậy, bạn có thể thực hiện các bước với chúng mà không cần đến bạo lực, nhưng đó lại là một vấn đề khác. Câu hỏi quan trọng là nó có đáng không? Chúng ta nhận được gì khi nhiệt tình loại bỏ trùng lặp khỏi một vùng code? Kết quả thật đáng ngạc nhiên. Chúng ta hãy xem một ví dụ.
 
 Chúng ta có một hệ thống mạng nhỏ dựa trên Java và phải gửi lệnh đến máy chủ. Hai lệnh mà chúng ta có được gọi là `AddEmployeeCmd` và `LogonCommand`. Khi cần đưa ra một lệnh, chúng ta sẽ khởi tạo nó và chuyển luồng đầu ra tới phương thức `write` của nó.
 
-Dưới đây là danh sách của cả hai lớp lệnh. Bạn có thấy sự trùng lặp ở đây không?
+Dưới đây là danh sách của cả hai lớp lệnh. Bạn có thấy trùng lặp ở đây không?
 
 ```java
 import java.io.OutputStream;
@@ -104,7 +104,7 @@ public class LoginCommand {
 ![21.1](images/21/21-1.png)
 Hình 21.1 `AddEmployeeCmd` và `LoginCommand`
 
-Có vẻ như có rất nhiều sự trùng lặp, nhưng vậy thì sao? Khối lượng code khá nhỏ. Chúng ta có thể cấu trúc lại nó, loại bỏ sự trùng lặp và làm cho nó nhỏ gọn hơn, nhưng liệu điều đó có giúp cuộc sống của chúng ta dễ dàng hơn không? Có thể có có thể không; thật khó để nói chỉ bằng cách nhìn vào nó.
+Có vẻ như có rất nhiều trùng lặp, nhưng vậy thì sao? Khối lượng code khá nhỏ. Chúng ta có thể cấu trúc lại nó, loại bỏ trùng lặp và làm cho nó nhỏ gọn hơn, nhưng liệu điều đó có giúp cuộc sống của chúng ta dễ dàng hơn không? Có thể có có thể không; thật khó để nói chỉ bằng cách nhìn vào nó.
 
 Hãy thử xác định những phần trùng lặp và loại bỏ nó, rồi xem cuối cùng chúng ta sẽ thu được điều gì. Sau đó, chúng ta có thể quyết định xem việc loại bỏ trùng lặp có thực sự hữu ích hay không.
 
@@ -112,7 +112,7 @@ Hãy thử xác định những phần trùng lặp và loại bỏ nó, rồi x
 
 ## Bước thứ nhất
 
-Phản ứng đầu tiên của tôi khi gặp phải sự trùng lặp là lùi lại và tìm hiểu toàn bộ phạm vi của nó. Khi bắt đầu làm điều này, tôi suy nghĩ về loại lớp sẽ thu được và những phần trùng lặp được trích xuất sẽ trông như thế nào. Sau đó tôi nhận ra rằng mình thực sự đã suy nghĩ quá nhiều về chuyện đó. Việc loại bỏ các phần trùng lặp nhỏ sẽ giúp ích và giúp bạn dễ dàng nhìn thấy các phần trùng lặp lớn hơn sau này. Ví dụ: trong phương thức ghi của `loginCommand`, chúng ta có code này:
+Phản ứng đầu tiên của tôi khi gặp phải trùng lặp là lùi lại và tìm hiểu toàn bộ phạm vi của nó. Khi bắt đầu làm điều này, tôi suy nghĩ về loại lớp sẽ thu được và những phần trùng lặp được trích xuất sẽ trông như thế nào. Sau đó tôi nhận ra rằng mình thực sự đã suy nghĩ quá nhiều về chuyện đó. Việc loại bỏ các phần trùng lặp nhỏ sẽ giúp ích và giúp bạn dễ dàng nhìn thấy các phần trùng lặp lớn hơn sau này. Ví dụ: trong phương thức ghi của `loginCommand`, chúng ta có code này:
 
 ```java
   outputStream.write(userName.getBytes());
@@ -132,7 +132,7 @@ void writeField(OutputStream outputStream, String field) {
 
 > Chọn vị trí bắt đầu
 > 
-> Khi thực hiện một loạt các phép tái cấu trúc để loại bỏ sự trùng lặp, chúng ta có thể có được các cấu trúc khác nhau, tùy thuộc vào nơi chúng ta bắt đầu. Ví dụ, hãy tưởng tượng rằng chúng ta có một phương thức như thế này:
+> Khi thực hiện một loạt các phép tái cấu trúc để loại bỏ trùng lặp, chúng ta có thể có được các cấu trúc khác nhau, tùy thuộc vào nơi chúng ta bắt đầu. Ví dụ, hãy tưởng tượng rằng chúng ta có một phương thức như thế này:
 >
 > void c() { a(); a(); b(); a(); b(); b(); }
 > 
@@ -412,7 +412,7 @@ protected int getBodySize() {
 }
 ```
 
-Chúng ta đã bỏ qua một số sự trùng lặp khá rõ ràng ở đây. Chúng hơi nhỏ nhưng các bạn hãy nhiệt tình loại bỏ nó hoàn toàn nhé:
+Chúng ta đã bỏ qua một số trùng lặp khá rõ ràng ở đây. Chúng hơi nhỏ nhưng các bạn hãy nhiệt tình loại bỏ nó hoàn toàn nhé:
 
 ```java
 protected int getFieldSize(String field) {
@@ -436,7 +436,7 @@ protected int getBodySize() {
 }
 ```
 
-Còn sự trùng lặp nào nữa không? Thực ra là có, nhưng chỉ một ít thôi. Cả `loginCommand` và `AddEmployeeCmd` đều chấp nhận một danh sách các tham số, lấy kích thước của chúng và ghi nó ra. Ngoại trừ biến `commandChar`, biến này giải thích cho tất cả những khác biệt còn lại giữa hai lớp: Điều gì sẽ xảy ra nếu chúng ta loại bỏ sự trùng lặp bằng cách khái quát hóa nó một chút? Nếu chúng ta khai báo một danh sách trong lớp cơ sở, chúng ta có thể thêm vào danh sách đó trong mỗi hàm khởi tạo của lớp con như sau:
+Còn trùng lặp nào nữa không? Thực ra là có, nhưng chỉ một ít thôi. Cả `loginCommand` và `AddEmployeeCmd` đều chấp nhận một danh sách các tham số, lấy kích thước của chúng và ghi nó ra. Ngoại trừ biến `commandChar`, biến này giải thích cho tất cả những khác biệt còn lại giữa hai lớp: Điều gì sẽ xảy ra nếu chúng ta loại bỏ trùng lặp bằng cách khái quát hóa nó một chút? Nếu chúng ta khai báo một danh sách trong lớp cơ sở, chúng ta có thể thêm vào danh sách đó trong mỗi hàm khởi tạo của lớp con như sau:
 
 ```java
 class LoginCommand extends Command
@@ -474,7 +474,7 @@ void writeBody(Outputstream outputstream) {
 }
 ```
 
-Chúng ta có thể đưa các phương thức đó lên siêu lớp. Khi thực hiện xong, chúng ta thực sự đã loại bỏ tất cả sự trùng lặp. Lớp `Command` sẽ trông như thế này. Để làm cho mọi thứ trở nên hợp lý hơn, chúng ta đặt tất cả các phương thức không còn được truy cập trong các lớp con ở chế độ privated:
+Chúng ta có thể đưa các phương thức đó lên siêu lớp. Khi thực hiện xong, chúng ta thực sự đã loại bỏ tất cả trùng lặp. Lớp `Command` sẽ trông như thế này. Để làm cho mọi thứ trở nên hợp lý hơn, chúng ta đặt tất cả các phương thức không còn được truy cập trong các lớp con ở chế độ privated:
 
 ```java
 public class Command {
@@ -560,9 +560,9 @@ public class AddEmployeeCmd extends Command {
 Hình 21.5 là sơ đồ UML cho thấy những gì chúng ta sẽ thu được.
 
 ![21.5](images/21/21-5.png)
-Hình 21.5 Hệ thống phân cấp `Command` sau khi sự trùng lặp được đưa lên lớp cơ sở
+Hình 21.5 Hệ thống phân cấp `Command` sau khi trùng lặp được đưa lên lớp cơ sở
 
-Được rồi, vậy bây giờ chúng ta đang ở đâu? Chúng ta đã loại bỏ rất nhiều sự trùng lặp đến mức một số lớp chỉ còn lại vỏ. Tất cả các chức năng đều nằm trong lớp `Command`. Trên thực tế, thật hợp lý khi tự hỏi liệu chúng ta có thực sự cần các lớp riêng biệt cho hai lớp `Command` này hay không. Có lựa chọn nào thay thế không?
+Được rồi, vậy bây giờ chúng ta đang ở đâu? Chúng ta đã loại bỏ rất nhiều trùng lặp đến mức một số lớp chỉ còn lại vỏ. Tất cả các chức năng đều nằm trong lớp `Command`. Trên thực tế, thật hợp lý khi tự hỏi liệu chúng ta có thực sự cần các lớp riêng biệt cho hai lớp `Command` này hay không. Có lựa chọn nào thay thế không?
 
 Chúng ta có thể loại bỏ các lớp con và thêm một phương thức tĩnh vào lớp `Command` cho phép chúng ta gửi `command`:
 
@@ -593,3 +593,37 @@ Chúng ta làm xong chưa? Chưa, vẫn có một việc nhỏ mà chúng ta c�
 > Chữ viết tắt trong tên lớp và phương thức thường có vấn đề. Chúng có thể ổn khi được sử dụng một cách nhất quán, nhưng nói chung, tôi không thích sử dụng chúng.
 > 
 > Một nhóm mà tôi làm việc cùng cố gắng sử dụng từ `manager` và `management` trong hầu hết mọi tên lớp trong hệ thống. Cách đặt tên đó không giúp được gì nhiều, nhưng điều khiến nó tệ hơn là họ viết tắt `manager` và `management` theo nhiều cách khác nhau. Ví dụ: một số lớp được đặt tên là `XXXXMgr` và các lớp khác được đặt tên là `XXXXMngr`. Khi muốn sử dụng một lớp, bạn thực sự phải dành hầu hết thời gian để tra cứu xem liệu tên bạn có đúng hay không. Hơn 50% thời gian, tôi đã sai khi cố đoán hậu tố nào được sử dụng cho một lớp cụ thể.
+
+Vậy là, chúng ta đã loại bỏ tất cả trùng lặp. Mọi thứ trở nên tốt hơn hay tồi tệ hơn? Hãy xét thử một vài tình huống. Điều gì xảy ra khi chúng ta cần thêm một `command` mới? Chà, chúng ta chỉ cần phân lớp `Command` và tạo ra nó. Hãy so sánh điều đó với những gì chúng ta sẽ phải làm với thiết kế ban đầu. Chúng ta có thể tạo một `command` mới, sau đó cắt/sao chép và dán code từ một `command` khác, thay đổi tất cả các biến. Nhưng nếu làm vậy, chúng ta đang tạo ra nhiều trùng lặp hơn và khiến mọi thứ trở nên tồi tệ hơn. Ngoài ra, nó dễ sinh ra lỗi. Chúng ta có thể làm xáo trộn việc sử dụng các biến và gây nhầm lẫn. Không, chắc chắn sẽ mất nhiều thời gian hơn một chút để thực hiện việc này trước khi chúng ta loại bỏ trùng lặp.
+
+Chúng ta có mất đi sự linh hoạt với những gì đã làm không? Điều gì sẽ xảy ra nếu chúng ta phải gửi các `command` được tạo thành từ thứ gì đó không phải là chuỗi? Theo một cách nào đó, chúng ta đã giải quyết được vấn đề đó. Lớp `AddEmployeeCommand` đã chấp nhận một số nguyên và chúng ta chuyển đổi nó thành một chuỗi để gửi nó dưới dạng `command`. Chúng ta có thể làm điều tương tự với bất kỳ kiểu dữ liệu nào khác. Chúng ta phải chuyển đổi nó thành một chuỗi bằng cách nào đó để gửi chúng đi. Chúng ta có thể làm điều đó trong hàm khởi tạo của bất kỳ lớp con mới nào.
+
+Điều gì sẽ xảy ra nếu chúng ta có một `command` có định dạng khác? Giả sử chúng ta cần một loại `command` mới có thể lồng các `command` khác vào trong phần thân của nó. Chúng ta có thể làm điều đó một cách dễ dàng bằng cách phân lớp `Command` và ghi đè phương thức `writeBody` của nó:
+
+```java
+public class AggregateCommand extends Command
+{
+  private List commands = new ArrayList();
+    protected char [] getCommandChar() {
+    return new char [] { 0x03 };
+  }
+
+  public void appendCommand(Command newCommand) {
+    commands.add(newCommand);
+  }
+
+  protected void writeBody(OutputStream out) {
+    out.write(commands.getSize());
+    for(Iterator it = commands.iterator(); it.hasNext(); ) {
+      Command innerCommand = (Command)it.next();
+      innerCommand.write(out);
+    }
+  }
+}
+```
+
+Mọi thứ đều hoạt động.
+
+Hãy tưởng tượng khi làm những việc trên khi chúng ta không loại bỏ trùng lặp.
+
+Ví dụ cuối cùng này nêu bật một điều rất quan trọng. Khi bạn loại bỏ trùng lặp giữa các lớp, bạn sẽ thu được các phương thức tập trung hơn và nhỏ hơn. Mỗi phương thức đều thực hiện một việc mà không phương thức nào khác làm được và điều đó mang lại cho chúng ta một lợi thế đáng kinh ngạc: tính trực giao.
