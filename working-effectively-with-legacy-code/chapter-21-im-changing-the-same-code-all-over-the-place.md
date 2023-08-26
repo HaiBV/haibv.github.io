@@ -627,3 +627,41 @@ Mọi thứ đều hoạt động.
 Hãy tưởng tượng khi làm những việc trên khi chúng ta không loại bỏ trùng lặp.
 
 Ví dụ cuối cùng này nêu bật một điều rất quan trọng. Khi bạn loại bỏ trùng lặp giữa các lớp, bạn sẽ thu được các phương thức tập trung hơn và nhỏ hơn. Mỗi phương thức đều thực hiện một việc mà không phương thức nào khác làm được và điều đó mang lại cho chúng ta một lợi thế đáng kinh ngạc: tính trực giao.
+
+Tính trực giao là một từ ưa thích để chỉ sự độc lập. Nếu bạn muốn thay đổi hành vi hiện tại trong code và biết chính xác nơi bạn phải tìm đến để thực hiện thay đổi đó, thì bạn đã có tính trực giao. Nó giống như việc coi ứng dụng của bạn là một cái hộp lớn với các nút bấm bao quanh bên ngoài. Nếu hệ thống của bạn chỉ có một nút xoay cho mỗi hành vi thì bạn có thể dễ dàng thực hiện các thay đổi. Khi bạn có tràn lan các trùng lặp, bạn có nhiều nút điều khiển cho mỗi hành vi. Hãy suy nghĩ về các trường `write`. Với thiết kế ban đầu, nếu chúng ta thay đổi ký tự kết thúc `0x01` thay cho `0x00`, thì chúng ta sẽ phải duyệt qua code và thực hiện thay đổi đó ở nhiều chỗ. Hãy tưởng tượng nếu ai đó yêu cầu chúng ta viết ra hai dấu kết thúc `0x00` cho mỗi trường. Điều đó cũng khá tệ: không có nút bấm dành cho một mục đích duy nhất. Nhưng trong code đã tái cấu trúc, chúng ta có thể chỉnh sửa hoặc ghi đè `writeField` nếu muốn thay đổi cách viết các trường và chúng ta có thể ghi đè `writeBody` khi cần xử lý các trường hợp đặc biệt như tổng hợp lệnh. Khi hành vi được nội địa hóa theo các phương thức đơn lẻ, bạn có thể dễ dàng thay thế hoặc thêm vào hành vi đó.
+
+Trong ví dụ này, chúng ta đã làm khá nhiều việc — di chuyển các phương thức và biến từ lớp này sang lớp khác, chia nhỏ các phương thức — nhưng hầu hết đều mang tính máy móc. Chúng ta chỉ chú ý đến trùng lặp và loại bỏ nó. Điều sáng tạo duy nhất chúng ta thực sự làm là đặt tên cho các phương thức mới. Code ban đầu không có khái niệm về trường hoặc nội dung lệnh, nhưng theo một cách nào đó, khái niệm này đã có trong code. Ví dụ: một số biến được xử lý khác nhau và chúng ta gọi chúng là trường. Khi kết thúc quá trình, chúng ta thu được một thiết kế trực giao gọn gàng hơn nhiều, nhưng không có cảm giác như chúng ta đang thiết kế. Nó giống như chúng ta đang chú ý đến có những gì ở đó và đưa code đến gần hơn với bản chất thực sự của nó.
+
+Một trong những điều đáng kinh ngạc mà bạn khám phá ra khi bắt đầu nhiệt tình loại bỏ sự trùng lặp là các thiết kế xuất hiện. Bạn không cần phải lập kế hoạch cho hầu hết các nút bấm trong ứng dụng của mình; chúng cứ thể xảy ra. Chúng không hoàn hảo. Chẳng hạn, sẽ thật tuyệt nếu phương thức này trong `Command`:
+
+```java
+public void write(OutputStream outputStream) throws Exception {
+  outputStream.write(header);
+  outputStream.write(getSize());
+  outputStream.write(commandChar);
+  writeBody(outputstream);
+  outputStream.write(footer);
+}
+```
+
+Được viết như thế này
+
+```java
+public void write(OutputStream outputStream) throws Exception {
+  writeHeader(outputStream);
+  writeBody(outputstream);
+  writeFooter(outputStream);
+}
+```
+
+Bây giờ chúng ta có một nút để viết `header` và một nút khác để viết `footer`. Chúng ta có thể thêm các nút bấm khác nếu cần, nhưng thật tuyệt khi chúng diễn ra một cách tự nhiên.
+
+Loại bỏ trùng lặp là một cách mạnh mẽ để chắt lọc một thiết kế. Nó không chỉ làm cho thiết kế linh hoạt hơn mà còn giúp thay đổi nhanh hơn và dễ dàng hơn.
+
+> Nguyên tắc Đóng/Mở
+> 
+> Nguyên tắc Đóng/Mở là nguyên tắc được đưa ra bởi Bertrand Meyer. Ý tưởng đằng sau nó là code phải được mở để mở rộng nhưng không được phép sửa đổi. Điều đó nghĩa là gì? Điều đó có nghĩa là khi chúng ta có thiết kế tốt, chúng ta không cần phải thay đổi code nhiều để thêm các tính năng mới.
+> 
+> Đoạn code chúng ta thu được trong chương này có thuộc tính này không? Có. Chúng ta vừa xem xét một số kịch bản thay đổi. Trong nhiều trường hợp, rất ít phương thức phải thay đổi. Trong một số trường hợp, chúng ta có thể thêm tính năng chỉ bằng cách phân lớp con. Tất nhiên, sau khi phân lớp con, điều quan trọng là phải loại bỏ sự trùng lặp (xem _Lập trình theo sự khác biệt (101)_ để biết thêm thông tin về cách thêm các tính năng bằng cách phân lớp con và tích hợp chúng bằng cách tái cấu trúc).
+> 
+> Khi loại bỏ trùng lặp, code của chúng ta thường bắt đầu tuân thủ _Nguyên tắc Đóng/Mở_ một cách tự nhiên.
