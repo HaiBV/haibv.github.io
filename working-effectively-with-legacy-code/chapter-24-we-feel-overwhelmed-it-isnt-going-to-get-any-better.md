@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+# Chương 24, Chúng ta cảm thấy choáng ngợp. Có vẻ mọi thứ sẽ không thể cải thiện được.
+
+Làm việc với code kế thừa rất khó. Không ai phủ nhận điều đó. Mặc dù mọi tình huống đều khác nhau, nhưng có một điều sẽ khiến công việc đó trở nên xứng đáng với bạn - trong tư cách là một lập trình viên - hay không: tìm hiểu xem công việc đó mang lại lợi ích gì cho bạn. Đối với một số người, đó là tiền lương và điều đó không có gì sai cả - tất cả chúng ta đều phải kiếm sống. Nhưng thực sự phải có lý do nào khác khiến bạn lập trình.
+
+Nếu may mắn, bạn bắt đầu công việc viết code này vì bạn nghĩ nó rất thú vị. Bạn ngồi xuống bên chiếc máy tính đầu tiên của mình và ngây ngất với tất cả những khả năng, tất cả những điều thú vị mà bạn có thể làm khi lập trình với một chiếc máy tính. Đó là thứ để học và thứ để thành thạo, và bạn nghĩ, "Chà, điều này thật thú vị. Tôi có thể tạo nên một sự nghiệp vĩ đại nếu tôi làm tốt việc này."
+
+Không phải ai cũng học lập trình theo cách này, nhưng ngay cả đối với những người không làm như vậy, vẫn có thể kết nối với những điều thú vị về lập trình. Nếu bạn có thể - và một số đồng nghiệp của bạn cũng có thể - thì việc bạn đang làm trên loại hệ thống nào thực sự không quan trọng. Bạn có thể làm những điều gọn gàng với nó. Sự thay thế chỉ là sự chán nản. Điều đó chẳng có gì thú vị cả, và thành thật mà nói, tất cả chúng ta đều xứng đáng được hưởng những điều tốt đẹp hơn thế.
+
+Thông thường những người dành thời gian làm việc trên các hệ thống kế thừa mong muốn họ có thể làm việc trên các hệ thống hoàn toàn mới. Thật thú vị khi xây dựng hệ thống từ đầu, nhưng thành thật mà nói, các hệ thống hoàn toàn mới cũng có những vấn đề riêng. Tôi đã thấy kịch bản sau cứ lặp đi lặp lại: Hệ thống hiện tại ngày càng trở nên u ám và khó thay đổi dần theo thời gian. Mọi người trong tổ chức cảm thấy thất vọng với việc mất quá lâu để thực hiện thay đổi trong hệ thống. Họ điều chuyển những người giỏi nhất (và đôi khi là những người gây rắc rối!) vào một nhóm mới với nhiệm vụ "tạo ra hệ thống mới thay thế với kiến trúc tốt hơn". Ban đầu, mọi thứ đều ổn. Họ biết những vấn đề xảy ra với kiến trúc cũ và dành thời gian để nghĩ ra một thiết kế mới. Trong khi đó, các lập trình viên còn lại vẫn đang làm việc trên hệ thống cũ. Hệ thống đang được sử dụng nên họ vẫn nhận được yêu cầu sửa lỗi và đôi khi còn có các tính năng mới. Doanh nghiệp xem xét kỹ lưỡng từng tính năng mới và quyết định xem nó cần có trong hệ thống cũ hay khách hàng có thể đợi hệ thống mới hay không. Trong nhiều trường hợp, khách hàng không thể chờ đợi nên sự thay đổi sẽ diễn ra ở cả hai phía. Đội với hệ thống mới phải thực hiện nhiệm vụ kép, cố gắng thay thế một hệ thống liên tục thay đổi. Nhiều tháng trôi qua, rõ ràng là họ sẽ không thể thay thế hệ thống cũ, hệ thống mà họ đang bảo trì. Áp lực tăng lên. Họ làm việc ngày, đêm và cuối tuần. Trong nhiều trường hợp, những người còn lại trong tổ chức phát hiện ra rằng công việc bạn đang làm là rất quan trọng và bạn đang hướng tới khoản đầu tư mà mọi người sẽ phải dựa vào trong tương lai.
+
+Mọi thứ không thực sự khởi sắc hơn nhiều trong quá trình phát triển hệ thống mới.
