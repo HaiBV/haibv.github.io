@@ -78,7 +78,7 @@ Danh sách đó sẽ giống như thế này:
 
 Chúng ta tạo một bản phác thảo cho thấy những thay đổi trong `declarations` có ảnh hưởng đến `getDeclarationCount()` (xem Hình 11.1)
 
-![11.1](images/11-1.png)
+![11.1](images/11/11-1.png)
 Hình 11.1 `declarations` tác động đến `getDeclarationCount`.
 
 Bản phác thảo này cho thấy rằng nếu `declarations` thay đổi theo một cách nào đó - ví dụ: nếu kích thước của nó tăng lên - `getDeclarationCount()` có thể trả về một giá trị khác.
@@ -91,13 +91,13 @@ Hình 11.3 cho thấy những điều tương tự cũng ảnh hưởng đến p
 
 Chúng ta có thể gộp tất cả các bản phác thảo này lại với nhau thành một bản phác thảo lớn hơn (xem Hình 11.4)
 
-![11.2](images/11-2.png)
+![11.2](images/11/11-2.png)
 Hình 11.2 `declarations` và các đối tượng mà nó nắm giữ tác động đến `getDeclarationCount`
 
-![11.3](images/11-3.png)
+![11.3](images/11/11-3.png)
 Hình 11.3 Những thứ ảnh hưởng đến `getInterface`
 
-![11.4](images/11-4.png)
+![11.4](images/11/11-4.png)
 Hình 11.4 Tổng hợp các bản phác thảo
 
 Không có nhiều cú pháp trong các sơ đồ này. Tôi chỉ gọi chúng là _các bản phác thảo tác động_. Điều quan trọng là có một thành phần riêng cho từng biến có thể bị ảnh hưởng và từng phương thức có giá trị trả về có thể thay đổi. Đôi khi các biến nằm trên cùng một đối tượng và đôi khi chúng nằm trên các đối tượng khác nhau. Điều đó không thành vấn đề: Chúng tôi chỉ tạo thành phần cho những thứ sẽ thay đổi và vẽ một mũi tên tới mọi thứ có giá trị có thể thay đổi trong thời gian chạy bởi vì chúng.
@@ -217,10 +217,10 @@ Hãy bắt đầu với `generateIndex`. Cái gì sẽ gọi nó? Không có ph�
 
 Bây giờ chúng ta có thể xem xét tập hợp `elements` và xem nó có thể ảnh hưởng đến những gì. Những nơi nó được sử dụng? Có vẻ như nó được sử dụng trong `getElementCount` và `getElement`. Tập hợp `elements` cũng được sử dụng trong `addElement`, nhưng chúng ta không cần tính đến điều đó vì `addElement` hoạt động theo cùng một cách, bất kể chúng ta làm gì với tập hợp `elements`: Không người dùng `addElements` nào có thể bị ảnh hưởng bởi bất kỳ điều gì chúng ta làm với tập hợp `elements` (xem Hình 11.6).
 
-![11.5](images/11-5.png)
+![11.5](images/11/11-5.png)
 Hình 11.5 `generateIndex` ảnh hưởng đến `elements`
 
-![11.6](images/11-6.png)
+![11.6](images/11/11-6.png)
 Hình 11.6 Các tác động khác của các thay đổi trong `generateIndex`.
 
 Như thế đã đủ chưa? Chưa, điểm thay đổi của chúng ta là phương thức `generateIndex` và phương thức `addElement`, vì vậy chúng ta cần xem xét ảnh hưởng của `addElement` đến xung quanh. Có vẻ như `addElement` ảnh hưởng đến tập hợp `elements` (xem Hình 11.7).
@@ -229,12 +229,12 @@ Chúng ta có thể xem điều gì ảnh hướng đến những phần tử, n
 
 Hình 11.8. gồm toàn bộ phác thảo
 
-![11.7](images/11-7.png)
+![11.7](images/11/11-7.png)
 Hình 11.7 `addElement` ảnh hưởng đến `elements`
 
 Khi sử dụng của lớp `InMemoryDirectory`, cách duy nhất để cảm nhận được sự ảnh hưởng là thông qua các phương thức `getElementCount` và `getElement`. Nếu chúng ta có thể viết kiểm thử cho các phương thức đó, có lẽ chúng ta sẽ có thể bao phủ được tất cả các tác động tạo ra từ sự thay đổi của chúng ta.
 
-![11.8](images/11-8.png)
+![11.8](images/11/11-8.png)
 Hình 11.8 Phác thảo ảnh hưởng của lớp `InMemoryDirectory`
 
 Nhưng có khả năng chúng ta bỏ lỡ điều gì đó không? Còn các lớp cha và lớp con thì sao? Nếu bất kỳ dữ liệu nào trong `InMemoryDirectory` là công khai, bảo vệ hoặc nằm trong phạm vi gói, thì một phương thức của lớp con có thể sửa đổi dữ liệu đó theo cách chúng ta không thể biết. Trong ví dụ này, các biến thể hiện trong `InMemoryDirectory` là riêng tư, vì vậy chúng ta không phải lo lắng về điều đó.
@@ -272,10 +272,10 @@ Thật may mắn, nó rất đơn giản. Hãy tạo một hình ảnh cho một
 
 Khi chúng ta có một phần tử mới và nó chứa đầy văn bản, `generateIndex` sẽ thêm phần tử đó vào tập hợp, vì vậy phần tử mới sẽ ảnh hưởng đến tập hợp (xem Hình 11.10)
 
-![11.9](images/11-9.png)
+![11.9](images/11/11-9.png)
 Hình 11.9 Các tác động tới lớp `Element`
 
-![11.10](images/11-10.png)
+![11.10](images/11/11-10.png)
 Hình 11.10 `generateIndex` tác động tới tập hợp `elements`.
 
 Chúng ta đã biết rằng phương thức `addText` ảnh hưởng đến tập hợp `elements`, do đó, ảnh hưởng đến các giá trị trả về của `getElement` và `getElementCount`. Nếu chúng ta muốn thấy văn bản được tạo chính xác, chúng ta có thể gọi `getText` trên một phần tử được trả về bởi `getElement`. Đó là nơi duy nhất phải viết kiểm thử để phát hiện tác động từ những thay đổi của chúng ta.
@@ -430,7 +430,7 @@ Cuốn sách này nói về cách làm cho code kế thừa dễ làm việc hơ
 
 Bạn còn nhớ bản phác thảo tác động cho lớp `CppClass` không? (Xem Hình 11.11.)
 
-![11.11](images/11-4.png)
+![11.11](images/11/11-4.png)
 Hình 11.11 Bản phác thảo cho lớp `CppCLass`
 
 Nhìn có vẻ hơi quá tải. Hai phần dữ liệu, một khai báo và tập hợp `declarations`, có tác dụng đối với nhiều phương thức khác nhau. Chúng ta có thể lựa chọn cái nào chúng ta muốn sử dụng cho các kiểm thử của mình. Cách tốt nhất để sử dụng là `getInterface` vì nó thực hiện khai báo nhiều hơn một chút. Một số điều chúng ta có thể cảm nhận được thông qua phương thức `getInterface` mà chúng ta không thể dễ dàng thông qua `getDeclaration` và `getDeclarationCount`. Tôi sẽ không phiền khi chỉ viết các kiểm thử cho `getInterface` nếu tôi đang mô tả `CppClass`, nhưng sẽ thật đáng tiếc nếu `getDeclaration` và `getDeclarationCount` không được đề cập. Nhưng nếu `getInterface` trông như thế này thì sao?
@@ -449,10 +449,10 @@ public String getInterface(String interfaceName, int [] indices) {
 
 Có sự khác biệt rất nhỏ ở đây; code hiện sử dụng `getDeclaration` trong nội bộ. Vì vậy, bản phác thảo của chúng ta thay đổi từ Hình 11.12 sang Hình 11.13.
 
-![11.12](images/11-4.png)
+![11.12](images/11/11-4.png)
 Hình 11.12 Bản phác thảo cho lớp `CppCLass`
 
-![11.13](images/11-13.png)
+![11.13](images/11/11-13.png)
 Hình 11.13 Bản phác thảo được thay đổi cho lớp `CppCLass`
 
 Chỉ là một thay đổi nhỏ, nhưng là một thay đổi khá quan trọng. Phương thức `getInterface` hiện sử dụng `getDeclaration` trong nội bộ. Cuối cùng, chúng tôi thực hiện `getDeclaration` bất cứ khi nào chúng tôi kiểm thử `getInterface`.

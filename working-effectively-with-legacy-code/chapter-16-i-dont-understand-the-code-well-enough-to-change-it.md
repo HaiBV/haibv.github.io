@@ -20,7 +20,8 @@ Bản phác thảo lúc đó (như trong ảnh) không dễ hiểu lắm, nhưng
 
 Không phải tất cả mọi người làm điều này sao? Đúng thế, có và không. Ít người sử dụng nó thường xuyên. Tôi nghi ngờ lý do thực sự là vì không có bất kỳ hướng dẫn nào cho cách này và thật cám dỗ khi nghĩ rằng mỗi khi đặt bút viết, chúng ta nên viết một đoạn code hoặc sử dụng cú pháp UML. UML cũng tốt, nhưng các đốm màu, đường kẻ và hình dạng cũng vậy,chúng giống nhau ở chỗ bất kỳ ai không có mặt ở đó khi chúng tôi vẽ chúng cũng không thể hiểu được. Độ chính xác không cần phải quá cao. Đó chỉ là một công cụ giúp cuộc trò chuyện trở nên dễ dàng hơn và giúp chúng ta ghi nhớ các khái niệm đang được thảo luận và học hỏi.
 
-![16.1](images/16-1.png)
+![16.1](images/16/16-1.png)
+Hình 16.1 Bản phác thảo
 
 Điều thực sự tuyệt vời của việc phác thảo các thành phần của thiết kế khi bạn đang cố gắng hiểu hệ thống là chúng không chính thống và dễ lan tỏa. Nếu bạn thấy kỹ thuật này hữu ích, bạn không cần phải thúc đẩy nhóm của mình biến nó thành một phần trong quy trình của nhóm. Tất cả những gì bạn phải làm là: Chờ cho đến khi bạn đang làm việc với một người đang cố gắng hiểu đoạn code bất kỳ, sau đó phác thảo về những gì bạn đang xem khi cố gắng giải thích nó. Nếu đối tác của bạn cũng thực sự tham gia vào việc học phần đó của hệ thống, họ sẽ xem bản phác thảo và trao đổi thêm với bạn.
 

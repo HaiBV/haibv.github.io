@@ -91,27 +91,27 @@ Dưới đây là một ví dụ, mô tả về một hệ thống bỏ phiếu 
 
 "Đây là cách hệ thống bỏ phiếu thời gian thực hoạt động. Đây là phiên khách hàng" (chỉ vào thẻ).
 
-![17-1](images/17-1.png)
+![17-1](images/17/17-1.png)
 
 "Mỗi phiên có hai kết nối, một kết nối đến và một kết nối đi" (đặt từng thẻ trên thẻ ban đầu và lần lượt chỉ vào từng thẻ).
 
-![17-2](images/17-2.png)
+![17-2](images/17/17-2.png)
 
 "Khi hệ thống khởi động, một phiên sẽ được tạo trên máy chủ ở đây" (đặt thẻ bên phải xuống).
 
-![17-3](images/17-3.png)
+![17-3](images/17/17-3.png)
 
 "Mỗi phiên máy chủ cũng có hai kết nối" (đặt hai thẻ biểu thị các kết nối trên thẻ bên phải xuống)
 
-![17-4](images/17-4.png)
+![17-4](images/17/17-4.png)
 
 "Khi một phiên máy chủ xuất hiện, nó sẽ đăng ký với người quản lý phiếu bầu (đặt thẻ cho người quản lý phiếu bầu phía trên phiên máy chủ)
 
-![17-5](images/17-5.png)
+![17-5](images/17/17-5.png)
 
 "Chúng ta có thể có nhiều phiên ở phía máy chủ" (đặt một bộ thẻ khác cho phiên máy chủ mới và các kết nối của nó)
 
-![17-6](images/17-6.png)
+![17-6](images/17/17-6.png)
 
 "Khi khách hàng bỏ phiếu, phiếu bầu sẽ được gửi đến phiên ở phía máy chủ" (chuyển động bằng tay từ một trong các kết nối ở phiên phía máy khách đến kết nối ở phiên phía máy chủ).
 
