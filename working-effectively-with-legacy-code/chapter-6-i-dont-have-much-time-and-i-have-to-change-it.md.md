@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+# Chương 6, Tôi không có nhiều thời gian và Tôi phải thay đổi nó
+
+Hãy đối mặt với sự thật: Cuốn sách bạn đang đọc mô tả những công việc phát sinh — công việc mà bạn có thể không làm ngay bây giờ đồng thời có thể khiến bạn mất nhiều thời gian hơn khi muốn thực hiện một số thay đổi trong code của mình. Bạn có thể tự hỏi liệu có đáng để làm những việc này ngay bây giờ hay không.
+
+Sự thật là, công việc bạn làm để phá vỡ phụ thuộc và viết kiểm thử cho các thay đổi của mình sẽ mất thêm thời gian, nhưng trong hầu hết các trường hợp, cuối cùng bạn sẽ tiết kiệm được thời gian — và rất nhiều sự thất vọng. Khi nào? Vâng, nó phụ thuộc vào dự án. Trong một số trường hợp, bạn có thể viết kiểm thử cho đoạn code mà bạn cần thay đổi và mất hai giờ cho việc đó. Thay đổi bạn thực hiện sau đó có thể chỉ mất 15 phút. Khi nhìn lại, bạn có thể nói: "Tôi vừa lãng phí hai giờ – điều đó có đáng không?" Cũng còn tùy. Bạn không biết công việc đó có thể mất bao lâu nếu bạn không viết kiểm thử. Bạn cũng không biết bạn sẽ mất bao nhiêu thời gian để gỡ lỗi nếu mắc lỗi, bạn có thể tiết kiệm được thời gian nếu có các kiểm thử tại chỗ. Tôi không chỉ nói về lượng thời gian bạn sẽ tiết kiệm được nếu các kiểm thử phát hiện ra lỗi, mà còn về lượng thời gian kiểm tra giúp bạn tiết kiệm được khi bạn đang cố gắng tìm ra lỗi. Với các kiểm thử xung quanh code, việc giải quyết các vấn đề về chức năng thường dễ dàng hơn.
+
+Hãy giả sử trường hợp xấu nhất. Thay đổi rất đơn giản nhưng dù sao thì phần code xung quanh thay đổi đã được kiểm thử; chúng ta thực hiện tất cả các thay đổi một cách chính xác. Các kiểm thử có đáng giá không? Chúng ta không biết khi nào sẽ quay lại vùng code đó và thực hiện một thay đổi khác. Trong trường hợp tốt nhất, bạn quay lại ở lần tiếp theo và bắt đầu thu lại khoản đầu tư của mình một cách nhanh chóng. Trong trường hợp xấu nhất, phải mất nhiều năm mới có người quay lại và sửa đổi đoạn code đó. Tuy nhiên, rất có thể chúng ta sẽ đọc nó định kỳ, chỉ để tìm hiểu xem liệu có cần thực hiện thay đổi ở đó hay ở nơi nào khác nữa hay không. Sẽ dễ hiểu hơn nếu lớp nhỏ hơn và có kiểm thử đơn vị? Rất có thể là như vậy. Nhưng đây chỉ là trường hợp xấu nhất. Nó xảy ra thường xuyên như thế nào? Thông thường, thay đổi cụm trong hệ thống.

@@ -22,7 +22,7 @@ Chương 5 - Công cụ
 
 ## Phần 2 - Thay đổi phần mềm
 
-Chương 6 - Tôi không có nhiều thời gian và tôi phải thay đổi nó
+[Chương 6 - Tôi không có nhiều thời gian và tôi phải thay đổi nó](./chapter-6-i-dont-have-much-time-and-i-have-to-change-it.md.md)
 
 [Chương 7 - Mất quá nhiều thời gian để thực hiện thay đổi](./chapter-7-it-takes-forever-to-make-a-change.html)
 
