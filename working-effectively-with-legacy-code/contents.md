@@ -30,7 +30,7 @@ Chương 5 - Công cụ
 
 [Chương 9 - Tôi không thể đưa lớp này vào kiểm thử khai thác](./chapter-9-i-cant-get-this-class-into-a-test-harness.html).
 
-[Chương 10 - Tôi không thể đưa lớp này vào kiểm thử khai thác](./chapter-10-i-cant-run-this-method-in-a-test-harness.html).
+[Chương 10 - Tôi không thể chạy được phương thức này trong kiểm thử khai thác](./chapter-10-i-cant-run-this-method-in-a-test-harness.html).
 
 [Chương 11 - Tôi Cần Thực Hiện Thay Đổi. Tôi nên kiểm thử những phương thức nào?](./chapter-11-i-need-to-make-a-change-what-methods-should-i-test.html).
 

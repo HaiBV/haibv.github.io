@@ -30,3 +30,26 @@ Khi bạn vượt qua được khó khăn, cuộc sống không hoàn toàn màu
 > Hãy nhớ rằng, code là ngôi nhà của bạn và bạn phải sống với đó.
 
 Điều khó nhất khi cố gắng quyết định có nên viết kiểm thử khi bạn đang bị áp lực hay không là thực tế bạn có thể không biết sẽ mất bao lâu để thêm tính năng này. Trong code kế thừa, thật khó để đưa ra những ước tính có ý nghĩa. Có một số kỹ thuật có thể giúp ích. Hãy xem _Chương 16, Tôi không hiểu code đủ rõ để thay đổi nó_ để biết chi tiết. Khi bạn thực sự không biết sẽ mất bao lâu để thêm một tính năng và bạn nghi ngờ rằng nó sẽ dài hơn khoảng thời gian bạn có, bạn nên hack tính năng đó theo cách nhanh nhất có thể. Sau đó, nếu có đủ thời gian, bạn có thể quay lại và thực hiện một số kiểm thử và tái cấu trúc. Phần khó thực sự là quay lại và thực hiện việc kiểm thử và tái cấu trúc đó. Trước khi vượt qua khó khăn, mọi người thường né tránh công việc đó. Nó có thể là một vấn đề về tinh thần. Hãy xem _Chương 24, Chúng ta cảm thấy choáng ngợp. Có vẻ mọi thứ sẽ không thể cải thiện được_ để có một số cách mang tính xây dựng giúp tiến về phía trước.
+
+Cho đến giờ, những gì tôi mô tả có vẻ như là một vấn đề thực sự nan giải: Trả tiền ngay hoặc trả nhiều hơn về sau. Hoặc viết kiểm thử khi bạn thực hiện các thay đổi của mình hoặc sống với thực tế là nó sẽ trở nên khó khăn hơn theo thời gian. Nó có thể khó khăn hơn, nhưng đôi khi thì không.
+
+Nếu bạn phải thực hiện thay đổi đối với một lớp ngay bây giờ, hãy thử khởi tạo lớp đó trong một bộ kiểm thử khai thác. Nếu bạn không thể, trước tiên hãy xem _Chương 9, Tôi không thể đưa lớp này vào kiểm thử khai thác_ hoặc _Chương 10, Tôi không thể chạy được phương thức này trong kiểm thử khai thác_. Đưa code đang được thay đổi vào kiểm thử khai thác có thể dễ dàng hơn bạn nghĩ. Nếu bạn xem xét các phần đó và quyết định rằng bạn thực sự không đủ khả năng để phá vỡ các phụ thuộc và viết các kiểm thử ngay bây giờ, hãy xem xét kỹ lại những thay đổi bạn cần thực hiện. Bạn có thể tạo chúng bằng cách viết code mới không? Trong nhiều trường hợp, bạn có thể. Phần còn lại của chương này bao gồm mô tả về một số kỹ thuật mà chúng ta có thể sử dụng để thực hiện việc này.
+
+Đọc về những kỹ thuật này và cân nhắc chúng, nhưng nhớ rằng chúng phải được dùng cẩn thận. Khi sử dụng chúng, bạn đang thêm code đã được kiểm thử vào hệ thống của mình, nhưng phần code sử dụng nó có thể không được kiểm thử. Vì vậy hãy sử dụng thận trọng.
+
+## Phương pháp ươm mầm
+
+Khi bạn cần thêm một tính năng vào hệ thống và nó có thể được xây dựng hoàn toàn dưới dạng code mới, hãy viết một phương thức mới. Gọi nó từ những nơi cần có chức năng mới. Bạn có thể không dễ dàng kiểm thử các điểm gọi đó, nhưng ít nhất, bạn có thể viết kiểm thử cho code mới. Đây là một ví dụ.
+
+```java
+public class TransactionGate
+{
+	public void postEntries(List entries) {
+		for (Iterator it = entries.iterator(); it.hasNext(); ) {
+			Entry entry = (Entry)it.next();
+			entry.postDate();}
+			transactionBundle.getListManager().add(entries);
+		}
+	...
+}
+```
