@@ -53,3 +53,63 @@ public class TransactionGate
 	...
 }
 ```
+
+Chúng ta cần thêm code để xác minh rằng không có `entries` mới nào đã tồn tại trong `TransactionBundle` trước khi đăng `date` của chúng và thêm chúng. Nhìn vào code, có vẻ như điều này phải xảy ra ở đầu phương thức, trước vòng lặp. Nhưng trên thực tế, nó có thể xảy ra bên trong vòng lặp. Chúng ta có thể thay đổi thành thế này:
+
+```java
+public class TransactionGate
+{
+	public void postEntries(List entries) {
+		List entriesToAdd = new LinkedList();
+		for (Iterator it = entries.iterator(); it.hasNext(); ) {
+			Entry entry = (Entry)it.next();
+			if (!transactionBundle.getListManager().hasEntry(entry) {
+				entry.postDate();
+				entriesToAdd.add(entry);
+			}
+		}
+		transactionBundle.getListManager().add(entriesToAdd);
+	}
+	...
+}
+```
+
+Đây có vẻ như là một thay đổi đơn giản nhưng lại khá xâm lấn. Làm thế nào để biết chúng ta đã làm đúng? Không có bất kỳ sự tách biệt nào giữa code mới vừa thêm và code cũ. Tệ hơn, chúng ta đang làm cho đoạn code trở nên khó đọc hơn một chút. Chúng ta đang kết hợp hai hoạt động ở đây: đăng `date` và phát hiện `entry` trùng lặp. Phương thức này khá nhỏ nhưng đã kém rõ ràng hơn một chút và chúng ta cũng đã sử dụng một biến tạm thời. Tính tạm thời không nhất thiết là xấu, nhưng đôi khi chúng thu hút code mới. Nếu thay đổi tiếp theo mà chúng ta phải thực hiện liên quan đến việc xử lý tất cả các `entry` không trùng lặp trước khi chúng được thêm vào, thì chỉ có một vị trí trong code tồn tại một biến như thế: ngay trong phương thức này. Sẽ rất hấp dẫn nếu chỉ đặt code đó vào phương thức. Chúng ta có thể làm điều này theo cách khác không?
+
+Có. Chúng ta có thể coi việc loại bỏ `entry` trùng lặp là một thao tác hoàn toàn riêng biệt. Chúng ta có thể sử dụng _phương pháp phát triển dựa trên thử nghiệm - TDD (88)_ để tạo một phương thức mới có tên là `UniqueEntries`:
+
+```java
+public class TransactionGate
+{
+	...
+	List uniqueEntries(List entries) {
+		List result = new ArrayList();
+		for (Iterator it = entries.iterator(); it.hasNext(); ) {
+			Entry entry = (Entry)it.next();
+			if (!transactionBundle.getListManager().hasEntry(entry) {
+				result.add(entry);
+			}
+		}
+		return result;
+	}
+	...
+}
+```
+
+Sẽ rất dễ dàng để viết kiểm thử cho phương thức này. Khi có nó, chúng ta có thể quay lại code gốc và thêm lệnh gọi.
+
+```java
+public class TransactionGate
+{
+	...
+	public void postEntries(List entries) {
+		List entriesToAdd = uniqueEntries(entries);
+		for (Iterator it = entriesToAdd.iterator(); it.hasNext(); ) {
+			Entry entry = (Entry)it.next();
+			entry.postDate();
+		}
+		transactionBundle.getListManager().add(entriesToAdd);
+	}
+	...
+}
+```
