@@ -37,7 +37,7 @@ Nếu bạn phải thực hiện thay đổi đối với một lớp ngay bây 
 
 Đọc về những kỹ thuật này và cân nhắc chúng, nhưng nhớ rằng chúng phải được dùng cẩn thận. Khi sử dụng chúng, bạn đang thêm code đã được kiểm thử vào hệ thống của mình, nhưng phần code sử dụng nó có thể không được kiểm thử. Vì vậy hãy sử dụng thận trọng.
 
-## Phương pháp ươm mầm
+## Phương thức ươm mầm
 
 Khi bạn cần thêm một tính năng vào hệ thống và nó có thể được xây dựng hoàn toàn dưới dạng code mới, hãy viết một phương thức mới. Gọi nó từ những nơi cần có chức năng mới. Bạn có thể không dễ dàng kiểm thử các điểm gọi đó, nhưng ít nhất, bạn có thể viết kiểm thử cho code mới. Đây là một ví dụ.
 
@@ -113,3 +113,17 @@ public class TransactionGate
 	...
 }
 ```
+
+Chúng ta vẫn còn một biến tạm thời mới ở đây, nhưng code đã bớt lộn xộn hơn nhiều. Nếu cần thêm nhiều code hoạt động với các `entry` không trùng lặp, chúng ta cũng có thể tạo một phương thức riêng và gọi nó từ đây. Nếu có thêm code cần làm việc với chúng, chúng ta có thể tạo mới một lớp và chuyển tất cả các phương thức mới đó sang lớp đó. Hiệu quả thực sự là chúng ta sẽ giữ phương thức này ở mức nhỏ và cuối cùng thu được các phương thức ngắn hơn, dễ hiểu hơn về tổng thể.
+
+Đó là một ví dụ về Phương thức Ươm Mầm. Dưới đây là các bước bạn thực sự thực hiện:
+1. Xác định vị trí bạn cần thay đổi code của mình.
+2. Nếu thay đổi có thể được hình thành dưới dạng một chuỗi các câu lệnh ở một vị trí trong một phương thức, hãy viết ra lệnh gọi một phương thức mới sẽ thực hiện công việc liên quan và sau đó nhận xét nó. (Tôi thích làm điều này trước khi viết phương thức để tôi có thể hiểu được lệnh gọi phương thức sẽ trông như thế nào trong ngữ cảnh đó.)
+3. Xác định những biến cục bộ cần từ phương thức nguồn và biến chúng thành tham số cho phương thức mới
+4. Xác định xem phương thức vừa tạo có cần trả về giá trị cho phương thức nguồn hay không. Nếu có, hãy thay đổi lệnh gọi để giá trị trả về của nó được gán cho một biến.
+5. Phát triển phương thức ươm mầm bằng _phương pháp phát triển dựa trên thử nghiệm - TDD (88)_.
+6. Xóa comment trong phương thức nguồn để kích hoạt lời gọi.
+
+Tôi khuyên bạn nên sử dụng _Phương thức Ươm Mầm_ bất cứ khi nào bạn thấy code đang thêm là một phần công việc riêng biệt hoặc bạn chưa thể thực hiện các kiểm thử xung quanh một phương thức. Tốt hơn là thêm code nội tuyến.
+
+Đôi khi, khi bạn muốn sử dụng _Phương thức Ươm Mầm_, sự phụ thuộc trong lớp của bạn tệ đến mức không thể tạo một phiên bản của nó mà không giả mạo nhiều đối số hàm khởi tạo. Có một cách khác là sử dụng _Truyền Null (111)_. Khi cách đó không hiệu quả, hãy cân nhắc việc biến mầm thành một phương thức tĩnh công khai. Bạn có thể phải chuyển các biến thực thể của lớp nguồn làm đối số, nhưng nó sẽ cho phép bạn thực hiện thay đổi của mình. Việc tạo một hàm tĩnh cho mục đích này có vẻ kỳ lạ nhưng nó có thể hữu ích trong code kế thừa. Tôi có xu hướng xem các phương thức tĩnh trên các lớp như một khu vực tổ chức. Thông thường, sau khi bạn có một số số liệu thống kê và bạn nhận thấy rằng chúng có chung một số biến, bạn có thể thấy rằng bạn có thể tạo một lớp mới và chuyển các số liệu thống kê sang lớp mới làm phương thức phiên bản. Khi chúng thực sự xứng đáng trở thành phương thức phiên bản trên lớp hiện tại, chúng có thể được chuyển trở lại lớp khi cuối cùng bạn đã kiểm thử được nó.
