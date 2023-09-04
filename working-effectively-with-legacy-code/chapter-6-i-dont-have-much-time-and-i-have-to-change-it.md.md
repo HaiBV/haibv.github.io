@@ -37,7 +37,7 @@ Nếu bạn phải thực hiện thay đổi đối với một lớp ngay bây 
 
 Đọc về những kỹ thuật này và cân nhắc chúng, nhưng nhớ rằng chúng phải được dùng cẩn thận. Khi sử dụng chúng, bạn đang thêm code đã được kiểm thử vào hệ thống của mình, nhưng phần code sử dụng nó có thể không được kiểm thử. Vì vậy hãy sử dụng thận trọng.
 
-## Phương thức ươm mầm
+## Ươm mầm phương thức
 
 Khi bạn cần thêm một tính năng vào hệ thống và nó có thể được xây dựng hoàn toàn dưới dạng code mới, hãy viết một phương thức mới. Gọi nó từ những nơi cần có chức năng mới. Bạn có thể không dễ dàng kiểm thử các điểm gọi đó, nhưng ít nhất, bạn có thể viết kiểm thử cho code mới. Đây là một ví dụ.
 
@@ -127,3 +127,50 @@ Chúng ta vẫn còn một biến tạm thời mới ở đây, nhưng code đã
 Tôi khuyên bạn nên sử dụng _Phương thức Ươm Mầm_ bất cứ khi nào bạn thấy code đang thêm là một phần công việc riêng biệt hoặc bạn chưa thể thực hiện các kiểm thử xung quanh một phương thức. Tốt hơn là thêm code nội tuyến.
 
 Đôi khi, khi bạn muốn sử dụng _Phương thức Ươm Mầm_, sự phụ thuộc trong lớp của bạn tệ đến mức không thể tạo một phiên bản của nó mà không giả mạo nhiều đối số hàm khởi tạo. Có một cách khác là sử dụng _Truyền Null (111)_. Khi cách đó không hiệu quả, hãy cân nhắc việc biến mầm thành một phương thức tĩnh công khai. Bạn có thể phải chuyển các biến thực thể của lớp nguồn làm đối số, nhưng nó sẽ cho phép bạn thực hiện thay đổi của mình. Việc tạo một hàm tĩnh cho mục đích này có vẻ kỳ lạ nhưng nó có thể hữu ích trong code kế thừa. Tôi có xu hướng xem các phương thức tĩnh trên các lớp như một khu vực tổ chức. Thông thường, sau khi bạn có một số số liệu thống kê và bạn nhận thấy rằng chúng có chung một số biến, bạn có thể thấy rằng bạn có thể tạo một lớp mới và chuyển các số liệu thống kê sang lớp mới làm phương thức phiên bản. Khi chúng thực sự xứng đáng trở thành phương thức phiên bản trên lớp hiện tại, chúng có thể được chuyển trở lại lớp khi cuối cùng bạn đã kiểm thử được nó.
+
+### Ưu điểm và nhược điểm
+
+_Ươm mầm phương thức_ có một số ưu điểm và nhược điểm. Trước tiên hãy xét những nhược điểm. Nhược điểm của _Ươm mầm phương thức_ là gì? Thứ nhất, khi sử dụng nó, về cơ bản là khẳng định bạn đang từ bỏ phương thức nguồn và lớp của nó vào lúc này. Bạn sẽ không kiểm thử nó và sẽ không làm cho nó tốt hơn — bạn chỉ thêm một số chức năng mới vào một phương thức mới. Từ bỏ phương thức hoặc lớp đôi khi là một lựa chọn thực tế, nhưng điều đó vẫn khá đáng buồn. Nó khiến code của bạn trong tình trạng nửa vời. Phương thức nguồn có thể chứa nhiều code phức tạp và mầm của phương thức mới. Đôi khi không rõ tại sao chỉ có công việc này diễn ra ở một nơi khác, nó khiến phương thức nguồn ở trạng thái kỳ lạ. Nhưng ít nhất điều đó cũng chỉ ra một số công việc phát sinh mà bạn có thể làm khi kiểm thử lớp nguồn sau này.
+
+Mặc dù có nhược điểm, nhưng vẫn một số ưu điểm nổi bật. Khi bạn sử dụng _Ươm mầm phương thức_, bạn tách biệt rõ ràng code mới khỏi code cũ. Ngay cả khi bạn không thể kiểm thử code cũ ngay lập tức, ít nhất bạn cũng có thể xem các thay đổi của mình một cách riêng biệt và có giao diện rõ ràng giữa code mới và code cũ. Bạn thấy tất cả các biến bị ảnh hưởng và điều này có thể dễ dàng xác định xem code có đúng ngữ cảnh hay không.
+
+## Ươm mầm lớp
+
+_Ươm mầm phương thức_ là một kỹ thuật mạnh mẽ, nhưng trong một số tình huống phụ thuộc phức tạp, nó không đủ mạnh.
+
+Hãy xem xét trường hợp bạn phải thực hiện các thay đổi đối với một lớp, nhưng không có cách nào để bạn có thể tạo đối tượng của lớp đó trong bộ kiểm thử khai thác trong khoảng thời gian hợp lý, vì vậy không có cách nào để ươm mầm phương thức và viết kiểm thử cho nó trên lớp đó. Có thể bạn có một tập hợp lớn các phần phụ thuộc mang tính sáng tạo, những thứ khiến việc khởi tạo lớp của bạn trở nên khó khăn. Hoặc bạn có thể có nhiều phụ thuộc ẩn. Để loại bỏ chúng, bạn cần thực hiện nhiều thao tác tái cấu trúc xâm lấn để tách chúng ra đủ tốt để biên dịch lớp trong kiểm thử khai thác.
+
+Trong những trường hợp này, bạn có thể tạo một lớp khác để lưu giữ các thay đổi của mình và sử dụng nó từ lớp nguồn. Hãy xem xét một ví dụ đơn giản.
+
+Đây là một phương thức cổ xưa trên lớp C++ có tên là `QuarterlyReportGenerator`:
+
+```cpp
+std::string QuarterlyReportGenerator::generate()
+{
+	std::vector<Result> results = database.queryResults(beginDate, endDate);
+	std::string pageText;
+
+	pageText += "<html><head><title>""Quarterly Report""</title></head><body><table>";
+
+	if (results.size() != 0) {
+		for (std::vector<Result>::iterator it = results.begin(); it != results.end(); ++it) {
+			pageText += "<tr>";
+			pageText += "<td>" + it->department + "</td>";
+			pageText += "<td>" + it->manager + "</td>";
+			char buffer [128];
+			sprintf(buffer, "<td>$%d</td>", it->netProfit / 100);
+			pageText += std::string(buffer);
+			sprintf(buffer, "<td>$%d</td>", it->operatingExpense / 100);
+			pageText += std::string(buffer);
+			pageText += "</tr>";
+		}
+	} else {
+		pageText += "No results for this period";
+	}
+	pageText += "</table>";
+	pageText += "</body>";
+	pageText += "</html>";
+
+	return pageText;
+}
+```
