@@ -174,3 +174,51 @@ std::string QuarterlyReportGenerator::generate()
 	return pageText;
 }
 ```
+
+Giả sử thay đổi mà chúng ta cần thực hiện là thêm hàng tiêu đề cho bảng HTML mà nó đang tạo. Hàng tiêu đề sẽ như thế này:
+
+```html
+"<tr><td>Department</td><td>Manager</td><td>Profit</td><td>Expenses</td></tr>"
+```
+
+Hơn nữa, hãy giả sử rằng đây là một lớp lớn và sẽ mất khoảng một ngày để lớp đó được đưa vào kiểm thử khai thác và đây là thời điểm mà chúng ta không đủ khả năng làm điều đó ngay bây giờ.
+
+Chúng ta có thể hình thành sự thay đổi dưới dạng một lớp nhỏ có tên là `QuarterlyReportTableHeaderProducer` và phát triển nó bằng cách sử dụng _phương pháp phát triển dựa trên thử nghiệm (88)_
+
+```cpp
+using namespace std;
+
+class QuarterlyReportTableHeaderProducer
+{
+public:
+	string makeHeader();
+};
+
+string QuarterlyReportTableProducer::makeHeader()
+{
+	return "<tr><td>Department</td><td>Manager</td>"
+		"<td>Profit</td><td>Expenses</td>";
+}
+```
+
+Khi có nó, chúng ta tạo một thực thể và gọi nó trực tiếp trong `QuarterlyReportGenerator::generate()`:
+
+```cpp
+...
+QuarterlyReportTableHeaderProducer producer;
+pageText += producer.makeHeader();
+...
+```
+
+Tôi chắc chắn rằng tại thời điểm này bạn đang nhìn vào phần trên và nói, "Anh đang đùa phải không. Thật nực cười khi tạo ra một lớp cho sự thay đổi này! Đó chỉ là một lớp nhỏ không mang lại bất kỳ lợi ích nào trong thiết kế. Nó giới thiệu một khái niệm hoàn toàn mới chỉ và làm lộn xộn code." Vâng, tại thời điểm này, điều đó là đúng. Lý do duy nhất chúng ta làm điều đó là để thoát khỏi tình trạng phụ thuộc tồi tệ, nhưng chúng ta hãy xem xét kỹ hơn.
+
+Điều gì sẽ xảy ra nếu chúng ta đặt tên cho lớp là `QuarterlyReportTableHeaderGenerator` và đặt cho nó một giao diện?
+
+```cpp
+class QuarterlyReportTableHeaderGenerator
+{
+public:
+	string generate();
+};
+```
+
