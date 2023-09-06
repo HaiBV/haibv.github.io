@@ -222,3 +222,36 @@ public:
 };
 ```
 
+Bây giờ lớp là một phần của khái niệm mà chúng ta đã quen thuộc. `QuarterlyReportTableHeaderGenerator` là một trình tạo, giống như `QuarterlyReportGenerator`. Cả hai đều có phương thức `generate()` trả về chuỗi. Chúng ta có thể ghi lại điểm chung đó trong code bằng cách tạo một lớp giao diện và để cả hai kế thừa từ nó:
+
+```cpp
+class HTMLGenerator
+{
+public:
+	virtual ~HTMLGenerator() = 0;
+	virtual string generate() = 0;
+};
+
+class QuarterlyReportTableHeaderGenerator : public HTMLGenerator
+{
+public:
+	...
+	virtual string generate();
+	...
+};
+class QuarterlyReportGenerator : public HTMLGenerator
+{
+public:
+	...
+	virtual string generate();
+	...
+};
+```
+
+Khi chúng ta thực hiện nhiều công việc hơn, chúng ta có thể kiểm thử `QuarterlyReportGenerator` và thay đổi cách triển khai của nó để nó thực hiện hầu hết công việc bằng cách sử dụng các lớp `generator`.
+
+Trong trường hợp này, chúng ta có thể nhanh chóng xếp lớp vào tập hợp các khái niệm mà chúng ta đã có trong ứng dụng. Trong nhiều trường hợp khác, chúng ta không thể làm được nhưng điều đó không có nghĩa là chúng ta nên chần chừ. Một số lớp mọc lên không bao giờ thể hiện các khái niệm chính trong ứng dụng. Thay vào đó, chúng trở thành những cái mới. Bạn có thể tạo ra một lớp và nghĩ rằng nó không có ý nghĩa gì đối với thiết kế của bạn cho đến khi bạn làm điều gì đó tương tự ở một nơi khác và nhận thấy sự tương đồng. Đôi khi, bạn có thể loại bỏ code trùng lặp trong các lớp mới và thường bạn phải đổi tên chúng, nhưng đừng mong đợi tất cả điều đó xảy ra cùng một lúc.
+
+Cách bạn nhìn nhận một lớp học mới khi bạn tạo nó lần đầu tiên và cách bạn nhìn nhận nó sau một vài tháng thường khác nhau đáng kể. Việc bạn có lớp mới kỳ lạ này trong hệ thống của mình khiến bạn phải suy nghĩ rất nhiều. Khi cần thực hiện một thay đổi gần với nó, bạn có thể bắt đầu suy nghĩ xem liệu sự thay đổi đó có phải là một phần của khái niệm mới hay liệu khái niệm đó có cần thay đổi một chút hay không. Đây là một phần của quá trình thiết kế đang diễn ra.
+
+Về cơ bản có hai trường hợp dẫn chúng ta đến _Ươm mầm lớp_. Trường hợp thứ nhất, những thay đổi của bạn sẽ dẫn đến việc thêm một trách nhiệm hoàn toàn mới vào một trong các lớp của mình. Ví dụ: trong phần mềm khai thuế, một số khoản khấu trừ nhất định có thể không thực hiện được vào những thời điểm nhất định trong năm. Bạn có thể xem cách thêm kiểm tra ngày vào lớp `TaxCalculator`, nhưng việc kiểm tra đó nằm ngoài trách nhiệm chính của `TaxCalculator`: tính thuế? Có lẽ nó nên ở một lớp mới. Trường hợp còn lại là trường hợp mà chúng ta lấy ví dụ ở đầu chương này. Chúng ta có một số chức năng nhỏ mà có thể đưa vào lớp hiện có, nhưng không thể đưa lớp đó vào kiểm thử khai thác. Nếu ít nhất có thể biên dịch chúng để khai thác, chúng ta có thể thử sử dụng _Ươm mầm phương thức_, nhưng thậm chị đôi khi chúng ta không may mắn như vậy.
