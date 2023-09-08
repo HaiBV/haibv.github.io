@@ -272,3 +272,55 @@ Dưới đây là các bước cho _Ươm mầm lớp_:
 Ưu điểm chính của _Ươm mầm lớp_ là nó cho phép bạn tiếp tục công việc của mình với sự tự tin hơn những gì bạn có thể có nếu bạn thực hiện những thay đổi mang tính xâm lấn. Trong C++, _Ươm mầm lớp_ có thêm lợi thế là bạn không phải sửa đổi bất kỳ tệp `header` hiện có nào để thực hiện thay đổi. Bạn chỉ cần đưa `header` của lớp mới vào tệp triển khai cho lớp nguồn. Ngoài ra, việc bạn thêm một tệp `header` mới vào dự án của mình là một điều tốt. Theo thời gian, bạn sẽ đưa các khai báo vào tệp `header` mới mà lẽ ra có thể nằm trong `header` của lớp nguồn. Điều này làm giảm tải biên dịch trên lớp nguồn. Ít nhất bạn sẽ biết rằng bạn không làm cho tình huống xấu trở nên tồi tệ hơn. Một thời gian sau, bạn có thể truy cập lại lớp nguồn và kiểm thử nó.
 
 Nhược điểm chính của _Ươm mầm lớp_ là sự phức tạp về mặt khái niệm. Khi các lập trình viên tìm hiểu code base mới, họ sẽ phát triển cảm giác về cách các lớp chính hoạt động với nhau. Khi bạn sử dụng _Ươm mầm lớp_, bạn rút ruột các phần trừu tượng và thực hiện phần lớn công việc trong các lớp khác. Đôi khi, đây là điều hoàn toàn đúng đắn. Vào những lúc khác, bạn di chuyển về phía nó chỉ vì lưng bạn dựa vào tường. Những thứ lý tưởng nhất có thể tồn tại trong lớp đó sẽ trở thành mầm non chỉ để tạo ra sự thay đổi an toàn.
+
+## Bọc phương thức
+
+Việc thêm hành vi vào các phương thức hiện có là điều dễ thực hiện, nhưng thường thì đó không phải là điều nên làm. Khi bạn tạo một phương thức lần đầu tiên, nó thường chỉ thực hiện một việc. Bất kỳ code bổ sung nào bạn thêm sau này đều đáng ngờ. Rất có thể, bạn thêm nó chỉ vì nó phải thực thi cùng lúc với code bạn đang thêm vào. Quay trở lại những ngày đầu của ngành lập trình, điều này được gọi là _khớp nối tạm thời (temporal coupling)_, và sẽ là một điều khá khó chịu khi bạn lạm dụng nó quá mức. Khi bạn nhóm mọi thứ lại với nhau chỉ vì chúng phải xảy ra cùng lúc, mối quan hệ giữa chúng sẽ không bền chặt lắm. Sau này bạn có thể thấy rằng bạn phải làm một trong những việc đó mà không làm những việc còn lại, nhưng tại thời điểm đó, chúng có thể đã phát triển đan xen lẫn nhau. Nếu không có "đường nối", việc tách chúng ra có thể rất khó khăn.
+
+Khi cần thêm hành vi, bạn có thể thực hiện theo cách không quá rối rắm. Một trong những kỹ thuật mà bạn có thể sử dụng là _Ươm mầm phương thức_, nhưng còn một kỹ thuật khác đôi khi rất hữu ích. Tôi gọi nó là _Bọc phương thức_. Đây là một ví dụ đơn giản.
+
+```java
+public class Employee
+{
+	...
+	public void pay() {
+		Money amount = new Money();
+		for (Iterator it = timecards.iterator(); it.hasNext(); ) {
+			Timecard card = (Timecard)it.next();
+			if (payPeriod.contains(date)) {
+				amount.add(card.getHours() * payRate);
+			}
+		}
+		payDispatcher.pay(this, date, amount);
+	}
+}
+```
+
+Trong phương thức này, chúng ta cộng các thẻ chấm công hàng ngày của nhân viên sau đó gửi thông tin thanh toán của từng người đến `PayDispatcher`. Giả sử có một yêu cầu mới xuất hiện. Mỗi lần trả lương cho nhân viên, chúng ta phải cập nhật một tệp có tên của nhân viên đó để có thể gửi đến một số phần mềm báo cáo. Nơi dễ nhất để đặt code là trong phương thức thanh toán. Rốt cuộc, nó phải xảy ra cùng một lúc, phải không? Điều gì sẽ xảy ra nếu chúng ta dùng một cách khác?
+
+```java
+public class Employee
+{
+	private void dispatchPayment() {
+		Money amount = new Money();
+		for (Iterator it = timecards.iterator(); it.hasNext(); ) {
+			Timecard card = (Timecard)it.next();
+			if (payPeriod.contains(date)) {
+				amount.add(card.getHours() * payRate);
+			}
+		}
+		payDispatcher.pay(this, date, amount);
+	}
+
+	public void pay() {
+		logPayment();
+		dispatchPayment();
+	}
+
+	private void logPayment() {
+	...
+	}
+}
+```
+
+Trong đoạn code trên, tôi đã đổi tên `pay()` thành `dispatchPayment()` và đặt nó ở chế độ privated. Tiếp theo, tôi tạo một phương thức thanh toán mới và gọi đến nó. Phương thức `pay()` mới ghi lại một khoản thanh toán và sau đó gửi thanh toán đi. Những nơi đã từng gọi `pay()` không cần phải biết hoặc quan tâm đến sự thay đổi này. Họ chỉ cần thực hiện lệnh gọi và mọi việc vẫn ổn.
