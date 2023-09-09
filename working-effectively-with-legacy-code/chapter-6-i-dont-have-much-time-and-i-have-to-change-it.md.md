@@ -324,3 +324,37 @@ public class Employee
 ```
 
 Trong đoạn code trên, tôi đã đổi tên `pay()` thành `dispatchPayment()` và đặt nó ở chế độ privated. Tiếp theo, tôi tạo một phương thức thanh toán mới và gọi đến nó. Phương thức `pay()` mới ghi lại một khoản thanh toán và sau đó gửi thanh toán đi. Những nơi đã từng gọi `pay()` không cần phải biết hoặc quan tâm đến sự thay đổi này. Họ chỉ cần thực hiện lệnh gọi và mọi việc vẫn ổn.
+
+Đây là một dạng của _Bọc phương thức_. Chúng ta tạo một phương thức với tên của phương thức ban đầu và ủy quyền nó cho code cũ của chúng ta. Chúng ta sử dụng điều này khi muốn thêm hành vi vào các lệnh gọi hiện có của phương thức ban đầu. Nếu mỗi khi gọi `pay()`, chúng ta muốn quá trình ghi log diễn ra thì kỹ thuật này có thể rất hữu ích.
+
+Có một dạng _Bọc phương thức_ khác có thể sử dụng khi chỉ muốn thêm một phương thức mới, một phương thức chưa có ai gọi. Trong ví dụ trước, nếu muốn ghi log rõ ràng, chúng ta có thể thêm phương thức `makeLoggedPayment` cho `Employee` như thế này:
+
+```java
+public class Employee
+{
+	public void makeLoggedPayment() {
+		logPayment();
+		pay();
+	}
+
+	public void pay() {
+		...
+	}
+
+	private void logPayment() {
+		...
+	}
+}
+```
+
+Bây giờ người dùng có tùy chọn thanh toán bằng một trong hai cách. Nó được Kent Beck mô tả trong _Smalltalk Patterns: Best Practices_ (Pearson Education, 1996).
+
+_Bọc phương thức_ là một cách tuyệt vời để giới thiệu các khớp nối đồng thời bổ sung thêm các tính năng mới. Chỉ có một vài nhược điểm. Đầu tiên là tính năng mới mà bạn thêm vào không thể gắn liền với tính logic của tính năng cũ. Đó phải là điều bạn làm trước hoặc sau tính năng cũ. Đợi đã, tôi đã nói điều đó là xấu à? Thực ra không phải vậy. Hãy làm điều đó khi bạn có thể. Nhược điểm thứ hai (và thực tế hơn) là bạn phải đặt tên mới cho code cũ bạn có trong phương thức. Trong trường hợp này, tôi đã đặt tên code trong phương thức `pay()` là `dispatchPayment()`. Có một chút căng thẳng, nhưng thành thật mà nói, tôi không thích kết quả cuối cùng của code trong ví dụ này. Phương thức `dispatchPayment()` thực sự làm nhiều việc hơn là chỉ gửi đi; nó cũng tính lương. Nếu tôi đã thực hiện các kiểm thử, rất có thể, tôi sẽ trích xuất phần đầu của `dispatchPayment()` thành một phương thức riêng với tên là `CalculatePay()` và làm cho phương thức `pay()` trở thành như sau:
+
+```java
+public void pay() {
+	logPayment();
+	Money amount = calculatePay();
+	dispatchPayment(amount);
+}
+```
