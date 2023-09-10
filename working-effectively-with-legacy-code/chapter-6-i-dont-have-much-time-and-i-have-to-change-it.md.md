@@ -358,3 +358,26 @@ public void pay() {
 	dispatchPayment(amount);
 }
 ```
+
+Cách này giúp phân tách tốt tất cả các trách nhiệm.
+
+Dưới đây là các bước cho phiên bản đầu tiên của _Bọc phương thức_:
+
+1. Xác định phương thức bạn cần thay đổi.
+2. Nếu thay đổi có thể được hình thành dưới dạng một chuỗi câu lệnh ở một nơi, hãy đổi tên phương thức, sau đó tạo một phương thức mới có cùng tên và chữ ký như phương thức cũ. Hãy nhớ _Lưu giữ Chữ ký (312)_ khi bạn thực hiện việc này.
+3. Thực hiện lời gọi đến phương thức cũ trong phương thức mới
+4. Phát triển phương thức cho tính năng mới, kiểm thử trước (xem _phát triển dựa trên thử nghiệm (88)_) và gọi nó từ phương thức mới
+
+Trong phiên bản thứ hai, khi chúng ta không quan tâm đến việc sử dụng cùng tên với phương thức cũ, các bước sẽ như sau:
+
+1. Xác định phương thức bạn cần thay đổi.
+2. Nếu thay đổi có thể được hình thành dưới dạng một chuỗi các câu lệnh ở một nơi, hãy phát triển một phương thức mới cho thay đổi đó bằng cách sử dụng _phát triển dựa trên thử nghiệm (88)_.
+3. Tạo một phương thức khác gọi phương thức mới và phương thức cũ.
+
+### Ưu điểm và Nhược điểm
+
+_Bọc phương thức_ là một cách hay để đưa chức năng mới đã được kiểm thử vào ứng dụng khi chúng ta không thể dễ dàng viết kiểm thử cho code lời gọi. _Ươm mầm phương thức_ và _Ươm mầm lớp_ thêm code vào các phương thức hiện có và làm cho chúng dài hơn ít nhất một dòng, nhưng _Bọc phương thức_ không làm tăng kích thước của các phương thức hiện có.
+
+Một ưu điểm khác của _Bọc phương thức_ là nó làm cho chức năng mới trở nên độc lập với chức năng hiện có một cách rõ ràng. Khi thực hiện bọc, bạn không đan xen code cho mục đích này với code cho mục đích khác.
+
+Nhược điểm chính của _Bọc phương thức_ là nó có thể dẫn đến việc đặt tên kém. Trong ví dụ trước, chúng ta đã đổi tên phương thức `pay` là `dispatchPayment()` chỉ vì chúng ta cần một cái tên khác cho code trong phương thức ban đầu. Nếu code của chúng ta không quá mong manh hoặc phức tạp hoặc nếu có một công cụ tái cấu trúc thực hiện _Trích xuất Phương thức (415)_ một cách an toàn, thì chúng ta có thể thực hiện một số trích xuất bổ sung và kết thúc với những cái tên hay hơn. Tuy nhiên, trong nhiều trường hợp, chúng ta thực hiện bọc vì không có bất kỳ kiểm thử nào, code khá mỏng manh và những công cụ đó không có sẵn.
