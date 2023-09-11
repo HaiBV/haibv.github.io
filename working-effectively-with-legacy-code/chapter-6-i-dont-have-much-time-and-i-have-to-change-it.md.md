@@ -381,3 +381,51 @@ _Bọc phương thức_ là một cách hay để đưa chức năng mới đã 
 Một ưu điểm khác của _Bọc phương thức_ là nó làm cho chức năng mới trở nên độc lập với chức năng hiện có một cách rõ ràng. Khi thực hiện bọc, bạn không đan xen code cho mục đích này với code cho mục đích khác.
 
 Nhược điểm chính của _Bọc phương thức_ là nó có thể dẫn đến việc đặt tên kém. Trong ví dụ trước, chúng ta đã đổi tên phương thức `pay` là `dispatchPayment()` chỉ vì chúng ta cần một cái tên khác cho code trong phương thức ban đầu. Nếu code của chúng ta không quá mong manh hoặc phức tạp hoặc nếu có một công cụ tái cấu trúc thực hiện _Trích xuất Phương thức (415)_ một cách an toàn, thì chúng ta có thể thực hiện một số trích xuất bổ sung và kết thúc với những cái tên hay hơn. Tuy nhiên, trong nhiều trường hợp, chúng ta thực hiện bọc vì không có bất kỳ kiểm thử nào, code khá mỏng manh và những công cụ đó không có sẵn.
+
+## Bọc lớp
+
+Phương pháp tương tự _Bọc Phương thức_ với cấp độ lớp là _Bọc Lớp_. _Bọc Lớp_ sử dụng khá nhiều khái niệm tương tự. Khi cần thêm hành vi vào hệ thống, chúng ta có thể thêm nó vào một phương thức hiện có, nhưng chúng ta cũng có thể thêm nó vào một phương thức khác sử dụng phương thức đó. Trong _Bọc Lớp_, thứ khác đó là một lớp khác.
+
+Chúng ta hãy xem lại lớp `Emplyee`.
+
+```java
+class Employee
+{
+	public void pay() {
+		Money amount = new Money();
+		for (Iterator it = timecards.iterator(); it.hasNext(); ) {
+			Timecard card = (Timecard)it.next();
+			if (payPeriod.contains(date)) {
+				amount.add(card.getHours() * payRate);
+			}
+		}
+		payDispatcher.pay(this, date, amount);
+	}
+	...
+}
+```
+
+Chúng ta muốn ghi lại sự thật rằng chúng ta đang trả lương cho một nhân viên cụ thể. Một điều chúng ta có thể làm là tạo một lớp khác có phương thức `pay`. Các đối tượng của lớp đó có thể nắm giữ một nhân viên, thực hiện công việc ghi nhật ký theo phương thức `pay()` và sau đó ủy quyền cho `Employee` để nó thực hiện thanh toán. Thông thường, cách dễ nhất để thực hiện việc này, nếu bạn không thể khởi tạo lớp gốc trong kiểm thử khai thác, là sử dụng _Trích xuất Trình triển khai (356)_ hoặc _Trích xuất Giao diện (362)_ trên đó và bao bọc triển khai giao diện đó.
+
+Trong đoạn code sau, chúng ta sử dụng _Trích xuất Trình triển khai_ để biến lớp `Employee` thành một giao diện. Bây giờ một lớp mới, `LoggingEmployee`, sẽ triển khai lớp đó. Chúng ta có thể truyền bất kỳ `Emloyee` nào cho `LoggingEmployee` để ghi nhật ký cũng như thanh toán.
+
+```java
+class LoggingEmployee extends Employee
+{
+	public LoggingEmployee(Employee e) {
+		employee = e;
+	}
+
+	public void pay() {
+		logPayment();
+		employee.pay();
+	}
+
+	private void logPayment() {
+		...
+	}
+	...
+}
+```
+
+Kỹ thuật này được gọi là `decorator pattern`. Chúng ta tạo các đối tượng của một lớp bao bọc một lớp khác và truyền chúng đi khắp nơi. Lớp bao bọc phải có giao diện giống với lớp mà nó bao bọc để nơi gọi không biết rằng họ đang làm việc với lớp bao bọc. Trong ví dụ, `LoggingEmployee` là một `decorator` cho `Employee`. Nó cần phải có phương thức `pay()` và bất kỳ phương thức nào khác trên `Employee` được nọi gọi sử dụng.
