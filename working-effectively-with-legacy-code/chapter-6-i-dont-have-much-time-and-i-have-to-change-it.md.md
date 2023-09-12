@@ -429,3 +429,56 @@ class LoggingEmployee extends Employee
 ```
 
 Kỹ thuật này được gọi là `decorator pattern`. Chúng ta tạo các đối tượng của một lớp bao bọc một lớp khác và truyền chúng đi khắp nơi. Lớp bao bọc phải có giao diện giống với lớp mà nó bao bọc để nơi gọi không biết rằng họ đang làm việc với lớp bao bọc. Trong ví dụ, `LoggingEmployee` là một `decorator` cho `Employee`. Nó cần phải có phương thức `pay()` và bất kỳ phương thức nào khác trên `Employee` được nọi gọi sử dụng.
+
+> Decorator Pattern
+>
+> Decorator cho phép bạn xây dựng các hành vi phức tạp bằng cách kết hợp các đối tượng trong thời gian chạy. Ví dụ: trong hệ thống điều khiển quy trình công nghiệp, chúng ta có thể có một lớp tên là `ToolController` với các phương thức như `raise()`, `low()`, `step()`, `on()` và `off()`. Nếu chúng ta cần có những công việc bổ sung xảy ra bất cứ khi nào chúng ta `raise()` hoặc `low()` (những thứ chẳng hạn như cảnh báo bằng âm thanh để yêu cầu mọi người tránh đường), chúng ta có thể đặt chức năng đó ngay trong các phương thức đó trong lớp `ToolController`. Tuy nhiên, rất có thể đó sẽ không phải là dấu chấm hết cho những cải tiến. Tiếp nữa, chúng ta có thể cần ghi lại số lần bật và tắt bộ điều khiển. Chúng ta cũng có thể cần thông báo cho những người điều khiển khác ở gần khi chúng ta `step` để họ có thể tránh `step` cùng lúc. Danh sách những việc chúng ta có thể thực hiện cùng với năm thao tác đơn giản (`raise`, `low` `step`, `on` và `off`) là vô tận và sẽ không hiệu quả nếu chỉ tạo các lớp con cho mỗi sự kết hợp của mọi thứ. Số lượng kết hợp của những hành vi đó có thể là vô tận.
+>
+> Decorator pattern là sự lựa chọn lý tưởng cho loại vấn đề này. Khi bạn sử dụng decorator, bạn tạo một lớp trừu tượng xác định tập hợp các thao tác bạn cần hỗ trợ. Sau đó, bạn tạo một lớp con kế thừa từ lớp trừu tượng đó, chấp nhận một thực thể của lớp trong hàm khởi tạo của nó và cung cấp phần thân cho mỗi phương thức đó. Đây là lớp dành cho vấn đề `ToolController`:
+>
+> ```java
+> abstract class ToolControllerDecorator extends ToolController
+> {
+> 	protected ToolController controller;
+> 	public ToolControllerDecorator(ToolController controller) {
+>			this.controller = controller;
+>		}
+>		public void raise() { controller.raise(); }
+>		public void lower() { controller.lower(); }
+>		public void step() { controller.step(); }
+>		public void on() { controller.on(); }
+>		public void off() { controller.off(); }
+> }
+> ```
+> Lớp này có thể trông không hữu ích lắm, nhưng thực tế lại khác. Bạn có thể phân lớp nó, ghi đè bất kỳ hoặc tất cả các phương thức để thêm hành vi bổ sung. Ví dụ: nếu chúng ta cần thông báo cho các bộ điều khiển khác khi chúng ta `step`, chúng ta có thể có `StepNotifyingController` trông như thế này:
+>
+> ```java
+> public class StepNotifyingController extends ToolControllerDecorator
+> {
+>		private List notifyees;
+>		public StepNotifyingController(ToolController controller, List notifyees) {
+>			super(controller);
+>			this.notifyees = notifyees;
+>		}
+>		public void step() {
+>			// notify all notifyees here
+>				...
+>			controller.step();
+>		}
+> }
+> ```
+>
+> Điều thực sự thú vị là chúng ta có thể lồng các lớp con của `ToolControllerDecorator`:
+>
+> ```java
+> ToolController controller = new StepNotifyingController(
+>			new AlarmingController
+> 		(new ACMEController()), notifyees);
+> ```
+>
+> Khi chúng tôi thực hiện một thao tác như `step()` trên bộ điều khiển, nó sẽ thông báo cho tất cả những người được thông báo, đưa ra cảnh báo và thực sự thực hiện hành động `step`. Phần sau đó, thực sự thực hiện hành động `step`, xảy ra trong `ACMEController`, là một lớp con cụ thể của `ToolController`, không phải `ToolControllerDecorator`. Nó không chuyển cho bất kỳ ai khác; nó chỉ thực hiện từng hành động của bộ điều khiển công cụ. Khi bạn đang sử dụng decorator, bạn cần phải có ít nhất một trong các lớp "cơ bản" này để bao quanh.
+>
+> Decorator là một pattern tốt nhưng nên sử dụng nó một cách tiết kiệm. Điều hướng qua code chứa các decorator lồng vào decorator khác giống như bóc lớp vỏ của một củ hành. Đó là công việc cần thiết nhưng lại khiến bạn chảy nước mắt.
+
+
+
