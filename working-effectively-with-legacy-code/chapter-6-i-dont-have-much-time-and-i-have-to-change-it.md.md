@@ -480,5 +480,45 @@ Kỹ thuật này được gọi là `decorator pattern`. Chúng ta tạo các �
 >
 > Decorator là một pattern tốt nhưng nên sử dụng nó một cách tiết kiệm. Điều hướng qua code chứa các decorator lồng vào decorator khác giống như bóc lớp vỏ của một củ hành. Đó là công việc cần thiết nhưng lại khiến bạn chảy nước mắt.
 
+Đây là một cách hay để thêm chức năng khi bạn hiện có nhiều nơi gọi phương thức như `pay()`. Tuy nhiên, có một cách bọc khác không giống với decorator. Hãy xem xét trường hợp chúng ta cần ghi lại các lời gọi tới `pay()` chỉ ở một nơi. Thay vì gói gọn chức năng như một decorator, chúng ta có thể đặt nó vào một lớp khác nhận tham số là `employee`, thực hiện thanh toán và sau đó ghi nhật ký thông tin về `employee` đó.
 
+Đây là một lớp nhỏ thực hiện điều này:
 
+```java
+class LoggingPayDispatcher
+{
+	private Employee e;
+	public LoggingPayDispatcher(Employee e) {
+		this.e = e;
+	}
+	public void pay() {
+		employee.pay();
+		logPayment();
+	}
+	private void logPayment() {
+		...
+	}
+	...
+}
+```
+
+Bây giờ chúng ta có thể tạo `LogPayDispatcher` ở một nơi mà chúng ta cần ghi lại các khoản thanh toán.
+
+Chìa khóa của _Bọc lớp_ là bạn có thể thêm hành vi mới vào hệ thống mà không cần thêm nó vào lớp hiện có. Khi có nhiều lệnh gọi đến code bạn muốn bọc, bạn nên cân nhắc sử dụng decorator. Khi sử dụng decorator, bạn có thể thêm hành vi mới một cách minh bạch vào một tập hợp các lệnh gọi hiện có như `pay()` tất cả cùng một lúc. Mặt khác, nếu hành vi mới chỉ xảy ra ở một vài nơi, việc tạo một decorator không mang tính chất decorator có thể rất hữu ích. Theo thời gian, bạn nên chú ý đến trách nhiệm của decorator và xem liệu decorator có thể trở thành một khái niệm cấp cao khác trong hệ thống của bạn hay không.
+
+Dưới đây là các bước cho _Bọc lớp_:
+
+1. Xác định phương thức mà bạn cần thực hiện thay đổi.
+2. Nếu thay đổi có thể được tạo thành dưới dạng một chuỗi câu lệnh ở một nơi, hãy tạo một lớp nhận lớp bạn sắp gói làm tham số hàm khởi tạo. Nếu gặp khó khăn khi tạo một lớp bao bọc lớp gốc trong kiểm thử khai thác, bạn có thể phải sử dụng _Trích xuất Trình triển khai (356)_ hoặc _Trích xuất Giao diện (362)_ trên lớp được bao bọc để có thể khởi tạo lớp bao bọc của mình.
+3. Tạo một phương thức trên lớp đó, sử dụng _phương pháp phát triển dựa trên thử nghiệm (88)_, để thực hiện công việc mới. Viết một phương thức khác gọi phương thức mới và phương thức cũ trên lớp được bao bọc.
+4. Khởi tạo lớp bao bọc trong code của bạn ở nơi bạn cần kích hoạt hành vi mới.
+
+Sự khác biệt giữa _Ươm mầm Phương thức_ và _Bọc Phương thức_ là khá nhỏ. Bạn sử dụng _Ươm mầm Phương thức_ khi chọn viết một phương thức mới và gọi nó từ một phương thức hiện có. Bạn sử dụng _Bọc Phương thức_ khi bạn chọn đổi tên một phương thức và thay thế nó bằng một phương thức mới thực hiện công việc mới và gọi phương thức cũ. Tôi thường sử dụng _Ươm mầm Phương thức_ khi code tôi có trong phương thức hiện tại truyền đạt một thuật toán rõ ràng tới người đọc. Tôi chuyển sang _Bọc Phương thức_ khi tôi nghĩ rằng tính năng mới mà tôi đang thêm cũng quan trọng như công việc đã có trước đó. Trong trường hợp đó, sau khi kết thúc, tôi thường kết thúc với một thuật toán cấp cao mới, đại loại như thế này:
+
+```java
+public void pay() {
+	logPayment();
+	Money amount = calculatePay();
+	dispatchPayment(amount);
+}
+```
