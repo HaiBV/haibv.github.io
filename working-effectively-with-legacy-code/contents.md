@@ -38,7 +38,7 @@ Chương 5 - Công cụ
 
 [Chương 13 - Tôi cần thực hiện thay đổi nhưng tôi không biết kiểm thử nào phải viết](./chapter-13-i-need-to-make-a-change-but-i-dont-know-what-tests-to-write.html)
 
-Chương 14 - Sự phụ thuộc vào thư viện đang giết chết tôi.
+[Chương 14 - Sự phụ thuộc vào thư viện đang giết chết tôi.](./chapter-14-dependencies-on-libraries-are-killing-me.html)
 
 Chương 15 - Toàn bộ ứng dụng của tôi chỉ gồm các lệnh gọi API
 
