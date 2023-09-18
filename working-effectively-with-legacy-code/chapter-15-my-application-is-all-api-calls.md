@@ -158,3 +158,28 @@ public class MailingListServer
   }
 }
 ```
+
+Đây là một đoạn code khá nhỏ nhưng không rõ ràng lắm. Thật khó để thấy bất kỳ dòng code nào không sử dụng API. Liệu nó có thể được cấu trúc tốt hơn? Liệu nó có thể được cấu trúc theo cách giúp thay đổi dễ dàng hơn không?
+
+Có, nó có thể.
+
+Bước đầu tiên là xác định cốt lõi của code: Đoạn code này thực sự làm được gì cho chúng ta?
+
+Sẽ hữu ích nếu bạn thử viết mô tả ngắn gọn về chức năng của nó:
+
+> Đoạn code này đọc thông tin cấu hình từ dòng lệnh và danh sách địa chỉ email từ một tệp. Nó kiểm tra thư định kỳ. Khi tìm thấy thư, nó sẽ chuyển tiếp thư đến từng địa chỉ email trong tệp.
+
+Ban đầu có vẻ chương trình này chủ yếu là về đầu vào và đầu ra, nhưng vẫn còn nhiều hơn thế một chút. Chúng ta đang chạy một luồng trong code. Nó "ngủ đông" và sau đó thức dậy định kỳ để kiểm tra thư. Ngoài ra, chúng ta không chỉ gửi lại các thư đến; chúng ta đang tạo tin nhắn mới dựa trên tin nhắn đến. Chúng ta phải đặt tất cả các trường, sau đó kiểm tra và thay đổi dòng chủ đề để nó hiển thị rằng thư đến từ danh sách gửi thư. Vì vậy, chúng ta đang làm một số công việc thực tế.
+
+Nếu cố gắng tách biệt trách nhiệm của code, chúng ta có thể sẽ nhận được kết quả như sau:
+1. Chúng ta cần thứ gì đó có thể nhận từng tin nhắn đến và đưa nó vào hệ thống.
+2. Chúng ta cần thứ gì đó có thể gửi tin nhắn qua thư.
+3. Chúng ta cần thứ gì đó có thể tạo tin nhắn mới cho mỗi tin nhắn đến, dựa trên danh sách người nhận trong danh sách của chúng ta.
+4. Chúng ta cần thứ gì đó "ngủ đông" hầu hết thời gian nhưng thỉnh thoảng thức dậy để xem có thêm thư hay không.
+
+Bây giờ, khi chúng ta xem xét những trách nhiệm đó, có vẻ như một số trách nhiệm đó gắn chặt với Java Mail API hơn những trách nhiệm khác phải không? Trách nhiệm 1 và 2 chắc chắn được gắn với mail API. Trách nhiệm 3 phức tạp hơn một chút. Các lớp thông báo mà chúng ta cần là một phần của mail API, nhưng chúng ta có thể kiểm thử trách nhiệm một cách độc lập bằng cách tạo các thư đến giả. Trách nhiệm 4 thực sự không liên quan gì đến thư tín; nó chỉ yêu cầu một luồng được thiết lập để thức dậy vào những khoảng thời gian nhất định.
+
+Hình 15.1 cho thấy một thiết kế nhỏ tách biệt những trách nhiệm này.
+
+![15.1](images/15/15-1.png)
+Hình 15.1 Thiết kế tốt hơn
