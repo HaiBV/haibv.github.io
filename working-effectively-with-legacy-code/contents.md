@@ -22,7 +22,7 @@ Chương 5 - Công cụ
 
 ## Phần 2 - Thay đổi phần mềm
 
-[Chương 6 - Tôi không có nhiều thời gian và tôi phải thay đổi nó](./chapter-6-i-dont-have-much-time-and-i-have-to-change-it.md.md)
+[Chương 6 - Tôi không có nhiều thời gian và tôi phải thay đổi nó](./chapter-6-i-dont-have-much-time-and-i-have-to-change-it.html)
 
 [Chương 7 - Mất quá nhiều thời gian để thực hiện thay đổi](./chapter-7-it-takes-forever-to-make-a-change.html)
 
@@ -40,7 +40,7 @@ Chương 5 - Công cụ
 
 [Chương 14 - Sự phụ thuộc vào thư viện đang giết chết tôi.](./chapter-14-dependencies-on-libraries-are-killing-me.html)
 
-Chương 15 - Toàn bộ ứng dụng của tôi chỉ gồm các lệnh gọi API
+[Chương 15 - Toàn bộ ứng dụng của tôi chỉ gồm các lệnh gọi API](./chapter-15-my-application-is-all-api-calls.html)
 
 [Chương 16 - Tôi không hiểu code đủ rõ để thay đổi nó](./chapter-16-i-dont-understand-the-code-well-enough-to-change-it.html).
 

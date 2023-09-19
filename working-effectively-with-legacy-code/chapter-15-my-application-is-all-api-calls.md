@@ -183,3 +183,35 @@ Hình 15.1 cho thấy một thiết kế nhỏ tách biệt những trách nhi�
 
 ![15.1](images/15/15-1.png)
 Hình 15.1 Thiết kế tốt hơn
+
+`ListDriver` điều khiển hệ thống. Nó có một luồng ngủ hầu hết thời gian và thức dậy định kỳ để kiểm tra thư. `ListDriver` kiểm tra thư bằng cách yêu cầu `MailReceiver` kiểm tra thư. `MailReceiver` đọc thư và gửi từng tin nhắn đến `MessageForwarder`. `MessageForwarder` tạo thư cho từng người nhận trong danh sách và gửi thư cho họ bằng `MailSender`.
+
+Thiết kế này khá ổn. Các giao diện `MessageProcessor` và `MailService` rất tiện lợi vì chúng cho phép chúng ta kiểm thử các lớp một cách độc lập. Đặc biệt, thật tuyệt vời khi có thể làm việc với lớp `MessageFowarder` trong kiểm thử khai thác mà không thực sự gửi thư. Điều đó có thể dễ dàng đạt được nếu chúng ta tạo một lớp `FakeMailSender` triển khai giao diện `MailService`.
+
+Gần như mọi hệ thống đều có một số logic cốt lõi có thể được tránh được lệnh gọi API. Mặc dù trường hợp này nhỏ nhưng nó thực sự tồi tệ hơn hầu hết. `MessageForwarder` là một phần của hệ thống có trách nhiệm độc lập nhất với cơ chế gửi và nhận thư nhưng nó vẫn sử dụng các lớp thông báo của JavaMail API. Có vẻ như không có nhiều nơi dành cho các lớp Java cũ đơn giản. Bất chấp điều đó, việc chia hệ thống thành bốn lớp và hai giao diện trong sơ đồ sẽ mang lại cho chúng ta một số phân lớp. Logic chính của gửi thư danh sách nằm trong lớp `MessageForwarder` và chúng ta có thể kiểm thử nó. Trong code ban đầu, nó bị chôn vùi và không thể tiếp cận được. Gần như không thể chia một hệ thống thành những phần nhỏ hơn mà không tạo ra một số phần "ở cấp độ cao hơn" những phần khác.
+
+Khi chúng ta có một hệ thống trông giống như không có gì khác ngoài các lệnh gọi API, sẽ hữu ích khi tưởng tượng rằng đó chỉ là một đối tượng lớn và sau đó áp dụng các phương pháp phỏng đoán phân tách trách nhiệm trong Chương 20, Lớp này quá lớn và tôi không muốn nó lớn hơn nữa. Chúng ta có thể không thể hướng tới một thiết kế tốt hơn ngay lập tức, nhưng chỉ hành động xác định trách nhiệm cũng có thể giúp chúng ta đưa ra quyết định tốt hơn và dễ dàng hơn khi tiến về phía trước.
+
+Bây giờ thìmột thiết kế tốt hơn sẽ trông như thế nào. Thật vui khi biết điều đó là có thể, nhưng hãy quay lại với thực tế: Làm cách nào để chúng ta tiến về phía trước? Về cơ bản có hai cách tiếp cận:
+1. Gỡ và bọc API
+2. Trích xuất dựa trên trách nhiệm
+
+Khi _Gỡ và bọc API_, chúng ta tạo các giao diện phản chiếu API gần nhất có thể, sau đó tạo các trình bao bọc xung quanh các lớp thư viện. Để giảm thiểu khả năng mắc lỗi, chúng ta có thể _Bảo toàn Chữ ký (312)_ khi làm việc. Một lợi thế của việc tạo giao diện và gói API là chúng ta có thể không phụ thuộc vào code API cơ bản. Trình bao bọc của chúng ta có thể sử dụng API thực trong code sản xuất và API giả trong quá trình kiểm thử.
+
+Chúng ta có thể sử dụng kỹ thuật này với code gửi thư theo danh sách không?
+
+Đây là code trong máy chủ gửi thư theo danh sách thực sự gửi thư:
+
+```java
+	...
+	Session smtpSession = Session.getDefaultInstance (props, null);
+	Transport transport = smtpSession.getTransport ("smtp");
+	transport.connect (host.smtpHost, host.smtpUser,
+	host.smtpPassword);
+	transport.sendMessage (forward, roster.getAddresses ());
+	...
+```
+
+Nếu muốn phá vỡ sự phụ thuộc vào lớp `Transport`, chúng ta có thể tạo một trình bao bọc cho nó, nhưng trong code này, chúng ta không tạo đối tượng `Transport`; chúng ta lấy nó từ lớp `Session`. Chúng ta có thể tạo trình bao bọc cho `Session` không? Không hẳn - `Session` là lớp `final`. Trong Java, các lớp `final` không thể được phân lớp (cằn nhằn, càu nhàu).
+
+Code gửi thư theo danh sách này thực sự là một ứng cử viên kém cho việc gỡ API vì chúng tương đối phức tạp. Nhưng nếu chúng ta không có sẵn bất kỳ công cụ tái cấu trúc nào thì đó có thể là cách an toàn nhất.
