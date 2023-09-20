@@ -215,3 +215,57 @@ Chúng ta có thể sử dụng kỹ thuật này với code gửi thư theo dan
 Nếu muốn phá vỡ sự phụ thuộc vào lớp `Transport`, chúng ta có thể tạo một trình bao bọc cho nó, nhưng trong code này, chúng ta không tạo đối tượng `Transport`; chúng ta lấy nó từ lớp `Session`. Chúng ta có thể tạo trình bao bọc cho `Session` không? Không hẳn - `Session` là lớp `final`. Trong Java, các lớp `final` không thể được phân lớp (cằn nhằn, càu nhàu).
 
 Code gửi thư theo danh sách này thực sự là một ứng cử viên kém cho việc gỡ API vì chúng tương đối phức tạp. Nhưng nếu chúng ta không có sẵn bất kỳ công cụ tái cấu trúc nào thì đó có thể là cách an toàn nhất.
+
+May mắn là Java có sẵn các công cụ tái cấu trúc, vì vậy chúng ta có thể thực hiện được một cách khác gọi là _Trích xuất dựa trên trách nhiệm_. Trong _Trích xuất dựa trên trách nhiệm_, chúng ta xác định các trách nhiệm trong code và bắt đầu các trích xuất phương thức với chúng.
+
+Trách nhiệm trong đoạn code trước đó là gì? Đúng vậy, mục tiêu tổng thể của nó là gửi tin nhắn. Nó cần làm gì để làm điều này? Nó cần một phiên SMTP và một phương tiện vận chuyển được kết nối. Trong đoạn code sau, chúng ta đã tách trách nhiệm gửi thư vào phương thức riêng của nó và thêm phương thức đó vào một lớp mới: `MailSender`.
+
+```java
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import java.util.Properties;
+
+public class MailSender
+{
+	private HostInformation host;
+	private Roster roster;
+
+	public MailSender (HostInformation host, Roster roster) {
+		this.host = host;
+		this.roster = roster;
+	}
+
+	public void sendMessage (Message message) throws Exception {
+		Transport transport
+		= getSMTPSession ().getTransport ("smtp");
+		transport.connect (host.smtpHost,
+		host.smtpUser, host.smtpPassword);
+		transport.sendMessage (message, roster.getAddresses ());
+	}
+
+	private Session getSMTPSession () {
+		Properties props = new Properties ();
+		props.put ("mail.smtp.host", host.smtpHost);
+		return Session.getDefaultInstance (props, null);
+	}
+}
+```
+
+Làm cách nào để chúng tôi lựa chọn giữa _Gỡ và bọc API_ và _Trích xuất dựa trên trách nhiệm_?
+
+_Gỡ và bọc API_ phù hợp trong những trường hợp sau:
+
+- API tương đối nhỏ.
+- Bạn muốn tách biệt hoàn toàn các phần phụ thuộc vào thư viện của bên thứ ba.
+- Bạn không có kiểm thử và bạn không thể viết chúng vì bạn không thể kiểm thử thông qua API.
+
+Khi chúng ta _Gỡ và bọc API_, chúng ta có cơ hội kiểm thử tất cả code của mình ngoại trừ một lớp ủy quyền mỏng từ trình bao bọc đến các lớp API thực.
+
+_Trích xuất dựa trên trách nhiệm_ phù hợp trong những trường hợp sau:
+
+- API phức tạp hơn.
+- Bạn có một công cụ hỗ trợ trích xuất phương thức an toàn hoặc bạn cảm thấy tự tin rằng mình có thể thực hiện trích xuất một cách an toàn bằng tay.
+
+Cân bằng những ưu điểm và nhược điểm của những kỹ thuật này là một việc khó khăn. _Gỡ và bọc API_ tốn nhiều công sức hơn nhưng có thể rất hữu ích khi chúng ta muốn tách mình khỏi các thư viện của bên thứ ba và nhu cầu đó thường xuyên xuất hiện. Xem _Chương 14, Sự phụ thuộc vào thư viện đang giết chết tôi_ để biết thêm chi tiết. Khi sử dụng _Trích xuất dựa trên trách nhiệm_, cuối cùng chúng ta có thể trích xuất một số logic của riêng mình bằng code API để có thể trích xuất một phương thức có tên cấp cao hơn. Nếu làm như vậy, code của chúng ta có thể phụ thuộc vào các giao diện cấp cao hơn thay vì các lệnh gọi API cấp thấp, nhưng chúng ta có thể không lấy được code mà chúng tôi đã trích xuất khi kiểm thử.
+
+Nhiều nhóm sử dụng cả hai kỹ thuật: trình bao bọc mỏng để thử nghiệm và trình bao bọc cấp cao hơn để trình bày giao diện tốt hơn cho ứng dụng của họ.
