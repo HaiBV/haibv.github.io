@@ -46,7 +46,7 @@ Chương 5 - Công cụ
 
 [Chương 17 - Ứng dụng của tôi không có kiến trúc](./chapter-17-my-application-has-no-strucute.html).
 
-Chương 18 - Code kiểm thử của tôi bị cản trở
+[Chương 18 - Code kiểm thử của tôi bị cản trở](./chapter-18-my-test-code-is-in-the-way.html)
 
 Chương 19 - Dự án của tôi không hướng đối tượng. Làm cách nào để thực hiện an toàn các thay đổi?
 
