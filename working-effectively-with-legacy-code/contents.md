@@ -22,7 +22,7 @@ Chương 5 - Công cụ
 
 ## Phần 2 - Thay đổi phần mềm
 
-[Chương 6 - Tôi không có nhiều thời gian và tôi phải thay đổi nó](./chapter-6-i-dont-have-much-time-and-i-have-to-change-it.md.md)
+[Chương 6 - Tôi không có nhiều thời gian và tôi phải thay đổi nó](./chapter-6-i-dont-have-much-time-and-i-have-to-change-it.html)
 
 [Chương 7 - Mất quá nhiều thời gian để thực hiện thay đổi](./chapter-7-it-takes-forever-to-make-a-change.html)
 
@@ -38,17 +38,17 @@ Chương 5 - Công cụ
 
 [Chương 13 - Tôi cần thực hiện thay đổi nhưng tôi không biết kiểm thử nào phải viết](./chapter-13-i-need-to-make-a-change-but-i-dont-know-what-tests-to-write.html)
 
-Chương 14 - Sự phụ thuộc vào thư viện đang giết chết tôi.
+[Chương 14 - Sự phụ thuộc vào thư viện đang giết chết tôi.](./chapter-14-dependencies-on-libraries-are-killing-me.html)
 
-Chương 15 - Toàn bộ ứng dụng của tôi chỉ gồm các lệnh gọi API
+[Chương 15 - Toàn bộ ứng dụng của tôi chỉ gồm các lệnh gọi API](./chapter-15-my-application-is-all-api-calls.html)
 
 [Chương 16 - Tôi không hiểu code đủ rõ để thay đổi nó](./chapter-16-i-dont-understand-the-code-well-enough-to-change-it.html).
 
 [Chương 17 - Ứng dụng của tôi không có kiến trúc](./chapter-17-my-application-has-no-strucute.html).
 
-Chương 18 - Code kiểm thử của tôi bị cản trở
+[Chương 18 - Code kiểm thử của tôi bị cản trở](./chapter-18-my-test-code-is-in-the-way.html)
 
-Chương 19 - Dự án của tôi không hướng đối tượng. Làm cách nào để thực hiện an toàn các thay đổi?
+[Chương 19 - Dự án của tôi không hướng đối tượng. Làm cách nào để thực hiện an toàn các thay đổi?](./chapter-19-my-project-is-not-object-oriented-how-do-i-make-safe-changes.html)
 
 [Chương 20 - Lớp này quá lớn và tôi không muốn nó lớn hơn nữa](./chapter-20-this-class-is-too-big-and-i-dont-want-it-to-get-any-bigger.html)
 
