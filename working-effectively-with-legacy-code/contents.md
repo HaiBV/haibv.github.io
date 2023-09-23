@@ -48,7 +48,7 @@ Chương 5 - Công cụ
 
 [Chương 18 - Code kiểm thử của tôi bị cản trở](./chapter-18-my-test-code-is-in-the-way.html)
 
-Chương 19 - Dự án của tôi không hướng đối tượng. Làm cách nào để thực hiện an toàn các thay đổi?
+[Chương 19 - Dự án của tôi không hướng đối tượng. Làm cách nào để thực hiện an toàn các thay đổi?](./chapter-19-my-project-is-not-object-oriented-how-do-i-make-safe-changes.html)
 
 [Chương 20 - Lớp này quá lớn và tôi không muốn nó lớn hơn nữa](./chapter-20-this-class-is-too-big-and-i-dont-want-it-to-get-any-bigger.html)
 
