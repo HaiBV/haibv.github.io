@@ -13,3 +13,62 @@ Vấn đề khó khăn trong kiểm thử là một căn bệnh nặng trong cod
 Bởi vì việc phá vỡ các phần phụ thuộc trong code thủ tục là rất khó nên chiến lược tốt nhất thường là cố gắng kiểm thử một lượng lớn code trước khi thực hiện bất kỳ điều gì khác và sau đó sử dụng các kiểm thử đó để nhận một số phản hồi trong khi phát triển. Các kỹ thuật trong _Chương 12, Tôi cần thực hiện nhiều thay đổi trong một khu vực. Tôi có phải phá vỡ các phụ thuộc của tất cả các lớp liên quan không?_ có thể giúp được phần nào. Chúng áp dụng cho code thủ tục cũng như code hướng đối tượng. Nói tóm lại, bạn nên tìm _điểm chặn (180)_ và sau đó sử dụng _đường nối liên kết (36)_ để phá vỡ các phần phụ thuộc vừa đủ để đưa code vào trong kiểm thử khai thác. Nếu ngôn ngữ của bạn có bộ tiền xử lý macro, bạn cũng có thể sử dụng _đường nối tiền xử lý (33)_.
 
 Đó là cách hành động tiêu chuẩn nhưng không phải là cách duy nhất. Trong phần còn lại của chương này, chúng ta xem xét các cách để phá vỡ sự phụ thuộc cục bộ trong các chương trình thủ tục, cách thực hiện các thay đổi có thể kiểm thử dễ dàng hơn và các cách tiếp tục khi chúng ta đang sử dụng ngôn ngữ có đường dẫn di chuyển sang OO.
+
+## Trường hợp dễ dàng
+
+Code thủ tục không phải lúc nào cũng là vấn đề. Đây là một ví dụ, một hàm C trong hệ điều hành Linux. Sẽ khó để viết kiểm thử cho chức năng này nếu chúng ta phải thực hiện một số thay đổi đối với nó?
+
+```cpp
+void set_writetime(struct buffer_head * buf, int flag)
+{
+	int newtime;
+
+	if (buffer_dirty(buf)) {
+		/* Move buffer to dirty list if jiffies is clear */
+		newtime = jiffies + (flag ? bdf_prm.b_un.age_super : bdf_prm.b_un.age_buffer);
+		if(!buf->b_flushtime || buf->b_flushtime > newtime)
+			buf->b_flushtime = newtime;
+	} else {
+		buf->b_flushtime = 0;
+	}
+}
+```
+
+Để kiểm thử hàm này, chúng ta có thể đặt giá trị của biến `jiffies`, tạo `buffer_head`, chuyển nó vào hàm và sau đó kiểm tra giá trị của nó sau lệnh gọi. Trong nhiều chức năng, chúng ta không có may mắn như vậy. Đôi khi một hàm gọi một hàm lại gọi một hàm khác. Sau đó, nó gọi một thứ gì đó khó xử lý: một hàm thực sự thực hiện I/O ở đâu đó hoặc đến từ thư viện của nhà cung cấp nào đó. Chúng ta muốn kiểm thử chức năng của code, nhưng câu trả lời thường là "Nó làm được điều gì đó thú vị, nhưng chỉ có thứ gì đó bên ngoài chương trình mới biết về nó, chứ không phải bạn."
+
+## Trường hợp khó
+
+Đây là hàm C mà chúng ta muốn thay đổi. Sẽ thật tuyệt nếu chúng ta có thể thử nghiệm nó trước khi thực hiện thay đổi:
+
+```cpp
+#include "ksrlib.h"
+int scan_packets(struct rnode_packet *packet, int flag)
+{
+	struct rnode_packet *current = packet;
+	int scan_result, err = 0;
+
+	while(current) {
+		scan_result = loc_scan(current->body, flag);
+		if(scan_result & INVALID_PORT) {
+			ksr_notify(scan_result, current);
+		}
+		...
+		current = current->next;
+	}
+	return err;
+}
+```
+
+Đoạn code này gọi một hàm có tên `ksr_notify` có tác dụng phụ xấu. Nó gửi thông báo cho hệ thống của bên thứ ba và chúng ta muốn nó không làm điều đó khi đang kiểm thử.
+
+Một cách để giải quyết vấn đề này là sử dụng _đường nối liên kết (36)_. Nếu muốn kiểm thử mà không có tác dụng của tất cả các hàm trong thư viện đó, chúng ta có thể tạo một thư viện chứa hàng giả: các hàm có cùng tên với các hàm ban đầu nhưng không thực sự làm những gì chúng dự định làm. Trong trường hợp này, chúng ta có thể viết phần nội dung cho `ksr_notify` trông như thế này:
+
+```cpp
+void ksr_notify(int scan_code, struct rnode_packet *packet)
+{
+}
+```
+
+Chúng ta có thể xây dựng nó trong thư viện và liên kết với nó. Hàm `scan_packets` sẽ hoạt động giống hệt nhau, ngoại trừ một điều: Nó sẽ không gửi thông báo. Nhưng điều đó cũng tốt nếu chúng ta muốn xác định hành vi khác trong hàm trước khi thay đổi nó.
+
+Đó có phải là chiến lược chúng ta nên sử dụng? Còn tùy. Nếu có nhiều hàm trong thư viện `ksr` và chúng ta coi các lệnh gọi của chúng là ngoại vi đối với logic chính của hệ thống, thì đúng, sẽ hợp lý nếu tạo một thư viện giả mạo và liên kết với nó trong quá trình kiểm thử. Mặt khác, nếu chúng ta muốn cảm nhận thông qua các hàm đó hoặc muốn thay đổi một số giá trị mà chúng trả về, thì việc sử dụng các _đường nối liên kết (36)_ sẽ không tốt bằng; nó thực sự khá tẻ nhạt. Vì sự thay thế xảy ra tại thời điểm liên kết nên chúng ta chỉ có thể cung cấp một định nghĩa hàm cho mỗi tệp thực thi mà chúng ta xây dựng. Nếu muốn hàm `ksr_notify` giả hoạt động theo cách này trong kiểm thử này và theo cách khác trong thử nghiệm khác, chúng ta phải đặt code vào phần nội dung và thiết lập các điều kiện trong kiểm thử để buộc nó hoạt động theo một cách nhất định. Nói chung, việc này khá loại lộn xộn. Thật không may, nhiều ngôn ngữ thủ tục không cho chúng ta bất kỳ lựa chọn nào khác.
