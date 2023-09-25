@@ -72,3 +72,69 @@ void ksr_notify(int scan_code, struct rnode_packet *packet)
 Chúng ta có thể xây dựng nó trong thư viện và liên kết với nó. Hàm `scan_packets` sẽ hoạt động giống hệt nhau, ngoại trừ một điều: Nó sẽ không gửi thông báo. Nhưng điều đó cũng tốt nếu chúng ta muốn xác định hành vi khác trong hàm trước khi thay đổi nó.
 
 Đó có phải là chiến lược chúng ta nên sử dụng? Còn tùy. Nếu có nhiều hàm trong thư viện `ksr` và chúng ta coi các lệnh gọi của chúng là ngoại vi đối với logic chính của hệ thống, thì đúng, sẽ hợp lý nếu tạo một thư viện giả mạo và liên kết với nó trong quá trình kiểm thử. Mặt khác, nếu chúng ta muốn cảm nhận thông qua các hàm đó hoặc muốn thay đổi một số giá trị mà chúng trả về, thì việc sử dụng các _đường nối liên kết (36)_ sẽ không tốt bằng; nó thực sự khá tẻ nhạt. Vì sự thay thế xảy ra tại thời điểm liên kết nên chúng ta chỉ có thể cung cấp một định nghĩa hàm cho mỗi tệp thực thi mà chúng ta xây dựng. Nếu muốn hàm `ksr_notify` giả hoạt động theo cách này trong kiểm thử này và theo cách khác trong thử nghiệm khác, chúng ta phải đặt code vào phần nội dung và thiết lập các điều kiện trong kiểm thử để buộc nó hoạt động theo một cách nhất định. Nói chung, việc này khá loại lộn xộn. Thật không may, nhiều ngôn ngữ thủ tục không cho chúng ta bất kỳ lựa chọn nào khác.
+
+Trong C, có một giải pháp thay thế khác. C có một bộ tiền xử lý macro mà chúng ta có thể sử dụng để giúp viết kiểm thử đối với hàm `scan_packets` dễ dàng hơn. Đây là tệp chứa `scan_packets` sau khi chúng tôi thêm code kiểm thử:
+
+```cpp
+#include "ksrlib.h"
+
+#ifdef TESTING
+#define ksr_notify(code,packet)
+#endif
+
+int scan_packets(struct rnode_packet *packet, int flag)
+{
+	struct rnode_packet *current = packet;
+	int scan_result, err = 0;
+
+	while(current) {
+		scan_result = loc_scan(current->body, flag);
+		if(scan_result & INVALID_PORT) {
+			ksr_notify(scan_result, current);
+		}
+		...
+		current = current->next;
+	}
+	return err;
+}
+
+#ifdef TESTING
+#include <assert.h>
+int main () {
+	struct rnode_packet packet;
+	packet.body = ...
+	...
+	int err = scan_packets(&packet, DUP_SCAN);
+	assert(err & INVALID_PORT);
+	...
+	return 0;
+}
+#endif
+```
+
+Trong đoạn code này, chúng ta định nghĩa một tiền xử lý, `TESTING`, xác định lệnh gọi `ksr_notify` không tồn tại khi chúng ta đang kiểm thử. Nó cũng cung cấp một sơ khai nhỏ chứa các kiểm thử.
+
+Việc trộn code kiểm thử và code nguồn vào một tệp như thế này thực sự không phải là điều rõ ràng nhất mà chúng ta có thể làm. Thường thì nó khiến cho việc điều hướng code trở nên khó khăn hơn. Một cách khác là sử dụng tính năng bao tệp để code kiểm thử và code sản xuất nằm trong các tệp khác nhau:
+
+```cpp
+#include "ksrlib.h"
+
+#include "scannertestdefs.h"
+
+int scan_packets(struct rnode_packet *packet, int flag)
+{
+	struct rnode_packet *current = packet;
+	int scan_result, err = 0;
+
+	while(current) {
+		scan_result = loc_scan(current->body, flag);
+		if(scan_result & INVALID_PORT) {
+			ksr_notify(scan_result, current);
+		}
+		...
+		current = current->next;
+	}
+	return err;
+}
+#include "testscanner.tst"
+```
