@@ -138,3 +138,46 @@ int scan_packets(struct rnode_packet *packet, int flag)
 }
 #include "testscanner.tst"
 ```
+
+Với thay đổi này, code trông khá giống với giao diện khi không có cơ sở hạ tầng kiểm thử. Điểm khác biệt duy nhất là chúng ta có câu lệnh `#include` ở cuối tệp. Nếu chúng ta khai báo tiếp các hàm mà chúng ta đang kiểm thử, chúng ta có thể di chuyển mọi thứ ở tệp bao gồm phía dưới lên tệp trên cùng.
+
+Để chạy kiểm thử, chúng ta chỉ cần định nghĩa `TESTING` và tự xây dựng tệp này. Khi `TESTING` được định nghĩa, hàm `main()` trong `testcanner.tst` sẽ được biên dịch và liên kết thành một tệp thực thi để chạy thử nghiệm. Hàm `main()` chúng ta có trong tệp đó chỉ chạy các kiểm thử cho quy trình quét. Chúng ta có thể thiết lập mọi thứ để chạy các nhóm kiểm thử cùng lúc bằng cách xác định các chức năng kiểm thử riêng biệt cho từng kiểm thử của mình.
+
+```cpp
+#ifdef TESTING
+#include <assert.h>
+void test_port_invalid() {
+	struct rnode_packet packet;
+	packet.body = ...
+	...
+	int err = scan_packets(&packet, DUP_SCAN);
+	assert(err & INVALID_PORT);
+}
+
+void test_body_not_corrupt() {
+	...
+}
+
+void test_header() {
+	...
+}
+#endif
+```
+
+Trong một tệp khác, chúng ta có thể gọi chúng từ main:
+
+```cpp
+int main() {
+	test_port_invalid();
+	test_body_not_corrupt();
+	test_header();
+	return 0;
+}
+```
+
+Chúng ta có thể tiến xa hơn nữa bằng cách thêm các chức năng đăng ký giúp việc nhóm kiểm thử trở nên dễ dàng hơn. Xem các framework kiểm thử đơn vị C khác nhau có sẵn tại
+`www.xprogramming.com` để có thêm chi tiết.
+
+Mặc dù các bộ tiền xử lý macro dễ bị sử dụng sai mục đích nhưng chúng thực sự rất hữu ích trong bối cảnh này. Việc đưa vào tệp và thay thế macro có thể giúp chúng ta vượt qua các phần phụ thuộc trong code phức tạp nhất. Miễn là chúng ta hạn chế việc sử dụng macro tràn lan đối với code đang chạy kiểm thử, thì không cần phải quá lo lắng rằng chúng ta sẽ sử dụng sai macro theo những cách sẽ ảnh hưởng đến code sản xuất.
+
+C là một trong số ít ngôn ngữ chính thống có bộ tiền xử lý macro. Nói chung, để phá vỡ sự phụ thuộc trong các ngôn ngữ thủ tục khác, chúng tôi phải sử dụng _đường nối liên kết (36)_ và cố gắng kiểm thử các vùng code lớn hơn.
