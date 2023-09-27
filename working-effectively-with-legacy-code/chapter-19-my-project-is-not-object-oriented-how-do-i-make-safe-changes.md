@@ -181,3 +181,65 @@ Chúng ta có thể tiến xa hơn nữa bằng cách thêm các chức năng đ
 Mặc dù các bộ tiền xử lý macro dễ bị sử dụng sai mục đích nhưng chúng thực sự rất hữu ích trong bối cảnh này. Việc đưa vào tệp và thay thế macro có thể giúp chúng ta vượt qua các phần phụ thuộc trong code phức tạp nhất. Miễn là chúng ta hạn chế việc sử dụng macro tràn lan đối với code đang chạy kiểm thử, thì không cần phải quá lo lắng rằng chúng ta sẽ sử dụng sai macro theo những cách sẽ ảnh hưởng đến code sản xuất.
 
 C là một trong số ít ngôn ngữ chính thống có bộ tiền xử lý macro. Nói chung, để phá vỡ sự phụ thuộc trong các ngôn ngữ thủ tục khác, chúng tôi phải sử dụng _đường nối liên kết (36)_ và cố gắng kiểm thử các vùng code lớn hơn.
+
+## Thêm hành vi mới
+
+Trong code kế thừa thủ tục, chúng ta thường có thiên hướng viết các hàm mới thay vì thêm code vào các hàm cũ. Ít nhất có thể viết kiểm thử cho các hàm mới mà chúng ta viết.
+
+Làm cách nào để tránh tạo nên bẫy phụ thuộc trong code thủ tục? Một cách (được nêu trong _Chương 8 - Làm thế nào để tôi thêm một chức năng mới?_) là sử dụng _phát triển dựa trên thử nghiệm (88)_ (TDD). TDD hoạt động ở cả code hướng đối tượng và code thủ tục. Thông thường, công việc cố gắng xây dựng một kiểm thử cho từng đoạn code mà chúng ta đang nghĩ trước khi viết sẽ khiến thiết kế của nó được thay đổi theo hướng tốt hơn. Chúng ta tập trung vào việc viết các hàm thực hiện một số công việc tính toán và sau đó tích hợp chúng vào phần còn lại của ứng dụng.
+
+Thông thường chúng ta phải suy nghĩ về những gì chúng ta sẽ viết theo một cách khác để thực hiện điều này. Đây là một ví dụ. Chúng ta cần viết một hàm gọi là `send_command`. Hàm `send_command` sẽ gửi ID, tên và chuỗi lệnh đến hệ thống khác thông qua hàm có tên `mart_key_send`. Code của hàm không quá tệ. Chúng ta có thể tưởng tượng rằng nó sẽ trông giống như thế này:
+
+```java
+void send_command(int id, char *name, char *command_string) {
+	char *message, *header;
+	if (id == KEY_TRUM) {
+		message = ralloc(sizeof(int) + HEADER_LEN + ...
+		...
+	} else {
+		...
+	}
+	sprintf(message, "%s%s%s", header, command_string, footer);
+	mart_key_send(message);
+
+	free(message);
+}
+```
+
+Nhưng làm thế nào chúng ta có thể viết kiểm thử cho một hàm như vậy? Đặc biệt vì cách duy nhất để biết điều gì đang xảy ra là phải đến đúng nơi có lệnh gọi tới `mart_key_send`? Điều gì sẽ xảy ra nếu chúng ta thực hiện một cách tiếp cận hơi khác một chút?
+
+Chúng ta có thể kiểm thử tất cả logic đó trước lệnh gọi `mart_key_send` nếu nó ở một hàm khác. Chúng ta có thể viết kiểm thử đầu tiên của mình như thế này:
+
+```java
+char *command = form_command(1, "Mike Ratledge", "56:78:cusp-:78");
+assert(!strcmp("<-rsp-Mike  Ratledge><56:78:cusp-:78><-rspr>", command));
+```
+
+Sau đó, chúng ta có thể viết hàm `form_command`, hàm này trả về một lệnh:
+
+```java
+char *form_command(int id, char *name, char *command_string)
+{
+	char *message, *header;
+	if (id == KEY_TRUM) {
+		message = ralloc(sizeof(int) + HEADER_LEN + ...
+		...
+	} else {
+		...
+	}
+	sprintf(message, "%s%s%s", header, command_string, footer);
+
+	return message;
+}
+```
+
+Khi có được điều đó, chúng ta có thể viết hàm send_command đơn giản mà chúng ta cần:
+
+```java
+void send_command(int id, char *name, char *command_string) {
+	char *command = form_command(id, name, command_string);
+	mart_key_send(command);
+
+	free(message);
+}
+```
