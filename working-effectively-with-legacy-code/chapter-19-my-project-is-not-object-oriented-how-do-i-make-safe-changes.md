@@ -243,3 +243,50 @@ void send_command(int id, char *name, char *command_string) {
 	free(message);
 }
 ```
+
+Trong nhiều trường hợp, kiểu cải cách này chính xác là những gì chúng ta cần để tiến về phía trước. Chúng ta đặt tất cả logic thuần túy vào một tập hợp hàm để giữ cho chúng không vướng vào vấn đề phụ thuộc. Khi làm điều này, chúng ta sẽ có được các hàm bao bọc nhỏ như `send_command`, các hàm này liên kết logic và các phần phụ thuộc của chúng ta. Nó không hoàn hảo nhưng có thể thực hiện được khi các phần phụ thuộc không quá phổ biến.
+
+Trong các trường hợp khác, chúng ta cần viết các hàm sẽ có nhiều lệnh gọi bên ngoài. Không có nhiều tính toán trong các hàm này, nhưng trình tự lệnh gọi mà chúng thực hiện là rất quan trọng. Ví dụ: nếu chúng ta đang cố viết một hàm tính lãi cho một khoản vay, cách thực hiện đơn giản có thể trông giống như sau:
+
+```java
+void calculate_loan_interest(struct temper_loan *loan, int calc_type)
+{
+	...
+	db_retrieve(loan->id);
+	...
+	db_retrieve(loan->lender_id);
+	...
+	db_update(loan->id, loan->record);
+	...
+	loan->interest = ...
+}
+```
+
+Chúng ta phải làm gì trong trường hợp như thế này? Trong nhiều ngôn ngữ thủ tục, lựa chọn tốt nhất là bỏ qua việc viết kiểm thử trước và viết hàm tốt nhất có thể. Có lẽ chúng ta có thể kiểm thử xem nó có làm đúng ở cấp độ cao hơn hay không. Nhưng ở C, chúng ta có một lựa chọn khác. C hỗ trợ các con trỏ hàm và chúng ta có thể sử dụng chúng để đặt một đường nối khác vào đúng vị trí. Đây là cách thực hiện:
+
+Chúng ta có thể tạo một cấu trúc chứa các con trỏ tới các hàm:
+
+```java
+struct database
+{
+	void (*retrieve)(struct record_id id);
+	void (*update)(struct record_id id, struct record_set *record);
+	...
+};
+```
+Chúng ta có thể khởi tạo các con trỏ đó tới địa chỉ của các hàm truy cập cơ sở dữ liệu. Chúng ta có thể chuyển cấu trúc đó cho bất kỳ hàm mới nào mà chúng ta viết cần truy cập vào cơ sở dữ liệu. Trong code sản xuất, chúng được trỏ đến các hàm truy cập cơ sở dữ liệu thực. Chúng ta có thể yêu cầu con trỏ trỏ vào hàm giả khi chúng ta đang kiểm thử.
+
+Với các trình biên dịch cũ hơn, chúng ta có thể phải sử dụng cú pháp con trỏ hàm kiểu cũ:
+
+```java
+extern struct database db;
+(*db.update)(load->id, loan->record);
+```
+Nhưng với những hàm khác, chúng ta có thể gọi các hàm này theo phong cách hướng đối tượng rất tự nhiên:
+
+```java
+extern struct database db;
+db.update(load->id, loan->record);
+```
+
+Kỹ thuật này không dành riêng cho C. Nó có thể được sử dụng trong hầu hết các ngôn ngữ hỗ trợ con trỏ hàm
