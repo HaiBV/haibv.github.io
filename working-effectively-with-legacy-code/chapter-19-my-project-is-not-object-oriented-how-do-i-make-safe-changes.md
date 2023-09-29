@@ -190,7 +190,7 @@ Làm cách nào để tránh tạo nên bẫy phụ thuộc trong code thủ t�
 
 Thông thường chúng ta phải suy nghĩ về những gì chúng ta sẽ viết theo một cách khác để thực hiện điều này. Đây là một ví dụ. Chúng ta cần viết một hàm gọi là `send_command`. Hàm `send_command` sẽ gửi ID, tên và chuỗi lệnh đến hệ thống khác thông qua hàm có tên `mart_key_send`. Code của hàm không quá tệ. Chúng ta có thể tưởng tượng rằng nó sẽ trông giống như thế này:
 
-```java
+```cpp
 void send_command(int id, char *name, char *command_string) {
 	char *message, *header;
 	if (id == KEY_TRUM) {
@@ -210,14 +210,14 @@ Nhưng làm thế nào chúng ta có thể viết kiểm thử cho một hàm nh
 
 Chúng ta có thể kiểm thử tất cả logic đó trước lệnh gọi `mart_key_send` nếu nó ở một hàm khác. Chúng ta có thể viết kiểm thử đầu tiên của mình như thế này:
 
-```java
+```cpp
 char *command = form_command(1, "Mike Ratledge", "56:78:cusp-:78");
 assert(!strcmp("<-rsp-Mike  Ratledge><56:78:cusp-:78><-rspr>", command));
 ```
 
 Sau đó, chúng ta có thể viết hàm `form_command`, hàm này trả về một lệnh:
 
-```java
+```cpp
 char *form_command(int id, char *name, char *command_string)
 {
 	char *message, *header;
@@ -235,7 +235,7 @@ char *form_command(int id, char *name, char *command_string)
 
 Khi có được điều đó, chúng ta có thể viết hàm send_command đơn giản mà chúng ta cần:
 
-```java
+```cpp
 void send_command(int id, char *name, char *command_string) {
 	char *command = form_command(id, name, command_string);
 	mart_key_send(command);
@@ -248,7 +248,7 @@ Trong nhiều trường hợp, kiểu cải cách này chính xác là những g
 
 Trong các trường hợp khác, chúng ta cần viết các hàm sẽ có nhiều lệnh gọi bên ngoài. Không có nhiều tính toán trong các hàm này, nhưng trình tự lệnh gọi mà chúng thực hiện là rất quan trọng. Ví dụ: nếu chúng ta đang cố viết một hàm tính lãi cho một khoản vay, cách thực hiện đơn giản có thể trông giống như sau:
 
-```java
+```cpp
 void calculate_loan_interest(struct temper_loan *loan, int calc_type)
 {
 	...
@@ -266,7 +266,7 @@ Chúng ta phải làm gì trong trường hợp như thế này? Trong nhiều n
 
 Chúng ta có thể tạo một cấu trúc chứa các con trỏ tới các hàm:
 
-```java
+```cpp
 struct database
 {
 	void (*retrieve)(struct record_id id);
@@ -278,15 +278,66 @@ Chúng ta có thể khởi tạo các con trỏ đó tới địa chỉ của c�
 
 Với các trình biên dịch cũ hơn, chúng ta có thể phải sử dụng cú pháp con trỏ hàm kiểu cũ:
 
-```java
+```cpp
 extern struct database db;
 (*db.update)(load->id, loan->record);
 ```
 Nhưng với những hàm khác, chúng ta có thể gọi các hàm này theo phong cách hướng đối tượng rất tự nhiên:
 
-```java
+```cpp
 extern struct database db;
 db.update(load->id, loan->record);
 ```
 
 Kỹ thuật này không dành riêng cho C. Nó có thể được sử dụng trong hầu hết các ngôn ngữ hỗ trợ con trỏ hàm
+
+## Tận dụng lợi thế của lập trình hướng đối tượng
+
+Trong các ngôn ngữ hướng đối tượng, chúng ta có sẵn các _đường nối đối tượng (40)_. Chúng có một số đặc tính tốt như sau:
+- Chúng rất dễ nhận thấy trong code.
+- Chúng có thể được sử dụng để chia code thành các phần nhỏ hơn, dễ hiểu hơn.
+- Chúng mang lại sự linh hoạt hơn. Các đường nối mà bạn sử dụng để kiểm thử có thể hữu ích khi bạn phải mở rộng ứng dụng của mình.
+
+Thật không may, không phải tất cả ứng dụng đều có thể dễ dàng chuyển thành hướng đối tượng, nhưng trong một số trường hợp, việc này dễ dàng hơn nhiều so với các phần mềm khác. Nhiều ngôn ngữ thủ tục đã phát triển thành ngôn ngữ hướng đối tượng. Ngôn ngữ Visual Basic của Microsoft gần đây mới trở thành ngôn ngữ hướng đối tượng hoàn toàn, có các phần mở rộng OO cho COBOL và Fortran, đồng thời hầu hết các trình biên dịch C cũng cung cấp cho bạn khả năng biên dịch C++.
+
+Khi ngôn ngữ của bạn cung cấp tùy chọn để chuyển thành hướng đối tượng, bạn có nhiều tùy chọn hơn. Bước đầu tiên thường là sử dụng _Encapsulate Global References (339)_ để lấy các phần bạn đang thay đổi khi kiểm thử. Chúng ta có thể sử dụng nó để thoát khỏi tình trạng phụ thuộc xấu gặp phải trong hàm `scan_packets` ở đầu chương. Hãy nhớ rằng vấn đề chúng ta gặp phải là với hàm `ksr_notify`: Chúng ta không muốn nó thực sự thông báo bất cứ khi nào chúng ta chạy kiểm thử.
+
+```cpp
+int scan_packets(struct rnode_packet *packet, int flag)
+{
+	struct rnode_packet *current = packet;
+	int scan_result, err = 0;
+
+	while(current) {
+		scan_result = loc_scan(current->body, flag);
+		if(scan_result & INVALID_PORT) {
+			ksr_notify(scan_result, current);
+		}
+		...
+		current = current->next;
+	}
+	return err;
+}
+```
+
+Bước đầu tiên là biên dịch theo C++ thay vì theo C. Đây có thể là một thay đổi nhỏ hoặc lớn, tùy thuộc vào cách chúng ta xử lý nó. Chúng ta có thể cố gắng biên dịch lại toàn bộ dự án bằng C++ hoặc có thể thực hiện từng phần một, nhưng sẽ mất một chút thời gian.
+
+Khi biên dịch bằng C++, chúng ta có thể bắt đầu bằng cách tìm phần khai báo của hàm `ksr_notify` và gói nó trong một lớp:
+
+```cpp
+class ResultNotifier
+{
+public:
+	virtual void ksr_notify(int scan_result, struct rnode_packet *packet);
+};
+```
+
+Chúng ta cũng có thể sử dụng một tệp nguồn mới cho lớp và đặt cài đặt mặc định ở đó:
+
+```cpp
+extern "C" void ksr_notify(int scan_result, struct rnode_packet *packet);
+void ResultNotifier::ksr_notify(int scan_result, struct rnode_packet *packet)
+{
+	::ksr_notify(scan_result, packet);
+}
+```
