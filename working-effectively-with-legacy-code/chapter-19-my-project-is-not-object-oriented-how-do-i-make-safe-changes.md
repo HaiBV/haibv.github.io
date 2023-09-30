@@ -341,3 +341,59 @@ void ResultNotifier::ksr_notify(int scan_result, struct rnode_packet *packet)
 	::ksr_notify(scan_result, packet);
 }
 ```
+
+Lưu ý rằng chúng ta sẽ không thay đổi tên của hàm hoặc giá trị trả về của nó. Chúng ta đang sử dụng _Bảo lưu kết quả trả về (312)_ để giảm thiểu mọi khả năng xảy ra lỗi.
+
+Tiếp theo, chúng ta khai báo một biến toàn cục của `ResultNotifier` và đặt nó vào một tệp nguồn:
+
+```cpp
+ResultNotifier globalResultNotifier;
+```
+
+Bây giờ chúng ta có thể biên dịch lại và để các lỗi cho chúng ta biết phải thay đổi mọi thứ ở đâu. Vì chúng ta đã đặt phần khai báo `ksr_notify` trong một lớp nên trình biên dịch không còn thấy phần khai báo của nó ở phạm vi toàn cục nữa.
+
+Đây là chức năng ban đầu:
+
+```cpp
+#include "ksrlib.h"
+int scan_packets(struct rnode_packet *packet, int flag)
+{
+	struct rnode_packet *current = packet;
+	int scan_result, err = 0;
+	while(current) {
+		scan_result = loc_scan(current->body, flag);
+		if(scan_result & INVALID_PORT) {
+			ksr_notify(scan_result, current);
+		}
+		...
+		current = current->next;
+	}
+	return err;
+}
+```
+
+Để biên dịch nó ngay bây giờ, chúng ta có thể sử dụng một khai báo bên ngoài để hiển thị đối tượng `GlobalResultNotifier` và mở đầu `ksr_notify` bằng tên của đối tượng:
+
+```cpp
+#include "ksrlib.h"
+
+extern ResultNotifier globalResultNotifier;
+
+int scan_packets(struct rnode_packet *packet, int flag)
+{
+	struct rnode_packet *current = packet;
+	int scan_result, err = 0;
+
+	while(current) {
+		scan_result = loc_scan(current->body, flag);
+		if(scan_result & INVALID_PORT) {
+			globalResultNotifier.ksr_notify(scan_result, current);
+		}
+		...
+		current = current->next;
+	}
+	return err;
+}
+```
+
+Tại thời điểm này, code vẫn hoạt động theo như cũ. Phương thức `ksr_notify` trên `ResultNotifier` ủy quyền cho hàm `ksr_notify`. Điều đó có lợi gì cho chúng ta? Chà, hiện tại thì chưa. Bước tiếp theo là tìm cách thiết lập mọi thứ để có thể sử dụng đối tượng `ResultNotifier` này trong quá trình sản xuất và sử dụng một đối tượng khác khi chúng ta đang kiểm thử. Có nhiều cách để thực hiện việc này, nhưng một cách đưa chúng ta đi xa hơn theo hướng này là _Đóng gói lại các Tham chiếu Toàn cầu (339)_ và đặt `scan_packets` vào một lớp khác mà chúng ta có thể gọi là `Scanner`.
