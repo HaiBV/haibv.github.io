@@ -397,3 +397,40 @@ int scan_packets(struct rnode_packet *packet, int flag)
 ```
 
 Tại thời điểm này, code vẫn hoạt động theo như cũ. Phương thức `ksr_notify` trên `ResultNotifier` ủy quyền cho hàm `ksr_notify`. Điều đó có lợi gì cho chúng ta? Chà, hiện tại thì chưa. Bước tiếp theo là tìm cách thiết lập mọi thứ để có thể sử dụng đối tượng `ResultNotifier` này trong quá trình sản xuất và sử dụng một đối tượng khác khi chúng ta đang kiểm thử. Có nhiều cách để thực hiện việc này, nhưng một cách đưa chúng ta đi xa hơn theo hướng này là _Đóng gói lại các Tham chiếu Toàn cầu (339)_ và đặt `scan_packets` vào một lớp khác mà chúng ta có thể gọi là `Scanner`.
+
+```cpp
+class Scanner
+{
+public:
+		int scan_packets(struct rnode_packet *packet, int flag);
+};
+```
+
+Bây giờ chúng ta có thể áp dụng _Parameterize Constructor (379)_ và thay đổi lớp để nó sử dụng `ResultNotifier` mà chúng ta cung cấp:
+
+```cpp
+class Scanner
+{
+private:
+		ResultNotifier& notifier;
+public:
+		Scanner();
+		Scanner(ResultNotifier& notifier);
+	int scan_packets(struct rnode_packet *packet, int flag);
+};
+
+// in the source file
+
+Scanner::Scanner()
+: notifier(globalResultNotifier)
+{}
+
+Scanner::Scanner(ResultNotifier& notifier)
+: notifier(notifier)
+{}
+```
+
+Khi thực hiện thay đổi này, chúng ta có thể tìm thấy những vị trí `scan_packets` đang được sử dụng, tạo một phiên bản của `Scanner` và sử dụng nó.
+
+Những thay đổi này khá an toàn và khá máy móc. Chúng không phải là những ví dụ tuyệt vời về thiết kế hướng đối tượng, nhưng chúng đủ tốt để sử dụng như một cái nêm giúp phá vỡ sự phụ thuộc và cho phép chúng ta kiểm thử khi tiến về phía trước.
+
