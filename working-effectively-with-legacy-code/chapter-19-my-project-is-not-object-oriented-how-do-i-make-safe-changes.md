@@ -434,3 +434,60 @@ Khi thực hiện thay đổi này, chúng ta có thể tìm thấy những vị
 
 Những thay đổi này khá an toàn và khá máy móc. Chúng không phải là những ví dụ tuyệt vời về thiết kế hướng đối tượng, nhưng chúng đủ tốt để sử dụng như một cái nêm giúp phá vỡ sự phụ thuộc và cho phép chúng ta kiểm thử khi tiến về phía trước.
 
+## Tất cả đều hướng đối tượng
+
+Một số lập trình viên thủ tục không thích hướng đối tượng; họ cho rằng nó không cần thiết hoặc cho rằng sự phức tạp của nó chẳng cải thiện được gì cả. Nhưng khi bạn thực sự nghĩ về nó, bạn bắt đầu nhận ra rằng tất cả các chương trình thủ tục đều hướng đối tượng; thật đáng tiếc khi nhiều chương trình chỉ chứa một đối tượng. Để thấy điều này, hãy tưởng tượng một chương trình có khoảng 100 chức năng. Dưới đây là khai báo của họ:
+
+```cpp
+...
+int db_find(char *id, unsigned int mnemonic_id,
+struct db_rec **rec);
+...
+...
+void process_run(struct gfh_task **tasks, int task_count);
+...
+```
+
+Bây giờ hãy tưởng tượng rằng chúng ta có thể đặt tất cả các khai báo vào một tệp và bao quanh chúng bằng một khai báo lớp:
+
+```cpp
+class program
+{
+public:
+	...
+	int db_find(char *id, unsigned int mnemonic_id, struct db_rec **rec);
+	...
+	...
+	void process_run(struct gfh_task **tasks, int task_count);
+	...
+};
+```
+
+Bây giờ chúng ta có thể tìm thấy từng định nghĩa hàm (đây là một):
+
+```cpp
+int db_find(char *id, unsigned int mnemonic_id, struct db_rec **rec);
+{
+	...
+}
+```
+
+Và tiền tố tên của nó với tên của lớp:
+
+```cpp
+int program::db_find(char *id, unsigned int mnemonic_id, struct db_rec **rec)
+{
+	...
+}
+```
+
+Bây giờ chúng ta phải viết một hàm `main()` mới cho chương trình:
+
+```cpp
+int main(int ac, char **av)
+{
+	program the_program;
+
+	return the_program.main(ac, av);
+}
+```
