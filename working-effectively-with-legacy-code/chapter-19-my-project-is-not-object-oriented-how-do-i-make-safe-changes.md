@@ -491,3 +491,11 @@ int main(int ac, char **av)
 	return the_program.main(ac, av);
 }
 ```
+
+Điều này có thay đổi hành vi của hệ thống không? Không thực sự. Sự thay đổi đó chỉ là một quá trình máy móc, nó giữ nguyên ý nghĩa và cách hoạt động của chương trình. Trên thực tế, hệ thống C cũ chỉ là một đối tượng lớn. Khi chúng ta bắt đầu sử dụng _Encapsulate Global References (339)_, chúng ta sẽ tạo các đối tượng mới và chia nhỏ hệ thống theo những cách giúp làm việc dễ dàng hơn.
+
+Khi các ngôn ngữ thủ tục có phần mở rộng hướng đối tượng, chúng cho phép chúng ta đi theo hướng này. Đây không phải là hướng đối tượng thực sự; nó chỉ sử dụng đủ đối tượng để chia nhỏ chương trình để kiểm thử.
+
+Chúng ta có thể làm gì ngoài việc trích xuất các phần phụ thuộc khi ngôn ngữ của chúng ta hỗ trợ OO? Thứ nhất, chúng ta có thể dần dần chuyển nó sang một thiết kế đối tượng tốt hơn. Nói chung, điều này có nghĩa là bạn phải nhóm các hàm liên quan trong các lớp và trích xuất nhiều phương thức để có thể tách rời các trách nhiệm rối rắm. Để có thêm lời khuyên về vấn đề này, hãy xem _Chương 20, Lớp này quá lớn và tôi không muốn nó lớn hơn nữa_.
+
+Code thủ tục không cung cấp cho chúng ta nhiều tùy chọn như code hướng đối tượng, nhưng chúng ta có thể đạt được tiến bộ trong code kế thừa thủ tục. Các đường nối cụ thể mà ngôn ngữ thủ tục trình bày có ảnh hưởng quan trọng đến sự dễ dàng của công việc. Nếu ngôn ngữ thủ tục bạn đang sử dụng có ngôn ngữ kế thừa hướng đối tượng, tôi khuyên bạn nên chuyển sang ngôn ngữ đó. Các _đường nối đối tượng (40)_ còn hữu ích hơn nhiều so với việc thực hiện các kiểm thử tại chỗ. Các đường nối liên kết và tiền xử lý rất tốt để lấy code đang được kiểm thử, nhưng chúng thực sự không làm được gì nhiều để cải thiện thiết kế ngoài điều đó.
