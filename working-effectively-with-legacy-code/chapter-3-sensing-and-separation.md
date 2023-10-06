@@ -38,6 +38,55 @@ Ví dụ này minh họa cả vấn đề cảm nhận và tách biệt. Chúng 
 
 Vấn đề nào khó khăn hơn? Cảm nhận hay tách biệt? Không có câu trả lời rõ ràng. Thông thường, chúng ta cần cả hai và cả hai đều là lý do khiến chúng ta phá bỏ sự phụ thuộc. Tuy nhiên, có một điều rõ ràng: Có nhiều cách để phân tách phần mềm. Trên thực tế, có cả một danh mục các kỹ thuật đó ở phía sau cuốn sách này về chủ đề đó, nhưng có một kỹ thuật chiếm ưu thế về cảm nhận.
 
-## Đối tượng giả lập
+## Cộng tác viên giả lập
 
 Một trong những vấn đề lớn mà chúng ta gặp phải khi làm việc với code kế thừa là sự phụ thuộc. Nếu chúng ta muốn tự mình thực thi một đoạn code và xem nó làm gì, chúng ta thường phải loại bỏ sự phụ thuộc vào đoạn code khác. Nhưng nó hiếm khi đơn giản như vậy. Thông thường, đoạn code khác đó là nơi duy nhất chúng ta có thể dễ dàng cảm nhận được tác động của hành động của mình. Nếu chúng ta có thể đặt một số code khác vào vị trí của nó và kiểm thử nó, chúng ta có thể viết các kiểm thử của mình. Trong hướng đối tượng, những đoạn code khác này thường được gọi là _đối tượng giả_.
+
+### Đối tượng giả
+
+Một _đối tượng giả_ là một đối tượng mạo danh một số cộng tác viên lớp của bạn khi nó đang được kiểm thử. Đây là một ví dụ. Trong hệ thống tích điểm bán hàng, chúng ta có một lớp `Sale` (xem Hình 3.1). Nó có một phương thức `scan()` chấp nhận mã vạch của một số mặt hàng khách hàng muốn mua. Bất cứ khi nào `scan()` được gọi, đối tượng `Sale` cần hiển thị tên của mặt hàng được quét cùng với giá của nó trên màn hình máy tính tiền.
+
+Làm cách nào chúng ta có thể kiểm thử chức năng này để xem liệu văn bản phù hợp có hiển thị trên màn hình hay không? Chà, nếu các lệnh gọi đến API hiển thị của máy tính tiền được chôn sâu trong lớp `Sale` thì sẽ rất khó khăn. Có thể không dễ để cảm nhận được hiệu ứng trên màn hình. Nhưng nếu chúng ta có thể tìm thấy vị trí trong code nơi màn hình được cập nhật, chúng ta có thể chuyển sang thiết kế được hiển thị trong Hình 3.2.
+
+Ở đây chúng ta đã viết một lớp mới, `ArtR56Display`. Lớp đó chứa tất cả code cần thiết để giao tiếp với thiết bị hiển thị cụ thể mà chúng ta đang sử dụng. Tất cả những gì chúng ta phải làm là cung cấp cho nó một dòng văn bản chứa những gì chúng ta muốn hiển thị. Chúng ta có thể chuyển tất cả code hiển thị trong `Sale` sang `ArtR56Display` và có một hệ thống thực hiện chính xác những gì nó đã làm trước đây. Điều đó có mang lại cho chúng ta điều gì không? Chà, sau khi hoàn thành việc đó, chúng ta có thể có được thiết kế như trong Hình 3.3.
+
+![3.1](images/3/3-1.png)
+Hình 3.1 Lớp `Sale`
+
+![3.2](images/3/3-2.png)
+Hình 3.1 Lớp `Sale` tương tác với lớp hiển thị
+
+Lớp `Sale` hiện có thể giữ `ArtR56Display` hoặc thứ gì khác, `FakeDisplay`. Điều thú vị khi có một màn hình giả là chúng ta có thể viết kiểm thử đối với nó để tìm hiểu xem `Sale` thực hiện điều gì.
+
+Cái này hoạt động ra sao? Chà, `Sale` chấp nhận một `display` và `display` là đối tượng của bất kỳ lớp nào triển khai giao diện `Display`.
+
+```java
+public interface Display
+{
+	void showLine(String line);
+}
+```
+
+Cả `ArtR56Display` và `FakeDisplay` đều triển khai `Display`.
+Một đối tượng `Sale` có thể nhận `display` thông qua hàm khởi tạo và giữ nó bên trong:
+
+```java
+public class Sale
+{
+	private Display display;
+
+	public Sale(Display display) {
+		this.display = display;
+	}
+
+	public void scan(String barcode) {
+		...
+		String itemLine = item.name() + " " + item.price().asDisplayText();
+		display.showLine(itemLine);
+		...
+	}
+}
+```
+
+![3.3](images/3/3-3.png)
+Hình 3.3 Lớp `Invoice` với phân cấp display
