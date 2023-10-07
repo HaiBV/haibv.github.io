@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Chương 11 Sự hợp tác
+# Chương 12 Sự hợp tác
 
 Phần lớn chương trình được tạo ra bởi các đội nhóm (team). Đội nhóm có hiệu quả tốt khi các thành viên hợp tác chuyên nghiệp với nhau. Nếu trong một team, bạn là một người cô độc hoặc một ẩn sĩ, thì đó là sự thiếu chuyên nghiệp.
 

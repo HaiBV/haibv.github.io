@@ -90,3 +90,45 @@ public class Sale
 
 ![3.3](images/3/3-3.png)
 Hình 3.3 Lớp `Invoice` với phân cấp display
+
+Trong phương thức `scan` có thực hiện gọi phương thức `showLine` bằng biến `display`. Nhưng điều gì xảy ra tùy thuộc vào loại `display` mà chúng ta cung cấp cho đối tượng `Sale` khi khởi tạo nó. Nếu chúng ta cấp cho nó `ArtR56Display`, nó sẽ hiển thị trên phần cứng của máy tính tiền thực. Nếu chúng ta cho nó một `FakeDisplay` thì nó sẽ không hiển thị nhưng chúng ta có thể xem được những gì sẽ được hiển thị. Đây là một kiểm thử chúng ta có thể sử dụng để thấy điều đó:
+
+```java
+import junit.framework.*;
+
+public class SaleTest extends TestCase
+{
+	public void testDisplayAnItem() {
+		FakeDisplay display = new FakeDisplay();
+		Sale sale = new Sale(display);
+
+		sale.scan("1");
+		assertEquals("Milk $3.99", display.getLastLine());
+	}
+}
+```
+
+Lớp `FakeDisplay` có một chút đặc biệt. Hãy nhìn vào nó:
+
+```java
+public class FakeDisplay implements Display
+{
+	private String lastLine = "";
+
+	public void showLine(String line) {
+		lastLine = line;
+	}
+
+	public String getLastLine() {
+		return lastLine;
+	}
+}
+```
+
+Phương thức `showLine` chấp nhận một dòng văn bản và gán nó cho biến `LastLine`. Phương thức `getLastLine` trả về dòng văn bản đó bất cứ khi nào nó được gọi. Đây là hành vi khá mỏng nhưng nó giúp chúng ta rất nhiều. Với kiểm thử đã viết, chúng ta có thể tìm hiểu xem liệu văn bản phù hợp có được gửi đến màn hình hay không khi lớp `Sale` được gọi.
+
+> Đối tượng giả hỗ trợ kiểm thử thực
+>
+> Đôi khi mọi người nhìn thấy việc sử dụng đối tượng giả, họ nói: "Đó không thực sự là kiểm thử nghiệm". Rốt cuộc, kiểm thử này không cho chúng ta thấy những gì thực sự được hiển thị trên màn hình thực. Giả sử một phần nào đó của phần mềm hiển thị máy tính tiền không hoạt động bình thường; kiểm thử này sẽ không bao giờ phát hiện được. Chà, điều đó đúng, nhưng điều đó không có nghĩa đây không phải là một kiểm thử thực sự. Ngay cả khi chúng ta có thể nghĩ ra một kiểm thử thực sự cho thấy chính xác pixel nào được đặt trên màn hình máy tính tiền thật, điều đó có nghĩa là phần mềm sẽ hoạt động với tất cả phần cứng phải không? Không, không phải vậy—nhưng điều đó cũng không có nghĩa đó không phải là một kiểm thử. Khi chúng ta viết kiểm thử, chúng ta phải chia để trị. Kiểm thử này cho chúng ta biết các đối tượng `Sale` ảnh hưởng đến các `display` như thế nào, chỉ vậy thôi. Nhưng điều đó không tầm thường. Nếu chúng ta phát hiện ra lỗi, việc chạy kiểm thử này có thể giúp chúng ta thấy rằng sự cố không nằm ở `Sale`. Nếu chúng ta có thể sử dụng thông tin như vậy để giúp khoanh vùng lỗi, chúng ta có thể tiết kiệm được một lượng thời gian đáng kinh ngạc.
+>
+> Khi chúng ta viết kiểm thử cho từng đơn vị riêng lẻ, chúng ta sẽ thu được những phần nhỏ, dễ hiểu. Điều này có thể làm cho việc suy luận về code của chúng ta dễ dàng hơn.
