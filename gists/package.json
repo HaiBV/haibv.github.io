@@ -1,0 +1,15 @@
+{
+  "name": "gists",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^4.4.10",
+    "vitest": "^0.34.6"
+  }
+}

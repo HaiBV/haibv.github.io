@@ -14,7 +14,7 @@ layout: default
 
 [Chương 2 - Làm việc với phản hồi](./chapter-2-working-with-feedback.html).
 
-Chương 3 - Hiểu biết và tách biệt
+[Chương 3 - Hiểu biết và tách biệt](./chapter-3-sensing-and-separation.html)
 
 Chương 4 - Mô hình may vá
 

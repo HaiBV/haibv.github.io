@@ -1,0 +1,22 @@
+{
+  "name": "haibv.github.io",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/pages-themes/cayman.svg?branch=master)](https://travis-ci.org/pages-themes/cayman) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-cayman.svg)](https://badge.fury.io/rb/jekyll-theme-cayman)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test-gists": "npm run test --prefix gists"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaiBV/haibv.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaiBV/haibv.github.io/issues"
+  },
+  "homepage": "https://github.com/HaiBV/haibv.github.io#readme"
+}
