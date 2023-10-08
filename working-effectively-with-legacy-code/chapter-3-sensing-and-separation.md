@@ -132,3 +132,56 @@ Phương thức `showLine` chấp nhận một dòng văn bản và gán nó cho
 > Đôi khi mọi người nhìn thấy việc sử dụng đối tượng giả, họ nói: "Đó không thực sự là kiểm thử nghiệm". Rốt cuộc, kiểm thử này không cho chúng ta thấy những gì thực sự được hiển thị trên màn hình thực. Giả sử một phần nào đó của phần mềm hiển thị máy tính tiền không hoạt động bình thường; kiểm thử này sẽ không bao giờ phát hiện được. Chà, điều đó đúng, nhưng điều đó không có nghĩa đây không phải là một kiểm thử thực sự. Ngay cả khi chúng ta có thể nghĩ ra một kiểm thử thực sự cho thấy chính xác pixel nào được đặt trên màn hình máy tính tiền thật, điều đó có nghĩa là phần mềm sẽ hoạt động với tất cả phần cứng phải không? Không, không phải vậy—nhưng điều đó cũng không có nghĩa đó không phải là một kiểm thử. Khi chúng ta viết kiểm thử, chúng ta phải chia để trị. Kiểm thử này cho chúng ta biết các đối tượng `Sale` ảnh hưởng đến các `display` như thế nào, chỉ vậy thôi. Nhưng điều đó không tầm thường. Nếu chúng ta phát hiện ra lỗi, việc chạy kiểm thử này có thể giúp chúng ta thấy rằng sự cố không nằm ở `Sale`. Nếu chúng ta có thể sử dụng thông tin như vậy để giúp khoanh vùng lỗi, chúng ta có thể tiết kiệm được một lượng thời gian đáng kinh ngạc.
 >
 > Khi chúng ta viết kiểm thử cho từng đơn vị riêng lẻ, chúng ta sẽ thu được những phần nhỏ, dễ hiểu. Điều này có thể làm cho việc suy luận về code của chúng ta dễ dàng hơn.
+
+### Hai mặt của đối tượng giả lập
+
+Đối tượng giả lập có thể gây nhầm lẫn khi bạn thấy chúng lần đầu tiên. Một trong những điều kỳ lạ nhất về chúng là chúng có hai "mặt". Chúng ta hãy xem lại lớp `FakeDisplay`, trong Hình 3.4.
+
+Phương thức `showLine` là cần thiết trên `FakeDisplay` vì `FakeDisplay` triển khai `Display`. Đây là phương thức duy nhất trên `Display` và là phương thức duy nhất mà `Sale` thấy được. Phương thức khác, `getLastLine`, dùng để kiểm thử. Đó là lý do tại sao chúng ta khai báo `display` là `FakeDisplay` chứ không phải `Display`
+
+![3.4](images/3/3-4.png)
+Hình 3.4 Hai mặt của đối tượng giả lập
+
+```java
+import junit.framework.*;
+
+public class SaleTest extends TestCase
+{
+	public void testDisplayAnItem() {
+		FakeDisplay display = new FakeDisplay();
+		Sale sale = new Sale(display);
+
+		sale.scan("1");
+		assertEquals("Milk $3.99", display.getLastLine());
+	}
+}
+```
+
+Lớp `Sale` sẽ thấy `display` giả là `Display`, nhưng trong quá trình kiểm thử, chúng ta cần giữ đối tượng là `FakeDisplay`. Nếu không, chúng ta sẽ không thể gọi `getLastLine()` để tìm hiểu xem chương trình giảm giá sẽ hiển thị nội dung gì.
+
+### Giả lập "chưng cất"
+
+Ví dụ tôi đưa ra trong phần này rất đơn giản nhưng nó cho thấy ý tưởng cốt lõi đằng sau sự giả lập. Chúng có thể được thực hiện theo nhiều cách khác nhau. Trong các ngôn ngữ OO, chúng thường được triển khai dưới dạng các lớp đơn giản như lớp `FakeDisplay` trong ví dụ trước. Trong các ngôn ngữ không phải OO, chúng ta có thể triển khai giả lập bằng cách định nghĩa một hàm thay thế, một hàm ghi lại các giá trị trong một số cấu trúc dữ liệu chung mà chúng ta có thể truy cập trong các kiểm thử. Xem _Chương 19, Dự án của tôi không hướng đối tượng. Làm cách nào để thực hiện an toàn các thay đổi?_, để biết chi tiết.
+
+### Đối tượng mô phỏng (mock)
+
+Giả lập rất dễ viết và là một công cụ rất có giá trị để cảm nhận. Nếu bạn phải viết nhiều, bạn có thể muốn xem xét một loại giả cao cấp hơn được gọi là _đối tượng mô phỏng (mock object)_. Đối tượng mô phỏng là giả lập thực hiện các xác nhận nội bộ. Dưới đây là ví dụ về kiểm thử sử dụng đối tượng mô phỏng:
+
+```java
+import junit.framework.*;
+
+public class SaleTest extends TestCase
+{
+	public void testDisplayAnItem() {
+		MockDisplay display = new MockDisplay();
+		display.setExpectation("showLine", "Milk $3.99");
+		Sale sale = new Sale(display);
+		sale.scan("1");
+		display.verify();
+	}
+}
+```
+
+Trong kiểm thử này, chúng ta tạo một đối tượng display mô phỏng. Điều thú vị về mô phỏng là chúng ta có thể cho chúng biết những cuộc gọi nào sẽ xảy ra, sau đó chúng ta yêu cầu chúng kiểm tra xem liệu chúng có nhận được những cuộc gọi đó hay không. Đó chính xác là những gì xảy ra trong trường hợp kiểm thử này. Chúng ta yêu cầu `display` gọi phương thức `showLine` của nó với đối số là "Milk $3,99". Sau khi kỳ vọng đã được đặt, chúng ta chỉ cần tiếp tục và sử dụng đối tượng bên trong kiểm thử. Trong trường hợp này, chúng ta gọi phương thức `scan()`. Sau đó, chúng ta gọi phương thức `verify()` để kiểm tra xem liệu tất cả các kỳ vọng có được đáp ứng hay không. Nếu không, kiểm thử sẽ thất bại.
+
+Mô phỏng là một công cụ mạnh mẽ và có sẵn rất nhiều framework mô phỏng. Tuy nhiên, các framework mô phỏng không có sẵn ở tất cả các ngôn ngữ và các đối tượng giả đơn giản là đủ trong hầu hết các trường hợp.
