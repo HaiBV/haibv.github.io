@@ -16,7 +16,7 @@ layout: default
 
 [Chương 3 - Hiểu biết và tách biệt](./chapter-3-sensing-and-separation.html)
 
-Chương 4 - Mô hình may vá
+[Chương 4 - Mô hình may vá](./chapter-4-the-seam-model.html)
 
 Chương 5 - Công cụ
 
