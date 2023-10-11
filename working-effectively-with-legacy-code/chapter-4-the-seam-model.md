@@ -92,3 +92,57 @@ void CAsyncSslRec::PostReceiveError(UINT type, UINT errorcode)
 	::PostReceiveError(type, errorcode);
 }
 ```
+
+Sự thay đổi đó sẽ duy trì hành vi. Chúng ta đang sử dụng phương thức mới này để ủy quyền cho hàm toàn cục `PostReceiveError` bằng cách sử dụng toán tử phạm vi của C++ (::). Chúng ta có một chút gián tiếp ở đó, nhưng cuối cùng chúng ta gọi cùng một hàm toàn cục.
+
+Thôi được, bây giờ nếu chúng ta phân lớp lớp `CAsyncSslRec` và ghi đè phương thức `PostReceiveError` thì sao?
+
+```cpp
+class TestingAsyncSslRec : public CAsyncSslRec
+{
+	virtual void PostReceiveError(UINT type, UINT errorcode)
+	{
+	}
+};
+```
+
+Nếu chúng ta làm điều đó và quay lại nơi đang tạo `CAsyncSslRec` và thay vào đó tạo một `TestAsyncSslRec`, thì chúng ta đã loại bỏ hành vi của lệnh gọi tới `PostReceiveError` trong code này một cách hiệu quả:
+
+```java
+bool CAsyncSslRec::Init()
+{
+	if (m_bSslInitialized) {
+		return true;
+	}
+	m_smutex.Unlock();
+	m_nSslRefCount++;
+
+	m_bSslInitialized = true;
+
+	FreeLibrary(m_hSslDll1);
+	m_hSslDll1=0;
+	FreeLibrary(m_hSslDll2);
+	m_hSslDll2=0;
+
+	if (!m_bFailureSent) {
+		m_bFailureSent=TRUE;
+		PostReceiveError(SOCKETCALLBACK, SSL_FAILURE);
+	}
+
+	CreateLibrary(m_hSslDll1,"syncesel1.dll");
+	CreateLibrary(m_hSslDll2,"syncesel2.dll");
+
+	m_hSslDll1->Init();
+	m_hSslDll2->Init();
+
+	return true;
+}
+```
+
+Bây giờ chúng ta có thể viết các kiểm thử cho code đó mà không có tác dụng phụ khó chịu.
+
+Đường nối này tôi gọi là đường nối đối tượng. Chúng ta có thể thay đổi phương thức được gọi mà không thay đổi phương thức gọi nó. Đường nối đối tượng có sẵn trong các ngôn ngữ hướng đối tượng và chúng chỉ là một trong nhiều loại đường nối khác nhau.
+
+Tại sao lại có đường nối? Khái niệm này tốt cho việc gì?
+
+Một trong những thách thức lớn nhất trong việc kiểm thử code kế thừa là phá bỏ các phần phụ thuộc. Khi chúng ta may mắn, sự phụ thuộc mà chúng ta có là nhỏ và cục bộ; nhưng trong những trường hợp khó, chúng rất nhiều và trải rộng khắp codebase. Chế độ đường nối của phần mềm giúp chúng ta nhìn thấy các cơ hội đã có trong code base. Nếu chúng ta có thể thay thế hành vi tại các đường nối, chúng ta có thể loại trừ có chọn lọc các phần phụ thuộc trong kiểm thử của mình. Chúng ta cũng có thể chạy code khác có chứa các phần phụ thuộc đó nếu muốn cảm nhận các điều kiện trong code và viết kiểm thử dựa trên các điều kiện đó. Thông thường, công việc này có thể giúp chúng ta có đủ số lượng kiểm thử để hỗ trợ công việc tích cực hơn.
