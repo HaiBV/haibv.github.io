@@ -146,3 +146,66 @@ Bây giờ chúng ta có thể viết các kiểm thử cho code đó mà không
 Tại sao lại có đường nối? Khái niệm này tốt cho việc gì?
 
 Một trong những thách thức lớn nhất trong việc kiểm thử code kế thừa là phá bỏ các phần phụ thuộc. Khi chúng ta may mắn, sự phụ thuộc mà chúng ta có là nhỏ và cục bộ; nhưng trong những trường hợp khó, chúng rất nhiều và trải rộng khắp codebase. Chế độ đường nối của phần mềm giúp chúng ta nhìn thấy các cơ hội đã có trong code base. Nếu chúng ta có thể thay thế hành vi tại các đường nối, chúng ta có thể loại trừ có chọn lọc các phần phụ thuộc trong kiểm thử của mình. Chúng ta cũng có thể chạy code khác có chứa các phần phụ thuộc đó nếu muốn cảm nhận các điều kiện trong code và viết kiểm thử dựa trên các điều kiện đó. Thông thường, công việc này có thể giúp chúng ta có đủ số lượng kiểm thử để hỗ trợ công việc tích cực hơn.
+
+## Các loại đường nối
+
+Mỗi ngôn ngữ lập trình lại có các loại đường nối có sẵn khác nhau. Cách tốt nhất để khám phá chúng là xem xét tất cả các bước liên quan đến việc chuyển văn bản của chương trình thành code chạy trên máy. Mỗi bước có thể nhận dạng sẽ hiển thị các loại đường nối khác nhau.
+
+### Đường nối tiền xử lý
+
+Trong hầu hết các môi trường lập trình, văn bản chương trình thường được đọc bởi trình biên dịch. Trình biên dịch sau đó sẽ phát ra các mã lệnh đối tượng hoặc mã byte. Tùy thuộc vào ngôn ngữ, có thể có các bước xử lý sau đó, nhưng còn các bước trước đó thì sao?
+
+Chỉ một số ngôn ngữ có giai đoạn xây dựng trước khi biên dịch. C và C++ là phổ biến nhất trong số đó.
+
+Trong C và C++, một bộ tiền xử lý macro chạy trước trình biên dịch. Qua nhiều năm, bộ tiền xử lý macro đã không ngừng bị chửi rủa và chế giễu. Với nó, chúng ta có thể tạo ra những dòng văn bản trông vô hại như thế này:
+
+```cpp
+TEST(getBalance,Account)
+{
+	Account account;
+	LONGS_EQUAL(0, account.getBalance());
+}
+```
+
+và để chúng xuất hiện như thế này trong trình biên dịch.
+
+```cpp
+class AccountgetBalanceTest : public Test
+{
+	public: AccountgetBalanceTest () : Test ("getBalance" "Test") {}
+	void run (TestResult& result_);
+}
+AccountgetBalanceInstance;
+void AccountgetBalanceTest::run (TestResult& result_) {
+	Account account;
+	{
+		result_.countCheck();
+		long actualTemp = (account.getBalance());
+		long expectedTemp = (0);
+		if ((expectedTemp) != (actualTemp)) {
+			result_.addFailure (Failure (name_, "c:\\seamexample.cpp", 24,
+			StringFrom(expectedTemp),
+			StringFrom(actualTemp)));
+			return;
+		}
+	}
+}
+```
+
+Chúng ta cũng có thể lồng mã trong các câu lệnh biên dịch có điều kiện như thế này để hỗ trợ việc gỡ lỗi và các nền tảng khác nhau (aarrrgh!):
+
+```cpp
+...
+m_pRtg->Adj(2.0);
+
+#ifdef DEBUG
+#ifndef WINDOWS
+	{ FILE *fp = fopen(TGLOGNAME,"w");
+	if (fp) { fprintf(fp,"%s", m_pRtg->pszState); fclose(fp); }}
+#endif
+
+m_pTSRTable->p_nFlush |= GF_FLOT;
+#endif
+
+...
+```
