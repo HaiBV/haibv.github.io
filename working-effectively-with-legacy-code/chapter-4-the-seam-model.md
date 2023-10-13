@@ -206,6 +206,29 @@ m_pRtg->Adj(2.0);
 
 m_pTSRTable->p_nFlush |= GF_FLOT;
 #endif
-
 ...
 ```
+
+Với việc thay thế `db_update` ở vị trí này, chúng ta có thể viết kiểm thử xác minh `db_update` đã được gọi với các tham số phù hợp. Chúng ta có thể làm điều đó vì lệnh `#include` của bộ tiền xử lý C cung cấp cho chúng ta một đường nối có thể sử dụng để thay thế văn bản trước khi nó được biên dịch.
+
+Các đường nối tiền xử lý khá mạnh mẽ. Tôi không nghĩ mình thực sự muốn có một bộ tiền xử lý cho Java và các ngôn ngữ hiện đại khác, nhưng thật tuyệt khi có công cụ này trong C và C++ như một sự đền bù cho một số trở ngại kiểm thử khác mà chúng gặp phải.
+
+Tôi chưa đề cập đến nó trước đó, nhưng có một điều quan trọng khác cần hiểu về đường nối: Mỗi đường nối đều có một điểm kích hoạt. Chúng ta hãy xem lại định nghĩa của đường nối:
+
+> Đường nối
+>
+> Đường nối là nơi bạn có thể thay đổi hành vi trong chương trình của mình mà không cần chỉnh sửa ở nơi đó.
+
+Khi bạn có một đường nối, bạn có một nơi mà hành vi có thể thay đổi. Chúng ta thực sự không thể đến nơi đó và thay đổi code chỉ để kiểm thử nó. Code phải giống nhau trong cả quá trình sản xuất và kiểm thử. Trong ví dụ trước, chúng ta muốn thay đổi hành vi trong văn bản của lệnh gọi `db_update`. Để khai thác đường nối đó, bạn phải thực hiện thay đổi ở một nơi khác. Trong trường hợp này, điểm kích hoạt là một định nghĩa tiền xử lý có tên `TESTING`. Khi `TESTING` được xác định, tệp `localdefs.h` xác định các macro thay thế lệnh gọi tới `db_update` trong tệp nguồn.
+
+> Điểm kích hoạt
+>
+> Mỗi đường nối đều có một điểm kích hoạt, một nơi mà bạn có thể đưa ra quyết định sử dụng hành vi này hay hành vi khác.
+
+### Đường nối liên kết
+
+Trong nhiều hệ thống ngôn ngữ, việc biên dịch không phải là bước cuối cùng của quá trình dựng. Trình biên dịch tạo ra một biểu diễn trung gian của code và biểu diễn đó chứa các lệnh gọi code trong các tệp khác. Trình liên kết kết hợp các biểu diễn này. Chúng giải quyết từng lệnh gọi để bạn có thể có một chương trình hoàn chỉnh khi chạy.
+
+Trong các ngôn ngữ như C và C++, thực sự có một trình liên kết riêng thực hiện thao tác mà tôi vừa mô tả. Trong Java và các ngôn ngữ tương tự, trình biên dịch thực hiện quá trình liên kết ở hậu trường. Khi tệp nguồn chứa câu lệnh nhập, trình biên dịch sẽ kiểm tra xem lớp đã nhập có thực sự được biên dịch hay không.
+
+Nếu lớp chưa được biên dịch, nó sẽ biên dịch nó, nếu cần, rồi kiểm tra xem liệu tất cả các lệnh gọi của nó có thực sự giải quyết chính xác trong thời gian chạy hay không.
