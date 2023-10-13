@@ -5,7 +5,7 @@
  */
 
 function searchRange(nums: number[], target: number): number[] {
-  const find = function (arr, target, left = 0, right = arr.length) {
+  const find = function (arr: number[], target: number, left = 0, right = arr.length) {
     while (left <= right) {
       let mid = (left + right) >> 1;
       if (arr[mid] < target) left = mid + 1;

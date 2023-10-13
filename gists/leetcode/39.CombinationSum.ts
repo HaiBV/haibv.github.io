@@ -4,8 +4,8 @@
  */
 
 function combinationSum(candidates: number[], target: number): number[][] {
-  var buffer = [];
-  var result = [];
+  var buffer: number[] = [];
+  var result: number[][] = [];
   search(0, target);
   return result;
 

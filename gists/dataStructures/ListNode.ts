@@ -9,7 +9,7 @@ export default class ListNode {
 }
 
 export class LinkedList {
-  head: ListNode | null;
+	constructor(public head: ListNode | null) {}
 
   get length(): number {
     if (!this.head) {

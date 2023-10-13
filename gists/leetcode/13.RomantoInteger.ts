@@ -3,7 +3,7 @@
  * Hash Table, Math, String
  */
 
-const symbols = {
+const symbols: { [key: string]: number } = {
   I: 1,
   V: 5,
   X: 10,

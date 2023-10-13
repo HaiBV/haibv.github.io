@@ -7,13 +7,13 @@ import TreeNode from '../dataStructures/TreeNode';
 
 function levelOrder(root: TreeNode | null): number[][] {
   let ans: number[][] = [];
-  let queue: TreeNode[] = [root];
+  let queue: (TreeNode | null)[] = [root];
 
   while (queue[0]) {
     let l = queue.length;
     let arr = [];
     for (let i = 0; i < l; i++) {
-      let cur = queue.shift();
+      let cur = queue.shift() as TreeNode;
       arr.push(cur.val);
       if (cur.left) {
         queue.push(cur.left);

@@ -23,14 +23,14 @@ function isPalindrome(head: ListNode | null): boolean {
   let slow: ListNode | null = head;
   let fast: ListNode | null = head;
 
-  while (fast && fast.next) {
+  while (slow && fast && fast.next) {
     stack.push(slow.val);
 
     slow = slow.next;
     fast = fast.next.next;
   }
 
-  if (fast) {
+  if (fast && slow) {
     slow = slow.next;
   }
 

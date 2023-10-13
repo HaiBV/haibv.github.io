@@ -18,14 +18,14 @@ function BFSmaxDepth(root: TreeNode | null): number {
   if (!root) {
       return 0;
   }
-  
+
   let levels: number = 0;
   let queue: (TreeNode | null)[] = [];
   queue.push(root);
-  
+
   while (queue.length > 0) {
       for (let i = 0; i < queue.length; i++) {
-          let node = queue.shift();
+          let node = queue.shift() as TreeNode;
           if (node.left) {
               queue.push(node.left);
           }
@@ -35,7 +35,7 @@ function BFSmaxDepth(root: TreeNode | null): number {
       }
       levels++;
   }
-  
+
   return levels;
 };
 

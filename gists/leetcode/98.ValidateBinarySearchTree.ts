@@ -5,7 +5,7 @@
 
 import TreeNode from '../dataStructures/TreeNode';
 
-function checkValidBST(root: TreeNode | null, min: number, max: number) {
+function checkValidBST(root: TreeNode | null, min: number, max: number): boolean {
   if (!root) {
     return true;
   }
