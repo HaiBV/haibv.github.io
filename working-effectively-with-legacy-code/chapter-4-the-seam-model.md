@@ -229,6 +229,60 @@ Khi bạn có một đường nối, bạn có một nơi mà hành vi có thể
 
 Trong nhiều hệ thống ngôn ngữ, việc biên dịch không phải là bước cuối cùng của quá trình dựng. Trình biên dịch tạo ra một biểu diễn trung gian của code và biểu diễn đó chứa các lệnh gọi code trong các tệp khác. Trình liên kết kết hợp các biểu diễn này. Chúng giải quyết từng lệnh gọi để bạn có thể có một chương trình hoàn chỉnh khi chạy.
 
-Trong các ngôn ngữ như C và C++, thực sự có một trình liên kết riêng thực hiện thao tác mà tôi vừa mô tả. Trong Java và các ngôn ngữ tương tự, trình biên dịch thực hiện quá trình liên kết ở hậu trường. Khi tệp nguồn chứa câu lệnh nhập, trình biên dịch sẽ kiểm tra xem lớp đã nhập có thực sự được biên dịch hay không.
+Trong các ngôn ngữ như C và C++, thực sự có một trình liên kết riêng thực hiện thao tác mà tôi vừa mô tả. Trong Java và các ngôn ngữ tương tự, trình biên dịch thực hiện quá trình liên kết ở hậu trường. Khi tệp nguồn chứa câu lệnh nhập, trình biên dịch sẽ kiểm tra xem lớp đã nhập có thực sự được biên dịch hay không. Nếu lớp chưa được biên dịch, nó sẽ biên dịch nó, nếu cần, rồi kiểm tra xem liệu tất cả các lệnh gọi của nó có thực sự giải quyết chính xác trong thời gian chạy hay không.
 
-Nếu lớp chưa được biên dịch, nó sẽ biên dịch nó, nếu cần, rồi kiểm tra xem liệu tất cả các lệnh gọi của nó có thực sự giải quyết chính xác trong thời gian chạy hay không.
+Bất kể ngôn ngữ của bạn sử dụng sơ đồ nào để giải quyết các tham chiếu, bạn thường có thể khai thác nó để thay thế các phần của chương trình. Hãy xem trường hợp Java. Đây là một lớp nhỏ tên là `FitFilter`:
+
+```java
+package fitnesse;
+
+import fit.Parse;
+import fit.Fixture;
+
+import java.io.*;
+import java.util.Date;
+
+import java.io.*;
+import java.util.*;
+
+public class FitFilter {
+
+	public String input;
+	public Parse tables;
+	public Fixture fixture = new Fixture();
+	public PrintWriter output;
+
+	public static void main (String argv[]) {
+		new FitFilter().run(argv);
+	}
+
+	public void run (String argv[]) {
+		args(argv);
+		process();
+		exit();
+	}
+
+	public void process() {
+		try {
+			tables = new Parse(input);
+			fixture.doTables(tables);
+		} catch (Exception e) {
+			exception(e);
+		}
+		tables.print(output);
+	}
+	...
+}
+```
+
+Trong tệp này, chúng ta nhập `fit.Parse` và `fit.Fixture`. Trình biên dịch và JVM tìm các lớp đó như thế nào? Trong Java, bạn có thể sử dụng biến môi trường đường dẫn lớp để xác định nơi hệ thống Java tìm để tìm các lớp đó. Bạn thực sự có thể tạo các lớp có cùng tên, đặt chúng vào một thư mục khác và thay đổi đường dẫn lớp để liên kết đến một `fit.Parse` và `fit.Fixture` khác. Mặc dù sẽ khó hiểu khi sử dụng thủ thuật này trong code sản xuất, nhưng khi bạn đang kiểm thử, đây có thể là một cách khá tiện lợi để phá bỏ sự phụ thuộc.
+
+> Giả sử chúng tôi muốn cung cấp một phiên bản khác của lớp `Parse` để kiểm thử. Đường nối sẽ ở đâu?
+>
+> Đường nối là lệnh gọi `Parse` mới trong phương thức xử lý.
+>
+> Điểm kích hoạt ở đâu?
+>
+> Điểm kích hoạt là đường dẫn lớp.
+
+Loại liên kết động này có thể được thực hiện bằng nhiều ngôn ngữ. Hầu hết đều có một số cách để khai thác các đường nối liên kết. Nhưng không phải tất cả các liên kết đều động. Trong nhiều ngôn ngữ cũ, gần như tất cả các liên kết đều ở trạng thái tĩnh; nó xảy ra một lần sau khi biên dịch.
