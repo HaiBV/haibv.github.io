@@ -2,10 +2,10 @@
  * 104. Maximum Depth of Binary Tree
  * Binary Tree, DFS, BFS
  */
-import TreeNode from '../dataStructures/TreeNode';
+import TreeNode from "../dataStructures/TreeNode";
 
 // Recursion, DFS
-function maxDepth(root: TreeNode | null): number {
+function maxDepth(root: TreeNode<number> | null): number {
   if (!root) {
     return 0;
   }
@@ -16,7 +16,7 @@ function maxDepth(root: TreeNode | null): number {
 // BFS
 function BFSmaxDepth(root: TreeNode | null): number {
   if (!root) {
-      return 0;
+    return 0;
   }
 
   let levels: number = 0;
@@ -24,20 +24,20 @@ function BFSmaxDepth(root: TreeNode | null): number {
   queue.push(root);
 
   while (queue.length > 0) {
-      for (let i = 0; i < queue.length; i++) {
-          let node = queue.shift() as TreeNode;
-          if (node.left) {
-              queue.push(node.left);
-          }
-          if (node.right) {
-              queue.push(node.right);
-          }
+    for (let i = 0; i < queue.length; i++) {
+      let node = queue.shift() as TreeNode;
+      if (node.left) {
+        queue.push(node.left);
       }
-      levels++;
+      if (node.right) {
+        queue.push(node.right);
+      }
+    }
+    levels++;
   }
 
   return levels;
-};
+}
 
 // [3,9,20,null,null,15,7]
 // [1,null,2]
