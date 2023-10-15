@@ -286,3 +286,87 @@ Trong tệp này, chúng ta nhập `fit.Parse` và `fit.Fixture`. Trình biên d
 > Điểm kích hoạt là đường dẫn lớp.
 
 Loại liên kết động này có thể được thực hiện bằng nhiều ngôn ngữ. Hầu hết đều có một số cách để khai thác các đường nối liên kết. Nhưng không phải tất cả các liên kết đều động. Trong nhiều ngôn ngữ cũ, gần như tất cả các liên kết đều ở trạng thái tĩnh; nó xảy ra một lần sau khi biên dịch.
+
+Nhiều hệ thống xây dựng C và C++ thực hiện liên kết tĩnh để tạo các tệp thực thi. Thông thường, cách dễ nhất để sử dụng đường nối liên kết là tạo một thư viện riêng cho bất kỳ lớp hoặc hàm nào bạn muốn thay thế. Khi làm điều đó, bạn có thể thay đổi tập lệnh xây dựng của mình để liên kết với những tập lệnh đó thay vì tập lệnh sản xuất khi bạn đang kiểm thử. Việc này có thể tốn một chút công sức nhưng sẽ mang lại hiệu quả nếu bạn có code base tràn ngập các lệnh gọi đến thư viện của bên thứ ba. Ví dụ: hãy tưởng tượng một ứng dụng CAD chứa nhiều lệnh gọi được nhúng tới thư viện đồ họa. Đây là một ví dụ về một số code điển hình:
+
+```java
+void CrossPlaneFigure::rerender()
+{
+	// draw the label
+	drawText(m_nX, m_nY, m_pchLabel, getClipLen());
+	drawLine(m_nX, m_nY, m_nX + getClipLen(), m_nY);
+	drawLine(m_nX, m_nY, m_nX, m_nY + getDropLen());
+	if (!m_bShadowBox) {
+		drawLine(m_nX + getClipLen(), m_nY, m_nX + getClipLen(), m_nY + getDropLen());
+		drawLine(m_nX, m_nY + getDropLen(), m_nX + getClipLen(), m_nY + getDropLen());
+	}
+
+	// draw the figure
+	for (int n = 0; n < edges.size(); n++) {
+		...
+	}
+
+	...
+}
+```
+
+Code này thực hiện nhiều lời gọi trực tiếp đến thư viện đồ họa. Thật không may, cách duy nhất để thực sự xác minh rằng code này đang thực hiện những gì bạn muốn là nhìn vào màn hình máy tính khi các hình được vẽ lại. Trong code phức tạp, điều đó khá dễ xảy ra lỗi, chưa kể tẻ nhạt. Một cách khác là sử dụng các đường nối liên kết. Nếu tất cả các chức năng vẽ là một phần của một thư viện cụ thể, bạn có thể tạo các phiên bản sơ khai liên kết đến phần còn lại của ứng dụng. Nếu bạn quan tâm đến việc chỉ tách phần phụ thuộc, chúng có thể chỉ là các hàm trống:
+
+```java
+void drawText(int x, int y, char *text, int textLength)
+{ }
+
+void drawLine(int firstX, int firstY, int secondX, int secondY)
+{ }
+```
+
+Nếu các hàm trả về giá trị, bạn phải trả về một giá trị nào đó. Thông thường, đoạn code cho biết thành công hoặc giá trị mặc định của một loại là một lựa chọn tốt:
+
+```java
+int getStatus()
+{
+	return FLAG_OKAY;
+}
+```
+
+Trường hợp của một thư viện đồ họa hơi không điển hình. Một lý do khiến nó là một ứng cử viên sáng giá cho kỹ thuật này là vì nó gần như là một giao diện "nói" thuần túy. Bạn thực hiện các lệnh gọi đến các chức năng để yêu cầu chúng làm điều gì đó và không yêu cầu trả lại nhiều thông tin. Việc yêu cầu thông tin rất khó vì các giá trị mặc định thường không phải là thứ phù hợp để trả về khi bạn đang cố gắng thực thi code của mình.
+
+Sự tách biệt thường là lý do để sử dụng đường nối liên kết. Bạn cũng có thể làm cảm biến; nó chỉ đòi hỏi một chút công việc. Trong trường hợp thư viện đồ họa mà chúng tôi vừa giả mạo, chúng tôi có thể giới thiệu một số cấu trúc dữ liệu bổ sung để ghi lại cuộc gọi:
+
+```cpp
+std::queue<GraphicsAction> actions;
+
+void drawLine(int firstX, int firstY, int secondX, int secondY)
+{
+	actions.push_back(GraphicsAction(LINE_DRAW, firstX, firstY, secondX, secondY);
+}
+```
+
+Với các cấu trúc dữ liệu này, chúng ta có thể cảm nhận được tác động của một hàm trong kiểm thử:
+
+```cpp
+TEST(simpleRender,Figure)
+{
+	std::string text = "simple";
+	Figure figure(text, 0, 0);
+
+	figure.rerender();
+	LONGS_EQUAL(5, actions.size());
+	GraphicsAction action;
+	action = actions.pop_front();
+	LONGS_EQUAL(LABEL_DRAW, action.type);
+
+	action = actions.pop_front();
+	LONGS_EQUAL(0, action.firstX);
+	LONGS_EQUAL(0, action.firstY);
+	LONGS_EQUAL(text.size(), action.secondX);
+}
+```
+
+Các sơ đồ mà chúng ta có thể sử dụng để cảm nhận các hiệu ứng có thể khá phức tạp, nhưng tốt nhất là nên bắt đầu với một sơ đồ rất đơn giản và chỉ cho phép nó phức tạp đến mức cần thiết để giải quyết các nhu cầu cảm biến hiện tại.
+
+Điểm kích hoạt đường nối liên kết luôn nằm ngoài văn bản chương trình. Đôi khi nó nằm trong một bản dựng hoặc một tập lệnh triển khai. Điều này làm cho việc sử dụng các đường nối liên kết hơi khó nhận thấy.
+
+> Mẹo sử dụng
+>
+> Nếu bạn sử dụng các đường nối liên kết, hãy đảm bảo rằng sự khác biệt giữa môi trường kiểm thử và môi trường sản xuất là rõ ràng.
