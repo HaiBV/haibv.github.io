@@ -370,3 +370,56 @@ Các sơ đồ mà chúng ta có thể sử dụng để cảm nhận các hiệ
 > Mẹo sử dụng
 >
 > Nếu bạn sử dụng các đường nối liên kết, hãy đảm bảo rằng sự khác biệt giữa môi trường kiểm thử và môi trường sản xuất là rõ ràng.
+
+### Đường nối đối tượng
+
+Các đường nối đối tượng là những đường nối hữu ích nhất có sẵn trong các ngôn ngữ lập trình hướng đối tượng. Điều cơ bản cần nhận ra khi xem xét một lệnh gọi trong một chương trình hướng đối tượng là nó không xác định phương thức nào sẽ thực sự được thực thi. Hãy xem một ví dụ Java:
+
+```java
+	cell.Recalculate();
+```
+
+Khi chúng ta xem đoạn code này, có vẻ như phải có một phương thức có tên `Recalculate` sẽ thực thi khi thực hiện lệnh gọi đó. Nếu chương trình muốn chạy thì phải có một phương thức có tên đó; nhưng thực tế là có thể có nhiều hơn một:
+
+![4.1](images/4/4-1.png)
+Hình 4.1 Cây phân cấp Lớp `Cell`
+
+Phương thức nào sẽ được gọi trong dòng code này?
+
+```java
+	cell.Recalculate();
+```
+
+Nếu không biết đối tượng `cell` trỏ đến cái gì thì chúng ta sẽ không thể biết được. Nó có thể là phương thức `ReCalculate` của `ValueCell` hoặc phương thức `ReCalculate` của `FormulaCell`. Nó thậm chí có thể là phương thức `Recalculate` của một số lớp khác không kế thừa từ `Cell` (nếu đúng như vậy, `cell` là một cái tên đặc biệt tàn nhẫn để sử dụng cho biến đó!). Nếu chúng ta có thể thay đổi cách gọi `Recalculate` trong dòng code đó mà không thay đổi code xung quanh nó, thì lệnh gọi đó là một đường nối.
+
+Trong các ngôn ngữ hướng đối tượng, không phải tất cả các lệnh gọi phương thức đều là đường nối. Dưới đây là ví dụ về lệnh gọi không phải là đường nối:
+
+```java
+public class CustomSpreadsheet extends Spreadsheet
+{
+	public Spreadsheet buildMartSheet() {
+		...
+		Cell cell = new FormulaCell(this, "A1", "=A2+A3");
+		...
+		cell.Recalculate();
+		...
+	}
+	...
+}
+```
+
+Trong đoạn code này, chúng ta đang tạo một `cell` và sau đó sử dụng nó trong cùng một phương thức. Lệnh gọi `Recalculate` có là đường nối đối tượng không? Không. Không có điểm kích hoạt. Chúng ta không thể thay đổi phương thức `Recalculate` nào được gọi vì sự lựa chọn phụ thuộc vào loại cell. Lớp của cell được quyết định khi đối tượng được tạo và chúng ta không thể thay đổi nó nếu không sửa đổi phương thức.
+
+Điều gì sẽ xảy ra nếu đoạn code trông như thế này?
+
+```java
+public class CustomSpreadsheet extends Spreadsheet
+{
+	public Spreadsheet buildMartSheet(Cell cell) {
+		...
+		cell.Recalculate();
+		...
+	}
+	...
+}
+```
