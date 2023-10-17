@@ -423,3 +423,87 @@ public class CustomSpreadsheet extends Spreadsheet
 	...
 }
 ```
+
+Lệnh gọi tới `cell.Recalculate` trong `buildMartSheet` bây giờ có phải là một đường nối không? Đúng. Chúng ta có thể tạo `CustomSpreadsheet` trong kiểm thử và gọi `buildMartSheet` bằng bất kỳ loại `Cell` nào mà chúng ta muốn sử dụng. Cuối cùng, chúng ta sẽ thay đổi cách gọi `cell.Recalculate` mà không thay đổi phương thức gọi nó.
+
+Điểm kích hoạt ở đâu?
+
+Trong ví dụ này, điểm kích hoạt là danh sách đối số của `buildMartSheet`. Chúng ta có thể quyết định loại đối tượng nào sẽ chuyển và thay đổi hành vi của `Recalculate` theo bất kỳ cách nào mà chúng ta muốn để kiểm thử.
+
+Được rồi, hầu hết các đường nối của đối tượng đều khá đơn giản. Đây là một trong những khó khăn. Có đường nối đối tượng nào khi gọi tới `Recalculate` trong phiên bản `buildMartSheet` này không?
+
+```java
+public class CustomSpreadsheet extends Spreadsheet
+{
+	public Spreadsheet buildMartSheet(Cell cell) {
+		...
+		Recalculate(cell);
+		...
+	}
+
+	private static void Recalculate(Cell cell) {
+		...
+	}
+
+	...
+}
+```
+
+Phương thức `Recalculate` là một phương thức tĩnh. Lệnh gọi `Recalculate` trong `buildMartSheet` có phải là một đường nối không? Đúng. Chúng ta không phải chỉnh sửa `buildMartSheet` để thay đổi hành vi trong lệnh gọi đó. Nếu chúng ta xóa từ khóa `static` trên `Recalculate` và biến nó thành một phương thức được `protected` thay vì một phương thức `private`, chúng ta có thể phân lớp và ghi đè nó trong quá trình kiểm thử:
+
+```java
+public class CustomSpreadsheet extends Spreadsheet
+{
+	public Spreadsheet buildMartSheet(Cell cell) {
+		...
+		Recalculate(cell);
+		...
+	}
+	protected void Recalculate(Cell cell) {
+		...
+	}
+
+	...
+}
+
+public class TestingCustomSpreadsheet extends CustomSpreadsheet {
+	protected void Recalculate(Cell cell) {
+		...
+	}
+}
+```
+
+Không phải là tất cả khá gián tiếp sao? Nếu chúng ta không thích sự phụ thuộc, tại sao chúng ta không vào code và thay đổi nó? Đôi khi cách đó có tác dụng, nhưng với những code kế thừa đặc biệt khó chịu, cách tiếp cận tốt nhất thường là làm những gì có thể để sửa đổi code ít nhất có thể khi bạn đang thực hiện kiểm thử. Nếu bạn biết các đường nối mà ngôn ngữ của bạn cung cấp và cách sử dụng chúng, bạn thường có thể viết kiểm thử tại chỗ một cách an toàn hơn những gì bạn có thể làm.
+
+Các loại đường nối tôi đã trình bày là những loại chính. Bạn có thể tìm thấy chúng trong nhiều ngôn ngữ lập trình. Chúng ta hãy xem lại ví dụ dẫn đầu chương này và xem chúng ta có thể thấy những đường nối nào:
+
+```java
+bool CAsyncSslRec::Init()
+{
+	if (m_bSslInitialized) {
+		return true;
+	}
+	m_smutex.Unlock();
+	m_nSslRefCount++;
+
+	m_bSslInitialized = true;
+
+	FreeLibrary(m_hSslDll1);
+	m_hSslDll1=0;
+	FreeLibrary(m_hSslDll2);
+	m_hSslDll2=0;
+
+	if (!m_bFailureSent) {
+		m_bFailureSent=TRUE;
+		PostReceiveError(SOCKETCALLBACK, SSL_FAILURE);
+	}
+
+	CreateLibrary(m_hSslDll1,"syncesel1.dll");
+	CreateLibrary(m_hSslDll2,"syncesel2.dll");
+
+	m_hSslDll1->Init();
+	m_hSslDll2->Init();
+	return true;
+}
+```
+
