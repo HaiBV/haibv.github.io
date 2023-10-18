@@ -192,7 +192,7 @@ void AccountgetBalanceTest::run (TestResult& result_) {
 }
 ```
 
-Chúng ta cũng có thể lồng mã trong các câu lệnh biên dịch có điều kiện như thế này để hỗ trợ việc gỡ lỗi và các nền tảng khác nhau (aarrrgh!):
+Chúng ta cũng có thể lồng code trong các câu lệnh biên dịch có điều kiện như thế này để hỗ trợ việc gỡ lỗi và các nền tảng khác nhau (aarrrgh!):
 
 ```cpp
 ...
@@ -507,3 +507,30 @@ bool CAsyncSslRec::Init()
 }
 ```
 
+Những đường nối nào có sẵn trong lệnh gọi `PostReceiveError`? Hãy liệt kê chúng.
+
+1. `PostReceiveError` là một hàm toàn cục nên chúng ta có thể dễ dàng sử dụng _đường nối liên kết_ ở đó. Chúng ta có thể tạo một thư viện có chức năng sơ khai và liên kết với nó để loại bỏ hành vi đó. Điểm kích hoạt sẽ là tệp tạo tệp hoặc một số cài đặt trong IDE của chúng tôi. Chúng tôi phải thay đổi bản dựng của mình để liên kết với thư viện kiểm thử khi chúng ta đang kiểm thử và thư viện sản xuất khi chúng ta muốn xây dựng hệ thống thực.
+
+2. Chúng ta có thể thêm câu lệnh `#include` vào code và sử dụng bộ tiền xử lý để xác định macro có tên `PostReceiveError` khi chúng ta đang kiểm thử. Vì vậy, chúng ta có một _đường may tiền xử lý_ ở đó. _Điểm kích hoạt_ ở đâu? Chúng ta có thể sử dụng định nghĩa tiền xử lý để bật hoặc tắt định nghĩa macro.
+
+3. Chúng ta cũng có thể khai báo một hàm ảo cho `PostRecieveError` giống như chúng ta đã làm ở đầu chương này, vì vậy chúng ta cũng có một _đường nối đối tượng_ ở đó. Điểm kích hoạt ở đâu? Trong trường hợp này, điểm kích hoạt là nơi chúng ta quyết định tạo một đối tượng. Chúng ta có thể tạo đối tượng `CAsyncSslRec` hoặc đối tượng của một số lớp con thử nghiệm ghi đè `PostRecieveError`.
+
+Điều thực sự đáng ngạc nhiên là có rất nhiều cách để thay thế hành vi trong lệnh gọi này mà không cần chỉnh sửa phương thức:
+
+```java
+bool CAsyncSslRec::Init()
+{
+	...
+	if (!m_bFailureSent) {
+		m_bFailureSent=TRUE;
+		PostReceiveError(SOCKETCALLBACK, SSL_FAILURE);
+	}
+	...
+
+	return true;
+}
+```
+
+Điều quan trọng là chọn đúng loại đường nối khi bạn muốn kiểm thử các đoạn code. Nói chung, các _đường nối đối tượng_ là sự lựa chọn tốt nhất trong các ngôn ngữ hướng đối tượng. Đôi khi, các _đường nối tiền xử lý_ và các _đường nối liên kết_ có thể hữu ích nhưng chúng không rõ ràng như các _đường nối đối tượng_. Ngoài ra, các kiểm thử phụ thuộc vào chúng có thể khó duy trì. Tôi muốn dành riêng các _đường nối tiền xử lý_ và các _đường nối liên kết_ cho các trường hợp mà sự phụ thuộc phổ biến và không có lựa chọn thay thế nào tốt hơn.
+
+Khi bạn đã quen với việc xem code theo các đường nối, bạn sẽ dễ dàng biết cách kiểm thử mọi thứ hơn và xem cách cấu trúc code mới để giúp việc kiểm thử dễ dàng hơn.
