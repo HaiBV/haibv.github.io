@@ -23,3 +23,50 @@ Việc lựa chọn công cụ tái cấu trúc của bạn một cách cẩn th
 Trong cuốn sách này, tôi thảo luận về cách làm việc khi có và không có công cụ hỗ trợ tái cấu trúc tự động. Trong các ví dụ, tôi đề cập đến việc liệu tôi có giả sử có sẵn một công cụ tái cấu trúc hay không.
 
 Trong mọi trường hợp, tôi giả định rằng các hoạt động tái cấu trúc do công cụ cung cấp sẽ duy trì hành vi. Nếu bạn phát hiện ra rằng những thứ do công cụ của bạn cung cấp không duy trì hành vi, thì đừng sử dụng tính năng tái cấu trúc tự động. Hãy làm theo lời khuyên dành cho những trường hợp bạn không có công cụ tái cấu trúc — sẽ an toàn hơn.
+
+>
+> ##### Kiểm thử và tái cấu trúc tự động
+>
+> Khi bạn có một công cụ thực hiện việc tái cấu trúc cho mình, bạn sẽ dễ dàng tin rằng mình không cần phải viết kiểm thử cho code mà bạn sắp tái cấu trúc. Trong một số trường hợp, điều này đúng. Nếu công cụ của bạn thực hiện tái cấu trúc an toàn và bạn chuyển từ tái cấu trúc tự động này sang tái cấu trúc tự động khác mà không thực hiện bất kỳ chỉnh sửa nào khác, bạn có thể cho rằng các chỉnh sửa của mình không thay đổi hành vi. Tuy nhiên, điều này không phải lúc nào cũng đúng.
+>
+> Đây là một ví dụ:
+>
+> ```java
+> public class A {
+>   private int alpha = 0;
+>   private int getValue() {
+>     alpha++;
+>     return 12;
+>   }
+>
+>   public void doSomething() {
+>     int v = getValue();
+>     int total = 0;
+>     for (int n = 0; n < 10; n++) {
+>       total += v;
+>     }
+>   }
+> }
+> ```
+>
+> Trong ít nhất hai công cụ tái cấu trúc Java, chúng ta có thể sử dụng tái cấu trúc để loại bỏ biến `v` khỏi `doSomething`. Sau khi tái cấu trúc, đoạn code sẽ trông như thế này:
+>
+> ```java
+> public class A {
+>   private int alpha = 0;
+>   private int getValue() {
+>     alpha++;
+>     return 12;
+>   }
+>   public void doSomething() {
+>     int total = 0;
+>     for (int n = 0; n < 10; n++) {
+>       total += getValue();
+>     }
+>   }
+> }
+> ```
+>
+> Bạn đã thấy vấn đề chưa? Biến đã bị xóa nhưng bây giờ giá trị của `alpha` được tăng lên 10 lần thay vì 1. Thay đổi này rõ ràng không bảo toàn hành vi.
+>
+> Bạn nên kiểm thử code của mình trước khi bắt đầu sử dụng tính năng tái cấu trúc tự động. Bạn có thể thực hiện một số thao tác tái cấu trúc tự động mà không cần kiểm thử, nhưng bạn phải biết công cụ này đang kiểm thử cái gì và không kiểm thử cái gì. Khi tôi bắt đầu sử dụng một công cụ mới, điều đầu tiên tôi làm là hỗ trợ nó cho việc trích xuất các phương thức thông qua các bước của nó. Nếu tôi có thể tin tưởng nó đủ tốt để sử dụng nó mà không cần kiểm thử, tôi có thể đưa code về trạng thái dễ kiểm thử hơn nhiều.
