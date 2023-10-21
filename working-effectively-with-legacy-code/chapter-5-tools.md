@@ -70,3 +70,25 @@ Trong mọi trường hợp, tôi giả định rằng các hoạt động tái 
 > Bạn đã thấy vấn đề chưa? Biến đã bị xóa nhưng bây giờ giá trị của `alpha` được tăng lên 10 lần thay vì 1. Thay đổi này rõ ràng không bảo toàn hành vi.
 >
 > Bạn nên kiểm thử code của mình trước khi bắt đầu sử dụng tính năng tái cấu trúc tự động. Bạn có thể thực hiện một số thao tác tái cấu trúc tự động mà không cần kiểm thử, nhưng bạn phải biết công cụ này đang kiểm thử cái gì và không kiểm thử cái gì. Khi tôi bắt đầu sử dụng một công cụ mới, điều đầu tiên tôi làm là hỗ trợ nó cho việc trích xuất các phương thức thông qua các bước của nó. Nếu tôi có thể tin tưởng nó đủ tốt để sử dụng nó mà không cần kiểm thử, tôi có thể đưa code về trạng thái dễ kiểm thử hơn nhiều.
+
+## Đối tượng giả lập
+
+Một trong những vấn đề lớn mà chúng ta gặp phải với code kế thừa là sự phụ thuộc. Nếu chúng ta muốn tự mình thực thi một đoạn code và xem nó làm gì, chúng ta thường phải loại bỏ sự phụ thuộc vào đoạn code khác. Nhưng điều đó hiếm khi đơn giản như vậy. Nếu loại bỏ đoạn code khác, chúng ta cần có thứ gì đó thay thế để cung cấp các giá trị phù hợp khi chúng ta đang kiểm thử để có thể thực thi đoạn code đó một cách triệt để. Trong code hướng đối tượng, chúng thường được gọi là đối tượng giả lập.
+
+Một số thư viện đối tượng giả lập được cung cấp miễn phí. Trang web www.mockobjects.com là nơi tốt để tìm tài liệu tham khảo cho hầu hết chúng.
+
+## Kiểm thử đơn vị khai thác
+
+Các công cụ kiểm thử có lịch sử lâu dài và đa dạng. Không một năm nào trôi qua mà tôi không gặp bốn hoặc năm nhóm mua một số công cụ kiểm thử có giấy phép đắt đỏ nhưng cuối cùng lại không đáp ứng được với mức giá của nó. Công bằng mà nói đối với các nhà cung cấp công cụ, kiểm thử là một vấn đề khó khăn và mọi người thường bị quyến rũ bởi ý tưởng rằng họ có thể kiểm thử thông qua GUI hoặc giao diện web mà không cần phải thực hiện bất kỳ điều gì đặc biệt đối với ứng dụng của mình. Nó có thể thực hiện được, nhưng nó thường tốn nhiều công sức hơn mức mà bất kỳ ai trong nhóm sẵn sàng thừa nhận. Ngoài ra, giao diện người dùng thường không phải là nơi tốt nhất để viết kiểm thử. Giao diện người dùng thường không ổn định và khác quá xa so với chức năng đang được kiểm thử. Khi các kiểm thử dựa trên giao diện người dùng thất bại, có thể khó để tìm hiểu tại sao. Bất chấp điều đó, mọi người thường chi số tiền đáng kể để cố gắng thực hiện tất cả các kiểm thử của mình bằng những loại công cụ đó.
+
+Các công cụ kiểm thử hiệu quả nhất mà tôi từng sử dụng đều miễn phí. Cái đầu tiên là framework kiểm thử xUnit. Ban đầu được viết bằng Smalltalk bởi Kent Beck và sau đó được Kent Beck và Erich Gamma chuyển sang Java, xUnit là một thiết kế nhỏ, mạnh mẽ dành cho framework kiểm thử đơn vị. Dưới đây là các tính năng chính của nó:
+
+• Cho phép các lập trình viên viết kiểm thử bằng ngôn ngữ mà họ đang phát triển.
+• Tất cả các kiểm thử đều chạy độc lập.
+• Các kiểm thử có thể được nhóm thành các nhóm để có thể chạy đi chạy lại theo yêu cầu
+
+Framework xUnit đã được chuyển sang hầu hết các ngôn ngữ chính và khá nhiều ngôn ngữ nhỏ, kỳ lạ khác.
+
+Điều mang tính cách mạng nhất về thiết kế của xUnit là sự đơn giản và tập trung. Nó cho phép chúng ta viết kiểm thử mà không gặp rắc rối gì. Mặc dù ban đầu nó được thiết kế để kiểm thử đơn vị, nhưng bạn có thể sử dụng nó để viết các kiểm thử lớn hơn vì xUnit thực sự không quan tâm kiểm thử lớn hay nhỏ như thế nào. Nếu kiểm thử có thể được viết bằng ngôn ngữ bạn đang sử dụng thì xUnit có thể chạy nó.
+
+Trong cuốn sách này, hầu hết các ví dụ đều bằng Java và C++. Trong Java, JUnit là bộ khai thác xUnit được ưa thích và giống hầu hết các xUnits khác. Trong C++, tôi thường sử dụng phần khai thác kiểm thử mà tôi đã viết có tên là CppUnitLite. Nó trông hơi khác một chút và tôi cũng mô tả nó trong chương này. Nhân tiện, tôi không coi thường tác giả gốc của CppUnit bằng cách sử dụng CppUnitLite. Tôi đã là anh chàng đó từ lâu và chỉ sau khi phát hành CppUnit, tôi mới phát hiện ra rằng nó có thể nhỏ hơn một chút, dễ sử dụng hơn và dễ mang theo hơn nếu nó sử dụng một số thành ngữ C và chỉ một tập hợp con đơn giản của ngôn ngữ C++.
