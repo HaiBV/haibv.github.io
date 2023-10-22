@@ -92,3 +92,51 @@ Framework xUnit đã được chuyển sang hầu hết các ngôn ngữ chính 
 Điều mang tính cách mạng nhất về thiết kế của xUnit là sự đơn giản và tập trung. Nó cho phép chúng ta viết kiểm thử mà không gặp rắc rối gì. Mặc dù ban đầu nó được thiết kế để kiểm thử đơn vị, nhưng bạn có thể sử dụng nó để viết các kiểm thử lớn hơn vì xUnit thực sự không quan tâm kiểm thử lớn hay nhỏ như thế nào. Nếu kiểm thử có thể được viết bằng ngôn ngữ bạn đang sử dụng thì xUnit có thể chạy nó.
 
 Trong cuốn sách này, hầu hết các ví dụ đều bằng Java và C++. Trong Java, JUnit là bộ khai thác xUnit được ưa thích và giống hầu hết các xUnits khác. Trong C++, tôi thường sử dụng phần khai thác kiểm thử mà tôi đã viết có tên là CppUnitLite. Nó trông hơi khác một chút và tôi cũng mô tả nó trong chương này. Nhân tiện, tôi không coi thường tác giả gốc của CppUnit bằng cách sử dụng CppUnitLite. Tôi đã là anh chàng đó từ lâu và chỉ sau khi phát hành CppUnit, tôi mới phát hiện ra rằng nó có thể nhỏ hơn một chút, dễ sử dụng hơn và dễ mang theo hơn nếu nó sử dụng một số thành ngữ C và chỉ một tập hợp con đơn giản của ngôn ngữ C++.
+
+### JUnit
+
+Trong JUnit, bạn viết kiểm thử bằng cách phân lớp con có tên `TestCase`.
+
+```java
+import junit.framework.*;
+
+public class FormulaTest extends TestCase {
+  public void testEmpty() {
+    assertEquals(0, new Formula("").value());
+  }
+
+  public void testDigit() {
+    assertEquals(1, new Formula("1").value());
+  }
+}
+```
+
+Mỗi phương thức trong lớp kiểm thử xác định một kiểm thử nếu nó có tên ở dạng này: `void testXXX()`, trong đó `XXX` là tên bạn muốn đặt cho kiểm thử. Mỗi phương thức kiểm thử có thể chứa code và xác nhận kỳ vọng. Trong phương thức `testEmpty` trước đó, có code để tạo một đối tượng `Formula` mới và gọi phương thức `value` của nó. Ngoài ra còn có code xác nhận kỳ vọng để kiểm tra xem giá trị đó có bằng 0 hay không. Nếu đúng như vậy thì kiểm thử đã đạt. Nếu không, kiểm thử sẽ thất bại.
+
+Tóm lại, đây là những gì xảy ra khi bạn chạy kiểm thử bằng JUnit. Trình chạy kiểm thử JUnit tải một lớp kiểm thử giống như lớp được hiển thị ở trên, sau đó nó sử dụng sự phản chiếu để tìm tất cả các phương thức kiểm thử. Những gì nó làm tiếp theo khá lén lút. Nó tạo ra một đối tượng hoàn toàn riêng biệt cho từng phương thức kiểm thử. Theo như đoạn code ở trên, nó tạo ra hai đối tượng: một đối tượng có công việc duy nhất là chạy phương thức `testEmpty` và một đối tượng có công việc duy nhất là chạy đối tượng `testDigit`. Nếu bạn đang thắc mắc các lớp của đối tượng là gì thì trong cả hai trường hợp đều giống nhau: `FormulaTest`. Mỗi đối tượng được cấu hình để chạy chính xác một trong các phương thức kiểm thử của `FormulaTest`. Điều quan trọng là chúng ta có một đối tượng hoàn toàn riêng biệt cho mỗi phương thức. Không có cách nào chúng có thể ảnh hưởng lẫn nhau. Đây là một ví dụ.
+
+```java
+public class EmployeeTest extends TestCase {
+  private Employee employee;
+
+  protected void `setUp`() {
+    employee = new Employee("Fred", 0, 10);
+    TDate cardDate = new TDate(10, 10, 2000);
+    employee.addTimeCard(new TimeCard(cardDate,40));
+  }
+
+  public void testOvertime() {
+    TDate newCardDate = new TDate(11, 10, 2000);
+    employee.addTimeCard(new TimeCard(newCardDate, 50));
+    assertTrue(employee.hasOvertimeFor(newCardDate));
+  }
+
+  public void testNormalPay() {
+    assertEquals(400, employee.getPay());
+  }
+}
+```
+
+Trong lớp `EmployeeTest`, chúng ta có một phương thức đặc biệt tên là `setUp`. Phương thức `setUp` được khai báo trong `TestCase` và được chạy trong từng đối tượng kiểm thử trước khi chạy phương thức kiểm thử. Phương thức `setUp` cho phép chúng ta tạo một tập hợp các đối tượng mà chúng ta sẽ sử dụng trong kiểm thử. Tập hợp các đối tượng đó được tạo theo cách tương tự trước mỗi lần thực hiện kiểm thử. Với đối tượng chạy `testNormalPay`, một `employee` được tạo trong `setUp` được kiểm tra xem liệu `employee` đó có tính lương chính xác cho một thẻ chấm công được thêm vào trong `setUp` hay không. Với đối tượng chạy `testOvertime`, một `employee` được tạo trong `setUp` cho đối tượng đó sẽ nhận được một thẻ chấm công bổ sung và có một bước kiểm tra để xác minh rằng thẻ chấm công thứ hai có kích hoạt điều kiện làm thêm giờ hay không. Phương thức `setUp` được gọi cho từng đối tượng của lớp `EmployeeTest` và mỗi đối tượng đó có một tập hợp đối tượng riêng được tạo thông qua `setUp`. Nếu bạn cần làm bất cứ điều gì đặc biệt sau khi quá trình kiểm thử kết thúc, bạn có thể ghi đè một phương thức khác có tên là `TearsDown`, được xác định trong `TestCase`. Nó chạy theo phương thức kiểm thử cho từng đối tượng.
+
+Khi bạn nhìn thấy `xUnit` lần đầu tiên, nó chắc chắn sẽ trông hơi lạ. Tại sao các lớp trường hợp kiểm thử lại có `setUp` và `TearsDown`? Tại sao chúng ta không thể tạo các đối tượng chúng ta cần trong hàm tạo? Vâng, chúng ta có thể, nhưng hãy nhớ những gì người chạy kiểm thử làm với các lớp trường hợp kiểm thử. Nó đi đến từng lớp trường hợp kiểm thử và tạo một tập hợp các đối tượng, một đối tượng cho mỗi phương thức kiểm thử. Đó là một tập hợp lớn các đối tượng, nhưng cũng không tệ lắm nếu những đối tượng đó chưa phân bổ những gì chúng cần. Bằng cách đặt code vào `setUp` để tạo ra những gì chúng ta cần ngay khi cần, chúng ta đã tiết kiệm được khá nhiều tài nguyên. Ngoài ra, bằng cách trì hoãn quá trình thiết lập, chúng ta cũng có thể chạy nó vào bất kỳ thời điểm mà chúng ta có thể phát hiện và báo cáo bất kỳ sự cố nào có thể xảy ra trong quá trình thiết lập.
