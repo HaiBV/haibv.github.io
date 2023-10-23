@@ -140,3 +140,41 @@ public class EmployeeTest extends TestCase {
 Trong lớp `EmployeeTest`, chúng ta có một phương thức đặc biệt tên là `setUp`. Phương thức `setUp` được khai báo trong `TestCase` và được chạy trong từng đối tượng kiểm thử trước khi chạy phương thức kiểm thử. Phương thức `setUp` cho phép chúng ta tạo một tập hợp các đối tượng mà chúng ta sẽ sử dụng trong kiểm thử. Tập hợp các đối tượng đó được tạo theo cách tương tự trước mỗi lần thực hiện kiểm thử. Với đối tượng chạy `testNormalPay`, một `employee` được tạo trong `setUp` được kiểm tra xem liệu `employee` đó có tính lương chính xác cho một thẻ chấm công được thêm vào trong `setUp` hay không. Với đối tượng chạy `testOvertime`, một `employee` được tạo trong `setUp` cho đối tượng đó sẽ nhận được một thẻ chấm công bổ sung và có một bước kiểm tra để xác minh rằng thẻ chấm công thứ hai có kích hoạt điều kiện làm thêm giờ hay không. Phương thức `setUp` được gọi cho từng đối tượng của lớp `EmployeeTest` và mỗi đối tượng đó có một tập hợp đối tượng riêng được tạo thông qua `setUp`. Nếu bạn cần làm bất cứ điều gì đặc biệt sau khi quá trình kiểm thử kết thúc, bạn có thể ghi đè một phương thức khác có tên là `TearsDown`, được xác định trong `TestCase`. Nó chạy theo phương thức kiểm thử cho từng đối tượng.
 
 Khi bạn nhìn thấy `xUnit` lần đầu tiên, nó chắc chắn sẽ trông hơi lạ. Tại sao các lớp trường hợp kiểm thử lại có `setUp` và `TearsDown`? Tại sao chúng ta không thể tạo các đối tượng chúng ta cần trong hàm tạo? Vâng, chúng ta có thể, nhưng hãy nhớ những gì người chạy kiểm thử làm với các lớp trường hợp kiểm thử. Nó đi đến từng lớp trường hợp kiểm thử và tạo một tập hợp các đối tượng, một đối tượng cho mỗi phương thức kiểm thử. Đó là một tập hợp lớn các đối tượng, nhưng cũng không tệ lắm nếu những đối tượng đó chưa phân bổ những gì chúng cần. Bằng cách đặt code vào `setUp` để tạo ra những gì chúng ta cần ngay khi cần, chúng ta đã tiết kiệm được khá nhiều tài nguyên. Ngoài ra, bằng cách trì hoãn quá trình thiết lập, chúng ta cũng có thể chạy nó vào bất kỳ thời điểm mà chúng ta có thể phát hiện và báo cáo bất kỳ sự cố nào có thể xảy ra trong quá trình thiết lập.
+
+### CppUnitLite
+
+Khi tôi bắt đầu tiếp xúc với CppUnit, tôi cố gắng giữ nó càng giống JUnit càng tốt. Tôi nghĩ rằng sẽ dễ dàng hơn đối với những người đã từng làm việc kiến trúc xUnit từ trước, vì vậy có vẻ như đây là điều tốt hơn nên làm. Gần như ngay lập tức, tôi gặp phải một loạt vấn đề khó hoặc không thể triển khai rõ ràng trong C++ vì sự khác biệt trong các tính năng của C++ và Java. Vấn đề chính là sự thiếu phản ánh của C++. Trong Java, bạn có thể giữ tham chiếu đến các phương thức của lớp dẫn xuất, tìm các phương thức trong thời gian chạy, v.v. Trong C++, bạn phải viết code để đăng ký phương thức bạn muốn truy cập khi chạy. Kết quả là CppUnit trở nên khó sử dụng và khó hiểu hơn một chút. Bạn phải viết bộ hàm của riêng mình trên một lớp kiểm thử để bộ chạy kiểm thử có thể chạy các đối tượng cho các phương thức riêng lẻ.
+
+```cpp
+Test *EmployeeTest::suite()
+{
+	TestSuite *suite = new TestSuite;
+	suite.addTest(new TestCaller<EmployeeTest>("testNormalPay", testNormalPay));
+	suite.addTest(new TestCaller<EmployeeTest>("testOvertime", testOvertime));
+	return suite;
+}
+```
+
+Không cần phải nói, điều này khá tẻ nhạt. Thật khó để duy trì các kiểm thử viết theo đà khi bạn phải khai báo các phương thức kiểm thử trong tiêu đề lớp, xác định chúng trong tệp nguồn và đăng ký chúng trong một bộ phương thức. Có thể sử dụng nhiều kế hoạch vĩ mô khác nhau để vượt qua những vấn đề này, nhưng tôi chọn bắt đầu lại. Tôi đã kết thúc với một sơ đồ trong đó ai đó có thể viết kiểm thử chỉ bằng cách viết tệp nguồn này:
+
+```cpp
+#include "testharness.h"
+#include "employee.h"
+#include <memory>
+
+using namespace std;
+
+TEST(testNormalPay,Employee)
+{
+	auto_ptr<Employee> employee(new Employee("Fred", 0, 10));
+	LONGS_EQUALS(400, employee->getPay());
+}
+```
+
+Kiểm thử này sử dụng macro có tên `LONGS_EQUAL` để so sánh hai số nguyên dài để tìm sự bằng nhau. Nó hoạt động giống như cách mà `assertEquals` thực hiện trong JUnit, nhưng nó được điều chỉnh trong thời gian dài.
+
+Macro `TEST` thực hiện một số điều khó chịu đằng sau. Nó tạo một lớp con của lớp kiểm thử và đặt tên cho nó bằng cách dán hai đối số lại với nhau (tên của kiểm thử và tên của lớp đang được kiểm thử). Sau đó, nó tạo một phiên bản của lớp con đó được cấu hình để chạy code trong dấu ngoặc nhọn. Phiên bản này là `static`; khi chương trình tải, nó sẽ tự thêm vào danh sách `static` các đối tượng kiểm thử. Sau đó, người chạy thử có thể trích xuất danh sách và chạy từng kiểm thử.
+
+Sau khi viết framework nhỏ này, tôi quyết định không phát hành nó vì code trong macro không quá rõ ràng và tôi dành nhiều thời gian để thuyết phục mọi người viết code rõ ràng hơn. Một người bạn của tôi, Mike Hill, đã gặp phải một số vấn đề tương tự trước khi chúng tôi gặp nhau và tạo ra một framework kiểm thử dành riêng cho Microsoft có tên là TestKit để xử lý việc đăng ký theo cách tương tự. Được Mike khuyến khích, tôi bắt đầu giảm số lượng các tính năng phát hành muộn của C++ được sử dụng trong framework nhỏ của mình và sau đó tôi phát hành nó. (Những vấn đề đó từng là vấn đề lớn trong CppUnit. Gần như ngày nào tôi cũng nhận được e-mail từ những người không thể sử dụng mẫu hoặc thư viện chuẩn hoặc những người có ngoại lệ với trình biên dịch C++ của họ.)
+
+Cả CppUnit và CppUnitLite đều phù hợp cho kiểm thử khai thác. Các kiểm thử được viết bằng CppUnitLite ngắn gọn hơn một chút, vì vậy tôi sử dụng nó cho các ví dụ về C++ trong cuốn sách này.
