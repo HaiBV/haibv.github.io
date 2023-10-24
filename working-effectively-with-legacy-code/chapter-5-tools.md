@@ -178,3 +178,33 @@ Macro `TEST` thực hiện một số điều khó chịu đằng sau. Nó tạo
 Sau khi viết framework nhỏ này, tôi quyết định không phát hành nó vì code trong macro không quá rõ ràng và tôi dành nhiều thời gian để thuyết phục mọi người viết code rõ ràng hơn. Một người bạn của tôi, Mike Hill, đã gặp phải một số vấn đề tương tự trước khi chúng tôi gặp nhau và tạo ra một framework kiểm thử dành riêng cho Microsoft có tên là TestKit để xử lý việc đăng ký theo cách tương tự. Được Mike khuyến khích, tôi bắt đầu giảm số lượng các tính năng phát hành muộn của C++ được sử dụng trong framework nhỏ của mình và sau đó tôi phát hành nó. (Những vấn đề đó từng là vấn đề lớn trong CppUnit. Gần như ngày nào tôi cũng nhận được e-mail từ những người không thể sử dụng mẫu hoặc thư viện chuẩn hoặc những người có ngoại lệ với trình biên dịch C++ của họ.)
 
 Cả CppUnit và CppUnitLite đều phù hợp cho kiểm thử khai thác. Các kiểm thử được viết bằng CppUnitLite ngắn gọn hơn một chút, vì vậy tôi sử dụng nó cho các ví dụ về C++ trong cuốn sách này.
+
+### NUnit
+
+NUnit là một khung thử nghiệm cho các ngôn ngữ .NET. Bạn có thể viết bài kiểm tra mã C#, mã VB.NET hoặc bất kỳ ngôn ngữ nào khác chạy trên nền tảng .NET. NUnit hoạt động rất gần với JUnit. Sự khác biệt đáng kể là nó sử dụng các thuộc tính để đánh dấu các phương pháp kiểm tra và các lớp kiểm tra. Cú pháp của các thuộc tính phụ thuộc vào ngôn ngữ .NET mà các bài kiểm tra được viết.
+
+Đây là bài kiểm tra NUnit được viết bằng VB.NET:
+
+```cpp
+Imports NUnit.Framework
+
+<TestFixture()> Public Class LogOnTest
+  Inherits Assertion
+  <Test()> Public Sub TestRunValid()
+  Dim display As New MockDisplay()
+  Dim reader As New MockATMReader()
+  Dim logon As New LogOn(display, reader)
+  logon.Run()
+  AssertEquals("Please Enter Card", display.LastDisplayedText)
+  AssertEquals("MainMenu",logon.GetNextTransaction().GetType.Name)
+  End Sub
+End Class
+```
+
+`<TestFixture()>` và `<Test()>` lần lượt là các thuộc tính đánh dấu `LogonTest` là lớp kiểm thử và `TestRunValid` là phương thức kiểm thử
+
+### Frameworks xUnit khác
+
+Có nhiều cổng xUnit sang nhiều ngôn ngữ và nền tảng khác nhau. Nói chung, chúng hỗ trợ đặc tả, nhóm và chạy kiểm thử đơn vị. Nếu bạn cần tìm cổng xUnit cho nền tảng hoặc ngôn ngữ của mình, hãy truy cập www.xprogramming.com và xem phần Tải xuống. Trang web này được điều hành bởi Ron Jeffries và trên thực tế nó là kho lưu trữ cho tất cả các cổng xUnit.
+
+
