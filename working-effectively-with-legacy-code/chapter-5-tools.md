@@ -181,9 +181,9 @@ Cả CppUnit và CppUnitLite đều phù hợp cho kiểm thử khai thác. Các
 
 ### NUnit
 
-NUnit là một khung thử nghiệm cho các ngôn ngữ .NET. Bạn có thể viết bài kiểm tra mã C#, mã VB.NET hoặc bất kỳ ngôn ngữ nào khác chạy trên nền tảng .NET. NUnit hoạt động rất gần với JUnit. Sự khác biệt đáng kể là nó sử dụng các thuộc tính để đánh dấu các phương pháp kiểm tra và các lớp kiểm tra. Cú pháp của các thuộc tính phụ thuộc vào ngôn ngữ .NET mà các bài kiểm tra được viết.
+NUnit là một framework kiểm thử cho các ngôn ngữ .NET. Bạn có thể viết kiểm thử code C#, code VB.NET hoặc bất kỳ ngôn ngữ nào khác chạy trên nền tảng .NET. NUnit hoạt động rất gần với JUnit. Sự khác biệt đáng kể là nó sử dụng các thuộc tính để đánh dấu các phương pháp kiểm tra và các lớp kiểm tra. Cú pháp của các thuộc tính phụ thuộc vào ngôn ngữ .NET mà các kiểm thử được viết.
 
-Đây là bài kiểm tra NUnit được viết bằng VB.NET:
+Đây là kiểm thử NUnit được viết bằng VB.NET:
 
 ```cpp
 Imports NUnit.Framework
@@ -207,4 +207,24 @@ End Class
 
 Có nhiều cổng xUnit sang nhiều ngôn ngữ và nền tảng khác nhau. Nói chung, chúng hỗ trợ đặc tả, nhóm và chạy kiểm thử đơn vị. Nếu bạn cần tìm cổng xUnit cho nền tảng hoặc ngôn ngữ của mình, hãy truy cập www.xprogramming.com và xem phần Tải xuống. Trang web này được điều hành bởi Ron Jeffries và trên thực tế nó là kho lưu trữ cho tất cả các cổng xUnit.
 
+## Kiểm thử khai thác nói chung
 
+Các framework xUnit mà tôi đã mô tả ở phần trước được thiết kế để sử dụng cho thử nghiệm đơn vị. Chúng có thể được sử dụng để kiểm thử nhiều lớp cùng một lúc, nhưng loại công việc đó đúng hơn là lĩnh vực của FIT và Fitnesse.
+
+### Framework cho kiểm thử tích hợp (FIT)
+
+FIT là một framework kiểm thử ngắn gọn và tinh tế được phát triển bởi Ward Cunningham. Ý tưởng đằng sau FIT rất đơn giản và mạnh mẽ. Nếu bạn có thể viết tài liệu về hệ thống của mình và nhúng các bảng mô tả đầu vào và đầu ra cho hệ thống của mình, đồng thời nếu những tài liệu đó có thể được lưu dưới dạng HTML thì framework FIT có thể chạy chúng dưới dạng kiểm thử.
+
+FIT chấp nhận HTML, chạy kiểm thử được xác định trong các bảng HTML trong đó và tạo đầu ra HTML. Đầu ra trông giống như đầu vào và tất cả văn bản và bảng đều được giữ nguyên. Tuy nhiên, các ô trong bảng có màu xanh lá cây để biểu thị các giá trị đã vượt qua kiểm thử và màu đỏ để biểu thị các giá trị khiến kiểm thử không thành công. Bạn cũng có thể sử dụng các tùy chọn để đặt thông tin tóm tắt kiểm thử trong HTML kết quả.
+
+Điều duy nhất bạn phải làm để thực hiện công việc này là tùy chỉnh một số code xử lý bảng để nó biết cách chạy các đoạn code của bạn và truy xuất kết quả từ chúng. Nói chung, việc này khá dễ dàng vì framework công tác này cung cấp code để hỗ trợ một số loại bảng khác nhau.
+
+Một trong những điều rất mạnh mẽ về FIT là khả năng thúc đẩy giao tiếp giữa những người viết phần mềm và những người cần chỉ định những gì nó nên làm. Những người chỉ định có thể viết tài liệu và nhúng các kiểm thử thực tế vào đó. Các kiểm thử sẽ chạy nhưng chúng sẽ không vượt qua. Các nhà phát triển sau này có thể thêm các tính năng vào và các kiểm thử sẽ vượt qua. Cả người dùng và nhà phát triển đều có thể có cái nhìn chung và cập nhật về khả năng của hệ thống.
+
+Còn nhiều điều về FIT hơn những gì tôi có thể mô tả ở đây. Có thêm thông tin về FIT tại http://fit.c2.com.
+
+### Finesse
+
+Fitnesse về cơ bản là FIT được lưu trữ trên wiki. Hầu hết nó được phát triển bởi Robert Martin và Micah Martin. Tôi đã nghiên cứu một chút về nó nhưng đã bỏ học để tập trung vào cuốn sách này. Tôi mong sớm được quay lại làm việc với nó.
+
+Fitnesse hỗ trợ các trang web phân cấp xác định các kiểm thử FIT. Các trang của bảng kiểm thử có thể được chạy riêng lẻ hoặc theo bộ và vô số tùy chọn khác nhau giúp việc cộng tác trong nhóm trở nên dễ dàng. Fitnesse có sẵn tại http://www.fitnesse.org. Giống như tất cả các công cụ kiểm tra khác được mô tả trong chương này, nó miễn phí và được cộng đồng các nhà phát triển hỗ trợ.
