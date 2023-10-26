@@ -59,7 +59,10 @@ Chương 5 - Công cụ
 [Chương 23 - Làm thế nào để biết rằng tôi không làm phá vỡ bất cứ thứ gì?](./chapter-23-how-do-i-know-that-im-not-breaking-anything.html)
 
 [Chương 24 - Chúng ta cảm thấy choáng ngợp. Có vẻ mọi thứ sẽ không thể cải thiện được.](./chapter-24-we-feel-overwhelmed-it-isnt-going-to-get-any-better.html)
+
 ## Phần 3 - Phá vỡ sự phụ thuộc
+
+[Chương 25 - Các kỹ thuật phá bỏ sự phụ thuộc.](./chapter-25-dependency-breaking-techniques.html)
 
 <!-- legacy system = hệ thống kế thừa -->
 <!-- green-field system = hệ thống hoàn toàn mới -->
