@@ -179,3 +179,91 @@ public:
 ```
 
 Bạn có thể nhìn và nói, "Hmmm, có vẻ như chúng ta sẽ rơi vào tình thế tương tự. Chúng ta đang chấp nhận một tham chiếu đến `GDIBrush` và chúng ta không thể khởi tạo một trong những tham chiếu đó trong kiểm thử khai thác của mình. Điều này có ích gì cho chúng ta?" Chờ đã, chúng ta sẽ có kết quả ở một nơi khác.
+
+Sau khi tạo xong hàm khởi tạo, chúng ta có thể thêm một phương thức khác vào lớp, một phương thức sẽ thực hiện công việc đã được thực hiện trong phương thức `draw()`. Chúng ta cũng có thể gọi nó là `draw()`
+
+```cpp
+class Renderer
+{
+private:
+  GDIBrush *brush;
+  vector<point>& renderingRoots;
+  ColorMatrix& colors;
+  vector<point>& selection;
+
+public:
+  Renderer(GDIBrush *brush, vector<point>& renderingRoots, ColorMatrix& colors, vector<point>& selection)
+  : brush(brush), renderingRoots(renderingRoots), colors(colors), selection(selection)
+  {}
+
+	void draw();
+}
+```
+
+Bây giờ chúng ta thêm phần thân của phương thức `draw()` vào `Renderer`. Chúng ta sao chép nội dung của phương thức `draw()` cũ sang phương thức mới và _Dựa vào Trình biên dịch (315)_
+
+```cpp
+void Renderer::draw()
+{
+	for(vector<points>::iterator it = renderingRoots.begin(); it != renderingRoots.end(); ++it) {
+		point p = *it;
+		...
+		drawPoint(p.x, p.y, colors[n]);
+	}
+	...
+}
+```
+
+Nếu `draw()` trong `Renderer` có bất kỳ tham chiếu nào đến các biến thể hiện hoặc phương thức của `GDIBrush`, quá trình biên dịch của chúng ta sẽ thất bại. Để làm cho nó thành công, chúng ta có thể tạo `getters` cho các biến và tạo các phương thức mà nó phụ thuộc vào thành public. Trong trường hợp này, chỉ có một phương thức phụ thuộc duy nhất, một phương thức privated có tên `drawPoint`. Sau khi công khai nó trên `GDIBrush`, chúng ta có thể truy cập nó từ một tham chiếu đến lớp `Renderer` và biên dịch code.
+
+Bây giờ chúng ta có thể ủy quyền phương thức `draw` của `GDIBrush` cho `Renderer`
+
+```cpp
+void GDIBrush::draw(vector<point>& renderingRoots, ColorMatrix &colors, vector<point>& selection)
+{
+	Renderer renderer(this, renderingRoots, colors, selection);
+	renderer.draw();
+}
+```
+
+Bây giờ quay lại phần phụ thuộc GDIBrush. Nếu không thể khởi tạo GDIBrush trong khai thác thử nghiệm, chúng tôi có thể sử dụng Giao diện trích xuất để loại bỏ hoàn toàn sự phụ thuộc vào GDIBrush. Phần trên Extract Interface (362) có chi tiết, nhưng tóm tắt lại, chúng tôi tạo một lớp giao diện trống và yêu cầu GDIBrush triển khai nó. Trong trường hợp này, chúng ta có thể gọi nó là PointRenderer vì drawPoint là phương thức trên GDIBrush mà chúng ta thực sự cần quyền truy cập trong Trình kết xuất. Sau đó, chúng tôi thay đổi tham chiếu mà Trình kết xuất giữ từ GDIBrush sang PointRenderer, biên dịch và để trình biên dịch cho chúng tôi biết những phương thức nào phải có trên giao diện. Đây là mã trông như thế nào ở cuối:
+
+```cpp
+class PointRenderer
+{
+	public:
+		virtual void drawPoint(int x, int y, COLOR color) = 0;
+};
+
+class GDIBrush : public PointRenderer
+{
+	public:
+		void drawPoint(int x, int y, COLOR color);
+	...
+}
+class Renderer
+{
+	private:
+		PointRender *pointRenderer;
+		vector<point>& renderingRoots;
+		ColorMatrix& colors;
+		vector<point>& selection;
+
+	public:
+		Renderer(PointRenderer *renderer, vector<point>& renderingRoots, ColorMatrix& colors, vector<point>& selection)
+		: pointRenderer(pointRenderer), renderingRoots(renderingRoots) colors(colors), selection(selection)
+		{}
+
+	void draw();
+};
+
+void Renderer::draw()
+{
+	for(vector<points>::iterator it = renderingRoots.begin(); it != renderingRoots.end(); ++it) {
+		point p = *it;
+		...
+		pointRenderer->drawPoint(p.x,p.y,colors[n]);
+	}
+	...
+}
+```
