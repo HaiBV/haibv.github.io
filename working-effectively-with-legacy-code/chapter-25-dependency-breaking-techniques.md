@@ -369,3 +369,72 @@ Sau đó, bạn nên nhanh chóng kiểm thử lớp đó để có thể loại
 5. Xây dựng để tìm các phương thức còn thiếu.
 
 6. Thêm định nghĩa phương thức vào tệp nguồn kiểm thử cho đến khi bạn có bản dựng hoàn chỉnh.
+
+## Đóng gói tham khảo toàn cục
+
+Khi bạn đang cố gắng kiểm thử code có vấn đề với sự phụ thuộc trên toàn cục, về cơ bản bạn có ba lựa chọn. Bạn có thể cố gắng làm cho các thành phần toàn cục hoạt động khác nhau khi kiểm thử, bạn có thể liên kết với các thành phần toàn cục khác nhau hoặc bạn có thể đóng gói các thành phần toàn cục để có thể tách rời mọi thứ ra hơn nữa. Tùy chọn cuối cùng được gọi là _Đóng gói tham khảo toàn cục_. Đây là một ví dụ trong C++:
+
+```cpp
+bool AGG230_activeframe[AGG230_SIZE];
+bool AGG230_suspendedframe[AGG230_SIZE];
+
+void AGGController::suspend_frame()
+{
+	frame_copy(AGG230_suspendedframe,
+	AGG230_activeframe);
+	clear(AGG230_activeframe);
+	flush_frame_buffers();
+}
+
+void AGGController::flush_frame_buffers()
+{
+	for (int n = 0; n < AGG230_SIZE; ++n) {
+		AGG230_activeframe[n] = false;
+		AGG230_suspendedframe[n] = false;
+	}
+}
+```
+
+Trong ví dụ này, chúng ta có một số đoạn code hoạt động với một số mảng toàn cục. Phương thức `Suspend_frame` cần truy cập vào các khung đang hoạt động và bị treo. Thoạt nhìn, có vẻ như chúng ta có thể tạo các khung thành viên của lớp `AGGController`, nhưng một số lớp khác (không hiển thị) lại sử dụng khung. Chúng ta có thể làm gì?
+
+Một ý nghĩ ngay lập tức là chúng ta có thể truyền chúng vào dưới dạng tham số cho phương thức `Suspend_frame` bằng cách sử dụng _Tham số hóa Phương thức (383)_, nhưng sau khi thực hiện điều đó, chúng ta sẽ phải chuyển chúng dưới dạng tham số cho bất kỳ phương thức nào mà lệnh gọi `Susp_frame` sử dụng chúng làm toàn cục. Trong trường hợp này, `Flush_frame_buffer` là kẻ tội đồ.
+
+Tùy chọn tiếp theo là chuyển cả hai khung làm tham số hàm tạo cho `AGGController`. Chúng ta có thể làm điều đó, nhưng cũng đáng để xem xét những nơi khác mà chúng được sử dụng. Nếu có vẻ như bất cứ khi nào chúng ta sử dụng cái này thì chúng ta cũng đang sử dụng cái kia, chúng ta có thể gộp chúng lại với nhau
+
+> Nếu một số biến toàn cục luôn được sử dụng hoặc được sửa đổi gần nhau thì chúng thuộc cùng một lớp.
+
+Cách tốt nhất để xử lý tình huống này là xem xét dữ liệu, các khung đang hoạt động và bị treo, đồng thời suy nghĩ xem liệu chúng ta có thể nghĩ ra một cái tên hay cho một lớp "thông minh" mới có thể chứa cả hai khung đó hay không. Đôi khi điều này hơi phức tạp một chút. Chúng ta phải suy nghĩ về ý nghĩa của dữ liệu đó trong thiết kế và sau đó xem xét lý do tại sao nó lại ở đó. Nếu chúng ta tạo một lớp mới, cuối cùng chúng ta sẽ chuyển các phương thức vào đó và rất có thể mã cho các phương thức đó đã tồn tại ở một nơi khác nơi dữ liệu được sử dụng.
+
+> Khi đặt tên một lớp, hãy nghĩ về các phương thức cuối cùng sẽ tồn tại trên đó. Cái tên phải hay nhưng không cần phải hoàn hảo. Hãy nhớ rằng bạn luôn có thể đổi tên lớp sau này.
+
+Trong ví dụ trước, tôi mong đợi rằng, theo thời gian, các phương thức `frame_copy` và `clear` có thể chuyển sang lớp mới mà chúng ta sắp tạo. Có công việc nào chung giữa khung treo và khung hoạt động không? Có vẻ như có, trong trường hợp này. Hàm `Suspending_frame` trên `AGGController` có thể chuyển sang một lớp mới miễn là nó chứa cả mảng `posted_frame` và mảng `active_frame`. Chúng ta có thể gọi lớp học mới này là gì? Chúng ta chỉ có thể gọi nó là `Frame` và nói rằng mỗi khung có một bộ đệm hoạt động và một bộ đệm bị treo. Điều này đòi hỏi chúng ta phải thay đổi khái niệm và đổi tên các biến một chút, nhưng đổi lại những gì chúng ta sẽ nhận được là một lớp thông minh hơn ẩn chứa nhiều chi tiết hơn.
+
+> Tên lớp bạn tìm thấy có thể đã được sử dụng. Nếu vậy, hãy cân nhắc xem bạn có thể đổi tên bất cứ thứ gì đang sử dụng tên đó hay không.
+
+Đây là cách chúng tôi thực hiện, từng bước một.
+
+Đầu tiên, chúng ta tạo một lớp trông như thế này:
+
+```cpp
+class Frame
+{
+public:
+	// declare AGG230_SIZE as a constant
+	enum { AGG230_SIZE = 256 };
+	bool AGG230_activeframe[AGG230_SIZE];
+	bool AGG230_suspendedframe[AGG230_SIZE];
+}
+```
+
+Chúng ta đã cố tình giữ nguyên tên của dữ liệu chỉ để giúp bước tiếp theo dễ dàng hơn. Tiếp theo, chúng ta khai báo một thể hiện toàn cục của lớp `Frame`:
+
+```cpp
+Frame frameForAGG230;
+```
+
+Tiếp theo, chúng tôi nhận xét các khai báo ban đầu của dữ liệu và cố gắng xây dựng:
+
+```cpp
+// bool AGG230_activeframe[AGG230_SIZE];
+// bool AGG230_suspendsframe[AGG230_SIZE];
+```
