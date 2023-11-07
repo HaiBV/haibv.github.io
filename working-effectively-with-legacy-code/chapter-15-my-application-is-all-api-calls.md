@@ -4,7 +4,7 @@ layout: default
 
 # Chương 15 - Toàn bộ ứng dụng của tôi chỉ gồm các lệnh gọi API
 
-Xây dựng, mua hoặc mượn. Đó là những lựa chọn mà tất cả chúng ta phải thực hiện khi phát triển phần mềm. Rất nhiều lần khi đang làm việc với một ứng dụng, chúng ta nghi ngờ rằng mình có thể tiết kiệm thời gian và công sức bằng cách mua một số thư viện của nhà cung cấp, sử dụng một số nguồn mở hoặc thậm chí chỉ sử dụng những đoạn code đáng kể từ các thư viện đi kèm với nền tảng của chúng ta (J2EE, .NET, v.v.). Có rất nhiều thứ cần cân nhắc khi chọn tích hợp code chúng ta không thể thay đổi. Chúng ta phải biết nó ổn định đến mức nào, có đủ và dễ sử dụng hay không. Và cuối cùng khi quyết định sử dụng code của bên thứ 3, chúng ta thường gặp phải một vấn đề khác. Đến cuối cùng các ứng dụng trông giống như chẳng có gì ngoài lời gọi lặp đi lặp lại đến thư viện của bên thứ 3. Làm cách nào để chúng ta thực hiện những thay đổi trong code như vậy?
+Xây dựng, mua hoặc mượn. Đó là những lựa chọn mà tất cả chúng ta phải thực hiện khi phát triển phần mềm. Rất nhiều lần khi đang làm việc với một ứng dụng, chúng ta nghi ngờ rằng mình có thể tiết kiệm thời gian và công sức bằng cách mua một số thư viện của nhà cung cấp, sử dụng một số nguồn mở hoặc thậm chí chỉ sử dụng những đoạn code đáng kể từ các thư viện đi kèm với nền tảng của chúng ta (J2EE, .NET, v.v.). Có rất nhiều thứ cần cân nhắc khi chọn tích hợp code chúng ta không thể thay đổi. Chúng ta phải biết nó ổn định đến mức nào, có đủ và dễ sử dụng hay không. Và cuối cùng khi quyết định sử dụng code của bên thứ 3, chúng ta thường gặp phải một vấn đề khác. Đến cuối cùng các ứng dụng trông giống như chẳng có gì ngoài lệnh gọi lặp đi lặp lại đến thư viện của bên thứ 3. Làm cách nào để chúng ta thực hiện những thay đổi trong code như vậy?
 
 Sự cám dỗ ngay lập tức nói rằng chúng ta không thực sự cần kiểm thử. Suy cho cùng, chúng ta không thực sự làm được điều gì đáng kể; chúng ta chỉ gọi một phương thức ở đây và ở kia và code của chúng ta rất đơn giản. Nó thực sự đơn giản. Làm sao có thể sai được?
 
@@ -212,7 +212,7 @@ Chúng ta có thể sử dụng kỹ thuật này với code gửi thư theo dan
 	...
 ```
 
-Nếu muốn phá vỡ sự phụ thuộc vào lớp `Transport`, chúng ta có thể tạo một trình bao bọc cho nó, nhưng trong code này, chúng ta không tạo đối tượng `Transport`; chúng ta lấy nó từ lớp `Session`. Chúng ta có thể tạo trình bao bọc cho `Session` không? Không hẳn - `Session` là lớp `final`. Trong Java, các lớp `final` không thể được phân lớp (cằn nhằn, càu nhàu).
+Nếu muốn phá bỏ sự phụ thuộc vào lớp `Transport`, chúng ta có thể tạo một trình bao bọc cho nó, nhưng trong code này, chúng ta không tạo đối tượng `Transport`; chúng ta lấy nó từ lớp `Session`. Chúng ta có thể tạo trình bao bọc cho `Session` không? Không hẳn - `Session` là lớp `final`. Trong Java, các lớp `final` không thể được phân lớp (cằn nhằn, càu nhàu).
 
 Code gửi thư theo danh sách này thực sự là một ứng cử viên kém cho việc gỡ API vì chúng tương đối phức tạp. Nhưng nếu chúng ta không có sẵn bất kỳ công cụ tái cấu trúc nào thì đó có thể là cách an toàn nhất.
 

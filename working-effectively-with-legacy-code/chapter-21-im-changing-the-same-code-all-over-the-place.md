@@ -131,21 +131,21 @@ void writeField(OutputStream outputStream, String field) {
 ```
 
 > Chọn vị trí bắt đầu
-> 
+>
 > Khi thực hiện một loạt các phép tái cấu trúc để loại bỏ trùng lặp, chúng ta có thể có được các cấu trúc khác nhau, tùy thuộc vào nơi chúng ta bắt đầu. Ví dụ, hãy tưởng tượng rằng chúng ta có một phương thức như thế này:
 >
 > void c() { a(); a(); b(); a(); b(); b(); }
-> 
+>
 > Nó có thể được chia nhỏ như thế này:
-> 
+>
 > void c() { aa(); b(); a(); bb(); }
-> 
+>
 > hoặc như thế này:
-> 
+>
 > void c() { a(); ab(); ab(); b(); }
-> 
+>
 > Vậy chúng ta nên chọn cái nào? Sự thật là nó không tạo ra nhiều khác biệt về mặt cấu trúc. Cả hai đều tốt hơn những gì chúng ta đang có và có thể tiếp tục cấu trúc lại chúng thành nhóm khác nếu cần. Đây không phải là quyết định cuối cùng. Thay vào đó, tôi quyết định sẽ chú ý đến những cái tên được sử dụng. Nếu có thể tìm thấy tên cho hai lệnh gọi lặp lại tới a(), thì trong ngữ cảnh này, điều đó có ý nghĩa hơn là tên cho lệnh gọi đến a() theo sau là lệnh gọi đến b(), và tôi sẽ sử dụng tên đó.
-> 
+>
 > Một phương pháp phỏng đoán khác mà tôi sử dụng là bắt đầu từ việc nhỏ. Nếu tôi có thể loại bỏ những phần trùng lặp nhỏ, tôi sẽ làm những phần đó trước vì nó thường làm cho bức tranh lớn rõ ràng hơn.
 
 Khi có phương thức đó, chúng ta có thể thay thế từng cặp ghi chuỗi/null, chạy kiểm thử định kỳ để đảm bảo rằng chúng ta không làm hỏng bất kỳ điều gì. Đây là phương thức ghi của `loginCommand` sau khi thay đổi:
@@ -229,7 +229,7 @@ private void writeBody(OutputStream outputStream) throws Exception {
 ```
 
 > Khi hai phương thức trông gần giống nhau, hãy trích xuất những điểm khác biệt so với các phương thức khác.
-> 
+>
 > Khi bạn làm điều đó, bạn thường có thể làm cho chúng giống hệt nhau và loại bỏ một cái.
 
 Phương thức `write` của cả hai lớp trông giống hệt nhau. Chúng ta có thể chuyển phương thức ghi lên lớp `Command` không? Hiện tại thì chưa. Mặc dù cả hai trông giống nhau nhưng chúng sử dụng dữ liệu từ các lớp của chúng: `header`, `footer` và `commandChar`. Nếu chúng ta cố gắng tạo một phương thức ghi duy nhất, nó sẽ phải gọi các phương thức từ các lớp con để lấy dữ liệu đó. Chúng ta hãy xem các biến trong `AddEmployeeCmd` và `loginCommand`:
@@ -315,7 +315,7 @@ public class Command {
   protected static final int CMD_BYTE_LENGTH = 1;
   protected abstract char [] getCommandChar();
   protected abstract void writeBody(OutputStream outputStream);
-  
+
   protected void writeField(OutputStream outputStream, String field) {
     outputStream.write(field.getBytes());
     outputStream.write(0x00);
@@ -458,7 +458,7 @@ int getBodySize() {
   for(Iterator it = fields.iterator(); it.hasNext(); ) {
     String field = (String)it.next();
     result += getFieldSize(field);
-  } 
+  }
   return result;
 }
 ```
@@ -506,10 +506,10 @@ public class Command {
   }
 
   private int getSize() {
-  return header.length + 
-    SIZE_LENGTH + 
-    CMD_BYTE_LENGTH + 
-    footer.length + 
+  return header.length +
+    SIZE_LENGTH +
+    CMD_BYTE_LENGTH +
+    footer.length +
     getBodySize();
   }
 
@@ -573,7 +573,7 @@ Chúng ta có thể loại bỏ các lớp con và thêm một phương thức t
   Command.send(stream, 0x01, arguments);
 ```
 
-Nhưng sẽ phát sinh rất nhiều công việc khi thực hiện gọi. Một điều chắc chắn là: Chúng ta phải truyền vào hai ký tự command khác nhau và chúng ta không muốn nơi thực hiện lời gọi phải để ý đến chúng.
+Nhưng sẽ phát sinh rất nhiều công việc khi thực hiện gọi. Một điều chắc chắn là: Chúng ta phải truyền vào hai ký tự command khác nhau và chúng ta không muốn nơi thực hiện lệnh gọi phải để ý đến chúng.
 
 Thay vào đó, chúng ta có thể thêm một phương thức tĩnh khác cho mỗi `command` mà chúng ta muốn gọi:
 
@@ -589,9 +589,9 @@ Có lẽ tốt hơn hết là chúng ta nên để các lớp như hiện tại.
 Chúng ta làm xong chưa? Chưa, vẫn có một việc nhỏ mà chúng ta cần phải làm ngay bây giờ, một việc mà lẽ ra chúng ta nên làm sớm hơn. Chúng ta có thể đổi tên `AddEmployeeCmd` thành `AddEmployeeCommand`. Điều đó sẽ làm cho tên của hai lớp con nhất quán. Chúng ta ít có khả năng mắc sai lầm khi sử dụng tên một cách nhất quán.
 
 > Viết tắt
-> 
+>
 > Chữ viết tắt trong tên lớp và phương thức thường có vấn đề. Chúng có thể ổn khi được sử dụng một cách nhất quán, nhưng nói chung, tôi không thích sử dụng chúng.
-> 
+>
 > Một nhóm mà tôi làm việc cùng cố gắng sử dụng từ `manager` và `management` trong hầu hết mọi tên lớp trong hệ thống. Cách đặt tên đó không giúp được gì nhiều, nhưng điều khiến nó tệ hơn là họ viết tắt `manager` và `management` theo nhiều cách khác nhau. Ví dụ: một số lớp được đặt tên là `XXXXMgr` và các lớp khác được đặt tên là `XXXXMngr`. Khi muốn sử dụng một lớp, bạn thực sự phải dành hầu hết thời gian để tra cứu xem liệu tên bạn có đúng hay không. Hơn 50% thời gian, tôi đã sai khi cố đoán hậu tố nào được sử dụng cho một lớp cụ thể.
 
 Vậy là, chúng ta đã loại bỏ tất cả trùng lặp. Mọi thứ trở nên tốt hơn hay tồi tệ hơn? Hãy xét thử một vài tình huống. Điều gì xảy ra khi chúng ta cần thêm một `command` mới? Chà, chúng ta chỉ cần phân lớp `Command` và tạo ra nó. Hãy so sánh điều đó với những gì chúng ta sẽ phải làm với thiết kế ban đầu. Chúng ta có thể tạo một `command` mới, sau đó cắt/sao chép và dán code từ một `command` khác, thay đổi tất cả các biến. Nhưng nếu làm vậy, chúng ta đang tạo ra nhiều trùng lặp hơn và khiến mọi thứ trở nên tồi tệ hơn. Ngoài ra, nó dễ sinh ra lỗi. Chúng ta có thể làm xáo trộn việc sử dụng các biến và gây nhầm lẫn. Không, chắc chắn sẽ mất nhiều thời gian hơn một chút để thực hiện việc này trước khi chúng ta loại bỏ trùng lặp.
@@ -659,9 +659,9 @@ Bây giờ chúng ta có một nút để viết `header` và một nút khác �
 Loại bỏ trùng lặp là một cách mạnh mẽ để chắt lọc một thiết kế. Nó không chỉ làm cho thiết kế linh hoạt hơn mà còn giúp thay đổi nhanh hơn và dễ dàng hơn.
 
 > Nguyên tắc Đóng/Mở
-> 
+>
 > Nguyên tắc Đóng/Mở là nguyên tắc được đưa ra bởi Bertrand Meyer. Ý tưởng đằng sau nó là code phải được mở để mở rộng nhưng không được phép sửa đổi. Điều đó nghĩa là gì? Điều đó có nghĩa là khi chúng ta có thiết kế tốt, chúng ta không cần phải thay đổi code nhiều để thêm các tính năng mới.
-> 
+>
 > Đoạn code chúng ta thu được trong chương này có thuộc tính này không? Có. Chúng ta vừa xem xét một số kịch bản thay đổi. Trong nhiều trường hợp, rất ít phương thức phải thay đổi. Trong một số trường hợp, chúng ta có thể thêm tính năng chỉ bằng cách phân lớp con. Tất nhiên, sau khi phân lớp con, điều quan trọng là phải loại bỏ sự trùng lặp (xem _Lập trình theo sự khác biệt (101)_ để biết thêm thông tin về cách thêm các tính năng bằng cách phân lớp con và tích hợp chúng bằng cách tái cấu trúc).
-> 
+>
 > Khi loại bỏ trùng lặp, code của chúng ta thường bắt đầu tuân thủ _Nguyên tắc Đóng/Mở_ một cách tự nhiên.

@@ -122,7 +122,7 @@ Chúng ta vẫn còn một biến tạm thời mới ở đây, nhưng code đã
 3. Xác định những biến cục bộ cần từ phương thức nguồn và biến chúng thành tham số cho phương thức mới
 4. Xác định xem phương thức vừa tạo có cần trả về giá trị cho phương thức nguồn hay không. Nếu có, hãy thay đổi lệnh gọi để giá trị trả về của nó được gán cho một biến.
 5. Phát triển phương thức ươm mầm bằng _phương pháp phát triển dựa trên thử nghiệm - TDD (88)_.
-6. Xóa comment trong phương thức nguồn để kích hoạt lời gọi.
+6. Xóa comment trong phương thức nguồn để kích hoạt lệnh gọi.
 
 Tôi khuyên bạn nên sử dụng _Phương thức Ươm Mầm_ bất cứ khi nào bạn thấy code đang thêm là một phần công việc riêng biệt hoặc bạn chưa thể thực hiện các kiểm thử xung quanh một phương thức. Tốt hơn là thêm code nội tuyến.
 
@@ -365,7 +365,7 @@ Dưới đây là các bước cho phiên bản đầu tiên của _Bọc phươ
 
 1. Xác định phương thức bạn cần thay đổi.
 2. Nếu thay đổi có thể được hình thành dưới dạng một chuỗi câu lệnh ở một nơi, hãy đổi tên phương thức, sau đó tạo một phương thức mới có cùng tên và chữ ký như phương thức cũ. Hãy nhớ _Lưu giữ Chữ ký (312)_ khi bạn thực hiện việc này.
-3. Thực hiện lời gọi đến phương thức cũ trong phương thức mới
+3. Thực hiện lệnh gọi đến phương thức cũ trong phương thức mới
 4. Phát triển phương thức cho tính năng mới, kiểm thử trước (xem _phát triển dựa trên thử nghiệm (88)_) và gọi nó từ phương thức mới
 
 Trong phiên bản thứ hai, khi chúng ta không quan tâm đến việc sử dụng cùng tên với phương thức cũ, các bước sẽ như sau:
@@ -376,7 +376,7 @@ Trong phiên bản thứ hai, khi chúng ta không quan tâm đến việc sử 
 
 ### Ưu điểm và Nhược điểm
 
-_Bọc phương thức_ là một cách hay để đưa chức năng mới đã được kiểm thử vào ứng dụng khi chúng ta không thể dễ dàng viết kiểm thử cho code lời gọi. _Ươm mầm phương thức_ và _Ươm mầm lớp_ thêm code vào các phương thức hiện có và làm cho chúng dài hơn ít nhất một dòng, nhưng _Bọc phương thức_ không làm tăng kích thước của các phương thức hiện có.
+_Bọc phương thức_ là một cách hay để đưa chức năng mới đã được kiểm thử vào ứng dụng khi chúng ta không thể dễ dàng viết kiểm thử cho code lệnh gọi. _Ươm mầm phương thức_ và _Ươm mầm lớp_ thêm code vào các phương thức hiện có và làm cho chúng dài hơn ít nhất một dòng, nhưng _Bọc phương thức_ không làm tăng kích thước của các phương thức hiện có.
 
 Một ưu điểm khác của _Bọc phương thức_ là nó làm cho chức năng mới trở nên độc lập với chức năng hiện có một cách rõ ràng. Khi thực hiện bọc, bạn không đan xen code cho mục đích này với code cho mục đích khác.
 
@@ -480,7 +480,7 @@ Kỹ thuật này được gọi là `decorator pattern`. Chúng ta tạo các �
 >
 > Decorator là một pattern tốt nhưng nên sử dụng nó một cách tiết kiệm. Điều hướng qua code chứa các decorator lồng vào decorator khác giống như bóc lớp vỏ của một củ hành. Đó là công việc cần thiết nhưng lại khiến bạn chảy nước mắt.
 
-Đây là một cách hay để thêm chức năng khi bạn hiện có nhiều nơi gọi phương thức như `pay()`. Tuy nhiên, có một cách bọc khác không giống với decorator. Hãy xem xét trường hợp chúng ta cần ghi lại các lời gọi tới `pay()` chỉ ở một nơi. Thay vì gói gọn chức năng như một decorator, chúng ta có thể đặt nó vào một lớp khác nhận tham số là `employee`, thực hiện thanh toán và sau đó ghi nhật ký thông tin về `employee` đó.
+Đây là một cách hay để thêm chức năng khi bạn hiện có nhiều nơi gọi phương thức như `pay()`. Tuy nhiên, có một cách bọc khác không giống với decorator. Hãy xem xét trường hợp chúng ta cần ghi lại các lệnh gọi tới `pay()` chỉ ở một nơi. Thay vì gói gọn chức năng như một decorator, chúng ta có thể đặt nó vào một lớp khác nhận tham số là `employee`, thực hiện thanh toán và sau đó ghi nhật ký thông tin về `employee` đó.
 
 Đây là một lớp nhỏ thực hiện điều này:
 

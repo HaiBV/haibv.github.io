@@ -461,7 +461,7 @@ Khi chúng ta loại bỏ các phần trùng lặp nhỏ, chúng ta thường th
 
 > Tác động và tính đóng gói
 
-> Một trong những lợi ích thường được đề cập của hướng đối tượng là tính đóng gói. Có nhiều lần, khi tôi hướng dẫn cho mọi người các kỹ thuật phá vỡ sự phụ thuộc trong cuốn sách này, họ chỉ ra rằng nhiều kỹ thuật trong số đó phá vỡ tính đóng gói. Đúng, phần nhiều trong số chúng phá vỡ tính đóng gói.
+> Một trong những lợi ích thường được đề cập của hướng đối tượng là tính đóng gói. Có nhiều lần, khi tôi hướng dẫn cho mọi người các kỹ thuật phá bỏ sự phụ thuộc trong cuốn sách này, họ chỉ ra rằng nhiều kỹ thuật trong số đó phá vỡ tính đóng gói. Đúng, phần nhiều trong số chúng phá vỡ tính đóng gói.
 
 > Tính đóng gói quan trọng, nhưng lý do tại sao nó quan trọng còn quan trọng _hơn_. Tính đóng gói giúp chúng ta suy luận về code của chúng ta. Trong code được đóng gói tốt, sẽ có ít đường dẫn hơn để bạn cố gắng hiểu nó. Chẳng hạn, nếu chúng ta thêm một tham số khác vào hàm tạo để ngắt một phụ thuộc như chúng ta làm trong quá trình tái cấu trúc _Tham số hóa hàm tạo_ (379), thì chúng ta có thêm một đường dẫn để đi theo khi suy luận về các tác động. Phá vỡ tính đóng gói có thể làm cho việc lập luận về code của chúng ta trở nên khó khăn hơn, nhưng nó có thể dễ dàng hơn nếu chúng ta kết thúc bằng các kiểm thử giải thích tốt sau đó. Khi chúng ta có các trường hợp kiểm thử cho một lớp, chúng ta có thể sử dụng chúng để suy luận trực tiếp hơn về code của chúng ta. Chúng ta cũng có thể viết các kiểm thử mới cho bất kỳ câu hỏi nào mà chúng ta có thể có về hành vi của code.
 

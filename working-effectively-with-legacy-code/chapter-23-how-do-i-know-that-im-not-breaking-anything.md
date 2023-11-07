@@ -8,7 +8,7 @@ Code là một loại vật liệu xây dựng kỳ lạ. Hầu hết các vật
 
 Điều này đặt một gánh nặng lớn lên chúng ta với tư cách là lập trình viên. Chúng ta không chỉ là tác nhân chính gây ra lỗi trong phần mềm mà còn khá dễ để gây ra điều đó. Làm thế nào để dễ dàng thay đổi code? Về mặt cơ học, khá đơn giản. Bất kỳ ai cũng có thể mở trình soạn thảo văn bản và phun ra những thứ vô nghĩa và phức tạp. Nhập một bài thơ. Một số trong số chúng sẽ biên dịch (hãy truy cập www.ioccc.org và xem cuộc thi Obfuscate C để biết chi tiết). Bỏ qua tính hài hước, thật đáng ngạc nhiên khi việc phá vỡ phần mềm lại dễ dàng như thế. Bạn đã bao giờ lần theo một lỗi bí ẩn rồi phát hiện ra có một ký tự đi lạc nào đó bạn vô tình nhập vào? Một số ký tự đã được nhập khi bìa sách rơi xuống lúc bạn chuyển nó qua bàn phím của mình? Code là vật liệu khá dễ vỡ.
 
-Trong chương này, chúng ta sẽ thảo luận về nhiều cách khác nhau để giảm thiểu rủi ro khi chỉnh sửa. Một số trong số chúng là máy móc và một số là tâm lý (ouch!), nhưng việc tập trung vào chúng là rất quan trọng, đặc biệt là khi chúng ta phá vỡ sự phụ thuộc trong code kế thừa để thực hiện các kiểm thử.
+Trong chương này, chúng ta sẽ thảo luận về nhiều cách khác nhau để giảm thiểu rủi ro khi chỉnh sửa. Một số trong số chúng là máy móc và một số là tâm lý (ouch!), nhưng việc tập trung vào chúng là rất quan trọng, đặc biệt là khi chúng ta phá bỏ sự phụ thuộc trong code kế thừa để thực hiện các kiểm thử.
 
 ## Chỉnh sửa siêu nhận thức
 
@@ -44,7 +44,7 @@ Tôi có một câu thần chú nhỏ mà tôi lặp đi lặp lại với chín
 
 Khi chúng ta chỉnh sửa code, có nhiều cách khiến chúng ta mắc lỗi. Chúng ta có thể viết sai chính tả, có thể sử dụng sai kiểu dữ liệu, có thể sử dụng biến này nhưng lại nghĩ là biến khác - danh sách này dài vô tận. Tái cấu trúc đặc biệt dễ bị lỗi. Thường thì nó liên quan đến chỉnh sửa xâm lấn. Chúng ta sao chép mọi thứ xung quanh và tạo các lớp và phương thức mới; quy mô lớn hơn nhiều so với việc chỉ thêm một dòng code mới.
 
-Nói chung, cách để xử lý tình huống này là viết các kiểm thử. Khi chúng ta có các kiểm thử tại chỗ, chúng ta có thể phát hiện ra nhiều lỗi mắc phải khi thay đổi code. Thật không may, trong nhiều hệ thống, chúng ta phải cấu trúc lại một chút chỉ để làm cho hệ thống đủ khả năng để kiểm thử, sau đó tiếp tục tái cấu trúc lại. Những lần tái cấu trúc ban đầu này (các kỹ thuật phá vỡ sự phụ thuộc trong danh mục ở Chương 25) được thực hiện mà không cần kiểm thử và chúng phải được thực hiện đặc biệt thận trọng.
+Nói chung, cách để xử lý tình huống này là viết các kiểm thử. Khi chúng ta có các kiểm thử tại chỗ, chúng ta có thể phát hiện ra nhiều lỗi mắc phải khi thay đổi code. Thật không may, trong nhiều hệ thống, chúng ta phải cấu trúc lại một chút chỉ để làm cho hệ thống đủ khả năng để kiểm thử, sau đó tiếp tục tái cấu trúc lại. Những lần tái cấu trúc ban đầu này (các kỹ thuật phá bỏ sự phụ thuộc trong danh mục ở Chương 25) được thực hiện mà không cần kiểm thử và chúng phải được thực hiện đặc biệt thận trọng.
 
 Khi bắt đầu sử dụng những kỹ thuật này, chúng ta rất dễ bị cám dỗ và muốn làm thật nhiều việc. Khi cần trích xuất toàn bộ nội dung của một phương thức, thay vì chỉ sao chép và dán các đối số khi khai báo, chúng ta lại thực hiện các công việc dọn dẹp khác. Ví dụ: khi phải trích xuất nội dung của một phương thức và làm cho nó tĩnh (_Expose Static Method (345)_), như sau:
 
@@ -118,11 +118,11 @@ private void processOrders(List orders,
 	int compensationPercent) {
 }
 ```
-4. Sau đó tôi lời gọi sang phương thức mới:
+4. Sau đó tôi lệnh gọi sang phương thức mới:
 ```java
 processOrders();
 ```
-5. Tôi dán danh sách tham số vào lời gọi:
+5. Tôi dán danh sách tham số vào lệnh gọi:
 ```java
 processOrders(List orders,
 	int dailyTarget,
@@ -219,7 +219,7 @@ _Tận dụng Trình biên dịch_ là một kỹ thuật mạnh mẽ, nhưng b�
 
 Có thể bạn đã từng được nghe về _Lập trình theo cặp_. Nếu bạn đang sử dụng quy trình Extreme Programming (XP) thì có lẽ bạn đang sử dụng nó. Tốt. Đó là một cách rất tốt để nâng cao chất lượng và phổ biến kiến thức trong nhóm.
 
-Nếu bạn chưa từng lập trình theo cặp, tôi khuyên bạn nên thử nó. Đặc biệt là khi sử dụng các kỹ thuật phá vỡ sự phụ thuộc mà tôi đã mô tả trong cuốn sách này.
+Nếu bạn chưa từng lập trình theo cặp, tôi khuyên bạn nên thử nó. Đặc biệt là khi sử dụng các kỹ thuật phá bỏ sự phụ thuộc mà tôi đã mô tả trong cuốn sách này.
 
 Rất dễ mắc lỗi và không biết rằng mình đã làm hỏng phần mềm. Một cặp mắt thứ hai chắc chắn sẽ có ích. Hãy đối mặt với nó, làm việc với code kế thừa giống như ca phẫu thuật và các bác sĩ không bao giờ phẫu thuật một mình.
 

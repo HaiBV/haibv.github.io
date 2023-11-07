@@ -21,7 +21,7 @@ Nguyên tắc đơn nhiệm hơi khó mô diễn vì ý tưởng đơn nhiệm k
 
 ![20.1](images/20/20-1.png)
 Hình 20.1 `Rule parser.`.
-  
+
 Chúng ta có một lớp nhỏ có thể đánh giá các chuỗi chứa các biểu thức quy tắc trong một số ngôn ngữ tối nghĩa. Nó có trách nhiệm gì? Chúng ta có thể nhìn vào tên của lớp để tìm một trách nhiệm: Nó phân tích cú pháp. Nhưng đó có phải là mục đích chính của nó? Dường như không phải phân tích cú pháp. Cũng có vẻ như nó đang đánh giá.
 
 Nó còn làm gì nữa? Nó giữ một chuỗi hiện tại, chuỗi mà nó đang phân tích cú pháp. Nó cũng giữ một trường cho biết vị trí hiện tại trong khi nó đang phân tích cú pháp. Cả hai trách nhiệm nhỏ đó dường như phù hợp với danh mục phân tích cú pháp.
@@ -126,7 +126,7 @@ class Reservation
     }
     return total;
   }
-  
+
   int getPrincipalFee() {
     return dailyRate * RateCalculator.rateBase(customer) * duration;
   }
@@ -150,9 +150,9 @@ Hình 20.5 hiển thị sơ đồ sau khi thêm một vòng tròn cho phương t
 Hình 20.5 phương thức `extend` sử dụng biến `duration`.
 
 > Nếu bạn đã đọc các chương mô tả về phác thảo hiệu ứng, bạn có thể thấy rằng _phác thảo tính năng_ trông rất giống _phác thảo hiệu ứng (155)_. Về cơ bản, chúng khá giống nhau. Sự khác biệt chính là hướng các mũi tên được đảo ngược. Trong các bản _phác thảo tính năng_, các mũi tên đi theo hướng của một phương thức hoặc biến được sử dụng bởi một phương thức hoặc biến khác. Trong các bản _phác thảo hiệu ứng_, mũi tên chỉ vào các phương thức hoặc biến bị ảnh hưởng bởi các phương thức và biến khác.
-> 
+>
 > Đây là hai cách khác nhau, hoàn toàn hợp lý để xem xét các tương tác trong một hệ thống. Bản _phác thảo tính năng_ là tuyệt vời để lập bản đồ cấu trúc bên trong của các lớp. Bản _phác thảo hiệu ứng (155)_ rất lý tưởng để suy diễn từ một điểm thay đổi.
-> 
+>
 > Có khó hiểu khi chúng trông hơi giống nhau không? Không thực sự. Những bản phác thảo này là những công cụ dùng một lần. Chúng là thứ mà bạn ngồi xuống và thảo luận với một đồng nghiệp trong khoảng 10 phút trước khi bạn thực hiện các thay đổi của mình. Sau đó, bạn ném chúng đi. Có rất ít giá trị trong việc giữ chúng về sau, vì vậy có rất ít khả năng chúng sẽ bị nhầm lẫn với nhau.
 
 Hình 20.6 hiển thị bản phác thảo sau khi thêm các vòng tròn cho từng chức năng và các đường kẻ cho tất cả các đối tượng mà chúng sử dụng:
@@ -173,7 +173,7 @@ Hình 20.8 `Reservation` sử dụng lớp mới.
 
 Điều quan trọng cần tìm hiểu trước khi thử thực hiện việc này là liệu lớp mới có trách nhiệm rõ ràng và tốt hơn hay không. Chúng ta có thể nghĩ ra một cái tên cho nó không? Nó dường như làm hai việc: gia hạn đặt chỗ và tính phí gốc. Có vẻ như `Reservation` là một cái tên hay, nhưng đã được sử dụng cho lớp ban đầu.
 
-Có một khả năng khác. Chúng ta có thể thử cách khác. Thay vì trích xuất tất cả code trong vòng tròn lớn, chúng ta có thể trích xuất phần khác, như trong Hình 20.9. 
+Có một khả năng khác. Chúng ta có thể thử cách khác. Thay vì trích xuất tất cả code trong vòng tròn lớn, chúng ta có thể trích xuất phần khác, như trong Hình 20.9.
 
 Chúng ta có thể gọi lớp được trích xuất `FeeCalculator`. Điều đó có thể hiệu quả, nhưng phương thức `getTotalFee` cần gọi `getPrincipalFee` trên `Reservation` — phải không nhỉ?
 
@@ -245,35 +245,35 @@ Hình 20.12 `ScheduledJob` với các lớp con được trích xuất.
 
 _Nguyên tắc Trách nhiệm Duy nhất_ vẫn bị vi phạm ở cấp độ giao diện, nhưng ở cấp độ triển khai, mọi thứ đã tốt hơn một chút.
 
-Làm thế nào chúng ta sẽ giải quyết vấn đề ở cấp độ giao diện? Điều này khó hơn một chút. Cách tiếp cận chung là xem liệu các lớp được ủy quyền có thực sự được sử dụng trực tiếp ở lời gọi hay không. Ví dụ: nếu chỉ có một số lời gọi quan tâm đến việc chạy `ScheduledJobs`, chúng ta có thể cấu trúc lại theo hướng như thế này:
+Làm thế nào chúng ta sẽ giải quyết vấn đề ở cấp độ giao diện? Điều này khó hơn một chút. Cách tiếp cận chung là xem liệu các lớp được ủy quyền có thực sự được sử dụng trực tiếp ở lệnh gọi hay không. Ví dụ: nếu chỉ có một số lệnh gọi quan tâm đến việc chạy `ScheduledJobs`, chúng ta có thể cấu trúc lại theo hướng như thế này:
 
 ![20.13](images/20/20-13.png)
-Hình 20.13 Giao diện dành riêng cho lời gọi của `ScheduledJob`.
+Hình 20.13 Giao diện dành riêng cho lệnh gọi của `ScheduledJob`.
 
-Giờ đây, lời gọi chỉ cần quan tâm đến việc kiểm soát `jobs` chấp nhận `ScheduledJobs` như `JobControllers`. Kỹ thuật tạo giao diện cho một nhóm lời gọi cụ thể này giữ cho thiết kế phù hợp với _Nguyên tắc phân chia Giao diện_.
+Giờ đây, lệnh gọi chỉ cần quan tâm đến việc kiểm soát `jobs` chấp nhận `ScheduledJobs` như `JobControllers`. Kỹ thuật tạo giao diện cho một nhóm lệnh gọi cụ thể này giữ cho thiết kế phù hợp với _Nguyên tắc phân chia Giao diện_.
 
 > Nguyên tắc Phân chia Giao diện (ISP)
-> 
-> Với một lớp lớn, hiếm khi tất cả các lời gọi của nó sử dụng tất cả các phương thức của nó. Thông thường chúng ta có thể thấy các nhóm phương pháp khác nhau mà các lời gọi cụ thể sử dụng. Nếu chúng ta tạo một giao diện cho từng nhóm này và yêu cầu lớp lớn triển khai các giao diện đó thì mỗi khách hàng có thể thấy lớp lớn thông qua giao diện cụ thể đó. Điều này giúp chúng ta ẩn thông tin đồng thời giảm sự phụ thuộc vào hệ thống. Các lời gọi không phải biên dịch lại khi lớp lớn triển khai.
+>
+> Với một lớp lớn, hiếm khi tất cả các lệnh gọi của nó sử dụng tất cả các phương thức của nó. Thông thường chúng ta có thể thấy các nhóm phương pháp khác nhau mà các lệnh gọi cụ thể sử dụng. Nếu chúng ta tạo một giao diện cho từng nhóm này và yêu cầu lớp lớn triển khai các giao diện đó thì mỗi khách hàng có thể thấy lớp lớn thông qua giao diện cụ thể đó. Điều này giúp chúng ta ẩn thông tin đồng thời giảm sự phụ thuộc vào hệ thống. Các lệnh gọi không phải biên dịch lại khi lớp lớn triển khai.
 
-Khi có giao diện cho các nhóm lời gọi cụ thể, chúng ta thường có thể bắt đầu chuyển code từ lớp lớn sang lớp mới sử dụng lớp gốc, như bạn có thể thấy trong Hình 20.14.
+Khi có giao diện cho các nhóm lệnh gọi cụ thể, chúng ta thường có thể bắt đầu chuyển code từ lớp lớn sang lớp mới sử dụng lớp gốc, như bạn có thể thấy trong Hình 20.14.
 
 ![20.14](images/20/20-14.png)
 Hình 20.14 Phân chia giao diện của `ScheduledJob`
 
-Thay vì ủy quyền `ScheduledJob` cho `JobController`, chúng ta đã ủy quyền `JobController` cho `ScheduledJob`. Giờ đây, bất cứ khi nào lời gọi muốn chạy một `ScheduledJob`, nó sẽ tạo một `JobController`, truyền nó vào một `ScheduledJob` và sử dụng `JobController` để xử lý việc thực thi của nó.
+Thay vì ủy quyền `ScheduledJob` cho `JobController`, chúng ta đã ủy quyền `JobController` cho `ScheduledJob`. Giờ đây, bất cứ khi nào lệnh gọi muốn chạy một `ScheduledJob`, nó sẽ tạo một `JobController`, truyền nó vào một `ScheduledJob` và sử dụng `JobController` để xử lý việc thực thi của nó.
 
-Kiểu tái cấu trúc này hầu như luôn khó hơn so với mô ta của nó. Thông thường, để làm điều này, bạn phải hiển thị nhiều phương thức hơn trong giao diện chung của lớp ban đầu `(ScheduledJob)` để giao diện mới `(StandardJobController)` có quyền truy cập vào mọi thứ nó cần để thực hiện công việc của mình. Thường thì phải mất khá nhiều công sức để tạo ra sự thay đổi như thế này. Code lời gọi bây giờ phải được thay đổi để sử dụng lớp mới thay vì lớp cũ; để làm điều đó một cách an toàn, bạn cần có các kiểm thử với những lời gọi đó. Tuy nhiên, điểm thú vị về việc tái cấu trúc này là nó cho phép bạn loại bỏ giao diện của một lớp lớn. Lưu ý rằng `ScheduledJob` không còn có các phương thức trong `JobController`.
+Kiểu tái cấu trúc này hầu như luôn khó hơn so với mô ta của nó. Thông thường, để làm điều này, bạn phải hiển thị nhiều phương thức hơn trong giao diện chung của lớp ban đầu `(ScheduledJob)` để giao diện mới `(StandardJobController)` có quyền truy cập vào mọi thứ nó cần để thực hiện công việc của mình. Thường thì phải mất khá nhiều công sức để tạo ra sự thay đổi như thế này. Code lệnh gọi bây giờ phải được thay đổi để sử dụng lớp mới thay vì lớp cũ; để làm điều đó một cách an toàn, bạn cần có các kiểm thử với những lệnh gọi đó. Tuy nhiên, điểm thú vị về việc tái cấu trúc này là nó cho phép bạn loại bỏ giao diện của một lớp lớn. Lưu ý rằng `ScheduledJob` không còn có các phương thức trong `JobController`.
 
 > Kinh nghiệm số 6: Khi tất cả các cách khác đều thất bại, hãy thực tái cấu trúc từ đầu
-> 
+>
 > Nếu bạn gặp nhiều khó khăn khi xem xét trách nhiệm trong một lớp, hãy tái cấu trúc từ đầu
 
 _Tái cấu trúc từ đầu (212)_ là một công cụ mạnh mẽ. Chỉ cần nhớ rằng đó là một bài tập nhân tạo. Những thứ bạn nhìn thấy khi "cào" là
 những thứ bạn sẽ đạt được khi tái cấu trúc.
 
 > Kinh nghiệm #7: Tập trung vào công việc hiện tại
-> 
+>
 > Hãy chú ý đến những gì bạn đang phải làm. Nếu bạn đang đưa ra một cách làm khác, bạn có thể đã xác định được trách nhiệm mà bạn nên trích xuất và sau đó cho phép thay thế.
 
 Rất dễ bị quá tải bởi số lượng trách nhiệm riêng biệt có thể xác định trong một lớp. Hãy nhớ rằng những thay đổi bạn đang thực hiện đang cho biết về một số cách cụ thể mà phần mềm có thể thay đổi. Thông thường chỉ cần nhận ra cách thay đổi đó là đủ để xem đoạn code mới mà bạn viết là một trách nhiệm riêng.
@@ -294,7 +294,7 @@ Cách tốt nhất để chia nhỏ các lớp lớn là xác định trách nhi
 
 ### Chiến thuật
 
-Trong hầu hết các hệ thống cũ, điều mà bạn có thể hy vọng nhất lúc ban đầu là bắt đầu áp dụng SRP ở cấp triển khai: Về cơ bản là trích xuất các lớp con từ lớp lớn của bạn và ủy quyền cho chúng. Việc áp dụng SRP ở cấp độ giao diện đòi hỏi khối lượng công việc nhiều hơn. Các lời gọi của lớp phải thay đổi và bạn cần các kiểm thử cho chúng. Thật thú vị, việc áp dụng SRP ở cấp triển khai giúp việc áp dụng nó ở cấp giao diện sau này dễ dàng hơn. Trước tiên hãy xem xét cấp độ triển khai.
+Trong hầu hết các hệ thống cũ, điều mà bạn có thể hy vọng nhất lúc ban đầu là bắt đầu áp dụng SRP ở cấp triển khai: Về cơ bản là trích xuất các lớp con từ lớp lớn của bạn và ủy quyền cho chúng. Việc áp dụng SRP ở cấp độ giao diện đòi hỏi khối lượng công việc nhiều hơn. Các lệnh gọi của lớp phải thay đổi và bạn cần các kiểm thử cho chúng. Thật thú vị, việc áp dụng SRP ở cấp triển khai giúp việc áp dụng nó ở cấp giao diện sau này dễ dàng hơn. Trước tiên hãy xem xét cấp độ triển khai.
 
 Các kỹ thuật mà bạn sử dụng để trích xuất lớp con phụ thuộc vào một số yếu tố. Một là bạn có thể dễ dàng xác định các kiểm thử với các phương thức có thể bị ảnh hưởng. Bạn nên xem qua lớp và liệt kê tất cả các biến thực thể cũng như phương thức sẽ phải di chuyển. Từ đó, bạn sẽ có ý tưởng tốt về những phương thức bạn nên viết kiểm thử. Trong trường hợp lớp `RuleParser` đã xem xét trước đây, nếu chúng ta đang cân nhắc việc tách một lớp `TermTokenizer`, thì chúng ta muốn di chuyển các biến dạng chuỗi có tên là `current` và `currentPosition`, cũng như `hasMoreTerms` và `nextTerm`. Thực tế, `hasMoreTerms` và `nextTerm` là privated có nghĩa là chúng ta thực sự không thể viết kiểm thử trực tiếp cho chúng. Chúng ta có thể công khai chúng (dù sao chúng cũng sẽ bị di chuyển), nhưng việc tạo một `RuleParser` trong kiểm thử khai thác và cung cấp cho nó một tập hợp các chuỗi để đánh giá cũng có thể dễ dàng như vậy. Nếu làm như vậy, chúng ta sẽ có các kiểm thử bao gồm `hasMoreTerms` và `nextTerm`, đồng thời chúng ta sẽ có thể chuyển chúng sang lớp mới một cách an toàn.
 
@@ -312,7 +312,7 @@ Nếu bạn có thể thực hiện các kiểm thử tại chỗ, bạn có th�
 
 Các bước tái cấu trúc này khá phức tạp, nhưng nếu bạn đang làm việc trong một đoạn code rất phức tạp thì chúng là cần thiết nếu bạn muốn trích xuất các lớp một cách an toàn mà không cần kiểm thử.
 
-Có vài điều có thể xảy ra sai sót khi bạn trích xuất các lớp mà không kiểm thử. Các lỗi tinh vi nhất mà chúng ta có thể gây ra là các lỗi liên quan đến tính kế thừa. Di chuyển một phương thức từ lớp này sang lớp khác là khá an toàn. Bạn có thể _Dựa vào Trình biên dịch (xx)_ để hỗ trợ công việc của mình, nhưng trong hầu hết các ngôn ngữ, mọi thứ đều có thể xảy ra nếu bạn cố gắng di chuyển một phương thức ghi đè một phương thức khác. Nếu bạn làm vậy, giờ đây lời gọi phương thức lớp ban đầu sẽ gọi một phương thức có cùng tên từ lớp cơ sở. Tình huống tương tự có thể xảy ra với các biến. Một biến trong lớp con có thể ẩn một biến có cùng tên trong lớp cha. Di chuyển nó chỉ làm cho cái bị ẩn được hiển thị.
+Có vài điều có thể xảy ra sai sót khi bạn trích xuất các lớp mà không kiểm thử. Các lỗi tinh vi nhất mà chúng ta có thể gây ra là các lỗi liên quan đến tính kế thừa. Di chuyển một phương thức từ lớp này sang lớp khác là khá an toàn. Bạn có thể _Dựa vào Trình biên dịch (xx)_ để hỗ trợ công việc của mình, nhưng trong hầu hết các ngôn ngữ, mọi thứ đều có thể xảy ra nếu bạn cố gắng di chuyển một phương thức ghi đè một phương thức khác. Nếu bạn làm vậy, giờ đây lệnh gọi phương thức lớp ban đầu sẽ gọi một phương thức có cùng tên từ lớp cơ sở. Tình huống tương tự có thể xảy ra với các biến. Một biến trong lớp con có thể ẩn một biến có cùng tên trong lớp cha. Di chuyển nó chỉ làm cho cái bị ẩn được hiển thị.
 
 Để vượt qua những vấn đề này, chúng ta hoàn toàn không nên di chuyển các phương thức ban đầu. Chúng ta tạo ra các phương thức mới bằng cách trích xuất nội dung của các phương thức cũ. Tiền tố chỉ là một cách cơ học để tạo tên mới và đảm bảo rằng nó không xung đột với các tên khác trước khi di chuyển. Các biến phiên bản phức tạp hơn một chút: Chúng ta thực hiện bước thủ công là tìm kiếm cách sử dụng các biến trước khi sử dụng chúng. Có thể phạm sai lầm với điều này. Hãy thật cẩn thận và làm điều đó với đồng nghiệp.
 

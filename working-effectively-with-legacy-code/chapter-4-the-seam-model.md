@@ -310,7 +310,7 @@ void CrossPlaneFigure::rerender()
 }
 ```
 
-Code này thực hiện nhiều lời gọi trực tiếp đến thư viện đồ họa. Thật không may, cách duy nhất để thực sự xác minh rằng code này đang thực hiện những gì bạn muốn là nhìn vào màn hình máy tính khi các hình được vẽ lại. Trong code phức tạp, điều đó khá dễ xảy ra lỗi, chưa kể tẻ nhạt. Một cách khác là sử dụng các đường nối liên kết. Nếu tất cả các chức năng vẽ là một phần của một thư viện cụ thể, bạn có thể tạo các phiên bản sơ khai liên kết đến phần còn lại của ứng dụng. Nếu bạn quan tâm đến việc chỉ tách phần phụ thuộc, chúng có thể chỉ là các hàm trống:
+Code này thực hiện nhiều lệnh gọi trực tiếp đến thư viện đồ họa. Thật không may, cách duy nhất để thực sự xác minh rằng code này đang thực hiện những gì bạn muốn là nhìn vào màn hình máy tính khi các hình được vẽ lại. Trong code phức tạp, điều đó khá dễ xảy ra lỗi, chưa kể tẻ nhạt. Một cách khác là sử dụng các đường nối liên kết. Nếu tất cả các chức năng vẽ là một phần của một thư viện cụ thể, bạn có thể tạo các phiên bản sơ khai liên kết đến phần còn lại của ứng dụng. Nếu bạn quan tâm đến việc chỉ tách phần phụ thuộc, chúng có thể chỉ là các hàm trống:
 
 ```java
 void drawText(int x, int y, char *text, int textLength)
