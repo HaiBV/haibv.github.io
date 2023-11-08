@@ -717,3 +717,66 @@ Nếu bạn có một công cụ tái cấu trúc tự động, thì việc _Tr�
 2. Tạo một phương thức mới trên lớp hiện tại. Cung cấp cho nó chữ ký bạn đã sao chép.
 
 3. Sao chép lệnh gọi sang phương thức mới và thay thế lệnh gọi bằng lệnh gọi phương thức mới.
+
+## Trích xuất và Ghi đè Phương thức Chế tạo
+
+Việc tạo đối tượng trong hàm khởi tạo có thể khá khó chịu khi bạn muốn kiểm thử một lớp. Đôi khi công việc đang diễn ra trong các đối tượng đó không nên diễn ra trong bộ kiểm thử khai thác. Đôi khi, bạn chỉ muốn đặt một đối tượng cảm biến vào đúng vị trí, nhưng bạn không thể vì đó mà code cứng đối tượng trong hàm khởi tạo.
+
+> Code cứng việc khởi tạo trong hàm khởi tạo có thể rất khó thực hiện trong quá trình kiểm thử.
+
+Hãy xem xét ví dụ dưới đây:
+
+```java
+public class WorkflowEngine
+{
+	public WorkflowEngine () {
+		Reader reader = new ModelReader(AppConfig.getDryConfiguration());
+		Persister persister = new XMLStore(AppConfiguration.getDryConfiguration());
+		this.tm = new TransactionManager(reader, persister);
+		...
+	}
+	...
+}
+```
+
+`WorkflowEngine` tạo `TransactionManager` trong hàm khởi tạo của nó. Nếu sự khởi tạo diễn ra ở một nơi nào khác, chúng ta có thể tạo ra sự tách biệt nào đó dễ dàng hơn. Một trong những lựa chọn là sử dụng _Trích xuất và Ghi đè Phương thức Chế tạo_.
+
+> _Trích xuất và Ghi đè Phương thức Chế tạo_ khá mạnh mẽ nhưng có một số vấn đề với một số ngôn ngữ cụ thể. Chẳng hạn, bạn không thể làm điều đó trong C++. C++ không cho phép các lệnh gọi hàm ảo phân giải thành các hàm trong các lớp dẫn xuất. Java và nhiều ngôn ngữ khác cho phép điều này. Trong C++, _Biến thực thể thay thế_ và _Trích xuất và Ghi đè Getter (352)_ là những lựa chọn thay thế tốt. Xem ví dụ trong _Biến thực thể thay thế (404)_ để hiểu thêm về vấn đề này.
+
+```java
+public class WorkflowEngine
+{
+	public WorkflowEngine () {
+		this.tm = makeTransactionManager();
+		...
+	}
+
+	protected TransactionManager makeTransactionManager() {
+		Reader reader = new ModelReader(AppConfiguration.getDryConfiguration());
+		Persister persister = new XMLStore(AppConfiguration.getDryConfiguration());
+		return new TransactionManager(reader, persister);
+	}
+	...
+}
+```
+
+Khi có phương thức chế tạo đó, chúng ta có thể phân lớp và ghi đè nó để có thể trả về `TransactionManager` mới bất cứ khi nào chúng ta cần:
+
+```java
+public class TestWorkflowEngine extends WorkflowEngine
+{
+	protected TransactionManager makeTransactionManager() {
+		return new FakeTransactionManager();
+	}
+}
+```
+
+### Các bước thực hiện
+
+Để _Trích xuất và Ghi đè Phương thức Chế tạo_, hãy làm theo các bước sau:
+
+1. Xác định việc khởi tạo đối tượng trong hàm khởi tạo.
+
+2. Trích xuất tất cả công việc liên quan đến quá trình khởi tạo thành một phương thức chế tạo.
+
+3. Tạo một lớp con kiểm thử và ghi đè phương thức chế tạo đó để tránh phụ thuộc vào các loại có vấn đề đang được kiểm thử.
