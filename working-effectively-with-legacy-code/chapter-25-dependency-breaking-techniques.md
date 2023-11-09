@@ -411,7 +411,7 @@ Trong ví dụ trước, tôi mong đợi rằng, theo thời gian, các phươn
 
 > Tên lớp bạn tìm thấy có thể đã được sử dụng. Nếu vậy, hãy cân nhắc xem bạn có thể đổi tên bất cứ thứ gì đang sử dụng tên đó hay không.
 
-Đây là cách chúng tôi thực hiện, từng bước một.
+Đây là cách chúng ta thực hiện, từng bước một.
 
 Đầu tiên, chúng ta tạo một lớp trông như thế này:
 
@@ -432,7 +432,7 @@ Chúng ta đã cố tình giữ nguyên tên của dữ liệu chỉ để giúp
 Frame frameForAGG230;
 ```
 
-Tiếp theo, chúng tôi nhận xét các khai báo ban đầu của dữ liệu và cố gắng xây dựng:
+Tiếp theo, chúng ta bỏ các khai báo ban đầu của dữ liệu và cố gắng xây dựng:
 
 ```cpp
 // bool AGG230_activeframe[AGG230_SIZE];
@@ -459,7 +459,7 @@ Khi hoàn thành việc đó, chúng ta có code xấu hơn, nhưng tất cả s
 
 Vì vậy, chúng ta sử dụng một lớp mới bằng cách thêm các biến toàn cục vào một lớp mới và đặt chúng ở chế độ công khai. Tại sao chúng ta lại làm theo cách này? Sau cùng, chúng ta đã dành thời gian suy nghĩ về việc nên gọi lớp mới là gì và đặt những loại phương thức nào vào nó. Lẽ ra chúng ta có thể bắt đầu bằng cách tạo một đối tượng `Frame` giả mà chúng ta có thể ủy quyền trong `AGG_Controller` và chúng ta có thể chuyển tất cả logic sử dụng các biến đó sang một lớp `Frame` thực. Chúng ta có thể đã làm được điều đó, nhưng sẽ cần rất nhiều nỗ lực cùng một lúc. Tệ hơn nữa, khi chúng ta không có các kiểm thử tại chỗ và chúng ta đang cố gắng thực hiện những công việc tối thiểu cần thiết để hoàn thành các kiểm thử, thì tốt nhất là nên để logic càng nhiều càng tốt. Chúng ta nên tránh di chuyển nó và cố gắng phân tách bằng cách đặt các đường nối cho phép chúng ta gọi một phương thức thay vì phương thức khác hoặc truy cập một phần dữ liệu thay vì một phần dữ liệu khác. Sau này, khi chúng ta thực hiện nhiều kiểm thử hơn, chúng ta có thể chuyển hành vi từ lớp này sang lớp khác mà không cần quá lo lắng.
 
-Khi chuyển `frame` vào `AGGController`, chúng ta có thể đổi tên một chút để làm mọi thứ rõ ràng hơn một chút. Đây là trạng thái kết thúc của chúng tôi cho lần tái cấu trúc này:
+Khi chuyển `frame` vào `AGGController`, chúng ta có thể đổi tên một chút để làm mọi thứ rõ ràng hơn một chút. Đây là trạng thái kết thúc của chúng ta cho lần tái cấu trúc này:
 
 ```cpp
 class Frame
@@ -779,4 +779,97 @@ public class TestWorkflowEngine extends WorkflowEngine
 
 2. Trích xuất tất cả công việc liên quan đến quá trình khởi tạo thành một phương thức chế tạo.
 
-3. Tạo một lớp con kiểm thử và ghi đè phương thức chế tạo đó để tránh phụ thuộc vào các loại có vấn đề đang được kiểm thử.
+3. Tạo một lớp con kiểm thử và ghi đè phương thức chế tạo đó để tránh phụ thuộc vào các kiểu biến có vấn đề đang được kiểm thử.
+
+## Trích xuất và Ghi đè Getter
+
+_Trích xuất và Ghi đè Phương thức Chế tạo (350)_ là một phương pháp mạnh mẽ để tách các phần phụ thuộc vào các kiểu biến, nhưng nó không hoạt động trong mọi trường hợp. "Lỗ hổng" lớn trong phạm vi ứng dụng của nó là C++. Trong C++, bạn không thể gọi hàm ảo trong lớp dẫn xuất từ hàm khởi tạo của lớp cơ sở. May mắn thay, có một giải pháp thay thế cho trường hợp này, bạn chỉ cần tạo đối tượng trong hàm khởi tạo mà không cần thực hiện thêm bất kỳ công việc nào với nó.
+
+Ý chính của phương pháp tái cấu trúc này là sử dụng getter cho biến thực thể mà bạn muốn thay thế bằng một đối tượng giả. Sau đó, bạn tái cấu trúc để sử dụng getter ở mọi vị trí trong lớp. Sau đó, bạn có thể phân lớp và ghi đè getter để cung cấp các đối tượng thay thế khi được kiểm thử.
+
+Trong ví dụ này, chúng ta tạo một trình quản lý giao dịch (transaction manager) trong hàm khởi tạo. Chúng ta muốn thiết lập mọi thứ để lớp có thể sử dụng trình quản lý giao dịch này trong sản phẩm cuối và một trình quản lý cảm biến khi kiểm thử.
+
+Đây là những gì chúng ta có ban đầu:
+
+```cpp
+// WorkflowEngine.h
+class WorkflowEngine
+{
+	private:
+		TransactionManager *tm;
+	public:
+		WorkflowEngine ();
+	...
+}
+
+// WorkflowEngine.cpp
+WorkflowEngine::WorkflowEngine()
+{
+	Reader *reader = new ModelReader(AppConfig.getDryConfiguration());
+	Persister *persister = new XMLStore(AppConfiguration.getDryConfiguration());
+	tm = new TransactionManager(reader, persister);
+	...
+}
+```
+
+Và đây là những gì chúng ta thu được:
+
+```cpp
+// WorkflowEngine.h
+class WorkflowEngine
+{
+private:
+	TransactionManager *tm;
+protected:
+	TransactionManager *getTransaction() const;
+public:
+	WorkflowEngine ();
+...
+}
+
+// WorkflowEngine.cpp
+WorkflowEngine::WorkflowEngine()
+:tm (0)
+{
+	...
+}
+
+TransactionManager *getTransactionManager() const
+{
+	if (tm == 0) {
+		Reader *reader = new ModelReader(AppConfig.getDryConfiguration());
+		Persister *persister = new XMLStore(AppConfiguration.getDryConfiguration());
+		tm = new TransactionManager(reader,persister);
+	}
+	return tm;
+}
+...
+```
+
+Điều đầu tiên chúng ta làm là sử dụng một _lazy getter_, một hàm tạo ra trình quản lý giao dịch trong lệnh gọi đầu tiên. Sau đó, chúng ta thay thế tất cả các vị trí sử dụng biến bằng các lệnh gọi đến getter.
+
+> Một _lazy getter_ là một phương thức trông giống như một getter bình thường đối với tất cả lệnh gọi của nó. Sự khác biệt chính ở đây là _lazy getter_ tạo ra đối tượng mà chúng phải trả về ngay trong lần đầu tiên được gọi. Để làm điều này, chúng thường chứa logic trông như thế này. Lưu ý cách biến `instance` được khởi tạo
+>
+> ```
+> Thing getThing() {
+>   if (thing == null) {
+>     thing = new Thing();
+>   }
+>   return thing;
+> }```
+>
+> _Lazy Getters_ cũng được sử dụng trong _Design Pattern Singleton (xx)_.
+
+Khi có getter đó, chúng ta có thể phân lớp và ghi đè để cài vào một đối tượng khác:
+
+```cpp
+class TestWorkflowEngine : public WorkflowEngine
+{
+public:
+  TransactionManager *getTransactionManager()
+    { return &transactionManager; }
+
+  FakeTransactionManager transactionManager;
+};
+```
+
