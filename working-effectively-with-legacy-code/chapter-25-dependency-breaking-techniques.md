@@ -903,3 +903,89 @@ Thực hiện _Trích xuất và Ghi đè Getter_ theo các bước sau:
 4. Thêm logic lần đầu tiên vào getter để đối tượng được xây dựng và gán cho tham chiếu bất cứ khi nào tham chiếu rỗng.
 
 5. Phân lớp lớp và ghi đè getter để cung cấp đối tượng thay thế để kiểm thử.
+
+## Trích xuất Trình triển khai
+
+_Trích xuất Giao diện (362)_ là một kỹ thuật tiện dụng, nhưng có một phần khó: đặt tên. Tôi thường gặp trường hợp cần trích xuất một giao diện nhưng tên tôi muốn sử dụng đã là tên của lớp. Nếu tôi làm việc với một IDE có hỗ trợ đổi tên lớp và _Trích xuất Giao diện_ thì việc này rất dễ xử lý.
+
+Nếu không, tôi có một vài lựa chọn:
+
+• Tôi có thể bịa ra một cái tên ngu ngốc nào đó.
+
+• Tôi có thể xem các phương thức tôi cần và xem liệu chúng có phải là tập con của các phương thức công khai trên lớp hay không. Nếu đúng như vậy, chúng có thể gợi ý cho tôi một tên khác cho giao diện mới.
+
+Một điều mà tôi thường bỏ qua là đặt tiền tố "I" vào tên của lớp để đặt tên cho giao diện mới, trừ khi nó đã là quy ước trong codebase. Không có gì tệ hơn việc làm việc trong một vùng code không quen thuộc, trong đó một nửa kiểu biến bắt đầu bằng `I` và một nửa thì không. Một nửa số lần bạn gõ tên kiểu nào đó, bạn sẽ sai. Bạn có thể đã bỏ lỡ `I` cần thiết hoặc không.
+
+> Đặt tên là một phần quan trọng của thiết kế. Nếu bạn chọn những cái tên hay, bạn sẽ củng cố được sự hiểu biết về hệ thống và khiến việc làm việc với nó trở nên dễ dàng hơn. Nếu bạn chọn những cái tên kém chất lượng, bạn sẽ làm suy yếu sự hiểu biết và khiến cuộc sống của những lập trình viên theo sau bạn trở thành địa ngục.
+
+Khi tên của một lớp hoàn hảo cho tên của một giao diện và tôi không có các công cụ tái cấu trúc tự động, tôi sử dụng _Trích xuất Trình triển khai_ để có được sự phân tách mà tôi cần. Để trích xuất phần triển khai của một lớp, chúng ta biến lớp đó thành một giao diện bằng cách phân lớp nó và đẩy tất cả các phương thức cụ thể của nó xuống lớp con.
+
+Đây là một ví dụ trong C++:
+
+```cpp
+// ModelNode.h
+class ModelNode
+{
+private:
+	list<ModelNode *> m_interiorNodes;
+	list<ModelNode *> m_exteriorNodes;
+	double m_weight;
+	void createSpanningLinks();
+
+public:
+	void addExteriorNode(ModelNode *newNode);
+	void addInternalNode(ModelNode *newNode);
+	void colorize();
+	...
+}
+```
+
+Bước đầu tiên là sao chép toàn bộ phần khai báo của lớp `ModelNode` sang một tệp tiêu đề khác và đổi tên của bản sao thành `ProductionModelNode`. Đây là một phần khai báo cho lớp được sao chép:
+
+```cpp
+// ProductionModelNode.h
+class ProductionModeNode
+{
+private:
+	list<ModelNode *> m_interiorNodes;
+	list<ModelNode *> m_exteriorNodes;
+	double m_weight;
+	void createSpanningLinks();
+public:
+	void addExteriorNode(ModelNode *newNode);
+	void addInternalNode(ModelNode *newNode);
+	void colorize();
+	...
+}
+```
+
+Bước tiếp theo là quay lại tiêu đề `ModelNode` và loại bỏ tất cả các khai báo biến và khai báo phương thức không công khai. Tiếp theo, chúng ta biến tất cả các phương thức công khai còn lại thành thuần ảo (trừu tượng):
+
+```cpp
+// ModelNode.h
+class ModelNode
+{
+public:
+	virtual void addExteriorNode(ModelNode *newNode) = 0;
+	virtual void addInternalNode(ModelNode *newNode) = 0;
+	virtual void colorize() = 0;
+	...
+}
+```
+
+Tại thời điểm này, `ModelNode` là một giao diện thuần túy. Nó chỉ chứa các phương thức trừu tượng. Chúng ta đang làm việc trong C++, vì vậy chúng ta cũng nên khai báo một hàm hủy ảo thuần túy và định nghĩa nó là một tệp triển khai:
+
+```cpp
+// ModelNode.h
+class ModelNode
+{
+public:
+	virtual ~ModelNode () = 0;
+	virtual void addExteriorNode(ModelNode *newNode) = 0;
+	virtual void addInternalNode(ModelNode *newNode) = 0;
+	virtual void colorize() = 0;
+	...
+};
+// ModelNode.cpp
+ModelNode::~ModelNode() {}
+```
