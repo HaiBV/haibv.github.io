@@ -12,7 +12,7 @@ Vấn đề khó khăn trong kiểm thử là một căn bệnh nặng trong cod
 
 Bởi vì việc phá vỡ các phần phụ thuộc trong code thủ tục là rất khó nên chiến lược tốt nhất thường là cố gắng kiểm thử một lượng lớn code trước khi thực hiện bất kỳ điều gì khác và sau đó sử dụng các kiểm thử đó để nhận một số phản hồi trong khi phát triển. Các kỹ thuật trong _Chương 12, Tôi cần thực hiện nhiều thay đổi trong một khu vực. Tôi có phải phá vỡ các phụ thuộc của tất cả các lớp liên quan không?_ có thể giúp được phần nào. Chúng áp dụng cho code thủ tục cũng như code hướng đối tượng. Nói tóm lại, bạn nên tìm _điểm chặn (180)_ và sau đó sử dụng _đường nối liên kết (36)_ để phá vỡ các phần phụ thuộc vừa đủ để đưa code vào trong kiểm thử khai thác. Nếu ngôn ngữ của bạn có bộ tiền xử lý macro, bạn cũng có thể sử dụng _đường nối tiền xử lý (33)_.
 
-Đó là cách hành động tiêu chuẩn nhưng không phải là cách duy nhất. Trong phần còn lại của chương này, chúng ta xem xét các cách để phá vỡ sự phụ thuộc cục bộ trong các chương trình thủ tục, cách thực hiện các thay đổi có thể kiểm thử dễ dàng hơn và các cách tiếp tục khi chúng ta đang sử dụng ngôn ngữ có đường dẫn di chuyển sang OO.
+Đó là cách hành động tiêu chuẩn nhưng không phải là cách duy nhất. Trong phần còn lại của chương này, chúng ta xem xét các cách để phá bỏ sự phụ thuộc cục bộ trong các chương trình thủ tục, cách thực hiện các thay đổi có thể kiểm thử dễ dàng hơn và các cách tiếp tục khi chúng ta đang sử dụng ngôn ngữ có đường dẫn di chuyển sang OO.
 
 ## Trường hợp dễ dàng
 
@@ -180,7 +180,7 @@ Chúng ta có thể tiến xa hơn nữa bằng cách thêm các chức năng đ
 
 Mặc dù các bộ tiền xử lý macro dễ bị sử dụng sai mục đích nhưng chúng thực sự rất hữu ích trong bối cảnh này. Việc đưa vào tệp và thay thế macro có thể giúp chúng ta vượt qua các phần phụ thuộc trong code phức tạp nhất. Miễn là chúng ta hạn chế việc sử dụng macro tràn lan đối với code đang chạy kiểm thử, thì không cần phải quá lo lắng rằng chúng ta sẽ sử dụng sai macro theo những cách sẽ ảnh hưởng đến code sản xuất.
 
-C là một trong số ít ngôn ngữ chính thống có bộ tiền xử lý macro. Nói chung, để phá vỡ sự phụ thuộc trong các ngôn ngữ thủ tục khác, chúng tôi phải sử dụng _đường nối liên kết (36)_ và cố gắng kiểm thử các vùng code lớn hơn.
+C là một trong số ít ngôn ngữ chính thống có bộ tiền xử lý macro. Nói chung, để phá bỏ sự phụ thuộc trong các ngôn ngữ thủ tục khác, chúng tôi phải sử dụng _đường nối liên kết (36)_ và cố gắng kiểm thử các vùng code lớn hơn.
 
 ## Thêm hành vi mới
 
@@ -432,7 +432,7 @@ Scanner::Scanner(ResultNotifier& notifier)
 
 Khi thực hiện thay đổi này, chúng ta có thể tìm thấy những vị trí `scan_packets` đang được sử dụng, tạo một phiên bản của `Scanner` và sử dụng nó.
 
-Những thay đổi này khá an toàn và khá máy móc. Chúng không phải là những ví dụ tuyệt vời về thiết kế hướng đối tượng, nhưng chúng đủ tốt để sử dụng như một cái nêm giúp phá vỡ sự phụ thuộc và cho phép chúng ta kiểm thử khi tiến về phía trước.
+Những thay đổi này khá an toàn và khá máy móc. Chúng không phải là những ví dụ tuyệt vời về thiết kế hướng đối tượng, nhưng chúng đủ tốt để sử dụng như một cái nêm giúp phá bỏ sự phụ thuộc và cho phép chúng ta kiểm thử khi tiến về phía trước.
 
 ## Tất cả đều hướng đối tượng
 

@@ -38,7 +38,7 @@ public class ARMDispatcher
 
 Trong lớp trên, phương thức `populate` nhận `HttpServletRequest` làm tham số. `HttpServletRequest` là giao diện thuộc chuẩn J2EE của Sun dành cho Java. Nếu hiện tại muốn kiểm thử `populate`, chúng ta sẽ phải tạo một lớp triển khai `HttpServletRequest` và cung cấp một số cách để truyền các giá trị tham số mà nó cần để có kết quả trả về khi kiểm thử. Tài liệu Java SDK hiện tại cho thấy có khoảng 23 phương thức khai báo trong `HttpServletRequest` và không tính các khai báo từ siêu giao diện của nó mà chúng ta phải triển khai. Sẽ thật tuyệt nếu sử dụng _Trích xuất Giao diện (362)_ để tạo một giao diện hẹp hơn, chỉ cung cấp các phương thức chúng ta cần, nhưng chúng ta không thể trích xuất giao diện từ giao diện khác. Trong Java, chúng ta cần có `HttpServletRequest` mở rộng giao diện chúng ta đang trích xuất và không thể sửa đổi giao diện chuẩn theo cách đó. May mắn thay, chúng ta có những lựa chọn khác.
 
-Một số thư viện đối tượng giả lập có sẵn cho J2EE. Nếu tải xuống một trong số chúng, chúng ta có thể sử dụng mô hình cho `HttpServletRequest` và thực hiện kiểm thử chúng ta cần thực hiện. Điều này có thể tiết kiệm khá nhiều thời gian; nếu theo cách này, chúng ta sẽ không phải mất thời gian để tự thực hiện lời gọi servlet giả. Vì vậy, có vẻ như chúng ta đã có giải pháp — hoặc không?
+Một số thư viện đối tượng giả lập có sẵn cho J2EE. Nếu tải xuống một trong số chúng, chúng ta có thể sử dụng mô hình cho `HttpServletRequest` và thực hiện kiểm thử chúng ta cần thực hiện. Điều này có thể tiết kiệm khá nhiều thời gian; nếu theo cách này, chúng ta sẽ không phải mất thời gian để tự thực hiện lệnh gọi servlet giả. Vì vậy, có vẻ như chúng ta đã có giải pháp — hoặc không?
 
 Khi tôi phá bỏ sự phụ thuộc, tôi luôn cố gắng nhìn về phía trước và xem kết quả liệu sẽ như thế nào. Sau đó tôi có thể quyết định xem tôi có thể sống chung với nó hay không. Trong trường hợp này, code sản xuất của chúng ta sẽ trông khá giống nhau và chúng ta sẽ phải làm rất nhiều việc để duy trì `HttpServletRequest`, một giao diện API, tại chỗ. Có cách nào để làm cho code trông đẹp hơn và làm cho việc phá bỏ phần phụ thuộc dễ dàng hơn không? Trên thực tế là có. Chúng ta có thể gói tham số lại và phá bỏ hoàn toàn sự phụ thuộc của chúng ta vào giao diện API. Khi chúng ta hoàn thành việc đó, code sẽ trông như thế này:
 
@@ -97,7 +97,7 @@ Nếu chúng ta chuyển sang sử dụng `ParameterSource` trong ví dụ này,
 
 > Tham số thích ứng là một trường hợp trong đó chúng ta không _Bảo toàn chữ ký (312)_. Hãy sử dụng cẩn thận.
 
-Tham số thích ứng có thể gặp rủi ro nếu giao diện đơn giản hóa mà bạn đang tạo cho lớp của tham số quá khác với giao diện hiện tại của tham số. Nếu không cẩn thận khi thực hiện những thay đổi đó, chúng ta có thể gây ra những lỗi nhỏ. Như mọi khi, hãy nhớ rằng mục tiêu là phá vỡ các phần phụ thuộc đủ tốt để thực hiện các kiểm thử. Bạn nên thiên về việc thực hiện những thay đổi mà bạn cảm thấy tự tin hơn là những thay đổi mang lại cho bạn cấu trúc tốt nhất. Những điều đó có thể đến sau khi bạn đã có kiểm thử. Ví dụ: trong trường hợp này, chúng ta có thể muốn thay đổi `ParameterSource` để các lời gọi của nó không phải kiểm thử null khi họ gọi các phương thức của nó (xem _Mẫu đối tượng Null (112)_ để biết chi tiết).
+Tham số thích ứng có thể gặp rủi ro nếu giao diện đơn giản hóa mà bạn đang tạo cho lớp của tham số quá khác với giao diện hiện tại của tham số. Nếu không cẩn thận khi thực hiện những thay đổi đó, chúng ta có thể gây ra những lỗi nhỏ. Như mọi khi, hãy nhớ rằng mục tiêu là phá vỡ các phần phụ thuộc đủ tốt để thực hiện các kiểm thử. Bạn nên thiên về việc thực hiện những thay đổi mà bạn cảm thấy tự tin hơn là những thay đổi mang lại cho bạn cấu trúc tốt nhất. Những điều đó có thể đến sau khi bạn đã có kiểm thử. Ví dụ: trong trường hợp này, chúng ta có thể muốn thay đổi `ParameterSource` để các lệnh gọi của nó không phải kiểm thử null khi họ gọi các phương thức của nó (xem _Mẫu đối tượng Null (112)_ để biết chi tiết).
 
 > An toàn là trên hết. Sau khi thực hiện các kiểm thử, bạn có thể thực hiện các thay đổi mang tính xâm lấn một cách tự tin hơn nhiều.
 
@@ -295,7 +295,7 @@ Bạn có thể sử dụng các bước sau để thực hiện _Phá vỡ đ�
 
 3. Đối với mỗi tham số trong hàm khởi tạo, hãy khai báo một biến thực thể và cung cấp cho nó cùng kiểu với biến đó. _Bảo tồn Chữ ký (312)_ bằng cách sao chép tất cả các tham số trực tiếp vào lớp và định dạng chúng dưới dạng khai báo biến thể hiện. Gán tất cả các tham số cho các biến thể hiện trong hàm khởi tạo.
 
-4. Tạo một phương thức thực thi trống trên lớp mới. Thông thường phương pháp này được gọi là `run()`. Chúng t đã sử dụng tên `draw` trong ví dụ.
+4. Tạo một phương thức thực thi trống trên lớp mới. Thông thường phương thức này được gọi là `run()`. Chúng t đã sử dụng tên `draw` trong ví dụ.
 
 5. Sao chép phần thân của phương thức cũ vào phương thức thực thi và biên dịch thành _Dựa vào Trình biên dịch (315)_.
 
@@ -411,7 +411,7 @@ Trong ví dụ trước, tôi mong đợi rằng, theo thời gian, các phươn
 
 > Tên lớp bạn tìm thấy có thể đã được sử dụng. Nếu vậy, hãy cân nhắc xem bạn có thể đổi tên bất cứ thứ gì đang sử dụng tên đó hay không.
 
-Đây là cách chúng tôi thực hiện, từng bước một.
+Đây là cách chúng ta thực hiện, từng bước một.
 
 Đầu tiên, chúng ta tạo một lớp trông như thế này:
 
@@ -432,7 +432,7 @@ Chúng ta đã cố tình giữ nguyên tên của dữ liệu chỉ để giúp
 Frame frameForAGG230;
 ```
 
-Tiếp theo, chúng tôi nhận xét các khai báo ban đầu của dữ liệu và cố gắng xây dựng:
+Tiếp theo, chúng ta bỏ các khai báo ban đầu của dữ liệu và cố gắng xây dựng:
 
 ```cpp
 // bool AGG230_activeframe[AGG230_SIZE];
@@ -459,7 +459,7 @@ Khi hoàn thành việc đó, chúng ta có code xấu hơn, nhưng tất cả s
 
 Vì vậy, chúng ta sử dụng một lớp mới bằng cách thêm các biến toàn cục vào một lớp mới và đặt chúng ở chế độ công khai. Tại sao chúng ta lại làm theo cách này? Sau cùng, chúng ta đã dành thời gian suy nghĩ về việc nên gọi lớp mới là gì và đặt những loại phương thức nào vào nó. Lẽ ra chúng ta có thể bắt đầu bằng cách tạo một đối tượng `Frame` giả mà chúng ta có thể ủy quyền trong `AGG_Controller` và chúng ta có thể chuyển tất cả logic sử dụng các biến đó sang một lớp `Frame` thực. Chúng ta có thể đã làm được điều đó, nhưng sẽ cần rất nhiều nỗ lực cùng một lúc. Tệ hơn nữa, khi chúng ta không có các kiểm thử tại chỗ và chúng ta đang cố gắng thực hiện những công việc tối thiểu cần thiết để hoàn thành các kiểm thử, thì tốt nhất là nên để logic càng nhiều càng tốt. Chúng ta nên tránh di chuyển nó và cố gắng phân tách bằng cách đặt các đường nối cho phép chúng ta gọi một phương thức thay vì phương thức khác hoặc truy cập một phần dữ liệu thay vì một phần dữ liệu khác. Sau này, khi chúng ta thực hiện nhiều kiểm thử hơn, chúng ta có thể chuyển hành vi từ lớp này sang lớp khác mà không cần quá lo lắng.
 
-Khi chuyển `frame` vào `AGGController`, chúng ta có thể đổi tên một chút để làm mọi thứ rõ ràng hơn một chút. Đây là trạng thái kết thúc của chúng tôi cho lần tái cấu trúc này:
+Khi chuyển `frame` vào `AGGController`, chúng ta có thể đổi tên một chút để làm mọi thứ rõ ràng hơn một chút. Đây là trạng thái kết thúc của chúng ta cho lần tái cấu trúc này:
 
 ```cpp
 class Frame
@@ -583,7 +583,7 @@ class RSCWorkflow
 }
 ```
 
-Chúng ta có thể làm gì để kiểm thử phương pháp này? Khi xem xét kỹ, chúng ta thấy rằng phương thức này sử dụng rất nhiều phương thức trên lớp `Packet`. Trên thực tế, việc chuyển `validate` sang lớp `Packet` sẽ thực sự hợp lý, nhưng việc di chuyển phương thức không phải là điều ít rủi ro nhất mà chúng ta có thể làm bây giờ; chúng ta chắc chắn sẽ không thể _Bảo toàn Chữ ký (312)_. Nếu bạn không có công cụ tự động hỗ trợ di chuyển các phương thức, tốt hơn hết bạn nên thực hiện một số kiểm thử trước. _Trích xuất Phương thức Tĩnh_ có thể giúp bạn làm điều đó. Với các kiểm thử đã có, bạn có thể thực hiện thay đổi cần thực hiện và tự tin hơn nhiều khi áp dụng phương pháp đó sau đó.
+Chúng ta có thể làm gì để kiểm thử phương thức này? Khi xem xét kỹ, chúng ta thấy rằng phương thức này sử dụng rất nhiều phương thức trên lớp `Packet`. Trên thực tế, việc chuyển `validate` sang lớp `Packet` sẽ thực sự hợp lý, nhưng việc di chuyển phương thức không phải là điều ít rủi ro nhất mà chúng ta có thể làm bây giờ; chúng ta chắc chắn sẽ không thể _Bảo toàn Chữ ký (312)_. Nếu bạn không có công cụ tự động hỗ trợ di chuyển các phương thức, tốt hơn hết bạn nên thực hiện một số kiểm thử trước. _Trích xuất Phương thức Tĩnh_ có thể giúp bạn làm điều đó. Với các kiểm thử đã có, bạn có thể thực hiện thay đổi cần thực hiện và tự tin hơn nhiều khi áp dụng phương thức đó sau đó.
 
 > Khi bạn phá bỏ các phần phụ thuộc mà không cần kiểm thử, hãy _Bảo toàn Chữ ký (312)_ của các phương thức bất cứ khi nào có thể. Nếu bạn cắt/sao chép và dán toàn bộ chữ ký của phương thức, bạn sẽ có ít nguy cơ mắc lỗi hơn.
 
@@ -645,3 +645,347 @@ Nếu bạn lo ngại rằng ai đó có thể bắt đầu sử dụng tĩnh th
 3. Biên dịch.
 
 4. Nếu có lỗi liên quan đến việc truy cập dữ liệu hoặc phương thức thực thể, hãy xem các tính năng đó và xem liệu chúng có thể được đặt ở trạng thái tĩnh hay không. Nếu có thể, hãy đặt chúng ở trạng thái tĩnh để hệ thống biên dịch.
+
+
+## Trích xuất và Ghi đè Lệnh gọi
+
+Đôi khi, các phần phụ thuộc gây cản trở trong quá trình kiểm thử khá cục bộ. Chúng ta có thể có một lệnh gọi phương thức duy nhất mà chúng ta cần thay thế. Nếu có thể phá bỏ sự phụ thuộc vào lệnh gọi phương thức, chúng ta có thể ngăn chặn các tác dụng phụ kỳ lạ trong quá trình kiểm thử hoặc cảm nhận các giá trị được chuyển cho lệnh gọi.
+
+Hãy xem một ví dụ:
+
+```java
+public class PageLayout
+{
+	private int id = 0;
+	private List styles;
+	private StyleTemplate template;
+	...
+	protected void rebindStyles() {
+		styles = StyleMaster.formStyles(template, id);
+		...
+	}
+	...
+}
+```
+
+`PageLayout` thực hiện lệnh gọi hàm tĩnh có tên `formStyles` trong lớp có tên `StyleMaster`. Nó gán giá trị trả về cho một biến thực thể: `styles`. Chúng ta cần làm gì nếu muốn tìm hiểu `formStyles` hoặc loại bỏ sự phụ thuộc của chúng ta với `StyleMaster`? Có một lựa chọn là trích xuất lệnh gọi sang một phương thức mới và ghi đè nó trong lớp con kiểm kiểm thử. Điều này được gọi là _Trích xuất và Ghi đè Lệnh gọi_.
+
+Đây là code sau khi trích xuất:
+
+```java
+public class PageLayout
+{
+	private int id = 0;
+	private List styles;
+	private StyleTemplate template;
+	...
+	protected void rebindStyles() {
+		styles = formStyles(template, id);
+		...
+	}
+
+	protected List formStyles(StyleTemplate template, int id) {
+		return StyleMaster.formStyles(template, id);
+	}
+	...
+}
+```
+
+Bây giờ chúng ta đã có phương thức `formStyles` cục bộ của riêng mình, chúng ta có thể ghi đè nó để phá bỏ sự phụ thuộc. Chúng ta không cần `styles` cho những thứ đang kiểm thử, vì vậy chúng ta chỉ cần trả về một danh sách rỗng.
+
+```java
+public class TestingPageLayout extends PageLayout {
+	protected List formStyles(StyleTemplate template, int id) {
+		return new ArrayList();
+	}
+	...
+}
+```
+
+Khi chúng ta phát triển các kiểm thử cần nhiều `styles` khác nhau, chúng ta có thể thay đổi phương thức này để có thể định cấu hình những gì sẽ được trả về.
+
+_Trích xuất và Ghi đè Lệnh gọi_ là một công cụ tái cấu trúc rất hữu ích; Tôi sử dụng nó rất thường xuyên. Đó là một cách lý tưởng để phá bỏ sự phụ thuộc vào các biến toàn cục và các phương thức tĩnh. Nói chung, tôi có xu hướng sử dụng nó trừ khi có nhiều lệnh gọi khác nhau đối với cùng một tệp toàn cục. Nếu có, tôi thường sử dụng _Thay thế Tham chiếu Toàn cục bằng Getter (399)_.
+
+Nếu bạn có một công cụ tái cấu trúc tự động, thì việc _Trích xuất và Ghi đè Lệnh gọi_ là chuyện nhỏ. Bạn có thể làm điều đó bằng cách sử dụng kỹ thuật tái cấu trúc _Trích xuất Phương thức (415)_. Tuy nhiên, nếu không, hãy sử dụng các bước sau. Chúng cho phép bạn trích xuất bất kỳ lệnh gọi nào một cách an toàn, ngay cả khi bạn không có các kiểm thử tại chỗ.
+
+### Các bước thực hiện
+
+Để _trích xuất và Ghi đè Lệnh gọi_, hãy làm theo các bước sau:
+
+1. Xác định lệnh gọi mà bạn muốn trích xuất. Tìm khai báo phương thức của nó. Sao chép chữ ký phương thức của nó để bạn có thể _Bảo toàn Chữ ký (312)_.
+
+2. Tạo một phương thức mới trên lớp hiện tại. Cung cấp cho nó chữ ký bạn đã sao chép.
+
+3. Sao chép lệnh gọi sang phương thức mới và thay thế lệnh gọi bằng lệnh gọi phương thức mới.
+
+## Trích xuất và Ghi đè Phương thức Chế tạo
+
+Việc tạo đối tượng trong hàm khởi tạo có thể khá khó chịu khi bạn muốn kiểm thử một lớp. Đôi khi công việc đang diễn ra trong các đối tượng đó không nên diễn ra trong bộ kiểm thử khai thác. Đôi khi, bạn chỉ muốn đặt một đối tượng cảm biến vào đúng vị trí, nhưng bạn không thể vì đó mà code cứng đối tượng trong hàm khởi tạo.
+
+> Code cứng việc khởi tạo trong hàm khởi tạo có thể rất khó thực hiện trong quá trình kiểm thử.
+
+Hãy xem xét ví dụ dưới đây:
+
+```java
+public class WorkflowEngine
+{
+	public WorkflowEngine () {
+		Reader reader = new ModelReader(AppConfig.getDryConfiguration());
+		Persister persister = new XMLStore(AppConfiguration.getDryConfiguration());
+		this.tm = new TransactionManager(reader, persister);
+		...
+	}
+	...
+}
+```
+
+`WorkflowEngine` tạo `TransactionManager` trong hàm khởi tạo của nó. Nếu sự khởi tạo diễn ra ở một nơi nào khác, chúng ta có thể tạo ra sự tách biệt nào đó dễ dàng hơn. Một trong những lựa chọn là sử dụng _Trích xuất và Ghi đè Phương thức Chế tạo_.
+
+> _Trích xuất và Ghi đè Phương thức Chế tạo_ khá mạnh mẽ nhưng có một số vấn đề với một số ngôn ngữ cụ thể. Chẳng hạn, bạn không thể làm điều đó trong C++. C++ không cho phép các lệnh gọi hàm ảo phân giải thành các hàm trong các lớp dẫn xuất. Java và nhiều ngôn ngữ khác cho phép điều này. Trong C++, _Biến thực thể thay thế_ và _Trích xuất và Ghi đè Getter (352)_ là những lựa chọn thay thế tốt. Xem ví dụ trong _Biến thực thể thay thế (404)_ để hiểu thêm về vấn đề này.
+
+```java
+public class WorkflowEngine
+{
+	public WorkflowEngine () {
+		this.tm = makeTransactionManager();
+		...
+	}
+
+	protected TransactionManager makeTransactionManager() {
+		Reader reader = new ModelReader(AppConfiguration.getDryConfiguration());
+		Persister persister = new XMLStore(AppConfiguration.getDryConfiguration());
+		return new TransactionManager(reader, persister);
+	}
+	...
+}
+```
+
+Khi có phương thức chế tạo đó, chúng ta có thể phân lớp và ghi đè nó để có thể trả về `TransactionManager` mới bất cứ khi nào chúng ta cần:
+
+```java
+public class TestWorkflowEngine extends WorkflowEngine
+{
+	protected TransactionManager makeTransactionManager() {
+		return new FakeTransactionManager();
+	}
+}
+```
+
+### Các bước thực hiện
+
+Để _Trích xuất và Ghi đè Phương thức Chế tạo_, hãy làm theo các bước sau:
+
+1. Xác định việc khởi tạo đối tượng trong hàm khởi tạo.
+
+2. Trích xuất tất cả công việc liên quan đến quá trình khởi tạo thành một phương thức chế tạo.
+
+3. Tạo một lớp con kiểm thử và ghi đè phương thức chế tạo đó để tránh phụ thuộc vào các kiểu biến có vấn đề đang được kiểm thử.
+
+## Trích xuất và Ghi đè Getter
+
+_Trích xuất và Ghi đè Phương thức Chế tạo (350)_ là một kỹ thuật mạnh mẽ để tách các phần phụ thuộc vào các kiểu biến, nhưng nó không hoạt động trong mọi trường hợp. "Lỗ hổng" lớn trong phạm vi ứng dụng của nó là C++. Trong C++, bạn không thể gọi hàm ảo trong lớp dẫn xuất từ hàm khởi tạo của lớp cơ sở. May mắn thay, có một giải pháp thay thế cho trường hợp này, bạn chỉ cần tạo đối tượng trong hàm khởi tạo mà không cần thực hiện thêm bất kỳ công việc nào với nó.
+
+Ý chính của kỹ thuật tái cấu trúc này là sử dụng getter cho biến thực thể mà bạn muốn thay thế bằng một đối tượng giả. Sau đó, bạn tái cấu trúc để sử dụng getter ở mọi vị trí trong lớp. Sau đó, bạn có thể phân lớp và ghi đè getter để cung cấp các đối tượng thay thế khi được kiểm thử.
+
+Trong ví dụ này, chúng ta tạo một trình quản lý giao dịch (transaction manager) trong hàm khởi tạo. Chúng ta muốn thiết lập mọi thứ để lớp có thể sử dụng trình quản lý giao dịch này trong sản phẩm cuối và một trình quản lý cảm biến khi kiểm thử.
+
+Đây là những gì chúng ta có ban đầu:
+
+```cpp
+// WorkflowEngine.h
+class WorkflowEngine
+{
+	private:
+		TransactionManager *tm;
+	public:
+		WorkflowEngine ();
+	...
+}
+
+// WorkflowEngine.cpp
+WorkflowEngine::WorkflowEngine()
+{
+	Reader *reader = new ModelReader(AppConfig.getDryConfiguration());
+	Persister *persister = new XMLStore(AppConfiguration.getDryConfiguration());
+	tm = new TransactionManager(reader, persister);
+	...
+}
+```
+
+Và đây là những gì chúng ta thu được:
+
+```cpp
+// WorkflowEngine.h
+class WorkflowEngine
+{
+private:
+	TransactionManager *tm;
+protected:
+	TransactionManager *getTransaction() const;
+public:
+	WorkflowEngine ();
+...
+}
+
+// WorkflowEngine.cpp
+WorkflowEngine::WorkflowEngine()
+:tm (0)
+{
+	...
+}
+
+TransactionManager *getTransactionManager() const
+{
+	if (tm == 0) {
+		Reader *reader = new ModelReader(AppConfig.getDryConfiguration());
+		Persister *persister = new XMLStore(AppConfiguration.getDryConfiguration());
+		tm = new TransactionManager(reader,persister);
+	}
+	return tm;
+}
+...
+```
+
+Điều đầu tiên chúng ta làm là sử dụng một _lazy getter_, một hàm tạo ra trình quản lý giao dịch trong lệnh gọi đầu tiên. Sau đó, chúng ta thay thế tất cả các vị trí sử dụng biến bằng các lệnh gọi đến getter.
+
+> Một _lazy getter_ là một phương thức trông giống như một getter bình thường đối với tất cả lệnh gọi của nó. Sự khác biệt chính ở đây là _lazy getter_ tạo ra đối tượng mà chúng phải trả về ngay trong lần đầu tiên được gọi. Để làm điều này, chúng thường chứa logic trông như thế này. Lưu ý cách biến `instance` được khởi tạo
+>
+> ```
+> Thing getThing() {
+>   if (thing == null) {
+>     thing = new Thing();
+>   }
+>   return thing;
+> }```
+>
+> _Lazy Getters_ cũng được sử dụng trong _Design Pattern Singleton (xx)_.
+
+Khi có getter đó, chúng ta có thể phân lớp và ghi đè để cài vào một đối tượng khác:
+
+```cpp
+class TestWorkflowEngine : public WorkflowEngine
+{
+public:
+  TransactionManager *getTransactionManager()
+    { return &transactionManager; }
+
+  FakeTransactionManager transactionManager;
+};
+```
+
+> Khi sử dụng _Trích xuất và Ghi đè Getter_, bạn phải hết sức lưu ý đến các vấn đề về vòng đời của đối tượng, đặc biệt là trong ngôn ngữ không thu thập rác như C++. Đảm bảo rằng bạn xóa phiên bản kiểm thử theo cách nhất quán với cách xóa phiên bản sản phẩm.
+
+Trong quá trình kiểm thử, chúng ta có thể dễ dàng truy cập trình quản lý giao dịch giả mạo nếu cần:
+
+```cpp
+TEST(transactionCount, WorkflowEngine)
+{
+	auto_ptr<TestWorkflowEngine> engine(new TestWorkflowEngine);
+	engine.run();
+	LONGS_EQUAL(0, engine.transactionManager.getTransactionCount());
+}
+```
+
+Một nhược điểm của _Trích xuất và Ghi đè Getter_ là có khả năng ai đó sẽ sử dụng biến trước khi nó được khởi tạo. Vì lý do này, tốt nhất bạn nên đảm bảo rằng tất cả code trong lớp đều đang sử dụng getter.
+
+_Trích xuất và Ghi đè Getter_ không phải là kỹ thuật tôi thường xuyên sử dụng. Khi chỉ có một phương thức duy nhất trên một đối tượng có vấn đề, việc sử dụng _Trích xuất và Ghi đè Lệnh gọi (348)_ sẽ dễ dàng hơn nhiều. Tuy nhiên, _Trích xuất và Ghi đè Getter_ là lựa chọn tốt hơn khi có nhiều phương thức có vấn đề trên cùng một đối tượng. Nếu bạn có thể loại bỏ tất cả những vấn đề đó bằng cách trích xuất một getter và ghi đè nó thì đó là một chiến thắng rõ ràng.
+
+### Các bước thực hiện
+
+Thực hiện _Trích xuất và Ghi đè Getter_ theo các bước sau:
+
+1. Xác định đối tượng bạn cần getter.
+
+2. Trích xuất tất cả logic cần thiết để khởi tạo đối tượng vào một getter.
+
+3. Thay thế tất cả các lệnh gọi đối tượng bằng các lệnh gọi đến getter và khởi tạo tham chiếu giữ đối tượng thành null trong tất cả các hàm khởi tạo.
+
+4. Thêm logic lần đầu tiên vào getter để đối tượng được xây dựng và gán cho tham chiếu bất cứ khi nào tham chiếu rỗng.
+
+5. Phân lớp lớp và ghi đè getter để cung cấp đối tượng thay thế để kiểm thử.
+
+## Trích xuất Trình triển khai
+
+_Trích xuất Giao diện (362)_ là một kỹ thuật tiện dụng, nhưng có một phần khó: đặt tên. Tôi thường gặp trường hợp cần trích xuất một giao diện nhưng tên tôi muốn sử dụng đã là tên của lớp. Nếu tôi làm việc với một IDE có hỗ trợ đổi tên lớp và _Trích xuất Giao diện_ thì việc này rất dễ xử lý.
+
+Nếu không, tôi có một vài lựa chọn:
+
+• Tôi có thể bịa ra một cái tên ngu ngốc nào đó.
+
+• Tôi có thể xem các phương thức tôi cần và xem liệu chúng có phải là tập con của các phương thức công khai trên lớp hay không. Nếu đúng như vậy, chúng có thể gợi ý cho tôi một tên khác cho giao diện mới.
+
+Một điều mà tôi thường bỏ qua là đặt tiền tố "I" vào tên của lớp để đặt tên cho giao diện mới, trừ khi nó đã là quy ước trong codebase. Không có gì tệ hơn việc làm việc trong một vùng code không quen thuộc, trong đó một nửa kiểu biến bắt đầu bằng `I` và một nửa thì không. Một nửa số lần bạn gõ tên kiểu nào đó, bạn sẽ sai. Bạn có thể đã bỏ lỡ `I` cần thiết hoặc không.
+
+> Đặt tên là một phần quan trọng của thiết kế. Nếu bạn chọn những cái tên hay, bạn sẽ củng cố được sự hiểu biết về hệ thống và khiến việc làm việc với nó trở nên dễ dàng hơn. Nếu bạn chọn những cái tên kém chất lượng, bạn sẽ làm suy yếu sự hiểu biết và khiến cuộc sống của những lập trình viên theo sau bạn trở thành địa ngục.
+
+Khi tên của một lớp hoàn hảo cho tên của một giao diện và tôi không có các công cụ tái cấu trúc tự động, tôi sử dụng _Trích xuất Trình triển khai_ để có được sự phân tách mà tôi cần. Để trích xuất phần triển khai của một lớp, chúng ta biến lớp đó thành một giao diện bằng cách phân lớp nó và đẩy tất cả các phương thức cụ thể của nó xuống lớp con.
+
+Đây là một ví dụ trong C++:
+
+```cpp
+// ModelNode.h
+class ModelNode
+{
+private:
+	list<ModelNode *> m_interiorNodes;
+	list<ModelNode *> m_exteriorNodes;
+	double m_weight;
+	void createSpanningLinks();
+
+public:
+	void addExteriorNode(ModelNode *newNode);
+	void addInternalNode(ModelNode *newNode);
+	void colorize();
+	...
+}
+```
+
+Bước đầu tiên là sao chép toàn bộ phần khai báo của lớp `ModelNode` sang một tệp tiêu đề khác và đổi tên của bản sao thành `ProductionModelNode`. Đây là một phần khai báo cho lớp được sao chép:
+
+```cpp
+// ProductionModelNode.h
+class ProductionModeNode
+{
+private:
+	list<ModelNode *> m_interiorNodes;
+	list<ModelNode *> m_exteriorNodes;
+	double m_weight;
+	void createSpanningLinks();
+public:
+	void addExteriorNode(ModelNode *newNode);
+	void addInternalNode(ModelNode *newNode);
+	void colorize();
+	...
+}
+```
+
+Bước tiếp theo là quay lại tiêu đề `ModelNode` và loại bỏ tất cả các khai báo biến và khai báo phương thức không công khai. Tiếp theo, chúng ta biến tất cả các phương thức công khai còn lại thành thuần ảo (trừu tượng):
+
+```cpp
+// ModelNode.h
+class ModelNode
+{
+public:
+	virtual void addExteriorNode(ModelNode *newNode) = 0;
+	virtual void addInternalNode(ModelNode *newNode) = 0;
+	virtual void colorize() = 0;
+	...
+}
+```
+
+Tại thời điểm này, `ModelNode` là một giao diện thuần túy. Nó chỉ chứa các phương thức trừu tượng. Chúng ta đang làm việc trong C++, vì vậy chúng ta cũng nên khai báo một hàm hủy ảo thuần túy và định nghĩa nó là một tệp triển khai:
+
+```cpp
+// ModelNode.h
+class ModelNode
+{
+public:
+	virtual ~ModelNode () = 0;
+	virtual void addExteriorNode(ModelNode *newNode) = 0;
+	virtual void addInternalNode(ModelNode *newNode) = 0;
+	virtual void colorize() = 0;
+	...
+};
+// ModelNode.cpp
+ModelNode::~ModelNode() {}
+```

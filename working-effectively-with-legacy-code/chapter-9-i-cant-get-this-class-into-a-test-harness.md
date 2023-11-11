@@ -16,7 +16,7 @@ Dưới đây là bốn vấn đề phổ biến nhất mà chúng ta thường 
 
 4. Công việc quan trọng xảy ra trong hàm khởi tạo và chúng ta cần cảm nhận được điều đó.
 
-Trong chương này, chúng ta sẽ đi qua một loạt các ví dụ làm nổi bật những vấn đề này bằng các ngôn ngữ khác nhau. Có nhiều hơn một cách để giải quyết từng vấn đề này. Tuy nhiên, đọc qua các ví dụ này là một cách tuyệt vời để làm quen với kho kỹ thuật phá vỡ sự phụ thuộc và học cách đánh đổi chúng cũng như áp dụng chúng trong các tình huống cụ thể.
+Trong chương này, chúng ta sẽ đi qua một loạt các ví dụ làm nổi bật những vấn đề này bằng các ngôn ngữ khác nhau. Có nhiều hơn một cách để giải quyết từng vấn đề này. Tuy nhiên, đọc qua các ví dụ này là một cách tuyệt vời để làm quen với kho kỹ thuật phá bỏ sự phụ thuộc và học cách đánh đổi chúng cũng như áp dụng chúng trong các tình huống cụ thể.
 
 ## Trường hợp tham số khó chịu
 
@@ -281,7 +281,7 @@ mailing_list_dispatcher::mailing_list_dispatcher(mail_service *service) : status
 
 Sự khác biệt thực sự và duy nhất ở đây là đối tượng `mail_service` được tạo bên ngoài lớp và được truyền vào. Điều đó trông có vẻ là không cải tiến nhiều, nhưng nó mang lại lợi ích đáng kinh ngạc. Chúng ta có thể sử dụng _Trích xuất Giao diện (362)_ để tạo giao diện cho `mail_service`. Triển khai giao diện có thể là lớp sản phẩm thực sự gửi mail. Một lớp khác có thể là một lớp giả mạo dành cho những điều chúng ta làm với nó khi kiểm thử và cho phép chúng ta đảm bảo rằng chúng đã xảy ra.
 
-_Tham số hóa hàm khởi tạo (379)_ là một cách rất thuận tiện để loại bỏ các phụ thuộc của hàm khởi tạo, nhưng thường xuyên bị bỏ qua. Một trong những trở ngại là có thể tất cả các lời gọi của lớp sẽ bị thay đổi để truyền tham số mới, nhưng điều đó không đúng. Chúng ta có thể xử lý nó như thế này. Trước tiên, chúng ta trích xuất phần thân của hàm khởi tạo thành một phương thức mới gọi là `initialize`. Không giống như hầu hết các phương pháp trích xuất, phương pháp này khá an toàn để thử mà không cần kiểm thử vì chúng ta có thể _Bảo toàn Chữ ký (312)_ khi thực hiện.
+_Tham số hóa hàm khởi tạo (379)_ là một cách rất thuận tiện để loại bỏ các phụ thuộc của hàm khởi tạo, nhưng thường xuyên bị bỏ qua. Một trong những trở ngại là có thể tất cả các lệnh gọi của lớp sẽ bị thay đổi để truyền tham số mới, nhưng điều đó không đúng. Chúng ta có thể xử lý nó như thế này. Trước tiên, chúng ta trích xuất phần thân của hàm khởi tạo thành một phương thức mới gọi là `initialize`. Không giống như hầu hết các phương pháp trích xuất, phương pháp này khá an toàn để thử mà không cần kiểm thử vì chúng ta có thể _Bảo toàn Chữ ký (312)_ khi thực hiện.
 
 ```cpp
 void mailing_list_dispatcher::initialize(mail_service *service)
@@ -841,12 +841,12 @@ Hình 9.4 Phân cấp của `Permit`
 
 Hàm khởi tạo của `IndustrialFacility` nhận `OriginationPermit` làm tham số và truyền vào `PermitRepository` để lấy được `permit` liên quan; chúng ta sử dụng một phương thức trên `PermitRepository` tiếp nhận `OriginationPermit` và trả về `Permit`. Nếu kho lưu trữ tìm thấy `permit` liên quan, nó sẽ lưu chúng vào trường `permit`. Nếu không, nó sẽ lưu `OriginationPermit` vào trường `permit`. Chúng ta có thể tạo một giao diện cho `OriginationPermit`, nhưng điều đó sẽ không giúp ích gì cả. Chúng ta sẽ phải gán một `IOriginationPermit` cho trường `Permit` và điều đó sẽ không hoạt động. Trong Java, các giao diện không thể kế thừa từ các lớp. Giải pháp rõ ràng nhất là tạo tất cả các giao diện và biến trường `Permit` thành trường `IPermit`. Hình 9.5 cho thấy điều này sẽ trông như thế nào.
 
-Thật đáng sợ. Đó là một khối lượng công việc lố bịch và tôi đặc biệt không thích kết cục của các đoạn code. Các giao diện rất hữu dụng để phá vỡ sự phụ thuộc, nhưng khi liên hệ giữa lớp và giao diện đạt đến mức gần như một đối một, thì sẽ làm thiết kế trở nên lộn xộn. Đừng hiểu sai ý tôi: Nếu không còn lựa chọn nào khác, sẽ tốt hơn nếu tiến tới thiết kế này, nhưng nếu có những khả năng khác, chúng ta nên khám phá chúng. May mắn thay, chúng ta có.
+Thật đáng sợ. Đó là một khối lượng công việc lố bịch và tôi đặc biệt không thích kết cục của các đoạn code. Các giao diện rất hữu dụng để phá bỏ sự phụ thuộc, nhưng khi liên hệ giữa lớp và giao diện đạt đến mức gần như một đối một, thì sẽ làm thiết kế trở nên lộn xộn. Đừng hiểu sai ý tôi: Nếu không còn lựa chọn nào khác, sẽ tốt hơn nếu tiến tới thiết kế này, nhưng nếu có những khả năng khác, chúng ta nên khám phá chúng. May mắn thay, chúng ta có.
 
 ![9.5](images/9/9-5.png)
 Hình 9.5 Phân cấp của `Permit` với các lớp giao diện
 
-_Trích xuất Giao diện (362)_ chỉ là một cách để phá vỡ sự phụ thuộc vào một tham số. Đôi khi sẽ tốt hơn nếu tự hỏi tại sao sự phụ thuộc là xấu. Đôi khi sáng tạo lại là một nỗi đau. Vào những thời điểm khác, tham số lại có tác dụng phụ xấu. Có thể nó giao tiếp với hệ thống tệp hoặc cơ sở dữ liệu. Vào những thời điểm khác nữa, có thể mất quá nhiều thời gian để code của nó chạy. Khi chúng ta sử dụng _Trích xuất Giao diện (362)_, chúng ta có thể vượt qua tất cả các vấn đề này, nhưng chúng ta thực hiện điều đó bằng cách cắt đứt kết nối với một lớp một cách thô bạo. Nếu chỉ có các phần của một lớp là vấn đề, chúng ta có thể thực hiện một cách tiếp cận khác và chỉ cắt đứt kết nối với chúng.
+_Trích xuất Giao diện (362)_ chỉ là một cách để phá bỏ sự phụ thuộc vào một tham số. Đôi khi sẽ tốt hơn nếu tự hỏi tại sao sự phụ thuộc là xấu. Đôi khi sáng tạo lại là một nỗi đau. Vào những thời điểm khác, tham số lại có tác dụng phụ xấu. Có thể nó giao tiếp với hệ thống tệp hoặc cơ sở dữ liệu. Vào những thời điểm khác nữa, có thể mất quá nhiều thời gian để code của nó chạy. Khi chúng ta sử dụng _Trích xuất Giao diện (362)_, chúng ta có thể vượt qua tất cả các vấn đề này, nhưng chúng ta thực hiện điều đó bằng cách cắt đứt kết nối với một lớp một cách thô bạo. Nếu chỉ có các phần của một lớp là vấn đề, chúng ta có thể thực hiện một cách tiếp cận khác và chỉ cắt đứt kết nối với chúng.
 
 Hãy xem xét kỹ hơn về lớp `OriginationPermit`. Chúng ta không muốn sử dụng nó trong kiểm thử vì nó âm thầm truy cập cơ sở dữ liệu khi chúng ta yêu cầu nó tự xác thực:
 
@@ -889,4 +889,4 @@ public void testHasPermits() {
 
 Trong nhiều ngôn ngữ, chúng ta có thể tạo các lớp "nhanh chóng" như thế này trong các phương thức. Mặc dù tôi không thích làm điều đó thường xuyên trong code sản phẩm, nhưng nó rất thuận tiện khi đang kiểm thử. Chúng ta có thể thực hiện các trường hợp đặc biệt rất dễ dàng.
 
-_Lớp con và Phương thức ghi đè (401)_ giúp chúng tôi phá vỡ sự phụ thuộc vào các tham số, nhưng đôi khi việc tính toán các phương thức trong một lớp không phải là lý tưởng cho nó. Chúng ta thật may mắn khi các phần phụ thuộc không được ưa thích đã bị tách biệt trong phương thức xác thực đó. Trong trường hợp xấu hơn, khi trộn lẫn với logic mà chúng ta cần và chúng ta phải trích xuất các phương thức trước. Nếu chúng ta có một công cụ tái cấu trúc, điều đó có thể dễ dàng. Nếu không, một số kỹ thuật trong _Chương 22, Tôi Cần Thay đổi một Phương thức "Quái vật" và Tôi Không thể Viết Kiểm thử cho Nó_, có thể hữu ích.
+_Lớp con và Phương thức ghi đè (401)_ giúp chúng tôi phá bỏ sự phụ thuộc vào các tham số, nhưng đôi khi việc tính toán các phương thức trong một lớp không phải là lý tưởng cho nó. Chúng ta thật may mắn khi các phần phụ thuộc không được ưa thích đã bị tách biệt trong phương thức xác thực đó. Trong trường hợp xấu hơn, khi trộn lẫn với logic mà chúng ta cần và chúng ta phải trích xuất các phương thức trước. Nếu chúng ta có một công cụ tái cấu trúc, điều đó có thể dễ dàng. Nếu không, một số kỹ thuật trong _Chương 22, Tôi Cần Thay đổi một Phương thức "Quái vật" và Tôi Không thể Viết Kiểm thử cho Nó_, có thể hữu ích.

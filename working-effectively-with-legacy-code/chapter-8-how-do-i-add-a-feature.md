@@ -403,7 +403,7 @@ public class AnonymousMessageForwarder extends MessageForwarder
 
 Chắc chắn, chúng làm được.
 
-Chúng ta không cần lớp `AnonymousMessageForwarder` nữa, vì vậy chúng ta có thể xóa nó. Sau đó, chúng ta phải tìm từng nơi mà chúng ta tạo một `AnonymousMessageForwarder` và thay thế lời gọi hàm tạo của nó bằng một lời gọi hàm tạo chấp nhận một bộ sưu tập thuộc tính.
+Chúng ta không cần lớp `AnonymousMessageForwarder` nữa, vì vậy chúng ta có thể xóa nó. Sau đó, chúng ta phải tìm từng nơi mà chúng ta tạo một `AnonymousMessageForwarder` và thay thế lệnh gọi hàm tạo của nó bằng một lệnh gọi hàm tạo chấp nhận một bộ sưu tập thuộc tính.
 
 Chúng ta cũng có thể sử dụng bộ sưu tập thuộc tính để thêm tính năng mới. Chúng ta có thể có một thuộc tính kích hoạt tính năng người nhận ngoài danh sách.
 
@@ -472,7 +472,7 @@ _Lập trình theo sự khác biệt_ là một kỹ thuật hữu ích. Nó cho
 > Nguyên tắc thay thế Liskov
 > Có một số lỗi thầm lặng chúng ta có thể gây ra khi sử dụng kế thừa.
 > Hãy xem xét đoạn mã sau:
-> 
+>
 > ```java
 > public class Rectangle
 > {
@@ -507,9 +507,9 @@ _Lập trình theo sự khác biệt_ là một kỹ thuật hữu ích. Nó cho
 >
 > Đây là một ví dụ điển hình về việc vi phạm Nguyên tắc thay thế Liskov (LSP). Các đối tượng của các lớp con phải được thay thế cho các đối tượng của các lớp cha của chúng trong toàn bộ code của chúng ta. Nếu không, chúng ta có thể có lỗi thầm lặng trong code của mình.
 
-LSP ngụ ý rằng các lời gọi của một lớp có thể sử dụng đối tượng của một lớp con mà không cần biết rằng chúng là các đối tượng của một lớp con. Không có bất kỳ cách cơ học nào để tránh hoàn toàn vi phạm LSP. Việc một lớp có tuân thủ LSP hay không phụ thuộc vào các lời gọi mà nó có và những gì họ mong đợi. Tuy nhiên, một số quy tắc theo kinh nghiệm như sau:
+LSP ngụ ý rằng các lệnh gọi của một lớp có thể sử dụng đối tượng của một lớp con mà không cần biết rằng chúng là các đối tượng của một lớp con. Không có bất kỳ cách cơ học nào để tránh hoàn toàn vi phạm LSP. Việc một lớp có tuân thủ LSP hay không phụ thuộc vào các lệnh gọi mà nó có và những gì họ mong đợi. Tuy nhiên, một số quy tắc theo kinh nghiệm như sau:
 1. Bất cứ khi nào có thể, tránh ghi đè các phương pháp cụ thể.
-2. Nếu bạn buộc phải làm như vậy, hãy xem liệu bạn có thể gọi phương thức bạn đang ghi đè trong phương thức ghi đè không 
+2. Nếu bạn buộc phải làm như vậy, hãy xem liệu bạn có thể gọi phương thức bạn đang ghi đè trong phương thức ghi đè không
 
 Đợi đã, chúng ta không làm những điều trên với `MessageForwarder`. Trên thực tế, chúng ta lại làm ngược lại. Chúng ta đã ghi đè một phương thức cụ thể trong một lớp con `(AnonymousMessageForwarder)`. Vấn đề ở đây là gì?
 
