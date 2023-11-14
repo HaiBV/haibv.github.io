@@ -1053,3 +1053,47 @@ Hình 25.3 Sau khi _Trích xuất Trình triển khai_ với `Node`
 Hình 25.4 Sau khi _Trích xuất Trình triển khai_ với `ModelNode`
 
 Khi bạn có một lớp được nhúng trong một hệ thống phân cấp như thế này, bạn thực sự phải cân nhắc xem liệu bạn có nên sử dụng _Trích xuất Giao diện (362)_ và chọn các tên khác nhau cho giao diện của mình hay không. Đó là một sự tái cấu trúc trực tiếp hơn nhiều.
+
+## Trích xuất Giao diện
+
+Trong nhiều ngôn ngữ, _Trích xuất Giao diện_ là một trong những kỹ thuật phá bỏ sự phụ thuộc an toàn nhất. Nếu bạn sai một bước, trình biên dịch sẽ thông báo cho bạn ngay lập tức, do đó có rất ít khả năng xảy ra lỗi. Ý chính của nó là bạn tạo một giao diện cho một lớp với các khai báo cho tất cả các phương thức mà bạn muốn sử dụng trong một số ngữ cảnh. Khi thực hiện xong việc đó, bạn có thể triển khai giao diện để nhận biết hoặc phân tách, chuyển một đối tượng giả vào lớp bạn muốn kiểm thử.
+
+Có ba cách để thực hiện _Trích xuất Giao diện_ và một số vấn đề nhỏ cần chú ý. Cách đầu tiên là sử dụng hỗ trợ tái cấu trúc tự động nếu bạn đủ may mắn để có nó trong môi trường của mình. Các công cụ hỗ trợ này thường cung cấp một số cách chọn phương thức trên một lớp và nhập tên của giao diện mới. Những công cụ thực sự tốt sẽ hỏi bạn xem bạn có muốn chúng tìm kiếm trong code những nơi có thể thay đổi tham chiếu để sử dụng giao diện mới hay không. Một công cụ như thế có thể giúp bạn tiết kiệm rất nhiều công sức.
+
+Nếu bạn không có hỗ trợ tự động cho việc trích xuất giao diện, bạn có thể sử dụng cách thứ hai: Trích xuất nó dần dần bằng cách sử dụng các bước tôi phác thảo trong phần này.
+
+Cách thứ ba để trích xuất một giao diện là cắt/sao chép và dán một số phương thức từ một lớp cùng một lúc và đặt các khai báo của chúng vào một giao diện. Nó không an toàn như hai phương pháp đầu tiên, nhưng nó vẫn khá an toàn và thường đó là cách thực tế duy nhất để trích xuất giao diện khi bạn không có hỗ trợ tự động và quá trình xây dựng của bạn mất rất nhiều thời gian.
+
+Hãy trích xuất một giao diện bằng phương pháp thứ hai. Trong quá trình đó, chúng ta sẽ thảo luận về một số điều cần chú ý.
+
+Chúng ta cần trích xuất một giao diện để kiểm thử lớp `PaydayTransaction`. Hình 25.5 cho thấy `PaydayTransaction` và một trong những phần phụ thuộc của nó, một lớp có tên là `TransactionLog`.
+
+![25.5](images/25/25-5.png)
+Hình 25.5 `PaydayTransaction` phụ thuộc vào `TransactionLog`
+
+Chúng ta có trường hợp kiểm thử như sau:
+
+```java
+void testPayday()
+{
+	Transaction t = new PaydayTransaction(getTestingDatabase());
+	t.run();
+	assertEquals(getSampleCheck(12), getTestingDatabase().findCheck(12));
+}
+```
+
+Nhưng chúng ta phải truyền một biến kiểu `TransactionLog` để biên dịch nó. Hãy tạo một lệnh gọi đến một lớp chưa tồn tại, `FakeTransactionLog`.
+
+```java
+void testPayday()
+{
+	FakeTransactionLog aLog = new FakeTransactionLog();
+	Transaction t = new PaydayTransaction(getTestingDatabase(), aLog);
+	t.run();
+	assertEquals(getSampleCheck(12), getTestingDatabase().findCheck(12));
+}
+```
+
+Để biên dịch code này, chúng ta phải trích xuất một giao diện cho lớp `TransactionLog`, tạo một lớp có tên `FakeTransactionLog` triển khai giao diện và sau đó giúp `PaydayTransaction` có thể chấp nhận `FakeTransactionLog`.
+
+Điều đầu tiên trước tiên: Chúng ta trích xuất giao diện. Chúng ta tạo một lớp trống mới gọi là `TransactionRecorder`. Nếu bạn đang thắc mắc cái tên đó đến từ đâu, hãy xem ghi chú sau.
