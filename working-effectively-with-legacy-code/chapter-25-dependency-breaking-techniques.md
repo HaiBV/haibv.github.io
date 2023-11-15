@@ -196,7 +196,7 @@ public:
   : brush(brush), renderingRoots(renderingRoots), colors(colors), selection(selection)
   {}
 
-	void draw();
+  void draw();
 }
 ```
 
@@ -205,12 +205,12 @@ Bây giờ chúng ta thêm phần thân của phương thức `draw()` vào `Ren
 ```cpp
 void Renderer::draw()
 {
-	for(vector<points>::iterator it = renderingRoots.begin(); it != renderingRoots.end(); ++it) {
-		point p = *it;
-		...
-		drawPoint(p.x, p.y, colors[n]);
-	}
-	...
+  for(vector<points>::iterator it = renderingRoots.begin(); it != renderingRoots.end(); ++it) {
+    point p = *it;
+    ...
+    drawPoint(p.x, p.y, colors[n]);
+  }
+  ...
 }
 ```
 
@@ -221,8 +221,8 @@ Bây giờ chúng ta có thể ủy quyền phương thức `draw` của `GDIBru
 ```cpp
 void GDIBrush::draw(vector<point>& renderingRoots, ColorMatrix &colors, vector<point>& selection)
 {
-	Renderer renderer(this, renderingRoots, colors, selection);
-	renderer.draw();
+  Renderer renderer(this, renderingRoots, colors, selection);
+  renderer.draw();
 }
 ```
 
@@ -231,40 +231,40 @@ Bây giờ quay lại phần phụ thuộc `GDIBrush`. Nếu không thể khởi
 ```cpp
 class PointRenderer
 {
-	public:
-		virtual void drawPoint(int x, int y, COLOR color) = 0;
+  public:
+    virtual void drawPoint(int x, int y, COLOR color) = 0;
 };
 
 class GDIBrush : public PointRenderer
 {
-	public:
-		void drawPoint(int x, int y, COLOR color);
-	...
+  public:
+    void drawPoint(int x, int y, COLOR color);
+  ...
 }
 class Renderer
 {
-	private:
-		PointRender *pointRenderer;
-		vector<point>& renderingRoots;
-		ColorMatrix& colors;
-		vector<point>& selection;
+  private:
+    PointRender *pointRenderer;
+    vector<point>& renderingRoots;
+    ColorMatrix& colors;
+    vector<point>& selection;
 
-	public:
-		Renderer(PointRenderer *renderer, vector<point>& renderingRoots, ColorMatrix& colors, vector<point>& selection)
-		: pointRenderer(pointRenderer), renderingRoots(renderingRoots) colors(colors), selection(selection)
-		{}
+  public:
+    Renderer(PointRenderer *renderer, vector<point>& renderingRoots, ColorMatrix& colors, vector<point>& selection)
+    : pointRenderer(pointRenderer), renderingRoots(renderingRoots) colors(colors), selection(selection)
+    {}
 
-	void draw();
+  void draw();
 };
 
 void Renderer::draw()
 {
-	for(vector<points>::iterator it = renderingRoots.begin(); it != renderingRoots.end(); ++it) {
-		point p = *it;
-		...
-		pointRenderer->drawPoint(p.x,p.y,colors[n]);
-	}
-	...
+  for(vector<points>::iterator it = renderingRoots.begin(); it != renderingRoots.end(); ++it) {
+    point p = *it;
+    ...
+    pointRenderer->drawPoint(p.x,p.y,colors[n]);
+  }
+  ...
 }
 ```
 
@@ -380,18 +380,18 @@ bool AGG230_suspendedframe[AGG230_SIZE];
 
 void AGGController::suspend_frame()
 {
-	frame_copy(AGG230_suspendedframe,
-	AGG230_activeframe);
-	clear(AGG230_activeframe);
-	flush_frame_buffers();
+  frame_copy(AGG230_suspendedframe,
+  AGG230_activeframe);
+  clear(AGG230_activeframe);
+  flush_frame_buffers();
 }
 
 void AGGController::flush_frame_buffers()
 {
-	for (int n = 0; n < AGG230_SIZE; ++n) {
-		AGG230_activeframe[n] = false;
-		AGG230_suspendedframe[n] = false;
-	}
+  for (int n = 0; n < AGG230_SIZE; ++n) {
+    AGG230_activeframe[n] = false;
+    AGG230_suspendedframe[n] = false;
+  }
 }
 ```
 
@@ -419,10 +419,10 @@ Trong ví dụ trước, tôi mong đợi rằng, theo thời gian, các phươn
 class Frame
 {
 public:
-	// declare AGG230_SIZE as a constant
-	enum { AGG230_SIZE = 256 };
-	bool AGG230_activeframe[AGG230_SIZE];
-	bool AGG230_suspendedframe[AGG230_SIZE];
+  // declare AGG230_SIZE as a constant
+  enum { AGG230_SIZE = 256 };
+  bool AGG230_activeframe[AGG230_SIZE];
+  bool AGG230_suspendedframe[AGG230_SIZE];
 }
 ```
 
@@ -446,10 +446,10 @@ Vào lúc này, chúng ta nhận được tất cả các loại lỗi biên d�
 ```cpp
 void AGGController::suspend_frame()
 {
-	frame_copy(frameForAGG230.AGG230_suspendedframe,
-	frameForAGG230.AGG230_activeframe);
-	clear(frameForAGG20.AGG230_activeframe);
-	flush_frame_buffer();
+  frame_copy(frameForAGG230.AGG230_suspendedframe,
+  frameForAGG230.AGG230_activeframe);
+  clear(frameForAGG20.AGG230_activeframe);
+  flush_frame_buffer();
 }
 ```
 
@@ -465,18 +465,18 @@ Khi chuyển `frame` vào `AGGController`, chúng ta có thể đổi tên một
 class Frame
 {
 public:
-	enum { BUFFER_SIZE = 256 };
-	bool activebuffer[BUFFER_SIZE];
-	bool suspendedbuffer[BUFFER_SIZE];
+  enum { BUFFER_SIZE = 256 };
+  bool activebuffer[BUFFER_SIZE];
+  bool suspendedbuffer[BUFFER_SIZE];
 };
 
 Frame frameForAGG230;
 
 void AGGController::suspend_frame()
 {
-	frame_copy(frame.suspendedbuffer, frame.activebuffer);
-	clear(frame.activeframe);
-	flush_frame_buffer();
+  frame_copy(frame.suspendedbuffer, frame.activebuffer);
+  clear(frame.activeframe);
+  flush_frame_buffer();
 }
 ```
 
@@ -491,13 +491,13 @@ Trong một đoạn code mà chúng ta muốn kiểm thử, có các lệnh gọ
 ```cpp
 void ColumnModel::update()
 {
-	alignRows();
-	Option resizeWidth = ::GetOption("ResizeWidth");
-	if (resizeWidth.isTrue()) {
-		resize();
-	} else {
-		resizeToDefault();
-	}
+  alignRows();
+  Option resizeWidth = ::GetOption("ResizeWidth");
+  if (resizeWidth.isTrue()) {
+    resize();
+  } else {
+    resizeToDefault();
+  }
 }
 ```
 
@@ -605,16 +605,16 @@ Khi một phương thức là static, bạn biết rằng nó không truy cập 
 
 ```java
 public class RSCWorkflow {
-	public void validate(Packet packet) throws InvalidFlowException {
-		validatePacket(packet);
-	}
-	public static void validatePacket(Packet packet) throws InvalidFlowException {
-		if (packet.getOriginator() == "MIA" || packet.getLength() <= MAX_LENGTH || packet.hasValidCheckSum()) {
-			throw new InvalidFlowException();
-		}
-		...
-	}
-	...
+  public void validate(Packet packet) throws InvalidFlowException {
+    validatePacket(packet);
+  }
+  public static void validatePacket(Packet packet) throws InvalidFlowException {
+    if (packet.getOriginator() == "MIA" || packet.getLength() <= MAX_LENGTH || packet.hasValidCheckSum()) {
+      throw new InvalidFlowException();
+    }
+    ...
+  }
+  ...
 }
 ```
 
@@ -633,19 +633,15 @@ Nếu bạn lo ngại rằng ai đó có thể bắt đầu sử dụng tĩnh th
 
 ### Các bước thực hiện
 
-Để hiển thị _Trích xuất Phương thức Tĩnh_, hãy làm theo các bước sau:
+Để thực hiện _Trích xuất Phương thức Tĩnh_, hãy làm theo các bước sau:
 
 1. Viết một kiểm thử truy cập vào phương thức mà bạn muốn hiển thị dưới dạng phương thức tĩnh công khai của lớp.
-
-Để hiển thị phương thức tĩnh, hãy làm theo các bước sau:
-1. Viết một bài kiểm tra truy cập vào phương thức mà bạn muốn hiển thị dưới dạng phương thức tĩnh công khai của lớp.
 
 2. Trích xuất phần thân của phương thức thành một phương thức tĩnh. Hãy nhớ _Bảo toàn Chữ ký (312)_. Bạn sẽ phải sử dụng một tên khác cho phương thức. Thông thường có thể sử dụng tên của các tham số để giúp bạn nghĩ ra tên phương thức mới. Ví dụ: nếu một phương thức có tên `validate` có tham số là một `Packer`, bạn có thể trích xuất phần thân của nó dưới dạng một phương thức tĩnh có tên `validatePacket`.
 
 3. Biên dịch.
 
 4. Nếu có lỗi liên quan đến việc truy cập dữ liệu hoặc phương thức thực thể, hãy xem các tính năng đó và xem liệu chúng có thể được đặt ở trạng thái tĩnh hay không. Nếu có thể, hãy đặt chúng ở trạng thái tĩnh để hệ thống biên dịch.
-
 
 ## Trích xuất và Ghi đè Lệnh gọi
 
@@ -656,15 +652,15 @@ Hãy xem một ví dụ:
 ```java
 public class PageLayout
 {
-	private int id = 0;
-	private List styles;
-	private StyleTemplate template;
-	...
-	protected void rebindStyles() {
-		styles = StyleMaster.formStyles(template, id);
-		...
-	}
-	...
+  private int id = 0;
+  private List styles;
+  private StyleTemplate template;
+  ...
+  protected void rebindStyles() {
+    styles = StyleMaster.formStyles(template, id);
+    ...
+  }
+  ...
 }
 ```
 
@@ -675,19 +671,19 @@ public class PageLayout
 ```java
 public class PageLayout
 {
-	private int id = 0;
-	private List styles;
-	private StyleTemplate template;
-	...
-	protected void rebindStyles() {
-		styles = formStyles(template, id);
-		...
-	}
+  private int id = 0;
+  private List styles;
+  private StyleTemplate template;
+  ...
+  protected void rebindStyles() {
+    styles = formStyles(template, id);
+    ...
+  }
 
-	protected List formStyles(StyleTemplate template, int id) {
-		return StyleMaster.formStyles(template, id);
-	}
-	...
+  protected List formStyles(StyleTemplate template, int id) {
+    return StyleMaster.formStyles(template, id);
+  }
+  ...
 }
 ```
 
@@ -695,10 +691,10 @@ Bây giờ chúng ta đã có phương thức `formStyles` cục bộ của riê
 
 ```java
 public class TestingPageLayout extends PageLayout {
-	protected List formStyles(StyleTemplate template, int id) {
-		return new ArrayList();
-	}
-	...
+  protected List formStyles(StyleTemplate template, int id) {
+    return new ArrayList();
+  }
+  ...
 }
 ```
 
@@ -729,13 +725,13 @@ Hãy xem xét ví dụ dưới đây:
 ```java
 public class WorkflowEngine
 {
-	public WorkflowEngine () {
-		Reader reader = new ModelReader(AppConfig.getDryConfiguration());
-		Persister persister = new XMLStore(AppConfiguration.getDryConfiguration());
-		this.tm = new TransactionManager(reader, persister);
-		...
-	}
-	...
+  public WorkflowEngine () {
+    Reader reader = new ModelReader(AppConfig.getDryConfiguration());
+    Persister persister = new XMLStore(AppConfiguration.getDryConfiguration());
+    this.tm = new TransactionManager(reader, persister);
+    ...
+  }
+  ...
 }
 ```
 
@@ -746,17 +742,17 @@ public class WorkflowEngine
 ```java
 public class WorkflowEngine
 {
-	public WorkflowEngine () {
-		this.tm = makeTransactionManager();
-		...
-	}
+  public WorkflowEngine () {
+    this.tm = makeTransactionManager();
+    ...
+  }
 
-	protected TransactionManager makeTransactionManager() {
-		Reader reader = new ModelReader(AppConfiguration.getDryConfiguration());
-		Persister persister = new XMLStore(AppConfiguration.getDryConfiguration());
-		return new TransactionManager(reader, persister);
-	}
-	...
+  protected TransactionManager makeTransactionManager() {
+    Reader reader = new ModelReader(AppConfiguration.getDryConfiguration());
+    Persister persister = new XMLStore(AppConfiguration.getDryConfiguration());
+    return new TransactionManager(reader, persister);
+  }
+  ...
 }
 ```
 
@@ -765,9 +761,9 @@ Khi có phương thức chế tạo đó, chúng ta có thể phân lớp và gh
 ```java
 public class TestWorkflowEngine extends WorkflowEngine
 {
-	protected TransactionManager makeTransactionManager() {
-		return new FakeTransactionManager();
-	}
+  protected TransactionManager makeTransactionManager() {
+    return new FakeTransactionManager();
+  }
 }
 ```
 
@@ -795,20 +791,20 @@ Trong ví dụ này, chúng ta tạo một trình quản lý giao dịch (transa
 // WorkflowEngine.h
 class WorkflowEngine
 {
-	private:
-		TransactionManager *tm;
-	public:
-		WorkflowEngine ();
-	...
+  private:
+    TransactionManager *tm;
+  public:
+    WorkflowEngine ();
+  ...
 }
 
 // WorkflowEngine.cpp
 WorkflowEngine::WorkflowEngine()
 {
-	Reader *reader = new ModelReader(AppConfig.getDryConfiguration());
-	Persister *persister = new XMLStore(AppConfiguration.getDryConfiguration());
-	tm = new TransactionManager(reader, persister);
-	...
+  Reader *reader = new ModelReader(AppConfig.getDryConfiguration());
+  Persister *persister = new XMLStore(AppConfiguration.getDryConfiguration());
+  tm = new TransactionManager(reader, persister);
+  ...
 }
 ```
 
@@ -819,11 +815,11 @@ Và đây là những gì chúng ta thu được:
 class WorkflowEngine
 {
 private:
-	TransactionManager *tm;
+  TransactionManager *tm;
 protected:
-	TransactionManager *getTransaction() const;
+  TransactionManager *getTransaction() const;
 public:
-	WorkflowEngine ();
+  WorkflowEngine ();
 ...
 }
 
@@ -831,17 +827,17 @@ public:
 WorkflowEngine::WorkflowEngine()
 :tm (0)
 {
-	...
+  ...
 }
 
 TransactionManager *getTransactionManager() const
 {
-	if (tm == 0) {
-		Reader *reader = new ModelReader(AppConfig.getDryConfiguration());
-		Persister *persister = new XMLStore(AppConfiguration.getDryConfiguration());
-		tm = new TransactionManager(reader,persister);
-	}
-	return tm;
+  if (tm == 0) {
+    Reader *reader = new ModelReader(AppConfig.getDryConfiguration());
+    Persister *persister = new XMLStore(AppConfiguration.getDryConfiguration());
+    tm = new TransactionManager(reader,persister);
+  }
+  return tm;
 }
 ...
 ```
@@ -880,9 +876,9 @@ Trong quá trình kiểm thử, chúng ta có thể dễ dàng truy cập trình
 ```cpp
 TEST(transactionCount, WorkflowEngine)
 {
-	auto_ptr<TestWorkflowEngine> engine(new TestWorkflowEngine);
-	engine.run();
-	LONGS_EQUAL(0, engine.transactionManager.getTransactionCount());
+  auto_ptr<TestWorkflowEngine> engine(new TestWorkflowEngine);
+  engine.run();
+  LONGS_EQUAL(0, engine.transactionManager.getTransactionCount());
 }
 ```
 
@@ -927,16 +923,16 @@ Khi tên của một lớp hoàn hảo cho tên của một giao diện và tôi
 class ModelNode
 {
 private:
-	list<ModelNode *> m_interiorNodes;
-	list<ModelNode *> m_exteriorNodes;
-	double m_weight;
-	void createSpanningLinks();
+  list<ModelNode *> m_interiorNodes;
+  list<ModelNode *> m_exteriorNodes;
+  double m_weight;
+  void createSpanningLinks();
 
 public:
-	void addExteriorNode(ModelNode *newNode);
-	void addInternalNode(ModelNode *newNode);
-	void colorize();
-	...
+  void addExteriorNode(ModelNode *newNode);
+  void addInternalNode(ModelNode *newNode);
+  void colorize();
+  ...
 }
 ```
 
@@ -947,15 +943,15 @@ Bước đầu tiên là sao chép toàn bộ phần khai báo của lớp `Mode
 class ProductionModeNode
 {
 private:
-	list<ModelNode *> m_interiorNodes;
-	list<ModelNode *> m_exteriorNodes;
-	double m_weight;
-	void createSpanningLinks();
+  list<ModelNode *> m_interiorNodes;
+  list<ModelNode *> m_exteriorNodes;
+  double m_weight;
+  void createSpanningLinks();
 public:
-	void addExteriorNode(ModelNode *newNode);
-	void addInternalNode(ModelNode *newNode);
-	void colorize();
-	...
+  void addExteriorNode(ModelNode *newNode);
+  void addInternalNode(ModelNode *newNode);
+  void colorize();
+  ...
 }
 ```
 
@@ -966,10 +962,10 @@ Bước tiếp theo là quay lại tiêu đề `ModelNode` và loại bỏ tất
 class ModelNode
 {
 public:
-	virtual void addExteriorNode(ModelNode *newNode) = 0;
-	virtual void addInternalNode(ModelNode *newNode) = 0;
-	virtual void colorize() = 0;
-	...
+  virtual void addExteriorNode(ModelNode *newNode) = 0;
+  virtual void addInternalNode(ModelNode *newNode) = 0;
+  virtual void colorize() = 0;
+  ...
 }
 ```
 
@@ -980,11 +976,11 @@ Tại thời điểm này, `ModelNode` là một giao diện thuần túy. Nó c
 class ModelNode
 {
 public:
-	virtual ~ModelNode () = 0;
-	virtual void addExteriorNode(ModelNode *newNode) = 0;
-	virtual void addInternalNode(ModelNode *newNode) = 0;
-	virtual void colorize() = 0;
-	...
+  virtual ~ModelNode () = 0;
+  virtual void addExteriorNode(ModelNode *newNode) = 0;
+  virtual void addInternalNode(ModelNode *newNode) = 0;
+  virtual void colorize() = 0;
+  ...
 };
 // ModelNode.cpp
 ModelNode::~ModelNode() {}
@@ -997,16 +993,16 @@ Bây giờ chúng ta quay lại lớp `ProductionModelNode` và cho nó kế th�
 class ProductionModelNode : public ModelNode
 {
 private:
-	list<ModelNode *> m_interiorNodes;
-	list<ModelNode *> m_exteriorNodes;
-	double m_weight;
-	void createSpanningLinks();
+  list<ModelNode *> m_interiorNodes;
+  list<ModelNode *> m_exteriorNodes;
+  double m_weight;
+  void createSpanningLinks();
 
 public:
-	void addExteriorNode(ModelNode *newNode);
-	void addInternalNode(ModelNode *newNode);
-	void colorize();
-	...
+  void addExteriorNode(ModelNode *newNode);
+  void addInternalNode(ModelNode *newNode);
+  void colorize();
+  ...
 }
 ```
 
@@ -1076,9 +1072,9 @@ Chúng ta có trường hợp kiểm thử như sau:
 ```java
 void testPayday()
 {
-	Transaction t = new PaydayTransaction(getTestingDatabase());
-	t.run();
-	assertEquals(getSampleCheck(12), getTestingDatabase().findCheck(12));
+  Transaction t = new PaydayTransaction(getTestingDatabase());
+  t.run();
+  assertEquals(getSampleCheck(12), getTestingDatabase().findCheck(12));
 }
 ```
 
@@ -1087,13 +1083,107 @@ Nhưng chúng ta phải truyền một biến kiểu `TransactionLog` để biê
 ```java
 void testPayday()
 {
-	FakeTransactionLog aLog = new FakeTransactionLog();
-	Transaction t = new PaydayTransaction(getTestingDatabase(), aLog);
-	t.run();
-	assertEquals(getSampleCheck(12), getTestingDatabase().findCheck(12));
+  FakeTransactionLog aLog = new FakeTransactionLog();
+  Transaction t = new PaydayTransaction(getTestingDatabase(), aLog);
+  t.run();
+  assertEquals(getSampleCheck(12), getTestingDatabase().findCheck(12));
 }
 ```
 
 Để biên dịch code này, chúng ta phải trích xuất một giao diện cho lớp `TransactionLog`, tạo một lớp có tên `FakeTransactionLog` triển khai giao diện và sau đó giúp `PaydayTransaction` có thể chấp nhận `FakeTransactionLog`.
 
 Điều đầu tiên trước tiên: Chúng ta trích xuất giao diện. Chúng ta tạo một lớp trống mới gọi là `TransactionRecorder`. Nếu bạn đang thắc mắc cái tên đó đến từ đâu, hãy xem ghi chú sau.
+
+> ### Đặt tên giao diện
+>
+> Các giao diện tương đối mới giống như cấu trúc lập trình. Java và nhiều ngôn ngữ .NET có chúng. Trong C++, bạn phải bắt chước chúng bằng cách tạo một lớp không chứa gì ngoài các hàm ảo thuần túy.
+>
+> Khi các giao diện lần đầu tiên được giới thiệu trong các ngôn ngữ, một số người bắt đầu đặt tên cho các giao diện bằng cách đặt chữ `I` trước tên của lớp mà chúng được thu thập. Ví dụ: nếu bạn có một lớp `Account` và muốn có một giao diện, bạn có thể đặt tên cho nó là `IAccount`. Ưu điểm của cách đặt tên này là bạn không thực sự phải suy nghĩ về tên khi thực hiện trích xuất. Việc đặt tên cũng đơn giản như việc thêm tiền tố. Điều bất lợi là bạn sẽ phải đối mặt với rất nhiều code phải biết liệu nó có đang xử lý một giao diện hay không. Lý tưởng nhất là nó không nên quan tâm theo cách này hay cách khác. Bạn cũng kết thúc với một codebase trong đó một số tên có tiền tố `I` và một số thì không. Việc loại bỏ chữ `I` nếu bạn muốn quay lại lớp bình thường sẽ là một sự thay đổi lan rộng. Nếu bạn không thực hiện thay đổi, tên vẫn còn trong code như một lời nói dối tinh vi.
+>
+> Khi bạn đang phát triển các lớp mới, điều dễ dàng nhất cần làm là tạo các tên lớp đơn giản, ngay cả đối với những khái niệm trừu tượng lớn. Ví dụ: nếu chúng ta đang viết một gói kế toán, chúng ta có thể bắt đầu với một lớp có tên là `Account`. Sau đó chúng ta có thể bắt đầu viết kiểm thử để thêm chức năng mới. Tại một thời điểm nào đó, bạn có thể muốn `Account` trở thành một giao diện. Nếu muốn, bạn có thể tạo một lớp con bên dưới nó, đẩy xuống tất cả dữ liệu và phương thức, đồng thời biến `Account` thành một giao diện. Khi làm điều đó, bạn không cần phải thực hiện đổi tên kiểu của mọi tham chiếu thành `Account`.
+>
+> Trong các trường hợp như ví dụ về `PaydayTransaction`, trong đó chúng ta đã có một tên hay cho giao diện `(TransactionLog)`, chúng ta có thể thực hiện điều tương tự. Nhược điểm là việc đẩy dữ liệu và phương thức xuống một lớp con mới cần rất nhiều bước. Nhưng khi rủi ro đủ nhỏ, đôi khi tôi sẽ sử dụng nó. Kỹ thuật này được gọi là _Trích xuất Trình triển khai (356)_.
+>
+> Nếu tôi không có nhiều kiểm thử và tôi muốn trích xuất một giao diện để phù hợp hơn, tôi thường cố gắng nghĩ ra một tên mới cho giao diện đó. Đôi khi phải mất một chút thời gian để nghĩ ra một cái tên. Nếu bạn không có công cụ đổi tên các lớp cho mình, bạn nên cố gắng củng cố tên mà bạn muốn sử dụng trước khi số lượng lệnh gọi sử dụng nó tăng quá lớn.
+
+```java
+interface TransactionRecorder
+{ }
+```
+
+Bây giờ hãy quay lại ví dụ và làm cho `TransactionLog` triển khai giao diện mới
+
+```java
+public class TransactionLog implements TransactionRecorder
+{
+  ...
+}
+```
+
+Tiếp theo, chúng ta tạo `FakeTransactionLog` dưới dạng một lớp trống.
+
+```java
+public class FakeTransactionLog implements TransactionRecorder
+{}
+```
+
+Mọi thứ biên dịch tốt vì tất cả những gì chúng ta đã làm là sử dụng một vài lớp mới và thay đổi một lớp để nó triển khai một giao diện trống.
+
+Lúc này, chúng ta bắt đầu toàn lực tái cấu trúc. Chúng ta thay đổi kiểu của từng tham chiếu ở những nơi muốn sử dụng giao diện. `PaydayTransaction` sử dụng `TransactionLog`; chúng ta cần thay đổi để nó sử dụng `TransactionRecorder`. Khi thực hiện điều đó, khi biên dịch, chúng ta tìm thấy một loạt trường hợp trong đó các phương thức được gọi từ `TransactionRecorder` và chúng tôi có thể loại bỏ từng lỗi một bằng cách thêm các khai báo phương thức vào giao diện `TransactionRecorder` và các định nghĩa phương thức trống vào `FakeTransactionLog`.
+
+Đây là một ví dụ:
+
+```java
+public class PaydayTransaction extends Transaction
+{
+  public PaydayTransaction(PayrollDatabase db, TransactionRecorder log) {
+    super(db, log);
+  }
+
+  public void run() {
+    for(Iterator it = db.getEmployees(); it.hasNext(); ) {
+      Employee e = (Employee)it.next();
+      if (e.isPayday(date)) {
+        e.pay();
+      }
+    }
+    log.saveTransaction(this);
+  }
+  ...
+}
+```
+
+Trong trường hợp này, phương thức duy nhất mà chúng ta đang gọi trên `TransactionRecorder` là `saveTransaction`. Vì `TransactionRecorder` chưa có phương thức `saveTransaction` nên chúng ta gặp lỗi biên dịch. Chúng ta có thể biên dịch kiểm thử của mình chỉ bằng cách thêm phương thức đó vào `TransactionRecorder` và `FakeTransactionLog`
+
+```java
+interface TransactionRecorder
+{
+  void saveTransaction(Transaction transaction);
+}
+
+public class FakeTransactionLog implements TransactionRecorder
+{
+  void saveTransaction(Transaction transaction) {
+  }
+}
+```
+
+Và chúng ta đã hoàn thành. Chúng tôi không còn phải tạo _TransactionLog_ thực trong các kiểm thử của mình nữa.
+
+Bạn có thể nhìn vào điều này và nói, "Chà, nó chưa thực sự xong đâu; chúng ta chưa thêm phương thức `recordError` vào giao diện và giả lập." Đúng, phương thức `recordError` có trong `TransactionLog`. Nếu chúng ta cần trích xuất toàn bộ giao diện, chúng ta cũng có thể sử dụng nó trên giao diện, nhưng thực tế là chúng ta không cần nó để kiểm thử. Mặc dù thật tuyệt khi có một giao diện bao gồm tất cả các phương thức công khai của một lớp, nhưng nếu chúng ta đi theo hướng đó, chúng ta có thể sẽ phải làm nhiều việc hơn mức cần thiết để kiểm thử một phần của ứng dụng. Nếu bạn quan tâm đến một thiết kế trong đó một số khái niệm trừu tượng chính nhất định có giao diện bao gồm hoàn toàn một tập hợp các phương thức công khai trên các lớp của chúng, hãy nhớ rằng bạn có thể đạt được điều đó theo từng bước. Đôi khi, tốt hơn là nên trì hoãn cho đến khi bạn có thể nhận được nhiều kiểm thử hơn trước khi thực hiện một thay đổi sâu rộng.
+
+> Khi trích xuất một giao diện, bạn không phải trích xuất tất cả các phương thức công khai của lớp bạn đang trích xuất. _Dựa vào Trình biên dịch (315)_ để tìm những cái đang được sử dụng
+
+Phần khó khăn duy nhất xảy ra khi bạn xử lý các phương thức không ảo. Trong Java, đây có thể là các phương thức tĩnh. Các ngôn ngữ như C# và C++ cũng cho phép các phương thức phiên bản không ảo. Để biết thêm chi tiết về cách xử lý những vấn đề này, hãy xem phần đi kèm
+
+### Các bước thực hiện
+
+Để _Trích xuất Giao diện_, hãy làm theo các bước sau:
+
+1. Tạo giao diện mới với tên bạn muốn sử dụng. Đừng thêm bất kỳ phương thức nào vào nó.
+
+2. Tạo lớp mà bạn đang trích xuất triển khai giao diện. Điều này không thể phá vỡ bất cứ điều gì vì giao diện không có bất kỳ phương thức nào. Nhưng tốt nhất bạn nên biên dịch và chạy kiểm thử của mình chỉ để xác minh điều đó.
+
+3. Thay đổi nơi bạn muốn sử dụng đối tượng để nó sử dụng giao diện thay vì lớp ban đầu.
+
+4. Biên dịch hệ thống và sử dụng một phương thức khai báo mới trên giao diện cho mỗi phương thức sử dụng mà trình biên dịch báo cáo là lỗi.
