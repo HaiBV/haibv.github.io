@@ -846,13 +846,14 @@ TransactionManager *getTransactionManager() const
 
 > Một _lazy getter_ là một phương thức trông giống như một getter bình thường đối với tất cả lệnh gọi của nó. Sự khác biệt chính ở đây là _lazy getter_ tạo ra đối tượng mà chúng phải trả về ngay trong lần đầu tiên được gọi. Để làm điều này, chúng thường chứa logic trông như thế này. Lưu ý cách biến `instance` được khởi tạo
 >
-> ```
+> ```java
 > Thing getThing() {
 >   if (thing == null) {
 >     thing = new Thing();
 >   }
 >   return thing;
-> }```
+> }
+> ```
 >
 > _Lazy Getters_ cũng được sử dụng trong _Design Pattern Singleton (xx)_.
 
@@ -863,10 +864,10 @@ class TestWorkflowEngine : public WorkflowEngine
 {
 public:
   TransactionManager *getTransactionManager()
-    { return &transactionManager; }
+      { return &transactionManager; }
 
   FakeTransactionManager transactionManager;
-};
+}
 ```
 
 > Khi sử dụng _Trích xuất và Ghi đè Getter_, bạn phải hết sức lưu ý đến các vấn đề về vòng đời của đối tượng, đặc biệt là trong ngôn ngữ không thu thập rác như C++. Đảm bảo rằng bạn xóa phiên bản kiểm thử theo cách nhất quán với cách xóa phiên bản sản phẩm.
@@ -1187,3 +1188,53 @@ Phần khó khăn duy nhất xảy ra khi bạn xử lý các phương thức kh
 3. Thay đổi nơi bạn muốn sử dụng đối tượng để nó sử dụng giao diện thay vì lớp ban đầu.
 
 4. Biên dịch hệ thống và sử dụng một phương thức khai báo mới trên giao diện cho mỗi phương thức sử dụng mà trình biên dịch báo cáo là lỗi.
+
+> ### Trích xuất Giao diện với các hàm không ảo
+>
+> Nếu bạn có lệnh gọi như thế này trong code của mình: `bondRegistry.newFixedYield(client)` bằng nhiều ngôn ngữ, nếu chỉ nhìn qua thì thật khó để biết liệu phương thức đó là phương thức static hay phương thức thực thể ảo hay không ảo. Trong các ngôn ngữ cho phép các phương thức thực thể không ảo, bạn có thể gặp một số rắc rối nếu bạn trích xuất một giao diện và thêm chữ ký của một trong các lớp phương thức không ảo vào nó. Nói chung, nếu lớp của bạn không có lớp con, bạn có thể tạo phương thức ảo và sau đó trích xuất giao diện. Mọi thứ sẽ ổn thôi. Nhưng nếu lớp của bạn có các lớp con, việc kéo chữ ký phương thức vào giao diện có thể làm hỏng code. Đây là một ví dụ trong C++. Chúng tôi có một lớp với một phương thức không ảo:
+>
+> ```
+> class BondRegistry
+> {
+> public:
+>   Bond *newFixedYield(Client *client) { ... }
+> }
+> ```
+>
+> Và chúng ta có một lớp con có một phương thức có cùng tên và chữ ký:
+>
+> ```
+> class PremiumRegistry : public BondRegistry
+> {
+> public:
+>   Bond *newFixedYield(Client *client) { ... }
+> };
+> ```
+> Nếu chúng ta trích xuất một giao diện từ `BondRegistry`:
+>
+> ```
+> class BondProvider
+> {
+> public:
+>   virtual Bond *newFixedYield(Client *client) = 0;
+> }
+> ```
+>
+> và yêu cầu `BondRegistry` triển khai nó:
+> ```
+> class BondRegistry : public BondProvider { … };
+> ```
+>
+> chúng ta có thể làm hỏng code khi truyền vào `PremiumRegistry`:
+>
+> ```
+> void disperse(BondRegistry *registry) {
+>   ...
+>   Bond *bond = registry->newFixedYield(existingClient);
+>   ...
+> }
+> ```
+>
+> Trước khi chúng ta trích xuất giao diện, phương thức `newFixedYield` của `BondRegistry` đã được gọi vì kiểu thời gian biên dịch của biến đăng ký là `BondRegistry`. Nếu chúng ta tạo `newFixedYield` ảo trong quá trình trích xuất giao diện, điều đó sẽ làm thay đổi hành vi. Phương thức trên `PremiumBondRegistry` được gọi. Trong C++, khi chúng ta tạo một phương thức ảo trong lớp cơ sở, các phương thức ghi đè lên nó trong các lớp con sẽ trở thành ảo. Lưu ý rằng chúng tôi không gặp phải vấn đề này trong Java hoặc C#. Trong Java, tất cả các phương thức phiên bản đều là ảo. Trong C#, mọi thứ an toàn hơn một chút vì việc thêm giao diện không ảnh hưởng đến các lệnh gọi hiện có sang các phương thức không ảo.
+>
+> Nói chung, việc tạo một phương thức trong lớp dẫn xuất có cùng chữ ký với một phương thức phi ảo trong cơ sở không phải là cách làm tốt trong C++ vì nó có thể dẫn đến hiểu lầm. Nếu bạn muốn có quyền truy cập vào một hàm không ảo thông qua một giao diện và nó không nằm trên một lớp không có lớp con, điều tốt nhất cần làm là thêm một phương thức ảo mới với tên mới. Phương thức đó có thể ủy quyền cho một phương thức không ảo hoặc thậm chí là phương thức tĩnh. Bạn chỉ cần đảm bảo rằng phương thức này thực hiện đúng cho tất cả các lớp con bên dưới lớp con mà bạn đang trích xuất.
