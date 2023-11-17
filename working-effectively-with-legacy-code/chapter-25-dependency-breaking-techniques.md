@@ -1238,3 +1238,82 @@ Phần khó khăn duy nhất xảy ra khi bạn xử lý các phương thức kh
 > Trước khi chúng ta trích xuất giao diện, phương thức `newFixedYield` của `BondRegistry` đã được gọi vì kiểu thời gian biên dịch của biến đăng ký là `BondRegistry`. Nếu chúng ta tạo `newFixedYield` ảo trong quá trình trích xuất giao diện, điều đó sẽ làm thay đổi hành vi. Phương thức trên `PremiumBondRegistry` được gọi. Trong C++, khi chúng ta tạo một phương thức ảo trong lớp cơ sở, các phương thức ghi đè lên nó trong các lớp con sẽ trở thành ảo. Lưu ý rằng chúng tôi không gặp phải vấn đề này trong Java hoặc C#. Trong Java, tất cả các phương thức phiên bản đều là ảo. Trong C#, mọi thứ an toàn hơn một chút vì việc thêm giao diện không ảnh hưởng đến các lệnh gọi hiện có sang các phương thức không ảo.
 >
 > Nói chung, việc tạo một phương thức trong lớp dẫn xuất có cùng chữ ký với một phương thức phi ảo trong cơ sở không phải là cách làm tốt trong C++ vì nó có thể dẫn đến hiểu lầm. Nếu bạn muốn có quyền truy cập vào một hàm không ảo thông qua một giao diện và nó không nằm trên một lớp không có lớp con, điều tốt nhất cần làm là thêm một phương thức ảo mới với tên mới. Phương thức đó có thể ủy quyền cho một phương thức không ảo hoặc thậm chí là phương thức tĩnh. Bạn chỉ cần đảm bảo rằng phương thức này thực hiện đúng cho tất cả các lớp con bên dưới lớp con mà bạn đang trích xuất.
+
+## Sử dụng biến thực thể ủy quyền
+
+Chúng ta sử dụng các phương thức tĩnh vì nhiều lý do. Một trong những lý do phổ biến nhất là triển khai _Mẫu Thiết kế Singleton (372)_. Một lý do phổ biến khác để sử dụng các phương thức tĩnh là tạo các lớp tiện ích.
+
+Các lớp tiện ích khá dễ tìm được trong nhiều thiết kế. Chúng là các lớp không có bất kỳ biến thể hiện hoặc phương thức thể hiện nào. Thay vào đó, chúng bao gồm một tập hợp các phương thức và hằng số tĩnh.
+
+Chúng ta tạo ra các lớp tiện ích vì nhiều lý do. Hầu hết chúng được tạo ra khi khó tìm được sự trừu tượng chung cho một tập hợp các phương thức. Lớp `Math` trong Java JDK là một ví dụ về điều này. Nó có các phương thức tĩnh cho các hàm lượng giác (cos, sin, tan) và nhiều hàm khác. Khi các nhà thiết kế ngôn ngữ xây dựng ngôn ngữ của họ từ các đối tượng "cho đến tận cùng", họ đảm bảo rằng kệ cả người nguyên thủy với số học cũng biết cách thực hiện những điều này. Ví dụ: bạn có thể gọi phương thức `sin()` trên đối tượng 1 hoặc bất kỳ đối tượng số nào khác và nhận được kết quả đúng. Tại thời điểm viết bài này, Java không hỗ trợ các phương thức toán học trên các kiểu nguyên thủy, vì vậy lớp tiện ích là một giải pháp hợp lý, nhưng nó cũng là một trường hợp đặc biệt. Trong hầu hết các trường hợp, bạn có thể sử dụng các lớp cũ đơn giản với dữ liệu thực thể và các phương thức để thực hiện công việc của mình.
+
+Nếu bạn có các phương thức tĩnh trong dự án của mình, rất có thể bạn sẽ không gặp bất kỳ rắc rối nào với chúng trừ khi chúng chứa thứ gì đó khó phụ thuộc vào trong kiểm thử. (Thuật ngữ kỹ thuật cho điều này là bám tĩnh). Trong những trường hợp này, bạn có thể muốn sử dụng một đường nối đối tượng (40) để thay thế trong một số hành vi khác khi các phương thức tĩnh được gọi. Bạn làm gì trong trường hợp này?
+
+Một điều có thể làm là sử dụng các phương thức ủy quyền trên lớp. Khi thực hiện việc này, bạn phải tìm cách thay thế các lệnh gọi tĩnh bằng các lệnh gọi phương thức trên một đối tượng. Đây là một ví dụ:
+
+```java
+public class BankingServices
+{
+  public static void updateAccountBalance(int userID, Money amount) {
+    ...
+  }
+  ...
+}
+```
+
+Ở đây chúng ta có một lớp không chứa gì ngoài các phương thức tĩnh. Tôi chỉ trình bày một cái ở đây, nhưng bạn hiểu ý rồi đấy. Chúng ta có thể thêm một phương thức cá thể vào lớp như thế này và ủy quyền cho nó cho phương thức tĩnh:
+
+```java
+public class BankingServices
+{
+  public static void updateAccountBalance(int userID, Money amount) {
+    ...
+  }
+
+  public void updateBalance(int userID, Money amount) {
+    updateAccountBalance(userID, amount);
+  }
+  ...
+}
+```
+
+Trong trường hợp này, chúng ta đã thêm một phương thức phiên bản có tên `updateBalance` và ủy quyền cho phương thức tĩnh `updateAccountBalance`.
+
+Bây giờ trong lệnh gọi, chúng ta có thể thay thế các tham chiếu như thế này:
+
+```java
+public class SomeClass
+{
+  public void someMethod() {
+    ...
+    BankingServices.updateAccountBalance(id, sum);
+  }
+}
+```
+
+với:
+
+```java
+public class SomeClass
+{
+  public void someMethod(BankingServices services) {
+    ...
+    services.updateBalance(id,sum);
+  }
+  ...
+}
+```
+
+Lưu ý rằng chúng ta chỉ có thể thực hiện được điều này nếu chúng ta có thể tìm ra cách nào đó để tạo ra đối tượng `BankingServices` mà chúng ta đang sử dụng từ bên ngoài. Đây là một bước tái cấu trúc bổ sung, nhưng trong các kiểu ngôn ngữ tĩnh, chúng ta có thể _Dựa vào Trình biên dịch (315)_ để đưa đối tượng vào đúng vị trí.
+
+Kỹ thuật này khá đơn giản với nhiều phương thức tĩnh, nhưng khi bạn bắt đầu thực hiện nó với các lớp tiện ích, bạn có thể bắt đầu cảm thấy không thoải mái. Một lớp có 5 hoặc 10 phương thức tĩnh và chỉ có một hoặc hai phương thức phiên bản trông có vẻ kỳ lạ. Nó thậm chí còn kỳ lạ hơn khi chúng chỉ là những phương thức đơn giản ủy quyền cho các phương thức tĩnh. Nhưng khi bạn sử dụng kỹ thuật này, bạn có thể dễ dàng đặt một đường nối đối tượng vào đúng vị trí và thay thế các hành vi khác nhau khi kiểm thử. Theo thời gian, bạn có thể đi đến điểm mà mọi lệnh gọi đến lớp tiện ích đều thông qua các phương thức ủy nhiệm. Vào thời điểm đó, bạn có thể di chuyển phần thân của các phương thức tĩnh vào các phương thức cá thể và xóa các phương thức tĩnh.
+
+### Các bước thực hiện
+
+Để thực hiện _Sử dụng biến thực thể ủy quyền_, hãy làm theo các bước sau:
+
+1. Xác định một phương pháp tĩnh có vấn đề khi sử dụng trong kiểm thử.
+
+2. Tạo một phương thức cá thể cho phương thức trên lớp. Hãy nhớ _Bảo tồn Chữ ký (312)_. Làm cho phương thức cá thể được ủy quyền cho phương thức tĩnh.
+
+3. Tìm những nơi sử dụng các phương thức tĩnh trong lớp bạn đang kiểm thử. Sử dụng _Tham số hóa Phương thức (383)_ hoặc một kỹ thuật phá bỏ sự phụ thuộc khác để cung cấp một phiên bản cho vị trí thực hiện lệnh gọi phương thức tĩnh.
