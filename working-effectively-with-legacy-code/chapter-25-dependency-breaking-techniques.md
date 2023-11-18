@@ -1029,7 +1029,6 @@ Thực hiện _Trích xuất Trình triển khai_, ta thực hiện theo các b�
 
 8. Biên dịch lại và kiểm thử.
 
-
 ### Một ví dụ phức tạp hơn
 
 _Trích xuất Trình triển khai_ tương đối đơn giản khi lớp nguồn không có bất kỳ lớp cha hoặc lớp con nào trong hệ thống phân cấp kế thừa của nó. Khi có lớp cha hoặc lớp con, chúng ta phải cải tiến hơn một chút. Hình 25.2 hiển thị `ModelNode`, nhưng trong Java với một siêu lớp và một lớp con:
@@ -1193,7 +1192,7 @@ Phần khó khăn duy nhất xảy ra khi bạn xử lý các phương thức kh
 >
 > Nếu bạn có lệnh gọi như thế này trong code của mình: `bondRegistry.newFixedYield(client)` bằng nhiều ngôn ngữ, nếu chỉ nhìn qua thì thật khó để biết liệu phương thức đó là phương thức static hay phương thức thực thể ảo hay không ảo. Trong các ngôn ngữ cho phép các phương thức thực thể không ảo, bạn có thể gặp một số rắc rối nếu bạn trích xuất một giao diện và thêm chữ ký của một trong các lớp phương thức không ảo vào nó. Nói chung, nếu lớp của bạn không có lớp con, bạn có thể tạo phương thức ảo và sau đó trích xuất giao diện. Mọi thứ sẽ ổn thôi. Nhưng nếu lớp của bạn có các lớp con, việc kéo chữ ký phương thức vào giao diện có thể làm hỏng code. Đây là một ví dụ trong C++. Chúng tôi có một lớp với một phương thức không ảo:
 >
-> ```
+> ```cpp
 > class BondRegistry
 > {
 > public:
@@ -1203,16 +1202,17 @@ Phần khó khăn duy nhất xảy ra khi bạn xử lý các phương thức kh
 >
 > Và chúng ta có một lớp con có một phương thức có cùng tên và chữ ký:
 >
-> ```
+> ```cpp
 > class PremiumRegistry : public BondRegistry
 > {
 > public:
 >   Bond *newFixedYield(Client *client) { ... }
 > };
 > ```
+>
 > Nếu chúng ta trích xuất một giao diện từ `BondRegistry`:
 >
-> ```
+> ``` cpp
 > class BondProvider
 > {
 > public:
@@ -1221,13 +1221,14 @@ Phần khó khăn duy nhất xảy ra khi bạn xử lý các phương thức kh
 > ```
 >
 > và yêu cầu `BondRegistry` triển khai nó:
-> ```
+>
+> ```cpp
 > class BondRegistry : public BondProvider { … };
 > ```
 >
 > chúng ta có thể làm hỏng code khi truyền vào `PremiumRegistry`:
 >
-> ```
+> ```cpp
 > void disperse(BondRegistry *registry) {
 >   ...
 >   Bond *bond = registry->newFixedYield(existingClient);
@@ -1317,3 +1318,72 @@ Kỹ thuật này khá đơn giản với nhiều phương thức tĩnh, nhưng 
 2. Tạo một phương thức cá thể cho phương thức trên lớp. Hãy nhớ _Bảo tồn Chữ ký (312)_. Làm cho phương thức cá thể được ủy quyền cho phương thức tĩnh.
 
 3. Tìm những nơi sử dụng các phương thức tĩnh trong lớp bạn đang kiểm thử. Sử dụng _Tham số hóa Phương thức (383)_ hoặc một kỹ thuật phá bỏ sự phụ thuộc khác để cung cấp một phiên bản cho vị trí thực hiện lệnh gọi phương thức tĩnh.
+
+## Sử dụng Setter Tĩnh
+
+Có thể tôi là người theo chủ nghĩa thuần túy, nhưng tôi không thích dữ liệu có thể thay đổi trên toàn cục. Khi tôi đến gặp các nhóm, rào cản rõ ràng nhất là đưa các phần hệ thống của họ vào kiểm thử khai thác. Bạn muốn đưa một tập hợp các lớp vào kiểm thử khai thác, nhưng phát hiện ra rằng một số lớp trong số đó cần phải được thiết lập ở các trạng thái cụ thể để có thể sử dụng được. Khi đã thiết lập môi trường khai thác, bạn phải chạy qua danh sách các biến toàn cục chung để đảm bảo rằng mỗi biến toàn cục đều có trạng thái bạn cần cho điều kiện bạn muốn kiểm thử. Các nhà vật lý lượng tử đã không phát hiện ra "tác dụng ma quái ở khoảng cách xa"; trong phần mềm, chúng tôi đã có nó trong nhiều năm.
+
+Bỏ qua tất cả những lo lắng về biến toàn cục, nhiều hệ thống đều có chúng. Trong một số hệ thống, chúng rất trực tiếp và thiếu tự giác; ai đó vừa khai báo một biến ở đâu đó. Ở những hệ thống khác, chúng hóa trang như những singleton tuân thủ nghiêm ngặt _Design Parttern Singleton_. Trong mọi trường hợp, việc đặt giả lập để xác nhận rất đơn giản. Nếu biến là một biến toàn cục không thay đổi, nằm bên ngoài một lớp hoặc rõ ràng ở dạng mở dưới dạng biến tĩnh công khai, bạn chỉ cần thay thế đối tượng. Nếu tham chiếu là `const` hoặc `final`, bạn có thể phải loại bỏ sự bảo vệ đó. Để lại ghi chú trong code nói rằng bạn đang thực hiện nó để kiểm thử và mọi người không nên tận dụng quyền truy cập trong code sản xuất.
+
+> ### Design Pattern Singleton
+>
+> _Design Pattern Singleton_ là mẫu được nhiều người sử dụng để đảm bảo chỉ có thể có một thực thể của một lớp cụ thể trong một chương trình. Có ba thuộc tính mà hầu hết những singleton đều có chung:
+>
+> 1. Các hàm khởi tạo của một lớp singleton thường được đặt ở chế độ privated.
+>
+> 2. Thành viên tĩnh của lớp giữ thực thể duy nhất của lớp sẽ được tạo trong chương trình.
+>
+> 3. Một phương thức tĩnh được sử dụng để cung cấp quyền truy cập vào thực thể. Thông thường phương thức này được đặt tên là `instance`.
+>
+> Mặc dù các singleton ngăn cản mọi người tạo nhiều thực thể của một lớp trong code sản xuất, nhưng chúng cũng ngăn tạo nhiều thực thể của một lớp trong kiểm thử khai thác.
+
+Thay singletons khá đơn giản. Thêm một getter tĩnh vào singleton để thay thế thực thể, sau đó chuyển hàm khởi tạo thành protected. Sau đó, qua có thể phân lớp singleton, tạo một đối tượng mới và truyền cho setter.
+
+Bạn có thể cảm thấy hơi khó chịu khi biết ý tưởng bạn đang loại bỏ tính năng bảo vệ quyền truy cập khi sử dụng setter tĩnh, nhưng hãy nhớ rằng mục đích của việc bảo vệ quyền truy cập là để ngăn ngừa lỗi. Chúng ta cũng đang tiến hành các kiểm thử để ngăn ngừa lỗi. Trong trường hợp này, chúng ta cần công cụ mạnh hơn.
+
+Dưới đây là một ví dụ về _Sử dụng Static Setter_ trong C++:
+
+```java
+void MessageRouter::route(Message *message) {
+  ...
+  Dispatcher *dispatcher = ExternalRouter::instance()->getDispatcher();
+  if (dispatcher != NULL)
+    dispatcher->sendMessage(message);
+}
+```
+
+Trong lớp `MessageRouter`, chúng ta sử dụng singleton ở một vài nơi để lấy `dispatchers`. Lớp `InternalRouter` là một trong những lớp singleton đó. Nó sử dụng một phương thức tĩnh có tên `instance` để cung cấp quyền truy cập vào một `instance` duy nhất của `InternalRouter`. Lớp `InternalRouter` có một getter cho dispatcher. Chúng ta có thể thay thế dispatcher bằng một dispatcher khác bằng cách thay thế bộ định tuyến bên ngoài phục vụ nó.
+
+Đây là giao diện của lớp `ExternalRouter` trước khi chúng ta sử dụng setter tĩnh:
+
+
+```java
+class ExternalRouter
+{
+private:
+  static ExternalRouter *_instance;
+public:
+  static ExternalRouter *instance();
+  ...
+};
+
+ExternalRouter *ExternalRouter::_instance = 0;
+
+ExternalRouter *ExternalRouter::instance()
+{
+  if (_instance == 0) {
+    _instance = new ExternalRouter;
+  }
+  return _instance;
+}
+```
+
+Lưu ý rằng router được tạo trong lệnh gọi đầu tiên đến phương thức `instance`. Để thay thế bằng một router khác, chúng ta phải thay đổi giá trị `instance` trả về. Bước đầu tiên là sử dụng một phương thức mới để thay thế instance.
+
+```java
+void ExternalRouter::setTestingInstance(ExternalRouter *newInstance)
+{
+  delete _instance;
+  _instance = newInstance;
+}
+```
