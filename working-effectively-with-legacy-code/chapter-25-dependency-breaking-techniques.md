@@ -1387,3 +1387,83 @@ void ExternalRouter::setTestingInstance(ExternalRouter *newInstance)
   _instance = newInstance;
 }
 ```
+
+Tất nhiên, giả định rằng chúng ta có thể tạo một thực thể mới. Khi mọi người sử dụng singleton pattern, hàm khởi tạo của lớp thường là privated để ngăn việc tạo nhiều hơn một thực thể. Nếu bạn đặt hàm khởi tạo là protected, bạn có thể phân lớp singleton để tìm hiểu hoặc tách và truyền thực thể mới vào phương thức `setTestingInstance`. Trong ví dụ trước, chúng ta sẽ tạo một lớp con của `InternalRouter` có tên là `testingExternalRouter` và ghi đè phương thức `getDispatcher` để nó trả về dispatcher mà chúng ta muốn, một dispatcher giả.
+
+```java
+class TestingExternalRouter : public ExternalRouter
+{
+public:
+  virtual void Dispatcher *getDispatcher() const {
+    return new FakeDispatcher;
+  }
+}
+```
+
+Điều này có thể giống như một cách thay thế khá vòng vo bằng một dispatcher mới. Cuối cùng, chúng ta tạo một `ExternalRouter` mới chỉ để thay thế những dispatcher. Chúng ta có thể đi một số đường tắt, nhưng chúng có những sự đánh đổi khác. Một điều khác mà chúng ta có thể làm là thêm cờ `boolean` vào `InternalRouter` và để nó trả về một dispatcher khác khi cờ được đặt. Trong C++ hoặc C#, chúng ta cũng có thể sử dụng trình biên dịch có điều kiện để chọn dispatcher. Những kỹ thuật này có thể hoạt động tốt nhưng chúng có tính xâm lấn và có thể khó sử dụng nếu bạn sử dụng chúng trong suốt một ứng dụng. Nói chung, tôi muốn tách biệt giữa code sản xuất và code kiểm thử.
+
+Việc sử dụng phương thức setter và hàm khởi tạo protected trong một singleton có tính xâm lấn nhẹ nhưng nó giúp bạn thực hiện các kiểm thử đúng chỗ. Liệu mọi người có thể sử dụng sai hàm khởi tạo public và tạo ra nhiều hơn một thực thể trong hệ thống sản xuất không? Có, nhưng theo ý kiến ​​của tôi, nếu điều quan trọng là chỉ có một phiên bản của một đối tượng trong hệ thống thì cách tốt nhất để xử lý vấn đề đó là đảm bảo mọi người trong nhóm hiểu được hạn chế đó.
+
+> Một cách thay thế để giảm mức độ bảo vệ của hàm khởi tạo và phân lớp con là sử dụng _Trích xuất Giao diện (362)_ trên singleton và cung một trình thiết lập chấp nhận một đối tượng có giao diện đó. Nhược điểm của việc này là bạn phải thay đổi kiểu tham chiếu bạn sử dụng để giữ singleton trong lớp và kiểu giá trị trả về của phương thức `instance`. Những thay đổi này có thể khá phức tạp và chúng không thực sự đưa chúng ta đến trạng thái tốt hơn. "Trạng thái tốt hơn" cuối cùng là giảm các tham chiếu toàn cục đến singleton đến mức nó có thể trở thành một lớp bình thường.
+
+Trong ví dụ trước, chúng tôi đã thay thế một singleton bằng setter tĩnh. Singleton là một đối tượng phục vụ một đối tượng khác, một dispatcher. Đôi khi, chúng ta thấy một loại hệ thống toàn cục khác, một phương thức chế tạo toàn cục. Thay vì giữ lại một thực thể, chúng cung cấp các đối tượng mới mỗi khi bạn gọi một trong các phương thức tĩnh của chúng. Việc thay thế một đối tượng khác để trả lại khá phức tạp, nhưng bạn thường có thể làm điều đó bằng cách ủy quyền cho phương thức chế tạo này cho một phương thức chế tạo khác. Chúng ta hãy xem một ví dụ trong Java:
+
+```java
+public class RouterFactory
+{
+  static Router makeRouter() {
+    return new EWNRouter();
+  }
+}
+```
+
+`RouterFactory` là một phương thức chế tạo toàn cục đơn giản. Hiện tại, nó không cho phép chúng ta thay thế các router mà nó phục vụ trong quá trình kiểm thử, nhưng chúng ta có thể thay đổi nó để có thể làm được điều đó.
+
+```java
+interface RouterServer
+{
+  Router makeRouter();
+}
+
+public class RouterFactory implements RouterServer
+{
+  static Router makeRouter() {
+  return server.makeRouter();
+  }
+
+  static setServer(RouterServer server) {
+    this.server = server;
+  }
+
+  static RouterServer server = new RouterServer() {
+    public RouterServer makeRouter() {
+      return new EWNRouter();
+    }
+  };
+}
+```
+
+Trong kiểm thử, chúng ta có thể làm thế này:
+
+```java
+protected void setUp() {
+  RouterServer.setServer(new RouterServer() {
+    public RouterServer makeRouter() {
+      return new FakeRouter();
+    }
+  });
+}
+```
+
+Nhưng điều quan trọng cần nhớ là trong bất kỳ setter tĩnh nào, bạn đang sửa đổi trạng thái có sẵn cho tất cả các kiểm thử. Bạn có thể sử dụng phương thức `TearsDown` trong khung kiểm thử xUnit để đưa mọi thứ trở lại trạng thái đã biết trước khi các kiểm thử còn lại của bạn thực hiện. Nói chung, tôi chỉ làm điều đó khi sử dụng sai trạng thái trong bài kiểm tra tiếp theo có thể gây hiểu lầm. Nếu tôi thay thế bằng một `MailSender` giả trong tất cả các kiểm thử của mình thì việc đưa một cái khác vào sẽ không có nhiều ý nghĩa. Mặt khác, nếu tôi có toàn cục giữ trạng thái ảnh hưởng đến kết quả của hệ thống, tôi thường làm điều tương tự trong các phương thức `setUp` và `TearDown` để đảm bảo rằng tôi đã để mọi thứ ở trạng thái sạch sẽ:
+
+```java
+protected void setUp() {
+  Node.count = 0;
+  ...
+}
+
+protected void tearDown() {
+  Node.count = 0;
+}
+```
