@@ -8,7 +8,7 @@ Trong chương này, tôi sẽ trình bày về các kỹ thuật phá bỏ sự
 
 Những kỹ thuật này không ngay lập tức làm cho thiết kế của bạn tốt hơn. Trên thực tế, nếu bạn có khả năng thiết kế tốt, một số kỹ thuật này sẽ khiến bạn lo lắng. Những kỹ thuật này có thể giúp bạn có được các phương thức, lớp và cụm lớp được kiểm thử và nhờ đó hệ thống của bạn sẽ dễ bảo trì hơn. Tại thời điểm đó, bạn có thể sử dụng các phép tái cấu trúc được hỗ trợ kiểm thử để làm cho thiết kế rõ ràng hơn
 
-> Một số cách tái cấu trúc trong chương này đã được Martin Fowler mô tả trong cuốn sách _Tái cấu trúc: Cải thiện thiết kế mã hiện có (Refactoring: Improving the Design of Existing Code)_ (Addison-Wesley, 1999). Tôi đã đưa chúng vào đây với một số thay đổi. Chúng đã được thiết kế riêng để có thể sử dụng an toàn mà không cần kiểm thử.
+> Một số cách tái cấu trúc trong chương này đã được Martin Fowler mô tả trong cuốn sách _Tái cấu trúc: Cải thiện thiết kế hiện có (Refactoring: Improving the Design of Existing Code)_ (Addison-Wesley, 1999). Tôi đã đưa chúng vào đây với một số thay đổi. Chúng đã được thiết kế riêng để có thể sử dụng an toàn mà không cần kiểm thử.
 
 ## Tham số thích ứng (Adapt Parameter)
 
@@ -403,7 +403,7 @@ Tùy chọn tiếp theo là chuyển cả hai khung làm tham số hàm tạo ch
 
 > Nếu một số biến toàn cục luôn được sử dụng hoặc được sửa đổi gần nhau thì chúng thuộc cùng một lớp.
 
-Cách tốt nhất để xử lý tình huống này là xem xét dữ liệu, các khung đang hoạt động và bị treo, đồng thời suy nghĩ xem liệu chúng ta có thể nghĩ ra một cái tên hay cho một lớp "thông minh" mới có thể chứa cả hai khung đó hay không. Đôi khi điều này hơi phức tạp một chút. Chúng ta phải suy nghĩ về ý nghĩa của dữ liệu đó trong thiết kế và sau đó xem xét lý do tại sao nó lại ở đó. Nếu chúng ta tạo một lớp mới, cuối cùng chúng ta sẽ chuyển các phương thức vào đó và rất có thể mã cho các phương thức đó đã tồn tại ở một nơi khác nơi dữ liệu được sử dụng.
+Cách tốt nhất để xử lý tình huống này là xem xét dữ liệu, các khung đang hoạt động và bị treo, đồng thời suy nghĩ xem liệu chúng ta có thể nghĩ ra một cái tên hay cho một lớp "thông minh" mới có thể chứa cả hai khung đó hay không. Đôi khi điều này hơi phức tạp một chút. Chúng ta phải suy nghĩ về ý nghĩa của dữ liệu đó trong thiết kế và sau đó xem xét lý do tại sao nó lại ở đó. Nếu chúng ta tạo một lớp mới, cuối cùng chúng ta sẽ chuyển các phương thức vào đó và rất có thể code của các phương thức đó đã tồn tại ở một nơi khác nơi dữ liệu được sử dụng.
 
 > Khi đặt tên một lớp, hãy nghĩ về các phương thức cuối cùng sẽ tồn tại trên đó. Cái tên phải hay nhưng không cần phải hoàn hảo. Hãy nhớ rằng bạn luôn có thể đổi tên lớp sau này.
 
@@ -1467,3 +1467,17 @@ protected void tearDown() {
   Node.count = 0;
 }
 ```
+
+Lúc này, tôi đang tưởng tượng ra phản ứng bạn. Bạn đang ngồi đó chán ghét nhìn cuộc tàn sát mà tôi thực hiện với hệ thống chỉ để có thể thực hiện một số kiểm thử tại chỗ. Và bạn đã đúng: Những mô hình này có thể làm xấu đi đáng kể các bộ phận của hệ thống. Phẫu thuật không bao giờ đẹp đẽ, đặc biệt là ở giai đoạn đầu. Bạn có thể làm gì để đưa hệ thống trở lại trạng thái tốt?
+
+Một điều cần xem xét là truyền tham số. Hãy xem các lớp cần quyền truy cập vào toàn cục của bạn và xem xét liệu bạn có thể cung cấp cho chúng một siêu lớp chung hay không. Nếu có thể, bạn có thể truyền biến toàn cục cho chúng khi khởi tạo và từ từ tránh xa việc có biến toàn cục. Mọi người thường lo sợ rằng mọi lớp trong hệ thống sẽ yêu cầu một số lớp toàn cục. Thường thì bạn sẽ ngạc nhiên. Tôi đã từng làm việc trên một hệ thống nhúng đóng gói việc quản lý bộ nhớ và báo cáo lỗi dưới dạng các lớp, chuyển đối tượng bộ nhớ hoặc trình báo lỗi cho bất kỳ ai cần. Theo thời gian, có sự tách biệt rõ ràng giữa các lớp cần những dịch vụ đó và các lớp không cần. Những cái cần chúng chỉ có một siêu lớp chung. Các đối tượng được truyền trong toàn bộ hệ thống đã được tạo khi bắt đầu chương trình và hầu như không được chú ý.
+
+### Các bước thực hiện
+
+Để _Sử dụng Setter Tĩnh_, thực hiện theo các bước sau:
+
+1. Giảm mức độ bảo vệ của hàm khởi tạo để bạn có thể giả lập bằng cách phân lớp singleton.
+
+2. Thêm setter tĩnh vào lớp singleton. Setter phải chấp nhận tham chiếu đến lớp singleton. Đảm bảo rằng setter hủy đúng thực thể singleton trước khi thiết lập đối tượng mới.
+
+3. Nếu bạn cần quyền truy cập vào các phương thức privated hoặc protected trong singleton để thiết lập nó đúng cách cho kiểm thử, hãy xem xét phân lớp nó hoặc trích xuất một giao diện và làm cho singleton giữ thực thể của nó làm tham chiếu có kiểu là kiểu giao diện.
