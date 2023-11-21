@@ -1481,3 +1481,39 @@ Một điều cần xem xét là truyền tham số. Hãy xem các lớp cần q
 2. Thêm setter tĩnh vào lớp singleton. Setter phải chấp nhận tham chiếu đến lớp singleton. Đảm bảo rằng setter hủy đúng thực thể singleton trước khi thiết lập đối tượng mới.
 
 3. Nếu bạn cần quyền truy cập vào các phương thức privated hoặc protected trong singleton để thiết lập nó đúng cách cho kiểm thử, hãy xem xét phân lớp nó hoặc trích xuất một giao diện và làm cho singleton giữ thực thể của nó làm tham chiếu có kiểu là kiểu giao diện.
+
+## Thay thế Liên kết
+
+Lập trình hướng đối tượng mang đến cho chúng ta những cơ hội tuyệt vời để thay thế đối tượng này bằng đối tượng khác. Nếu hai lớp triển khai cùng một giao diện hoặc có cùng một lớp cha, bạn có thể thay thế lớp này bằng lớp khác khá dễ dàng. Thật không may, những người làm việc trong các ngôn ngữ thủ tục như C không có lựa chọn đó. Khi bạn có một hàm như thế này, không có cách nào để thay thế hàm này bằng hàm khác tại thời điểm biên dịch, ngoại trừ việc sử dụng bộ tiền xử lý:
+
+```cpp
+void account_deposit(int amount);
+```
+
+Liệu có lựa chọn nào khác? Có, bạn có thể _Thay thế liên kết_ để thay thế hàm này bằng hàm khác. Để thực hiện việc này, hãy tạo một thư viện giả lập có các hàm có cùng chữ ký với các hàm mà bạn muốn giả lập. Nếu bạn đang tìm hiểu, bạn cần thiết lập một số cơ chế để lưu thông báo và truy vấn chúng. Bạn có thể sử dụng tệp, biến toàn cục hoặc bất kỳ thứ gì thuận tiện khi kiểm thử.
+
+Xét ví dụ sau:
+
+```cpp
+void account_deposit(int amount)
+{
+  struct Call *call = (struct Call *)calloc(1, sizeof (struct Call));
+  call->type = ACC_DEPOSIT;
+  call->arg0 = amount;
+  append(g_calls, call);
+}
+```
+
+Trong trường hợp này, chúng ta quan tâm đến tìm hiểu, vì vậy chúng ta tạo một danh sách chung các lệnh gọi để ghi lại mỗi lần hàm này (hoặc bất kỳ hàm nào khác mà chúng ta đang giả lập) được gọi. Trong quá trình kiểm thử, chúng ta có thể kiểm tra danh sách này sau khi thực hiện một tập hợp đối tượng và xem liệu các hàm mô phỏng có được gọi theo thứ tự thích hợp hay không.
+
+Tôi chưa bao giờ thử sử dụng _Thay thế liên kết_ với các lớp C++, nhưng tôi cho rằng điều đó là có thể. Tôi chắc chắn rằng những cái tên đọc sai mà trình biên dịch C++ tạo ra sẽ gây khó khăn cho việc này; tuy nhiên, khi thực hiện lệnh gọi hàm C, nó rất thực tế. Trường hợp hữu ích nhất là khi giả lập các thư viện bên ngoài. Các thư viện tốt nhất để giả mạo là những thư viện chủ yếu là các kho dữ liệu thuần túy: Bạn gọi các hàm trong đó nhưng thường không quan tâm đến các giá trị trả về. Ví dụ: các thư viện đồ họa đặc biệt hữu ích để giả mạo bằng _Thay thế liên kết_.
+
+_Thay thế liên kết_ cũng có thể được sử dụng trong Java. Tạo các lớp có cùng tên và phương thức, đồng thời thay đổi đường dẫn lớp của bạn để các cuộc gọi giải quyết chúng thay vì các lớp có phần phụ thuộc không tốt.
+
+### Các bước thực hiện Thay thế Liên kết
+
+1. Xác định các hàm hoặc lớp mà bạn muốn giả lập.
+
+2. Đưa ra những định nghĩa thay thế cho chúng.
+
+3. Điều chỉnh bản dựng của bạn để đưa vào các định nghĩa thay thế thay vì các phiên bản sản xuất.
