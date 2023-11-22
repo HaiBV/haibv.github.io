@@ -1517,3 +1517,119 @@ _Thay thế liên kết_ cũng có thể được sử dụng trong Java. Tạo 
 2. Đưa ra những định nghĩa thay thế cho chúng.
 
 3. Điều chỉnh bản dựng của bạn để đưa vào các định nghĩa thay thế thay vì các phiên bản sản xuất.
+
+## Tham số hóa hàm khởi tạo
+
+Nếu bạn đang tạo một đối tượng trong một hàm khởi tạo, cách dễ nhất để thay thế nó là đưa nó ra bên ngoài, tạo đối tượng bên ngoài lớp và làm cho các lệnh gọi chuyển nó vào hàm khởi tạo dưới dạng tham số. Đây là một ví dụ.
+
+Chúng ta bắt đầu với điều này:
+
+```java
+public class MailChecker
+{
+  public MailChecker (int checkPeriodSeconds) {
+    this.receiver = new MailReceiver();
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+  ...
+}
+```
+
+Sau đó, chúng ta sử dụng một tham số mới như thế này:
+
+```java
+public class MailChecker
+{
+  public MailChecker (MailReceiver receiver, int checkPeriodSeconds) {
+    this.receiver = receiver;
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+  ...
+}
+```
+
+Một lý do khiến chúng ta không thường nghĩ đến kỹ thuật này là vì cho rằng nó buộc tất cả lệnh gọi phải thêm vào một tham số bổ sung. Tuy nhiên, bạn có thể viết một hàm khởi tạo giữ chữ ký gốc xung quanh:
+
+```java
+public class MailChecker
+{
+  public MailChecker (int checkPeriodSeconds) {
+    this(new MailReceiver(), checkPeriodSeconds);
+  }
+  public MailChecker (MailReceiver receiver, int checkPeriodSeconds) {
+    this.receiver = receiver;
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+  ...
+}
+```
+
+Nếu làm như vậy, bạn có thể cung cấp các đối tượng khác nhau để kiểm thử và các lời gọi của lớp không cần phải biết sự khác biệt.
+
+Hãy thực hiện từng bước một. Đây là code ban đầu của chúng ta:
+
+```java
+public class MailChecker
+{
+  public MailChecker (int checkPeriodSeconds) {
+    this.receiver = new MailReceiver();
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+  ...
+}
+```
+
+Chúng ta tạo một bản sao của hàm khởi tạo:
+
+```java
+public class MailChecker
+{
+  public MailChecker (int checkPeriodSeconds) {
+    this.receiver = new MailReceiver();
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+
+  public MailChecker (int checkPeriodSeconds) {
+    this.receiver = new MailReceiver();
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+  ...
+}
+```
+
+Sau đó, chúng ta thêm một tham số cho `MailReceiver`:
+
+```java
+public class MailChecker
+{
+  public MailChecker (int checkPeriodSeconds) {
+    this.receiver = new MailReceiver();
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+
+  public MailChecker (MailReceiver receiver, int checkPeriodSeconds) {
+    this.receiver = new MailReceiver();
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+  ...
+}
+```
+
+Tiếp theo, chúng ta gán tham số đó cho biến thực thể, loại bỏ biểu thức `new`.
+
+```java
+
+public class MailChecker
+{
+  public MailChecker (int checkPeriodSeconds) {
+    this.receiver = new MailReceiver();
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+
+  public MailChecker (MailReceiver receiver, int checkPeriodSeconds) {
+    this.receiver = receiver;
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+  ...
+}
+```
