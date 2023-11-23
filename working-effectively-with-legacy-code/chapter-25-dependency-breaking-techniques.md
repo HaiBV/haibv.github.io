@@ -399,7 +399,7 @@ Trong ví dụ này, chúng ta có một số đoạn code hoạt động với 
 
 Một ý nghĩ ngay lập tức là chúng ta có thể truyền chúng vào dưới dạng tham số cho phương thức `Suspend_frame` bằng cách sử dụng _Tham số hóa Phương thức (383)_, nhưng sau khi thực hiện điều đó, chúng ta sẽ phải chuyển chúng dưới dạng tham số cho bất kỳ phương thức nào mà lệnh gọi `Susp_frame` sử dụng chúng làm toàn cục. Trong trường hợp này, `Flush_frame_buffer` là kẻ tội đồ.
 
-Tùy chọn tiếp theo là chuyển cả hai khung làm tham số hàm tạo cho `AGGController`. Chúng ta có thể làm điều đó, nhưng cũng đáng để xem xét những nơi khác mà chúng được sử dụng. Nếu có vẻ như bất cứ khi nào chúng ta sử dụng cái này thì chúng ta cũng đang sử dụng cái kia, chúng ta có thể gộp chúng lại với nhau
+Tùy chọn tiếp theo là chuyển cả hai khung làm tham số hàm khởi tạo cho `AGGController`. Chúng ta có thể làm điều đó, nhưng cũng đáng để xem xét những nơi khác mà chúng được sử dụng. Nếu có vẻ như bất cứ khi nào chúng ta sử dụng cái này thì chúng ta cũng đang sử dụng cái kia, chúng ta có thể gộp chúng lại với nhau
 
 > Nếu một số biến toàn cục luôn được sử dụng hoặc được sửa đổi gần nhau thì chúng thuộc cùng một lớp.
 
@@ -453,7 +453,7 @@ void AGGController::suspend_frame()
 }
 ```
 
-Khi hoàn thành việc đó, chúng ta có code xấu hơn, nhưng tất cả sẽ biên dịch và hoạt động chính xác, vì vậy đây là một phép chuyển đổi bảo toàn hành vi. Bây giờ khi đã hoàn thành nó, chúng ta có thể chuyển một đối tượng `Frame` thông qua hàm tạo của lớp `AGGController` và nhận được sự phân tách mà chúng ta cần để tiếp tục.
+Khi hoàn thành việc đó, chúng ta có code xấu hơn, nhưng tất cả sẽ biên dịch và hoạt động chính xác, vì vậy đây là một phép chuyển đổi bảo toàn hành vi. Bây giờ khi đã hoàn thành nó, chúng ta có thể chuyển một đối tượng `Frame` thông qua hàm khởi tạo của lớp `AGGController` và nhận được sự phân tách mà chúng ta cần để tiếp tục.
 
 > Tham chiếu một thành viên của một lớp thay vì một toàn cục đơn giản chỉ là bước đầu tiên. Sau đó, hãy cân nhắc xem bạn nên sử dụng _Sử dụng Setter Tĩnh (372)_ hay tham số hóa code bằng cách sử dụng _Tham số hóa Hàm khởi tạo (379)_ hoặc _Tham số hóa phương thức (383)_.
 
@@ -842,7 +842,7 @@ TransactionManager *getTransactionManager() const
 ...
 ```
 
-Điều đầu tiên chúng ta làm là sử dụng một _lazy getter_, một hàm tạo ra trình quản lý giao dịch trong lệnh gọi đầu tiên. Sau đó, chúng ta thay thế tất cả các vị trí sử dụng biến bằng các lệnh gọi đến getter.
+Điều đầu tiên chúng ta làm là sử dụng một _lazy getter_, một hàm khởi tạo ra trình quản lý giao dịch trong lệnh gọi đầu tiên. Sau đó, chúng ta thay thế tất cả các vị trí sử dụng biến bằng các lệnh gọi đến getter.
 
 > Một _lazy getter_ là một phương thức trông giống như một getter bình thường đối với tất cả lệnh gọi của nó. Sự khác biệt chính ở đây là _lazy getter_ tạo ra đối tượng mà chúng phải trả về ngay trong lần đầu tiên được gọi. Để làm điều này, chúng thường chứa logic trông như thế này. Lưu ý cách biến `instance` được khởi tạo
 >
@@ -1633,3 +1633,44 @@ public class MailChecker
   ...
 }
 ```
+
+Bây giờ, chúng ta quay lại hàm khởi tạo ban đầu và loại bỏ phần thân của nó, thay thế nó bằng lệnh gọi hàm khởi tạo mới. Hàm khởi tạo ban đầu sử dụng `new` để tạo tham số mà nó cần truyền.
+
+```java
+public class MailChecker
+{
+  public MailChecker (int checkPeriodSeconds) {
+    this(new MailReceiver(), checkPeriodSeconds);
+  }
+
+  public MailChecker (MailReceiver receiver, int checkPeriodSeconds) {
+    this.receiver = receiver;
+    this.checkPeriodSeconds = checkPeriodSeconds;
+  }
+  ...
+}
+```
+
+Có bất kỳ nhược điểm nào đối với kỹ thuật này không? Trên thực tế là có một. Khi chúng ta thêm một tham số mới vào hàm khởi tạo, chúng ta đang mở ra cánh cửa cho sự phụ thuộc sâu hơn vào lớp của tham số đó. Người dùng của lớp có thể sử dụng hàm khởi tạo mới trong code sản xuất và tăng sự phụ thuộc trên toàn hệ thống. Tuy nhiên, nhìn chung đó là một mối lo ngại khá nhỏ. _Tham số hóa Hàm khởi tạo_ là một công cụ tái cấu trúc rất dễ dàng và là công cụ mà tôi có khuynh hướng sử dụng nhiều.
+
+> Trong các ngôn ngữ cho phép tham số mặc định, có một cách đơn giản hơn để thực hiện _Tham số hóa Hàm khởi tạo_. Chúng ta có thể chỉ cần thêm một tham số mặc định vào hàm khởi tạo hiện có:
+>
+> Đây là một hàm khởi tạo đã được tham số hóa theo cách này trong C++:
+> ```cpp
+> class AssemblyPoint
+> {
+> public:
+>   AssemblyPoint(EquipmentDispatcher *dispatcher = new EquipmentDispatcher);
+>   ...
+> };
+> ```
+>
+> Chỉ có một nhược điểm khi chúng ta thực hiện điều này trong C++. Tệp tiêu đề chứa khai báo lớp này phải bao gồm tiêu đề cho `EquipmentDispatcher`. Nếu không có lệnh gọi hàm khởi tạo, chúng ta có thể đã sử dụng khai báo chuyển tiếp cho `EquipmentDispatcher`. Vì lý do này, tôi không thường xuyên sử dụng các đối số mặc định.
+
+### Các bước thực hiện Tham số hóa Hàm khởi tạo
+
+1. Xác định hàm khởi tạo mà bạn muốn tham số hóa và tạo một bản sao của nó.
+
+2. Thêm một tham số vào hàm khởi tạo cho đối tượng mà bạn sắp thay thế. Xóa việc tạo đối tượng và thêm phép gán từ tham số vào biến thể hiện cho đối tượng.
+
+3. Nếu bạn có thể gọi một hàm khởi tạo từ một hàm khởi tạo trong ngôn ngữ của mình, hãy xóa phần nội dung của hàm khởi tạo cũ và thay thế nó bằng lệnh gọi đến hàm khởi tạo cũ. Thêm tham số mới vào lệnh gọi hàm khởi tạo mới trong hàm khởi tạo cũ. Nếu bạn không thể gọi một hàm khởi tạo từ một hàm khởi tạo khác trong ngôn ngữ của mình, bạn có thể phải trích xuất bất kỳ sự trùng lặp nào giữa các hàm khởi tạo đó sang một phương thức mới.
