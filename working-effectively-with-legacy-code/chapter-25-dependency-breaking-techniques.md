@@ -1674,3 +1674,61 @@ Có bất kỳ nhược điểm nào đối với kỹ thuật này không? Trê
 2. Thêm một tham số vào hàm khởi tạo cho đối tượng mà bạn sắp thay thế. Xóa việc tạo đối tượng và thêm phép gán từ tham số vào biến thể hiện cho đối tượng.
 
 3. Nếu bạn có thể gọi một hàm khởi tạo từ một hàm khởi tạo trong ngôn ngữ của mình, hãy xóa phần nội dung của hàm khởi tạo cũ và thay thế nó bằng lệnh gọi đến hàm khởi tạo cũ. Thêm tham số mới vào lệnh gọi hàm khởi tạo mới trong hàm khởi tạo cũ. Nếu bạn không thể gọi một hàm khởi tạo từ một hàm khởi tạo khác trong ngôn ngữ của mình, bạn có thể phải trích xuất bất kỳ sự trùng lặp nào giữa các hàm khởi tạo đó sang một phương thức mới.
+
+## Tham số hóa phương thức
+
+Bạn có một phương thức tạo một đối tượng bên trong và bạn muốn thay thế đối tượng đó để tìm hiểu hoặc trích xuất. Thông thường cách dễ nhất để làm điều này là truyền đối tượng từ bên ngoài. Đây là một ví dụ trong C++:
+
+```cpp
+void TestCase::run() {
+  delete m_result;
+  m_result = new TestResult;
+  try {
+    setUp();
+    runTest(m_result);
+  }
+  catch (exception& e) {
+    result->addFailure(e, this);
+  }
+  tearDown();
+}
+```
+
+Ở đây chúng ta có một phương thức tạo đối tượng `TestResult` bất cứ khi nào nó được gọi. Nếu muốn tìm hiểu hoặc trích xuất, chúng ta có thể truyền nó vào dưới dạng tham số.
+
+```cpp
+void TestCase::run(TestResult *result) {
+  delete m_result;
+  m_result = result;
+  try {
+    setUp();
+    runTest(m_result);
+  }
+  catch (exception& e) {
+    result->addFailure(e, this);
+  }
+  tearDown();
+}
+```
+
+Chúng ta có thể sử dụng một phương pháp chuyển tiếp nhỏ để giữ nguyên giá trị trả về gốc:
+
+```cpp
+void TestCase::run() {
+  run(new TestResult);
+}
+```
+
+> Trong C++, Java, C# và nhiều ngôn ngữ khác, bạn có thể có hai phương thức có cùng tên trên một lớp, miễn là các giá trị trả về khác nhau. Trong ví dụ này, chúng ta tận dụng lợi thế này và sử dụng cùng tên cho phương thức được tham số hóa mới và phương thức ban đầu. Mặc dù điều này giúp tiết kiệm một số công việc nhưng đôi khi nó có thể gây nhầm lẫn. Một cách khác là sử dụng loại tham số trong tên của phương thức mới. Ví dụ: trong trường hợp này, chúng ta có thể giữ `run()` làm tên của phương thức ban đầu nhưng gọi phương thức mới là `runWithTestResult(TestResult)`.
+
+Giống như _Tham số hóa Hàm khởi tạo (379)_, _Tham số hóa Phương thức_ có thể cho phép lệnh gọi trở nên phụ thuộc vào các kiểu mới đã được sử dụng trong lớp trước đó nhưng không có trên giao diện. Nếu tôi nghĩ rằng điều này sẽ trở thành một vấn đề, thay vào đó tôi sẽ xem xét sử dụng _Trích xuất và Ghi đè Phương thức chế tạo (350)_
+
+### Các bước thực hiện
+
+Thực hiện _Tham số hóa Phương thức_ theo các bước sau:
+
+1. Xác định phương thức bạn muốn thay thế và tạo một bản sao của phương thức đó.
+
+2. Thêm một tham số vào phương thức của đối tượng mà bạn sắp thay thế. Xóa việc tạo đối tượng và thêm phép gán từ tham số vào biến chứa đối tượng.
+
+3. Xóa phần thân của phương thức đã sao chép và thực hiện lệnh gọi phương thức được tham số hóa, sử dụng biểu thức tạo đối tượng cho đối tượng ban đầu.
