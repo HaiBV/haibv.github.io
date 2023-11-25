@@ -1732,3 +1732,80 @@ Thực hiện _Tham số hóa Phương thức_ theo các bước sau:
 2. Thêm một tham số vào phương thức của đối tượng mà bạn sắp thay thế. Xóa việc tạo đối tượng và thêm phép gán từ tham số vào biến chứa đối tượng.
 
 3. Xóa phần thân của phương thức đã sao chép và thực hiện lệnh gọi phương thức được tham số hóa, sử dụng biểu thức tạo đối tượng cho đối tượng ban đầu.
+
+## Ưu tiên tham số
+
+Nhìn chung, cách tốt nhất để thực hiện thay đổi đối với một lớp là tạo một thực thể trong kiểm thử khai thác, viết kiểm thử cho thay đổi mà bạn muốn sau đó thực hiện thay đổi để đáp ứng kiểm thử. Nhưng đôi khi khối lượng công việc bạn phải làm để có một lớp được kiểm thử lớn đến mức nực cười. Một nhóm mà tôi đến thăm đã kế thừa một hệ thống cũ với các lớp miền phụ thuộc quá mức vào hầu hết các lớp khác trong hệ thống. Như thể điều đó vẫn chưa đủ tệ, tất cả chúng đều bị ràng buộc chặt vào một framework. Việc đưa một trong những lớp đó vào framework kiểm thử là điều có thể làm được, nhưng nhóm sẽ không có được tiến bộ về các tính năng trong một thời gian nếu họ dành toàn bộ thời gian đó để chiến đấu với các lớp miền. Để có được sự tách biệt, chúng tôi đã sử dụng chiến lược này. Ví dụ đã được thay đổi để bảo vệ người vô tội.
+
+Trong công cụ soạn nhạc, một bản nhạc chứa một số chuỗi sự kiện âm nhạc. Chúng ta cần tìm "thời gian chết" trong mỗi chuỗi để có thể lấp đầy nó bằng những mẫu âm nhạc lặp đi lặp lại. Chúng ta cần một phương thức có tên `bool Sequence::hasGapFor(Sequence& sample) const`. Phương thức trả về một giá trị cho biết liệu một mẫu có thể khớp với một chuỗi hay không.
+
+Lý tưởng nhất là phương thức này sẽ nằm trong một lớp có tên là `Sequence`, nhưng `Sequence` là một trong những lớp tồi tệ sẽ đưa cả thế giới vào kiểm thử khai thác nếu cố gắng tạo ra nó. Để bắt đầu viết phương thức đó, chúng ta phải tìm ra cách viết kiểm thử cho nó. Điều khiến chúng ta có thể thực hiện được là các chuỗi có biểu diễn bên trong có thể được đơn giản hóa. Mỗi chuỗi bao gồm một vectơ các sự kiện. Thật không may, các sự kiện có cùng một vấn đề như các chuỗi: sự phụ thuộc khủng khiếp dẫn đến các vấn đề về bản dựng. May mắn thay, để thực hiện tính toán này, chúng ta chỉ cần thời lượng của mỗi sự kiện. Chúng ta có thể viết một phương thức khác sẽ thực hiện phép tính trên `int`. Khi có nó, chúng ta có thể viết `hasGapFor` và để nó thực hiện công việc của mình bằng cách ủy quyền cho phương thức khác.
+
+Hãy bắt đầu viết phương thức đầu tiên. Đây là một kiểm thử cho nó:
+
+```cpp
+TEST(hasGapFor, Sequence)
+{
+  vector<unsigned int> baseSequence;
+  baseSequence.push_back(1);
+  baseSequence.push_back(0);
+  baseSequence.push_back(0);
+
+  vector<unsigned int> pattern;
+  pattern.push_back(1);
+  pattern.push_back(2);
+
+  CHECK(SequenceHasGapFor(baseSequence, pattern));
+}
+```
+
+Hàm `SequenceHasGapFor` chỉ là một hàm tự do; nó không phải là một phần của bất kỳ lớp nào, nhưng nó hoạt động trên một biểu diễn được xây dựng từ các số nguyên tố — trong trường hợp này là các số nguyên không dấu. Nếu xây dựng chức năng cho `SequenceHasGapFor` trong kiểm thử khai thác, chúng ta có thể viết một hàm khá đơn giản trên `Sequence` để ủy quyền cho chức năng mới:
+
+```cpp
+bool Sequence::hasGapFor(Sequence& pattern) const
+{
+  vector<unsigned int> baseRepresentation = getDurationsCopy();
+
+  vector<unsigned int> patternRepresentation = pattern.getDurationsCopy();
+
+  return SequenceHasGapFor(baseRepresentation, patternRepresentation);
+}
+```
+
+Hàm này cần một hàm khác để lấy một mảng thời lượng, vì vậy chúng ta viết nó:
+
+```cpp
+vector<unsigned int> Sequence::getDurationsCopy() const
+{
+  vector<unsigned int> result;
+  for (vector<Event>::iterator it = events.begin(); it != events.end(); ++it) {
+    result.push_back(it->duration);
+  }
+  return result;
+}
+```
+
+Bây giờ, chúng at đã có thể đưa tính năng này vào nhưng theo cách rất kém. Hãy lập danh sách tất cả những điều tồi tệ chúng ta đã làm:
+
+1. Hiển thị biểu diễn bên trong của `Sequence`.
+
+2. Khiến việc triển khai `Sequence` trở nên khó hiểu hơn một chút khi chuyển một số hàm trong của nó thành một hàm tự do.
+
+3. Viết một số code chưa được kiểm thử (chúng ta thực sự không thể viết kiểm thử cho `getDurationsCopy()`).
+
+4. Dữ liệu trùng lặp trong hệ thống.
+
+5. Vấn đề kéo dài. Chúng ta vẫn chưa bắt đầu thực hiện công việc khó khăn trong việc phá vỡ sự phụ thuộc giữa các lớp miền và cơ sở hạ tầng. (Đó là điều sẽ tạo ra sự khác biệt lớn khi chúng ta tiến về phía trước và nó vẫn còn ở phía trước chúng ta.)
+
+Bất chấp tất cả những nhược điểm đó, chúng ta vẫn có thể thêm vào một tính năng đã được kiểm thử. Tôi không thích thực hiện việc tái cấu trúc này, nhưng tôi sẽ sử dụng nó nếu không còn cách nào khác. Thường thì nó là tiền đề tốt cho _Ươm mầm lớp (63)_. Để thấy điều này, hãy tưởng tượng gói `SequenceHasGapFor` trong một lớp có tên là `GapFinder`.
+
+> _Ưu tiên tham số (385)_ khiến code ở trạng thái khá kém. Nhìn chung, tốt hơn là thêm code mới vào lớp ban đầu hoặc sử dụng _Ươm mầm Lớp(63)_ để xây dựng một số khái niệm trừu tượng mới có thể dùng làm cơ sở cho công việc tiếp theo. Lần duy nhất tôi sử dụng _Ưu tiên tham số_ là khi tôi cảm thấy tự tin rằng sau này tôi sẽ dành thời gian để kiểm thử lớp. Tại thời điểm đó, hàm có thể được xếp vào lớp như một phương thức thực sự.
+
+### Các bước thực hiện
+
+Để thực hiện _Ưu tiên tham số_, hãy làm theo các bước sau:
+
+1. Phát triển một hàm tự do thực hiện công việc bạn cần làm trên lớp. Trong quá trình này, hãy phát triển một biểu diễn trung gian mà bạn có thể sử dụng để thực hiện công việc.
+
+2. Thêm một hàm vào lớp để xây dựng biểu diễn và
+ủy quyền nó cho chức năng mới.
