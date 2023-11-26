@@ -1809,3 +1809,67 @@ Bất chấp tất cả những nhược điểm đó, chúng ta vẫn có thể
 
 2. Thêm một hàm vào lớp để xây dựng biểu diễn và
 ủy quyền nó cho chức năng mới.
+
+## Đưa tính năng lên
+
+Đôi khi bạn phải làm việc với một cụm phương thức trong một lớp và các phần phụ thuộc khiến bạn không thể khởi tạo lớp đó mà không liên quan đến cụm đó. Khi nói "không liên quan", ý tôi là các phương thức bạn muốn làm việc không tham chiếu trực tiếp hoặc gián tiếp đến bất kỳ phần phụ thuộc xấu nào. Bạn có thể thực hiện nhiều lần _Trích xuất Phương thức Tĩnh(345)_ hoặc _Phá bỏ Phương thức Đối tượng (330)_, nhưng đó không nhất thiết là cách trực tiếp nhất để giải quyết vấn đề phụ thuộc.
+
+Trong tình huống này, bạn có thể kéo cụm phương thức, tính năng vào một siêu lớp trừu tượng. Khi bạn có siêu lớp trừu tượng đó, bạn có thể phân lớp nó và tạo các phiên bản của lớp con trong các kiểm thử của mình. Đây là một ví dụ:
+
+```java
+public class Scheduler
+{
+  private List items;
+
+  public void updateScheduleItem(ScheduleItem item) throws SchedulingException {
+    try {
+      validate(item);
+    }
+    catch (ConflictException e) {
+      throw new SchedulingException(e);
+    }
+    ...
+  }
+
+  private void validate(ScheduleItem item) throws ConflictException {
+  // make calls to a database
+  ...
+  }
+
+  public int getDeadtime() {
+    int result = 0;
+    for (Iterator it = items.iterator(); it.hasNext(); ) {
+      ScheduleItem item = (ScheduleItem)it.next();
+      if (item.getType() != ScheduleItem.TRANSIENT && notShared(item)) {
+        result += item.getSetupTime() + clockTime();
+      }
+      if (item.getType() != ScheduleItem.TRANSIENT) {
+        result += item.finishingTime();
+      }
+      else {
+        result += getStandardFinish(item);
+      }
+    }
+    return result;
+  }
+}
+```
+
+Giả sử chúng ta muốn thực hiện sửa đổi cho `getDeadTime`, nhưng chúng ta không cần quan tâm đến `updateScheduleItem`. Sẽ thật tuyệt nếu không phải đối mặt với sự phụ thuộc vào cơ sở dữ liệu. Chúng ta có thể thử sử dụng _Trích xuất Phương thức Tĩnh (345)_, nhưng chúng ta đang sử dụng nhiều tính năng không tĩnh của lớp `Scheduler`. _Phá vỡ Phương thức Đối tượng (330)_ là một lựa chọn khác, nhưng đây là một phương thức khá nhỏ và những sự phụ thuộc đó vào các phương thức và trường khác của lớp sẽ khiến công việc trở nên phức tạp hơn chúng ta mong muốn chỉ để kiểm thử phương thức đó.
+
+Một lựa chọn khác là đưa phương thức mà chúng ta quan tâm vào một siêu lớp. Khi làm điều đó, chúng ta có thể loại bỏ các phần phụ thuộc xấu trong lớp này, nơi chúng sẽ không còn phù hợp với các kiểm thử của chúng ta. Đây là những gì thu được:
+
+```java
+public class Scheduler extends SchedulingServices
+{
+  public void updateScheduleItem(ScheduleItem item) throws SchedulingException {
+    ...
+  }
+
+  private void validate(ScheduleItem item) throws ConflictException {
+    // make calls to the database
+    ...
+  }
+  ...
+}
+```
