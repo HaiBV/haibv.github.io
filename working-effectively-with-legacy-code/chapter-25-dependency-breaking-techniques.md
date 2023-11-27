@@ -1873,3 +1873,84 @@ public class Scheduler extends SchedulingServices
   ...
 }
 ```
+
+Chúng ta đã kéo `getDeadtime` (tính năng chúng ta muốn kiểm thử) và tất cả các tính năng nó sử dụng vào một lớp trừu tượng.
+
+```java
+public abstract class SchedulingServices
+{
+  protected List items;
+
+  protected boolean notShared(ScheduleItem item) {
+    ...
+  }
+
+  protected int getClockTime() {
+    ...
+  }
+
+  protected int getStandardFinish(ScheduleItem item) {
+    ...
+  }
+
+  public int getDeadtime() {
+    int result = 0;
+    for (Iterator it = items.iterator(); it.hasNext(); ) {
+      ScheduleItem item = (ScheduleItem)it.next();
+      if (item.getType() != ScheduleItem.TRANSIENT && notShared(item)) {
+        result += item.getSetupTime() + clockTime();
+      }
+      if (item.getType() != ScheduleItem.TRANSIENT) {
+        result += item.finishingTime();
+      }
+      else {
+        result += getStandardFinish(item);
+      }
+    }
+    return result;
+  }
+  ...
+}
+```
+
+Bây giờ chúng ta có thể tạo một _lớp con kiểm thử_ cho phép truy cập các phương thức đó trong kiểm thử khai thác:
+
+```java
+public class TestingSchedulingServices extends SchedulingServices
+{
+  public TestingSchedulingServices() {
+  }
+
+  public void addItem(ScheduleItem item) {
+    items.add(item);
+  }
+}
+
+import junit.framework.*;
+
+class SchedulingServicesTest extends TestCase
+{
+  public void testGetDeadTime() {
+    TestingSchedulingServices services = new TestingSchedulingServices();
+    services.addItem(new ScheduleItem("a", 10, 20, ScheduleItem.BASIC));
+    assertEquals(2, services.getDeadtime());
+  }
+  ...
+}
+```
+
+Vì vậy, những gì chúng ta đã làm ở đây là kéo các phương thức muốn thử nghiệm vào một siêu lớp trừu tượng, sau đó tạo một lớp con cụ thể mà chúng ta có thể sử dụng để kiểm thử chúng. Đây có phải là một phương án tốt? Từ góc nhìn thiết kế, nó kém lý tưởng. Chúng ta đã phân bổ một bộ tính năng cho hai lớp chỉ để giúp việc kiểm thử dễ dàng hơn. Sự chênh lệch có thể gây nhầm lẫn nếu mối quan hệ giữa các đặc điểm trong mỗi lớp không chặt chẽ và đó là trường hợp đang xét ở đây. Chúng ta có `Scheduler`, chịu trách nhiệm cập nhật các mục lập lịch và `SchedulingServices`, chịu trách nhiệm về nhiều việc khác nhau, bao gồm lấy thời gian mặc định cho các mục và tính toán thời gian chết. Cách tốt hơn là để `Scheduler` ủy quyền cho một số đối tượng trình xác thực biết cách giao tiếp với cơ sở dữ liệu, nhưng nếu bước đó có vẻ quá rủi ro để thực hiện ngay lập tức hoặc có các phần phụ thuộc không tốt khác, thì việc nâng cấp các tính năng là bước đầu tiên tốt. Nếu bạn _Bảo toàn Chữ ký (312)_ và _Dựa vào Trình biên dịch (315)_, điều đó sẽ ít rủi ro hơn nhiều. Chúng ta có thể chuyển sang ủy quyền sau khi có nhiều kiểm thử hơn.
+
+### Các bước thực hiện
+
+1. Xác định các phương thức bạn muốn kéo lên.
+
+2. Tạo một siêu lớp trừu tượng cho lớp chứa các phương thức.
+
+3. Sao chép các phương thức vào siêu lớp và biên dịch.
+
+4. Sao chép từng tham chiếu bị thiếu mà trình biên dịch thông báo cho bạn về siêu lớp mới. Hãy nhớ _Bảo tồn Chữ ký (312)_ khi bạn thực hiện việc này để giảm khả năng xảy ra lỗi.
+
+5. Khi cả hai lớp biên dịch thành công, hãy tạo một lớp con cho lớp trừu tượng và thêm bất kỳ phương thức nào bạn cần để có thể thiết lập nó trong các kiểm thử của mình.
+
+> Bạn có thể thắc mắc tại sao chúng ta lại tạo siêu lớp trừu tượng. Tôi thích làm cho nó trừu tượng để code dễ hiểu hơn. Thật tuyệt khi có thể xem code trong một ứng dụng và biết rằng mọi lớp cụ thể đều đang được sử dụng. Nếu bạn tìm kiếm code và tìm thấy các lớp cụ thể chưa được khởi tạo ở bất kỳ đâu, chúng có thể trông giống như "code chết".
