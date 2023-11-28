@@ -1954,3 +1954,97 @@ Vì vậy, những gì chúng ta đã làm ở đây là kéo các phương th�
 5. Khi cả hai lớp biên dịch thành công, hãy tạo một lớp con cho lớp trừu tượng và thêm bất kỳ phương thức nào bạn cần để có thể thiết lập nó trong các kiểm thử của mình.
 
 > Bạn có thể thắc mắc tại sao chúng ta lại tạo siêu lớp trừu tượng. Tôi thích làm cho nó trừu tượng để code dễ hiểu hơn. Thật tuyệt khi có thể xem code trong một ứng dụng và biết rằng mọi lớp cụ thể đều đang được sử dụng. Nếu bạn tìm kiếm code và tìm thấy các lớp cụ thể chưa được khởi tạo ở bất kỳ đâu, chúng có thể trông giống như "code chết".
+
+## Đẩy phụ thuộc xuống
+
+Một số lớp chỉ có một vài phụ thuộc có vấn đề. Nếu các phần phụ thuộc chỉ có trong một vài lệnh gọi phương thức, bạn có thể sử dụng _Phân lớp và Ghi đè Phương thức (401)_ để loại bỏ chúng khi bạn viết bài kiểm thử. Nhưng nếu sự phụ thuộc lan rộng, _Phân lớp và Ghi đè Phương thức (401)_ có thể không hoạt động. Bạn có thể phải sử dụng _Trích xuất Giao diện (362)_ nhiều lần để loại bỏ sự phụ thuộc vào các kiểu cụ thể. _Đẩy phụ thuộc xuống_ là một lựa chọn khác. Kỹ thuật này giúp bạn tách các phần phụ thuộc có vấn đề khỏi phần còn lại của lớp, giúp bạn làm việc dễ dàng hơn trong kiểm thử khai thác.
+
+Khi bạn sử dụng _Đẩy phụ thuộc xuống_, bạn làm cho lớp hiện tại của mình thành trừu tượng. Sau đó, bạn tạo một lớp con sẽ là lớp sản xuất mới của bạn và bạn đẩy tất cả các phần phụ thuộc có vấn đề vào lớp đó. Tại thời điểm này, bạn có thể phân lớp lớp ban đầu của mình để cung cấp các phương thức của nó cho việc kiểm thử.
+
+Đây là một ví dụ trong C++:
+
+```cpp
+class OffMarketTradeValidator : public TradeValidator
+{
+private:
+  Trade& trade;
+  bool flag;
+
+  void showMessage() {
+    int status = AfxMessageBox(makeMessage(), MB_ABORTRETRYIGNORE);
+    if (status == IDRETRY) {
+      SubmitDialog dlg(this, "Press okay if this is a valid trade");
+      dlg.DoModal();
+      if (dlg.wasSubmitted()) {
+        g_dispatcher.undoLastSubmission();
+        flag = true;
+      }
+    }
+    else if (status == IDABORT) {
+      flag = false;
+    }
+  }
+
+public:
+  OffMarketTradeValidator(Trade& trade)
+  : trade(trade), flag(false)
+  {}
+
+  bool isValid() const {
+    if (inRange(trade.getDate()) && validDestination(trade.destination) && inHours(trade)) {
+      flag = true;
+    }
+    showMessage();
+    return flag;
+  }
+  ...
+};
+```
+
+Nếu cần thực hiện các thay đổi trong logic xác thực, chúng ta có thể gặp rắc rối nếu không muốn liên kết các hàm và lớp dành riêng cho giao diện người dùng vào kiểm thử khai thác của mình. _Đẩy phụ thuộc xuống_ là một lựa chọn tốt trong trường hợp này.
+
+Đây là code sẽ trông như thế này sau khi _Đẩy phụ thuộc xuống_:
+
+```cpp
+class OffMarketTradeValidator : public TradeValidator
+{
+protected:
+  Trade& trade;
+  bool flag;
+  virtual void showMessage() = 0;
+
+public:
+  OffMarketTradeValidator(Trade& trade)
+  : trade(trade), flag(false) {}
+
+  bool isValid() const {
+    if (inRange(trade.getDate()) && validDestination(trade.destination) && inHours(trade)) {
+      flag = true;
+    }
+    showMessage();
+    return flag;
+  }
+  ...
+};
+
+class WindowsOffMarketTradeValidator
+    : public OffMarketTradeValidator
+{
+protected:
+  virtual void showMessage() {
+    int status = AfxMessageBox(makeMessage(), MB_ABORTRETRYIGNORE);
+    if (status == IDRETRY) {
+      SubmitDialog dlg(this, "Press okay if this is a valid trade");
+      dlg.DoModal();
+      if (dlg.wasSubmitted()) {
+        g_dispatcher.undoLastSubmission();
+        flag = true;
+      }
+    }
+    else if (status == IDABORT) {
+      flag = false;
+    }
+  }
+  ...
+};
+```
