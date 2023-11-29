@@ -2048,3 +2048,63 @@ protected:
   ...
 };
 ```
+
+Khi chúng ta đẩy công việc dành riêng cho giao diện người dùng xuống một lớp con mới (`WindowsOffMarketValidator`), chúng ta có thể tạo một lớp con khác để kiểm thử. Tất cả những gì nó phải làm là loại bỏ hành vi `showMessage`:
+
+```cpp
+class TestingOffMarketTradeValidator : public OffMarketTradeValidator
+{
+protected:
+  virtual void showMessage() {}
+};
+```
+
+Bây giờ chúng ta có một lớp có thể kiểm thử mà không có bất kỳ sự phụ thuộc nào vào giao diện người dùng. Việc sử dụng tính kế thừa theo cách này có lý tưởng không? Không, nhưng nó giúp chúng ta hiểu được một phần logic của lớp đang được kiểm thử. Khi tiến hành kiểm thử `OffMarketTradeValidator`, chúng ta có thể bắt đầu dọn sạch logic thử lại và kéo nó lên từ `WindowsOffMarketTradeValidator`. Khi chỉ còn lại các lệnh gọi giao diện người dùng, chúng ta có thể chuyển sang ủy quyền chúng cho một lớp mới. Lớp mới đó cuối cùng chỉ giữ các phần phụ thuộc giao diện người dùng duy nhất.
+
+### Các bước thực hiện
+
+1. Cố gắng dựng lớp có vấn đề với phụ thuộc trong kiểm thử khai thác của bạn.
+
+2. Xác định những phần phụ thuộc nào gây ra sự cố trong quá trình dựng.
+
+3. Tạo một lớp con mới với tên truyền đạt môi trường cụ thể của các phần phụ thuộc đó.
+
+4. Sao chép các biến thực thể và phương thức có chứa các phần phụ thuộc không tốt vào lớp con mới, chú ý bảo toàn chữ ký. Làm cho các phương thức được bảo vệ và trừu tượng trong lớp gốc của bạn và làm cho lớp gốc của bạn trở nên trừu tượng.
+
+5. Tạo một lớp con kiểm thử và thay đổi kiểm thử của bạn để bạn thử khởi tạo nó.
+
+6. Xây dựng các kiểm thử để xác minh rằng bạn có thể khởi tạo lớp mới.
+
+## Thay thế hàm bằng con trỏ hàm
+
+Khi bạn cần phá vỡ sự phụ thuộc trong các ngôn ngữ thủ tục, bạn không có nhiều lựa chọn như trong các ngôn ngữ hướng đối tượng. Bạn không thể sử dụng _Đóng gói biến tham chiếu toàn cục (339)_ hoặc _Phân lớp con và Ghi đè Phương thức (401)_. Tất cả các lựa chọn đó đều không dùng được. Bạn có thể sử dụng _Liên kết Thay thế (377)_ hoặc _Hoàn thành Định nghĩa (337)_, nhưng chúng thường quá mức cần thiết đối khi phá vỡ sự phụ thuộc tương đối nhỏ. _Thay thế Hàm bằng Con trỏ Hàm_ là một lựa chọn thay thế trong các ngôn ngữ hỗ trợ con trỏ hàm. Ngôn ngữ nổi tiếng nhất có sự hỗ trợ này là C.
+
+Các nhóm khác nhau có quan điểm khác nhau về con trỏ hàm. Ở một số nhóm, chúng được coi là cực kỳ không an toàn vì có thể làm hỏng nội dung của chúng và cuối cùng gọi qua một vùng bộ nhớ ngẫu nhiên nào đó. Ở các nhóm khác, chúng được coi là một công cụ hữu ích cần được sử dụng cẩn thận. Nếu bạn nghiêng nhiều hơn về phía "được sử dụng cẩn thận", bạn có thể tách biệt các phần phụ thuộc khó hoặc không thể tách rời.
+
+Trước tiên. Chúng ta hãy xem xét một con trỏ hàm trong môi trường tự nhiên của nó. Ví dụ sau đây cho thấy việc khai báo một số con trỏ hàm trong C và một vài lệnh gọi thông qua chúng:
+
+```cpp
+struct base_operations
+{
+  double (*project)(double,double);
+  double (*maximize)(double,double);
+};
+
+double default_projection(double first, double second) {
+  return second;
+}
+
+double maximize(double first, double second) {
+  return first + second;
+}
+
+void init_ops(struct base_operations *operations) {
+  operations->project = default_projection;
+  operations->maximize = default_maximize;
+}
+
+void run_tesselation(struct node *base, struct base_operations *operations) {
+  double value = operations->project(base.first, base.second);
+  ...
+}
+```
