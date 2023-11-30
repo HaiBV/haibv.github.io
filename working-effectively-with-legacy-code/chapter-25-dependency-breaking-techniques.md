@@ -2108,3 +2108,83 @@ void run_tesselation(struct node *base, struct base_operations *operations) {
   ...
 }
 ```
+
+Với con trỏ hàm, bạn có thể thực hiện một số chương trình dựa trên đối tượng rất đơn giản, nhưng chúng hữu ích như thế nào khi phá vỡ các phần phụ thuộc? Hãy xem xét tình huống này:
+
+Bạn có một ứng dụng mạng lưu trữ thông tin gói trong cơ sở dữ liệu trực tuyến. Bạn tương tác với cơ sở dữ liệu thông qua các lệnh gọi như sau:
+
+```cpp
+void db_store( struct receive_record *record, struct time_stamp receive_time);
+struct receive_record * db_retrieve(time_stamp search_time);```
+
+Chúng ta có thể sử dụng _Thay thế Liên kết (377)_ để liên kết với các nội dung mới cho các chức năng này, nhưng đôi khi _Thay thế Liên kết_ gây ra những thay đổi không đáng kể về bản dựng. Chúng ta có thể phải chia nhỏ các thư viện để phân tách các chức năng muốn giả lập. Quan trọng hơn, các đường nối chúng ta nhận được với _Thay thế Liên kết_ không phải là loại bạn muốn khai thác để thay đổi hành vi trong code sản xuất. Ví dụ: nếu bạn muốn kiểm thử code của mình và cung cấp tính linh hoạt để thay đổi loại cơ sở dữ liệu mà code của bạn có thể giao tiếp, thì _Thay thế Hàm bằng Con trỏ Hàm_ có thể hữu ích. Hãy cùng thực hiện các bước:
+
+Đầu tiên tìm phần khai báo của hàm mà chúng ta muốn thay thế
+
+```cpp
+// db.h
+void db_store(struct receive_record *record,
+struct time_stamp receive_time);
+```
+
+Sau đó chúng ta khai báo một con trỏ hàm có cùng tên
+
+```cpp
+// db.h
+void db_store(struct receive_record *record, struct time_stamp receive_time);
+
+void (*db_store)(struct receive_record *record, struct time_stamp receive_time);
+```
+
+Bây giờ chúng ta đổi tên khai báo ban đầu
+
+```cpp
+// db.h
+void db_store_production(struct receive_record *record, struct time_stamp receive_time);
+
+void (*db_store)(struct receive_record *record, struct time_stamp receive_time);
+```
+
+Sau đó, chúng ta khởi tạo con trỏ trong tệp nguồn C:
+
+```cpp
+// main.c
+extern void db_store_production(
+struct receive_record *record,
+struct time_stamp receive_time);
+void initializeEnvironment() {
+	db_store = db_store_production;
+...
+}
+int main(int ac, char **av) {
+initializeEnvironment();
+...
+}
+```
+
+Bây giờ chúng ta tìm định nghĩa của hàm `db_store` và đổi tên nó thành `db_store_production`
+
+```cpp
+// db.c
+void db_store_production(struct receive_record *record, struct time_stamp receive_time) {
+	...
+}
+```
+
+Bây giờ chúng ta có thể biên dịch và kiểm thử.
+
+Với các con trỏ hàm sẵn có, các kiểm thử có thể cung cấp các định nghĩa thay thế cho việc cảm nhận hoặc phân tách.
+
+> _Thay thế Hàm bằng Con trỏ Hàm_ là một cách hay để phá vỡ sự phụ thuộc. Một trong những điều thú vị về nó là nó diễn ra hoàn toàn vào thời gian biên dịch, vì vậy nó có tác động tối thiểu đến hệ thống dựng của bạn. Tuy nhiên, nếu bạn đang sử dụng kỹ thuật này trong C, hãy cân nhắc nâng cấp lên C++ để có thể tận dụng tất cả các đường nối khác mà C++ cung cấp cho bạn. Tại thời điểm viết bài này, nhiều trình biên dịch C cung cấp các công tắc để cho phép bạn thực hiện biên dịch hỗn hợp C và C++. Khi sử dụng tính năng này, bạn có thể di chuyển dự án C của mình sang C++ một cách chậm rãi, trước tiên chỉ lấy các tệp mà bạn quan tâm để phá vỡ các phần phụ thuộc.
+
+### Các bước thực hiện
+
+1. Tìm phần khai báo của hàm bạn muốn thay thế.
+
+2. Tạo các con trỏ hàm có cùng tên trước mỗi lần khai báo hàm.
+
+3. Đổi tên các khai báo hàm ban đầu sao cho tên của chúng không giống với tên con trỏ hàm bạn vừa khai báo.
+
+4. Khởi tạo con trỏ tới địa chỉ của các hàm cũ trong tệp C.
+
+5. Chạy bản dựng để tìm nội dung của các hàm cũ. Đổi tên chúng thành tên hàm mới.
