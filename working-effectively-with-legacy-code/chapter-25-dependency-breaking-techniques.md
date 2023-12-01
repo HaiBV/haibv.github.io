@@ -2115,7 +2115,8 @@ Bạn có một ứng dụng mạng lưu trữ thông tin gói trong cơ sở d�
 
 ```cpp
 void db_store( struct receive_record *record, struct time_stamp receive_time);
-struct receive_record * db_retrieve(time_stamp search_time);```
+struct receive_record * db_retrieve(time_stamp search_time);
+```
 
 Chúng ta có thể sử dụng _Thay thế Liên kết (377)_ để liên kết với các nội dung mới cho các chức năng này, nhưng đôi khi _Thay thế Liên kết_ gây ra những thay đổi không đáng kể về bản dựng. Chúng ta có thể phải chia nhỏ các thư viện để phân tách các chức năng muốn giả lập. Quan trọng hơn, các đường nối chúng ta nhận được với _Thay thế Liên kết_ không phải là loại bạn muốn khai thác để thay đổi hành vi trong code sản xuất. Ví dụ: nếu bạn muốn kiểm thử code của mình và cung cấp tính linh hoạt để thay đổi loại cơ sở dữ liệu mà code của bạn có thể giao tiếp, thì _Thay thế Hàm bằng Con trỏ Hàm_ có thể hữu ích. Hãy cùng thực hiện các bước:
 
@@ -2188,3 +2189,92 @@ Với các con trỏ hàm sẵn có, các kiểm thử có thể cung cấp các
 4. Khởi tạo con trỏ tới địa chỉ của các hàm cũ trong tệp C.
 
 5. Chạy bản dựng để tìm nội dung của các hàm cũ. Đổi tên chúng thành tên hàm mới.
+
+## Thay thế tham chiếu toàn cục bằng Getter
+
+Biến toàn cục có thể thực sự là một vấn đề khó khăn khi bạn phải làm việc với các đoạn code một cách độc lập. Đó là tất cả những gì tôi sẽ đề cập trong chương này. Tôi đã nói khá đầy đủ về cách đối phó với biến toàn cục trong phần về _Sử dụng Setter Tĩnh (372)_. Tôi sẽ giúp bạn lặp lại điều đó ở đây.
+
+Một cách để vượt qua sự phụ thuộc vào các biến toàn cục trong một lớp là sử dụng các getters cho từng biến trong lớp. Khi bạn có getters, bạn có thể _Phân lớp và Ghi đè phương thức (401)_ để getters trả về thứ gì đó phù hợp. Trong một số trường hợp, bạn có thể sử dụng _Trích xuất Giao diện (362)_ để phá vỡ sự phụ thuộc vào lớp của biến toàn cục. Đây là một ví dụ trong Java:
+
+```java
+public class RegisterSale
+{
+  public void addItem(Barcode code) {
+  Item newItem = Inventory.getInventory().itemForBarcode(code);
+  items.add(newItem);
+}
+...
+}
+```
+
+Trong đoạn code này, lớp `Inventory` được truy cập như một biến toàn cục. "Chờ đã?" Bạn sẽ thắc mắc. "Một biến toàn cục sao? Nó chỉ là một lời gọi đến một phương thức tĩnh trên một lớp." Đối với mục đích của chúng ta, nó được coi là toàn cục. Trong Java, bản thân lớp này là một đối tượng toàn cục và có vẻ như nó phải tham chiếu một số trạng thái để có thể thực hiện công việc của mình (trả về các đối tượng item cung cấp mã vạch). Chúng ta có thể vượt qua điều này bằng _Thay thế tham chiếu toàn cục bằng Getter không? Hãy thử xem.
+
+Đầu tiên chúng ta viết getter. Lưu ý rằng chúng là phương thức protected để có thể ghi đè khi kiểm thử.
+
+```java
+public class RegisterSale
+{
+  public void addItem(Barcode code) {
+  Item newItem = Inventory.getInventory().itemForBarcode(code);
+  items.add(newItem);
+}
+
+protected Inventory getInventory() {
+  return Inventory.getInventory();
+}
+...
+}
+```
+
+Sau đó chúng ta thay thế mọi lời gọi đến biến toàn cục bằng getter.
+
+```java
+public class RegisterSale
+{
+  public void addItem(Barcode code) {
+  Item newItem = getInventory().itemForBarcode(code);
+  items.add(newItem);
+}
+
+protected Inventory getInventory() {
+  return Inventory.getInventory();
+}
+...
+}
+```
+
+Bây giờ chúng ta có thể tạo một lớp con `Inventory` để có thể sử dụng trong kiểm thử. Vì `Inventory` là một singleton nên hàm khởi tạo nên là protected thay vì privated. Sau khi thực hiện xong, chúng ta có thể phân lớp nó như thế này và đưa vào bất kỳ logic nào chúng ta muốn sử dụng để chuyển đổi mã vạch thành các mục trong kiểm thử.
+
+
+```java
+public class FakeInventory extends Inventory
+{
+  public Item itemForBarcode(Barcode code) {
+  ...
+}
+...
+}
+```
+
+Bây giờ chúng ta có thể viết lớp mà chúng ta sẽ sử dụng trong kiểm thử.
+
+```java
+class TestingRegisterSale extends RegisterSale
+{
+  Inventory inventory = new FakeInventory();
+  protected Inventory getInventory() {
+    return inventory;
+  }
+}
+```
+
+### Các bước thực hiện
+
+1. Xác định tham chiếu chung mà bạn muốn thay thế.
+
+2. Viết một getter cho tham chiếu toàn cục. Đảm bảo rằng biện pháp bảo vệ quyền truy cập của phương thức đủ lỏng lẻo để bạn có thể ghi đè getter trong một lớp con.
+
+3. Thay thế các tham chiếu đến toàn cục bằng các lệnh gọi đến getter.
+
+4. Tạo một lớp con kiểm thử và ghi đè getter.
+
