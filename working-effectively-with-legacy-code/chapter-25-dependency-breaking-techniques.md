@@ -1313,7 +1313,7 @@ Kỹ thuật này khá đơn giản với nhiều phương thức tĩnh, nhưng 
 
 Để thực hiện _Sử dụng biến thực thể ủy quyền_, hãy làm theo các bước sau:
 
-1. Xác định một phương pháp tĩnh có vấn đề khi sử dụng trong kiểm thử.
+1. Xác định một phương thức tĩnh có vấn đề khi sử dụng trong kiểm thử.
 
 2. Tạo một phương thức cá thể cho phương thức trên lớp. Hãy nhớ _Bảo tồn Chữ ký (312)_. Làm cho phương thức cá thể được ủy quyền cho phương thức tĩnh.
 
@@ -1711,7 +1711,7 @@ void TestCase::run(TestResult *result) {
 }
 ```
 
-Chúng ta có thể sử dụng một phương pháp chuyển tiếp nhỏ để giữ nguyên giá trị trả về gốc:
+Chúng ta có thể sử dụng một phương thức chuyển tiếp nhỏ để giữ nguyên giá trị trả về gốc:
 
 ```cpp
 void TestCase::run() {
@@ -2278,3 +2278,56 @@ class TestingRegisterSale extends RegisterSale
 
 4. Tạo một lớp con kiểm thử và ghi đè getter.
 
+## Phân lớp và Ghi đè Phương thức
+
+_Phân lớp và Ghi đè Phương thức_ là một kỹ thuật cốt lõi để phá vỡ các phần phụ thuộc trong lập trình hướng đối tượng. Trên thực tế, nhiều kỹ thuật phá vỡ sự phụ thuộc khác trong chương này là những biến thể của nó.
+
+Ý tưởng trọng tâm của _Phân lớp và Ghi đè Phương thức_ là bạn có thể sử dụng tính kế thừa khi kiểm thử để vô hiệu hóa hành vi mà bạn không quan tâm hoặc có quyền truy cập vào hành vi mà bạn quan tâm.
+
+Chúng ta hãy xem một phương thức trong một ứng dụng nhỏ:
+
+```java
+class MessageForwarder
+{
+  private Message createForwardMessage(Session session, Message message)
+      throws MessagingException, IOException {
+    MimeMessage forward = new MimeMessage(session);
+    forward.setFrom(getFromAddress(message));
+    forward.setReplyTo(new Address [] { new InternetAddress(listAddress) });
+    forward.addRecipients(Message.RecipientType.TO, listAddress);
+    forward.addRecipients(Message.RecipientType.BCC, getMailListAddresses());
+    forward.setSubject(transformedSubject(message.getSubject()));
+    forward.setSentDate(message.getSentDate());
+    forward.addHeader(LOOP_HEADER, listAddress);
+    buildForwardContent(message, forward);
+
+    return forward;
+  }
+  ...
+}
+```
+
+`MessageForwarder` có khá nhiều phương thức không được hiển thị ở đây. Một trong những phương thức công khai gọi phương thức riêng tư này là `createForwardMessage` để xây dựng một thông báo mới. Giả sử chúng ta không muốn có sự phụ thuộc vào lớp `MimeMessage` khi đang kiểm thử. Nó sử dụng một biến có tên là `session` và sẽ không có `session` thực sự khi đang kiểm thử. Nếu muốn tách phần phụ thuộc vào `MimeMessage`, chúng ta có thể chuyển `createForwardMessage` thành protected và ghi đè nó trong một lớp con mới mà chúng ta tạo ra chỉ để kiểm thử.
+
+```java
+class TestingMessageForwarder extends MessageForwarder
+{
+  protected Message createForwardMessage(Session session, Message message) {
+    Message forward = new FakeMessage(message);
+    return forward;
+  }
+  ...
+}
+```
+
+Trong lớp con mới này, chúng ta có thể làm bất cứ điều gì cần làm để có được sự tách biệt hoặc cảm nhận mà chúng ta cần. Trong trường hợp này, về cơ bản, chúng ta đang loại bỏ hầu hết hành vi của `createForwardMessage`, nhưng nếu chúng không cần cho mục đích cụ thể mà chúng ta đang thử nghiệm bây giờ thì điều đó vẫn ổn.
+
+Trong code sản phẩm, chúng ta khởi tạo `MessageForwarders`; trong các kiểm thử, chúng ta khởi tạo `TestMessageForwarders`. Chúng ta có thể tách biệt bằng cách sửa đổi tối thiểu code sản phẩm. Tất cả những gì chúng ta làm là thay đổi phạm vi của một phương thức từ privated sang protected.
+
+Nói chung, lý do mà bạn có trong một lớp xác định mức độ bạn có thể sử dụng tính kế thừa để phân tách các phần phụ thuộc. Đôi khi bạn có một sự phụ thuộc mà bạn muốn loại bỏ bằng một phương thức nhỏ. Vào những lúc khác, bạn phải ghi đè một phương thức lớn hơn để tách phần phụ thuộc.
+
+_Phân lớp và Ghi đè Phương thức_ là một kỹ thuật mạnh mẽ, nhưng bạn phải cẩn thận. Trong ví dụ trước, tôi có thể trả về một tin nhắn rỗng mà không có chủ đề, địa chỉ, v.v., nhưng điều đó chỉ có ý nghĩa nếu tôi đang kiểm thử thực tế rằng tôi có thể nhận tin nhắn từ một nơi trong phần mềm tới nơi khác và không quan tâm nội dung thực tế và địa chỉ là gì.
+
+Đối với tôi, lập trình chủ yếu là trực quan. Tôi nhìn thấy đủ loại hình ảnh trong đầu khi làm việc và chúng giúp tôi quyết định giữa các lựa chọn thay thế. Thật đáng tiếc là không có bức ảnh nào trong số này thực sự là UML, nhưng dù sao chúng cũng giúp ích cho tôi.
+
+Một hình ảnh đến với tôi thường xuyên là cái mà tôi gọi là chế độ xem trên giấy. Tôi nhìn vào một phương thức và bắt đầu thấy tất cả các cách mà tôi có thể nhóm các câu lệnh và biểu thức. Đối với bất kỳ đoạn code nhỏ nào trong một phương thức mà tôi có thể xác định, tôi nhận ra rằng nếu tôi có thể trích xuất nó thành một phương thức, tôi có thể thay thế nó bằng một phương thức khác trong quá trình kiểm thử. Nó giống như thể tôi đặt một mảnh giấy mờ lên trên mảnh giấy có code. Trang tính mới có thể có đoạn code khác cho đoạn code mà tôi muốn thay thế. Chồng giấy là thứ tôi kiểm thử và các phương thức tôi thấy qua trang trên cùng là những phương thức có thể được thực thi khi tôi kiểm thử. Hình 25.6 là một nỗ lực để hiển thị chế độ xem bài viết này của một lớp.
