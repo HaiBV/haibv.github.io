@@ -2331,3 +2331,18 @@ _Phân lớp và Ghi đè Phương thức_ là một kỹ thuật mạnh mẽ, n
 Đối với tôi, lập trình chủ yếu là trực quan. Tôi nhìn thấy đủ loại hình ảnh trong đầu khi làm việc và chúng giúp tôi quyết định giữa các lựa chọn thay thế. Thật đáng tiếc là không có bức ảnh nào trong số này thực sự là UML, nhưng dù sao chúng cũng giúp ích cho tôi.
 
 Một hình ảnh đến với tôi thường xuyên là cái mà tôi gọi là chế độ xem trên giấy. Tôi nhìn vào một phương thức và bắt đầu thấy tất cả các cách mà tôi có thể nhóm các câu lệnh và biểu thức. Đối với bất kỳ đoạn code nhỏ nào trong một phương thức mà tôi có thể xác định, tôi nhận ra rằng nếu tôi có thể trích xuất nó thành một phương thức, tôi có thể thay thế nó bằng một phương thức khác trong quá trình kiểm thử. Nó giống như thể tôi đặt một mảnh giấy mờ lên trên mảnh giấy có code. Trang tính mới có thể có đoạn code khác cho đoạn code mà tôi muốn thay thế. Chồng giấy là thứ tôi kiểm thử và các phương thức tôi thấy qua trang trên cùng là những phương thức có thể được thực thi khi tôi kiểm thử. Hình 25.6 là một nỗ lực để hiển thị chế độ xem bài viết này của một lớp.
+
+![25.6](images/25/25-6.png)
+Hình 25.6 `TestingAccount` chồng lên `Account`
+
+Chế độ xem giấy giúp tôi biết những gì có thể làm được, nhưng khi bắt đầu sử dụng _Phân lớp và Ghi đè Phương thức_, tôi cố gắng ghi đè các phương thức đã tồn tại. Suy cho cùng, mục tiêu là thực hiện các kiểm thử tại chỗ và việc trích xuất các phương thức không có kiểm thử tại chỗ đôi khi có thể gặp rủi ro.
+
+### Các bước thực hiện
+
+1. Xác định những phụ thuộc mà bạn muốn tách biệt hoặc nơi bạn muốn cảm nhận. Cố gắng tìm nhóm phương thức nhỏ nhất mà bạn có thể áp dụng để đạt được mục tiêu của mình.
+
+2. Làm cho mỗi phương thức có thể ghi đè được. Cách thực hiện việc này khác nhau giữa các ngôn ngữ lập trình. Trong C++, các phương thức phải được tạo ảo nếu chưa có. Trong Java, các phương thức cần phải được đặt ở dạng không final. Trong nhiều ngôn ngữ .NET, rõ ràng bạn cũng phải làm cho phương thức này có thể ghi đè được.
+
+3. Nếu ngôn ngữ của bạn yêu cầu điều đó, hãy điều chỉnh mức độ hiển thị của các phương thức mà bạn sẽ ghi đè để chúng có thể được ghi đè trong một lớp con. Trong Java và C#, các phương thức ít nhất phải có khả năng hiển thị được bảo vệ để có thể ghi đè trong các lớp con. Trong C++, các phương thức có thể vẫn ở chế độ privated và vẫn bị ghi đè trong các lớp con.
+
+4. Tạo một lớp con ghi đè các phương thức. Xác minh rằng bạn có thể xây dựng nó trong kiểm thử khai thác của mình.
