@@ -67,3 +67,4 @@ Chương 5 - Công cụ
 <!-- legacy system = hệ thống kế thừa -->
 <!-- green-field system = hệ thống hoàn toàn mới -->
 <!-- call = lệnh gọi -->
+<!-- factory method = phương thức chế tạo -->

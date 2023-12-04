@@ -2346,3 +2346,82 @@ Chế độ xem giấy giúp tôi biết những gì có thể làm được, nh
 3. Nếu ngôn ngữ của bạn yêu cầu điều đó, hãy điều chỉnh mức độ hiển thị của các phương thức mà bạn sẽ ghi đè để chúng có thể được ghi đè trong một lớp con. Trong Java và C#, các phương thức ít nhất phải có khả năng hiển thị được bảo vệ để có thể ghi đè trong các lớp con. Trong C++, các phương thức có thể vẫn ở chế độ privated và vẫn bị ghi đè trong các lớp con.
 
 4. Tạo một lớp con ghi đè các phương thức. Xác minh rằng bạn có thể xây dựng nó trong kiểm thử khai thác của mình.
+
+## Thay thế Biến Thực thể
+
+Việc tạo đối tượng trong hàm khởi tạo có thể là một vấn đề, đặc biệt khi khó phụ thuộc vào các đối tượng đó trong kiểm thử. Trong hầu hết các trường hợp, chúng ta có thể sử dụng _Trích xuất và Ghi đè Phương thức Chế tạo (350)_ để khắc phục vấn đề này. Tuy nhiên, trong các ngôn ngữ không cho phép ghi đè lệnh gọi hàm ảo trong hàm khởi tạo, chúng ta phải xem xét các lựa chọn khác. Một trong số đó là _Thay thế Biến Thực thể_.
+
+Đây là một ví dụ cho thấy vấn đề về hàm ảo trong C++:
+
+```cpp
+class Pager
+{
+public:
+  Pager() {
+    reset();
+    formConnection();
+  }
+
+  virtual void formConnection() {
+    assert(state == READY);
+    // nasty code that talks to hardware here
+    ...
+  }
+
+  void sendMessage(const std::string& address, const std::string& message) {
+    formConnection();
+    ...
+  }
+  ...
+}
+```
+
+Trong ví dụ này, phương thức `formConnection` được gọi trong hàm khởi tạo. Không có gì sai khi hàm khởi tạo ủy quyền công việc cho các hàm khác, nhưng có điều gì đó không đúng lắm trong đoạn code này. Phương thức `formConnection` được khai báo là một phương thức ảo, vì vậy có vẻ như chúng ta chỉ có thể _Phân lớp và Ghi đè Phương thức (401)_. Chậm lại một chút. Hãy thử xem:
+
+```cpp
+class TestingPager : public Pager
+{
+public:
+  virtual void formConnection() {
+  }
+};
+
+TEST(messaging,Pager)
+{
+  TestingPager pager;
+  pager.sendMessage("5551212", "Hey, wanna go to a party? XXXOOO");
+  LONGS_EQUAL(OKAY, pager.getStatus());
+}
+```
+
+Khi ghi đè một hàm ảo trong C++, chúng ta sẽ thay thế hành vi của hàm đó trong các lớp dẫn xuất giống như chúng ta mong đợi, nhưng có một ngoại lệ. Khi lệnh gọi được thực hiện tới một hàm ảo trong hàm khởi tạo, ngôn ngữ sẽ không cho phép ghi đè. Trong ví dụ này, điều này có nghĩa là khi `sendMessage` được gọi, `TestPager::formConnection` sẽ được sử dụng và điều đó thật tuyệt: Chúng ta không thực sự muốn gửi một trang tán tỉnh đến nhà điều hành thông tin, nhưng thật không may, chúng ta đã thực hiện việc đó. Khi chúng tôi xây dựng `TestPager`, `Page::formConnection` đã được gọi trong quá trình khởi tạo vì C++ không cho phép ghi đè trong hàm khởi tạo.
+
+C++ có quy tắc này vì lệnh gọi hàm khởi tạo tới các hàm ảo bị ghi đè có thể không an toàn. Hãy tưởng tượng kịch bản này:
+
+```cpp
+class A
+{
+public:
+  A() {
+    someMethod();
+  }
+
+  virtual void someMethod() {
+  }
+};
+
+class B : public A
+{
+  C *c;
+public:
+  B() {
+    c = new C;
+  }
+
+  virtual void someMethod() {
+    c.doSomething();
+  }
+}
+```
+
+Ở đây chúng ta có `someMethod` của B ghi đè A. Nhưng hãy nhớ thứ tự của các lệnh gọi hàm khởi tạo. Khi chúng ta khởi tạo B, hàm khởi tạo của A được gọi trước B. Vì vậy, hàm khởi tạo của A gọi `someMethod` và `someMethod` bị ghi đè, do đó phương thức trong B được sử dụng. Nó cố gắng gọi `doSomething` trên một tham chiếu kiểu C, nhưng, đoán xem? Nó chưa bao giờ được khởi tạo vì hàm khởi tạo của B chưa được chạy.
