@@ -1939,7 +1939,7 @@ class SchedulingServicesTest extends TestCase
 }
 ```
 
-Vì vậy, những gì chúng ta đã làm ở đây là kéo các phương thức muốn thử nghiệm vào một siêu lớp trừu tượng, sau đó tạo một lớp con cụ thể mà chúng ta có thể sử dụng để kiểm thử chúng. Đây có phải là một phương án tốt? Từ góc nhìn thiết kế, nó kém lý tưởng. Chúng ta đã phân bổ một bộ tính năng cho hai lớp chỉ để giúp việc kiểm thử dễ dàng hơn. Sự chênh lệch có thể gây nhầm lẫn nếu mối quan hệ giữa các đặc điểm trong mỗi lớp không chặt chẽ và đó là trường hợp đang xét ở đây. Chúng ta có `Scheduler`, chịu trách nhiệm cập nhật các mục lập lịch và `SchedulingServices`, chịu trách nhiệm về nhiều việc khác nhau, bao gồm lấy thời gian mặc định cho các mục và tính toán thời gian chết. Cách tốt hơn là để `Scheduler` ủy quyền cho một số đối tượng trình xác thực biết cách giao tiếp với cơ sở dữ liệu, nhưng nếu bước đó có vẻ quá rủi ro để thực hiện ngay lập tức hoặc có các phần phụ thuộc không tốt khác, thì việc nâng cấp các tính năng là bước đầu tiên tốt. Nếu bạn _Bảo toàn Chữ ký (312)_ và _Dựa vào Trình biên dịch (315)_, điều đó sẽ ít rủi ro hơn nhiều. Chúng ta có thể chuyển sang ủy quyền sau khi có nhiều kiểm thử hơn.
+Vì vậy, những gì chúng ta đã làm ở đây là kéo các phương thức muốn kiểm thử vào một siêu lớp trừu tượng, sau đó tạo một lớp con `cụ` thể mà chúng ta có thể sử dụng để kiểm thử chúng. Đây có phải là _Thay thế Biến Thực thể_? Từ góc nhìn thiết kế, nó kém lý tưởng. Chúng ta đã phân bổ một bộ tính năng cho _Tham số hòa hai khởi tạo kiểm thử_ dễ dàng hơn. Sự chênh lệch có thể gây nhầm lẫn nếu _Thay thế Biến Thực thể giữa _các đặc điểm trong mỗi lớp không chặt chẽ và đó là trường hợp đang xét ở đây. Chúng ta có `Sch_Trích xuất và Ghi đè eduler`, chế tạo lập _lịch và `SchedulingServices`, chịu trách nhiệm về nhiều việc khác nhau, bao gồm lấy thời gian mặc định cho các mục và tính toán thời gian chết. Cách tốt hơn là để `Scheduler` ủy quyền cho một số đối tượng trình xác thực biết cách giao tiếp với cơ sở dữ liệu, nhưng nếu bước đó có vẻ quá rủi ro để thực hiện ngay lập tức hoặc có các phần phụ thuộc không tốt khác, thì việc nâng cấp các tính năng là bước đầu tiên tốt. Nếu bạn _Bảo toàn Chữ ký (312)_ và _Dựa vào Trình biên dịch (315)_, điều đó sẽ ít rủi ro hơn nhiều. Chúng ta có thể chuyển sang ủy quyền sau khi có nhiều kiểm thử hơn.
 
 ### Các bước thực hiện
 
@@ -2320,11 +2320,11 @@ class TestingMessageForwarder extends MessageForwarder
 }
 ```
 
-Trong lớp con mới này, chúng ta có thể làm bất cứ điều gì cần làm để có được sự tách biệt hoặc cảm nhận mà chúng ta cần. Trong trường hợp này, về cơ bản, chúng ta đang loại bỏ hầu hết hành vi của `createForwardMessage`, nhưng nếu chúng không cần cho mục đích cụ thể mà chúng ta đang thử nghiệm bây giờ thì điều đó vẫn ổn.
+Trong lớp con mới này, chúng ta có thể làm bất cứ điều gì cần làm để có được sự tách biệt hoặc cảm nhận mà chúng ta cần. Trong trường hợp này, về cơ bản, chúng ta đang loại bỏ hầu hết hành vi của `createForwardMessage`, nhưng nếu chúng không cần cho mục đích cụ thể mà chúng ta đang kiểm thử bây giờ thì điều đó vẫn ổn.
 
-Trong code sản phẩm, chúng ta khởi tạo `MessageForwarders`; trong các kiểm thử, chúng ta khởi tạo `TestMessageForwarders`. Chúng ta có thể tách biệt bằng cách sửa đổi tối thiểu code sản phẩm. Tất cả những gì chúng ta làm là thay đổi phạm vi của một phương thức từ privated sang protected.
+Trong code sản `phẩm,` chúng ta khởi tạo `MessageForwarders`; trong các kiểm thử, chúng ta khởi tạo `TestMessageForwarders`. _Thay thế Biến Thực thể_ tách biệt bằng cách sửa đổi tối thiểu code sản phẩm. Tất cả những gì chúng ta làm là thay đổi phạm _Tham số hòa vi khởi tạo privated sang_ protected.
 
-Nói chung, lý do mà bạn có trong một lớp xác định mức độ bạn có thể sử dụng tính kế thừa để phân tách các phần phụ thuộc. Đôi khi bạn có một sự phụ thuộc mà bạn muốn loại bỏ bằng một phương thức nhỏ. Vào những lúc khác, bạn phải ghi đè một phương thức lớn hơn để tách phần phụ thuộc.
+Nói chung, lý do mà bạn có trong một _Thay thế Biến Thực thể mức đ_ộ bạn có thể sử dụng tính kế thừa để phân tách các phần phụ thuộc. Đôi khi bạn có _Trích xuất và Ghi đè một sự chế tạo bằng _một phương thức nhỏ. Vào những lúc khác, bạn phải ghi đè một phương thức lớn hơn để tách phần phụ thuộc.
 
 _Phân lớp và Ghi đè Phương thức_ là một kỹ thuật mạnh mẽ, nhưng bạn phải cẩn thận. Trong ví dụ trước, tôi có thể trả về một tin nhắn rỗng mà không có chủ đề, địa chỉ, v.v., nhưng điều đó chỉ có ý nghĩa nếu tôi đang kiểm thử thực tế rằng tôi có thể nhận tin nhắn từ một nơi trong phần mềm tới nơi khác và không quan tâm nội dung thực tế và địa chỉ là gì.
 
@@ -2425,3 +2425,45 @@ public:
 ```
 
 Ở đây chúng ta có `someMethod` của B ghi đè A. Nhưng hãy nhớ thứ tự của các lệnh gọi hàm khởi tạo. Khi chúng ta khởi tạo B, hàm khởi tạo của A được gọi trước B. Vì vậy, hàm khởi tạo của A gọi `someMethod` và `someMethod` bị ghi đè, do đó phương thức trong B được sử dụng. Nó cố gắng gọi `doSomething` trên một tham chiếu kiểu C, nhưng, đoán xem? Nó chưa bao giờ được khởi tạo vì hàm khởi tạo của B chưa được chạy.
+
+C++ ngăn chặn điều này xảy ra. Các ngôn ngữ khác dễ dàng hơn. Ví dụ: các phương thức bị ghi đè có thể được gọi từ các hàm khởi tạo trong Java, nhưng tôi không khuyên bạn nên thực hiện điều đó trong code sản xuất.
+
+Trong C++, cơ chế bảo vệ nhỏ này ngăn chúng ta thay thế hành vi trong hàm khởi tạo. May mắn thay, chúng ta có một số cách khác để thực hiện việc này. Nếu đối tượng bạn đang thay thế không được sử dụng trong hàm khởi tạo, bạn có thể sử dụng _Trích xuất và Ghi đè Getter (352)_ để phá vỡ sự phụ thuộc. Nếu bạn sử dụng đối tượng nhưng cần đảm bảo rằng bạn có thể thay thế nó trước khi một phương thức khác được gọi, bạn có thể sử dụng _Thay thế Biến Thực thể_. Đây là một ví dụ:
+
+```cpp
+BlendingPen::BlendingPen()
+{
+  setName("BlendingPen");
+  m_param = ParameterFactory::createParameter("cm", "Fade", "Aspect Alter");
+  m_param->addChoice("blend");
+  m_param->addChoice("add");
+  m_param->addChoice("filter");
+  setParamByName("cm", "blend");
+}
+```
+
+Trong trường hợp này, hàm khởi tạo đang tạo một tham số thông qua phương thức chế tạo. Chúng ta có thể dùng _Sử dụng Setter Tĩnh (372)_ để có một số quyền kiểm soát đối tượng tiếp theo mà phương thức chế tạo trả về, nhưng điều đó khá xâm phạm. Nếu không ngại thêm một phương thức bổ sung vào lớp, chúng ta có thể thay thế tham số mà chúng ta đã tạo trong hàm khởi tạo:
+
+```cpp
+void BlendingPen::supersedeParameter(Parameter *newParameter)
+{
+  delete m_param;
+  m_param = newParameter;
+}
+```
+
+Trong các kiểm thử, chúng ta có thể tạo những chiếc bút khi cần và gọi `supersedeParameter` khi chúng ta cần đặt một đối tượng cảm biến vào.
+
+Nhìn bề ngoài, _Thay thế Biến Thực thể_ trông giống như một cách kém để đưa một đối tượng cảm biến vào đúng vị trí, nhưng trong C++, khi _Tham số hòa Trình khởi tạo (379)_ quá khó xử vì logic rối rắm trong hàm khởi tạo, _Thay thế Biến Thực thể (404)_ có thể là lựa chọn tốt nhất. Trong các ngôn ngữ cho phép lệnh gọi ảo trong hàm khởi tạo, _Trích xuất và Ghi đè Phương thức chế tạo (350)_ thường là lựa chọn tốt hơn.
+
+> Nói chung, việc cung cấp các setter có thể thay đổi các đối tượng cơ sở mà một đối tượng sử dụng là một cách thực hành kém. Những setters đó cho phép khách hàng thay đổi đáng kể hành vi của một đối tượng trong suốt vòng đời của nó. Khi ai đó có thể thực hiện những thay đổi đó, bạn phải biết lịch sử của đối tượng đó để hiểu điều gì xảy ra khi bạn gọi một trong các phương thức của nó. Khi bạn không có setters, mã sẽ dễ hiểu hơn.
+
+Một điều thú vị khi sử dụng từ thay thế làm tiền tố phương thức là nó khá lạ mắt và không phổ biến. Nếu bạn lo lắng về việc liệu mọi người có đang sử dụng các phương pháp siêu cấp trong mã sản xuất hay không, bạn có thể thực hiện tìm kiếm nhanh để đảm bảo rằng không có.
+
+### Các bước thực hiện
+
+1. Xác định biến mẫu mà bạn muốn thay thế.
+
+2. Tạo một phương thức có tên supersedeXXX, trong đó XXX là tên biến bạn muốn thay thế.
+
+3. Trong phương thức này, hãy viết bất kỳ mã nào bạn cần để hủy phiên bản trước đó của biến và đặt nó thành giá trị mới. Nếu biến là một tham chiếu, hãy xác minh rằng không có bất kỳ tham chiếu nào khác trong lớp tới đối tượng mà nó trỏ tới. Nếu có, bạn có thể phải thực hiện thêm công việc trong phương pháp thay thế để đảm bảo rằng việc thay thế đối tượng là an toàn và có tác dụng phù hợp
