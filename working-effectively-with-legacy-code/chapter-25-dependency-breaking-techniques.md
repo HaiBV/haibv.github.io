@@ -2467,3 +2467,93 @@ Một điều thú vị khi sử dụng từ thay thế làm tiền tố phươn
 2. Tạo một phương thức có tên supersedeXXX, trong đó XXX là tên biến bạn muốn thay thế.
 
 3. Trong phương thức này, hãy viết bất kỳ mã nào bạn cần để hủy phiên bản trước đó của biến và đặt nó thành giá trị mới. Nếu biến là một tham chiếu, hãy xác minh rằng không có bất kỳ tham chiếu nào khác trong lớp tới đối tượng mà nó trỏ tới. Nếu có, bạn có thể phải thực hiện thêm công việc trong phương pháp thay thế để đảm bảo rằng việc thay thế đối tượng là an toàn và có tác dụng phù hợp
+
+## Định nghĩa lại khai báo
+
+Nhiều kỹ thuật phá bỏ sự phụ thuộc trong chương này dựa vào các cơ chế cốt lõi của hướng đối tượng như kế thừa và triển khai giao diện. Một số chức năng của các ngôn ngữ mới còn cung cấp thêm các lựa chọn khác. Ví dụ: một ngôn ngữ cung cấp các khai báo chung và đặt bí danh, bạn có thể phá bỏ các phần phụ thuộc bằng cách sử dụng kỹ thuật có tên _Định nghĩa lại khai báo_. Đây là một ví dụ trong C++:
+
+```cpp
+// AsyncReceptionPort.h
+class AsyncReceptionPort
+{
+private:
+  CSocket m_socket;
+  Packet m_packet;
+  int m_segmentSize;
+  ...
+
+public:
+  AsyncReceptionPort();
+  void Run();
+  ...
+}
+
+// AsynchReceptionPort.cpp
+void AsyncReceptionPort::Run() {
+  for(int n = 0; n < m_segmentSize; ++n) {
+    int bufferSize = m_bufferMax;
+    if (n = m_segmentSize - 1)
+      bufferSize = m_remainingSize;
+    m_socket.receive(m_receiveBuffer, bufferSize);
+    m_packet.mark();
+    m_packet.append(m_receiveBuffer,bufferSize);
+    m_packet.pack();
+  }
+  m_packet.finalize();
+}
+```
+
+Nếu chúng ta có code như trên và muốn thực hiện các thay đổi với logic trong phương thức, thì chúng ta sẽ gặp phải thực tế là không thể chạy phương thức đó trong kiểm thử khai thác mà không gửi thứ gì đó qua `socker`. Trong C++, chúng ta có thể tránh điều này hoàn toàn bằng cách biến `AsyncReceptionPort` thành một khai báo thay vì một lớp thông thường. Đây là code sau khi thay đổi. Chúng ta sẽ thực hiện các bước sau.
+
+```cpp
+// AsynchReceptionPort.h
+template<typename SOCKET> class AsyncReceptionPortImpl
+{
+private:
+  SOCKET m_socket;
+  Packet m_packet;
+  int m_segmentSize;
+  ...
+
+public:
+  AsyncReceptionPortImpl();
+  void Run();
+  ...
+};
+
+template<typename SOCKET>
+void AsyncReceptionPortImpl<SOCKET>::Run() {
+  for(int n = 0; n < m_segmentSize; ++n) {
+    int bufferSize = m_bufferMax;
+    if (n = m_segmentSize - 1)
+      bufferSize = m_remainingSize;
+    m_socket.receive(m_receiveBuffer, bufferSize);
+    m_packet.mark();
+    m_packet.append(m_receiveBuffer,bufferSize);
+    m_packet.pack();
+  }
+  m_packet.finalize();
+}
+
+typedef AsyncReceptionPortImpl<CSocket> AsyncReceptionPort;
+```
+
+Khi thực hiện thay đổi này, chúng ta có thể khởi tạo khai báo bằng một kiểu khác trong tệp kiểm thử:
+
+```cpp
+// TestAsynchReceptionPort.cpp
+
+#include "AsyncReceptionPort.h"
+
+class FakeSocket
+{
+public:
+  void receive(char *, int size) { ... }
+};
+
+TEST(Run,AsyncReceptionPort)
+{
+  AsyncReceptionPortImpl<FakeSocket> port;
+  ...
+}
+```
