@@ -2557,3 +2557,45 @@ TEST(Run,AsyncReceptionPort)
   ...
 }
 ```
+
+Điều thú vị nhất về kỹ thuật này là chúng ta có thể sử dụng `typedef` để tránh phải thay đổi tất cả các tham chiếu thông qua code base của mình. Nếu không có nó, chúng ta sẽ phải thay thế mọi tham chiếu đến `AsyncReceptionPort` bằng `AsyncReceptionPort<CSocket>`. Đó sẽ là một công việc khá tẻ nhạt, nhưng nó lại dễ dàng hơn nhiều. Chúng ta có thể _Dựa vào Trình biên dịch (315)_ để đảm bảo rằng đã thay đổi tất cả các tham chiếu thích hợp. Trong các ngôn ngữ có cơ chế chung nhưng không có cơ chế bí danh kiểu như `typedef`, bạn sẽ phải _Dựa vào Trình biên dịch_.
+
+Trong C++, bạn có thể sử dụng kỹ thuật này để cung cấp các định nghĩa thay thế của phương thức thay vì dữ liệu, nhưng nó hơi lộn xộn. Các quy tắc của C++ bắt buộc bạn phải có một tham số khai báo, do đó bạn có thể chọn một biến và biến kiểu của nó thành tham số khai báo một cách ngẫu nhiên hoặc sử dụng một biến mới chỉ để làm cho lớp được tham số hóa theo một số loại — nhưng tôi sẽ chỉ làm điều đó như một lựa chọn cuối cùng. Tôi sẽ xem xét rất kỹ xem liệu trước tiên tôi có thể sử dụng các kỹ thuật dựa trên kế thừa hay không.
+
+> Việc xác định lại khai báo trong C++ có một nhược điểm chính. Code trong tệp triển khai sẽ chuyển sang tiêu đề khi bạn tạo khuôn khai báo cho nó. Điều này có thể làm tăng sự phụ thuộc trong hệ thống. Người dùng khai báo sau đó buộc phải biên dịch lại bất cứ khi nào code khai báo bị thay đổi.
+>
+> Nói chung, tôi thiên về sử dụng các kỹ thuật dựa trên kế thừa để phá bỏ các phần phụ thuộc trong C++. Tuy nhiên, _Dịnh nghĩa lại Khai báo_ có thể hữu ích khi các phần phụ thuộc mà bạn muốn phá bỏ đã có trong code được tạo khai báo. Đây là một ví dụ:
+>
+> ```cpp
+> template<typename ArcContact> class CollaborationManager
+> {
+>   ...
+>   ContactManager<ArcContact> m_contactManager;
+>   ...
+> }
+> ```
+>
+> Nếu muốn phá bỏ sự phụ thuộc vào `m_contactManager`, chúng ta không thể dễ dàng sử dụng _Trích xuất Giao diện (362)_ vì cách chúng ta đang sử dụng các khai báo mẫu ở đây. Tuy nhiên, chúng ta có thể tham số hóa khai báo mẫu theo cách khác
+> 
+> ```cpp
+> template<typename ArcContactManager> class CollaborationManager
+> {
+>   ...
+>   ArcContactManager m_contactManager;
+>   ...
+> }
+> ```
+
+### Các bước thực hiện
+
+Dưới đây là mô tả về cách thực hiện _Định nghĩa lại khai báo_ trong C++. Các bước có thể khác nhau trong các ngôn ngữ khác hỗ trợ generic, nhưng mô tả này hoàn toàn mang tính kỹ thuật:
+
+1. Xác định các tính năng bạn muốn thay thế trong lớp bạn cần kiểm thử.
+
+2. Biến lớp đó thành một khai báo mẫu, tham số hóa nó bằng các biến mà bạn cần thay thế và sao chép nội dung phương thức vào tiêu đề.
+
+3. Đặt tên khác cho khai báo mẫu. Một cách máy móc để thực hiện việc này là gắn thêm `Impl` vào tên gốc.
+
+4. Thêm một câu lệnh `typedef` sau định nghĩa mẫu, xác định khai báo mẫu với các đối số ban đầu bằng tên lớp ban đầu.
+
+5. Trong tệp kiểm thử, hãy bao gồm định nghĩa mẫu và khởi tạo mẫu trên các loại mới sẽ thay thế những loại bạn cần thay thế để kiểm thử.
