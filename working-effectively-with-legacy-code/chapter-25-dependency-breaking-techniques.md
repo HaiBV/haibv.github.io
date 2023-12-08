@@ -2599,3 +2599,57 @@ Dưới đây là mô tả về cách thực hiện _Định nghĩa lại khai b
 4. Thêm một câu lệnh `typedef` sau định nghĩa mẫu, xác định khai báo mẫu với các đối số ban đầu bằng tên lớp ban đầu.
 
 5. Trong tệp kiểm thử, hãy bao gồm định nghĩa mẫu và khởi tạo mẫu trên các loại mới sẽ thay thế những loại bạn cần thay thế để kiểm thử.
+
+## Định nghĩa lại ngữ cảnh
+
+Một số ngôn ngữ thông dịch mới cung cấp cho bạn một cách rất hay để phá vỡ sự phụ thuộc. Khi chúng thông dịch, các phương thức có thể được định nghĩa lại một cách nhanh chóng. Đây là một ví dụ trong ngôn ngữ Ruby:
+
+```rb
+# Account.rb
+class Account
+  def report_deposit(value)
+    ...
+  end
+
+  def deposit(value)
+    @balance += value
+    report_deposit(value)
+  end
+
+  def withdraw(value)
+    @balance -= value
+  end
+end
+```
+
+Nếu không muốn `report_deposit` chạy trong quá trình kiểm thử, chúng ta có thể định nghĩa lại nó trong tệp kiểm thử và đặt các kiểm thử sau khi định nghĩa lại:
+
+```rb
+# AccountTest.rb
+require "runit/testcase"
+require "Account"
+
+class Account
+  def report_deposit(value)
+  end
+end
+
+# tests start here
+class AccountTest < RUNIT::TestCase
+  ...
+end
+```
+
+Điều quan trọng cần lưu ý là chúng ta không định nghĩa lại toàn bộ lớp `Account` — mà chỉ là phương thức `report_deposit`. Trình thông dịch Ruby diễn giải tất cả các dòng trong tệp Ruby dưới dạng các câu lệnh thực thi. Câu lệnh `Account` của lớp mở ra định nghĩa của lớp `Account` để có thể thêm các định nghĩa bổ sung vào nó. Câu lệnh `def report_deposit(value)` bắt đầu quá trình thêm định nghĩa vào lớp mở. Trình thông dịch Ruby không quan tâm liệu đã có định nghĩa về phương thức đó hay chưa, nếu có; nó chỉ thay thế nó.
+
+> _Định nghĩa lại ngữ cảnh_ trong Ruby có một nhược điểm. Phương thức mới thay thế phương thức cũ cho đến khi chương trình kết thúc. Điều này có thể gây ra một số rắc rối nếu bạn quên rằng một phương thực cụ thể đã được định nghĩa lại trong lần kiểm thử trước đó.
+>
+> Chúng ta cũng có thể thực hiện _Định nghĩa lại ngữ cảnh_ trong C và C++ bằng cách sử dụng bộ tiền xử lý. Để xem ví dụ về cách thực hiện việc này, hãy xem ví dụ về _Tiền xử lý đường may (33)_ trong _Chương 4, Mô hình đường may_
+
+### Các bước thực hiện
+
+1. Xác định lớp có định nghĩa mà bạn muốn thay thế.
+
+2. Thêm mệnh đề yêu cầu có tên của mô-đun chứa lớp đó vào đầu tệp nguồn kiểm thử.
+
+3. Cung cấp các định nghĩa thay thế ở đầu tệp nguồn kiểm thử cho từng phương pháp mà bạn muốn thay thế.
