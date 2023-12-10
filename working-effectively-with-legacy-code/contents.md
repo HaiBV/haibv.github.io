@@ -64,6 +64,10 @@ Chương 5 - Công cụ
 
 [Chương 25 - Các kỹ thuật phá bỏ sự phụ thuộc.](./chapter-25-dependency-breaking-techniques.html)
 
+## Appendix
+
+[Tái cấu trúc - Refactoring](./appendix-refactoring.html)
+
 <!-- legacy system = hệ thống kế thừa -->
 <!-- green-field system = hệ thống hoàn toàn mới -->
 <!-- call = lệnh gọi -->
